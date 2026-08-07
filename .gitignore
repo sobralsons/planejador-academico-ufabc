@@ -1,24 +1,31 @@
 # Python
 __pycache__/
 *.py[cod]
+*.pyo
+*.pyd
 
-# Virtual environment
+# Ambientes virtuais
 .venv/
 venv/
+env/
 
-# Environment variables
+# Variáveis de ambiente e segredos
 .env
-
-# Streamlit secrets
+.env.*
 .streamlit/secrets.toml
 
-# IDE
+# IDEs
 .vscode/
 .idea/
 
-# OS
+# Sistema operacional
 .DS_Store
 Thumbs.db
 
+# Arquivos temporários
+*.log
+*.tmp
+
 # Dados privados
 dados_reais/
+private_data/
