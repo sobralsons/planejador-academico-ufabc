@@ -1,0 +1,2202 @@
+{
+  "metadados": {
+    "id": "ei_2017",
+    "curso": "Engenharia de Informação — UFABC",
+    "versao": "2017",
+    "creditos_totais": 300,
+    "creditos_totais_oficiais": 300,
+    "creditos_disciplinas_e_integralizadores": 300,
+    "creditos_obrigatorios": 245,
+    "creditos_obrigatorios_regulares": 225,
+    "creditos_opcao_limitada": 28,
+    "creditos_livres": 27,
+    "atividades_complementares_horas": 120,
+    "estagio_obrigatorio_creditos": 14,
+    "trabalho_final_creditos": 6,
+    "prazo_ideal_quadrimestres": 15,
+    "fontes": {
+      "matriz": "PPC Engenharias 2017 — Engenharia de Informação"
+    },
+    "duracoes_especiais": {
+      "trabalho_final_quadrimestres": 3,
+      "estagio_quadrimestres": 1
+    }
+  },
+  "disciplinas": [
+    {
+      "codigo": "BCS0001-15",
+      "nome": "Base Experimental das Ciências Naturais",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 0,
+      "p": 3,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": 1,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "BIS0005-15",
+      "nome": "Bases Computacionais da Ciência",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 0,
+      "p": 2,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": 1,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIS0005-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIS0003-15",
+      "nome": "Bases Matemáticas",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": 1,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIS0003-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIK0102-15",
+      "nome": "Estrutura da Matéria",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 1,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIK0102-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIL0304-15",
+      "nome": "Evolução e Diversificação da Vida na Terra",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 1,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIL0304-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIJ0207-15",
+      "nome": "Bases Conceituais da Energia",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 1,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIJ0207-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCJ0204-15",
+      "nome": "Fenômenos Mecânicos",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 4,
+      "p": 1,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 2,
+      "recomendacoes": [
+        "BCN0402-15",
+        "BCN0404-15",
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Geometria Analitica; Funções de Uma Variável; Bases Matemáticas",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCJ0204-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCN0402-15",
+      "nome": "Funções de Uma Variável",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 2,
+      "recomendacoes": [
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Bases Matemáticas",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCN0402-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCN0404-15",
+      "nome": "Geometria Analítica",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 2,
+      "recomendacoes": [
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Bases Matemáticas",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCN0404-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCM0504-15",
+      "nome": "Natureza da Informação",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 2,
+      "recomendacoes": [
+        "BIS0005-15"
+      ],
+      "recomendacao_texto": "Bases Computacionais da Ciência",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCM0504-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCL0306-15",
+      "nome": "Biodiversidade: Interações entre organismos e ambiente",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 2,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCL0306-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCN0407-15",
+      "nome": "Funções de Várias Variáveis",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 3,
+      "recomendacoes": [
+        "BCN0402-15",
+        "BCN0404-15"
+      ],
+      "recomendacao_texto": "Geometria Analitica; Funções de Uma Variável",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCN0407-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCJ0205-15",
+      "nome": "Fenômenos Térmicos",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 3,
+      "recomendacoes": [
+        "BCJ0204-15",
+        "BCN0402-15",
+        "BIK0102-15"
+      ],
+      "recomendacao_texto": "Estrutura da Matéria; Fenômenos Mecânicos; Funções de uma Variável",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCJ0205-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCM0505-15",
+      "nome": "Processamento da Informação",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 3,
+      "p": 2,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": 3,
+      "recomendacoes": [
+        "BIS0005-15"
+      ],
+      "recomendacao_texto": "Bases Computacionais da Ciência",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "BCL0307-15",
+      "nome": "Transformações Químicas",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 3,
+      "p": 2,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 3,
+      "recomendacoes": [
+        "BIK0102-15"
+      ],
+      "recomendacao_texto": "Estrutura da Matéria",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCL0307-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCM0506-15",
+      "nome": "Comunicação e Redes",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 4,
+      "recomendacoes": [
+        "BCM0505-15"
+      ],
+      "recomendacao_texto": "Processamento da Informação",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCM0506-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIN0406-15",
+      "nome": "Introdução à Probabilidade e à Estatística",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 4,
+      "recomendacoes": [
+        "BCN0402-15"
+      ],
+      "recomendacao_texto": "Funções de Uma Variável",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIN0406-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCN0405-15",
+      "nome": "Introdução às Equações Diferenciais Ordinárias",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 4,
+      "recomendacoes": [
+        "BCN0407-15"
+      ],
+      "recomendacao_texto": "Funções de Várias Variáveis",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCN0405-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCJ0203-15",
+      "nome": "Fenômenos Eletromagnéticos",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 4,
+      "p": 1,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 4,
+      "recomendacoes": [
+        "BCJ0204-15",
+        "BCN0402-15",
+        "BCN0404-15",
+        "BCN0405-15",
+        "BCN0407-15",
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Bases Matemáticas; Fenômenos Mecânicos ; Funções de Uma Variável ; Funções de Várias Variáveis; Geometria Analítica; Introdução às Equações Diferenciais Ordinárias",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCJ0203-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIR0004-15",
+      "nome": "Bases Epistemológicas da Ciência Moderna",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 4,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIR0004-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCL0308-15",
+      "nome": "Bioquímica: estrutura, propriedade e funções de biomoléculas",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 3,
+      "p": 2,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 5,
+      "recomendacoes": [
+        "BCL0307-15",
+        "BIK0102-15"
+      ],
+      "recomendacao_texto": "Estrutura da Matéria; Transformações Químicas",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCL0308-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIQ0602-15",
+      "nome": "Estrutura e Dinâmica Social",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 5,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIQ0602-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCK0103-15",
+      "nome": "Física Quântica",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 5,
+      "recomendacoes": [
+        "BCJ0203-15",
+        "BCJ0204-15",
+        "BCJ0205-15",
+        "BIK0102-15"
+      ],
+      "recomendacao_texto": "Estrutura da Matéria; Fenômenos Mecânicos; Fenômenos Térmicos; Fenômenos Eletromagnéticos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCK0103-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCK0104-15",
+      "nome": "Interações Atômicas e Moleculares",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 6,
+      "recomendacoes": [
+        "BCK0103-15",
+        "BCL0307-15"
+      ],
+      "recomendacao_texto": "Transformações Químicas; Física Quântica",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCK0104-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIR0603-15",
+      "nome": "Ciência, Tecnologia e Sociedade",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 6,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIR0603-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCS0002-15",
+      "nome": "Projeto Dirigido",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 0,
+      "p": 2,
+      "e": 0,
+      "i": 10,
+      "quadrimestre_recomendado": 9,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTB001-17",
+      "nome": "Álgebra Linear",
+      "categoria": "obrigatoria",
+      "creditos": 6,
+      "t": 6,
+      "p": 0,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": 6,
+      "recomendacoes": [
+        "BCN0404-15"
+      ],
+      "recomendacao_texto": "Geometria Analítica",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "MCTB001-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "MCTB009-17",
+      "nome": "Cálculo Numérico",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 5,
+      "recomendacoes": [
+        "BCM0505-15",
+        "BCN0402-15"
+      ],
+      "recomendacao_texto": "Funções de Uma Variável; Processamento da Informação",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "MCTB009-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO013-17",
+      "nome": "Engenharia Econômica",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 8,
+      "recomendacoes": [
+        "BCN0402-15"
+      ],
+      "recomendacao_texto": "Funções de Uma Variável",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO013-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO011-17",
+      "nome": "Fundamentos de Desenho Técnico",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 7,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO011-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO005-17",
+      "nome": "Introdução às Engenharias",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 4,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO005-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO006-17",
+      "nome": "Materiais e Suas Propriedades",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": 6,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO006-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO008-17",
+      "nome": "Mecânica dos Sólidos I",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": 7,
+      "recomendacoes": [
+        "BCJ0204-15",
+        "BCN0402-15",
+        "BCN0404-15",
+        "ESTO011-17"
+      ],
+      "recomendacao_texto": "Funções de Uma Variável; Fenômenos Mecânicos; Geometria Analítica; Fundamentos de Desenho Técnico",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO008-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO012-17",
+      "nome": "Princípios de Administração",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 7,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO012-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO016-17",
+      "nome": "Fenômenos de Transporte",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 7,
+      "recomendacoes": [
+        "BCJ0205-15"
+      ],
+      "recomendacao_texto": "Fenômenos Térmicos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO016-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO017-17",
+      "nome": "Métodos Experimentais em Engenharia",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 6,
+      "recomendacoes": [
+        "BCN0405-15",
+        "BIN0406-15"
+      ],
+      "recomendacao_texto": "Introdução às Equações Diferenciais Ordinárias; Introdução à Probabilidade e à Estatística",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO017-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO902-17",
+      "nome": "Engenharia Unificada I",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 0,
+      "p": 2,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": 11,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTO903-17",
+      "nome": "Engenharia Unificada II",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 0,
+      "p": 2,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": 12,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA028-15",
+      "nome": "Programação Estruturada",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 5,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI016-17",
+      "nome": "Fundamentos de Fotônica",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 7,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTA002-17",
+      "nome": "Circuitos Elétricos I",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 3,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 8,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI017-17",
+      "nome": "Fundamentos de Eletromagnetismo Aplicado",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 11,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTA004-17",
+      "nome": "Circuitos Elétricos II",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 3,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 9,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTA001-17",
+      "nome": "Dispositivos Eletrônicos",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 3,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 9,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTA007-17",
+      "nome": "Eletrônica Analógica Aplicada",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 3,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 10,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI002-17",
+      "nome": "Eletrônica Digital",
+      "categoria": "obrigatoria",
+      "creditos": 6,
+      "t": 4,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 10,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI003-17",
+      "nome": "Transformadas em Sinais e Sistemas Lineares",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 8,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI004-17",
+      "nome": "Princípios de Comunicação",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 9,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTA003-17",
+      "nome": "Sistemas de Controle I",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 3,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 10,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA022-13",
+      "nome": "Redes de Computadores",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 9,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI005-17",
+      "nome": "Sinais Aleatórios",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 8,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI006-17",
+      "nome": "Processamento Digital de Sinais",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 10,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI007-17",
+      "nome": "Comunicação Digital",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 11,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI008-17",
+      "nome": "Teoria da Informação e Códigos",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 12,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI018-17",
+      "nome": "Ondas Eletromagnéticas Aplicadas",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 12,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI010-17",
+      "nome": "Comunicações Ópticas",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 12,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI019-17",
+      "nome": "Codificação de Sinais Multimídia",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 11,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI013-17",
+      "nome": "Sistemas Microprocessados",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 11,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI015-17",
+      "nome": "Comunicações Móveis",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 13,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI020-17",
+      "nome": "Teoria de Filas e Análise de Desempenho",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 13,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI905-17",
+      "nome": "Estágio Curricular em Engenharia de Informação",
+      "categoria": "obrigatoria",
+      "creditos": 14,
+      "t": 0,
+      "p": 14,
+      "e": 0,
+      "i": 0,
+      "quadrimestre_recomendado": 15,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI902-17",
+      "nome": "Trabalho de Graduação I em Engenharia de Informação",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 0,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 13,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI903-17",
+      "nome": "Trabalho de Graduação II em Engenharia de Informação",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 0,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 14,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI904-17",
+      "nome": "Trabalho de Graduação III em Engenharia de Informação",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 0,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 15,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI027-17",
+      "nome": "Informação e Sociedade",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI002-17",
+      "nome": "Filtragem Adaptativa",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI003-17",
+      "nome": "Processamento de Informação em Línguas Naturais",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI028-17",
+      "nome": "TV Digital",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI029-17",
+      "nome": "Redes WAN de Banda Larga",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI030-17",
+      "nome": "Gerenciamento e Interoperabilidade de Redes",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI031-17",
+      "nome": "Segurança de Redes",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI032-17",
+      "nome": "Processamento de Vídeo",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI010-17",
+      "nome": "Simulação de Sistemas de Comunicação",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI033-17",
+      "nome": "Programação de Dispositivos Móveis",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 0,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI034-17",
+      "nome": "Jogos Digitais: Aspectos Técnicos e Aplicações",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI013-17",
+      "nome": "Informática Industrial",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 0,
+      "p": 4,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI014-17",
+      "nome": "Sistemas Inteligentes",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI035-17",
+      "nome": "Introdução ao Processamento de Sinais de Voz e Áudio",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI016-17",
+      "nome": "Projeto de Filtros Digitais",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI017-17",
+      "nome": "Fundamentos de Processamento Gráfico",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI018-17",
+      "nome": "Tecnologia de Redes Ópticas",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI019-17",
+      "nome": "Sistemas de Micro-ondas",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI036-17",
+      "nome": "Projeto de Alta Frequência",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI037-17",
+      "nome": "Aplicações em Voz, Áudio e Acústica",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI022-17",
+      "nome": "Planejamento de Redes de Informação",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI023-17",
+      "nome": "Projeto de Sistemas de Comunicação",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 0,
+      "p": 3,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI038-17",
+      "nome": "Projeto de Sistemas Multimídia",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 0,
+      "p": 3,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI025-17",
+      "nome": "Aplicações de Microcontroladores",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 0,
+      "p": 4,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI039-17",
+      "nome": "Propagação e Antenas",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI040-17",
+      "nome": "Telefonia Fixa e VOIP",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI041-18",
+      "nome": "Programação de Software Embarcado",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI026-17",
+      "nome": "Engenharia de Sistemas de Comunicação e Missão Crítica",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI042-17",
+      "nome": "Instrumentação em RF e Micro-ondas",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI043-17",
+      "nome": "Programação Baseada em Componentes para Jogos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI044-17",
+      "nome": "Fundamentos da Computação Semântica",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI045-17",
+      "nome": "Introdução à Linguística Computacional",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA018-13",
+      "nome": "Programação Orientada a Objetos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA033-15",
+      "nome": "Engenharia de Software",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA001-17",
+      "nome": "Algoritmos e Estruturas de Dados I",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA002-17",
+      "nome": "Algoritmos e Estruturas de Dados II",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA034-17",
+      "nome": "Banco de Dados",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA004-17",
+      "nome": "Arquitetura de Computadores",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA026-13",
+      "nome": "Sistemas Operacionais",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA025-13",
+      "nome": "Sistemas Distribuídos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA032-14",
+      "nome": "Introdução à Programação de Jogos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZB018-13",
+      "nome": "Introdução à Modelagem e Processos Estocásticos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA011-17",
+      "nome": "Laboratório de Redes",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 0,
+      "p": 4,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA023-17",
+      "nome": "Redes Convergentes",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA021-17",
+      "nome": "Projeto de Redes",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA025-13",
+      "nome": "Segurança em Redes",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZA017-17",
+      "nome": "Lógica Programável",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTB010-13",
+      "nome": "Cálculo Vetorial e Tensorial",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "BCN0407-15"
+      ],
+      "recomendacao_texto": "Funções de Várias Variáveis",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "MCTB010-13",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO007-17",
+      "nome": "Mecânica dos Fluidos I",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTO014-17",
+      "nome": "Termodinâmica Aplicada I",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "BCJ0205-15"
+      ],
+      "recomendacao_texto": "Fenômenos Térmicos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO014-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO004-17",
+      "nome": "Instrumentação e Controle",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "BCN0405-15",
+        "ESTO001-17"
+      ],
+      "recomendacao_texto": "Introdução às Equações Diferenciais Ordinárias; Circuitos Elétricos e Fotônica",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO004-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO001-17",
+      "nome": "Circuitos Elétricos e Fotônica",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "BCJ0203-15"
+      ],
+      "recomendacao_texto": "Fenômenos Eletromagnéticos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO001-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "MCZA024-17",
+      "nome": "Redes sem Fio",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA018-17",
+      "nome": "Processamento Digital de Imagens",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA014-15",
+      "nome": "Inteligência Artificial",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTA008-17",
+      "nome": "Sistemas de Controle II",
+      "categoria": "opcao_limitada",
+      "creditos": 5,
+      "t": 3,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTA006-17",
+      "nome": "Fotônica",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    }
+  ]
+}

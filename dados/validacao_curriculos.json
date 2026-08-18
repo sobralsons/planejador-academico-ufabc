@@ -1,0 +1,136 @@
+{
+  "descricao": "Manifesto de validação estrutural das matrizes, elaborado a partir dos PPCs e documentos complementares fornecidos.",
+  "curriculos": {
+    "materiais_2017": {
+      "arquivo": "dados/curriculo_engenharia_materiais_2017.json",
+      "categorias": {
+        "obrigatoria": {
+          "quantidade_componentes": 62,
+          "soma_creditos_cadastrados": 232,
+          "sha256_codigos_ordenados": "3cc9ada6f362e8681ef2e4d1b6d0dd6a7631e933bcb16663237749849a9da917"
+        },
+        "opcao_limitada": {
+          "quantidade_componentes": 31,
+          "soma_creditos_cadastrados": 120,
+          "sha256_codigos_ordenados": "c3f47685ab91ae4bf694d67a7eff40ba0f7ac40ee37a61b8fba5e8dd355712c7"
+        }
+      },
+      "fontes": [
+        "PPC Engenharias 2017 — Engenharia de Materiais"
+      ]
+    },
+    "bct_2015": {
+      "arquivo": "dados/curriculos/bct_2015.json",
+      "categorias": {
+        "obrigatoria": {
+          "quantidade_componentes": 26,
+          "soma_creditos_cadastrados": 90,
+          "sha256_codigos_ordenados": "0686728fc249edab5e2bf41547d9383a27797c3561901991608f34936f668931"
+        },
+        "opcao_limitada": {
+          "quantidade_componentes": 304,
+          "soma_creditos_cadastrados": 1177,
+          "sha256_codigos_ordenados": "c174a538b44a65b637993b892dce56016ac1f9652084c5d1a21058935d934003"
+        }
+      },
+      "fontes": [
+        "PPC BC&T 2015 consolidado",
+        "Ato Decisório CG 29/2023 para compatibilidade de opção limitada"
+      ]
+    },
+    "bcc_2017": {
+      "arquivo": "dados/curriculos/bcc_2017.json",
+      "categorias": {
+        "obrigatoria": {
+          "quantidade_componentes": 54,
+          "soma_creditos_cadastrados": 214,
+          "sha256_codigos_ordenados": "f15f12912b99e3459cd8a9c0fa90e483c6985535dd7e56cb324f8ab922d905e7"
+        },
+        "opcao_limitada": {
+          "quantidade_componentes": 71,
+          "soma_creditos_cadastrados": 275,
+          "sha256_codigos_ordenados": "4251eee9c65657cc3fc857383f1c9da56395b5d1cf7ef52250d0f4d7cec52cd4"
+        }
+      },
+      "fontes": [
+        "PPC BCC 2017",
+        "Tabela de transição BCC 2010–2017"
+      ]
+    },
+    "bcc_2023": {
+      "arquivo": "dados/curriculos/bcc_2023.json",
+      "categorias": {
+        "obrigatoria": {
+          "quantidade_componentes": 52,
+          "soma_creditos_cadastrados": 202,
+          "sha256_codigos_ordenados": "59aa8b62c17e7ce5b560c5e5d184f0922cf3f6b80160b0904c64ed496fd6b22c"
+        },
+        "opcao_limitada": {
+          "quantidade_componentes": 73,
+          "soma_creditos_cadastrados": 283,
+          "sha256_codigos_ordenados": "13f1a03b2a54618dea42f74d9bd31b6bf2a68fa874d151d71757518774b75a70"
+        }
+      },
+      "fontes": [
+        "PPC BCC 2023",
+        "Ato Decisório CG 44/2023 e regras de transição"
+      ]
+    },
+    "bcd_2023": {
+      "arquivo": "dados/curriculos/bcd_2023.json",
+      "categorias": {
+        "obrigatoria": {
+          "quantidade_componentes": 45,
+          "soma_creditos_cadastrados": 178,
+          "sha256_codigos_ordenados": "a78fa6a24831461aac072146bfad9c2491910728f6e501c231005a87548792a3"
+        },
+        "opcao_limitada": {
+          "quantidade_componentes": 70,
+          "soma_creditos_cadastrados": 273,
+          "sha256_codigos_ordenados": "47e0439854be6604fd37b8c6dc77b3063f90da27410cc8e109d2f9356b9de00b"
+        }
+      },
+      "fontes": [
+        "PPC BCD 2023",
+        "Ato Decisório CG 57/2024"
+      ]
+    },
+    "ei_2017": {
+      "arquivo": "dados/curriculos/ei_2017.json",
+      "categorias": {
+        "obrigatoria": {
+          "quantidade_componentes": 64,
+          "soma_creditos_cadastrados": 245,
+          "sha256_codigos_ordenados": "e72636124370481e4f965ccf03f1ee332b0629a03900231ec8c10d4f75ef7721"
+        },
+        "opcao_limitada": {
+          "quantidade_componentes": 57,
+          "soma_creditos_cadastrados": 223,
+          "sha256_codigos_ordenados": "4fc89beb4405f7212d8827fb5c8aff9f853e5dc58a0260ad2cc856fc6113a1f4"
+        }
+      },
+      "fontes": [
+        "PPC Engenharias 2017 — Engenharia de Informação"
+      ]
+    },
+    "ei_2023": {
+      "arquivo": "dados/curriculos/ei_2023.json",
+      "categorias": {
+        "obrigatoria": {
+          "quantidade_componentes": 62,
+          "soma_creditos_cadastrados": 239,
+          "sha256_codigos_ordenados": "eecdd83a5d037beeec416d5d73728c7e9fd977a53901f21f9873700ffef886ff"
+        },
+        "opcao_limitada": {
+          "quantidade_componentes": 66,
+          "soma_creditos_cadastrados": 253,
+          "sha256_codigos_ordenados": "f9f74aa13e7b6b9a82119ab0f7d49c7921b05840a0254088a61f30d96b1d6fb1"
+        }
+      },
+      "fontes": [
+        "PPC Engenharias 2023 consolidado/retificado em 2025",
+        "Ato Decisório CG 68/2025"
+      ]
+    }
+  }
+}

@@ -1,0 +1,1716 @@
+{
+  "metadados": {
+    "curso": "Engenharia de Materiais — UFABC",
+    "versao": "2017",
+    "creditos_totais": 300,
+    "creditos_obrigatorios": 232,
+    "creditos_opcao_limitada": 40,
+    "creditos_livres": 28,
+    "fontes": {
+      "disciplinas_obrigatorias": "PPC Engenharias 2017, tabelas MAT2, páginas 230–232",
+      "opcao_limitada": "PPC Engenharias 2017, tabela MAT3, páginas 232–234",
+      "perfil_formacao": "PPC Engenharias 2017, tabela MAT4, páginas 234–236",
+      "recomendacoes": "Catálogo de disciplinas 2024–2025"
+    },
+    "id": "materiais_2017",
+    "creditos_totais_oficiais": 300,
+    "creditos_disciplinas_e_integralizadores": 300,
+    "creditos_obrigatorios_regulares": 212,
+    "atividades_complementares_horas": 120,
+    "estagio_obrigatorio_creditos": 14,
+    "trabalho_final_creditos": 6,
+    "prazo_ideal_quadrimestres": 15,
+    "duracoes_especiais": {
+      "trabalho_final_quadrimestres": 3,
+      "estagio_quadrimestres": 1
+    }
+  },
+  "disciplinas": [
+    {
+      "codigo": "BCJ0204-15",
+      "nome": "Fenômenos Mecânicos",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 4,
+      "p": 1,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 2,
+      "recomendacoes": [
+        "BCN0402-15",
+        "BCN0404-15",
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Geometria Analitica; Funções de Uma Variável; Bases Matemáticas",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCJ0204-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCJ0205-15",
+      "nome": "Fenômenos Térmicos",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 3,
+      "recomendacoes": [
+        "BCJ0204-15",
+        "BCN0402-15",
+        "BIK0102-15"
+      ],
+      "recomendacao_texto": "Estrutura da Matéria; Fenômenos Mecânicos; Funções de uma Variável",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCJ0205-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCJ0203-15",
+      "nome": "Fenômenos Eletromagnéticos",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 4,
+      "p": 1,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 4,
+      "recomendacoes": [
+        "BCJ0204-15",
+        "BCN0402-15",
+        "BCN0404-15",
+        "BCN0405-15",
+        "BCN0407-15",
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Bases Matemáticas; Fenômenos Mecânicos ; Funções de Uma Variável ; Funções de Várias Variáveis; Geometria Analítica; Introdução às Equações Diferenciais Ordinárias",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCJ0203-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIJ0207-15",
+      "nome": "Bases Conceituais da Energia",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 1,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIJ0207-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIL0304-15",
+      "nome": "Evolução e Diversificação da Vida na Terra",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 1,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIL0304-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCL0307-15",
+      "nome": "Transformações Químicas",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 3,
+      "p": 2,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 3,
+      "recomendacoes": [
+        "BIK0102-15"
+      ],
+      "recomendacao_texto": "Estrutura da Matéria",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCL0307-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCL0306-15",
+      "nome": "Biodiversidade: Interações entre Organismos e Ambiente",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 2,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCL0306-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCN0404-15",
+      "nome": "Geometria Analítica",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 2,
+      "recomendacoes": [
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Bases Matemáticas",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCN0404-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCN0402-15",
+      "nome": "Funções de Uma Variável",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 2,
+      "recomendacoes": [
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Bases Matemáticas",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCN0402-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCN0407-15",
+      "nome": "Funções de Várias Variáveis",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 3,
+      "recomendacoes": [
+        "BCN0402-15",
+        "BCN0404-15"
+      ],
+      "recomendacao_texto": "Geometria Analitica; Funções de Uma Variável",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCN0407-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCN0405-15",
+      "nome": "Introdução às Equações Diferenciais Ordinárias",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 4,
+      "recomendacoes": [
+        "BCN0407-15"
+      ],
+      "recomendacao_texto": "Funções de Várias Variáveis",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCN0405-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIN0406-15",
+      "nome": "Introdução à Probabilidade e à Estatística",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 4,
+      "recomendacoes": [
+        "BCN0402-15"
+      ],
+      "recomendacao_texto": "Funções de Uma Variável",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIN0406-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCM0504-15",
+      "nome": "Natureza da Informação",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 2,
+      "recomendacoes": [
+        "BIS0005-15"
+      ],
+      "recomendacao_texto": "Bases Computacionais da Ciência",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCM0504-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCM0505-15",
+      "nome": "Processamento da Informação",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 3,
+      "p": 2,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": 3,
+      "recomendacoes": [
+        "BIS0005-15"
+      ],
+      "recomendacao_texto": "Bases Computacionais da Ciência",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCM0505-22",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCM0506-15",
+      "nome": "Comunicação e Redes",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 4,
+      "recomendacoes": [
+        "BCM0505-15"
+      ],
+      "recomendacao_texto": "Processamento da Informação",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCM0506-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIK0102-15",
+      "nome": "Estrutura da Matéria",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 1,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIK0102-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCK0103-15",
+      "nome": "Física Quântica",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 5,
+      "recomendacoes": [
+        "BCJ0203-15",
+        "BCJ0204-15",
+        "BCJ0205-15",
+        "BIK0102-15"
+      ],
+      "recomendacao_texto": "Estrutura da Matéria; Fenômenos Mecânicos; Fenômenos Térmicos; Fenômenos Eletromagnéticos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCK0103-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCK0104-15",
+      "nome": "Interações Atômicas e Moleculares",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 6,
+      "recomendacoes": [
+        "BCK0103-15",
+        "BCL0307-15"
+      ],
+      "recomendacao_texto": "Transformações Químicas; Física Quântica",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCK0104-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCL0308-15",
+      "nome": "Bioquímica: Estrutura, Propriedade e Funções de Biomoléculas",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 3,
+      "p": 2,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 5,
+      "recomendacoes": [
+        "BCL0307-15",
+        "BIK0102-15"
+      ],
+      "recomendacao_texto": "Estrutura da Matéria; Transformações Químicas",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCL0308-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIR0004-15",
+      "nome": "Bases Epistemológicas da Ciência Moderna",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 4,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIR0004-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIQ0602-15",
+      "nome": "Estrutura e Dinâmica Social",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 5,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIQ0602-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIR0603-15",
+      "nome": "Ciência, Tecnologia e Sociedade",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 6,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIR0603-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCS0001-15",
+      "nome": "Base Experimental das Ciências Naturais",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 0,
+      "p": 3,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": 1,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCS0001-25",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCS0002-15",
+      "nome": "Projeto Dirigido",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 0,
+      "p": 2,
+      "e": 0,
+      "i": 10,
+      "quadrimestre_recomendado": 9,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCS0002-25",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIS0005-15",
+      "nome": "Bases Computacionais da Ciência",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 0,
+      "p": 2,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": 1,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIS0005-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIS0003-15",
+      "nome": "Bases Matemáticas",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": 1,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIS0003-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "MCTB001-17",
+      "nome": "Álgebra Linear",
+      "categoria": "obrigatoria",
+      "creditos": 6,
+      "t": 6,
+      "p": 0,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": 7,
+      "recomendacoes": [
+        "BCN0404-15"
+      ],
+      "recomendacao_texto": "Geometria Analítica",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "MCTB001-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "MCTB009-17",
+      "nome": "Cálculo Numérico",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 8,
+      "recomendacoes": [
+        "BCM0505-15",
+        "BCN0402-15"
+      ],
+      "recomendacao_texto": "Funções de Uma Variável; Processamento da Informação",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "MCTB009-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO013-17",
+      "nome": "Engenharia Econômica",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 8,
+      "recomendacoes": [
+        "BCN0402-15"
+      ],
+      "recomendacao_texto": "Funções de Uma Variável",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO013-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO011-17",
+      "nome": "Fundamentos de Desenho Técnico",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 6,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO011-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO005-17",
+      "nome": "Introdução às Engenharias",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 3,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO005-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO006-17",
+      "nome": "Materiais e Suas Propriedades",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": 5,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO006-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO008-17",
+      "nome": "Mecânica dos Sólidos I",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": 9,
+      "recomendacoes": [
+        "BCJ0204-15",
+        "BCN0402-15",
+        "BCN0404-15",
+        "ESTO011-17"
+      ],
+      "recomendacao_texto": "Funções de Uma Variável; Fenômenos Mecânicos; Geometria Analítica; Fundamentos de Desenho Técnico",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO008-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO012-17",
+      "nome": "Princípios de Administração",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 9,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO012-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO016-17",
+      "nome": "Fenômenos de Transporte",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 8,
+      "recomendacoes": [
+        "BCJ0205-15"
+      ],
+      "recomendacao_texto": "Fenômenos Térmicos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO016-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO017-17",
+      "nome": "Métodos Experimentais em Engenharia",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 7,
+      "recomendacoes": [
+        "BCN0405-15",
+        "BIN0406-15"
+      ],
+      "recomendacao_texto": "Introdução às Equações Diferenciais Ordinárias; Introdução à Probabilidade e à Estatística",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO017-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO001-17",
+      "nome": "Circuitos Elétricos e Fotônica",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": 5,
+      "recomendacoes": [
+        "BCJ0203-15"
+      ],
+      "recomendacao_texto": "Fenômenos Eletromagnéticos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO001-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO004-17",
+      "nome": "Instrumentação e Controle",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": 6,
+      "recomendacoes": [
+        "BCN0405-15",
+        "ESTO001-17"
+      ],
+      "recomendacao_texto": "Introdução às Equações Diferenciais Ordinárias; Circuitos Elétricos e Fotônica",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO004-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "MCTB010-13",
+      "nome": "Cálculo Vetorial e Tensorial",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 6,
+      "recomendacoes": [
+        "BCN0407-15"
+      ],
+      "recomendacao_texto": "Funções de Várias Variáveis",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "MCTB010-13",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO902-17",
+      "nome": "Engenharia Unificada I",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 0,
+      "p": 2,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": 10,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Disciplina não localizada no catálogo 2024–2025 por código ou nome exato."
+      ]
+    },
+    {
+      "codigo": "ESTO903-17",
+      "nome": "Engenharia Unificada II",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 0,
+      "p": 2,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": 11,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Disciplina não localizada no catálogo 2024–2025 por código ou nome exato."
+      ]
+    },
+    {
+      "codigo": "ESTM016-17",
+      "nome": "Química Inorgânica de Materiais",
+      "categoria": "obrigatoria",
+      "creditos": 6,
+      "t": 4,
+      "p": 2,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 9,
+      "recomendacoes": [
+        "BCL0307-15"
+      ],
+      "recomendacao_texto": "Transformações Químicas",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTM016-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "NHT4017-15",
+      "nome": "Funções e Reações Orgânicas",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 7,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Disciplina não localizada no catálogo 2024–2025 por código ou nome exato."
+      ]
+    },
+    {
+      "codigo": "ESTM001-17",
+      "nome": "Estado Sólido",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 12,
+      "recomendacoes": [
+        "BCK0103-15",
+        "ESTO006-17"
+      ],
+      "recomendacao_texto": "Física Quântica; Materiais e suas Propriedades",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTM001-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTM002-17",
+      "nome": "Tópicos Experimentais em Materiais I",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 0,
+      "p": 4,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 9,
+      "recomendacoes": [
+        "ESTO006-17",
+        "ESTO017-17"
+      ],
+      "recomendacao_texto": "Materiais e suas Propriedades; Métodos Experimentais em Engenharia",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTM002-17",
+      "observacoes": [
+        "A tabela gráfica MAT4 contém aparente erro de sigla: mostra ESZM012-17 com o nome de Tópicos Experimentais em Materiais I. A tabela MAT2 confirma ESTM002-17 como obrigatória."
+      ]
+    },
+    {
+      "codigo": "ESTM003-17",
+      "nome": "Tópicos Computacionais em Materiais",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": 11,
+      "recomendacoes": [
+        "ESTO006-17",
+        "MCTB009-17"
+      ],
+      "recomendacao_texto": "Cálculo Numérico; Materiais e suas Propriedades",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTM003-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTM004-17",
+      "nome": "Ciência dos Materiais",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 8,
+      "recomendacoes": [
+        "ESTO006-17"
+      ],
+      "recomendacao_texto": "Materiais e suas Propriedades",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTM004-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTM005-17",
+      "nome": "Materiais Metálicos",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 10,
+      "recomendacoes": [
+        "ESTM004-17"
+      ],
+      "recomendacao_texto": "Ciência dos Materiais",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTM005-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTM006-17",
+      "nome": "Materiais Poliméricos",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 10,
+      "recomendacoes": [
+        "ESTM004-17"
+      ],
+      "recomendacao_texto": "Ciência dos Materiais",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTM006-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTM017-17",
+      "nome": "Materiais Cerâmicos",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 10,
+      "recomendacoes": [
+        "ESTM004-17"
+      ],
+      "recomendacao_texto": "Ciência dos Materiais",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTM017-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTM008-17",
+      "nome": "Materiais Compósitos",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 11,
+      "recomendacoes": [
+        "ESTM005-17",
+        "ESTM006-17",
+        "ESTM017-17"
+      ],
+      "recomendacao_texto": "Materiais Poliméricos; Materiais Cerâmicos; Materiais Metálicos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTM008-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTM009-17",
+      "nome": "Termodinâmica Estatística de Materiais",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 8,
+      "recomendacoes": [
+        "BCJ0205-15",
+        "ESTM018-17"
+      ],
+      "recomendacao_texto": "Fenômenos Térmicos; Termodinâmica de Materiais",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTM009-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTM010-17",
+      "nome": "Propriedades Mecânicas e Térmicas",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 11,
+      "recomendacoes": [
+        "BCJ0205-15",
+        "ESTM004-17"
+      ],
+      "recomendacao_texto": "Fenômenos Térmicos; Ciência dos Materiais",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTM010-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTM011-17",
+      "nome": "Propriedades Elétricas, Magnéticas e Ópticas",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 11,
+      "recomendacoes": [
+        "ESTM004-17"
+      ],
+      "recomendacao_texto": "Ciência dos Materiais",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTM019-17",
+      "observacoes": [
+        "O catálogo 2024–2025 usa ESTM019-17 para o mesmo nome. Isto é apenas referência de consulta; não é equivalência acadêmica automática."
+      ]
+    },
+    {
+      "codigo": "ESTM015-17",
+      "nome": "Reologia",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 12,
+      "recomendacoes": [
+        "ESTO008-17",
+        "ESTO016-17"
+      ],
+      "recomendacao_texto": "Fenômenos de Transporte; Mecânica dos Sólidos I",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTM015-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTM013-17",
+      "nome": "Seleção de Materiais",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 13,
+      "recomendacoes": [
+        "ESTM005-17",
+        "ESTM006-17",
+        "ESTM017-17"
+      ],
+      "recomendacao_texto": "Materiais Poliméricos; Materiais Cerâmicos; Materiais Metálicos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTM013-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTM014-17",
+      "nome": "Caracterização de Materiais",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 12,
+      "recomendacoes": [
+        "ESTM010-17",
+        "ESTM011-17"
+      ],
+      "recomendacao_texto": "Propriedades Mecânicas e Térmicas; Propriedades Elétricas, Magnéticas e Ópticas",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTM014-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTM018-17",
+      "nome": "Termodinâmica de Materiais",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 7,
+      "recomendacoes": [
+        "BCN0402-15",
+        "BCN0407-15"
+      ],
+      "recomendacao_texto": "Funções de Uma Variável; Funções de Várias Variáveis",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTM018-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTM905-17",
+      "nome": "Estágio Curricular em Engenharia de Materiais",
+      "categoria": "obrigatoria",
+      "creditos": 14,
+      "t": 0,
+      "p": 14,
+      "e": 0,
+      "i": 0,
+      "quadrimestre_recomendado": 13,
+      "recomendacoes": [],
+      "recomendacao_texto": "Requisito: CPK ≥ 0,633 no curso de engenharia e demais requisitos de acordo com a Resolução vigente",
+      "requisito_manual": "Requisito: CPK ≥ 0,633 no curso de engenharia e demais requisitos de acordo com a Resolução vigente",
+      "catalogo_codigo_consulta": "ESTM905-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTM902-17",
+      "nome": "Trabalho de Graduação I em Engenharia de Materiais",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 0,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 12,
+      "recomendacoes": [],
+      "recomendacao_texto": "Requisito: Ver resolução de TG específica para o curso",
+      "requisito_manual": "Requisito: Ver resolução de TG específica para o curso",
+      "catalogo_codigo_consulta": "ESTM902-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTM903-17",
+      "nome": "Trabalho de Graduação II em Engenharia de Materiais",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 0,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 13,
+      "recomendacoes": [],
+      "recomendacao_texto": "Requisito: Trabalho de Graduação I em Engenharia de Materiais",
+      "requisito_manual": "Requisito: Trabalho de Graduação I em Engenharia de Materiais",
+      "catalogo_codigo_consulta": "ESTM903-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTM904-17",
+      "nome": "Trabalho de Graduação III em Engenharia de Materiais",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 0,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 14,
+      "recomendacoes": [],
+      "recomendacao_texto": "Requisito: Trabalho de Graduação II em Engenharia de Materiais",
+      "requisito_manual": "Requisito: Trabalho de Graduação II em Engenharia de Materiais",
+      "catalogo_codigo_consulta": "ESTM904-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM001-17",
+      "nome": "Seminários em Materiais Avançados",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM004-17",
+        "ESTO006-17"
+      ],
+      "recomendacao_texto": "Materiais e suas Propriedades; Ciência dos Materiais",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM001-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM002-17",
+      "nome": "Nanociência e Nanotecnologia",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "BCK0103-15"
+      ],
+      "recomendacao_texto": "Física Quântica",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM002-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM033-17",
+      "nome": "Reciclagem e Ambiente",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTO006-17"
+      ],
+      "recomendacao_texto": "Materiais e suas Propriedades",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM033-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM034-17",
+      "nome": "Design de Dispositivos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM011-17"
+      ],
+      "recomendacao_texto": "Propriedades Elétricas, Magnéticas e Ópticas",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM034-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM007-17",
+      "nome": "Elementos Finitos Aplicados em Materiais",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM003-17"
+      ],
+      "recomendacao_texto": "Tópicos Computacionais em Materiais",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM007-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM008-17",
+      "nome": "Dinâmica Molecular e Monte Carlo",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM003-17"
+      ],
+      "recomendacao_texto": "Tópicos Computacionais em Materiais",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM008-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM009-17",
+      "nome": "Diagramas de Fase",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM004-17",
+        "ESTM009-17",
+        "ESTM018-17"
+      ],
+      "recomendacao_texto": "Termodinâmica de Materiais; Termodinâmica Estatística de Materiais; Ciência dos Materiais",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM009-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM012-17",
+      "nome": "Tópicos Experimentais em Materiais II",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 0,
+      "p": 4,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM002-17"
+      ],
+      "recomendacao_texto": "Tópicos Experimentais em Materiais I",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM012-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM013-17",
+      "nome": "Tecnologia de Elastômeros",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM006-17",
+        "NHT4017-15"
+      ],
+      "recomendacao_texto": "Materiais Poliméricos; Funções e Reações Orgânicas",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM013-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM014-17",
+      "nome": "Engenharia de Polímeros",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM006-17",
+        "ESTM015-17"
+      ],
+      "recomendacao_texto": "Materiais Poliméricos; Reologia",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM014-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM035-17",
+      "nome": "Aditivação de Polímeros",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM006-17",
+        "ESZM016-17"
+      ],
+      "recomendacao_texto": "Síntese de Polímeros; Materiais Poliméricos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM035-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM036-17",
+      "nome": "Blendas Poliméricas",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM006-17"
+      ],
+      "recomendacao_texto": "Materiais Poliméricos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM036-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM016-17",
+      "nome": "Síntese de Polímeros",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "NHT4017-15"
+      ],
+      "recomendacao_texto": "Funções e Reações Orgânicas",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM016-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM037-17",
+      "nome": "Processamento de Polímeros",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM006-17",
+        "ESTM015-17"
+      ],
+      "recomendacao_texto": "Materiais Poliméricos; Reologia",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM037-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM038-17",
+      "nome": "Engenharia de Cerâmicas",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM004-17",
+        "ESTM017-17"
+      ],
+      "recomendacao_texto": "Materiais Cerâmicos; Ciência dos Materiais",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM038-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM039-17",
+      "nome": "Processamento de Materiais Cerâmicos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM017-17"
+      ],
+      "recomendacao_texto": "Materiais Cerâmicos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM039-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM021-17",
+      "nome": "Matérias Primas Cerâmicas",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM017-17"
+      ],
+      "recomendacao_texto": "Materiais Cerâmicos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM021-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM022-17",
+      "nome": "Cerâmicas Especiais e Refratárias",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM017-17"
+      ],
+      "recomendacao_texto": "Materiais Cerâmicos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM022-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM023-17",
+      "nome": "Metalurgia Física",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM005-17"
+      ],
+      "recomendacao_texto": "Materiais Metálicos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM023-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM024-17",
+      "nome": "Engenharia de Metais",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM005-17"
+      ],
+      "recomendacao_texto": "Materiais Metálicos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM024-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM025-17",
+      "nome": "Siderurgia e Engenharia dos Aços",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM005-17"
+      ],
+      "recomendacao_texto": "Materiais Metálicos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM025-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM040-17",
+      "nome": "Processamento e Conformação de Metais I",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM005-17"
+      ],
+      "recomendacao_texto": "Materiais Metálicos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM040-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM041-17",
+      "nome": "Processamento e Conformação de Metais II",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM005-17"
+      ],
+      "recomendacao_texto": "Materiais Metálicos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM041-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM027-17",
+      "nome": "Materiais para Energia e Ambiente",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM010-17",
+        "ESTM011-17"
+      ],
+      "recomendacao_texto": "Propriedades Elétricas, Magnéticas e Ópticas; Propriedades Mecânicas e Térmicas",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM027-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM028-17",
+      "nome": "Materiais para Tecnologia da Informação",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM011-17"
+      ],
+      "recomendacao_texto": "Propriedades Elétricas, Magnéticas e Ópticas",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM028-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM029-17",
+      "nome": "Engenharia de Filmes Finos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM004-17",
+        "ESTM015-17"
+      ],
+      "recomendacao_texto": "Ciência dos Materiais; Reologia",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM029-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM030-17",
+      "nome": "Materiais Nanoestruturados",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESZM002-17"
+      ],
+      "recomendacao_texto": "Nanociência e Nanotecnologia",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM030-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM031-17",
+      "nome": "Nanocompósitos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM008-17",
+        "ESZM002-17"
+      ],
+      "recomendacao_texto": "Nanociência e Nanotecnologia; Materiais Compósitos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM031-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZM032-17",
+      "nome": "Biomateriais",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTM004-17"
+      ],
+      "recomendacao_texto": "Ciência dos Materiais",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESZM032-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO015-17",
+      "nome": "Mecânica dos Fluidos I",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "BCJ0205-15",
+        "BCN0402-15",
+        "BCN0407-15"
+      ],
+      "recomendacao_texto": "Fenômenos Térmicos; Funções de Uma Variável; Funções de Várias Variáveis",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO015-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO014-17",
+      "nome": "Termodinâmica Aplicada I",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "BCJ0205-15"
+      ],
+      "recomendacao_texto": "Fenômenos Térmicos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO014-17",
+      "observacoes": []
+    }
+  ]
+}

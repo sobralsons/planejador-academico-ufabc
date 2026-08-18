@@ -1,0 +1,8 @@
+Coloque aqui, se preferir usar os nomes padrão:
+
+- historico_sigaa.pdf
+- matriculas_2026_3_turmas_ofertadas.xlsx
+
+Também é possível enviar os arquivos diretamente pela interface aberta por executar_windows.bat.
+
+Antes de compartilhar a pasta ou o ZIP, remova documentos pessoais desta pasta.

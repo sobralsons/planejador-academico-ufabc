@@ -1,0 +1,10 @@
+{
+  "equivalencias_academicas": {
+    "BCM0505-15": "BCM0505-22",
+    "MCTA022-13": "MCTA022-17",
+    "ESTI019-17": "ESIF001-23",
+    "ESTO902-17": "ESMA001-23",
+    "ESTO903-17": "ESMA002-23"
+  },
+  "equivalencias_compostas": []
+}

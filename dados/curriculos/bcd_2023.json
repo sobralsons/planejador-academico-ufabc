@@ -1,0 +1,2105 @@
+{
+  "metadados": {
+    "id": "bcd_2023",
+    "curso": "Bacharelado em Ciência de Dados — UFABC",
+    "versao": "2023",
+    "creditos_totais": 216,
+    "creditos_totais_oficiais": 216,
+    "creditos_disciplinas_e_integralizadores": 216,
+    "creditos_obrigatorios": 178,
+    "creditos_obrigatorios_regulares": 166,
+    "creditos_opcao_limitada": 24,
+    "creditos_livres": 14,
+    "atividades_complementares_horas": 48,
+    "extensao_horas": 294,
+    "estagio_obrigatorio_creditos": 0,
+    "trabalho_final_creditos": 12,
+    "prazo_ideal_quadrimestres": 12,
+    "fontes": {
+      "matriz": "PPC Bacharelado em Ciência de Dados 2023",
+      "opcao_limitada": "Ato Decisório CG 57/2024"
+    },
+    "duracoes_especiais": {
+      "trabalho_final_quadrimestres": 1
+    }
+  },
+  "disciplinas": [
+    {
+      "codigo": "BCS0001-15",
+      "nome": "Base Experimental das Ciências Naturais",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 0,
+      "p": 3,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": 1,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "BIS0005-15",
+      "nome": "Bases Computacionais da Ciência",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 0,
+      "p": 2,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": 1,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIS0005-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIS0003-15",
+      "nome": "Bases Matemáticas",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": 1,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIS0003-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIK0102-15",
+      "nome": "Estrutura da Matéria",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 1,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIK0102-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIL0304-15",
+      "nome": "Evolução e Diversificação da Vida na Terra",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 1,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIL0304-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCJ0204-15",
+      "nome": "Fenômenos Mecânicos",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 4,
+      "p": 1,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 2,
+      "recomendacoes": [
+        "BCN0402-15",
+        "BCN0404-15",
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Geometria Analitica; Funções de Uma Variável; Bases Matemáticas",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCJ0204-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCN0402-15",
+      "nome": "Funções de Uma Variável",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 2,
+      "recomendacoes": [
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Bases Matemáticas",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCN0402-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCN0404-15",
+      "nome": "Geometria Analítica",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 2,
+      "recomendacoes": [
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Bases Matemáticas",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCN0404-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCM0504-15",
+      "nome": "Natureza da Informação",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 2,
+      "recomendacoes": [
+        "BIS0005-15"
+      ],
+      "recomendacao_texto": "Bases Computacionais da Ciência",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCM0504-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCL0306-15",
+      "nome": "Biodiversidade: Interações entre organismos e ambiente",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 2,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCL0306-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCN0407-15",
+      "nome": "Funções de Várias Variáveis",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 3,
+      "recomendacoes": [
+        "BCN0402-15",
+        "BCN0404-15"
+      ],
+      "recomendacao_texto": "Geometria Analitica; Funções de Uma Variável",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCN0407-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCJ0205-15",
+      "nome": "Fenômenos Térmicos",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 3,
+      "recomendacoes": [
+        "BCJ0204-15",
+        "BCN0402-15",
+        "BIK0102-15"
+      ],
+      "recomendacao_texto": "Estrutura da Matéria; Fenômenos Mecânicos; Funções de uma Variável",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCJ0205-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCM0505-22",
+      "nome": "Processamento da Informação",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 0,
+      "p": 4,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 3,
+      "recomendacoes": [
+        "BIS0005-15"
+      ],
+      "recomendacao_texto": "Bases Computacionais da Ciência",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCM0505-22",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCL0307-15",
+      "nome": "Transformações Químicas",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 3,
+      "p": 2,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 3,
+      "recomendacoes": [
+        "BIK0102-15"
+      ],
+      "recomendacao_texto": "Estrutura da Matéria",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCL0307-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCM0506-15",
+      "nome": "Comunicação e Redes",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 4,
+      "recomendacoes": [
+        "BCM0505-22"
+      ],
+      "recomendacao_texto": "Processamento da Informação",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCM0506-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIN0406-15",
+      "nome": "Introdução à Probabilidade e à Estatística",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 4,
+      "recomendacoes": [
+        "BCN0402-15"
+      ],
+      "recomendacao_texto": "Funções de Uma Variável",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIN0406-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCN0405-15",
+      "nome": "Introdução às Equações Diferenciais Ordinárias",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 4,
+      "recomendacoes": [
+        "BCN0407-15"
+      ],
+      "recomendacao_texto": "Funções de Várias Variáveis",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCN0405-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCJ0203-15",
+      "nome": "Fenômenos Eletromagnéticos",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 4,
+      "p": 1,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 4,
+      "recomendacoes": [
+        "BCJ0204-15",
+        "BCN0402-15",
+        "BCN0404-15",
+        "BCN0405-15",
+        "BCN0407-15",
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Bases Matemáticas; Fenômenos Mecânicos ; Funções de Uma Variável ; Funções de Várias Variáveis; Geometria Analítica; Introdução às Equações Diferenciais Ordinárias",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCJ0203-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIR0004-15",
+      "nome": "Bases Epistemológicas da Ciência Moderna",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 4,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIR0004-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCL0308-15",
+      "nome": "Bioquímica: estrutura, propriedade e funções de biomoléculas",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 3,
+      "p": 2,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 5,
+      "recomendacoes": [
+        "BCL0307-15",
+        "BIK0102-15"
+      ],
+      "recomendacao_texto": "Estrutura da Matéria; Transformações Químicas",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCL0308-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIQ0602-15",
+      "nome": "Estrutura e Dinâmica Social",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 5,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIQ0602-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCK0103-15",
+      "nome": "Física Quântica",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 5,
+      "recomendacoes": [
+        "BCJ0203-15",
+        "BCJ0204-15",
+        "BCJ0205-15",
+        "BIK0102-15"
+      ],
+      "recomendacao_texto": "Estrutura da Matéria; Fenômenos Mecânicos; Fenômenos Térmicos; Fenômenos Eletromagnéticos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCK0103-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIR0603-15",
+      "nome": "Ciência, Tecnologia e Sociedade",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 6,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIR0603-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCS0002-15",
+      "nome": "Projeto Dirigido",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 0,
+      "p": 2,
+      "e": 0,
+      "i": 10,
+      "quadrimestre_recomendado": 9,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTB001-17",
+      "nome": "Álgebra Linear",
+      "categoria": "obrigatoria",
+      "creditos": 6,
+      "t": 6,
+      "p": 0,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": 6,
+      "recomendacoes": [
+        "BCN0404-15"
+      ],
+      "recomendacao_texto": "Geometria Analítica",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "MCTB001-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "MCCC001-23",
+      "nome": "Algoritmos e Estruturas de Dados I       2",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 6,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZB002-13",
+      "nome": "Análise de Regressão",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 9,
+      "recomendacoes": [
+        "MCTB001-17",
+        "MCTB008-17",
+        "MCTC014-13"
+      ],
+      "recomendacao_texto": "Álgebra Linear; Cálculo de Probabilidade; Introdução à Inferência Estatística",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "MCZB002-13",
+      "observacoes": []
+    },
+    {
+      "codigo": "MCBM014-23",
+      "nome": "Análise Multivariada",
+      "categoria": "obrigatoria",
+      "creditos": 6,
+      "t": 4,
+      "p": 2,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 8,
+      "recomendacoes": [
+        "MCTB001-17",
+        "MCTB008-17",
+        "MCTC014-13"
+      ],
+      "recomendacao_texto": "Álgebra Linear; Cálculo de Probabilidade; Introdução à Inferência Estatística",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "MCBM014-23",
+      "observacoes": []
+    },
+    {
+      "codigo": "MCZA002-17",
+      "nome": "Aprendizado de Máquina",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 9,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTC011-15",
+      "nome": "Psicologia Cognitiva",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 9,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA009-13",
+      "nome": "Computadores, Ética e Sociedade",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 7,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTB008-17",
+      "nome": "Cálculo de Probabilidade",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 5,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTB009-17",
+      "nome": "Cálculo Numérico",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 7,
+      "recomendacoes": [
+        "BCM0505-22",
+        "BCN0402-15"
+      ],
+      "recomendacao_texto": "Funções de Uma Variável; Processamento da Informação",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "MCTB009-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "MCBD002-23",
+      "nome": "Introdução à Ciência de Dados e Programação",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 0,
+      "p": 4,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 6,
+      "recomendacoes": [
+        "BCM0505-22",
+        "BIS0005-15",
+        "MCCC014-23"
+      ],
+      "recomendacao_texto": "Bases Computacionais da Ciência; Processamento da Informação; Programação Estruturada",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "MCBD002-23",
+      "observacoes": []
+    },
+    {
+      "codigo": "MCBM016-23",
+      "nome": "Introdução à Estatística Bayesiana",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 8,
+      "recomendacoes": [
+        "MCTB008-17",
+        "MCTC014-13"
+      ],
+      "recomendacao_texto": "Cálculo de Probabilidade; Introdução à Inferência Estatística",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "MCBM016-23",
+      "observacoes": []
+    },
+    {
+      "codigo": "MCTC014-13",
+      "nome": "Introdução à Inferência Estatística",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 7,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCBM022-23",
+      "nome": "Introdução aos Processos Estocásticos    4",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 11,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCBM006-23",
+      "nome": "Matemática Discreta",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 4,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCBD003-23",
+      "nome": "Metodologia de Pesquisa em Ciência de Dados",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 7,
+      "recomendacoes": [
+        "MCBD002-23",
+        "MCTB008-17"
+      ],
+      "recomendacao_texto": "Bases Experimentais da Ciência; Bases Epistemiológicas da Ciência Moderda; Cálculo de Probabilidade; Introdução à Ciência de Dados e Programação",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "MCBD003-23",
+      "observacoes": []
+    },
+    {
+      "codigo": "MCZA015-13",
+      "nome": "Mineração de Dados",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 10,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCCC012-23",
+      "nome": "Modelagem de Banco de Dados              4",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 8,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCCC014-23",
+      "nome": "Programação Estruturada",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 5,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCCC013-23",
+      "nome": "Otimização Linear",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 11,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCBD004-23",
+      "nome": "Séries Temporais",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 10,
+      "recomendacoes": [
+        "MCBD002-23",
+        "MCTC014-13",
+        "MCZA002-17"
+      ],
+      "recomendacao_texto": "Introdução à Ciência de Dados e Programação; Introdução à Inferência Estatística; Aprendizado de Máquina",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "MCBD004-23",
+      "observacoes": []
+    },
+    {
+      "codigo": "MCBD008-23",
+      "nome": "Trabalho de Conclusão de Curso em Ciência de Dados",
+      "categoria": "obrigatoria",
+      "creditos": 12,
+      "t": 0,
+      "p": 12,
+      "e": 0,
+      "i": 24,
+      "quadrimestre_recomendado": 12,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA035-17",
+      "nome": "Algoritmos Probabilísticos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCCC004-23",
+      "nome": "Análise de Algoritmos I                          4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESHT011-21",
+      "nome": "2",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTU024-17",
+      "nome": "Análise de Sistemas e Modelagem Ambiental",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 1,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZC018-17",
+      "nome": "Análise Econômica de Projetos                    4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCBM002-23",
+      "nome": "Análise Real I                                   4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTB006-13",
+      "nome": "Análise Real II                                  4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA005-17",
+      "nome": "Banco de Dados de Apoio à Tomada de Decisão",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTU004-17",
+      "nome": "Cartografia e Geoprocessamento",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 1,
+      "p": 3,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESHT002-17",
+      "nome": "2",
+      "categoria": "opcao_limitada",
+      "creditos": 5,
+      "t": 2,
+      "p": 3,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ2114-18",
+      "nome": "Computabilidade e Complexidade                   4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA006-17",
+      "nome": "Computação Evolutiva e Conexionista",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZR001-13",
+      "nome": "4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESHC002-17",
+      "nome": "Contabilidade Básica                             4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESHP012-22",
+      "nome": "Direito Administrativo                           4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESHC035-21",
+      "nome": "Econometria I                         2",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESHC036-21",
+      "nome": "Econometria II                        2",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESHC037-21",
+      "nome": "Econometria III                       2",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA007-13",
+      "nome": "Empreendedorismo e Desenvolvimento de Negócios",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA033-15",
+      "nome": "Engenharia de Software",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTO013-17",
+      "nome": "Engenharia Econômica",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "BCN0402-15"
+      ],
+      "recomendacao_texto": "Funções de Uma Variável",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO013-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZG025-17",
+      "nome": "Finanças, Gestão e Administração Financeira",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI044-17",
+      "nome": "Fundamentos da Computação Semântica",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ6010-18",
+      "nome": "Genômica e Pós-Genômica               4",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 4,
+      "p": 2,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZB012-13",
+      "nome": "Inferência Estatística",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI027-17",
+      "nome": "Informação e Sociedade",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZG037-17",
+      "nome": "Inovação Estratégica",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 1,
+      "p": 1,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCCC008-23",
+      "nome": "Inteligência Artificial               4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZB013-13",
+      "nome": "3",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZB022-17",
+      "nome": "Introdução à Bioinformática",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "BHO1102-19",
+      "nome": "Introdução à Economia                 3",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI045-17",
+      "nome": "Introdução à Linguística Computacional",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTC002-15",
+      "nome": "Introdução à Neurociência             4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI035-17",
+      "nome": "Introdução ao Processamento de Sinais de Voz e Áudio",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZB015-17",
+      "nome": "Laboratório de Bioinformática",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 0,
+      "p": 4,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHI2049-13",
+      "nome": "Lógica Básica",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA013-13",
+      "nome": "Lógicas não Clássicas",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESHC022-17",
+      "nome": "Macroeconomia I                       4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESHC032-17",
+      "nome": "Macroeconomia II                      4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESHC024-19",
+      "nome": "Macroeconomia III                     4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA014-17",
+      "nome": "Métodos de Otimização",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESHC025-17",
+      "nome": "Microeconomia I                       4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESHC026-21",
+      "nome": "Microeconomia II                      4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESHC029-21",
+      "nome": "Microeconomia III                     4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZP004-13",
+      "nome": "4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTG013-17",
+      "nome": "Pesquisa Operacional",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTG014-17",
+      "nome": "Planejamento e Controle da Produção",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 4,
+      "p": 2,
+      "e": 0,
+      "i": 9,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZG010-17",
+      "nome": "Planejamento e Controle de Projetos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ2057-11",
+      "nome": "4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESHP028-22",
+      "nome": "4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTO012-17",
+      "nome": "Princípios de Administração",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO012-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZI003-17",
+      "nome": "Processamento de Informação em Línguas Naturais",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA017-13",
+      "nome": "Processamento de Linguagem Natural",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA018-17",
+      "nome": "Processamento Digital de Imagens",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCCC015-23",
+      "nome": "Programação Funcional                 4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA018-13",
+      "nome": "Programação Orientada a Objetos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA020-13",
+      "nome": "Programação Paralela",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ2113-18",
+      "nome": "Provas e Modelos                      4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA022-17",
+      "nome": "Redes de Computadores",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA023-17",
+      "nome": "Segurança de Dados",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZU017-17",
+      "nome": "Sensoriamento Remoto",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 1,
+      "p": 3,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA025-13",
+      "nome": "Sistemas Distribuídos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI008-17",
+      "nome": "Teoria da Informação e Códigos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZB032-13",
+      "nome": "Teoria das Filas",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZB031-17",
+      "nome": "Teoria dos Jogos                      4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA049-17",
+      "nome": "Tópicos Emergentes em Banco de Dados",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZU020-17",
+      "nome": "Transportes, Uso e Ocupação do Solo   1",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 1,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA030-17",
+      "nome": "Vida Artificial na Computação",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZA019-17",
+      "nome": "Visão Computacional",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA052-22",
+      "nome": "Vizualização de Dados e Informações",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 0,
+      "p": 4,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    }
+  ]
+}

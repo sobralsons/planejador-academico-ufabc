@@ -1,0 +1,10 @@
+{
+  "orientacao": "Somente habilite um alias quando existir convalidacao ou equivalencia oficial confirmada. A igualdade de nome, sozinha, nao basta.",
+  "aliases_oferta": {
+    "ESTM019-17": {
+      "codigo_curriculo": "ESTM011-17",
+      "habilitado": false,
+      "nota": "O catalogo 2024-2025 usa ESTM019-17 para Propriedades Eletricas, Magneticas e Opticas, enquanto o PPC 2017 usa ESTM011-17. Confirmar oficialmente antes de habilitar."
+    }
+  }
+}

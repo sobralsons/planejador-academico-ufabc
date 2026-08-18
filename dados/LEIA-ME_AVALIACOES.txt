@@ -1,0 +1,16 @@
+ARQUIVOS DO MÓDULO UFABC NEXT
+
+avaliacoes_docentes.json
+- Métricas agregadas usadas pelo planejador.
+- Pode ser substituído pela atualização automática na interface.
+
+consultas_ufabc_next.csv
+- Criado automaticamente com os pares professor–disciplina das ofertas pendentes.
+
+sessao_ufabc_next/
+- Criada após o login no Edge.
+- NÃO compartilhe, compacte ou envie essa pasta.
+- Pode ser apagada pelo botão "Limpar sessão" na interface.
+
+Os comentários completos não são usados diretamente no relatório principal.
+Eles ficam apenas no arquivo local identificado como NAO_COMPARTILHAR na pasta saidas.

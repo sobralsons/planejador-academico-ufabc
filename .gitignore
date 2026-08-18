@@ -1,43 +1,41 @@
 # Python
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
+.pytest_cache/
 
-# Ambiente virtual
+# Virtual environments
 .venv/
 venv/
 env/
 
-# IDE
+# IDE / OS
 .vscode/
 .idea/
-
-# Sistema operacional
 .DS_Store
 Thumbs.db
 
-# Dados pessoais enviados pelo usuário
-entradas/*
-!entradas/LEIA-ME.txt
-
-# Sessão autenticada UFABC Next
-dados/sessao_ufabc_next/
-
-# Dados locais que não devem ser publicados
-saidas/avaliacoes_docentes_local_com_comentarios_NAO_COMPARTILHAR.json
-
-# Arquivos temporários
-*.log
-*.tmp
-*.bak
-
-# Cache
-.pytest_cache/
-.streamlit/cache/
-
-# Variáveis e credenciais
+# Environment variables and local secrets
 .env
 .env.*
 secrets.toml
 .streamlit/secrets.toml
+
+# Personal academic inputs
+entradas/*
+!entradas/LEIA-ME.txt
+
+# Local authenticated UFABC Next session
+dados/sessao_ufabc_next/
+
+# Generated/private evaluation files
+dados/consultas_ufabc_next.csv
+saidas/avaliacoes_docentes_local_com_comentarios_NAO_COMPARTILHAR.json
+
+# Generated outputs
+saidas/*
+!saidas/LEIA-ME.txt
+
+# Temporary files
+*.log
+*.tmp
+*.bak
