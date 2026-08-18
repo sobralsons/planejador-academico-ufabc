@@ -1,187 +1,142 @@
 # UFABC Academic Planner
 
-Planejador acadêmico desenvolvido em Python e Streamlit para auxiliar estudantes da Universidade Federal do ABC na montagem de grades, análise curricular e simulação de diferentes trajetórias de formação.
+Planejador acadêmico desenvolvido em **Python** para apoiar estudantes da Universidade Federal do ABC na montagem de grades, análise curricular e simulação de trajetórias de formação.
 
-O projeto surgiu de um problema real da minha própria rotina acadêmica. Na UFABC, o sistema quadrimestral, a possibilidade de cursar diferentes formações, as equivalências entre matrizes e a variação das disciplinas ofertadas tornam o planejamento acadêmico um problema com muitas combinações possíveis.
+O projeto nasceu de um problema real: na UFABC, o sistema quadrimestral, as diferentes matrizes curriculares, as equivalências entre cursos e a variação das turmas ofertadas tornam o planejamento acadêmico um problema com muitas combinações possíveis.
 
-A proposta foi transformar esse processo em uma aplicação capaz de organizar os dados, avaliar diferentes cenários e apoiar a tomada de decisão.
+A proposta é transformar essas informações em um processo estruturado de apoio à decisão, permitindo comparar alternativas em vez de simplesmente escolher a primeira combinação disponível.
 
-![Visão geral do UFABC Academic Planner](assets/overview.png)
+> **Status do repositório:** esta versão pública está sendo preparada como portfólio. A documentação apresenta o projeto e suas funcionalidades, enquanto o código-fonte completo ainda precisa passar por uma revisão final para garantir que históricos, sessões autenticadas, dados pessoais e arquivos locais não sejam publicados por engano.
 
 ---
 
 ## O problema
 
-Planejar um quadrimestre não envolve apenas escolher disciplinas disponíveis.
+Planejar um quadrimestre envolve considerar simultaneamente fatores como histórico acadêmico, matriz curricular, disciplinas concluídas e em andamento, obrigatórias e opções limitadas, conflitos de horário, campus, turno, carga desejada, disponibilidade de vagas e preferências pessoais.
 
-É necessário considerar simultaneamente fatores como:
-
-- histórico acadêmico
-- matriz curricular
-- disciplinas já concluídas e em andamento
-- obrigatórias, opções limitadas e créditos livres
-- conflitos de horário
-- aulas semanais e quinzenais
-- campus e turno
-- carga acadêmica desejada
-- quantidade de vagas
-- preferências pessoais
-- recomendações acadêmicas
-- diferentes possibilidades de formação
-
-Quando mais de um curso é considerado, o problema se torna ainda maior por envolver equivalências, disciplinas compartilhadas, ordem de conclusão dos diplomas e impacto de cada escolha no tempo restante de graduação.
+Quando mais de uma formação é considerada, entram também equivalências, disciplinas compartilhadas, ordem dos diplomas e o impacto de cada escolha no tempo restante de graduação.
 
 ---
 
-## A solução
+## O que a aplicação faz
 
-O UFABC Academic Planner processa informações acadêmicas e gera diferentes cenários de planejamento.
+Entre as funcionalidades já desenvolvidas estão:
 
-A aplicação permite analisar desde a próxima matrícula até uma trajetória acadêmica completa.
-
-Entre as principais funcionalidades estão:
-
-- leitura do histórico acadêmico
-- processamento das turmas ofertadas
-- identificação de disciplinas concluídas e pendentes
-- acompanhamento da integralização curricular
-- geração automática de grades sem conflito
-- comparação de diferentes alternativas de matrícula
-- classificação das grades segundo diferentes objetivos
-- análise de carga acadêmica e horários
-- planejamento de formação única, dupla ou múltipla
-- comparação entre matrizes curriculares
-- identificação de disciplinas compartilhadas
-- estimativa de datas de conclusão
-- análise de gargalos acadêmicos
-- editor manual de grade
-- geração de relatórios
-- integração opcional com avaliações docentes
-
----
-
-## Planejamento de trajetória
-
-Além da matrícula do próximo quadrimestre, o sistema permite simular diferentes caminhos acadêmicos.
-
-É possível comparar mudança de curso, formação simultânea ou sequencial e diferentes prioridades entre diplomas.
-
-A projeção apresenta informações como:
-
-- previsão mínima de conclusão
-- previsão prudente
-- créditos ainda necessários
-- créditos únicos da trajetória
-- aproveitamento entre matrizes
-- gargalos para cada formação
-
-![Análise de trajetória acadêmica](assets/trajectory-analysis.png)
-
----
-
-## Geração e avaliação das grades
-
-O sistema analisa as disciplinas e turmas disponíveis e constrói combinações compatíveis com os critérios definidos pelo usuário.
-
-Durante a busca são considerados fatores como:
-
-- conflitos de horário
-- carga de créditos
-- prioridade curricular
-- disponibilidade de vagas
-- atividades práticas
-- intervalos entre aulas
-- preferências acadêmicas
-- progresso dentro da matriz
-
-As alternativas podem ser avaliadas com objetivos diferentes, permitindo encontrar, por exemplo, uma grade mais compacta, uma maior progressão curricular ou uma carga mais equilibrada.
-
-![Alternativas de matrícula](assets/ranking-objectives.png)
+- leitura e interpretação do histórico acadêmico;
+- processamento das turmas ofertadas;
+- identificação de disciplinas concluídas, em andamento e pendentes;
+- acompanhamento da integralização curricular;
+- geração automática de grades sem conflito;
+- comparação de diferentes alternativas de matrícula;
+- ranking de grades segundo objetivos diferentes;
+- análise de carga acadêmica e distribuição dos horários;
+- planejamento de curso único, mudança de curso e múltiplas formações;
+- comparação entre matrizes e aproveitamento de disciplinas;
+- estimativa de períodos de conclusão e identificação de gargalos;
+- editor manual de grade;
+- geração de relatórios;
+- integração opcional com avaliações docentes.
 
 ---
 
 ## Busca e otimização
 
-O programa não apresenta apenas a primeira combinação encontrada.
+O planejador não apresenta apenas a primeira combinação encontrada. As soluções viáveis são comparadas por critérios diferentes, como:
 
-As diferentes possibilidades de matrícula são analisadas e classificadas para permitir a comparação entre soluções viáveis.
+- progressão curricular;
+- compactação da grade;
+- equilíbrio de carga;
+- avanço em créditos;
+- quantidade de janelas entre aulas;
+- preferências acadêmicas;
+- disponibilidade de vagas;
+- componentes práticos;
+- risco e avaliações docentes quando disponíveis.
 
-A aplicação também informa a cobertura da busca realizada, incluindo quantidade de disciplinas analisadas, combinações avaliadas, grades únicas encontradas e cobertura da fronteira de Pareto.
-
-![Validação da busca](assets/search-validation.png)
-
----
-
-## Visualização da grade
-
-As alternativas selecionadas são convertidas em uma grade semanal para facilitar a análise dos horários e da distribuição das disciplinas ao longo da semana.
-
-![Grade semanal](assets/schedule.png)
+A aplicação também possui mecanismos de validação da busca para indicar quando o conjunto de alternativas foi percorrido de forma completa ou quando algum limite técnico restringiu a análise.
 
 ---
 
-## Tecnologias utilizadas
+## Planejamento de trajetória
 
-### Desenvolvimento
+Além da próxima matrícula, o sistema simula diferentes caminhos acadêmicos e permite comparar cenários de formação.
 
-- Python
-- Streamlit
-- Pandas
-- OpenPyXL
-- PDFPlumber
+A projeção considera, entre outros pontos:
 
-### Dados e integração
+- créditos ainda necessários;
+- disciplinas compartilhadas entre matrizes;
+- aproveitamento curricular;
+- ritmo de créditos por quadrimestre;
+- componentes especiais, como estágio e trabalho de graduação;
+- cenários otimista e prudente;
+- possíveis gargalos de conclusão.
 
-- JSON
-- CSV
-- Excel
-- processamento de PDFs
-- Playwright
-
-### Qualidade
-
-- Pytest
-- testes automatizados
-- validação de regras acadêmicas
-- testes de integração
-
-### Outros
-
-- HTML
-- Git
-- GitHub
+O objetivo não é substituir as regras oficiais da universidade, mas organizar as informações e tornar as consequências de cada escolha mais visíveis.
 
 ---
 
-## Estrutura do projeto
+## Tecnologias
 
-```text
-ufabc-academic-planner/
-│
-├── app.py
-├── main.py
-├── requirements.txt
-│
-├── planejador/
-│   ├── academico.py
-│   ├── analise.py
-│   ├── avaliacoes_docentes.py
-│   ├── configuracao.py
-│   ├── curriculo.py
-│   ├── historico.py
-│   ├── modelos.py
-│   ├── multicurso.py
-│   ├── ofertas.py
-│   ├── planejador.py
-│   ├── relatorio.py
-│   ├── trajetorias.py
-│   └── utils.py
-│
-├── tests/
-├── config/
-├── dados/
-├── dados_fontes/
-├── ferramentas/
-├── entradas/
-├── saidas/
-└── assets/
+### Aplicação e dados
+
+`Python` · `Streamlit` · `Pandas` · `NumPy` · `JSON` · `CSV` · `Excel`
+
+### Processamento e integração
+
+`OpenPyXL` · `PDFPlumber` · `Playwright` · processamento de PDFs
+
+### Qualidade e desenvolvimento
+
+`Pytest` · testes automatizados · `Git` · `GitHub`
+
+> A lista acima descreve tecnologias utilizadas no projeto. O `requirements.txt` público ainda será revisado junto com a publicação do código-fonte para refletir exatamente as dependências necessárias à versão disponibilizada.
+
+---
+
+## Validação
+
+O projeto possui uma suíte de testes voltada a regras acadêmicas e ao mecanismo de geração das grades. Entre os cenários já trabalhados estão conflitos e sobreposições de horário, componentes quinzenais, créditos e equivalências, diferentes currículos, trajetórias com mais de uma formação, ranking de alternativas e validação da busca.
+
+Uma etapa importante antes da publicação integral do código é transformar esses testes em uma suíte totalmente reproduzível a partir de dados fictícios ou públicos.
+
+---
+
+## Privacidade e segurança
+
+O planejador pode trabalhar com histórico acadêmico e, opcionalmente, com uma sessão autenticada para coleta de informações externas. Por isso, arquivos pessoais e credenciais **não devem fazer parte do repositório público**.
+
+O `.gitignore` deste projeto já exclui, entre outros itens:
+
+- arquivos enviados pelo usuário em `entradas/`;
+- sessões autenticadas locais;
+- arquivos `.env` e secrets;
+- resultados locais com comentários completos;
+- caches e ambientes virtuais.
+
+Antes da publicação do código será feita também uma revisão do histórico Git, já que um `.gitignore` não remove informações que tenham sido commitadas anteriormente.
+
+---
+
+## Próximos passos do portfólio
+
+1. Publicar uma versão do código sem dados pessoais ou credenciais.
+2. Disponibilizar dados fictícios de demonstração.
+3. Revisar e fixar as dependências da aplicação.
+4. Tornar a suíte de testes reproduzível no repositório público.
+5. Adicionar screenshots e/ou GIFs de demonstração com dados anonimizados.
+6. Preparar uma versão executável ou deploy de demonstração.
+7. Evoluir a arquitetura gradualmente para separar interface, regras de negócio e persistência de dados.
+
+---
+
+## Objetivo do projeto
+
+Mais do que automatizar uma matrícula, o UFABC Academic Planner é um projeto para explorar **programação, tratamento de dados, modelagem de regras, busca combinatória, otimização multicritério, testes e desenvolvimento de aplicações** a partir de um problema real.
+
+Ele também faz parte da minha evolução em desenvolvimento Python, dados e construção de soluções que transformam informações complexas em decisões mais claras.
+
+---
+
+### Aviso
+
+Este é um projeto pessoal e independente. Não é uma ferramenta oficial da Universidade Federal do ABC e não substitui o SIGAA, os Projetos Pedagógicos dos Cursos ou orientações oficiais da UFABC.
