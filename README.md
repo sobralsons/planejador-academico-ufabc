@@ -105,7 +105,7 @@ A pasta `planejador/` concentra as regras de domínio e a lógica principal; `ap
 
 ## Como executar
 
-Requer Python 3.10+.
+Requer Python 3.12+.
 
 ```bash
 git clone https://github.com/sobralsons/planejador-academico-ufabc.git
