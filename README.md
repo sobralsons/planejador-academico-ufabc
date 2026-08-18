@@ -79,7 +79,7 @@ As projeções são **estimativas de apoio à decisão**. Elas não substituem o
 
 **Automação e integração:** `Playwright`
 
-**Qualidade:** `Pytest`, testes de regras acadêmicas e testes de integração
+**Qualidade:** `Pytest`, testes de regras acadêmicas, testes de integração e `GitHub Actions`
 
 **Versionamento:** `Git`, `GitHub`
 
@@ -130,7 +130,7 @@ Também é possível usar `executar_windows.bat`.
 python -m pytest -q
 ```
 
-Na versão auditada para publicação, a suíte executa **47 testes**, cobrindo regras de horários, histórico, equivalências, currículos, busca, ranking, planejamento multicurso e trajetórias.
+Na versão auditada para publicação, a suíte executa **47 testes**, cobrindo regras de horários, histórico, equivalências, currículos, busca, ranking, planejamento multicurso e trajetórias. O repositório também possui um workflow de GitHub Actions para executar a suíte automaticamente em pull requests e pushes para a `main`.
 
 ## Privacidade
 
@@ -149,7 +149,7 @@ A integração opcional com o UFABC Next deve ser usada de forma consciente e re
 
 ## Próximos passos
 
-A evolução técnica planejada inclui separar a aplicação em API e frontend, persistir dados em banco relacional e adicionar uma camada de testes/CI mais completa. Tecnologias em estudo para essa evolução incluem **FastAPI, PostgreSQL, Docker e GitHub Actions**.
+A evolução técnica planejada inclui separar a aplicação em API e frontend, persistir dados em banco relacional, ampliar a automação de qualidade e preparar uma versão containerizada. Tecnologias em estudo para essa evolução incluem **FastAPI, PostgreSQL e Docker**.
 
 ---
 
