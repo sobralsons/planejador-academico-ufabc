@@ -1,0 +1,5965 @@
+{
+  "metadados": {
+    "id": "bct_2015",
+    "curso": "Bacharelado em Ciência e Tecnologia — UFABC",
+    "versao": "2015",
+    "creditos_totais": 190,
+    "creditos_totais_oficiais": 190,
+    "creditos_disciplinas_e_integralizadores": 190,
+    "creditos_obrigatorios": 90,
+    "creditos_obrigatorios_regulares": 90,
+    "creditos_opcao_limitada": 57,
+    "creditos_livres": 43,
+    "atividades_complementares_horas": 120,
+    "estagio_obrigatorio_creditos": 0,
+    "trabalho_final_creditos": 0,
+    "prazo_ideal_quadrimestres": 9,
+    "fontes": {
+      "matriz": "PPC BC&T 2015 consolidado",
+      "opcao_limitada": "Ato Decisório CG 29/2023, usado como compatibilidade atual"
+    },
+    "duracoes_especiais": {}
+  },
+  "disciplinas": [
+    {
+      "codigo": "BCS0001-15",
+      "nome": "Base Experimental das Ciências Naturais",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 0,
+      "p": 3,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": 1,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "BIS0005-15",
+      "nome": "Bases Computacionais da Ciência",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 0,
+      "p": 2,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": 1,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIS0005-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIS0003-15",
+      "nome": "Bases Matemáticas",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": 1,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIS0003-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIK0102-15",
+      "nome": "Estrutura da Matéria",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 1,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIK0102-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIL0304-15",
+      "nome": "Evolução e Diversificação da Vida na Terra",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 1,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIL0304-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIJ0207-15",
+      "nome": "Bases Conceituais da Energia",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 1,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIJ0207-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCJ0204-15",
+      "nome": "Fenômenos Mecânicos",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 4,
+      "p": 1,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 2,
+      "recomendacoes": [
+        "BCN0402-15",
+        "BCN0404-15",
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Geometria Analitica; Funções de Uma Variável; Bases Matemáticas",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCJ0204-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCN0402-15",
+      "nome": "Funções de Uma Variável",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 2,
+      "recomendacoes": [
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Bases Matemáticas",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCN0402-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCN0404-15",
+      "nome": "Geometria Analítica",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 2,
+      "recomendacoes": [
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Bases Matemáticas",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCN0404-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCM0504-15",
+      "nome": "Natureza da Informação",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 2,
+      "recomendacoes": [
+        "BIS0005-15"
+      ],
+      "recomendacao_texto": "Bases Computacionais da Ciência",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCM0504-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCL0306-15",
+      "nome": "Biodiversidade: Interações entre organismos e ambiente",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 2,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCL0306-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCN0407-15",
+      "nome": "Funções de Várias Variáveis",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 3,
+      "recomendacoes": [
+        "BCN0402-15",
+        "BCN0404-15"
+      ],
+      "recomendacao_texto": "Geometria Analitica; Funções de Uma Variável",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCN0407-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCJ0205-15",
+      "nome": "Fenômenos Térmicos",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 3,
+      "recomendacoes": [
+        "BCJ0204-15",
+        "BCN0402-15",
+        "BIK0102-15"
+      ],
+      "recomendacao_texto": "Estrutura da Matéria; Fenômenos Mecânicos; Funções de uma Variável",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCJ0205-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCM0505-15",
+      "nome": "Processamento da Informação",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 3,
+      "p": 2,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": 3,
+      "recomendacoes": [
+        "BIS0005-15"
+      ],
+      "recomendacao_texto": "Bases Computacionais da Ciência",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "BCL0307-15",
+      "nome": "Transformações Químicas",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 3,
+      "p": 2,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 3,
+      "recomendacoes": [
+        "BIK0102-15"
+      ],
+      "recomendacao_texto": "Estrutura da Matéria",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCL0307-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCM0506-15",
+      "nome": "Comunicação e Redes",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 4,
+      "recomendacoes": [
+        "BCM0505-15"
+      ],
+      "recomendacao_texto": "Processamento da Informação",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCM0506-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIN0406-15",
+      "nome": "Introdução à Probabilidade e à Estatística",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 4,
+      "recomendacoes": [
+        "BCN0402-15"
+      ],
+      "recomendacao_texto": "Funções de Uma Variável",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIN0406-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCN0405-15",
+      "nome": "Introdução às Equações Diferenciais Ordinárias",
+      "categoria": "obrigatoria",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 4,
+      "recomendacoes": [
+        "BCN0407-15"
+      ],
+      "recomendacao_texto": "Funções de Várias Variáveis",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCN0405-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCJ0203-15",
+      "nome": "Fenômenos Eletromagnéticos",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 4,
+      "p": 1,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 4,
+      "recomendacoes": [
+        "BCJ0204-15",
+        "BCN0402-15",
+        "BCN0404-15",
+        "BCN0405-15",
+        "BCN0407-15",
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Bases Matemáticas; Fenômenos Mecânicos ; Funções de Uma Variável ; Funções de Várias Variáveis; Geometria Analítica; Introdução às Equações Diferenciais Ordinárias",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCJ0203-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIR0004-15",
+      "nome": "Bases Epistemológicas da Ciência Moderna",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 4,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIR0004-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCL0308-15",
+      "nome": "Bioquímica: estrutura, propriedade e funções de biomoléculas",
+      "categoria": "obrigatoria",
+      "creditos": 5,
+      "t": 3,
+      "p": 2,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": 5,
+      "recomendacoes": [
+        "BCL0307-15",
+        "BIK0102-15"
+      ],
+      "recomendacao_texto": "Estrutura da Matéria; Transformações Químicas",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCL0308-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIQ0602-15",
+      "nome": "Estrutura e Dinâmica Social",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 5,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIQ0602-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCK0103-15",
+      "nome": "Física Quântica",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 5,
+      "recomendacoes": [
+        "BCJ0203-15",
+        "BCJ0204-15",
+        "BCJ0205-15",
+        "BIK0102-15"
+      ],
+      "recomendacao_texto": "Estrutura da Matéria; Fenômenos Mecânicos; Fenômenos Térmicos; Fenômenos Eletromagnéticos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCK0103-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCK0104-15",
+      "nome": "Interações Atômicas e Moleculares",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 6,
+      "recomendacoes": [
+        "BCK0103-15",
+        "BCL0307-15"
+      ],
+      "recomendacao_texto": "Transformações Químicas; Física Quântica",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BCK0104-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BIR0603-15",
+      "nome": "Ciência, Tecnologia e Sociedade",
+      "categoria": "obrigatoria",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": 6,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "BIR0603-15",
+      "observacoes": []
+    },
+    {
+      "codigo": "BCS0002-15",
+      "nome": "Projeto Dirigido",
+      "categoria": "obrigatoria",
+      "creditos": 2,
+      "t": 0,
+      "p": 2,
+      "e": 0,
+      "i": 10,
+      "quadrimestre_recomendado": 9,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHI5001-15",
+      "nome": "Desenvolvimento e Aprendizagem",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "BHO0102-15",
+      "nome": "Desenvolvimento e Sustentabilidade",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHI5002-15",
+      "nome": "Didática",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "BHS0002-22",
+      "nome": "Diversidade de Gênero e Formação de Professor",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "BHO0101-15",
+      "nome": "Estado e Relações De Poder",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "BHQ0004-19",
+      "nome": "Estudos de Gênero",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESHT007-17",
+      "nome": "Estudos do Meio Físico",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "BHQ0002-15",
+      "nome": "Estudos Étnico-Raciais",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "BHP0001-15",
+      "nome": "Ética e Justiça",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "BHO1335-15",
+      "nome": "Formação do Sistema Internacional",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "LHE0001-19",
+      "nome": "História , eurocentrismo e Pós Colonialismo",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ5016-15",
+      "nome": "História da Educação",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "BHQ0001-15",
+      "nome": "Identidade e Cultura",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "BHQ0003-15",
+      "nome": "Interpretações do Brasil",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "BHO1102-19",
+      "nome": "Introdução à Economia                 3",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "BHO0002-19",
+      "nome": "Introdução ao Pensamento Econômico",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "BHO0001-19",
+      "nome": "Introdução às Humanidades e Ciências Sociais",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "LHE0002-22",
+      "nome": "Laboratório de Práticas Integradoras I",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 0,
+      "p": 4,
+      "e": 4,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "LHE0003-22",
+      "nome": "Laboratório de Práticas Integradoras II",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 0,
+      "p": 4,
+      "e": 4,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHI5015-22",
+      "nome": "Libras",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 2,
+      "i": 2,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "LIE0001-19",
+      "nome": "Metodologias de Pesquisa da Educação",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ4081-20",
+      "nome": "Paulo Freire: educação para a criticidade.",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "BHP0202-15",
+      "nome": "Pensamento Crítico",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHI5011-13",
+      "nome": "Políticas Educacionais",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT5013-22",
+      "nome": "Práticas de Ensino de Ciência e Matemática no Ensino Fundamental",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 1,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "BHS0005-19",
+      "nome": "Práticas em Ciências e Humanidades",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 1,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ5023-18",
+      "nome": "Práticas Escolares em Educação Especial e Inclusiva",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ5019-22",
+      "nome": "Tecnologias da Informação e Comunicação na Educação",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 1,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "BHP0202-19",
+      "nome": "Temas e Problemas em Filosofia",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "LHE0004-19",
+      "nome": "Teoria de História I",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "BHQ0301-15",
+      "nome": "Território e Sociedade",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ2099-16",
+      "nome": "Tópicos Contemporâneos em Educação e Filosofia",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTS002-17",
+      "nome": "Aeronáutica I-A",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTB001-17",
+      "nome": "Álgebra Linear",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 6,
+      "p": 0,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "BCN0404-15"
+      ],
+      "recomendacao_texto": "Geometria Analítica",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "MCTB001-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "MCTB002-13",
+      "nome": "Álgebra Linear Avançada I",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTB003-17",
+      "nome": "Álgebra Linear Avançada II",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA001-17",
+      "nome": "Algoritmos e Estruturas de Dados I",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA002-17",
+      "nome": "Algoritmos e Estruturas de Dados II",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA003-17",
+      "nome": "Análise de Algoritmos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT3067-15",
+      "nome": "Análise de Fourier e Aplicações",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA001-13",
+      "nome": "Análise de Projetos",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTB005-13",
+      "nome": "Análise Real I",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTB006-13",
+      "nome": "Análise Real II                                  4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA002-17",
+      "nome": "Aprendizado de Máquina",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZE097-17",
+      "nome": "Armazenamento de Energia Elétrica",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZC010-15",
+      "nome": "Atenção e Estados de Consciência",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA037-17",
+      "nome": "Banco de Dados",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZC002-15",
+      "nome": "Bases Neurais da Motricidade",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTB019-17",
+      "nome": "Bioestatística",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT1002-15",
+      "nome": "Bioética",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ1003-15",
+      "nome": "Biofísica",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTC025-20",
+      "nome": "Biofísica de Membranas",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 6,
+      "p": 0,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT1053-15",
+      "nome": "Biologia Celular",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 4,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ1009-15",
+      "nome": "Biologia Molecular e Biotecnologia",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ6009-18",
+      "nome": "Biologia Sintética",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTU023-17",
+      "nome": "Biomas Brasileiros",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 2,
+      "p": 1,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT4002-13",
+      "nome": "Bioquímica Experimental",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 2,
+      "p": 4,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT1013-15",
+      "nome": "Bioquímica Funcional",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 4,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ1078-15",
+      "nome": "Biotecnologia de Plantas",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 0,
+      "p": 4,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTB008-17",
+      "nome": "Cálculo de Probabilidade",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTB009-17",
+      "nome": "Cálculo Numérico",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "BCM0505-15",
+        "BCN0402-15"
+      ],
+      "recomendacao_texto": "Funções de Uma Variável; Processamento da Informação",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "MCTB009-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "MCTB010-13",
+      "nome": "Cálculo Vetorial e Tensorial",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "BCN0407-15"
+      ],
+      "recomendacao_texto": "Funções de Várias Variáveis",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "MCTB010-13",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTU026-17",
+      "nome": "Caracterização de Matrizes Ambientais",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 1,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTU004-17",
+      "nome": "Cartografia e Geoprocessamento",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 1,
+      "p": 3,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESHP004-13",
+      "nome": "Cidadania, Direitos e Desigualdades",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTM004-17",
+      "nome": "Ciência dos Materiais",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "ESTO006-17"
+      ],
+      "recomendacao_texto": "Materiais e suas Propriedades",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTM004-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZU022-17",
+      "nome": "Ciências Atmosféricas",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA006-17",
+      "nome": "Circuitos Digitais",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTO001-17",
+      "nome": "Circuitos Elétricos e Fotônica",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "BCJ0203-15"
+      ],
+      "recomendacao_texto": "Fenômenos Eletromagnéticos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO001-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTA002-17",
+      "nome": "Circuitos Elétricos I",
+      "categoria": "opcao_limitada",
+      "creditos": 5,
+      "t": 3,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTA004-17",
+      "nome": "Circuitos Elétricos II",
+      "categoria": "opcao_limitada",
+      "creditos": 5,
+      "t": 3,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTU005-17",
+      "nome": "Climatologia",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA037-17",
+      "nome": "Combinatória Extremal",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTB018-17",
+      "nome": "Computação Científica aplicada a Problemas Biológicos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 1,
+      "p": 3,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA009-13",
+      "nome": "Computadores, Ética e Sociedade",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTC007-20",
+      "nome": "Comunicação Científica",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI007-17",
+      "nome": "Comunicação Digital",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI010-17",
+      "nome": "Comunicações Ópticas",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZR001-13",
+      "nome": "4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ3001-15",
+      "nome": "Medieval",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTG001-17",
+      "nome": "Custos",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 4,
+      "p": 2,
+      "e": 0,
+      "i": 9,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTS019-17",
+      "nome": "Dinâmica de Gases",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 4,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZR005-13",
+      "nome": "Dinâmica dos Investimentos Produtivos Internacionais",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTA001-17",
+      "nome": "Dispositivos Eletrônicos",
+      "categoria": "opcao_limitada",
+      "creditos": 5,
+      "t": 3,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT1072-15",
+      "nome": "Ecologia Comportamental",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZU034-17",
+      "nome": "Ecologia do Ambiente Urbano",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTE036-17",
+      "nome": "Economia da Energia",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTG003-17",
+      "nome": "Economia de Empresas",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESHT005-17",
+      "nome": "Economia do Território",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESHR004-13",
+      "nome": "Economia Política Internacional da Energia",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZU006-17",
+      "nome": "Economia, Sociedade e Meio Ambiente",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZU025-17",
+      "nome": "Educação Ambiental",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT5004-15",
+      "nome": "Educação Científica, Sociedade e Cultura",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ5021-16",
+      "nome": "Educação em Saúde e Sexualidade",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ5020-15",
+      "nome": "Educação Inclusiva",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ3003-15",
+      "nome": "Efeitos Biológicos das Radiações",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZB007-13",
+      "nome": "Elementos Finitos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZE110-17",
+      "nome": "Eletrificação Rural com Recursos Energéticos Renováveis",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTA018-17",
+      "nome": "Eletromagnetismo Aplicado",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT3070-15",
+      "nome": "Eletromagnetismo I",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTA007-17",
+      "nome": "Eletrônica Analógica Aplicada",
+      "categoria": "opcao_limitada",
+      "creditos": 5,
+      "t": 3,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI002-17",
+      "nome": "Eletrônica Digital",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 4,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZG013-17",
+      "nome": "Empreendedorismo",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA007-13",
+      "nome": "Empreendedorismo e Desenvolvimento de Negócios",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ6012-18",
+      "nome": "Empreendedorismo e Planejamento de Projetos em Biotecnologia",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZE105-17",
+      "nome": "Energia dos Oceanos",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZE104-17",
+      "nome": "Energia Geotérmica",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTE029-17",
+      "nome": "Engenharia de Combustíveis Fósseis",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA033-15",
+      "nome": "Engenharia de Software",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTO013-17",
+      "nome": "Engenharia Econômica",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "BCN0402-15"
+      ],
+      "recomendacao_texto": "Funções de Uma Variável",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO013-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTG006-17",
+      "nome": "Engenharia Laboral",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTO902-17",
+      "nome": "Engenharia Unificada I",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 0,
+      "p": 2,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTO903-17",
+      "nome": "Engenharia Unificada II",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 0,
+      "p": 2,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ6004-18",
+      "nome": "Enzimologia e Biocatálise",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 4,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ3078-15",
+      "nome": "Equações Diferenciais Parciais Aplicadas",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZC007-15",
+      "nome": "Ergonomia Cognitiva",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESHR005-13",
+      "nome": "Estado e Desenvolvimento Econômico no Brasil Contemporâneo",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTG011-17",
+      "nome": "Estatística Aplicada a Sistemas de Gestão",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ3007-15",
+      "nome": "Estrutura Atômica e Molecular",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT4049-15",
+      "nome": "Estrutura da Matéria Avançada",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 2,
+      "p": 4,
+      "e": 0,
+      "i": 8,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT1062-15",
+      "nome": "Evolução",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ3008-22",
+      "nome": "Evolução da Física I",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZB035-17",
+      "nome": "Evolução dos Conceitos Matemáticos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT1067-15",
+      "nome": "Evolução e Diversidade de Plantas I",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT1068-15",
+      "nome": "Evolução e Diversidade de Plantas II",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 2,
+      "p": 4,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ1027-15",
+      "nome": "Farmacologia",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 4,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTO016-17",
+      "nome": "Fenômenos de Transporte",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "BCJ0205-15"
+      ],
+      "recomendacao_texto": "Fenômenos Térmicos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO016-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "NHZ2106-18",
+      "nome": "Filosofia da Ciência",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHH2017-16",
+      "nome": "Filosofia da Educação",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ3010-15",
+      "nome": "Física Computacional",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT3012-15",
+      "nome": "Física do Contínuo",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ3084-15",
+      "nome": "Física do Meio Ambiente",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTB023-17",
+      "nome": "Física Médica I",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT3064-15",
+      "nome": "Física Ondulatória",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT3013-13",
+      "nome": "Física Térmica",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT4017-15",
+      "nome": "Funções e Reações Orgânicas",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTD021-18",
+      "nome": "Fundamentos de Álgebra",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTD023-18",
+      "nome": "Fundamentos de Análise",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ6001-18",
+      "nome": "Fundamentos de Biotecnologia",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTE015-17",
+      "nome": "Fundamentos de Conversão de Energia Elétrica",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTO011-17",
+      "nome": "Fundamentos de Desenho Técnico",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO011-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTI017-17",
+      "nome": "Fundamentos de Eletromagnetismo Aplicado",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI016-17",
+      "nome": "Fundamentos de Fotônica",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTU027-17",
+      "nome": "Fundamentos de Geologia para",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 2,
+      "p": 1,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT1061-15",
+      "nome": "Genética I",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 4,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT1057-15",
+      "nome": "Genética II",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ6010-18",
+      "nome": "Genômica e Pós-Genômica               4",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 4,
+      "p": 2,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTB016-13",
+      "nome": "Geometria Diferencial I",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZB009-13",
+      "nome": "Geometria não Euclidiana",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTD009-18",
+      "nome": "Geometria Plana Axiomática",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA016-17",
+      "nome": "Gestão de projetos de software",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTB018-17",
+      "nome": "Grupos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTU028-17",
+      "nome": "Hidráulica de Condutos Forçados",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 2,
+      "p": 1,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTU029-17",
+      "nome": "Hidráulica de Condutos Livres",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 1,
+      "p": 1,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZE048-17",
+      "nome": "Hidrogênio e Células a Combustível",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTU009-17",
+      "nome": "Hidrologia",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT1054-15",
+      "nome": "Histologia e Embriologia",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 4,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESHT009-17",
+      "nome": "História da Cidade e do Urbanismo",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTD010-18",
+      "nome": "História da Matemática",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ5017-15",
+      "nome": "História e Filosofia das Ciências e o Ensino de Ciências",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTS003-17",
+      "nome": "Introdução à Astronáutica",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZB012-13",
+      "nome": "Inferência Estatística",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI027-17",
+      "nome": "Informação e Sociedade",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZT005-17",
+      "nome": "Informática Aplicada ao Planejamento Territorial",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 1,
+      "p": 3,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTO004-17",
+      "nome": "Instrumentação e Controle",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "BCN0405-15",
+        "ESTO001-17"
+      ],
+      "recomendacao_texto": "Introdução às Equações Diferenciais Ordinárias; Circuitos Elétricos e Fotônica",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO004-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "NHT1086-16",
+      "nome": "Instrumentação para o Ensino de Ciências e Biologia",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 0,
+      "p": 4,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA014-15",
+      "nome": "Inteligência Artificial",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA008-17",
+      "nome": "Interação Humano-Computador",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ3021-15",
+      "nome": "Interações da Radiação com a Matéria",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZB022-17",
+      "nome": "Introdução à Bioinformática",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZB015-13",
+      "nome": "Introdução à Criptografia",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "LCZ0001-19",
+      "nome": "Introdução à Filosofia da Ciência",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTC001-15",
+      "nome": "Introdução à Filosofia da Mente",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ3024-15",
+      "nome": "Introdução à Física de Partículas Elementares",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ3026-15",
+      "nome": "Introdução à Física Nuclear",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTC014-13",
+      "nome": "Introdução à Inferência Estatística",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI045-17",
+      "nome": "Introdução à Linguística Computacional",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZB018-13",
+      "nome": "Introdução à Modelagem e Processos Estocásticos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTC002-15",
+      "nome": "Introdução à Neurociência             4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZC003-15",
+      "nome": "Introdução à Psicolinguística e Neurociência da Linguagem",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTO005-17",
+      "nome": "Introdução às Engenharias",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO005-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "NHT3027-15",
+      "nome": "Laboratório de Física I",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 0,
+      "p": 3,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT3028-15",
+      "nome": "Laboratório de Física II",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 0,
+      "p": 3,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT3065-15",
+      "nome": "Laboratório de Física III",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 0,
+      "p": 3,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ3080-15",
+      "nome": "Laboratório de Física Médica",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 0,
+      "p": 3,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ3031-15",
+      "nome": "Laboratório de Propriedades Físicas de Materiais",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT4023-15",
+      "nome": "Ligações Químicas",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA015-13",
+      "nome": "Linguagens Formais e Automata",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHI2049-13",
+      "nome": "Lógica Básica",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA013-13",
+      "nome": "Lógicas não Clássicas",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTB019-17",
+      "nome": "Matemática Discreta",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTO006-17",
+      "nome": "Materiais e Suas Propriedades",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO006-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "NHT3068-15",
+      "nome": "Mecânica Clássica I",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTO015-17",
+      "nome": "Mecânica dos Fluidos I",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "BCJ0205-15",
+        "BCN0402-15",
+        "BCN0407-15"
+      ],
+      "recomendacao_texto": "Fenômenos Térmicos; Funções de Uma Variável; Funções de Várias Variáveis",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO015-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTO008-17",
+      "nome": "Mecânica dos Sólidos I",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "BCJ0204-15",
+        "BCN0402-15",
+        "BCN0404-15",
+        "ESTO011-17"
+      ],
+      "recomendacao_texto": "Funções de Uma Variável; Fenômenos Mecânicos; Geometria Analítica; Fundamentos de Desenho Técnico",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO008-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESZS018-17",
+      "nome": "Mecânica dos Sólidos II",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT3036-15",
+      "nome": "Mecânica Estatística",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 6,
+      "p": 0,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT3037-13",
+      "nome": "Mecânica Geral",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT3072-15",
+      "nome": "Mecânica Quântica I",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 6,
+      "p": 0,
+      "e": 0,
+      "i": 0,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT4024-15",
+      "nome": "Mecanismos de Reações Orgânicas",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT4025-15",
+      "nome": "Métodos de Análise em Química Orgânica",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTO017-17",
+      "nome": "Métodos Experimentais em Engenharia",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "BCN0405-15",
+        "BIN0406-15"
+      ],
+      "recomendacao_texto": "Introdução às Equações Diferenciais Ordinárias; Introdução à Probabilidade e à Estatística",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO017-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTB031-18",
+      "nome": "Métodos Matemáticos Aplicados a Sistemas Biomédicos",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 6,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT1056-15",
+      "nome": "Microbiologia",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 4,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTU010-17",
+      "nome": "Microbiologia Ambiental",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA015-13",
+      "nome": "Mineração de Dados",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTA020-17",
+      "nome": "Modelagem e Controle",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ6003-18",
+      "nome": "Nanobiotecnologia",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ3060-09",
+      "nome": "Nascimento e Desenvolvimento da Ciência Moderna",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZR009-13",
+      "nome": "tecnológica",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTC023-15",
+      "nome": "Neuroanatomia",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZC008-13",
+      "nome": "Neuroarte",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTC019-20",
+      "nome": "Neurobiologia Molecular e Celular",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTC021-20",
+      "nome": "Neurociência Teórica e Computacional",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTC024-15",
+      "nome": "Neuroetologia",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTC018-20",
+      "nome": "Neuropsicofarmacologia",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ3043-15",
+      "nome": "Noções de Astronomia e Cosmologia",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI018-17",
+      "nome": "Ondas Eletromagnéticas Aplicadas",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT3044-15",
+      "nome": "Óptica",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTG023-17",
+      "nome": "Organização do Trabalho",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA016-13",
+      "nome": "Paradigmas de Programação",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZT008-17",
+      "nome": "Patrimônio Cultural e Paisagem",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTG013-17",
+      "nome": "Pesquisa Operacional",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZE064-17",
+      "nome": "Petrofísica",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZT009-17",
+      "nome": "Planejamento e Gestão de Redes Técnicas e Sistemas Territoriais",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZP039-14",
+      "nome": "Políticas de Educação",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTU012-17",
+      "nome": "Poluição Atmosférica",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT5012-15",
+      "nome": "Práticas de Ciências no Ensino Fundamental",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT1085-22",
+      "nome": "Práticas de Ensino de Biologia e Aprendizagem",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 2,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT1083-22",
+      "nome": "Práticas de Ensino de Biologia e Currículo",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 2,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT1084-22",
+      "nome": "Práticas de Ensino de Biologia e Planejamento",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 2,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTO012-17",
+      "nome": "Princípios de Administração",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "Não há",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO012-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTI004-17",
+      "nome": "Princípios de Comunicação",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTB015-17",
+      "nome": "Princípios de Ética em Serviços de Saúde",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT3048-15",
+      "nome": "Princípios de Mecânica Quântica",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT3049-15",
+      "nome": "Princípios de Termodinâmica",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI003-17",
+      "nome": "Processamento de Informação em Línguas Naturais",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA018-17",
+      "nome": "Processamento Digital de Imagens",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI006-17",
+      "nome": "Processamento Digital de Sinais",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA042-17",
+      "nome": "Processo e Desenvolvimento de Softwares Educacionais",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 0,
+      "p": 4,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI033-17",
+      "nome": "Programação de Dispositivos Móveis",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 0,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA028-15",
+      "nome": "Programação Estruturada",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA017-17",
+      "nome": "Programação Matemática",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA018-13",
+      "nome": "Programação Orientada a Objetos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTC009-15",
+      "nome": "Progressos e Métodos em Neurociência",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTA019-17",
+      "nome": "Projeto Assistido por Computador",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 0,
+      "p": 2,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTG025-17",
+      "nome": "Propriedade Intelectual",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ6006-18",
+      "nome": "Proteínas Recombinantes",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTC011-15",
+      "nome": "Psicologia Cognitiva",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTC020-15",
+      "nome": "Psicologia Experimental",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 2,
+      "p": 4,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ5014-15",
+      "nome": "Questões Atuais no Ensino de Ciências",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZU037-17",
+      "nome": "Química Ambiental",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT4051-15",
+      "nome": "Química Analítica Clássica I",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 3,
+      "p": 3,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT4050-15",
+      "nome": "Química Analítica Clássica II",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 3,
+      "p": 3,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT4052-15",
+      "nome": "Química de Coordenação",
+      "categoria": "opcao_limitada",
+      "creditos": 8,
+      "t": 4,
+      "p": 4,
+      "e": 0,
+      "i": 8,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZE066-17",
+      "nome": "Química do Petróleo",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT4053-15",
+      "nome": "Química dos Elementos",
+      "categoria": "opcao_limitada",
+      "creditos": 8,
+      "t": 4,
+      "p": 4,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT4041-15",
+      "nome": "Química Orgânica Experimental",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 0,
+      "p": 4,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZU023-17",
+      "nome": "Recursos Hídricos",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA022-17",
+      "nome": "Redes de Computadores",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTU039-17",
+      "nome": "Regulação Ambiental e Urbanística",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTU032-17",
+      "nome": "Representação Gráfica de Projetos Ambientais e Urbanos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 0,
+      "p": 4,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZU030-17",
+      "nome": "Riscos no Ambiente Urbano",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA044-17",
+      "nome": "Robótica e Sistemas Inteligentes",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTU015-17",
+      "nome": "Saúde Ambiental",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI031-17",
+      "nome": "Segurança de Redes",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ6007-18",
+      "nome": "Segurança e Regulamentação em Biotecnologia",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZC012-15",
+      "nome": "Sensação e Percepção",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZU017-17",
+      "nome": "Sensoriamento Remoto",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 1,
+      "p": 3,
+      "e": 0,
+      "i": 2,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTB022-17",
+      "nome": "Sequências e Séries",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTD007-18",
+      "nome": "Simetrias no Plano Euclidiano",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI005-17",
+      "nome": "Sinais Aleatórios",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTG021-17",
+      "nome": "Sistemas CAD/CAE",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 1,
+      "p": 3,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA026-17",
+      "nome": "Sistemas de Gerenciamento de Banco de Dados",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA027-17",
+      "nome": "Sistemas de Informação",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZI014-17",
+      "nome": "Sistemas Inteligentes",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI013-17",
+      "nome": "Sistemas Microprocessados",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA028-13",
+      "nome": "Sistemas Multiagentes",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT1048-15",
+      "nome": "Sistemática e Biogeografia",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTG019-17",
+      "nome": "Tempos, Métodos e Arranjos Físicos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 2,
+      "p": 2,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTB023-17",
+      "nome": "Teoria Aritmética dos Números",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI008-17",
+      "nome": "Teoria da Informação e Códigos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT3054-15",
+      "nome": "Teoria da Relatividade",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZB032-13",
+      "nome": "Teoria das Filas",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI020-17",
+      "nome": "Teoria de Filas e Análise de Desempenho",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHZ5015-09",
+      "nome": "Teoria do Conhecimento Científico",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTU019-17",
+      "nome": "Teoria do Planejamento Urbano e Ambiental",
+      "categoria": "opcao_limitada",
+      "creditos": 3,
+      "t": 3,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTA027-17",
+      "nome": "Teoria dos Grafos",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZB031-17",
+      "nome": "Teoria dos Jogos                      4",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT3055-13",
+      "nome": "Teoria Eletromagnética",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 4,
+      "p": 2,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTO014-17",
+      "nome": "Termodinâmica Aplicada I",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "BCJ0205-15"
+      ],
+      "recomendacao_texto": "Fenômenos Térmicos",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTO014-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "ESTM018-17",
+      "nome": "Termodinâmica de Materiais",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [
+        "BCN0402-15",
+        "BCN0407-15"
+      ],
+      "recomendacao_texto": "Funções de Uma Variável; Funções de Várias Variáveis",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": "ESTM018-17",
+      "observacoes": []
+    },
+    {
+      "codigo": "NHT4057-15",
+      "nome": "Termodinâmica Química",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 6,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZC011-15",
+      "nome": "Tomada de Decisões e Neuroeconomia",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCTB026-17",
+      "nome": "Topologia",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZR014-13",
+      "nome": "Trajetória de desenvolvimento de países exportadores de petróleo",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTE022-17",
+      "nome": "Transferência de Calor I",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTU020-17",
+      "nome": "Transferência de Massa",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 3,
+      "p": 1,
+      "e": 0,
+      "i": 5,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTI003-17",
+      "nome": "Transformadas em Sinais e Sistemas Lineares",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESTU021-17",
+      "nome": "Transportes e Mobilidade Urbana",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "ESZT016-17",
+      "nome": "Urbanização Brasileira",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT3066-15",
+      "nome": "Variáveis Complexas e Aplicações",
+      "categoria": "opcao_limitada",
+      "creditos": 4,
+      "t": 4,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "MCZA030-17",
+      "nome": "Vida Artificial na Computação",
+      "categoria": "opcao_limitada",
+      "creditos": 2,
+      "t": 2,
+      "p": 0,
+      "e": 0,
+      "i": 4,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    },
+    {
+      "codigo": "NHT1063-15",
+      "nome": "Zoologia de Invertebrados I",
+      "categoria": "opcao_limitada",
+      "creditos": 6,
+      "t": 2,
+      "p": 4,
+      "e": 0,
+      "i": 3,
+      "quadrimestre_recomendado": null,
+      "recomendacoes": [],
+      "recomendacao_texto": "",
+      "requisito_manual": "",
+      "catalogo_codigo_consulta": null,
+      "observacoes": [
+        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
+      ]
+    }
+  ]
+}

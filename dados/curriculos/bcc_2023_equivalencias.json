@@ -1,0 +1,25 @@
+{
+  "equivalencias_academicas": {
+    "MCTA001-17": "MCCC001-23",
+    "MCTA002-17": "MCCC002-23",
+    "MCTA027-17": "MCCC003-23",
+    "MCTA003-17": "MCCC004-23",
+    "MCTA007-17": "MCCC006-23",
+    "MCTA008-17": "MCCC007-23",
+    "MCTA014-15": "MCCC008-23",
+    "MCTA015-13": "MCCC009-23",
+    "MCTA037-17": "MCCC012-23",
+    "MCTA016-13": "MCCC015-23",
+    "BCM0505-15": "BCM0505-22"
+  },
+  "equivalencias_compostas": [
+    {
+      "origens": [
+        "MCTA029-17",
+        "MCTA030-17",
+        "MCTA031-17"
+      ],
+      "destino": "BCC-TCC-23"
+    }
+  ]
+}

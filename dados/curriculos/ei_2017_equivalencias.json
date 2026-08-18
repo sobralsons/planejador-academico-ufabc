@@ -1,0 +1,9 @@
+{
+  "equivalencias_academicas": {
+    "MCTA022-17": "MCTA022-13",
+    "ESIF001-23": "ESTI019-17",
+    "ESMA001-23": "ESTO902-17",
+    "ESMA002-23": "ESTO903-17"
+  },
+  "equivalencias_compostas": []
+}

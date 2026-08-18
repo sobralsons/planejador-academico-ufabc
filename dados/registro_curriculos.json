@@ -1,0 +1,55 @@
+{
+  "curriculos": {
+    "materiais_2017": {
+      "rotulo": "Engenharia de Materiais 2017",
+      "arquivo": "dados/curriculo_engenharia_materiais_2017.json",
+      "equivalencias": "dados/equivalencias_engenharia_materiais_2013_2017.json",
+      "grupo": "Engenharias",
+      "estagio_codigo": "ESTM905-17",
+      "curso_base_id": "bct_2015"
+    },
+    "bct_2015": {
+      "rotulo": "BC&T 2015",
+      "arquivo": "dados/curriculos/bct_2015.json",
+      "equivalencias": "dados/curriculos/bct_2015_equivalencias.json",
+      "grupo": "Curso de ingresso"
+    },
+    "bcc_2017": {
+      "rotulo": "Ciência da Computação 2017",
+      "arquivo": "dados/curriculos/bcc_2017.json",
+      "equivalencias": "dados/curriculos/bcc_2017_equivalencias.json",
+      "grupo": "Computação",
+      "curso_base_id": "bct_2015"
+    },
+    "bcc_2023": {
+      "rotulo": "Ciência da Computação 2023",
+      "arquivo": "dados/curriculos/bcc_2023.json",
+      "equivalencias": "dados/curriculos/bcc_2023_equivalencias.json",
+      "grupo": "Computação",
+      "curso_base_id": "bct_2015"
+    },
+    "bcd_2023": {
+      "rotulo": "Ciência de Dados 2023",
+      "arquivo": "dados/curriculos/bcd_2023.json",
+      "equivalencias": "dados/curriculos/bcd_2023_equivalencias.json",
+      "grupo": "Computação e Dados",
+      "curso_base_id": "bct_2015"
+    },
+    "ei_2017": {
+      "rotulo": "Engenharia de Informação 2017",
+      "arquivo": "dados/curriculos/ei_2017.json",
+      "equivalencias": "dados/curriculos/ei_2017_equivalencias.json",
+      "grupo": "Engenharias",
+      "estagio_codigo": "ESTI905-17",
+      "curso_base_id": "bct_2015"
+    },
+    "ei_2023": {
+      "rotulo": "Engenharia de Informação 2023",
+      "arquivo": "dados/curriculos/ei_2023.json",
+      "equivalencias": "dados/curriculos/ei_2023_equivalencias.json",
+      "grupo": "Engenharias",
+      "estagio_codigo": "ESTI905-17",
+      "curso_base_id": "bct_2015"
+    }
+  }
+}

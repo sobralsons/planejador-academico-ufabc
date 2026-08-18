@@ -1,0 +1,10 @@
+Esta pasta recebe os arquivos gerados pela aplicação:
+
+- relatorio_planejamento.html
+- relatorio_planejamento.txt
+- resultado_resumo.json
+- relatorio_multicurso.html
+- relatorio_trajetoria_academica.html
+- relatorio_avaliacoes_docentes.html
+
+O arquivo relatorio_trajetoria_exemplo.html é um exemplo genérico, sem dados pessoais.
