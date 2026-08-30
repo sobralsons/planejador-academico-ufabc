@@ -25,7 +25,7 @@ Exemplo:
 DOCENTE EXEMPLO + DISC001
 ```
 
-Quando existe avaliação específica da disciplina, ela é utilizada. Caso contrário, o sistema usa a avaliação geral do professor.
+A avaliação geral do professor é sempre usada como base. Quando existe avaliação específica da disciplina, o sistema combina as duas fontes com peso de 60% para a avaliação geral e 40% para a disciplina específica. Se a opção de combinação estiver desativada, somente a avaliação geral é usada.
 
 O efeito é reduzido quando a amostra é pequena e multiplicado pela importância escolhida na interface.
 
@@ -44,6 +44,5 @@ O efeito é reduzido quando a amostra é pequena e multiplicado pela importânci
 - `saidas/relatorio_avaliacoes_docentes.html`: relatório visual específico;
 - `saidas/avaliacoes_docentes_local_com_comentarios_NAO_COMPARTILHAR.json`: comentários completos, uso local;
 - `dados/sessao_ufabc_next/`: sessão autenticada, nunca compartilhar.
-
 
 > A versão pública distribui `avaliacoes_docentes.json` vazio e mantém a integração desabilitada por padrão.
