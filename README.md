@@ -1,156 +1,179 @@
-# 🎓 UFABC Academic Planner
+> **Etapa 1 revisada:** correções do núcleo e 72 testes aprovados. Consulte [alterações, limites e próxima etapa](docs/etapa-1.md). Ainda é um aplicativo local; a etapa 2 valida as regras curriculares.
 
-Aplicação em **Python + Streamlit** para apoiar estudantes da Universidade Federal do ABC na montagem da próxima grade e na simulação de trajetórias acadêmicas mais longas.
+# Planejador Acadêmico e de Trajetórias — UFABC
 
-O projeto nasceu de um problema real: na UFABC, o sistema quadrimestral, as diferentes matrizes, equivalências, recomendações, horários e possibilidades de múltiplas formações tornam o planejamento acadêmico um problema combinatório difícil de resolver manualmente.
+Aplicação local para planejar **a trajetória completa** e a matrícula de cada quadrimestre. O sistema lê o histórico, compara matrizes curriculares, estima datas de conclusão, identifica disciplinas compartilhadas e monta grades sem conflito.
 
-> **Status:** versão funcional de portfólio. A aplicação roda localmente e a suíte atual possui **47 testes automatizados**.
+## O que mudou nesta versão
 
-![Tela inicial do UFABC Academic Planner](assets/overview.jpg)
+A página inicial agora funciona como um **Laboratório de Trajetórias**. Antes de pensar nos horários, você pode responder:
 
-## O que o projeto faz
+- quero continuar no meu curso atual;
+- quero avaliar uma mudança de curso;
+- quero concluir dois cursos;
+- quero planejar três formações;
+- ainda não decidi e quero comparar alternativas.
 
-O planejador combina informações do histórico acadêmico, currículos e turmas ofertadas para gerar alternativas de matrícula e apoiar decisões sobre progressão curricular.
+Você informa:
 
-Entre as funcionalidades implementadas estão:
+1. curso atual;
+2. primeira formação prioritária;
+3. até duas formações adicionais;
+4. estratégia simultânea, híbrida ou sequencial;
+5. período inicial, ritmo futuro e margem prudente;
+6. cenário otimista ou conservador das disciplinas em andamento.
 
-- leitura do histórico acadêmico em PDF;
-- processamento de turmas ofertadas em Excel;
-- identificação de componentes concluídos, em andamento e pendentes;
-- análise de obrigatórias, opções limitadas e créditos livres;
-- tratamento de equivalências entre matrizes;
-- detecção de conflitos de horário, inclusive aulas quinzenais;
-- geração de múltiplas grades viáveis;
-- ranking por diferentes objetivos, como progressão, compactação, equilíbrio e risco;
-- busca com validação de cobertura e fronteira de Pareto;
-- comparação entre currículos;
-- simulação de mudança de curso, dupla ou múltipla formação;
-- estimativas de conclusão e gargalos acadêmicos;
-- relatórios em HTML;
-- integração opcional com avaliações docentes, mantida desabilitada por padrão na versão pública.
+Com apenas o histórico, o programa já calcula uma análise preliminar. Depois que uma grade é gerada, a trajetória é recalculada considerando as matérias escolhidas para o próximo quadrimestre.
 
-## Interface
+## Interface 2026.09
 
-### Configuração do período e da carga
+A camada visual foi modernizada sem alterar os algoritmos acadêmicos. A nova interface usa componentes adicionais com fallback para o Streamlit nativo:
 
-O usuário consegue definir campus, turno, quantidade de créditos e como disciplinas em andamento devem ser consideradas.
+- **Shadcn UI** para cards de métricas e hierarquia visual;
+- **AgGrid** para tabelas exploráveis com filtros, ordenação e redimensionamento de colunas;
+- **Streamlit Sortables** para ordenar por drag-and-drop as formações adicionais em planos com três diplomas;
+- novo tema visual, tabs em formato de fluxo, sidebar refinada e melhor organização do modo de ajuste.
 
-![Configuração de período e carga](assets/planning-settings.jpg)
+A lógica de trajetória, geração de grades, avaliações docentes e ajuste de matrícula permanece independente dessa camada visual.
 
-### Integralização e projeção curricular
+## Currículos incluídos
 
-A aplicação separa os dados oficiais do histórico da reclassificação feita para a matriz selecionada, evitando misturar categorias que podem ter regras diferentes.
+- BC&T 2015;
+- Engenharia de Materiais 2017;
+- Bacharelado em Ciência da Computação 2017;
+- Bacharelado em Ciência da Computação 2023;
+- Bacharelado em Ciência de Dados 2023;
+- Engenharia de Informação 2017;
+- Engenharia de Informação 2023.
 
-![Progresso curricular](assets/curriculum-progress.jpg)
+## Em quanto tempo posso me formar?
 
-### Alternativas de matrícula
+Para cada formação escolhida, a interface mostra:
 
-Em vez de retornar apenas a primeira combinação encontrada, o sistema mantém diferentes soluções para comparação.
+- data se o curso fosse cursado isoladamente;
+- data dentro do plano conjunto;
+- faixa prudente;
+- percentual estimado já integralizado;
+- créditos regulares pendentes;
+- gargalos de recomendações, trabalho final, estágio, extensão e atividades complementares.
 
-![Alternativas de matrícula](assets/schedule-options.jpg)
+Para duas ou três formações, o programa calcula ainda:
 
-## Como a busca funciona
+- créditos que seriam necessários somando os cursos separadamente;
+- créditos **únicos** estimados depois de descontar sobreposições;
+- economia de créditos por aproveitamento simultâneo;
+- disciplinas obrigatórias compartilhadas;
+- opções limitadas/livres que podem atender mais de uma matriz;
+- previsão de quando cada diploma tende a ser concluído;
+- previsão de quando todas as formações estarão concluídas;
+- roteiro aproximado por quadrimestre.
 
-O problema é tratado como uma busca combinatória com restrições. Cada candidata é filtrada por regras acadêmicas e logísticas e depois avaliada por múltiplos critérios.
+## Como o cálculo conjunto funciona
 
-A aplicação considera, entre outros fatores:
+1. O histórico é reclassificado em cada matriz com suas equivalências oficiais.
+2. As obrigatórias ainda pendentes são unificadas por disciplina equivalente/nome curricular.
+3. Uma disciplina obrigatória em um curso pode preencher opção limitada ou livre em outro.
+4. Para as cotas flexíveis restantes, uma heurística de cobertura escolhe disciplinas válidas no maior número de cursos possível.
+5. O prazo respeita o maior entre:
+   - carga regular única restante;
+   - cadeias de recomendações;
+   - duração do trabalho final;
+   - estágio obrigatório;
+   - conclusão do curso de ingresso.
+6. A estratégia escolhida altera a ordem aproximada:
+   - **simultânea:** prioriza matérias que avançam vários cursos;
+   - **híbrida:** faz primeiro as compartilhadas e depois concentra na prioridade principal;
+   - **sequencial:** tenta concluir a primeira formação antes da seguinte.
 
-- conflito de horários;
-- quantidade de créditos;
-- prioridade curricular;
-- recomendações acadêmicas;
-- aulas práticas;
-- janelas entre aulas;
-- número de dias no campus;
-- disponibilidade de vagas quando informada;
-- preferências configuradas pelo usuário.
+A projeção não inventa ofertas futuras. O roteiro é acadêmico e deve ser recalculado em cada matrícula com a planilha real de turmas.
 
-O sistema também informa se a busca percorreu todo o espaço viável analisado ou se algum limite técnico afetou a cobertura.
+## Relatório completo da trajetória
 
-## Trajetórias acadêmicas
+A aba **Minha trajetória** permite:
 
-Além da matrícula do próximo quadrimestre, o projeto consegue comparar trajetórias com uma, duas ou três formações. O cálculo reclassifica o histórico em cada matriz, identifica sobreposições e estima os créditos ainda necessários.
+- visualizar o relatório dentro da própria interface;
+- baixar `saidas/relatorio_trajetoria_academica.html`;
+- comparar cenários de continuar, mudar ou acumular diplomas;
+- consultar a confiança e todas as premissas do cálculo.
 
-As projeções são **estimativas de apoio à decisão**. Elas não substituem o SIGAA, os PPCs ou orientações oficiais da universidade e não pressupõem que disciplinas serão ofertadas no futuro.
+O relatório multicurso anterior continua disponível, mas o novo relatório de trajetória é mais completo e orientado à decisão.
 
-## Tecnologias
+## Planejamento de matrícula
 
-**Aplicação e dados:** `Python`, `Streamlit`, `Pandas`, `OpenPyXL`, `PDFPlumber`, `JSON`, `Excel`
+O sistema mantém:
 
-**Automação e integração:** `Playwright`
+- cinco grades padrão, com mínimo de três quando viável;
+- perfis de progressão, grade compacta, carga equilibrada e menor risco;
+- professores e avaliações do UFABC Next;
+- aulas semanais e quinzenais;
+- T-P-E-I, práticas, janelas e permanência;
+- recomendações do PPC;
+- editor para remover e substituir disciplinas;
+- certificado de cobertura e exatidão da busca.
 
-**Qualidade:** `Pytest`, testes de regras acadêmicas, testes de integração e `GitHub Actions`
+## Ajuste de matrícula
 
-**Versionamento:** `Git`, `GitHub`
+Quando a UFABC publica o PDF oficial de **Ajuste de Matrículas**, o planejador passa a trabalhar com **duas fontes ao mesmo tempo**: a planilha Excel da matrícula inicial para reconstruir as turmas já deferidas e o PDF do ajuste para consultar vagas remanescentes e novas possibilidades.
 
-## Estrutura do projeto
+No modo de ajuste, o sistema:
 
-```text
-planejador-academico-ufabc/
-├── app.py
-├── main.py
-├── requirements.txt
-├── config/
-├── dados/
-│   └── curriculos/
-├── entradas/
-├── ferramentas/
-├── planejador/
-├── saidas/
-├── tests/
-└── assets/
-```
+- lê diretamente o PDF oficial de turmas;
+- reconhece horários, docentes, T-P-E-I, campus, turno e código da turma;
+- usa **vagas remanescentes** como disponibilidade para novas inclusões;
+- usa a planilha da matrícula inicial para listar as turmas em que o aluno já está matriculado, mesmo quando elas não aparecem mais no PDF de ajuste;
+- mantém o PDF de ajuste separado para avaliar somente as novas inclusões possíveis;
+- identifica a marcação de **alta demanda**;
+- informa a qual linha/curso do PDF a oferta está vinculada;
+- permite selecionar a matrícula atual como ponto de partida;
+- permite soltar uma ou várias disciplinas e recalcular a grade;
+- sugere somente novas turmas compatíveis que ainda possuem vagas remanescentes;
+- explica quando uma alternativa não pode ser incluída por falta de vaga, conflito ou regra acadêmica.
 
-A pasta `planejador/` concentra as regras de domínio e a lógica principal; `app.py` contém a interface Streamlit; `tests/` contém a suíte automatizada.
+Fluxo recomendado:
 
-## Como executar
+1. envie o histórico normalmente;
+2. envie a planilha Excel de **Turmas ofertadas — matrícula inicial**;
+3. envie o PDF no campo **Turmas para ajuste de matrícula**;
+4. gere o planejamento;
+5. abra a aba **Ajustar matrícula**;
+6. marque exatamente as turmas em que você está matriculado — essa lista vem do Excel inicial;
+7. clique em **Usar esta matrícula como base do ajuste**;
+8. remova as disciplinas que pretende soltar e compare as substituições disponíveis no PDF de ajuste.
 
-Requer Python 3.12+.
+As vagas do PDF são uma fotografia do momento de publicação. O deferimento final e a disponibilidade real devem ser confirmados no SIGAA.
 
-```bash
-git clone https://github.com/sobralsons/planejador-academico-ufabc.git
-cd planejador-academico-ufabc
+## Uso
 
-python -m venv .venv
-```
+1. Extraia o ZIP.
+2. Execute `executar_windows.bat`.
+3. Envie o histórico do SIGAA pela barra lateral.
+4. Configure o plano no início da página.
+5. Clique em **Analisar minha trajetória agora**.
+6. Envie também a planilha de ofertas para montar a próxima grade.
+7. Gere o planejamento e volte à primeira aba para ver a trajetória refinada.
 
-No Windows:
+## Validação
 
-```bash
-.venv\Scripts\activate
-pip install -r requirements.txt
-streamlit run app.py
-```
+Execute `validar_windows.bat`.
 
-Também é possível usar `executar_windows.bat`.
+A suíte atual valida:
 
-## Testes
+- matrizes, equivalências e transições;
+- consolidação do histórico;
+- cálculo individual de formatura;
+- sobreposição de obrigatórias;
+- cobertura conjunta de opção limitada e livre;
+- estratégias simultânea, híbrida e sequencial;
+- roteiro e marcos de diploma;
+- geração do relatório completo;
+- busca de grades, conflitos, docentes e editor.
 
-```bash
-python -m pytest -q
-```
+## Privacidade e limites
 
-Na versão auditada para publicação, a suíte executa **47 testes**, cobrindo regras de horários, histórico, equivalências, currículos, busca, ranking, planejamento multicurso e trajetórias. O repositório também possui um workflow de GitHub Actions para executar a suíte automaticamente em pull requests e pushes para a `main`.
+O processamento é local. Não compartilhe:
 
-## Privacidade
+- `entradas/`;
+- `dados/sessao_ufabc_next/`;
+- arquivos locais com comentários integrais.
 
-O repositório público **não inclui histórico acadêmico pessoal, arquivos de matrícula do usuário, sessão autenticada, credenciais nem comentários integrais de avaliações docentes**.
-
-Arquivos enviados pela interface são processados localmente e estão cobertos pelo `.gitignore`.
-
-A integração opcional com o UFABC Next deve ser usada de forma consciente e respeitando os termos e permissões aplicáveis ao serviço. Nenhuma avaliação docente real é distribuída nesta versão pública.
-
-## Limitações
-
-- projeções futuras dependem de hipóteses e não garantem oferta de disciplinas;
-- regras acadêmicas podem mudar e devem ser confirmadas em fontes oficiais;
-- número de vagas e docentes podem mudar a cada quadrimestre;
-- estimativas de conclusão não substituem análise oficial da universidade.
-
-## Próximos passos
-
-A evolução técnica planejada inclui separar a aplicação em API e frontend, persistir dados em banco relacional, ampliar a automação de qualidade e preparar uma versão containerizada. Tecnologias em estudo para essa evolução incluem **FastAPI, PostgreSQL e Docker**.
-
----
-
-Projeto pessoal desenvolvido como exercício de **engenharia de software, análise de dados, modelagem de regras e otimização aplicada a um problema real**.
+As datas são estimativas de apoio à decisão. Confirme integralização, transições, extensão, estágio, trabalho final e situações excepcionais com o SIGAA e as coordenações.

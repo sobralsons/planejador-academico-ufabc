@@ -34,8 +34,13 @@ saidas/avaliacoes_docentes_local_com_comentarios_NAO_COMPARTILHAR.json
 # Generated outputs
 saidas/*
 !saidas/LEIA-ME.txt
+!saidas/*_exemplo.html
 
 # Temporary files
 *.log
 *.tmp
 *.bak
+
+# Preferências locais e configuração gerada
+config/config_interface.json
+config/config.local.json

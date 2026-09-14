@@ -8,7 +8,8 @@ from pathlib import Path
 import pandas as pd
 
 BASE = Path(__file__).resolve().parents[1]
-CATALOGO = BASE / "catalogo_disciplinas_graduacao_2024_2025.xlsx"
+CATALOGO = BASE / "dados_fontes" / "catalogo_disciplinas_graduacao_2024_2025.xlsx"
+CATALOGO_RECOMENDACOES_ATUAL = BASE / "dados_fontes" / "catalogo_recomendacoes_2025_2026.json"
 SAIDA = BASE / "dados" / "curriculo_engenharia_materiais_2017.json"
 
 
@@ -159,6 +160,9 @@ def carregar_catalogo() -> pd.DataFrame:
 
 def main() -> None:
     catalogo = carregar_catalogo()
+    recomendacoes_atuais = {}
+    if CATALOGO_RECOMENDACOES_ATUAL.exists():
+        recomendacoes_atuais = json.loads(CATALOGO_RECOMENDACOES_ATUAL.read_text(encoding="utf-8")).get("disciplinas", {})
     por_codigo = {
         str(r["SIGLA"]).strip(): r
         for _, r in catalogo.iterrows()
@@ -188,6 +192,8 @@ def main() -> None:
             observacoes: list[str] = []
             if linha is not None:
                 rec_texto = str(linha.get("RECOMENDAÇÃO") or "").strip()
+                if codigo in recomendacoes_atuais:
+                    rec_texto = str(recomendacoes_atuais[codigo].get("recomendacao") or rec_texto).strip()
                 if rec_texto.lower().startswith("requisito:"):
                     requisito_manual = rec_texto
                 elif norm(rec_texto) not in {"", "NAO HA", "NAN"}:
@@ -200,7 +206,20 @@ def main() -> None:
                                 f"Recomendação não convertida automaticamente em código: {parte.strip()}"
                             )
             else:
-                observacoes.append("Disciplina não localizada no catálogo 2024–2025 por código ou nome exato.")
+                if codigo in recomendacoes_atuais:
+                    rec_texto = str(recomendacoes_atuais[codigo].get("recomendacao") or "").strip()
+                    if rec_texto.lower().startswith("requisito:"):
+                        requisito_manual = rec_texto
+                    elif norm(rec_texto) not in {"", "NAO HA", "NAN", "NAO SE APLICA"}:
+                        for parte in rec_texto.split(";"):
+                            codigo_rec = codigo_por_nome.get(norm(parte))
+                            if codigo_rec:
+                                recomendacoes.append(codigo_rec)
+                            elif parte.strip():
+                                observacoes.append(f"Recomendação não convertida automaticamente em código: {parte.strip()}")
+                    catalogo_codigo = codigo
+                else:
+                    observacoes.append("Disciplina não localizada no catálogo 2024–2025 por código ou nome exato.")
 
             if codigo == "ESTM002-17":
                 observacoes.append(

@@ -75,9 +75,7 @@ def _mapear_codigo_para_curriculo(
     destino = equivalencias.get(codigo)
     if destino in curriculo:
         return destino
-    nome_n = normalizar_texto(nome)
-    candidatos = [d.codigo for d in curriculo.values() if normalizar_texto(d.nome) == nome_n]
-    return candidatos[0] if len(candidatos) == 1 else None
+    return None  # Nome igual não constitui equivalência acadêmica.
 
 
 def mapear_grade_detalhada_para_curriculo(
@@ -141,8 +139,9 @@ def _livres_potenciais(
     creditos_grade_nao_mapeados: int = 0,
 ) -> int:
     creditos = 0
+    origens_utilizadas = situacao.origens_utilizadas(set(curriculo))
     for codigo, tentativas in situacao.tentativas.items():
-        if codigo in curriculo:
+        if codigo in curriculo or codigo in origens_utilizadas:
             continue
         concluidas = [r for r in tentativas if r.situacao in {"APR", "APRN", "DISP", "TRANS", "INCORP", "CUMP"}]
         if concluidas:
@@ -512,4 +511,3 @@ header{{background:linear-gradient(135deg,var(--green),var(--green2));color:whit
 main{{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:20px}}.card{{background:white;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 10px 28px #163b2d12}}.top{{display:flex;justify-content:space-between;gap:15px}}h2{{margin:4px 0 16px;font-size:1.35rem}}.grupo{{font-size:.76rem;text-transform:uppercase;color:#527064;font-weight:750;letter-spacing:.06em}}.prazo{{background:#e8f3ed;border-radius:14px;padding:10px 14px;text-align:center;min-width:92px}}.prazo b{{display:block;font-size:1.08rem}}.prazo small{{color:#60736b}}.progress{{height:10px;background:#e6ece8;border-radius:99px;overflow:hidden}}.progress i{{display:block;height:100%;background:linear-gradient(90deg,#2d8b66,#71b992)}}.percent{{color:#617069;font-size:.9rem;min-height:38px}}.linha{{display:flex;justify-content:space-between;border-bottom:1px solid #edf2ef;padding:8px 0}}.datas{{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0}}.datas div{{background:#f2f6f4;padding:10px;border-radius:10px}}.datas span,.datas b{{display:block}}.datas span{{font-size:.74rem;color:var(--muted)}}.mini{{display:grid;grid-template-columns:1fr auto;gap:7px 12px;background:#f8faf9;border:1px solid #edf2ef;padding:12px;border-radius:10px;font-size:.88rem}}.mini span{{color:var(--muted)}}details{{margin-top:13px;border-top:1px solid #edf2ef;padding-top:11px}}summary{{cursor:pointer;font-weight:700}}li,p{{line-height:1.46}}footer{{max-width:1280px;margin:24px auto 40px;padding:0 22px;color:var(--muted);font-size:.86rem}}
 </style></head><body><header><h1>Comparação de trajetórias — UFABC</h1><p>Impacto da grade analisada e estimativa de conclusão a partir de {escape(periodo)}. As projeções consideram disciplinas, recomendações, trabalho final e estágio em paralelo; ofertas futuras e validações administrativas podem alterar o resultado.</p></header><div class='wrapper'><div class='notice'><strong>Como interpretar:</strong> o total oficial de currículos recentes pode incluir extensão e atividades complementares que não são somadas novamente aos créditos de disciplinas. A data é uma estimativa de planejamento, não uma previsão oficial da UFABC.</div><section class='summary'><table><thead><tr><th>Curso</th><th>Mínimo</th><th>Prudente</th><th>Conclusão estimada</th><th>Impacto da grade</th></tr></thead><tbody>{tabela}</tbody></table></section><main>{''.join(cards)}</main></div><footer>Relatório gerado localmente pelo Planejador de Matrícula. Confirme integralização, equivalências, extensão, estágio e trabalho final no SIGAA e com a coordenação do curso.</footer></body></html>"""
     caminho.write_text(html, encoding="utf-8")
-

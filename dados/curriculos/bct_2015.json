@@ -499,12 +499,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHI5001-15",
+      "observacoes": []
     },
     {
       "codigo": "BHO0102-15",
@@ -517,12 +515,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "BHO0102-15",
+      "observacoes": []
     },
     {
       "codigo": "NHI5002-15",
@@ -535,12 +531,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHI5002-15",
+      "observacoes": []
     },
     {
       "codigo": "BHS0002-22",
@@ -553,12 +547,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "BHS0002-22",
+      "observacoes": []
     },
     {
       "codigo": "BHO0101-15",
@@ -571,12 +563,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "BHO0101-15",
+      "observacoes": []
     },
     {
       "codigo": "BHQ0004-19",
@@ -589,12 +579,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "BHQ0004-19",
+      "observacoes": []
     },
     {
       "codigo": "ESHT007-17",
@@ -607,12 +595,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESHT007-17",
+      "observacoes": []
     },
     {
       "codigo": "BHQ0002-15",
@@ -625,12 +611,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "BHQ0002-15",
+      "observacoes": []
     },
     {
       "codigo": "BHP0001-15",
@@ -643,12 +627,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "BHP0001-15",
+      "observacoes": []
     },
     {
       "codigo": "BHO1335-15",
@@ -661,12 +643,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "BHO1335-15",
+      "observacoes": []
     },
     {
       "codigo": "LHE0001-19",
@@ -679,12 +659,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "LHE0001-19",
+      "observacoes": []
     },
     {
       "codigo": "NHZ5016-15",
@@ -697,12 +675,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ5016-15",
+      "observacoes": []
     },
     {
       "codigo": "BHQ0001-15",
@@ -715,12 +691,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "BHQ0001-15",
+      "observacoes": []
     },
     {
       "codigo": "BHQ0003-15",
@@ -733,12 +707,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "BHQ0003-15",
+      "observacoes": []
     },
     {
       "codigo": "BHO1102-19",
@@ -750,13 +722,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BHO0002-19"
+      ],
+      "recomendacao_texto": "Introdução ao Pensamento Econômico",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "BHO1102-19",
+      "observacoes": []
     },
     {
       "codigo": "BHO0002-19",
@@ -769,12 +741,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "BHO0002-19",
+      "observacoes": []
     },
     {
       "codigo": "BHO0001-19",
@@ -787,12 +757,10 @@
       "i": 3,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "BHO0001-19",
+      "observacoes": []
     },
     {
       "codigo": "LHE0002-22",
@@ -805,12 +773,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "LHE0002-22",
+      "observacoes": []
     },
     {
       "codigo": "LHE0003-22",
@@ -823,12 +789,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "LHE0003-22",
+      "observacoes": []
     },
     {
       "codigo": "NHI5015-22",
@@ -841,12 +805,10 @@
       "i": 2,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHI5015-22",
+      "observacoes": []
     },
     {
       "codigo": "LIE0001-19",
@@ -859,12 +821,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "LIE0001-19",
+      "observacoes": []
     },
     {
       "codigo": "NHZ4081-20",
@@ -876,13 +836,14 @@
       "e": 0,
       "i": 6,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIR0603-15",
+        "NHT5004-15"
+      ],
+      "recomendacao_texto": "Ciência, Tecnologia e Sociedade; Educação Científica, Sociedade e Cultura.",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ4081-20",
+      "observacoes": []
     },
     {
       "codigo": "BHP0202-15",
@@ -895,12 +856,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "BHP0202-15",
+      "observacoes": []
     },
     {
       "codigo": "NHI5011-13",
@@ -913,12 +872,10 @@
       "i": 3,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHI5011-13",
+      "observacoes": []
     },
     {
       "codigo": "NHT5013-22",
@@ -930,13 +887,16 @@
       "e": 1,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "NHI5001-15",
+        "NHI5002-15",
+        "NHI5011-13",
+        "NHT5004-15"
+      ],
+      "recomendacao_texto": "Educação Científica, Sociedade e Cultura; Didática; Desenvolvimento e Aprendizagem; Políticas Educacionais",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT5013-22",
+      "observacoes": []
     },
     {
       "codigo": "BHS0005-19",
@@ -949,12 +909,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "BHS0005-19",
+      "observacoes": []
     },
     {
       "codigo": "NHZ5023-18",
@@ -967,12 +925,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ5023-18",
+      "observacoes": []
     },
     {
       "codigo": "NHZ5019-22",
@@ -985,12 +941,10 @@
       "i": 3,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ5019-22",
+      "observacoes": []
     },
     {
       "codigo": "BHP0202-19",
@@ -1003,12 +957,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "BHP0202-19",
+      "observacoes": []
     },
     {
       "codigo": "LHE0004-19",
@@ -1021,12 +973,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "LHE0004-19",
+      "observacoes": []
     },
     {
       "codigo": "BHQ0301-15",
@@ -1039,12 +989,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "BHQ0301-15",
+      "observacoes": []
     },
     {
       "codigo": "NHZ2099-16",
@@ -1057,12 +1005,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ2099-16",
+      "observacoes": []
     },
     {
       "codigo": "ESTS002-17",
@@ -1075,12 +1021,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTS002-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTB001-17",
@@ -1111,12 +1055,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Álgebra Linear, Matemática Discreta",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTB002-13",
+      "observacoes": []
     },
     {
       "codigo": "MCTB003-17",
@@ -1128,13 +1070,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTB002-13"
+      ],
+      "recomendacao_texto": "Álgebra Linear Avançada I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTB003-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTA001-17",
@@ -1182,13 +1124,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTA001-17",
+        "MCTB019-17"
+      ],
+      "recomendacao_texto": "Matemática Discreta; Algoritmos e Estruturas de Dados I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTA003-17",
+      "observacoes": []
     },
     {
       "codigo": "NHT3067-15",
@@ -1200,13 +1143,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCN0407-15",
+        "NHT3066-15"
+      ],
+      "recomendacao_texto": "Funções de Várias Variáveis; Variáveis Complexas e Aplicações",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT3067-15",
+      "observacoes": []
     },
     {
       "codigo": "MCZA001-13",
@@ -1219,12 +1163,10 @@
       "i": 2,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA001-13",
+      "observacoes": []
     },
     {
       "codigo": "MCTB005-13",
@@ -1254,13 +1196,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTB005-13"
+      ],
+      "recomendacao_texto": "Análise Real I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTB006-13",
+      "observacoes": []
     },
     {
       "codigo": "MCZA002-17",
@@ -1272,13 +1214,18 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-15",
+        "BCN0407-15",
+        "BIN0406-15",
+        "MCTA028-15",
+        "MCTB001-17",
+        "MCTB019-17"
+      ],
+      "recomendacao_texto": "Funções de Várias Variáveis; Introdução à Probabilidade e à Estatística; Álgebra Linear; Algoritmos; Estruturas de Dados I; Programação Estruturada; Processamento da Informação; Matemática Discreta",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA002-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZE097-17",
@@ -1290,13 +1237,13 @@
       "e": 0,
       "i": 5,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIJ0207-15"
+      ],
+      "recomendacao_texto": "Bases Conceituais da Energia",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZE097-17",
+      "observacoes": []
     },
     {
       "codigo": "MCZC010-15",
@@ -1309,12 +1256,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZC010-15",
+      "observacoes": []
     },
     {
       "codigo": "MCTA037-17",
@@ -1344,13 +1289,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTC023-15"
+      ],
+      "recomendacao_texto": "Introdução à Neurociência ou Morfofisiologia Humana I; Neuroanatomia",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZC002-15",
+      "observacoes": []
     },
     {
       "codigo": "ESTB019-17",
@@ -1362,13 +1307,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTB018-17"
+      ],
+      "recomendacao_texto": "Computação Científica Aplicada a Problemas Biológicos",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTB019-17",
+      "observacoes": []
     },
     {
       "codigo": "NHT1002-15",
@@ -1381,12 +1326,10 @@
       "i": 2,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT1002-15",
+      "observacoes": []
     },
     {
       "codigo": "NHZ1003-15",
@@ -1398,13 +1341,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCL0308-15",
+        "NHZ1009-15"
+      ],
+      "recomendacao_texto": "Bioquímica: Estrutura, Propriedade e Funções de Biomoléculas; Biologia Molecular e Biotecnologia",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ1003-15",
+      "observacoes": []
     },
     {
       "codigo": "MCTC025-20",
@@ -1434,13 +1378,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIL0304-15"
+      ],
+      "recomendacao_texto": "Evolução e Diversificação da Vida na Terra",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT1053-15",
+      "observacoes": []
     },
     {
       "codigo": "NHZ1009-15",
@@ -1452,13 +1396,14 @@
       "e": 0,
       "i": 3,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "NHT1053-15",
+        "NHT1054-15"
+      ],
+      "recomendacao_texto": "Biologia Celular; Histologia e Embriologia",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ1009-15",
+      "observacoes": []
     },
     {
       "codigo": "NHZ6009-18",
@@ -1488,13 +1433,13 @@
       "e": 0,
       "i": 3,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCL0306-15"
+      ],
+      "recomendacao_texto": "Biodiversidade: Interações entre Organismos e Ambiente",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTU023-17",
+      "observacoes": []
     },
     {
       "codigo": "NHT4002-13",
@@ -1524,13 +1469,15 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCL0307-15",
+        "BCL0308-15",
+        "NHT1053-15"
+      ],
+      "recomendacao_texto": "Transformações Químicas; Bioquímica: estrutura, propriedade e funções de biomoléculas; Biologia Celular",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT1013-15",
+      "observacoes": []
     },
     {
       "codigo": "NHZ1078-15",
@@ -1543,12 +1490,10 @@
       "i": 2,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não se aplica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ1078-15",
+      "observacoes": []
     },
     {
       "codigo": "MCTB008-17",
@@ -1560,13 +1505,15 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCN0407-15",
+        "BIN0406-15",
+        "MCTB019-17"
+      ],
+      "recomendacao_texto": "Funções de Várias Variáveis; Introdução à Probabilidade e à Estatística; Matemática Discreta",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTB008-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTB009-17",
@@ -1616,12 +1563,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTU026-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTU004-17",
@@ -1652,12 +1597,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESHP004-13",
+      "observacoes": []
     },
     {
       "codigo": "ESTM004-17",
@@ -1688,12 +1631,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZU022-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTA006-17",
@@ -1705,13 +1646,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0203-15",
+        "BCM0504-15"
+      ],
+      "recomendacao_texto": "Natureza da Informação; Fenômenos Eletromagnéticos",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTA006-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTO001-17",
@@ -1741,13 +1683,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0203-15"
+      ],
+      "recomendacao_texto": "Fenômenos Eletromagnéticos",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTA002-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTA004-17",
@@ -1759,13 +1701,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTA002-17"
+      ],
+      "recomendacao_texto": "Circuitos Elétricos I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTA004-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTU005-17",
@@ -1778,12 +1720,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTU005-17",
+      "observacoes": []
     },
     {
       "codigo": "MCZA037-17",
@@ -1795,13 +1735,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTB019-17"
+      ],
+      "recomendacao_texto": "Matemática Discreta",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA037-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTB018-17",
@@ -1832,12 +1772,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTA009-13",
+      "observacoes": []
     },
     {
       "codigo": "MCTC007-20",
@@ -1849,13 +1787,13 @@
       "e": 0,
       "i": 2,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIR0004-15"
+      ],
+      "recomendacao_texto": "Bases Epistemológicas da Ciência Moderna",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTC007-20",
+      "observacoes": []
     },
     {
       "codigo": "ESTI007-17",
@@ -1867,13 +1805,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI004-17",
+        "ESTI005-17"
+      ],
+      "recomendacao_texto": "Princípios de Comunicação; Sinais Aleatórios",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI007-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTI010-17",
@@ -1885,13 +1824,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI016-17"
+      ],
+      "recomendacao_texto": "Fundamentos de Fotônica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI010-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZR001-13",
@@ -1904,12 +1843,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZR001-13",
+      "observacoes": []
     },
     {
       "codigo": "NHZ3001-15",
@@ -1922,12 +1859,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ3001-15",
+      "observacoes": []
     },
     {
       "codigo": "ESTG001-17",
@@ -1939,13 +1874,13 @@
       "e": 0,
       "i": 9,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTO013-17"
+      ],
+      "recomendacao_texto": "Engenharia Econômica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTG001-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTS019-17",
@@ -1976,12 +1911,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Globalização e os processos de integração regional",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZR005-13",
+      "observacoes": []
     },
     {
       "codigo": "ESTA001-17",
@@ -1993,13 +1926,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTA002-17"
+      ],
+      "recomendacao_texto": "Circuitos Elétricos I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTA001-17",
+      "observacoes": []
     },
     {
       "codigo": "NHT1072-15",
@@ -2011,13 +1944,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCL0306-15"
+      ],
+      "recomendacao_texto": "Biodiversidade: Interações entre organismos e ambiente",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT1072-15",
+      "observacoes": []
     },
     {
       "codigo": "ESZU034-17",
@@ -2029,13 +1962,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCL0306-15"
+      ],
+      "recomendacao_texto": "Biodiversidade: Interações entre Organismos e Ambiente",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZU034-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTE036-17",
@@ -2048,12 +1981,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTE036-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTG003-17",
@@ -2065,13 +1996,13 @@
       "e": 0,
       "i": 3,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTG001-17"
+      ],
+      "recomendacao_texto": "Custos",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTG003-17",
+      "observacoes": []
     },
     {
       "codigo": "ESHT005-17",
@@ -2084,12 +2015,10 @@
       "i": 3,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESHT005-17",
+      "observacoes": []
     },
     {
       "codigo": "ESHR004-13",
@@ -2102,12 +2031,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESHR004-13",
+      "observacoes": []
     },
     {
       "codigo": "ESZU006-17",
@@ -2120,12 +2047,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZU006-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZU025-17",
@@ -2138,12 +2063,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZU025-17",
+      "observacoes": []
     },
     {
       "codigo": "NHT5004-15",
@@ -2156,12 +2079,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT5004-15",
+      "observacoes": []
     },
     {
       "codigo": "NHZ5021-16",
@@ -2174,12 +2095,10 @@
       "i": 3,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ5021-16",
+      "observacoes": []
     },
     {
       "codigo": "NHZ5020-15",
@@ -2192,12 +2111,10 @@
       "i": 2,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ5020-15",
+      "observacoes": []
     },
     {
       "codigo": "NHZ3003-15",
@@ -2209,13 +2126,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "NHZ1003-15",
+        "NHZ3021-15"
+      ],
+      "recomendacao_texto": "Biofísica; Interações da Radiação com a Matéria",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ3003-15",
+      "observacoes": []
     },
     {
       "codigo": "MCZB007-13",
@@ -2228,12 +2146,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "[Álgebra Linear; Cálculo Numérico] ou Aproximação Teórica e Numérica I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZB007-13",
+      "observacoes": []
     },
     {
       "codigo": "ESZE110-17",
@@ -2245,13 +2161,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIJ0207-15"
+      ],
+      "recomendacao_texto": "Bases Conceituais da Energia",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZE110-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTA018-17",
@@ -2263,13 +2179,13 @@
       "e": 0,
       "i": 5,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0203-15"
+      ],
+      "recomendacao_texto": "Fenômenos Eletromagnéticos",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTA018-17",
+      "observacoes": []
     },
     {
       "codigo": "NHT3070-15",
@@ -2281,13 +2197,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0203-15",
+        "MCTB010-13"
+      ],
+      "recomendacao_texto": "Fenômenos Eletromagnéticos; Cálculo Vetorial e Tensorial",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT3070-15",
+      "observacoes": []
     },
     {
       "codigo": "ESTA007-17",
@@ -2299,13 +2216,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTA001-17"
+      ],
+      "recomendacao_texto": "Dispositivos Eletrônicos",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTA007-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTI002-17",
@@ -2317,13 +2234,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTA002-17",
+        "ESTO001-17"
+      ],
+      "recomendacao_texto": "Circuitos Elétricos e Fotônica; Circuitos Elétricos I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI002-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZG013-17",
@@ -2336,12 +2254,10 @@
       "i": 2,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZG013-17",
+      "observacoes": []
     },
     {
       "codigo": "MCZA007-13",
@@ -2354,12 +2270,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA007-13",
+      "observacoes": []
     },
     {
       "codigo": "NHZ6012-18",
@@ -2372,12 +2286,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Introdução à Biotecnologia",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ6012-18",
+      "observacoes": []
     },
     {
       "codigo": "ESZE105-17",
@@ -2389,13 +2301,13 @@
       "e": 0,
       "i": 2,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIJ0207-15"
+      ],
+      "recomendacao_texto": "Bases Conceituais da Energia",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZE105-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZE104-17",
@@ -2407,13 +2319,13 @@
       "e": 0,
       "i": 2,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIJ0207-15"
+      ],
+      "recomendacao_texto": "Bases Conceituais da Energia",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZE104-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTE029-17",
@@ -2425,13 +2337,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIJ0207-15"
+      ],
+      "recomendacao_texto": "Bases Conceituais da Energia",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTE029-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTA033-15",
@@ -2443,13 +2355,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-15"
+      ],
+      "recomendacao_texto": "Processamento da Informação.",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTA033-15",
+      "observacoes": []
     },
     {
       "codigo": "ESTO013-17",
@@ -2480,12 +2392,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não se aplica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTG006-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTO902-17",
@@ -2498,12 +2408,10 @@
       "i": 5,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não se aplica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTO902-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTO903-17",
@@ -2516,12 +2424,10 @@
       "i": 5,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não se aplica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTO903-17",
+      "observacoes": []
     },
     {
       "codigo": "NHZ6004-18",
@@ -2533,13 +2439,16 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "NHT1053-15",
+        "NHT1057-15",
+        "NHZ1009-15",
+        "NHZ1027-15"
+      ],
+      "recomendacao_texto": "Biologia Molecular e Biotecnologia; Biologia Celular; Genética II; Bioquímica: estrutura, propriedades e funções debiomoléculas; Farmacologia",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ6004-18",
+      "observacoes": []
     },
     {
       "codigo": "NHZ3078-15",
@@ -2551,13 +2460,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTB010-13",
+        "NHT3066-15"
+      ],
+      "recomendacao_texto": "Cálculo Vetorial e Tensorial; Variáveis Complexas e Aplicações",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ3078-15",
+      "observacoes": []
     },
     {
       "codigo": "MCZC007-15",
@@ -2569,13 +2479,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTC011-15"
+      ],
+      "recomendacao_texto": "Psicologia Cognitiva",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZC007-15",
+      "observacoes": []
     },
     {
       "codigo": "ESHR005-13",
@@ -2588,12 +2498,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Introdução à Economia",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESHR005-13",
+      "observacoes": []
     },
     {
       "codigo": "ESTG011-17",
@@ -2605,13 +2513,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIN0406-15"
+      ],
+      "recomendacao_texto": "Introdução à Probabilidade e à Estatística",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTG011-17",
+      "observacoes": []
     },
     {
       "codigo": "NHZ3007-15",
@@ -2623,13 +2531,15 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCK0104-15",
+        "MCTB010-13",
+        "NHT3072-15"
+      ],
+      "recomendacao_texto": "Interações Atômicas e Moleculares; Cálculo Vetorial e Tensorial; Mecânica Quântica I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ3007-15",
+      "observacoes": []
     },
     {
       "codigo": "NHT4049-15",
@@ -2659,13 +2569,17 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIL0304-15",
+        "BIN0406-15",
+        "NHT1048-15",
+        "NHT1057-15",
+        "NHT1061-15"
+      ],
+      "recomendacao_texto": "Evolução e Diversificação da Vida na Terra; Sistemática e Biogeografia; Genética I; Genética II; Introdução à Probabilidade e à Estatística",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT1062-15",
+      "observacoes": []
     },
     {
       "codigo": "NHZ3008-22",
@@ -2677,13 +2591,15 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0203-15",
+        "BCJ0204-15",
+        "BCJ0205-15"
+      ],
+      "recomendacao_texto": "Fenômenos Mecânicos; Fenômenos Térmicos; Fenômenos Eletromagnéticos",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ3008-22",
+      "observacoes": []
     },
     {
       "codigo": "MCZB035-17",
@@ -2695,13 +2611,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Bases Matemáticas",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZB035-17",
+      "observacoes": []
     },
     {
       "codigo": "NHT1067-15",
@@ -2731,13 +2647,15 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIL0304-15",
+        "NHT1048-15",
+        "NHT1067-15"
+      ],
+      "recomendacao_texto": "Evolução e Diversificação da Vida na Terra; Sistemática e Biogeografia; Evolução e Diversidade de Plantas I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT1068-15",
+      "observacoes": []
     },
     {
       "codigo": "NHZ1027-15",
@@ -2749,13 +2667,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCL0308-15"
+      ],
+      "recomendacao_texto": "Bioquímica: estrutura, propriedade e funções de biomoléculas",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ1027-15",
+      "observacoes": []
     },
     {
       "codigo": "ESTO016-17",
@@ -2786,12 +2704,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ2106-18",
+      "observacoes": []
     },
     {
       "codigo": "NHH2017-16",
@@ -2804,12 +2720,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHH2017-16",
+      "observacoes": []
     },
     {
       "codigo": "NHZ3010-15",
@@ -2821,13 +2735,16 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCK0104-15",
+        "MCTB009-17",
+        "NHT3066-15",
+        "NHT3067-15"
+      ],
+      "recomendacao_texto": "Interações Atômicas e Moleculares; Cálculo Numérico; Variáveis Complexas e Aplicações; Análise de Fourier e Aplicações",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ3010-15",
+      "observacoes": []
     },
     {
       "codigo": "NHT3012-15",
@@ -2839,13 +2756,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0204-15",
+        "BCN0402-15"
+      ],
+      "recomendacao_texto": "Fenômenos Mecânicos; Funções de uma Variável",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT3012-15",
+      "observacoes": []
     },
     {
       "codigo": "NHZ3084-15",
@@ -2857,13 +2775,15 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0204-15",
+        "BCJ0205-15",
+        "BCN0402-15"
+      ],
+      "recomendacao_texto": "Fenômenos Mecânicos; Fenômenos Térmicos; Funções de uma Variável",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ3084-15",
+      "observacoes": []
     },
     {
       "codigo": "ESTB023-17",
@@ -2875,13 +2795,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0203-15"
+      ],
+      "recomendacao_texto": "Fenômenos Eletromagnéticos",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTB023-17",
+      "observacoes": []
     },
     {
       "codigo": "NHT3064-15",
@@ -2893,13 +2813,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0204-15",
+        "BCN0407-15"
+      ],
+      "recomendacao_texto": "Fenômenos Mecânicos; Funções de Várias Variáveis",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT3064-15",
+      "observacoes": []
     },
     {
       "codigo": "NHT3013-13",
@@ -2930,12 +2851,10 @@
       "i": 6,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não se aplica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT4017-15",
+      "observacoes": []
     },
     {
       "codigo": "MCTD021-18",
@@ -2947,13 +2866,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTB023-17"
+      ],
+      "recomendacao_texto": "Teoria Aritmética dos Números",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTD021-18",
+      "observacoes": []
     },
     {
       "codigo": "MCTD023-18",
@@ -2965,13 +2884,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCN0402-15"
+      ],
+      "recomendacao_texto": "Funções de Uma Variável",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTD023-18",
+      "observacoes": []
     },
     {
       "codigo": "NHZ6001-18",
@@ -2984,12 +2903,10 @@
       "i": 2,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ6001-18",
+      "observacoes": []
     },
     {
       "codigo": "ESTE015-17",
@@ -3001,13 +2918,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0203-15",
+        "MCTB010-13"
+      ],
+      "recomendacao_texto": "Fenômenos Eletromagnéticos; Cálculo Vetorial e Tensorial",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTE015-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTO011-17",
@@ -3035,13 +2953,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0203-15",
+        "ESTA002-17"
+      ],
+      "recomendacao_texto": "Fenômenos Eletromagnéticos; Circuitos Elétricos I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI017-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTI016-17",
@@ -3053,13 +2972,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0203-15",
+        "ESTA002-17"
+      ],
+      "recomendacao_texto": "Fenômenos Eletromagnéticos; Circuitos Elétricos I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI016-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTU027-17",
@@ -3072,12 +2992,10 @@
       "i": 2,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTU027-17",
+      "observacoes": []
     },
     {
       "codigo": "NHT1061-15",
@@ -3089,13 +3007,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "NHT1053-15"
+      ],
+      "recomendacao_texto": "Biologia Celular",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT1061-15",
+      "observacoes": []
     },
     {
       "codigo": "NHT1057-15",
@@ -3107,13 +3025,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "NHT1053-15",
+        "NHT1061-15"
+      ],
+      "recomendacao_texto": "Biologia Celular; Genética I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT1057-15",
+      "observacoes": []
     },
     {
       "codigo": "NHZ6010-18",
@@ -3125,13 +3044,14 @@
       "e": 0,
       "i": 6,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "NHT1053-15",
+        "NHZ1009-15"
+      ],
+      "recomendacao_texto": "Biologia Celular; Biologia Molecular e Biotecnologia",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ6010-18",
+      "observacoes": []
     },
     {
       "codigo": "MCTB016-13",
@@ -3143,13 +3063,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTB026-17"
+      ],
+      "recomendacao_texto": "Topologia",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTB016-13",
+      "observacoes": []
     },
     {
       "codigo": "MCZB009-13",
@@ -3161,13 +3081,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCN0407-15"
+      ],
+      "recomendacao_texto": "Funções de Várias Variáveis",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZB009-13",
+      "observacoes": []
     },
     {
       "codigo": "MCTD009-18",
@@ -3180,12 +3100,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTD009-18",
+      "observacoes": []
     },
     {
       "codigo": "MCZA016-17",
@@ -3197,13 +3115,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-15",
+        "MCTA033-15"
+      ],
+      "recomendacao_texto": "Processamento da Informação; Engenharia de Software",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA016-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTB018-17",
@@ -3215,13 +3134,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTB023-17"
+      ],
+      "recomendacao_texto": "Teoria Aritmética dos Números",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTB018-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTU028-17",
@@ -3233,13 +3152,14 @@
       "e": 0,
       "i": 2,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTO016-17",
+        "MCTB009-17"
+      ],
+      "recomendacao_texto": "Fenômenos de Transporte; Cálculo Numérico",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTU028-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTU029-17",
@@ -3251,13 +3171,14 @@
       "e": 0,
       "i": 2,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTO016-17",
+        "MCTB009-17"
+      ],
+      "recomendacao_texto": "Fenômenos de Transporte; Cálculo Numérico",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTU029-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZE048-17",
@@ -3269,13 +3190,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIJ0207-15"
+      ],
+      "recomendacao_texto": "Bases Conceituais da Energia",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZE048-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTU009-17",
@@ -3287,13 +3208,13 @@
       "e": 0,
       "i": 3,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIN0406-15"
+      ],
+      "recomendacao_texto": "Introdução à Probabilidade e à Estatística",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTU009-17",
+      "observacoes": []
     },
     {
       "codigo": "NHT1054-15",
@@ -3305,13 +3226,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "NHT1053-15"
+      ],
+      "recomendacao_texto": "Biologia Celular",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT1054-15",
+      "observacoes": []
     },
     {
       "codigo": "ESHT009-17",
@@ -3324,12 +3245,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESHT009-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTD010-18",
@@ -3342,12 +3261,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTD010-18",
+      "observacoes": []
     },
     {
       "codigo": "NHZ5017-15",
@@ -3360,12 +3277,10 @@
       "i": 2,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ5017-15",
+      "observacoes": []
     },
     {
       "codigo": "ESTS003-17",
@@ -3377,13 +3292,13 @@
       "e": 0,
       "i": 3,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCN0404-15"
+      ],
+      "recomendacao_texto": "Geometria Analítica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTS003-17",
+      "observacoes": []
     },
     {
       "codigo": "MCZB012-13",
@@ -3395,13 +3310,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTB008-17",
+        "MCTC014-13"
+      ],
+      "recomendacao_texto": "Cálculo de Probabilidade; Introdução à Inferência Estatística",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZB012-13",
+      "observacoes": []
     },
     {
       "codigo": "ESZI027-17",
@@ -3414,12 +3330,10 @@
       "i": 3,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI027-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZT005-17",
@@ -3432,12 +3346,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Cartografia e Geoprocessamento para o Planejamento Territorial",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZT005-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTO004-17",
@@ -3504,13 +3416,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-15"
+      ],
+      "recomendacao_texto": "Processamento da Informação",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA008-17",
+      "observacoes": []
     },
     {
       "codigo": "NHZ3021-15",
@@ -3522,13 +3434,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0203-15",
+        "BCK0103-15"
+      ],
+      "recomendacao_texto": "Fenômenos Eletromagnéticos; Física Quântica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ3021-15",
+      "observacoes": []
     },
     {
       "codigo": "ESZB022-17",
@@ -3540,13 +3453,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "NHT1053-15"
+      ],
+      "recomendacao_texto": "Biologia Celular; Bioquímica:estrutura, propriedade e funções de biomoléculas",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZB022-17",
+      "observacoes": []
     },
     {
       "codigo": "MCZB015-13",
@@ -3558,13 +3471,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTB019-17",
+        "MCTB023-17"
+      ],
+      "recomendacao_texto": "Matemática Discreta; Teoria Aritmética dos Números",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZB015-13",
+      "observacoes": []
     },
     {
       "codigo": "LCZ0001-19",
@@ -3576,13 +3490,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIR0004-15",
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Bases Epistemológicas da Ciência Moderna; Bases Matemáticas",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "LCZ0001-19",
+      "observacoes": []
     },
     {
       "codigo": "MCTC001-15",
@@ -3595,12 +3510,10 @@
       "i": 2,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTC001-15",
+      "observacoes": []
     },
     {
       "codigo": "NHZ3024-15",
@@ -3612,13 +3525,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTB010-13"
+      ],
+      "recomendacao_texto": "Mecânica Quântica II; Cálculo Vetorial e Tensorial",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ3024-15",
+      "observacoes": []
     },
     {
       "codigo": "NHZ3026-15",
@@ -3630,13 +3543,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCN0407-15",
+        "NHT3072-15"
+      ],
+      "recomendacao_texto": "Funções de várias variáveis; Mecânica Quântica I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ3026-15",
+      "observacoes": []
     },
     {
       "codigo": "MCTC014-13",
@@ -3648,13 +3562,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIN0406-15"
+      ],
+      "recomendacao_texto": "Introdução à Probabilidade e à Estatística",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTC014-13",
+      "observacoes": []
     },
     {
       "codigo": "ESZI045-17",
@@ -3666,13 +3580,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIS0005-15"
+      ],
+      "recomendacao_texto": "Bases Computacionais da Ciência",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI045-17",
+      "observacoes": []
     },
     {
       "codigo": "MCZB018-13",
@@ -3684,13 +3598,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIN0406-15"
+      ],
+      "recomendacao_texto": "Introdução à Probabilidade e à Estatística",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZB018-13",
+      "observacoes": []
     },
     {
       "codigo": "MCTC002-15",
@@ -3703,12 +3617,10 @@
       "i": 5,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTC002-15",
+      "observacoes": []
     },
     {
       "codigo": "MCZC003-15",
@@ -3720,13 +3632,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTC011-15"
+      ],
+      "recomendacao_texto": "Psicologia Cognitiva",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZC003-15",
+      "observacoes": []
     },
     {
       "codigo": "ESTO005-17",
@@ -3755,12 +3667,10 @@
       "i": 5,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "BCJ0204-15 Fenômenos Mecânicos; BCJ0205-15 Fenômenos Térmicos;",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT3027-15",
+      "observacoes": []
     },
     {
       "codigo": "NHT3028-15",
@@ -3773,12 +3683,10 @@
       "i": 5,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "BCJ0203-15 Fenômenos Eletromagnéticos; BCK0103-15 Física Quântica;",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT3028-15",
+      "observacoes": []
     },
     {
       "codigo": "NHT3065-15",
@@ -3791,12 +3699,10 @@
       "i": 5,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "BCJ0203-15 Fenômenos Eletromagnéticos; BCK0103-15 Física Quântica;",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT3065-15",
+      "observacoes": []
     },
     {
       "codigo": "NHZ3080-15",
@@ -3808,13 +3714,13 @@
       "e": 0,
       "i": 5,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTB023-17"
+      ],
+      "recomendacao_texto": "Física Médica I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ3080-15",
+      "observacoes": []
     },
     {
       "codigo": "NHZ3031-15",
@@ -3826,13 +3732,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "NHT3072-15"
+      ],
+      "recomendacao_texto": "Mecânica Quântica I; Estado Sólido",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ3031-15",
+      "observacoes": []
     },
     {
       "codigo": "NHT4023-15",
@@ -3880,13 +3786,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIR0004-15",
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Bases Matemáticas; Bases Epistemológicas da Ciência Moderna",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHI2049-13",
+      "observacoes": []
     },
     {
       "codigo": "MCZA013-13",
@@ -3898,13 +3805,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "NHI2049-13"
+      ],
+      "recomendacao_texto": "Lógica Básica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA013-13",
+      "observacoes": []
     },
     {
       "codigo": "MCTB019-17",
@@ -3916,13 +3823,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCN0402-15"
+      ],
+      "recomendacao_texto": "Funções de Uma Variável",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTB019-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTO006-17",
@@ -3950,13 +3857,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0204-15",
+        "BCN0407-15"
+      ],
+      "recomendacao_texto": "Fenômenos Mecânicos; Funções de Várias Variáveis",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT3068-15",
+      "observacoes": []
     },
     {
       "codigo": "ESTO015-17",
@@ -4028,12 +3936,10 @@
       "i": 6,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "NHT3068-15 Mecânica Clássica I; NHT3049-15 Princípios de Termodinâmica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT3036-15",
+      "observacoes": []
     },
     {
       "codigo": "NHT3037-13",
@@ -4082,12 +3988,10 @@
       "i": 6,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "É recomendado que o aluno tenha sido aprovado nas disciplinas: Transformações Químicas; Fundamentos de Reações Orgânicas",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT4024-15",
+      "observacoes": []
     },
     {
       "codigo": "NHT4025-15",
@@ -4099,13 +4003,15 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "NHT4017-15",
+        "NHT4024-15",
+        "NHT4041-15"
+      ],
+      "recomendacao_texto": "Funções e Reações Orgânicas; Mecanismos de Reações Orgânicas; Química Orgânica Experimental",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT4025-15",
+      "observacoes": []
     },
     {
       "codigo": "ESTO017-17",
@@ -4136,13 +4042,15 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCN0402-15",
+        "BCN0405-15",
+        "MCTB001-17"
+      ],
+      "recomendacao_texto": "Funções de Uma Variável; Introdução às Equações Diferenciais Ordinárias; Álgebra Linear",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTB031-18",
+      "observacoes": []
     },
     {
       "codigo": "NHT1056-15",
@@ -4154,13 +4062,15 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCL0306-15",
+        "NHT1013-15",
+        "NHT1053-15"
+      ],
+      "recomendacao_texto": "Biodiversidade: Interações entre organismos e ambiente; Biologia Celular; Bioquímica Funcional",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT1056-15",
+      "observacoes": []
     },
     {
       "codigo": "ESTU010-17",
@@ -4172,13 +4082,15 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCL0306-15",
+        "BCL0307-15",
+        "BCL0308-15"
+      ],
+      "recomendacao_texto": "Transformações Químicas; Bioquímica: estrutura, propriedade e funções de biomoléculas; Biodiversidade: Interações entre Organismos e Ambiente",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTU010-17",
+      "observacoes": []
     },
     {
       "codigo": "MCZA015-13",
@@ -4190,13 +4102,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTA014-15",
+        "MCTA037-17"
+      ],
+      "recomendacao_texto": "Inteligência Artificial; Banco de Dados",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA015-13",
+      "observacoes": []
     },
     {
       "codigo": "ESTA020-17",
@@ -4208,13 +4121,13 @@
       "e": 0,
       "i": 5,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCN0405-15"
+      ],
+      "recomendacao_texto": "Introdução às Equações Diferenciais Ordinárias",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTA020-17",
+      "observacoes": []
     },
     {
       "codigo": "NHZ6003-18",
@@ -4226,13 +4139,16 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "NHT1053-15",
+        "NHT1057-15",
+        "NHZ1009-15",
+        "NHZ1027-15"
+      ],
+      "recomendacao_texto": "Biologia Molecular e Biotecnologia; Biologia Celular; Genética II; Bioquímica: estrutura, propriedades e funções de biomoléculas; Farmacologia",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ6003-18",
+      "observacoes": []
     },
     {
       "codigo": "NHZ3060-09",
@@ -4245,12 +4161,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ3060-09",
+      "observacoes": []
     },
     {
       "codigo": "ESZR009-13",
@@ -4263,12 +4177,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZR009-13",
+      "observacoes": []
     },
     {
       "codigo": "MCTC023-15",
@@ -4281,12 +4193,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Introdução à Neurociência ou Morfofisiologia Humana I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTC023-15",
+      "observacoes": []
     },
     {
       "codigo": "MCZC008-13",
@@ -4299,12 +4209,10 @@
       "i": 2,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Introdução à Neurociência",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZC008-13",
+      "observacoes": []
     },
     {
       "codigo": "MCTC019-20",
@@ -4317,12 +4225,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Introdução à Neurociência ou Morfofisiologia Humana I; Biofísica de Membrana",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTC019-20",
+      "observacoes": []
     },
     {
       "codigo": "MCTC021-20",
@@ -4352,13 +4258,16 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTC018-20",
+        "MCTC020-15",
+        "MCTC021-20",
+        "MCTC023-15"
+      ],
+      "recomendacao_texto": "Introdução a Neurociência ou Morfofisiologia Humana I; Neuroanatomia; Neuropsicofarmacologia; Psicologia experimental; Neurociência teórica e computacional",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTC024-15",
+      "observacoes": []
     },
     {
       "codigo": "MCTC018-20",
@@ -4370,13 +4279,15 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTC019-20",
+        "MCTC023-15",
+        "MCTC025-20"
+      ],
+      "recomendacao_texto": "Introdução a Neurociência ou Morfofisiologia Humana I; Biofísica de Membranas; Neuroanatomia; Neurobiologia Molecular e Celular",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTC018-20",
+      "observacoes": []
     },
     {
       "codigo": "NHZ3043-15",
@@ -4388,13 +4299,16 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0203-15",
+        "BCJ0204-15",
+        "BCJ0205-15",
+        "BCK0103-15"
+      ],
+      "recomendacao_texto": "Fenômenos Mecânicos; Fenômenos Térmicos; Fenômenos Eletromagnéticos; Física Quântica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ3043-15",
+      "observacoes": []
     },
     {
       "codigo": "ESTI018-17",
@@ -4406,13 +4320,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0203-15"
+      ],
+      "recomendacao_texto": "Fenômenos Eletromagnéticos",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI018-17",
+      "observacoes": []
     },
     {
       "codigo": "NHT3044-15",
@@ -4424,13 +4338,15 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0203-15",
+        "BCN0404-15",
+        "BCN0407-15"
+      ],
+      "recomendacao_texto": "Fenômenos Eletromagnéticos; Funções de Várias Variáveis; Geometria Analítica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT3044-15",
+      "observacoes": []
     },
     {
       "codigo": "ESTG023-17",
@@ -4442,13 +4358,13 @@
       "e": 0,
       "i": 3,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTO012-17"
+      ],
+      "recomendacao_texto": "Princípios de Administração",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTG023-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTA016-13",
@@ -4461,12 +4377,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Processamento da Informação, Programação Orientada a Objetos.",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTA016-13",
+      "observacoes": []
     },
     {
       "codigo": "ESZT008-17",
@@ -4479,12 +4393,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZT008-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTG013-17",
@@ -4514,13 +4426,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTO006-17"
+      ],
+      "recomendacao_texto": "Materiais e suas Propriedades; Reologia",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZE064-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZT009-17",
@@ -4533,12 +4445,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZT009-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZP039-14",
@@ -4551,12 +4461,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZP039-14",
+      "observacoes": []
     },
     {
       "codigo": "ESTU012-17",
@@ -4569,12 +4477,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTU012-17",
+      "observacoes": []
     },
     {
       "codigo": "NHT5012-15",
@@ -4587,12 +4493,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não se aplica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT5012-15",
+      "observacoes": []
     },
     {
       "codigo": "NHT1085-22",
@@ -4674,13 +4578,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI003-17"
+      ],
+      "recomendacao_texto": "Transformadas em Sinais e Sistemas Lineares",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI004-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTB015-17",
@@ -4693,12 +4597,10 @@
       "i": 3,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTB015-17",
+      "observacoes": []
     },
     {
       "codigo": "NHT3048-15",
@@ -4710,13 +4612,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0203-15",
+        "BCK0103-15"
+      ],
+      "recomendacao_texto": "Fenômenos Eletromagnéticos; Física Quântica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT3048-15",
+      "observacoes": []
     },
     {
       "codigo": "NHT3049-15",
@@ -4728,13 +4631,14 @@
       "e": 0,
       "i": 6,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0205-15",
+        "BCN0407-15"
+      ],
+      "recomendacao_texto": "Fenômenos Térmicos; Funções de Várias Variáveis",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT3049-15",
+      "observacoes": []
     },
     {
       "codigo": "ESZI003-17",
@@ -4746,13 +4650,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0504-15",
+        "ESZI045-17"
+      ],
+      "recomendacao_texto": "Natureza da Informação; Introdução à Linguística Computacional",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI003-17",
+      "observacoes": []
     },
     {
       "codigo": "MCZA018-17",
@@ -4764,13 +4669,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-15"
+      ],
+      "recomendacao_texto": "Processamento da Informação",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA018-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTI006-17",
@@ -4782,13 +4687,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI003-17"
+      ],
+      "recomendacao_texto": "Transformadas em Sinais e Sistemas Lineares",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI006-17",
+      "observacoes": []
     },
     {
       "codigo": "MCZA042-17",
@@ -4800,13 +4705,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-15"
+      ],
+      "recomendacao_texto": "Processamento da Informação",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA042-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI033-17",
@@ -4818,13 +4723,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTA028-15"
+      ],
+      "recomendacao_texto": "Programação Estruturada",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI033-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTA028-15",
@@ -4836,13 +4741,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-15"
+      ],
+      "recomendacao_texto": "Processamento da Informação",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTA028-15",
+      "observacoes": []
     },
     {
       "codigo": "MCTA017-17",
@@ -4855,12 +4760,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Álgebra Linear, Funções de uma Variável.",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTA017-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTA018-13",
@@ -4872,13 +4775,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-15",
+        "MCTA028-15"
+      ],
+      "recomendacao_texto": "Programação Estruturada; Processamento da Informação",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTA018-13",
+      "observacoes": []
     },
     {
       "codigo": "MCTC009-15",
@@ -4890,13 +4794,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTC019-20"
+      ],
+      "recomendacao_texto": "Introdução à Neurociência ou Morfofisiologia Humana I; Neurobiologia Molecular e Celular",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTC009-15",
+      "observacoes": []
     },
     {
       "codigo": "ESTA019-17",
@@ -4908,13 +4812,13 @@
       "e": 0,
       "i": 3,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTO011-17"
+      ],
+      "recomendacao_texto": "Fundamentos de Desenho Técnico",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTA019-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTG025-17",
@@ -4927,12 +4831,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTG025-17",
+      "observacoes": []
     },
     {
       "codigo": "NHZ6006-18",
@@ -4944,13 +4846,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "NHT1056-15",
+        "NHZ1009-15"
+      ],
+      "recomendacao_texto": "Biologia Molecular e Biotecnologia; Bioquímica: estrutura, propriedades e funções de biomoléculas; Microbiologia",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ6006-18",
+      "observacoes": []
     },
     {
       "codigo": "MCTC011-15",
@@ -4962,13 +4865,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIR0004-15"
+      ],
+      "recomendacao_texto": "Bases Epistemológicas da Ciência Moderna",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTC011-15",
+      "observacoes": []
     },
     {
       "codigo": "MCTC020-15",
@@ -4980,13 +4883,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCS0001-15",
+        "MCTC011-15"
+      ],
+      "recomendacao_texto": "Psicologia Cognitiva; Base Experimental das Ciências Naturais",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTC020-15",
+      "observacoes": []
     },
     {
       "codigo": "NHZ5014-15",
@@ -4999,12 +4903,10 @@
       "i": 2,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ5014-15",
+      "observacoes": []
     },
     {
       "codigo": "ESZU037-17",
@@ -5017,12 +4919,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZU037-17",
+      "observacoes": []
     },
     {
       "codigo": "NHT4051-15",
@@ -5034,13 +4934,13 @@
       "e": 0,
       "i": 6,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCL0307-15"
+      ],
+      "recomendacao_texto": "É recomendado que o aluno tenha sido aprovado nas disciplinas obrigatórias do BCT: Estrutura da Matéria; Transformações Químicas",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT4051-15",
+      "observacoes": []
     },
     {
       "codigo": "NHT4050-15",
@@ -5053,12 +4953,10 @@
       "i": 6,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "É recomendado que o aluno tenha sido aprovado na disciplina Química Analítica Clássica I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT4050-15",
+      "observacoes": []
     },
     {
       "codigo": "NHT4052-15",
@@ -5088,13 +4986,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCL0307-15",
+        "NHT4017-15"
+      ],
+      "recomendacao_texto": "Transformações Químicas; Funções e Reações Orgânicas",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZE066-17",
+      "observacoes": []
     },
     {
       "codigo": "NHT4053-15",
@@ -5143,12 +5042,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZU023-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTA022-17",
@@ -5160,13 +5057,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-15",
+        "MCTA028-15"
+      ],
+      "recomendacao_texto": "Programação Estruturada; Processamento da Informação",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTA022-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTU039-17",
@@ -5179,12 +5077,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTU039-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTU032-17",
@@ -5196,13 +5092,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTO011-17"
+      ],
+      "recomendacao_texto": "Fundamentos de Desenho Técnico",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTU032-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZU030-17",
@@ -5215,12 +5111,10 @@
       "i": 3,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZU030-17",
+      "observacoes": []
     },
     {
       "codigo": "MCZA044-17",
@@ -5232,13 +5126,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTA014-15",
+        "MCTA018-13"
+      ],
+      "recomendacao_texto": "Programação Orientada a Objetos; Inteligência Artificial",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA044-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTU015-17",
@@ -5251,12 +5146,10 @@
       "i": 3,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTU015-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI031-17",
@@ -5268,13 +5161,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTA022-17"
+      ],
+      "recomendacao_texto": "Redes de Computadores",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI031-17",
+      "observacoes": []
     },
     {
       "codigo": "NHZ6007-18",
@@ -5286,13 +5179,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "NHZ1009-15",
+        "NHZ1027-15"
+      ],
+      "recomendacao_texto": "Biologia Molecular e Biotecnologia; Bioquímica: estrutura, propriedades e funções de biomoléculas; Farmacologia",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ6007-18",
+      "observacoes": []
     },
     {
       "codigo": "MCZC012-15",
@@ -5304,13 +5198,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTC011-15"
+      ],
+      "recomendacao_texto": "Introdução à Neurociência ou Morfofisiologia Humana I; Psicologia Cognitiva",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZC012-15",
+      "observacoes": []
     },
     {
       "codigo": "ESZU017-17",
@@ -5323,12 +5217,10 @@
       "i": 2,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZU017-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTB022-17",
@@ -5340,13 +5232,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCN0405-15"
+      ],
+      "recomendacao_texto": "Introdução às Equações Diferenciais Ordinárias",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTB022-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTD007-18",
@@ -5358,13 +5250,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTD009-18",
+        "MCTD021-18"
+      ],
+      "recomendacao_texto": "Geometria Plana Axiomática; Fundamentos de Álgebra",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTD007-18",
+      "observacoes": []
     },
     {
       "codigo": "ESTI005-17",
@@ -5376,13 +5269,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIN0406-15",
+        "ESTI003-17"
+      ],
+      "recomendacao_texto": "Introdução à Probabilidade e à Estatística; Transformadas em Sinais e Sistemas Lineares",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI005-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTG021-17",
@@ -5395,12 +5289,10 @@
       "i": 5,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTG021-17",
+      "observacoes": []
     },
     {
       "codigo": "MCZA026-17",
@@ -5412,13 +5304,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTA037-17"
+      ],
+      "recomendacao_texto": "Banco de Dados",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA026-17",
+      "observacoes": []
     },
     {
       "codigo": "MCZA027-17",
@@ -5431,12 +5323,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA027-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI014-17",
@@ -5448,13 +5338,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTA028-15",
+        "MCTB001-17"
+      ],
+      "recomendacao_texto": "Programação Estruturada; Álgebra Linear",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI014-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTI013-17",
@@ -5466,13 +5357,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTA001-17",
+        "ESTI002-17"
+      ],
+      "recomendacao_texto": "Eletrônica Digital; Dispositivos Eletrônicos",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI013-17",
+      "observacoes": []
     },
     {
       "codigo": "MCZA028-13",
@@ -5484,13 +5376,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-15",
+        "MCTA018-13"
+      ],
+      "recomendacao_texto": "Processamento da Informação; Programação Orientada a Objetos",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA028-13",
+      "observacoes": []
     },
     {
       "codigo": "NHT1048-15",
@@ -5502,13 +5395,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIL0304-15"
+      ],
+      "recomendacao_texto": "Evolução e Diversificação da Vida na Terra",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT1048-15",
+      "observacoes": []
     },
     {
       "codigo": "ESTG019-17",
@@ -5520,13 +5413,13 @@
       "e": 0,
       "i": 5,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTG023-17"
+      ],
+      "recomendacao_texto": "Organização do Trabalho",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTG019-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTB023-17",
@@ -5538,13 +5431,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTB019-17"
+      ],
+      "recomendacao_texto": "Matemática Discreta",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTB023-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTI008-17",
@@ -5556,13 +5449,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI007-17"
+      ],
+      "recomendacao_texto": "Comunicação Digital",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI008-17",
+      "observacoes": []
     },
     {
       "codigo": "NHT3054-15",
@@ -5575,12 +5468,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "NHT3070-15 Eletromagnetismo I; NHT3071-15 Eletromagnetismo II; NHT3072- 15 Mecânica 794 Quântica I; MCTB010-13 Cálculo Vetorial e Tensorial",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT3054-15",
+      "observacoes": []
     },
     {
       "codigo": "MCZB032-13",
@@ -5592,13 +5483,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTB008-17"
+      ],
+      "recomendacao_texto": "Cálculo de Probabilidade",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZB032-13",
+      "observacoes": []
     },
     {
       "codigo": "ESTI020-17",
@@ -5610,13 +5501,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI005-17",
+        "MCTA022-17"
+      ],
+      "recomendacao_texto": "Sinais Aleatórios; Redes de Computadores",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI020-17",
+      "observacoes": []
     },
     {
       "codigo": "NHZ5015-09",
@@ -5629,12 +5521,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ5015-09",
+      "observacoes": []
     },
     {
       "codigo": "ESTU019-17",
@@ -5647,12 +5537,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTU019-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTA027-17",
@@ -5683,12 +5571,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "[Álgebra Linear; Funções de Várias Variáveis] ou Economia Matemática",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZB031-17",
+      "observacoes": []
     },
     {
       "codigo": "NHT3055-13",
@@ -5773,13 +5659,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTC011-15"
+      ],
+      "recomendacao_texto": "Psicologia Cognitiva",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZC011-15",
+      "observacoes": []
     },
     {
       "codigo": "MCTB026-17",
@@ -5809,13 +5695,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESHR004-13"
+      ],
+      "recomendacao_texto": "Economia política internacional da energia",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZR014-13",
+      "observacoes": []
     },
     {
       "codigo": "ESTE022-17",
@@ -5827,13 +5713,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0205-15",
+        "BCN0407-15"
+      ],
+      "recomendacao_texto": "Funções de Várias Variáveis; Fenômenos Térmicos",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTE022-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTU020-17",
@@ -5846,12 +5733,10 @@
       "i": 5,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Fenômenos de Transporte ou Termodinâmica I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTU020-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTI003-17",
@@ -5863,13 +5748,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCN0407-15"
+      ],
+      "recomendacao_texto": "Funções de Várias Variáveis",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI003-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTU021-17",
@@ -5882,12 +5767,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTU021-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZT016-17",
@@ -5900,12 +5783,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZT016-17",
+      "observacoes": []
     },
     {
       "codigo": "NHT3066-15",
@@ -5917,13 +5798,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCN0407-15"
+      ],
+      "recomendacao_texto": "Funções de Várias Variáveis",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT3066-15",
+      "observacoes": []
     },
     {
       "codigo": "MCZA030-17",
@@ -5936,12 +5817,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA030-17",
+      "observacoes": []
     },
     {
       "codigo": "NHT1063-15",
@@ -5953,13 +5832,13 @@
       "e": 0,
       "i": 3,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "NHT1048-15"
+      ],
+      "recomendacao_texto": "Sistemática e Biogeografia",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHT1063-15",
+      "observacoes": []
     }
   ]
 }

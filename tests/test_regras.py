@@ -16,10 +16,11 @@ from planejador.modelos import (
     SituacaoAcademica,
     RegistroHistorico,
 )
-from planejador.ofertas import extrair_horarios, extrair_tpei, horarios_conflitam
+from planejador.ofertas import extrair_codigo_disciplina_codigo_turma, extrair_horarios, extrair_tpei, horarios_conflitam, ler_ofertas_matricula_inicial_completa
 from planejador.planejador import (
     ConfiguracaoBusca,
     calcular_logistica,
+    curriculo_com_componentes_matricula_atual,
     diagnosticar_adicoes_grade,
     gerar_planejamento,
     montar_grade_personalizada,
@@ -117,7 +118,8 @@ class TesteCenarios(unittest.TestCase):
 class TesteConfiguracao(unittest.TestCase):
     def test_mantem_no_minimo_tres_opcoes_padrao(self):
         bruto = {
-            "arquivo_ofertas": "a.xlsx",
+            "arquivo_ofertas": "ajuste.pdf",
+            "arquivo_ofertas_inicial": "a.xlsx",
             "arquivo_historico": "h.pdf",
             "arquivo_curriculo": "c.json",
             "arquivo_equivalencias": "e.json",
@@ -130,6 +132,21 @@ class TesteConfiguracao(unittest.TestCase):
             config = carregar_configuracao(caminho)
             self.assertEqual(config.top_n, 3)
             self.assertEqual(config.min_opcoes_padrao, 3)
+            self.assertEqual(config.arquivo_ofertas_inicial, "a.xlsx")
+
+    def test_oferta_inicial_e_opcional_para_configs_antigas(self):
+        bruto = {
+            "arquivo_ofertas": "a.xlsx",
+            "arquivo_historico": "h.pdf",
+            "arquivo_curriculo": "c.json",
+            "arquivo_equivalencias": "e.json",
+            "arquivo_aliases_oferta": "x.json",
+        }
+        with tempfile.TemporaryDirectory() as pasta:
+            caminho = Path(pasta) / "config.json"
+            caminho.write_text(json.dumps(bruto), encoding="utf-8")
+            config = carregar_configuracao(caminho)
+            self.assertEqual(config.arquivo_ofertas_inicial, "")
 
 
 class TestePlanejamento(unittest.TestCase):
@@ -277,7 +294,9 @@ class TesteValidacaoBusca(unittest.TestCase):
         self.assertTrue(resultado.validacao_busca["limite_pool_atingido"])
         self.assertTrue(resultado.validacao_busca["busca_completa"])
         self.assertTrue(resultado.validacao_busca["ranking_padrao_exato"])
-        self.assertFalse(resultado.validacao_busca["fronteira_pareto_completa"])
+        # A domina B: o acumulador de Pareto substitui B por A sem truncar.
+        # O limite do pool padrão não limita automaticamente essa fronteira.
+        self.assertTrue(resultado.validacao_busca["fronteira_pareto_completa"])
         self.assertEqual(resultado.validacao_busca["conjuntos_unicos_validos"], 2)
         self.assertEqual(resultado.validacao_busca["conjuntos_retidos_no_pool"], 1)
 
@@ -449,6 +468,46 @@ class TesteAvaliacoesDocentes(unittest.TestCase):
         self.assertEqual(resultado.grade_principal.ofertas[0].codigo_turma, "A1ESTX001-17SA")
         self.assertGreater(resultado.grade_principal.metricas.ajuste_avaliacao_docente, 0)
 
+    def test_avaliacao_combina_geral_e_disciplina_sem_deixar_disciplina_dominar(self):
+        from planejador.avaliacoes_docentes import AvaliacaoDocente, BaseAvaliacoesDocentes
+
+        def av(nome, fonte, efeito, score, risco):
+            return AvaliacaoDocente(
+                professor=nome, professor_normalizado=nome, aliases_normalizados=(),
+                codigo_disciplina="ESTX001" if fonte == "disciplina" else "",
+                nome_disciplina="Disciplina Teste" if fonte == "disciplina" else "Avaliação geral",
+                fonte=fonte, classificacao="teste",
+                qualidade_pedagogica="favorável" if score >= 60 else "mista / inconclusiva",
+                risco_academico="baixo" if risco < 50 else "muito alto",
+                risco_score_0_100=risco, score_0_100=score,
+                efeito_ranking_original=efeito, efeito_ranking_aplicado=efeito,
+                confianca="alta", conceitos=100, comentarios=20,
+                taxa_f_ou_o=10, cr_professor=2.5, cr_medio_disciplina=2.2, diferenca_cr=0.3,
+            )
+
+        geral = av("PROFESSOR X", "geral", 4, 70, 20)
+        especifica = av("PROFESSOR X", "disciplina", -6, 45, 80)
+        base = BaseAvaliacoesDocentes(
+            por_professor_disciplina={("PROFESSOR X", "ESTX001"): especifica},
+            geral_por_professor={"PROFESSOR X": geral}, avisos=[],
+        )
+        combinada = base.localizar("PROFESSOR X", "ESTX001-17")
+        self.assertIsNotNone(combinada)
+        self.assertEqual(combinada.fonte, "combinada")
+        self.assertAlmostEqual(combinada.efeito_ranking_aplicado, 0.0, places=3)
+        self.assertEqual(len(combinada.detalhes_fontes), 2)
+        self.assertEqual(combinada.detalhes_fontes[0]["rotulo"], "Geral do docente")
+        self.assertEqual(combinada.detalhes_fontes[1]["rotulo"], "Nesta disciplina")
+
+    def test_catalogo_atual_inclui_recomendacoes_de_calculo_de_probabilidade(self):
+        from planejador.curriculo import carregar_curriculo
+
+        _, curriculo = carregar_curriculo(Path("dados/curriculos/bcd_2023.json"))
+        disciplina = curriculo["MCTB008-17"]
+        self.assertIn("BCN0407-15", disciplina.recomendacoes)
+        self.assertIn("BIN0406-15", disciplina.recomendacoes)
+        self.assertIn("MCBM006-23", disciplina.recomendacoes)
+        self.assertIn("Matemática Discreta", disciplina.recomendacao_texto)
 
 
 
@@ -490,6 +549,117 @@ class TesteEditorGrade(unittest.TestCase):
         self.assertEqual(sugestoes, [])
         diagnostico = diagnosticar_adicoes_grade(grade, (a, b), curriculo, set(), config)
         self.assertIn("conflita com A", diagnostico["B"])
+
+
+class TesteAjusteMatricula(unittest.TestCase):
+    def test_extrai_codigo_disciplina_do_codigo_de_turma(self):
+        self.assertEqual(
+            extrair_codigo_disciplina_codigo_turma("NA1MCCC012-23SA"),
+            "MCCC012-23",
+        )
+        self.assertEqual(
+            extrair_codigo_disciplina_codigo_turma("NB3MCTA028-15SA"),
+            "MCTA028-15",
+        )
+
+
+    def test_matricula_inicial_completa_nao_filtra_por_curriculo_principal(self):
+        import pandas as pd
+
+        linhas = [
+            {
+                "CURSO": "ENGENHARIAS", "CÓDIGO DE TURMA": "NC1ESMA002-23SA",
+                "TURMA": "INOVAÇÕES PARA ENGENHARIA C1-Noturno (SA)", "turma": "ESMA002-23",
+                "TEORIA": None, "PRÁTICA": "quinta das 21:00 às 23:00, semanal",
+                "CAMPUS": "SA", "TURNO": "Noturno", "TPEI": "0-2-2-4",
+                "VAGAS TOTAIS": 30, "VAGAS INGRESSANTES": 0, "VAGAS VETERANOS": 30,
+                "DOCENTE TEORIA": None, "DOCENTE TEORIA 2": None, "DOCENTE TEORIA 3": None,
+                "DOCENTE PRÁTICA": "KATIA FRANKLIN ALBERTIN TORRES", "DOCENTE PRÁTICA 2": None, "DOCENTE PRÁTICA 3": None,
+            },
+            {
+                "CURSO": "ENGENHARIA DE IAR", "CÓDIGO DE TURMA": "NA1ESTA019-17SA",
+                "TURMA": "PROJETO ASSISTIDO POR COMPUTADOR A1-Noturno (SA)", "turma": "ESTA019-17",
+                "TEORIA": None, "PRÁTICA": "quarta das 19:00 às 21:00, semanal",
+                "CAMPUS": "SA", "TURNO": "Noturno", "TPEI": "0-2-3",
+                "VAGAS TOTAIS": 30, "VAGAS INGRESSANTES": 0, "VAGAS VETERANOS": 30,
+                "DOCENTE TEORIA": None, "DOCENTE TEORIA 2": None, "DOCENTE TEORIA 3": None,
+                "DOCENTE PRÁTICA": "ELVIRA RAFIKOVA", "DOCENTE PRÁTICA 2": None, "DOCENTE PRÁTICA 3": None,
+            },
+        ]
+        with tempfile.TemporaryDirectory() as pasta:
+            caminho = Path(pasta) / "oferta.xlsx"
+            pd.DataFrame(linhas).to_excel(caminho, index=False)
+            resultado = ler_ofertas_matricula_inicial_completa(caminho, {}, "SA", "Noturno")
+        self.assertEqual(
+            {o.codigo_turma for o in resultado.ofertas},
+            {"NC1ESMA002-23SA", "NA1ESTA019-17SA"},
+        )
+
+    def test_curriculo_temporario_aceita_componente_externo_na_grade_atual(self):
+        curriculo = {
+            "ESTM004-17": DisciplinaCurricular(
+                codigo="ESTM004-17", nome="Ciência dos Materiais", categoria=Categoria.OBRIGATORIA,
+                creditos=4, t=4, p=0, e=0, i=4,
+            )
+        }
+        externa = Oferta(
+            codigo_ofertado="ESMA002-23", codigo_curriculo="ESMA002-23",
+            nome_turma="INOVAÇÕES PARA ENGENHARIA C1-Noturno (SA) - Carga Horária Extensionista",
+            codigo_turma="NC1ESMA002-23SA", campus="SA", turno="Noturno",
+            creditos=4, t=0, p=2, e=2, i=4,
+            horarios=(Horario(3, 21 * 60, 23 * 60, Recorrencia.SEMANAL, "pratica"),),
+            docentes=("KATIA FRANKLIN ALBERTIN TORRES",), tpei_original="0-2-2-4",
+        )
+        ampliado = curriculo_com_componentes_matricula_atual(curriculo, (externa,))
+        self.assertIn("ESMA002-23", ampliado)
+        self.assertEqual(ampliado["ESMA002-23"].categoria, Categoria.LIVRE)
+        grade = montar_grade_personalizada(
+            (externa,), ampliado, set(), set(),
+            ConfiguracaoBusca(min_creditos=0, max_creditos=20, creditos_alvo=16),
+        )
+        self.assertEqual(grade.metricas.creditos_totais, 4)
+
+    def test_vaga_zero_no_ajuste_nao_e_sugerida(self):
+        curriculo = {
+            "A": DisciplinaCurricular(
+                codigo="A", nome="A", categoria=Categoria.OBRIGATORIA,
+                creditos=4, t=4, p=0, e=0, i=4,
+            ),
+            "B": DisciplinaCurricular(
+                codigo="B", nome="B", categoria=Categoria.OBRIGATORIA,
+                creditos=4, t=4, p=0, e=0, i=4,
+            ),
+        }
+        atual = Oferta(
+            codigo_ofertado="A", codigo_curriculo="A", nome_turma="A1", codigo_turma="TA",
+            campus="SA", turno="NOTURNO", creditos=4, t=4, p=0, e=0, i=4,
+            horarios=(Horario(0, 19 * 60, 21 * 60, Recorrencia.SEMANAL, "teoria"),),
+            docentes=(), tpei_original="4-0-4", vagas_remanescentes=0, origem_oferta="ajuste",
+        )
+        sem_vaga = Oferta(
+            codigo_ofertado="B", codigo_curriculo="B", nome_turma="B1", codigo_turma="TB1",
+            campus="SA", turno="NOTURNO", creditos=4, t=4, p=0, e=0, i=4,
+            horarios=(Horario(1, 19 * 60, 21 * 60, Recorrencia.SEMANAL, "teoria"),),
+            docentes=(), tpei_original="4-0-4", vagas_remanescentes=0, origem_oferta="ajuste",
+        )
+        com_vaga = Oferta(
+            codigo_ofertado="B", codigo_curriculo="B", nome_turma="B2", codigo_turma="TB2",
+            campus="SA", turno="NOTURNO", creditos=4, t=4, p=0, e=0, i=4,
+            horarios=(Horario(2, 19 * 60, 21 * 60, Recorrencia.SEMANAL, "teoria"),),
+            docentes=(), tpei_original="4-0-4", vagas_remanescentes=3, origem_oferta="ajuste",
+        )
+        config = ConfiguracaoBusca(min_creditos=4, max_creditos=8, creditos_alvo=8)
+        grade = montar_grade_personalizada((atual,), curriculo, set(), set(), config)
+        sugestoes = sugerir_adicoes_grade(
+            grade, (sem_vaga, com_vaga), curriculo, set(), set(), config
+        )
+        self.assertEqual([s.oferta.codigo_turma for s in sugestoes], ["TB2"])
+
+        diagnostico = diagnosticar_adicoes_grade(
+            grade, (sem_vaga,), curriculo, set(), config
+        )
+        self.assertIn("sem vagas remanescentes no ajuste", diagnostico["B"])
+
 
 
 if __name__ == "__main__":

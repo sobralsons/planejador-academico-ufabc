@@ -82,6 +82,7 @@ class AvaliacoesDocentesConfig:
 @dataclass(frozen=True)
 class ConfiguracaoAplicacao:
     arquivo_ofertas: str
+    arquivo_ofertas_inicial: str
     arquivo_historico: str
     arquivo_curriculo: str
     arquivo_equivalencias: str
@@ -266,6 +267,7 @@ def carregar_configuracao(caminho: str | Path) -> ConfiguracaoAplicacao:
 
     return ConfiguracaoAplicacao(
         arquivo_ofertas=bruto["arquivo_ofertas"],
+        arquivo_ofertas_inicial=str(bruto.get("arquivo_ofertas_inicial", "")),
         arquivo_historico=bruto["arquivo_historico"],
         arquivo_curriculo=bruto["arquivo_curriculo"],
         arquivo_equivalencias=bruto["arquivo_equivalencias"],

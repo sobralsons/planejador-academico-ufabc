@@ -5,6 +5,11 @@
       "codigo_curriculo": "ESTM011-17",
       "habilitado": false,
       "nota": "O catalogo 2024-2025 usa ESTM019-17 para Propriedades Eletricas, Magneticas e Opticas, enquanto o PPC 2017 usa ESTM011-17. Confirmar oficialmente antes de habilitar."
+    },
+    "MCTA028-15": {
+      "codigo_curriculo": "MCCC014-23",
+      "habilitado": true,
+      "nota": "Convalidação oficial de mão dupla entre Programação Estruturada MCTA028-15 e MCCC014-23 (matriz 2023). O parser preserva o código antigo quando ele já pertence ao currículo selecionado."
     }
   }
 }

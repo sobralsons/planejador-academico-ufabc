@@ -1,0 +1,112 @@
+                                                                                            Boletim de Serviço nº 1299
+ANEXO - ATO DECISÓRIO Nº 44/2023 - CG (11.01.05.50)                                           05 de dezembro de 2023
+
+
+
+
+             Lista de Disciplinas de Opção Limitada do Bacharelado em
+                                           Ciência da Computação
+
+
+
+
+            Sigla         Disciplina                                        T   P   E   I      Créditos   Carga Horária
+
+            MCZA035-17    Algoritmos Probabilísticos                        4   0   0   4      4          48h
+            MCZA001-13    Análise de Projetos                               2   0   0   2      2          24h
+            MCTB007-17    Anéis e Corpos                                    4   0   0   4      4          48h
+            MCZA002-17    Aprendizado de Máquina                            4   0   0   4      4          48h
+            MCZA003-17    Arquitetura de Computadores de Alto Desempenho    4   0   0   4      4          48h
+            MCZA004-13    Avaliação de Desempenho de Redes                  3   1   0   4      4          48h
+            MCZA005-17    Banco de Dados de Apoio à Tomada de Decisão       3   1   0   4      4          48h
+            MCTB009-17    Cálculo Numérico                                  4   0   0   4      4          48h
+            MCZA037-17    Combinatória Extremal                             4   0   0   4      4          48h
+            MCZA006-17    Computação Evolutiva e Conexionista               4   0   0   4      4          48h
+            MCZA053-22    Desenvolvimento Guiado por Tipos                  4   0   0   4      4          48h
+            ESZG013-17    Empreendedorismo                                  2   2   0   4      4          48h
+            MCZA007-13    Empreendedorismo e Desenvolvimento de Negócios    4   0   0   4      4          48h
+            ESZI030-17    Gerenciamento e Interoperabilidade de Redes       3   1   0   4      4          48h
+            MCZA016-17    Gestão de projetos de software                    4   0   0   4      4          48h
+            ESZG019-17    Gestão Estratégica e Organizacional               2   0   0   2      2          24h
+            MCTB018-17    Grupos                                            4   0   0   4      4          48h
+            MCZB012-13    Inferência Estatística                            4   0   0   4      4          48h
+            ESZI013-17    Informática Industrial                            0   4   0   4      4          48h
+            ESZB022-17    Introdução à Bioinformática                       3   1   0   4      4          48h
+            MCZB015-13    Introdução à Criptografia                         4   0   0   4      4          48h
+            MCZB018-13    Introdução à Modelagem e Processos Estocásticos   3   1   0   4      4          48h
+            MCTC021-20    Neurociência Teórica e Computacional              2   2   0   4      4          48h
+            MCZA032-17    Introdução à Programação de Jogos                 2   2   0   4      4          48h
+            ESZI034-17    Jogos Digitais: Aspectos Técnicos e Aplicações    1   3   0   4      4          48h
+            MCZA010-13    Laboratório de Engenharia de Software             0   4   0   4      4          48h
+            MCZA011-17    Laboratório de Redes                              0   4   0   4      4          48h
+            MCZA012-13    Laboratório de Sistemas Operacionais              0   4   0   4      4          48h
+
+
+                                                            1
+                                                                                             Boletim de Serviço nº 1299
+ANEXO - ATO DECISÓRIO Nº 44/2023 - CG (11.01.05.50)                                            05 de dezembro de 2023
+
+
+
+
+            MCZA013-13    Lógicas não Clássicas                                  4   0   0   4   4        48h
+            MCZA014-17    Métodos de Otimização                                  4   0   0   4   4        48h
+            MCCC013-23    Otimização Linear                                      4   0   0   4   4        48h
+            MCZA015-13    Mineração de Dados                                     3   1   0   4   4        48h
+            ESTG013-17    Pesquisa Operacional                                   4   2   0   9   6        72h
+            ESZI022-17    Planejamento de Redes de Informação                    2   2   0   4   4        48h
+            MCZA038-17    Prática Avançada de Programação A                      0   4   0   4   4        48h
+            MCZA039-17    Prática Avançada de Programação B                      0   4   0   4   4        48h
+            MCZA040-17    Prática Avançada de Programação C                      0   4   0   4   4        48h
+            MCZA041-17    Processamento de Imagens Utilizando GPU                4   0   0   4   4        48h
+            MCZA017-13    Processamento de Linguagem Natural                     4   0   0   4   4        48h
+            MCTC022-15    Processamento de Sinais Neurais                        1   3   0   4   4        48h
+            MCZA018-17    Processamento Digital de Imagens                       3   1   0   4   4        48h
+            MCZA042-17    Processo e Desenvolvimento de Softwares Educacionais   0   4   0   4   4        48h
+            MCZA033-17    Programação Avançada para Dispositivos Móveis          0   4   0   4   4        48h
+            ESZI033-17    Programação de Dispositivos Móveis                     0   2   0   4   2        24h
+            MCZA019-17    Programação para Web                                   2   2   0   4   4        48h
+            MCZA020-13    Programação Paralela                                   4   0   0   4   4        48h
+            MCZA034-17    Programação Segura                                     2   2   0   4   4        48h
+            MCZA054-22    Projeto Avançado em Sistemas de Computação             4   0   0   6   4        48h
+            MCZA021-17    Projeto de Redes                                       4   0   0   4   4        48h
+            MCZA022-17    Projeto Interdisciplinar                               0   4   0   4   4        48h
+            MCZA023-17    Redes Convergentes                                     4   0   0   4   4        48h
+            ESZI029-17    Redes WAN de Banda Larga                               3   1   0   4   4        48h
+            MCZA024-17    Redes sem Fio                                          3   1   0   4   4        48h
+            MCZA044-17    Robótica e Sistemas Inteligentes                       2   2   0   4   4        48h
+            MCZA045-17    Robótica Educacional                                   2   2   0   4   4        48h
+            MCZA025-13    Segurança em Redes                                     2   2   0   4   4        48h
+            MCZA046-17    Semântica de Linguagem de Programação                  4   0   0   4   4        48h
+            MCZA026-17    Sistemas de Gerenciamento de Banco de Dados            2   2   0   4   4        48h
+            MCZA027-17    Sistemas de Informação                                 4   0   0   4   4        48h
+            ESZI014-17    Sistemas Inteligentes                                  3   1   0   4   4        48h
+            MCZA028-13    Sistemas Multiagentes                                  3   1   0   4   4        48h
+            MCZA029-13    Sistemas Multimídia                                    2   2   0   4   4        48h
+            MCZA047-17    Sistemas Multi-Robôs Sociais                           2   2   0   4   4        48h
+            MCZA050-17    Técnicas Avançadas de Programação                      2   2   0   4   4        48h
+            NHZ5019-22    Tecnologias da Informação e Comunicação na Educação    3   0   1   3   3        36h
+            MCZB033-17    Teoria da Recursão e Computabilidade                   4   0   0   4   4        48h
+
+
+
+                                                             2
+                                                                             Boletim de Serviço nº 1299
+ANEXO - ATO DECISÓRIO Nº 44/2023 - CG (11.01.05.50)                            05 de dezembro de 2023
+
+
+
+
+            MCZB032-13    Teoria das Filas                       4   0   0   4   4        48h
+            MCZA048-17    Teoria Espectral de Grafos             4   0   0   4   4        48h
+            MCZA049-17    Tópicos Emergentes em Banco de Dados   4   0   0   4   4        48h
+            MCZA030-17    Vida Artificial na Computação          2   0   0   4   2        24h
+            ESZA019-17    Visão Computacional                    3   1   0   4   4        48h
+            MCZA052-22    Vizualização de Dados e Informações    0   4   0   4   4        48h
+            MCZA031-13    Web Semântica                          4   0   0   4   4        48h
+
+
+
+
+                                                          3
+

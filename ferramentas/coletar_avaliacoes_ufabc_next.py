@@ -877,7 +877,7 @@ def main() -> int:
         kwargs: dict[str, Any] = {
             "user_data_dir": str(args.sessao),
             "headless": False,
-            "ignore_https_errors": True,
+            "ignore_https_errors": False,
             "viewport": {"width": 1500, "height": 900},
             "locale": "pt-BR",
         }

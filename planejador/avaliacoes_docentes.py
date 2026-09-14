@@ -18,6 +18,9 @@ PESOS_IMPORTANCIA = {
     "alta": 1.5,
 }
 
+PESO_AVALIACAO_GERAL = 0.60
+PESO_AVALIACAO_DISCIPLINA = 0.40
+
 PESOS_CONFIANCA = {
     "baixa": 0.55,
     "média": 0.80,
@@ -53,6 +56,7 @@ class AvaliacaoDocente:
     cr_medio_disciplina: float | None
     diferenca_cr: float | None
     gerado_em_utc: str = ""
+    detalhes_fontes: tuple[dict[str, Any], ...] = ()
 
     def para_dict(self) -> dict[str, Any]:
         return asdict(self)
@@ -76,10 +80,9 @@ class BaseAvaliacoesDocentes:
     def localizar(self, professor: str, codigo_disciplina: str) -> AvaliacaoDocente | None:
         professor_norm = normalizar_texto(professor)
         codigo = codigo_base(codigo_disciplina)
-        return (
-            self.por_professor_disciplina.get((professor_norm, codigo))
-            or self.geral_por_professor.get(professor_norm)
-        )
+        especifica = self.por_professor_disciplina.get((professor_norm, codigo))
+        geral = self.geral_por_professor.get(professor_norm)
+        return combinar_avaliacoes(geral, especifica)
 
     @classmethod
     def vazia(cls) -> "BaseAvaliacoesDocentes":
@@ -100,6 +103,140 @@ def _int(valor: Any) -> int:
         return int(valor or 0)
     except (TypeError, ValueError):
         return 0
+
+
+def _media_ponderada(valor_geral: float | None, valor_especifico: float | None) -> float | None:
+    if valor_geral is None:
+        return valor_especifico
+    if valor_especifico is None:
+        return valor_geral
+    return round(
+        PESO_AVALIACAO_GERAL * float(valor_geral)
+        + PESO_AVALIACAO_DISCIPLINA * float(valor_especifico),
+        2,
+    )
+
+
+def _classificar_qualidade(score: float | None) -> str:
+    if score is None:
+        return "sem dados"
+    if score >= 67:
+        return "favorável"
+    if score >= 55:
+        return "razoável"
+    if score >= 45:
+        return "mista / inconclusiva"
+    return "desfavorável"
+
+
+def _classificar_risco(score: float | None) -> str:
+    if score is None:
+        return "sem dados"
+    if score < 25:
+        return "baixo"
+    if score < 50:
+        return "moderado"
+    if score < 70:
+        return "alto"
+    return "muito alto"
+
+
+def _classificar_recomendacao(efeito: float, qualidade: float | None, risco: float | None) -> str:
+    # O efeito já incorpora confiança e tamanho de amostra. A classificação combinada
+    # evita que uma única disciplina domine a impressão geral sobre o docente e não
+    # transforma uma avaliação pedagógica apenas razoável em "favorável" artificialmente.
+    if efeito <= -4.0:
+        return "evitar se houver alternativa"
+    if efeito <= -1.0:
+        return "avaliar com atenção"
+    if qualidade is not None and qualidade >= 60 and risco is not None and risco >= 55:
+        return "favorável, mas disciplina/turma exigente"
+    if qualidade is not None and qualidade >= 67 and efeito >= 1.0:
+        return "preferir" if efeito >= 3.5 else "favorável"
+    if qualidade is not None and qualidade >= 55 and efeito >= 0:
+        return "razoável / boa opção"
+    return "neutro / avaliar"
+
+
+def _resumo_fonte(avaliacao: AvaliacaoDocente, rotulo: str) -> dict[str, Any]:
+    return {
+        "rotulo": rotulo,
+        "fonte": avaliacao.fonte,
+        "classificacao": avaliacao.classificacao,
+        "qualidade_pedagogica": avaliacao.qualidade_pedagogica,
+        "risco_academico": avaliacao.risco_academico,
+        "score_0_100": avaliacao.score_0_100,
+        "risco_score_0_100": avaliacao.risco_score_0_100,
+        "efeito_ranking_aplicado": avaliacao.efeito_ranking_aplicado,
+        "confianca": avaliacao.confianca,
+        "conceitos": avaliacao.conceitos,
+        "comentarios": avaliacao.comentarios,
+        "nome_disciplina": avaliacao.nome_disciplina,
+    }
+
+
+def combinar_avaliacoes(
+    geral: AvaliacaoDocente | None,
+    especifica: AvaliacaoDocente | None,
+) -> AvaliacaoDocente | None:
+    """Combina visão geral do docente e desempenho na disciplina.
+
+    A avaliação geral é sempre a base (60%). Quando existe avaliação da disciplina,
+    ela entra como contexto adicional (40%). O efeito de cada fonte já foi reduzido
+    previamente quando a confiança ou a amostra é pequena.
+    """
+    if geral is None:
+        return especifica
+    if especifica is None:
+        return geral
+
+    score = _media_ponderada(geral.score_0_100, especifica.score_0_100)
+    risco_score = _media_ponderada(geral.risco_score_0_100, especifica.risco_score_0_100)
+    efeito_original = round(
+        PESO_AVALIACAO_GERAL * geral.efeito_ranking_original
+        + PESO_AVALIACAO_DISCIPLINA * especifica.efeito_ranking_original,
+        3,
+    )
+    efeito_aplicado = round(
+        PESO_AVALIACAO_GERAL * geral.efeito_ranking_aplicado
+        + PESO_AVALIACAO_DISCIPLINA * especifica.efeito_ranking_aplicado,
+        3,
+    )
+    qualidade = _classificar_qualidade(score)
+    risco = _classificar_risco(risco_score)
+    classificacao = _classificar_recomendacao(efeito_aplicado, score, risco_score)
+
+    confs = {str(geral.confianca).lower(), str(especifica.confianca).lower()}
+    confianca = "alta" if confs == {"alta"} else ("média" if "alta" in confs or "média" in confs or "media" in confs else "baixa")
+
+    return AvaliacaoDocente(
+        professor=geral.professor or especifica.professor,
+        professor_normalizado=geral.professor_normalizado or especifica.professor_normalizado,
+        aliases_normalizados=tuple(sorted(set(geral.aliases_normalizados) | set(especifica.aliases_normalizados))),
+        codigo_disciplina=especifica.codigo_disciplina,
+        nome_disciplina=especifica.nome_disciplina,
+        fonte="combinada",
+        classificacao=classificacao,
+        qualidade_pedagogica=qualidade,
+        risco_academico=risco,
+        risco_score_0_100=risco_score,
+        score_0_100=score,
+        efeito_ranking_original=efeito_original,
+        efeito_ranking_aplicado=efeito_aplicado,
+        confianca=confianca,
+        # A avaliação específica é subconjunto da geral; usar o maior tamanho evita dupla contagem.
+        conceitos=max(geral.conceitos, especifica.conceitos),
+        comentarios=max(geral.comentarios, especifica.comentarios),
+        taxa_f_ou_o=_media_ponderada(geral.taxa_f_ou_o, especifica.taxa_f_ou_o),
+        cr_professor=_media_ponderada(geral.cr_professor, especifica.cr_professor),
+        cr_medio_disciplina=especifica.cr_medio_disciplina or geral.cr_medio_disciplina,
+        diferenca_cr=_media_ponderada(geral.diferenca_cr, especifica.diferenca_cr),
+        gerado_em_utc=geral.gerado_em_utc or especifica.gerado_em_utc,
+        detalhes_fontes=(
+            _resumo_fonte(geral, "Geral do docente"),
+            _resumo_fonte(especifica, "Nesta disciplina"),
+        ),
+    )
 
 
 def _efeito_aplicado(

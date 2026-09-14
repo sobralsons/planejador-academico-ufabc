@@ -160,8 +160,9 @@ def auditoria_integralizacao(
     # transparente e conferível, sem afirmar uma integralização oficial.
     creditos_por_codigo: dict[str, int] = {}
     nomes_por_codigo: dict[str, str] = {}
+    origens_utilizadas = situacao.origens_utilizadas(set(curriculo))
     for codigo, tentativas in situacao.tentativas.items():
-        if codigo in curriculo:
+        if codigo in curriculo or codigo in origens_utilizadas:
             continue
         concluidas = [r for r in tentativas if r.situacao in STATUS_CONCLUIDOS]
         if concluidas:
@@ -239,6 +240,10 @@ def auditoria_integralizacao(
         "componentes_curriculo_concluidos": len(concluidas_curriculo_projetadas),
         "componentes_historico_concluidos": len(situacao.concluidas),
         "livres_potenciais_fora_da_matriz": livres_potenciais,
+        "origens_reconhecimentos": {
+            c: sorted(situacao.origens_conclusao.get(c, {c}))
+            for c in sorted(concluidas_curriculo_confirmadas)
+        },
         "livres_estimados_adicionais": livres_estimados_adicionais,
         "componentes_livres_potenciais": [
             {"codigo": codigo, "nome": nomes_por_codigo[codigo], "creditos": creditos}

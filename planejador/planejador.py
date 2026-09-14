@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from collections import defaultdict
 import math
+import re
 from dataclasses import dataclass, field, replace
 from statistics import mean
 
@@ -310,7 +311,7 @@ def calcular_metricas(
         ):
             disciplinas_totalmente_destravadas += 1
 
-    vagas = [o.vagas_veteranos for o in ofertas if o.vagas_veteranos is not None]
+    vagas = [o.vagas_disponiveis for o in ofertas if o.vagas_disponiveis is not None]
     dias_ocupados = {h.dia for o in ofertas for h in o.horarios}
     (
         janelas_internas,
@@ -695,9 +696,15 @@ def gerar_planejamento(
             codigo,
         ),
     )
-    codigos = codigos_todos[: configuracao.max_disciplinas_candidatas]
-
     exigidas = set(configuracao.restricoes.disciplinas_obrigatorias_na_grade)
+    limite = configuracao.max_disciplinas_candidatas
+    if limite < 1 or configuracao.max_solucoes_pool < 1:
+        raise ValueError("Os limites de candidatas e de retenção devem ser positivos.")
+    if len(exigidas) > limite:
+        raise ValueError("O limite de candidatas é menor que a quantidade de disciplinas exigidas.")
+    prioritarias = [c for c in codigos_todos if c in exigidas]
+    opcionais = [c for c in codigos_todos if c not in exigidas]
+    codigos = prioritarias + opcionais[:limite - len(prioritarias)]
     indisponiveis_exigidas = exigidas - set(codigos)
     avisos: list[str] = []
     if indisponiveis_exigidas:
@@ -707,6 +714,9 @@ def gerar_planejamento(
         )
 
     melhores_por_assinatura: dict[tuple[str, ...], Grade] = {}
+    melhores_por_perfil: dict[PerfilPlanejamento, Grade] = {}
+    pareto_candidatas: list[Grade] = []
+    pareto_retencao_limitada = False
     limite_atingido = False
     nos_visitados = 0
     podas_creditos = 0
@@ -714,7 +724,7 @@ def gerar_planejamento(
     grades_concretas_validas = 0
 
     def registrar(escolhidas: list[Oferta]) -> None:
-        nonlocal limite_atingido, grades_concretas_validas
+        nonlocal limite_atingido, grades_concretas_validas, pareto_candidatas, pareto_retencao_limitada
         ofertas_grade = tuple(escolhidas)
         creditos = sum(o.creditos for o in ofertas_grade)
         if not (configuracao.min_creditos <= creditos <= configuracao.max_creditos):
@@ -747,6 +757,18 @@ def gerar_planejamento(
             dependencias,
             avaliacoes_docentes_por_disciplina=avaliacoes_docentes,
         )
+        for perfil in configuracao.perfis_gerados:
+            anterior_perfil = melhores_por_perfil.get(perfil)
+            if anterior_perfil is None or chave_ordenacao(grade, configuracao.creditos_alvo, perfil, configuracao.preferencias) < chave_ordenacao(anterior_perfil, configuracao.creditos_alvo, perfil, configuracao.preferencias):
+                melhores_por_perfil[perfil] = grade
+        if configuracao.gerar_fronteira_pareto and not any(
+            _domina(g, grade, configuracao.creditos_alvo) for g in pareto_candidatas
+        ):
+            pareto_candidatas = [g for g in pareto_candidatas if not _domina(grade, g, configuracao.creditos_alvo)]
+            if len(pareto_candidatas) < configuracao.max_solucoes_pool:
+                pareto_candidatas.append(grade)
+            else:
+                pareto_retencao_limitada = True
         assinatura = grade.assinatura_disciplinas
         anterior = melhores_por_assinatura.get(assinatura)
         if anterior is None or chave_ordenacao(
@@ -768,9 +790,9 @@ def gerar_planejamento(
         if creditos > configuracao.max_creditos:
             podas_creditos += 1
             return
-        if creditos >= configuracao.min_creditos:
-            registrar(escolhidas)
         if indice >= len(codigos):
+            if creditos >= configuracao.min_creditos:
+                registrar(escolhidas)
             return
 
         codigo = codigos[indice]
@@ -809,28 +831,16 @@ def gerar_planejamento(
             f"Só foi possível gerar {len(grades_padrao)} opção(ões) padrão com as restrições atuais."
         )
 
-    assinaturas_usadas = {g.assinatura_disciplinas for g in grades_padrao[:1]}
-    grades_por_perfil: dict[PerfilPlanejamento, Grade] = {}
-    for perfil in configuracao.perfis_gerados:
-        grade = _escolher_grade_perfil_unica(
-            pool_completo,
-            perfil,
-            configuracao,
-            assinaturas_usadas,
-        )
-        if grade is not None:
-            grades_por_perfil[perfil] = grade
-
+    # Cada perfil otimiza todas as turmas visitadas, independentemente dos demais.
+    grades_por_perfil = {
+        perfil: replace(grade, perfil=perfil)
+        for perfil, grade in melhores_por_perfil.items()
+    }
     principal = grades_padrao[0] if grades_padrao else None
-    # A fronteira de Pareto pode ser quadrática; quando o pool completo excede o
-    # limite configurado, ela usa o conjunto retido. As grades padrão, os perfis e
-    # as reservas continuam sendo escolhidos sobre o conjunto completo.
-    pareto_base = pool_completo if not limite_atingido else pool_retido
-    pareto = (
-        fronteira_pareto(pareto_base, configuracao.creditos_alvo)
-        if configuracao.gerar_fronteira_pareto
-        else []
-    )
+    pareto = fronteira_pareto(pareto_candidatas, configuracao.creditos_alvo) if configuracao.gerar_fronteira_pareto else []
+    pareto_exibicao_limitada = len(pareto) < len(pareto_candidatas)
+    pareto_calculo_completo = configuracao.gerar_fronteira_pareto and not pareto_retencao_limitada
+    pareto_completa = pareto_calculo_completo and not pareto_exibicao_limitada
     reservas = (
         _grades_reserva(principal, pool_completo, configuracao)
         if configuracao.gerar_grades_reserva
@@ -848,10 +858,14 @@ def gerar_planejamento(
     if limite_atingido:
         avisos.append(
             "Todas as combinações dos candidatos analisados foram percorridas, mas o pool completo "
-            "excedeu o limite de retenção. As grades padrão e por perfil são exatas; a fronteira de "
-            "Pareto foi calculada sobre o subconjunto retido."
+            "excedeu o limite de retenção. As grades padrão e por perfil continuam exatas."
         )
 
+    if pareto_retencao_limitada or pareto_exibicao_limitada:
+        avisos.append(
+            f"Pareto parcial: {len(pareto)} alternativas exibidas, {len(pareto_candidatas)} retidas. "
+            + ("A retenção foi limitada durante o cálculo." if pareto_retencao_limitada else "O cálculo foi completo; a apresentação está limitada a oito alternativas.")
+        )
     combinacoes_teoricas = math.prod(1 + len(por_disciplina[c]) for c in codigos)
     busca_completa = len(codigos_todos) <= configuracao.max_disciplinas_candidatas
     validacao_busca = {
@@ -876,8 +890,13 @@ def gerar_planejamento(
         "ranking_global_garantido": busca_completa,
         "perfis_exatos": True,
         "perfis_globais_garantidos": busca_completa,
-        "fronteira_pareto_completa": not limite_atingido,
-        "fronteira_pareto_global_garantida": busca_completa and not limite_atingido,
+        "fronteira_pareto_completa": pareto_completa,
+        "pareto_calculo_completo": pareto_calculo_completo,
+        "pareto_retencao_limitada": pareto_retencao_limitada,
+        "pareto_exibicao_truncada": pareto_exibicao_limitada,
+        "pareto_quantidade_retida": len(pareto_candidatas),
+        "pareto_quantidade_exibida": len(pareto),
+        "fronteira_pareto_global_garantida": busca_completa and pareto_completa,
         "min_creditos_efetivo": configuracao.min_creditos,
         "max_creditos_efetivo": configuracao.max_creditos,
         "creditos_alvo": configuracao.creditos_alvo,
@@ -917,6 +936,46 @@ def gerar_grades(
         diagnosticos,
     ).grades_padrao
 
+
+
+def curriculo_com_componentes_matricula_atual(
+    curriculo: dict[str, DisciplinaCurricular],
+    ofertas_matricula: tuple[Oferta, ...],
+) -> dict[str, DisciplinaCurricular]:
+    """Amplia temporariamente a matriz para aceitar a matrícula já deferida.
+
+    Uma turma já matriculada pode não pertencer à matriz principal usada no
+    planejamento (por exemplo, componente de outra engenharia, opção livre ou
+    matriz mais nova). Para que ela ainda possa compor a grade-base do ajuste,
+    criamos um componente temporário classificado como livre. Isso afeta apenas
+    a edição da grade atual; não transforma a disciplina em obrigatória da matriz.
+    """
+    resultado = dict(curriculo)
+    for oferta in ofertas_matricula:
+        if oferta.codigo_curriculo in resultado:
+            continue
+        nome = re.sub(
+            r"\s+[A-Z]\d+-.*$",
+            "",
+            oferta.nome_turma or oferta.codigo_curriculo,
+            flags=re.IGNORECASE,
+        ).strip() or oferta.nome_turma or oferta.codigo_curriculo
+        resultado[oferta.codigo_curriculo] = DisciplinaCurricular(
+            codigo=oferta.codigo_curriculo,
+            nome=nome,
+            categoria=Categoria.LIVRE,
+            creditos=oferta.creditos,
+            t=oferta.t,
+            p=oferta.p,
+            e=oferta.e,
+            i=oferta.i,
+            quadrimestre_recomendado=None,
+            observacoes=(
+                "Componente da matrícula atual fora da matriz principal selecionada; "
+                "mantido apenas para reconstrução e simulação do ajuste.",
+            ),
+        )
+    return resultado
 
 # ---------------------------------------------------------------------------
 # Editor interativo de grades
@@ -1022,6 +1081,8 @@ def sugerir_adicoes_grade(
 
     for oferta in ofertas_disponiveis:
         codigo = oferta.codigo_curriculo
+        if oferta.vagas_remanescentes is not None and oferta.vagas_remanescentes <= 0:
+            continue
         if codigo in codigos_atuais or codigo in cumpridas_projetadas:
             continue
         disciplina = curriculo.get(codigo)
@@ -1105,6 +1166,9 @@ def diagnosticar_adicoes_grade(
         motivos: set[str] = set()
         alguma_compativel = False
         for oferta in ofertas_codigo:
+            if oferta.vagas_remanescentes is not None and oferta.vagas_remanescentes <= 0:
+                motivos.add("sem vagas remanescentes no ajuste")
+                continue
             aceita, motivo = _oferta_atende_restricoes(oferta, configuracao.restricoes)
             if not aceita:
                 motivos.add(motivo)

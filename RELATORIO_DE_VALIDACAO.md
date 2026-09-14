@@ -2,7 +2,7 @@
 
 ## Resultado da suíte
 
-**47 testes automatizados aprovados.**
+**51 testes automatizados aprovados.**
 
 A execução é feita por:
 
@@ -55,7 +55,10 @@ Currículos verificados:
 - curso único, mudança, dupla e tríplice formação;
 - créditos únicos, sobreposição curricular e roteiro por diploma;
 - estratégias simultânea, híbrida e sequencial;
-- relatório completo de trajetória e visualização embutida.
+- relatório completo de trajetória e visualização embutida;
+- extração do código de disciplina a partir do código de turma do PDF de ajuste;
+- bloqueio de novas inclusões quando a turma possui 0 vagas remanescentes;
+- sugestão de alternativas do ajuste somente quando há vagas remanescentes.
 
 ## Testes integrados com histórico e oferta reais
 
@@ -99,3 +102,37 @@ A validação confirma a coerência do software com as matrizes estruturadas. El
 - extensão e atividades complementares;
 - deferimento de estágio e trabalho final;
 - vagas e oferta futura.
+
+## Atualização — avaliações docentes e recomendações do catálogo 2025–2026
+
+- A avaliação geral do docente passou a ser a base do ranking.
+- Quando existe avaliação da disciplina específica, as duas fontes são combinadas em 60% geral + 40% disciplina.
+- O relatório exibe separadamente o resultado geral e o resultado específico para permitir conferência.
+- Amostras pequenas continuam tendo impacto reduzido antes da combinação.
+- As recomendações acadêmicas foram atualizadas a partir do Catálogo de Disciplinas UFABC 2025–2026.
+- Recomendações textuais que não puderem ser convertidas automaticamente em código continuam visíveis no relatório em vez de aparecerem como inexistentes.
+- Caso de regressão incluído: MCTB008-17 — Cálculo de Probabilidade reconhece Funções de Várias Variáveis, Introdução à Probabilidade e à Estatística e Matemática Discreta.
+
+Resultado da suíte após a atualização: **51 testes automatizados aprovados**.
+
+
+## Atualização — ajuste de matrícula 2026.3
+
+O fluxo de ajuste foi validado com o PDF oficial de turmas do ajuste de 2026.3. O parser reconhece a estrutura de curso, código de turma, turma, teoria, prática, campus, turno, T-P-E-I, vagas totais, vagas remanescentes, alta demanda e docentes.
+
+No modo de ajuste, a enumeração automática considera apenas turmas com vagas remanescentes positivas para novas inclusões. Turmas com zero vagas continuam disponíveis na seleção da matrícula atual, pois o aluno pode já estar deferido nelas e desejar mantê-las ou soltá-las.
+
+A integração ponta a ponta foi executada com histórico, currículo de Engenharia de Materiais 2017 e o PDF de ajuste, sem erros de parsing. Também foi validada a leitura de Programação Estruturada com o código antigo ofertado no PDF e sua associação à matriz 2023 quando aplicável.
+
+Resultado final da suíte: **51 testes automatizados aprovados**.
+
+
+## Correção — matrícula atual independente da matriz principal
+
+Foi identificado que a leitura do Excel usado para reconstruir a matrícula já deferida ainda aplicava o filtro da matriz principal. Isso ocultava componentes válidos que o estudante já havia obtido na matrícula comum quando esses componentes pertenciam a outra engenharia, outra matriz ou não constavam no currículo principal.
+
+A leitura da matrícula atual passou a percorrer todas as turmas do Excel no campus e turno selecionados, sem filtro curricular. Para o editor, componentes externos à matriz principal recebem uma representação temporária como livre, somente para preservar créditos, horários, docentes e conflitos da matrícula real; essa classificação temporária não altera a matriz acadêmica oficial.
+
+Validação com a oferta oficial 2026.3 confirmou a presença das cinco turmas informadas pelo usuário: NA1ESTM004-17SA, NC1ESMA002-23SA, NA1ESTO008-17SA, NA1ESTA019-17SA e NA1ESTM002-17SA. A grade conjunta foi reconstruída com 18 créditos e sem conflito de horário.
+
+Resultado final da suíte: **54 testes automatizados aprovados**.

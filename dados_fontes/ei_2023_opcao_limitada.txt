@@ -1,0 +1,131 @@
+                                                                     Boletim de Serviço nº 1457
+ANEXO I - ATO DECISÓRIO Nº 68/2025 - CG (11.01.05.50)                       01 de julho de 2025
+
+
+
+                                         Ministério da Educação
+                                       Universidade Federal do ABC
+
+
+
+
+                   DOCUMENTOS COMPLEMENTARES DO
+                   PROJETO PEDAGÓGICO DO CURSO DE
+                     ENGENHARIA DE INFORMAÇÃO
+
+
+
+
+                                                   SANTO ANDRÉ
+                                                       2025
+
+
+                                                                                  1
+                                                                                         Boletim de Serviço nº 1457
+ANEXO I - ATO DECISÓRIO Nº 68/2025 - CG (11.01.05.50)                                           01 de julho de 2025
+
+
+           DOCUMENTO COMPLEMENTAR I – Lista de disciplinas de
+           Opção Limitada do curso de Engenharia de Informação
+
+           Lista de disciplinas de Opção Limitada do curso de Engenharia de Informação, segundo sua
+           matriz de PPC (2023) e de acordo com o Catálogo de Disciplinas vigente disponibilizado pela
+           ProGrad, disponível em: https://prograd.ufabc.edu.br/catalogos-de-disciplinas.
+
+                                                                                                  Carga
+            Sigla            Nome                                    T   P   E   I   Créditos
+                                                                                                  horária
+            ESZI027-17       Informação e Sociedade                  2   0   0   3   2            24
+            ESZI002-17       Filtragem Adaptativa                    3   1   0   4   4            48
+                             Processamento de Informação em
+            ESZI003-17                                               3   1   0   4   4            48
+                             Línguas Naturais
+            ESZI028-17       TV Digital                              3   1   0   4   4            48
+            ESZI029-17       Redes WAN de Banda Larga                3   1   0   4   4            48
+                             Gerenciamento e Interoperabilidade de
+            ESZI030-17                                               3   1   0   4   4            48
+                             Redes
+            ESZI031-17       Segurança de Redes                      3   1   0   4   4            48
+            ESZI032-17       Processamento de Vídeo                  3   1   0   4   4            48
+            ESZI010-17       Simulação de Sistemas de Comunicação    2   2   0   4   4            48
+            ESZI033-17       Programação de Dispositivos Móveis      0   2   0   4   2            24
+                             Jogos Digitais: Aspectos Técnicos e
+            ESZI034-17                                               1   3   0   4   4            48
+                             Aplicações
+            ESZI013-17       Informática Industrial                  0   4   0   4   4            48
+            ESZI014-17       Sistemas Inteligentes                   3   1   0   4   4            48
+                             Introdução ao Processamento de Sinais
+            ESZI035-17                                               3   1   0   4   4            48
+                             de Voz e Áudio
+            ESZI016-17       Projeto de Filtros Digitais             2   2   0   4   4            48
+            ESIF002-23       Fundamentos de Processamento Gráfico    0   4   0   4   4            48
+            ESZI018-17       Tecnologia de Redes Ópticas             4   0   0   4   4            48
+            ESZI019-17       Sistemas de Micro-ondas                 3   1   0   4   4            48
+            ESZI036-17       Projeto de Alta Frequência              2   2   0   4   4            48
+            ESZI037-17       Aplicações em Voz, Áudio e Acústica     3   1   0   4   4            48
+            ESZI022-17       Planejamento de Redes de Informação     2   2   0   4   4            48
+            ESZI023-17       Projeto de Sistemas de Comunicação      0   3   0   3   3            36
+            ESIF003-23       Projeto de Sistemas Multimídia          0   2   0   3   2            24
+            ESZI025-17       Aplicações de Microcontroladores        0   4   0   4   4            48
+            ESZI039-17       Propagação e Antenas                    3   1   0   4   4            48
+            ESZI040-17       Telefonia Fixa e VOIP                   3   1   0   4   4            48
+            ESZI041-18       Programação de Software Embarcado       2   2   0   4   4            48
+                             Engenharia de Sistemas de
+            ESZI026-17                                               2   2   0   4   4            48
+                             Comunicação e Missão Crítica
+            ESZI042-17       Instrumentação em RF e Micro-ondas      2   2   0   4   4            48
+                             Programação Baseada em Componentes
+            ESZI043-17                                               2   2   0   4   4            48
+                             para Jogos
+
+                                                                                                       2
+                                                                                          Boletim de Serviço nº 1457
+ANEXO I - ATO DECISÓRIO Nº 68/2025 - CG (11.01.05.50)                                            01 de julho de 2025
+
+
+                             Fundamentos da Computação
+            ESZI044-17                                                3   1   0   4   4            48
+                             Semântica
+            ESZI045-17       Introdução à Linguística Computacional   3   1   0   4   4            48
+            MCTA018-13       Programação Orientada a Objetos          2   2   0   4   4            48
+            MCTA033-15       Engenharia de Software                   4   0   0   4   4            48
+            MCCC001-23       Algoritmos e Estruturas de Dados I       2   2   0   6   4            48
+            MCCC002-23       Algoritmos e Estruturas de Dados II      4   0   0   6   4            48
+            MCCC012-23       Modelagem de Banco de Dados              4   0   0   4   4            48
+            MCCC016-23       Implementação de Bancos de Dados         0   4   0   4   4            48
+            MCTA004-17       Arquitetura de Computadores              4   0   0   4   4            48
+            MCTA026-13       Sistemas Operacionais                    3   1   0   4   4            48
+            MCTA025-13       Sistemas Distribuídos                    3   1   0   4   4            48
+            MCZA032-17       Introdução à Programação de Jogos        2   2   0   4   4            48
+            MCBM022-23       Introdução aos Processos Estocásticos    4   0   0   4   4            48
+            MCZA011-17       Laboratório de Redes                     0   4   0   4   4            48
+            MCZA023-17       Redes Convergentes                       4   0   0   4   4            48
+            MCZA021-17       Projeto de Redes                         4   0   0   4   4            48
+            MCZA025-13       Segurança em Redes                       2   2   0   4   4            48
+            ESIR002-23       Lógica Programável                       2   2   0   4   4            48
+            MCTB010-13       Cálculo Vetorial e Tensorial             4   0   0   4   4            48
+            ESTO015-17       Mecânica dos Fluidos I                   4   0   0   5   4            48
+            ESTO014-17       Termodinâmica Aplicada I                 4   0   0   5   4            48
+            ESTO004-17       Instrumentação e Controle                3   1   0   5   4            48
+            ESTO001-17       Circuitos Elétricos e Fotônica           3   1   0   5   4            48
+            MCZA024-17       Redes Sem Fio                            3   1   0   4   4            48
+            MCZA018-17       Processamento Digital de Imagens         3   1   0   4   4            48
+            MCCC008-23       Inteligência Artificial                  4   0   0   4   4            48
+            ESTA008-17       Sistemas de Controle II                  3   2   0   4   5            60
+            ESTA006-17       Fotônica                                 3   1   0   4   4            48
+            ESZA019-17       Visão Computacional                      3   1   0   4   4            48
+            BIJ0207-15       Bases Conceituais da Energia             2   0   0   4   2            24
+            BCK0104-15       Interações Atômicas e Moleculares        3   0   0   4   3            36
+            ESIF004-23       Internet das Coisas e Blockchain         3   1   0   4   4            48
+            ESIF005-23       Otimização em Redes de Comunicação       3   1   0   4   4            48
+                             Desenho Universal e Tecnologia
+            ESAE002-23                                                2   0   0   2   2            24
+                             Assistiva
+            ESTA005-17       Análise de Sistemas Dinâmicos Lineares   3   0   0   4   3            36
+            ESZA023-17       Introdução ao Controle Moderno           3   2   0   4   5            60
+
+
+
+
+                                                                                                        3
+
