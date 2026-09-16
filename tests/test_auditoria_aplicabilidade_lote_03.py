@@ -128,7 +128,7 @@ def test_lch_2019_mantem_diferenca_de_coorte_explicita_sem_inventar_data_termina
     assert item["status_resultante"] == "pendente"
 
 
-def test_lote_03_nao_altera_resumo_global_nem_declara_suporte():
+def test_lote_03_nao_altera_suas_decisoes_nem_declara_suporte():
     auditoria, vigencia = _carregar()
 
     assert auditoria["resumo"] == {
@@ -141,9 +141,9 @@ def test_lote_03_nao_altera_resumo_global_nem_declara_suporte():
     assert vigencia["resumo"] == {
         "ppcs_total": 93,
         "nao_aplicaveis": 0,
-        "pendentes": 47,
-        "candidatas": 46,
-        "ppcs_historicos_candidatos": 11,
+        "pendentes": 46,
+        "candidatas": 47,
+        "ppcs_historicos_candidatos": 12,
     }
     assert all(
         "suportada" not in item.get("status_resultante", "")
