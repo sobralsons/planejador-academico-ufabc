@@ -58,12 +58,19 @@ def test_lote_09_nao_exclui_nem_declara_suporte_publico():
     assert item["revisao_humana"]["estado"] == "pendente"
 
 
-def test_lote_09_nao_mascarou_estado_global_antes_do_ci():
+def test_lote_09_sincroniza_estado_global_sem_declarar_suporte():
     auditoria, vigencia = _carregar()
     item = auditoria["auditoria"][0]
     por_curso = {curso["curso_id"]: curso for curso in vigencia["classificacao"]}
 
-    assert item["aplicado_no_estado_global"] is False
-    assert auditoria["resumo"]["estado_global_alterado_neste_commit"] is False
-    assert 2018 in por_curso["biotecnologia"]["matrizes_pendentes_anos"]
-    assert 2018 not in por_curso["biotecnologia"]["matrizes_candidatas_anos"]
+    assert item["aplicado_no_estado_global"] is True
+    assert auditoria["resumo"]["estado_global_alterado_neste_commit"] is True
+    assert 2018 not in por_curso["biotecnologia"]["matrizes_pendentes_anos"]
+    assert 2018 in por_curso["biotecnologia"]["matrizes_candidatas_anos"]
+    assert vigencia["resumo"] == {
+        "ppcs_total": 93,
+        "nao_aplicaveis": 0,
+        "pendentes": 39,
+        "candidatas": 54,
+        "ppcs_historicos_candidatos": 19,
+    }
