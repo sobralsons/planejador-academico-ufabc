@@ -41,15 +41,15 @@ def test_avaliacao_de_vigencia_cobre_exatamente_os_93_ppcs():
     assert not (aplicaveis & nao_aplicaveis)
     assert aplicaveis | nao_aplicaveis | pendentes == inventariados
     assert len(inventariados) == 93
-    assert len(aplicaveis) == 51
+    assert len(aplicaveis) == 54
     assert len(nao_aplicaveis) == 0
-    assert len(pendentes) == 42
+    assert len(pendentes) == 39
     assert vigencia["resumo"] == {
         "ppcs_total": 93,
-        "candidatas": 51,
+        "candidatas": 54,
         "nao_aplicaveis": 0,
-        "pendentes": 42,
-        "ppcs_historicos_candidatos": 16,
+        "pendentes": 39,
+        "ppcs_historicos_candidatos": 19,
     }
 
 
@@ -82,6 +82,12 @@ def test_ppcs_historicos_que_ainda_podem_reger_estudantes_ativos():
     assert por_curso["bct"]["matrizes_candidatas_anos"] == [2023, 2015, 2009]
     assert 2015 in por_curso["bch"]["matrizes_candidatas_anos"]
     assert 2010 in por_curso["bch"]["matrizes_pendentes_anos"]
+    assert 2018 in por_curso["biotecnologia"]["matrizes_candidatas_anos"]
+    assert 2018 not in por_curso["biotecnologia"]["matrizes_pendentes_anos"]
+    assert 2015 in por_curso["ciencias_biologicas"]["matrizes_candidatas_anos"]
+    assert 2010 in por_curso["ciencias_biologicas"]["matrizes_pendentes_anos"]
+    assert 2015 in por_curso["fisica"]["matrizes_candidatas_anos"]
+    assert 2009 in por_curso["fisica"]["matrizes_pendentes_anos"]
 
     engenharias = {
         "engenharia_ambiental_urbana",
@@ -106,8 +112,12 @@ def test_exclusoes_sem_comprovacao_voltam_a_ficar_pendentes_salvo_promocao_docum
     assert 2015 in por_curso["bct"]["matrizes_candidatas_anos"]
     assert 2009 in por_curso["bct"]["matrizes_candidatas_anos"]
     assert 2015 in por_curso["bch"]["matrizes_candidatas_anos"]
-    assert 2018 in por_curso["biotecnologia"]["matrizes_pendentes_anos"]
-    assert 2015 in por_curso["ciencias_biologicas"]["matrizes_pendentes_anos"]
+    assert 2018 not in por_curso["biotecnologia"]["matrizes_pendentes_anos"]
+    assert 2018 in por_curso["biotecnologia"]["matrizes_candidatas_anos"]
+    assert 2015 in por_curso["ciencias_biologicas"]["matrizes_candidatas_anos"]
+    assert 2010 in por_curso["ciencias_biologicas"]["matrizes_pendentes_anos"]
+    assert 2015 in por_curso["fisica"]["matrizes_candidatas_anos"]
+    assert 2009 in por_curso["fisica"]["matrizes_pendentes_anos"]
     assert 2015 in por_curso["ciencia_computacao"]["matrizes_pendentes_anos"]
     assert 2015 in por_curso["neurociencia"]["matrizes_pendentes_anos"]
     assert 2021 not in por_curso["neurociencia"]["matrizes_pendentes_anos"]
@@ -140,6 +150,9 @@ def test_reabertura_preserva_historico_e_registra_promocoes_documentadas():
         ("bct", 2015),
         ("bct", 2009),
         ("bch", 2015),
+        ("biotecnologia", 2018),
+        ("ciencias_biologicas", 2015),
+        ("fisica", 2015),
     }
     encontradas = set()
 

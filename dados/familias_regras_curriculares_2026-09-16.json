@@ -2,7 +2,7 @@
   "schema_version": 2,
   "avaliado_em": "2026-09-16",
   "base_vigencia": "dados/vigencia_ppcs_2026-09-16.json",
-  "escopo": "Agrupa 51 matrizes candidatas preliminares e mantém 42 matrizes com aplicabilidade pendente nas mesmas famílias para revisão. Não declara suporte acadêmico nem confirma vigência.",
+  "escopo": "Agrupa 54 matrizes candidatas preliminares e mantém 39 matrizes com aplicabilidade pendente nas mesmas famílias para revisão. Não declara suporte acadêmico nem confirma vigência.",
   "capacidades_modelo": {
     "categorias_creditos": {
       "descricao": "Mínimos de créditos por obrigatórias, opção limitada e livres.",
@@ -106,11 +106,14 @@
       "descricao": "Bacharelados de formação específica vinculados majoritariamente ao BC&T.",
       "matrizes": [
         ["biotecnologia", 2023],
+        ["biotecnologia", 2018],
         ["ciencia_computacao", 2023],
         ["ciencia_computacao", 2017],
         ["ciencia_dados", 2023],
         ["ciencias_biologicas", 2023],
+        ["ciencias_biologicas", 2015],
         ["fisica", 2023],
+        ["fisica", 2015],
         ["matematica", 2023],
         ["quimica", 2023],
         ["quimica", 2015],
@@ -120,12 +123,9 @@
       "capacidades_criticas": ["reuso_curso_base", "categorias_creditos", "grupos_escolha", "tcc_etapas", "extensao", "atividades_complementares", "equivalencias_transicao", "sobreposicao_cargas"],
       "observacao": "Há variação importante em TCC, estágio não obrigatório, extensão e aproveitamento de requisitos já cumpridos no BC&T.",
       "matrizes_pendentes": [
-        ["biotecnologia", 2018],
         ["ciencia_computacao", 2015],
         ["ciencia_computacao", 2010],
-        ["ciencias_biologicas", 2015],
         ["ciencias_biologicas", 2010],
-        ["fisica", 2015],
         ["fisica", 2009],
         ["matematica", 2017],
         ["matematica", 2012],
