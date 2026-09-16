@@ -121,7 +121,7 @@ def test_lote_08_nao_declara_suporte_academico():
     auditoria, _ = _carregar()
     texto = json.dumps(auditoria, ensure_ascii=False).lower()
 
-    assert "não declarar vigência normativa definitiva, suporte acadêmico ou exclusão" in auditoria["escopo"]
+    assert "sem declarar vigência normativa definitiva, suporte acadêmico ou exclusão" in auditoria["escopo"]
     assert "decisao_publicavel" in texto
     assert all(
         item["revisao_humana"]["decisao_publicavel"] is False
