@@ -134,9 +134,9 @@ def test_lote_06_preserva_resumo_historico_e_estado_global_atual():
     assert vigencia["resumo"] == {
         "ppcs_total": 93,
         "nao_aplicaveis": 0,
-        "pendentes": 42,
-        "candidatas": 51,
-        "ppcs_historicos_candidatos": 16,
+        "pendentes": 39,
+        "candidatas": 54,
+        "ppcs_historicos_candidatos": 19,
     }
 
 

@@ -135,9 +135,9 @@ def test_lote_04_altera_resumo_global_em_exatamente_uma_matriz_sem_criar_exclusa
     assert vigencia["resumo"] == {
         "ppcs_total": 93,
         "nao_aplicaveis": 0,
-        "pendentes": 42,
-        "candidatas": 51,
-        "ppcs_historicos_candidatos": 16,
+        "pendentes": 39,
+        "candidatas": 54,
+        "ppcs_historicos_candidatos": 19,
     }
 
 
