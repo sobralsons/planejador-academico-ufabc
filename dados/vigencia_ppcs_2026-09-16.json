@@ -89,6 +89,24 @@
       "referencia": "PPC 2023 do Bacharelado em Biotecnologia",
       "uso": "Indica tempo mínimo de integralização de 13 quadrimestres."
     },
+    "biotecnologia_transicao_2025": {
+      "tipo": "documento_complementar_transicao",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/comissao_ato_decisorio_71_anexo2.pdf",
+      "referencia": "Anexo II do Ato Decisório CG nº 71/2025 — Regras de Transição entre Matrizes Curriculares do Curso de Biotecnologia",
+      "uso": "Registra que ingressantes até 2022 podem optar por concluir pelo PPC 2018 ou migrar para o PPC 2023; ingressantes a partir de 2023 seguem obrigatoriamente o PPC 2023."
+    },
+    "biotecnologia_pagina_atual": {
+      "tipo": "pagina_oficial_curso",
+      "url": "https://prograd.ufabc.edu.br/cursos/bb",
+      "referencia": "ProGrad — Bacharelado em Biotecnologia",
+      "uso": "Página atual lista o PPC 2018 e aponta as regras e a tabela de transição aprovadas pelo Ato Decisório CG nº 71/2025."
+    },
+    "biotecnologia_ato_71_2025": {
+      "tipo": "ato_decisorio",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicare/boletimdeservico/boletim_servico_ufabc_1497.pdf",
+      "referencia": "Ato Decisório nº 71/2025 - CG, publicado no Boletim de Serviço nº 1497 de 18/11/2025",
+      "uso": "Aprova a atualização do documento complementar à parte II do PPC de Biotecnologia contendo as regras e a tabela de transição entre matrizes curriculares."
+    },
     "ciencias_biologicas_ppc_2023": {
       "tipo": "ppc",
       "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_251_anexo.pdf",
@@ -262,18 +280,18 @@
     {
       "curso_id": "biotecnologia",
       "matrizes_nao_aplicaveis_anos": [],
-      "evidencias": ["res_consepe_255_2022", "biotecnologia_ppc_2023", "calendario_2026"],
-      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "evidencias": ["res_consepe_255_2022", "biotecnologia_ppc_2023", "biotecnologia_transicao_2025", "biotecnologia_pagina_atual", "biotecnologia_ato_71_2025"],
+      "justificativa": "O PPC 2018 passa a candidata preliminar porque o Anexo II do Ato Decisório CG nº 71/2025 preserva expressamente, para ingressantes até 2022, a opção de concluir pelo PPC 2018 ou migrar para o PPC 2023. A página atual da ProGrad aponta esse documento como regra de transição vigente. A classificação não certifica revisão humana concluída, integralização individual nem suporte acadêmico pelo produto.",
       "classificacao_anterior": {
         "matrizes_aplicaveis_anos": [2023],
         "matrizes_nao_aplicaveis_anos": [2018],
         "justificativa": "O PPC 2023 é o atual. O PPC 2018 foi substituído pelo PPC vigente em 2023; com tempo mínimo de 13 quadrimestres, o período de validade contado a partir de 2022 já se encerrou antes do 3º quadrimestre de 2026.",
         "estado": "nao_validada"
       },
-      "matrizes_pendentes_anos": [2018],
+      "matrizes_pendentes_anos": [],
       "decisoes_exclusao": [],
       "revisao_humana": "pendente",
-      "matrizes_candidatas_anos": [2023]
+      "matrizes_candidatas_anos": [2023, 2018]
     },
     {
       "curso_id": "ciencia_computacao",
@@ -727,9 +745,9 @@
   "resumo": {
     "ppcs_total": 93,
     "nao_aplicaveis": 0,
-    "pendentes": 40,
-    "candidatas": 53,
-    "ppcs_historicos_candidatos": 18
+    "pendentes": 39,
+    "candidatas": 54,
+    "ppcs_historicos_candidatos": 19
   },
   "ressalvas": [
     "O Ato Decisório ConsEPE nº 270/2023 referencia a resolução do PPC anterior das Engenharias com numeração divergente da que aparece no próprio PPC 2017 e no PPC consolidado atual. A classificação usa a identidade inequívoca 'PPC 2017' e mantém a divergência documental explícita para revisão humana.",
@@ -737,8 +755,9 @@
     "O PPC 2021 de Neurociência foi promovido de pendente para candidata preliminar no lote 4 porque o Ato ConsEPE nº 265/2023 preserva essa versão e a página oficial atual do curso declara três PPCs ativos. O PPC 2015 permanece pendente por tensão documental com a validade de quatro anos prevista no PPC 2021.",
     "O PPC 2015 de Química foi promovido de pendente para candidata preliminar no lote 5 porque o Ato ConsEPE nº 253/2023 preserva essa versão, documento oficial aprovado em 2025 ainda classifica componente como obrigatório no PPC 2015 e a Carta de Serviços atual mantém exigência própria de 84h para essa versão. A conciliação temporal com a Resolução 255/2022 permanece sujeita à revisão humana.",
     "Os PPCs BCT 2009, BCT 2015 e BCH 2015 foram promovidos de pendentes para candidatas preliminares no lote 7 porque a ProGrad os registra, em nomenclatura institucional própria, como Projetos Pedagógicos Considerados no processamento de solicitações da colação de grau de 30/06/2026. A lista é de solicitantes, não comprova colação efetivada e não resolve sozinha a data terminal normativa. Nenhum dado pessoal da fonte é reproduzido no repositório.",
-    "No lote 8, Ciências Biológicas 2015 foi promovido porque a regra específica de transição permite a ingressantes anteriores a 2023 optar pelo PPC-BCB/2015, e Física 2015 foi promovido pela combinação do documento de transição atualizado em 2026 com evidência operacional recente. Biotecnologia 2018 permaneceu pendente porque a regra de 2023 previa prazo até o 1º quadrimestre de 2026 e o conteúdo integral da atualização aprovada pelo Ato Decisório CG nº 71/2025 ainda precisa ser verificado.",
-    "Esta avaliação não declara qualquer matriz academicamente suportada pelo produto. As 53 candidatas e as 40 pendentes continuam no escopo de revisão. O inventário usado pela trava permanece sem aplicabilidade aprovada."
+    "No lote 8, Ciências Biológicas 2015 foi promovido porque a regra específica de transição permite a ingressantes anteriores a 2023 optar pelo PPC-BCB/2015, e Física 2015 foi promovido pela combinação do documento de transição atualizado em 2026 com evidência operacional recente. Biotecnologia 2018 permaneceu pendente naquele lote até a verificação integral da atualização aprovada pelo Ato Decisório CG nº 71/2025.",
+    "No lote 9, o Anexo II do Ato Decisório CG nº 71/2025 foi verificado e registra expressamente que ingressantes até 2022 podem concluir Biotecnologia pelo PPC 2018 ou migrar para o PPC 2023. Isso sustenta somente candidatura preliminar do PPC 2018; revisão acadêmica humana e validação curricular continuam pendentes.",
+    "Esta avaliação não declara qualquer matriz academicamente suportada pelo produto. As 54 candidatas e as 39 pendentes continuam no escopo de revisão. O inventário usado pela trava permanece sem aplicabilidade aprovada."
   ],
   "estado_avaliacao": "preliminar",
   "revisao_humana": "pendente"
