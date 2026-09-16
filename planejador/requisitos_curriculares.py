@@ -99,6 +99,9 @@ class LimiteQuantitativo:
     maximo: int | None = None
 
     def __post_init__(self) -> None:
+        _validar_inteiro(self.minimo, "Mínimo")
+        if self.maximo is not None:
+            _validar_inteiro(self.maximo, "Máximo")
         if self.minimo < 0:
             raise ValueError("Mínimo do requisito não pode ser negativo.")
         if self.maximo is not None:
@@ -147,6 +150,12 @@ class GrupoRequisitos:
         if len(set(self.requisitos)) != len(self.requisitos):
             raise ValueError(f"Grupo {self.id} contém requisito duplicado.")
 
+        if self.minimo_requisitos is not None:
+            _validar_inteiro(self.minimo_requisitos, "Mínimo de requisitos")
+        if self.maximo_requisitos is not None:
+            _validar_inteiro(self.maximo_requisitos, "Máximo de requisitos")
+        if not isinstance(self.operador, OperadorGrupo):
+            raise ValueError("Operador de grupo inválido.")
         total = len(self.requisitos)
         if self.operador == OperadorGrupo.TODOS:
             minimo = total
@@ -159,6 +168,8 @@ class GrupoRequisitos:
                 )
             minimo = self.minimo_requisitos
 
+        if self.minimo_requisitos is not None and self.minimo_requisitos != minimo:
+            raise ValueError("Mínimo incompatível com o operador do grupo.")
         if minimo < 1 or minimo > total:
             raise ValueError(f"Mínimo inválido no grupo {self.id}.")
         if self.maximo_requisitos is not None:
@@ -232,6 +243,7 @@ class RegraCompartilhamento:
     def __post_init__(self) -> None:
         if self.requisito_a == self.requisito_b:
             raise ValueError("Compartilhamento exige dois requisitos distintos.")
+        _validar_inteiro(self.maximo_compartilhavel, "Máximo compartilhável")
         if self.maximo_compartilhavel <= 0:
             raise ValueError("Máximo compartilhável precisa ser positivo.")
 
@@ -362,6 +374,12 @@ class ModeloRequisitosCurriculares:
                 *(item.id for item in self.aplicabilidade),
             ]
         )
+
+
+def _validar_inteiro(valor: int, nome: str) -> None:
+    # bool é subclasse de int; também não representa uma carga/contagem.
+    if type(valor) is not int:
+        raise ValueError(f"{nome} deve ser inteiro, sem booleanos ou valores não finitos.")
 
 
 def _validar_id(valor: str) -> None:
