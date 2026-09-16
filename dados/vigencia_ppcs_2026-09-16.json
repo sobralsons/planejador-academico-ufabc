@@ -106,6 +106,30 @@
       "url": "https://cursos.ufabc.edu.br/bacharelado-em-neurociencia/faq",
       "referencia": "Bacharelado em Neurociência — FAQ",
       "uso": "A página atual afirma que há três projetos pedagógicos ativos e que estudantes já vinculados antes de 2023 podem escolher qual deles seguir."
+    },
+    "bq_ppc_2015": {
+      "tipo": "ppc",
+      "url": "https://www.ufabc.edu.br/images/consepe/resolucoes/anexo3-resolucao-consepe-204.pdf",
+      "referencia": "PPC 2015 do Bacharelado em Química",
+      "uso": "Registra a versão 2015 e informa conclusão em quatro anos, além de trajetória de 15 quadrimestres para formação acrescida de atribuições tecnológicas."
+    },
+    "bq_ato_253_2023": {
+      "tipo": "ato_curso",
+      "url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisrio_253_-_aprovar_a_atualizao_do_projeto_pedaggico_do_curso_de_bacharelado_em_qumica_conforme_anexo_-_ato_assinado.pdf",
+      "referencia": "Ato Decisório ConsEPE nº 253/2023",
+      "uso": "PPC 2023 vale para ingressantes a partir de 2023; ingressantes até 2022 podem seguir o PPC aprovado pela Resolução ConsEPE nº 204/2016."
+    },
+    "bq_justificativa_2025": {
+      "tipo": "evidencia_operacional_atual",
+      "url": "https://prograd.ufabc.edu.br/pdf/2_Quimica_Inorganica_Experimental_2025_02_07_21_14_50.pdf",
+      "referencia": "Relatório de Justificativa de Química Inorgânica Experimental, aprovado em 06/02/2025",
+      "uso": "Documento oficial aprovado em 2025 identifica a disciplina como obrigatória no PPC 2015 do BQ e como opção limitada no PPC 2023."
+    },
+    "bq_servico_atual": {
+      "tipo": "evidencia_operacional_atual",
+      "url": "https://www.ufabc.edu.br/servicos",
+      "referencia": "Carta de Serviços da UFABC — Atividades Complementares CCNH e CECS",
+      "uso": "Serviço institucional atual diferencia o PPC 2015 do BQ e atribui a ele 84h de atividades complementares."
     }
   },
   "classificacao": [
@@ -304,18 +328,18 @@
     {
       "curso_id": "quimica",
       "matrizes_nao_aplicaveis_anos": [],
-      "evidencias": ["res_consepe_255_2022", "edital_cfe_028_2022"],
-      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "evidencias": ["res_consepe_255_2022", "bq_ppc_2015", "bq_ato_253_2023", "bq_justificativa_2025", "bq_servico_atual"],
+      "justificativa": "O PPC 2015 passa a candidata preliminar porque o Ato ConsEPE nº 253/2023 preserva essa versão para ingressantes até 2022, um documento oficial aprovado em 2025 ainda identifica componente obrigatório no PPC 2015 e a Carta de Serviços atual mantém exigência própria de 84h de atividades complementares para essa versão. O PPC 2010 permanece pendente; a classificação não certifica suporte acadêmico nem vigência definitiva.",
       "classificacao_anterior": {
         "matrizes_aplicaveis_anos": [2023],
         "matrizes_nao_aplicaveis_anos": [2015, 2010],
         "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência.",
         "estado": "nao_validada"
       },
-      "matrizes_pendentes_anos": [2015, 2010],
+      "matrizes_pendentes_anos": [2010],
       "decisoes_exclusao": [],
       "revisao_humana": "pendente",
-      "matrizes_candidatas_anos": [2023]
+      "matrizes_candidatas_anos": [2023, 2015]
     },
     {
       "curso_id": "neurociencia",
@@ -673,15 +697,16 @@
   "resumo": {
     "ppcs_total": 93,
     "nao_aplicaveis": 0,
-    "pendentes": 46,
-    "candidatas": 47,
-    "ppcs_historicos_candidatos": 12
+    "pendentes": 45,
+    "candidatas": 48,
+    "ppcs_historicos_candidatos": 13
   },
   "ressalvas": [
     "O Ato Decisório ConsEPE nº 270/2023 referencia a resolução do PPC anterior das Engenharias com numeração divergente da que aparece no próprio PPC 2017 e no PPC consolidado atual. A classificação usa a identidade inequívoca 'PPC 2017' e mantém a divergência documental explícita para revisão humana.",
     "A conclusão anterior de expiração de 47 PPCs foi retirada: a contagem e as condições de transição não estavam demonstradas individualmente. Os argumentos originais foram preservados em classificacao_anterior apenas para auditoria.",
     "O PPC 2021 de Neurociência foi promovido de pendente para candidata preliminar no lote 4 porque o Ato ConsEPE nº 265/2023 preserva essa versão e a página oficial atual do curso declara três PPCs ativos. O PPC 2015 permanece pendente por tensão documental com a validade de quatro anos prevista no PPC 2021.",
-    "Esta avaliação não declara qualquer matriz academicamente suportada pelo produto. As 47 candidatas e as 46 pendentes continuam no escopo de revisão. O inventário usado pela trava permanece sem aplicabilidade aprovada."
+    "O PPC 2015 de Química foi promovido de pendente para candidata preliminar no lote 5 porque o Ato ConsEPE nº 253/2023 preserva essa versão, documento oficial aprovado em 2025 ainda classifica componente como obrigatório no PPC 2015 e a Carta de Serviços atual mantém exigência própria de 84h para essa versão. A conciliação temporal com a Resolução 255/2022 permanece sujeita à revisão humana.",
+    "Esta avaliação não declara qualquer matriz academicamente suportada pelo produto. As 48 candidatas e as 45 pendentes continuam no escopo de revisão. O inventário usado pela trava permanece sem aplicabilidade aprovada."
   ],
   "estado_avaliacao": "preliminar",
   "revisao_humana": "pendente"
