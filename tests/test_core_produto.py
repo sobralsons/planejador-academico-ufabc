@@ -22,6 +22,16 @@ from planejador.multicurso import RegistroCurriculo
 BASE = Path(__file__).resolve().parents[1]
 
 
+def test_coleta_autenticada_nao_faz_parte_do_produto():
+    app = (BASE / "app.py").read_text(encoding="utf-8")
+    requirements = (BASE / "requirements.txt").read_text(encoding="utf-8")
+    assert "coletar_avaliacoes_ufabc_next" not in app
+    assert "sessao_ufabc_next" not in app
+    assert "playwright" not in requirements.lower()
+    assert not (BASE / "ferramentas/coletar_avaliacoes_ufabc_next.py").exists()
+    assert not (BASE / "config/ufabc_next.json").exists()
+
+
 def test_reconhecimento_composto_ciclico_preserva_origens_e_direcao():
     registros = [record('A'), record('B')]
     simples = {'C': 'D', 'D': 'C'}

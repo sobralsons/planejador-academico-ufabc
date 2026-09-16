@@ -104,7 +104,7 @@ O sistema mantém:
 
 - cinco grades padrão, com mínimo de três quando viável;
 - perfis de progressão, grade compacta, carga equilibrada e menor risco;
-- professores e avaliações do UFABC Next;
+- professores e avaliações agregadas importadas de fonte autorizada;
 - aulas semanais e quinzenais;
 - T-P-E-I, práticas, janelas e permanência;
 - recomendações do PPC;
@@ -173,7 +173,8 @@ A suíte atual valida:
 O processamento é local. Não compartilhe:
 
 - `entradas/`;
-- `dados/sessao_ufabc_next/`;
 - arquivos locais com comentários integrais.
+
+A coleta autenticada do UFABC Next não faz parte do produto. Avaliações docentes só podem ser importadas quando houver uma fonte autorizada e dados agregados adequados para uso público.
 
 As datas são estimativas de apoio à decisão. Confirme integralização, transições, extensão, estágio, trabalho final e situações excepcionais com o SIGAA e as coordenações.

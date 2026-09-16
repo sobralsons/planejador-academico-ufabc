@@ -1,9 +1,6 @@
 from __future__ import annotations
 
 import json
-import shutil
-import subprocess
-import sys
 from datetime import time
 from pathlib import Path
 
@@ -38,7 +35,6 @@ from main import executar
 from planejador.sessao import ArquivosSessao
 from planejador.avaliacoes_docentes import (
     carregar_avaliacoes_docentes,
-    gerar_consultas_csv,
     resumo_avaliacoes,
 )
 from planejador.curriculo import carregar_aliases_oferta, carregar_curriculo, carregar_equivalencias
@@ -1073,9 +1069,9 @@ with abas[1]:
         if not caminho_avaliacoes.exists():
             caminho_avaliacoes = BASE / str(avaliacoes_cfg_base.get("arquivo", "dados/avaliacoes_docentes.json"))
         upload_avaliacoes = st.file_uploader(
-            "Importar avaliações já coletadas (JSON)",
+            "Importar avaliações agregadas autorizadas (JSON)",
             type=["json"],
-            help="Use o arquivo avaliacoes_docentes_compartilhavel.json gerado pelo coletor.",
+            help="Use somente uma base agregada cuja fonte autorize o uso no produto.",
         )
         if upload_avaliacoes:
             caminho_avaliacoes = salvar_upload(upload_avaliacoes, DADOS_SESSAO / "avaliacoes_docentes.json")
@@ -1123,94 +1119,10 @@ with abas[1]:
             help="Abaixo deste valor, o efeito no ranking é reduzido automaticamente.",
         )
 
-        st.markdown("#### Atualização automática")
-        st.caption(
-            "O Edge será aberto. Faça login institucional e deixe a página Reviews aberta; depois disso a coleta é automática. "
-            "A senha e o token não são gravados nos relatórios."
+        st.info(
+            "A coleta autenticada de avaliações está indisponível. "
+            "O produto aceita somente uma base agregada obtida de fonte autorizada."
         )
-        sessao_next = DADOS_SESSAO / "sessao_ufabc_next"
-        b_atualizar, b_limpar = st.columns([3, 1])
-        if b_limpar.button("Limpar sessão", use_container_width=True, help="Apaga apenas a sessão local autenticada do Edge."):
-            if sessao_next.exists():
-                shutil.rmtree(sessao_next, ignore_errors=True)
-                st.success("Sessão local do UFABC Next apagada.")
-            else:
-                st.info("Nenhuma sessão local estava salva.")
-
-        if b_atualizar.button("Atualizar avaliações dos docentes das ofertas", use_container_width=True, disabled=not config_base.get("coleta_autenticada_habilitada", False)):
-            if not caminho_ofertas.exists():
-                st.error("Envie primeiro a planilha de ofertas.")
-            else:
-                try:
-                    aliases_atualizacao = carregar_aliases_oferta(BASE / config_base["arquivo_aliases_oferta"])
-                    ofertas_atualizacao = ler_ofertas(
-                        caminho_ofertas,
-                        codigos_curriculo=set(curriculo),
-                        nomes_curriculo={c: d.nome for c, d in curriculo.items()},
-                        aliases_oferta=aliases_atualizacao,
-                        campus=campus,
-                        turno=turno,
-                        professores_bloqueados=set(),
-                    )
-                    consultas_csv = DADOS_SESSAO / "consultas_ufabc_next.csv"
-                    codigos_permitidos = None
-                    if caminho_historico.exists():
-                        try:
-                            equivalencias, equivalencias_compostas = carregar_equivalencias(
-                                BASE / config_base["arquivo_equivalencias"]
-                            )
-                            registros_hist, convalidacoes_hist, resumo_hist = ler_historico_sigaa(caminho_historico)
-                            situacao_coleta = consolidar_historico(
-                                registros_hist, equivalencias, equivalencias_compostas,
-                                convalidacoes_hist, resumo_hist,
-                            )
-                            cumpridas_coleta = situacao_coleta.codigos_projetados(
-                                modo_projecao, selecionadas_andamento
-                            )
-                            codigos_permitidos = set(curriculo) - set(cumpridas_coleta)
-                        except Exception:
-                            codigos_permitidos = None
-                    quantidade_consultas = gerar_consultas_csv(
-                        consultas_csv,
-                        ofertas_atualizacao.ofertas,
-                        curriculo,
-                        codigos_permitidos=codigos_permitidos,
-                    )
-                    if quantidade_consultas == 0:
-                        st.warning("Nenhum par professor–disciplina foi encontrado nas ofertas atuais.")
-                    else:
-                        script = BASE / "ferramentas" / "coletar_avaliacoes_ufabc_next.py"
-                        comando = [
-                            sys.executable,
-                            str(script),
-                            "--config", str(BASE / "config" / "ufabc_next.json"),
-                            "--consultas", str(consultas_csv),
-                            "--saida-json", str(DADOS_SESSAO / "avaliacoes_docentes.json"),
-                            "--saida-html", str(SAIDAS / "relatorio_avaliacoes_docentes.html"),
-                            "--saida-local", str(SAIDAS / "avaliacoes_docentes_local_com_comentarios_NAO_COMPARTILHAR.json"),
-                            "--sessao", str(DADOS_SESSAO / "sessao_ufabc_next"),
-                        ]
-                        with st.spinner(
-                            f"Consultando {quantidade_consultas} combinações de docente e disciplina. Faça login na janela do Edge..."
-                        ):
-                            processo = subprocess.run(
-                                comando,
-                                cwd=BASE,
-                                text=True,
-                                capture_output=True,
-                                timeout=1800,
-                            )
-                        if processo.returncode != 0:
-                            st.error("A coleta não foi concluída.")
-                            st.code((processo.stdout + "\n" + processo.stderr)[-5000:])
-                        else:
-                            caminho_avaliacoes = DADOS_SESSAO / "avaliacoes_docentes.json"
-                            st.success(f"Avaliações atualizadas para {quantidade_consultas} combinações.")
-                            st.session_state["avaliacoes_atualizadas"] = True
-                except subprocess.TimeoutExpired:
-                    st.error("A coleta excedeu 30 minutos e foi interrompida.")
-                except Exception as erro:
-                    st.exception(erro)
 
         if caminho_avaliacoes.exists():
             base_preview = carregar_avaliacoes_docentes(
