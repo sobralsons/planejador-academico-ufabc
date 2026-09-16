@@ -115,7 +115,7 @@ def test_lcne_2019_nao_converte_prazo_de_migracao_em_extincao():
     item = _por_matriz(auditoria)[("lcne", 2019)]
     efeitos = " ".join(regra["efeito_relevante"] for regra in item["regras_transicao"])
 
-    assert item["tempo_integrizacao"]["valor"] == 12
+    assert item["tempo_integralizacao"]["valor"] == 12
     assert "Ingressantes até 2022" in efeitos
     assert "31/12/2024" in efeitos
     assert "não uma data de extinção" in efeitos
