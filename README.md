@@ -1,4 +1,4 @@
-> **Etapa 1 revisada:** correções do núcleo e 72 testes aprovados. Consulte [alterações, limites e próxima etapa](docs/etapa-1.md). Ainda é um aplicativo local; a etapa 2 valida as regras curriculares.
+> **Etapa 1 revisada:** correções do núcleo e 73 testes aprovados. Consulte [alterações, limites e próxima etapa](docs/etapa-1.md). Ainda é um aplicativo local; a etapa 2 valida as regras curriculares.
 
 # Planejador Acadêmico e de Trajetórias — UFABC
 
