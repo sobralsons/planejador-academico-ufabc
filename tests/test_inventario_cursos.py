@@ -9,7 +9,7 @@ def test_inventario_oficial_de_cursos_tem_estrutura_auditavel():
     data = json.loads(INVENTARIO.read_text(encoding="utf-8"))
     cursos = data["cursos"]
 
-    assert data["schema_version"] == 3
+    assert data["schema_version"] == 4
     assert data["fonte_oficial"].startswith("https://prograd.ufabc.edu.br/")
     assert data["total_cursos"] == len(cursos) == 35
     assert len({curso["id"] for curso in cursos}) == len(cursos)
@@ -57,10 +57,12 @@ def test_documentos_curriculares_localizados_sao_unicos_e_rastreaveis():
         for matriz in curso["matrizes"]
     ]
 
-    assert data["total_documentos_curriculares_localizados"] == len(matrizes) == 51
+    assert data["total_documentos_curriculares_localizados"] == len(matrizes) == 93
     assert len({matriz["id"] for matriz in matrizes}) == len(matrizes)
 
     for matriz in matrizes:
+        assert matriz["documento_tipo"] == "ppc"
+        assert isinstance(matriz["evidencias_aplicabilidade"], list)
         assert isinstance(matriz["ano"], int)
         assert matriz["rotulo"]
         assert matriz["ato_aprovacao"]
@@ -73,6 +75,25 @@ def test_documentos_curriculares_localizados_sao_unicos_e_rastreaveis():
         if matriz["transicao_url"] is not None:
             assert matriz["transicao_url"].startswith("https://")
             assert "ufabc.edu.br/" in matriz["transicao_url"]
+
+
+def test_levantamento_historico_cobre_familias_curriculares_distintas():
+    data = json.loads(INVENTARIO.read_text(encoding="utf-8"))
+    por_curso = {
+        curso["id"]: {matriz["ano"] for matriz in curso["matrizes"]}
+        for curso in data["cursos"]
+    }
+
+    assert por_curso["ciencia_computacao"] == {2010, 2015, 2017, 2023}
+    assert por_curso["neurociencia"] == {2010, 2015, 2021, 2023}
+    assert por_curso["ciencias_biologicas_licenciatura"] == {
+        2010,
+        2015,
+        2016,
+        2022,
+        2023,
+    }
+    assert por_curso["matematica_licenciatura"] == {2010, 2018, 2022, 2023}
 
 
 def test_todos_os_cursos_tem_fonte_inicial_sem_alegar_cobertura_academica():
