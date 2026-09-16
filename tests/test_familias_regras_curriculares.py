@@ -1,0 +1,91 @@
+import json
+from pathlib import Path
+
+BASE = Path(__file__).resolve().parents[1]
+FAMILIAS = BASE / "dados" / "familias_regras_curriculares_2026-09-16.json"
+VIGENCIA = BASE / "dados" / "vigencia_ppcs_2026-09-16.json"
+
+
+def _carregar():
+    familias = json.loads(FAMILIAS.read_text(encoding="utf-8"))
+    vigencia = json.loads(VIGENCIA.read_text(encoding="utf-8"))
+    return familias, vigencia
+
+
+def test_familias_cobrem_exatamente_as_46_matrizes_aplicaveis():
+    familias, vigencia = _carregar()
+
+    esperadas = {
+        (item["curso_id"], ano)
+        for item in vigencia["classificacao"]
+        for ano in item["matrizes_aplicaveis_anos"]
+    }
+    mapeadas = {
+        (curso_id, ano)
+        for familia in familias["familias"]
+        for curso_id, ano in familia["matrizes"]
+    }
+
+    assert len(esperadas) == 46
+    assert len(mapeadas) == 46
+    assert mapeadas == esperadas
+
+
+def test_matriz_aplicavel_pertence_a_uma_unica_familia():
+    familias, _ = _carregar()
+    itens = [
+        (curso_id, ano)
+        for familia in familias["familias"]
+        for curso_id, ano in familia["matrizes"]
+    ]
+    assert len(itens) == len(set(itens))
+
+
+def test_familias_referenciam_apenas_capacidades_declaradas():
+    familias, _ = _carregar()
+    capacidades = set(familias["capacidades_modelo"])
+
+    for familia in familias["familias"]:
+        assert familia["capacidades_criticas"]
+        assert set(familia["capacidades_criticas"]) <= capacidades
+
+
+def test_mapa_expoe_lacunas_que_o_modelo_atual_nao_deve_ocultar():
+    familias, _ = _carregar()
+    capacidades = familias["capacidades_modelo"]
+
+    assert capacidades["categorias_creditos"]["estado_atual"] == "suportado_basico"
+    assert capacidades["grupos_escolha"]["estado_atual"] == "ausente"
+    assert capacidades["requisitos_condicionais"]["estado_atual"] == "ausente"
+    assert capacidades["formacao_docente"]["estado_atual"] == "ausente"
+    assert capacidades["sobreposicao_cargas"]["estado_atual"] == "ausente"
+    assert capacidades["reuso_curso_base"]["estado_atual"] == "ausente_explicito"
+
+
+def test_familias_de_maior_risco_preservam_requisitos_distintos():
+    familias, _ = _carregar()
+    por_id = {familia["id"]: familia for familia in familias["familias"]}
+
+    engenharias = por_id["engenharias"]
+    assert len(engenharias["matrizes"]) == 16
+    assert "estagio_horas" in engenharias["capacidades_criticas"]
+    assert "tcc_etapas" in engenharias["capacidades_criticas"]
+
+    licenciaturas = por_id["licenciaturas_formacao_especifica"]
+    assert "formacao_docente" in licenciaturas["capacidades_criticas"]
+    assert "estagio_horas" in licenciaturas["capacidades_criticas"]
+
+    especiais = por_id["novas_licenciaturas_ingresso_e_oferta_especial"]
+    assert "oferta_especial" in especiais["capacidades_criticas"]
+    assert "requisitos_condicionais" in especiais["capacidades_criticas"]
+
+
+def test_evidencias_representativas_sao_oficiais_da_ufabc():
+    familias, _ = _carregar()
+    evidencias = familias["evidencias_representativas"]
+
+    assert evidencias
+    for evidencia in evidencias:
+        assert evidencia["fonte"].startswith("https://")
+        assert "ufabc.edu.br" in evidencia["fonte"]
+        assert evidencia["evidencia"].strip()
