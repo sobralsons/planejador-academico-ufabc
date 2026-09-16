@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "analisado_em": "2026-09-16",
+  "base_vigencia": "dados/vigencia_ppcs_2026-09-16.json",
+  "escopo": "Auditoria individual do quarto lote de matrizes pendentes. O lote confronta atos de transição com páginas oficiais atuais e cláusulas específicas de validade. Uma promoção para candidata preliminar só ocorre diante de evidência oficial positiva e atual; isso não equivale a validação acadêmica, suporte público ou revisão humana aprovada.",
+  "politica_decisao": {
+    "fonte_oficial_atual_pode_sustentar_candidatura_preliminar": true,
+    "transicao_especifica_prevalece_sobre_inferencia_generica": true,
+    "ttmc_sozinha_nao_prova_vigencia": true,
+    "conflito_entre_fontes_mantem_pendente": true,
+    "prazo_de_migracao_nao_e_prazo_de_extincao": true,
+    "norma_geral_sozinha_nao_basta_para_excluir": true,
+    "edital_de_vagas_nao_e_prova_de_extincao": true,
+    "exclusao_exige_evidencia_oficial_especifica": true,
+    "exclusao_exige_revisao_humana_aprovada": true
+  },
+  "campos_obrigatorios_por_decisao": [
+    "ppc_substituido",
+    "ppc_substituto",
+    "entrada_em_vigor",
+    "tempo_integralizacao",
+    "calculo_termino_validade",
+    "regras_transicao",
+    "possiveis_excecoes",
+    "fontes",
+    "revisao_humana"
+  ],
+  "matrizes": [
+    {
+      "curso_id": "neurociencia",
+      "matriz_id": "neurociencia_2021",
+      "matriz_ano": 2021,
+      "status_antes": "pendente",
+      "status_resultante": "candidata_preliminar",
+      "ppc_substituido": {
+        "ano": 2021,
+        "ato": "Resolução ConsEPE nº 247/2021",
+        "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_resolucao_247_anexo.pdf"
+      },
+      "ppc_substituto": {
+        "ano": 2023,
+        "ato": "Ato Decisório ConsEPE nº 265/2023",
+        "url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisrio_265_-_aprovar_a_atualizao_do_projeto_pedaggico_do_curso_de_bacharelado_em_neurocincia_-_ato_assinado.pdf"
+      },
+      "entrada_em_vigor": {
+        "estado": "comprovada",
+        "regra": "O Ato ConsEPE nº 265/2023 entrou em vigor na publicação, atribuiu o PPC 2023 aos ingressantes a partir de 2023 e preservou aos ingressantes até 2022 a possibilidade de seguir o PPC aprovado pela Resolução ConsEPE nº 247/2021.",
+        "marco": "ingressantes a partir de 2023",
+        "fonte_id": "neuro_ato_265_2023"
+      },
+      "tempo_integralizacao": {
+        "estado": "comprovado_no_ppc_substituido",
+        "valor": 12,
+        "unidade": "quadrimestres",
+        "equivalencia_documental": "prazo previsto; prazo máximo de 24 quadrimestres",
+        "fonte_id": "neuro_ppc_2021"
+      },
+      "calculo_termino_validade": {
+        "regra_geral": "Resolução ConsEPE nº 255/2022, art. 12, §1º.",
+        "inicio_teorico": "2022",
+        "resultado_teorico": null,
+        "estado": "inconclusivo",
+        "motivo": "Não é necessário inferir vigência apenas pela regra geral: o Ato 265/2023 preserva expressamente o PPC 2021 e a página oficial atual do curso informa que há três projetos pedagógicos ativos, permitindo a estudantes vinculados antes de 2023 escolher entre eles. Essa evidência positiva sustenta somente a promoção para candidata preliminar; não fixa data terminal nem certifica suporte acadêmico."
+      },
+      "regras_transicao": [
+        {
+          "ato": "Ato Decisório ConsEPE nº 265/2023",
+          "efeito_relevante": "Ingressantes até 2022 podem ainda seguir o PPC aprovado pela Resolução ConsEPE nº 247/2021, respeitadas as regras de transição.",
+          "fonte_id": "neuro_ato_265_2023"
+        },
+        {
+          "ato": "Página oficial atual do Bacharelado em Neurociência - FAQ",
+          "efeito_relevante": "A página informa que atualmente há três projetos pedagógicos ativos e que estudantes já vinculados ao curso antes de 2023 podem escolher qual projeto seguir.",
+          "fonte_id": "neuro_faq_atual"
+        }
+      ],
+      "possiveis_excecoes": [
+        "A expressão 'três projetos pedagógicos ativos' é evidência institucional atual de aplicabilidade, mas não informa data terminal individual de cada PPC.",
+        "A promoção é apenas para candidatura preliminar; modelagem curricular, testes adversariais e revisão acadêmica humana continuam pendentes."
+      ],
+      "lacunas": [
+        "Não foi localizada data terminal explícita para o PPC 2021 nos atos atuais consultados.",
+        "A revisão humana de aplicabilidade e a validação das regras curriculares do PPC 2021 ainda não foram realizadas."
+      ],
+      "fontes": [
+        "res_255_2022",
+        "neuro_ppc_2021",
+        "neuro_ato_265_2023",
+        "neuro_faq_atual",
+        "neuro_prograd_atual"
+      ],
+      "revisao_humana": {
+        "estado": "pendente",
+        "pronto_para_mudar_status": true,
+        "motivo": "Há evidência oficial positiva e atual suficiente para retirar o PPC 2021 da fila de pendência e tratá-lo como candidata preliminar, sem declará-lo validado ou suportado."
+      },
+      "decisao_publicavel": false
+    },
+    {
+      "curso_id": "neurociencia",
+      "matriz_id": "neurociencia_2015",
+      "matriz_ano": 2015,
+      "status_antes": "pendente",
+      "status_resultante": "pendente",
+      "ppc_substituido": {
+        "ano": 2015,
+        "ato": "Resolução ConsEPE nº 192/2015",
+        "url": "https://prograd.ufabc.edu.br/cursos/bn"
+      },
+      "ppc_substituto": {
+        "ano": 2021,
+        "ato": "Resolução ConsEPE nº 247/2021",
+        "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_resolucao_247_anexo.pdf"
+      },
+      "entrada_em_vigor": {
+        "estado": "comprovada",
+        "regra": "O PPC 2021 foi aprovado pela Resolução ConsEPE nº 247/2021 e o próprio documento estabelece regra específica para a permanência temporária do PPC 2015.",
+        "marco": "início da vigência do PPC 2021",
+        "fonte_id": "neuro_ppc_2021"
+      },
+      "tempo_integralizacao": {
+        "estado": "comprovado_para_o_curso",
+        "valor": 12,
+        "unidade": "quadrimestres",
+        "equivalencia_documental": "prazo previsto no PPC 2021 para o Bacharelado em Neurociência",
+        "fonte_id": "neuro_ppc_2021"
+      },
+      "calculo_termino_validade": {
+        "regra_especifica": "O PPC 2021 declara que o PPC 2015 terá validade de 4 anos a partir do início da vigência da versão 2021.",
+        "inicio_teorico": "2021",
+        "resultado_teorico": "2025",
+        "estado": "inconclusivo",
+        "motivo": "A cláusula específica do PPC 2021 aponta término teórico em 2025, mas a página oficial atual do curso afirma que há três projetos pedagógicos ativos e mantém páginas curriculares próprias para 2015 e 2021. O material de transição de 2023 também trata das três versões. Essa tensão entre fontes oficiais impede tanto promover quanto excluir o PPC 2015 sem interpretação acadêmico-normativa humana."
+      },
+      "regras_transicao": [
+        {
+          "ato": "PPC 2021 aprovado pela Resolução ConsEPE nº 247/2021",
+          "efeito_relevante": "O PPC 2015 teria validade de quatro anos a partir do início da vigência do PPC 2021; durante esse período, estudantes das versões anteriores poderiam optar por 2015 ou 2021.",
+          "fonte_id": "neuro_ppc_2021"
+        },
+        {
+          "ato": "Página oficial atual do Bacharelado em Neurociência - FAQ",
+          "efeito_relevante": "A página informa atualmente três projetos pedagógicos ativos para o curso e permite a estudantes vinculados antes de 2023 escolher qual projeto seguir.",
+          "fonte_id": "neuro_faq_atual"
+        }
+      ],
+      "possiveis_excecoes": [
+        "A página atual pode refletir tratamento administrativo de estudantes remanescentes que precisa ser conciliado com a cláusula temporal de 2021.",
+        "A existência de TTMC ou de página curricular própria não seria suficiente isoladamente; o conflito só permanece aberto porque a própria página institucional usa a expressão 'ativos'."
+      ],
+      "lacunas": [
+        "Falta ato ou interpretação institucional que concilie explicitamente a validade de quatro anos declarada em 2021 com a afirmação atual de três PPCs ativos.",
+        "Não foi localizada decisão posterior que declare expressamente a extinção ou a prorrogação do PPC 2015."
+      ],
+      "fontes": [
+        "res_255_2022",
+        "neuro_ppc_2021",
+        "neuro_faq_atual",
+        "neuro_prograd_atual"
+      ],
+      "revisao_humana": {
+        "estado": "pendente",
+        "pronto_para_mudar_status": false,
+        "motivo": "As fontes oficiais atuais entram em tensão quanto à permanência temporal do PPC 2015; o caso deve continuar pendente."
+      },
+      "decisao_publicavel": false
+    },
+    {
+      "curso_id": "lcne",
+      "matriz_id": "lcne_2019",
+      "matriz_ano": 2019,
+      "status_antes": "pendente",
+      "status_resultante": "pendente",
+      "ppc_substituido": {
+        "ano": 2019,
+        "ato": "Ato Decisório ConsEPE nº 177/2019",
+        "url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisorio_177_-_aprova_o_projeto_pedagogico_e_autoriza_o_funcionamento_do_curso_de_licenciatura_em_ciencias_naturais_e_exatas_lcne_com_links.pdf"
+      },
+      "ppc_substituto": {
+        "ano": 2022,
+        "ato": "Ato Decisório ConsEPE nº 243/2022",
+        "url": "https://www.ufabc.edu.br/images/stories/comunicare/boletimdeservico/boletim_servico_ufabc_1204.pdf"
+      },
+      "entrada_em_vigor": {
+        "estado": "comprovada",
+        "regra": "O Ato ConsEPE nº 243/2022 entrou em vigor na publicação e atribuiu o PPC 2022 aos ingressantes a partir de 2023, preservando aos ingressantes até 2022 a possibilidade de seguir o PPC aprovado pelo Ato ConsEPE nº 177/2019.",
+        "marco": "ingressantes a partir de 2023",
+        "fonte_id": "lcne_ato_243_2022"
+      },
+      "tempo_integralizacao": {
+        "estado": "comprovado_no_ppc_substituido",
+        "valor": 12,
+        "unidade": "quadrimestres",
+        "equivalencia_documental": "4 anos letivos",
+        "fonte_id": "lcne_ppc_2019"
+      },
+      "calculo_termino_validade": {
+        "regra_geral": "Resolução ConsEPE nº 255/2022, art. 12, §1º.",
+        "inicio_teorico": "2022",
+        "resultado_teorico": null,
+        "estado": "inconclusivo",
+        "motivo": "O Ato 243/2022 preserva expressamente o PPC 2019 para ingressantes até 2022. A página oficial atual continua listando o PPC 2019 e informa que o prazo de 31/12/2024 era para estudantes que desejavam mudar de 2019 para 2022; esse prazo de opção não declara extinção da matriz 2019. Sem data terminal específica conciliada com a regra geral, o caso permanece pendente."
+      },
+      "regras_transicao": [
+        {
+          "ato": "Ato Decisório ConsEPE nº 243/2022",
+          "efeito_relevante": "Ingressantes até 2022 podem ainda seguir o PPC aprovado pelo Ato Decisório ConsEPE nº 177/2019, respeitadas as regras de transição.",
+          "fonte_id": "lcne_ato_243_2022"
+        },
+        {
+          "ato": "Página oficial atual da LCNE",
+          "efeito_relevante": "A página mantém o PPC 2019 listado e esclarece que 31/12/2024 foi prazo para solicitar mudança do PPC 2019 para o PPC 2022, não uma data de extinção do PPC 2019.",
+          "fonte_id": "lcne_pagina_atual"
+        }
+      ],
+      "possiveis_excecoes": [
+        "A página atual registra atualizações das regras de transição em 2024 e 2025, o que reforça a necessidade de usar a versão normativa correta para cada estudante.",
+        "O prazo de migração para o PPC 2022 não pode ser interpretado automaticamente como prazo de conclusão pelo PPC 2019."
+      ],
+      "lacunas": [
+        "Não há, nas fontes específicas consultadas, data terminal explícita para estudantes que permaneceram no PPC 2019.",
+        "A aplicação temporal do art. 12, §1º, ainda precisa ser conciliada por revisão humana com a transição específica."
+      ],
+      "fontes": [
+        "res_255_2022",
+        "lcne_ppc_2019",
+        "lcne_ato_243_2022",
+        "lcne_pagina_atual"
+      ],
+      "revisao_humana": {
+        "estado": "pendente",
+        "pronto_para_mudar_status": false,
+        "motivo": "A transição específica preserva o PPC 2019, mas não há prova suficiente para decidir sua aplicabilidade na data de corte."
+      },
+      "decisao_publicavel": false
+    }
+  ],
+  "fontes_oficiais": {
+    "res_255_2022": {
+      "tipo": "resolucao",
+      "referencia": "Resolução ConsEPE nº 255/2022, art. 12, especialmente §1º",
+      "url": "https://www.ufabc.edu.br/images/consepe/resolucoes/resoluo_255_-_estabelece_normas_e_procedimentos_para_a_reviso_e_aprovao_dos_projetos_pedaggicos_dos_cursos_de_graduao_da_ufabc_revoga_e_substitui_230_susp_temp_3.pdf",
+      "secao": "Art. 12 e §1º",
+      "interpretacao": "Regra geral de validade de PPC substituído; não é usada isoladamente para excluir matrizes."
+    },
+    "neuro_ppc_2021": {
+      "tipo": "ppc",
+      "referencia": "PPC 2021 do Bacharelado em Neurociência, Resolução ConsEPE nº 247/2021",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_resolucao_247_anexo.pdf",
+      "secao": "Dados do curso e XVII. Disposições Finais",
+      "interpretacao": "Registra prazo previsto de 12 quadrimestres e estabelece validade de quatro anos para o PPC 2015 a partir da vigência do PPC 2021."
+    },
+    "neuro_ato_265_2023": {
+      "tipo": "ato_decisorio_consepe",
+      "referencia": "Ato Decisório ConsEPE nº 265/2023",
+      "url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisrio_265_-_aprovar_a_atualizao_do_projeto_pedaggico_do_curso_de_bacharelado_em_neurocincia_-_ato_assinado.pdf",
+      "secao": "Art. 3º - disposição transitória",
+      "interpretacao": "PPC 2023 vale para ingressantes a partir de 2023; ingressantes até 2022 podem seguir o PPC 2021 conforme transição."
+    },
+    "neuro_faq_atual": {
+      "tipo": "pagina_oficial_curso",
+      "referencia": "Bacharelado em Neurociência - FAQ",
+      "url": "https://cursos.ufabc.edu.br/bacharelado-em-neurociencia/faq",
+      "secao": "Projeto Pedagógico - Como faço para acessar / concluir o Bacharelado em Neurociência?",
+      "interpretacao": "A página atual afirma que há três projetos pedagógicos ativos e que estudantes vinculados antes de 2023 podem escolher qual deles seguir."
+    },
+    "neuro_prograd_atual": {
+      "tipo": "pagina_oficial_prograd",
+      "referencia": "ProGrad - Bacharelado em Neurociência",
+      "url": "https://prograd.ufabc.edu.br/cursos/bn",
+      "secao": "Projetos Pedagógicos",
+      "interpretacao": "Lista PPCs 2023, 2021, 2015 e 2010 e vincula as regras de transição ao PPC 2023; a listagem isolada não é tratada como prova de vigência."
+    },
+    "lcne_ppc_2019": {
+      "tipo": "ppc",
+      "referencia": "PPC 2019 da Licenciatura em Ciências Naturais e Exatas",
+      "url": "https://prograd.ufabc.edu.br/cg/2019/OD_2B_PPC_LCNE_2019_junho_28.pdf",
+      "secao": "Estrutura/matriz sugerida",
+      "interpretacao": "Registra planejamento para integralização em 4 anos, correspondentes a 12 quadrimestres letivos."
+    },
+    "lcne_ato_243_2022": {
+      "tipo": "ato_decisorio_consepe",
+      "referencia": "Ato Decisório ConsEPE nº 243/2022",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicare/boletimdeservico/boletim_servico_ufabc_1204.pdf",
+      "secao": "p. 4, Art. 3º - disposição transitória",
+      "interpretacao": "PPC 2022 vale para ingressantes a partir de 2023; ingressantes até 2022 podem seguir o PPC 2019 conforme transição."
+    },
+    "lcne_pagina_atual": {
+      "tipo": "pagina_oficial_prograd",
+      "referencia": "ProGrad - LCNE - Projeto Pedagógico",
+      "url": "https://prograd.ufabc.edu.br/lcne/projeto-pedagogico",
+      "secao": "Projeto Pedagógico 2022 e Projeto Pedagógico 2019",
+      "interpretacao": "Mantém o PPC 2019 listado e informa prazo até 31/12/2024 para quem desejava mudar de 2019 para 2022; o prazo é de migração, não de extinção."
+    }
+  },
+  "resumo": {
+    "matrizes_auditadas": 3,
+    "permanecem_pendentes": 2,
+    "mudaram_para_nao_aplicavel": 0,
+    "mudaram_para_candidata_preliminar": 1,
+    "decisoes_publicaveis": 0
+  },
+  "limitacoes": [
+    "A promoção do PPC 2021 de Neurociência é apenas uma classificação preliminar de aplicabilidade e não certifica modelagem curricular, testes adversariais ou revisão acadêmica humana.",
+    "O PPC 2015 de Neurociência permanece pendente por conflito entre cláusula temporal de 2021 e informação institucional atual de três PPCs ativos.",
+    "O PPC 2019 da LCNE permanece pendente porque o prazo de migração para 2022 não resolve a data terminal de quem permaneceu na matriz anterior.",
+    "Nenhuma matriz deste lote é declarada academicamente suportada pelo produto."
+  ]
+}

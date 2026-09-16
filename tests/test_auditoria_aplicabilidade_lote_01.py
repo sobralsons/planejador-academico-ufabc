@@ -131,6 +131,6 @@ def test_resumo_do_lote_nao_cria_exclusao_ou_suporte():
         "mudaram_para_aplicavel": 0,
         "decisoes_publicaveis": 0,
     }
-    assert vigencia["resumo"]["candidatas"] == 46
+    assert vigencia["resumo"]["candidatas"] == 47
     assert vigencia["resumo"]["nao_aplicaveis"] == 0
-    assert vigencia["resumo"]["pendentes"] == 47
+    assert vigencia["resumo"]["pendentes"] == 46

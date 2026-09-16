@@ -27,8 +27,8 @@ def test_familias_preservam_candidatas_e_incluem_todas_as_pendentes():
         for curso_id, ano in familia["matrizes"]
     }
 
-    assert len(esperadas) == 46
-    assert len(mapeadas) == 46
+    assert len(esperadas) == 47
+    assert len(mapeadas) == 47
     assert mapeadas == esperadas
     pendentes = {
         (item["curso_id"], ano)
@@ -36,7 +36,7 @@ def test_familias_preservam_candidatas_e_incluem_todas_as_pendentes():
         for ano in item["matrizes_pendentes_anos"]
     }
     fila = [(c, a) for f in familias["familias"] for c, a in f["matrizes_pendentes"]]
-    assert len(fila) == len(set(fila)) == 47
+    assert len(fila) == len(set(fila)) == 46
     assert set(fila) == pendentes
     assert not (set(fila) & mapeadas)
     assert len(set(fila) | mapeadas) == 93
@@ -90,6 +90,17 @@ def test_familias_de_maior_risco_preservam_requisitos_distintos():
     especiais = por_id["novas_licenciaturas_ingresso_e_oferta_especial"]
     assert "oferta_especial" in especiais["capacidades_criticas"]
     assert "requisitos_condicionais" in especiais["capacidades_criticas"]
+
+
+def test_neuro_2021_migra_para_familia_candidata_sem_ocultar_pendencias():
+    familias, _ = _carregar()
+    por_id = {familia["id"]: familia for familia in familias["familias"]}
+    familia = por_id["bacharelados_cientificos_tecnologicos"]
+
+    assert ["neurociencia", 2021] in familia["matrizes"]
+    assert ["neurociencia", 2021] not in familia["matrizes_pendentes"]
+    assert ["neurociencia", 2015] in familia["matrizes_pendentes"]
+    assert ["neurociencia", 2010] in familia["matrizes_pendentes"]
 
 
 def test_evidencias_representativas_sao_oficiais_da_ufabc():
