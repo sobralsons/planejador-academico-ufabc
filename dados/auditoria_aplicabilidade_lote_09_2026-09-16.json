@@ -16,7 +16,7 @@
       "matriz_ano": 2018,
       "status_antes": "pendente",
       "resultado": "candidata_preliminar",
-      "aplicado_no_estado_global": false,
+      "aplicado_no_estado_global": true,
       "ppc_substituido": "PPC do Bacharelado em Biotecnologia 2018, aprovado pelo Ato Decisório ConsEPE nº 164/2018",
       "ppc_substituto": "PPC do Bacharelado em Biotecnologia 2023, aprovado pelo Ato Decisório ConsEPE nº 257/2023",
       "entrada_em_vigor": "O Anexo II do Ato Decisório CG nº 71/2025 registra que o PPC 2023 entrou em vigor a partir do 2º quadrimestre de 2023.",
@@ -31,7 +31,7 @@
       ],
       "lacunas": [
         "Revisão acadêmica humana permanece pendente.",
-        "O estado global de vigência deve ser sincronizado somente após este lote passar pelos testes e CI da branch."
+        "A candidatura preliminar não substitui modelagem curricular, testes adversariais nem revisão humana."
       ],
       "revisao_humana": {
         "estado": "pendente",
@@ -64,7 +64,7 @@
   "resumo": {
     "ppcs_auditados_lote": 1,
     "evidencias_suficientes_para_candidatura_preliminar": 1,
-    "estado_global_alterado_neste_commit": false,
+    "estado_global_alterado_neste_commit": true,
     "exclusoes_definitivas": 0,
     "revisao_humana": "pendente",
     "decisoes_publicaveis": 0
