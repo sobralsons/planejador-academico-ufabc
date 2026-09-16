@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "avaliado_em": "2026-09-16",
+  "base_vigencia": "dados/vigencia_ppcs_2026-09-16.json",
+  "escopo": "Agrupa as 46 matrizes aplicáveis por famílias de requisitos para orientar a evolução do modelo curricular genérico. Não declara suporte acadêmico nem substitui a leitura integral de cada PPC.",
+  "capacidades_modelo": {
+    "categorias_creditos": {
+      "descricao": "Mínimos de créditos por obrigatórias, opção limitada e livres.",
+      "estado_atual": "suportado_basico"
+    },
+    "componentes_obrigatorios": {
+      "descricao": "Componentes específicos obrigatórios, inclusive não disciplinares.",
+      "estado_atual": "parcial"
+    },
+    "grupos_escolha": {
+      "descricao": "Escolha de N componentes ou mínimo de créditos/horas dentro de grupos ou eixos.",
+      "estado_atual": "ausente"
+    },
+    "requisitos_condicionais": {
+      "descricao": "Regras do tipo A ou B, escolha entre trajetórias, requisitos dependentes de perfil/matriz/origem.",
+      "estado_atual": "ausente"
+    },
+    "tcc_etapas": {
+      "descricao": "TCC/TG/monografia em uma ou várias etapas, com sequência e carga própria.",
+      "estado_atual": "parcial"
+    },
+    "estagio_horas": {
+      "descricao": "Estágio obrigatório ou opcional com carga horária mínima, etapas e eventual aproveitamento extensionista.",
+      "estado_atual": "parcial"
+    },
+    "atividades_complementares": {
+      "descricao": "Carga total e regras por grupos, mínimos, tetos e reaproveitamento do curso de ingresso.",
+      "estado_atual": "parcial"
+    },
+    "extensao": {
+      "descricao": "Carga extensionista total, fontes múltiplas, aproveitamento de disciplinas/TCC/estágio/ações e limites por fonte.",
+      "estado_atual": "ausente_completo"
+    },
+    "formacao_docente": {
+      "descricao": "Grupos de formação pedagógica, práticas de ensino, estágios supervisionados e mínimos por bloco.",
+      "estado_atual": "ausente"
+    },
+    "equivalencias_transicao": {
+      "descricao": "Equivalências simples/compostas, convalidações e regras dependentes de versão curricular.",
+      "estado_atual": "parcial"
+    },
+    "reuso_curso_base": {
+      "descricao": "Requisitos herdados de BC&T, BC&H, LCH, LCNE ou LEILA sem duplicar créditos/horas.",
+      "estado_atual": "ausente_explicito"
+    },
+    "sobreposicao_cargas": {
+      "descricao": "Uma mesma atividade pode cumprir carga do curso-base, extensão, estágio ou outro requisito sem ser contada duas vezes indevidamente.",
+      "estado_atual": "ausente"
+    },
+    "oferta_especial": {
+      "descricao": "Regras de curso/turma de oferta única, território, alternância ou condições específicas de ingresso.",
+      "estado_atual": "ausente"
+    }
+  },
+  "familias": [
+    {
+      "id": "interdisciplinares_bacharelado",
+      "descricao": "Bacharelados interdisciplinares de ingresso.",
+      "matrizes": [
+        ["bct", 2023],
+        ["bch", 2022]
+      ],
+      "capacidades_criticas": ["categorias_creditos", "atividades_complementares", "extensao", "grupos_escolha", "equivalencias_transicao"],
+      "observacao": "Servem de base para vários cursos de formação específica; erros aqui se propagam para múltiplas integralizações."
+    },
+    {
+      "id": "licenciaturas_interdisciplinares_com_transicao",
+      "descricao": "Licenciaturas interdisciplinares com duas matrizes simultaneamente aplicáveis.",
+      "matrizes": [
+        ["lch", 2025], ["lch", 2022],
+        ["lcne", 2026], ["lcne", 2022]
+      ],
+      "capacidades_criticas": ["categorias_creditos", "formacao_docente", "estagio_horas", "atividades_complementares", "extensao", "equivalencias_transicao", "requisitos_condicionais"],
+      "observacao": "Exige distinguir versão curricular e regras de transição sem misturar requisitos de ingressantes diferentes."
+    },
+    {
+      "id": "novas_licenciaturas_ingresso_e_oferta_especial",
+      "descricao": "Novas licenciaturas de ingresso/oferta especial com regras próprias de formação e estágio.",
+      "matrizes": [
+        ["leila", 2025],
+        ["lec_ciencias_humanas_sociais", 2024]
+      ],
+      "capacidades_criticas": ["formacao_docente", "estagio_horas", "grupos_escolha", "extensao", "oferta_especial", "requisitos_condicionais", "sobreposicao_cargas"],
+      "observacao": "A LEC-CHS possui 400h de estágios supervisionados e escolhas específicas de práticas/estágios; é caso adversarial importante para o modelo."
+    },
+    {
+      "id": "bacharelados_cientificos_tecnologicos",
+      "descricao": "Bacharelados de formação específica vinculados majoritariamente ao BC&T.",
+      "matrizes": [
+        ["biotecnologia", 2023],
+        ["ciencia_computacao", 2023], ["ciencia_computacao", 2017],
+        ["ciencia_dados", 2023],
+        ["ciencias_biologicas", 2023],
+        ["fisica", 2023],
+        ["matematica", 2023],
+        ["quimica", 2023],
+        ["neurociencia", 2023]
+      ],
+      "capacidades_criticas": ["reuso_curso_base", "categorias_creditos", "grupos_escolha", "tcc_etapas", "extensao", "atividades_complementares", "equivalencias_transicao", "sobreposicao_cargas"],
+      "observacao": "Há variação importante em TCC, estágio não obrigatório, extensão e aproveitamento de requisitos já cumpridos no BC&T."
+    },
+    {
+      "id": "engenharias",
+      "descricao": "Oito engenharias, cada uma com PPC 2023 e PPC 2017 ainda aplicável.",
+      "matrizes": [
+        ["engenharia_ambiental_urbana", 2023], ["engenharia_ambiental_urbana", 2017],
+        ["engenharia_energia", 2023], ["engenharia_energia", 2017],
+        ["engenharia_informacao", 2023], ["engenharia_informacao", 2017],
+        ["engenharia_instrumentacao_automacao_robotica", 2023], ["engenharia_instrumentacao_automacao_robotica", 2017],
+        ["engenharia_materiais", 2023], ["engenharia_materiais", 2017],
+        ["engenharia_aeroespacial", 2023], ["engenharia_aeroespacial", 2017],
+        ["engenharia_biomedica", 2023], ["engenharia_biomedica", 2017],
+        ["engenharia_gestao", 2023], ["engenharia_gestao", 2017]
+      ],
+      "capacidades_criticas": ["reuso_curso_base", "estagio_horas", "tcc_etapas", "extensao", "grupos_escolha", "equivalencias_transicao", "sobreposicao_cargas"],
+      "observacao": "Família de maior volume. O PPC consolidado exige estágio curricular obrigatório de 168h e outros integralizadores além das disciplinas."
+    },
+    {
+      "id": "bacharelados_humanidades",
+      "descricao": "Bacharelados de formação específica ligados ao BC&H, com estruturas próprias de TCC, eixos/ênfases e extensão.",
+      "matrizes": [
+        ["ciencias_economicas", 2022],
+        ["filosofia_bacharelado", 2022],
+        ["planejamento_territorial", 2022],
+        ["politicas_publicas", 2023],
+        ["relacoes_internacionais", 2022]
+      ],
+      "capacidades_criticas": ["reuso_curso_base", "grupos_escolha", "tcc_etapas", "extensao", "atividades_complementares", "requisitos_condicionais", "sobreposicao_cargas"],
+      "observacao": "Políticas Públicas evidencia TCC, Imersão extensionista, eixos/ênfases e carga de extensão compartilhada com BC&H."
+    },
+    {
+      "id": "licenciaturas_formacao_especifica",
+      "descricao": "Licenciaturas específicas e Pedagogia, com forte incidência de regras de formação docente e estágios por módulos.",
+      "matrizes": [
+        ["filosofia_licenciatura", 2023],
+        ["geografia_licenciatura", 2025],
+        ["historia_licenciatura", 2024],
+        ["ciencias_biologicas_licenciatura", 2023],
+        ["fisica_licenciatura", 2023],
+        ["matematica_licenciatura", 2023],
+        ["quimica_licenciatura", 2023],
+        ["pedagogia", 2025]
+      ],
+      "capacidades_criticas": ["reuso_curso_base", "formacao_docente", "estagio_horas", "grupos_escolha", "atividades_complementares", "extensao", "requisitos_condicionais", "sobreposicao_cargas"],
+      "observacao": "Atividades complementares, práticas, estágios supervisionados e extensão não podem ser reduzidos a uma única categoria de disciplina."
+    }
+  ],
+  "evidencias_representativas": [
+    {
+      "familia": "bacharelados_cientificos_tecnologicos",
+      "fonte": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisrio_267_-_aprovar_a_atualizao_do_projeto_pedaggico_do_curso_de_bacharelado_em_cincia_da_computao_-_anexo_consolidado.pdf",
+      "evidencia": "BCC 2023: obrigatórias/OL/livres, 48h de atividades complementares herdadas do BC&T, 328h de extensão, estágio não obrigatório e TCC."
+    },
+    {
+      "familia": "engenharias",
+      "fonte": "https://www.ufabc.edu.br/images/consepe/prox_sessao/iv_sesso_extraordinria_-_14_de_novembro_de_2023-u2d9f/ordem_do_dia_-_anexo_1b.pdf",
+      "evidencia": "PPC consolidado das Engenharias: estágio curricular obrigatório mínimo de 168h e demais integralizadores além das disciplinas."
+    },
+    {
+      "familia": "novas_licenciaturas_ingresso_e_oferta_especial",
+      "fonte": "https://servidor-conteudo.ufabc.edu.br/arquivos/2024063000be21297994828a5ef4e5970/PPC_LEC.pdf",
+      "evidencia": "LEC-CHS: 400h de estágios supervisionados, práticas de ensino e escolha obrigatória dentro de grupo de opção limitada; parte do estágio pode ter caráter extensionista."
+    },
+    {
+      "familia": "licenciaturas_formacao_especifica",
+      "fonte": "https://licmat.ufabc.edu.br/discentes/atividades-complementares/",
+      "evidencia": "Licenciatura em Matemática: versões anteriores preveem carga de atividades complementares com regras de grupos; o PPC 2023 introduz curricularização da extensão."
+    },
+    {
+      "familia": "bacharelados_humanidades",
+      "fonte": "https://bpp.ufabc.edu.br/curso/estrutura-curricular/",
+      "evidencia": "BPP 2023: TCC, Imersão extensionista, eixos/ênfases, OL/livres, atividades complementares e extensão compartilhada com BC&H."
+    },
+    {
+      "familia": "bacharelados_cientificos_tecnologicos",
+      "fonte": "https://bcd.ufabc.edu.br/?page_id=104",
+      "evidencia": "BCD 2023: estágio não obrigatório; extensão pode ser cumprida por disciplinas, ações, TCC ou estágio, com limites; atividades complementares são herdadas do BC&T."
+    }
+  ],
+  "ordem_modelagem_recomendada": [
+    "interdisciplinares_bacharelado",
+    "bacharelados_cientificos_tecnologicos",
+    "engenharias",
+    "licenciaturas_interdisciplinares_com_transicao",
+    "licenciaturas_formacao_especifica",
+    "bacharelados_humanidades",
+    "novas_licenciaturas_ingresso_e_oferta_especial"
+  ],
+  "proximo_passo": "Definir um esquema explícito de requisitos curriculares capaz de representar todas as capacidades críticas antes de migrar matrizes adicionais."
+}
