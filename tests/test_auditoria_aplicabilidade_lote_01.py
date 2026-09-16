@@ -30,11 +30,13 @@ def test_lote_audita_exatamente_tres_matrizes_e_preserva_decisao_historica():
     assert all(item["decisao_publicavel"] is False for item in auditadas.values())
 
     # O lote 1 permanece como registro histórico. BCT 2015 foi promovido no
-    # lote 7 e Ciências Biológicas 2015 no lote 8 por novas evidências oficiais.
+    # lote 7, Ciências Biológicas 2015 no lote 8 e Biotecnologia 2018 no lote 9
+    # por novas evidências oficiais posteriores.
     por_curso = {item["curso_id"]: item for item in vigencia["classificacao"]}
     assert 2015 in por_curso["bct"]["matrizes_candidatas_anos"]
     assert 2015 not in por_curso["bct"]["matrizes_pendentes_anos"]
-    assert 2018 in por_curso["biotecnologia"]["matrizes_pendentes_anos"]
+    assert 2018 in por_curso["biotecnologia"]["matrizes_candidatas_anos"]
+    assert 2018 not in por_curso["biotecnologia"]["matrizes_pendentes_anos"]
     assert 2015 in por_curso["ciencias_biologicas"]["matrizes_candidatas_anos"]
     assert 2015 not in por_curso["ciencias_biologicas"]["matrizes_pendentes_anos"]
     assert 2010 in por_curso["ciencias_biologicas"]["matrizes_pendentes_anos"]
@@ -139,7 +141,7 @@ def test_resumo_do_lote_permanece_historico_sem_congelar_estado_global_antigo():
     assert vigencia["resumo"] == {
         "ppcs_total": 93,
         "nao_aplicaveis": 0,
-        "pendentes": 40,
-        "candidatas": 53,
-        "ppcs_historicos_candidatos": 18,
+        "pendentes": 39,
+        "candidatas": 54,
+        "ppcs_historicos_candidatos": 19,
     }
