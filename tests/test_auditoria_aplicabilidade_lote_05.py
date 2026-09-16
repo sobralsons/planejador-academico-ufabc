@@ -3,7 +3,7 @@ from pathlib import Path
 
 
 BASE = Path(__file__).resolve().parents[1]
-AUDITORIA = BASE / "dados" / "auditoria_aplicabilidade_lote_04_2026-09-16.json"
+AUDITORIA = BASE / "dados" / "auditoria_aplicabilidade_lote_05_2026-09-16.json"
 VIGENCIA = BASE / "dados" / "vigencia_ppcs_2026-09-16.json"
 
 
@@ -20,30 +20,32 @@ def _por_matriz(auditoria):
     }
 
 
-def test_lote_04_audita_tres_matrizes_e_promove_apenas_neuro_2021():
+def test_lote_05_audita_tres_matrizes_e_promove_apenas_quimica_2015():
     auditoria, vigencia = _carregar()
     auditadas = _por_matriz(auditoria)
 
     assert set(auditadas) == {
-        ("neurociencia", 2021),
-        ("neurociencia", 2015),
-        ("lcne", 2019),
+        ("quimica", 2015),
+        ("fisica", 2015),
+        ("relacoes_internacionais", 2015),
     }
     assert all(item["status_antes"] == "pendente" for item in auditadas.values())
-    assert auditadas[("neurociencia", 2021)]["status_resultante"] == "candidata_preliminar"
-    assert auditadas[("neurociencia", 2015)]["status_resultante"] == "pendente"
-    assert auditadas[("lcne", 2019)]["status_resultante"] == "pendente"
+    assert auditadas[("quimica", 2015)]["status_resultante"] == "candidata_preliminar"
+    assert auditadas[("fisica", 2015)]["status_resultante"] == "pendente"
+    assert auditadas[("relacoes_internacionais", 2015)]["status_resultante"] == "pendente"
     assert all(item["decisao_publicavel"] is False for item in auditadas.values())
 
     por_curso = {item["curso_id"]: item for item in vigencia["classificacao"]}
-    assert 2021 in por_curso["neurociencia"]["matrizes_candidatas_anos"]
-    assert 2015 in por_curso["neurociencia"]["matrizes_pendentes_anos"]
-    assert 2019 in por_curso["lcne"]["matrizes_pendentes_anos"]
+    assert 2015 in por_curso["quimica"]["matrizes_candidatas_anos"]
+    assert 2010 in por_curso["quimica"]["matrizes_pendentes_anos"]
+    assert 2015 in por_curso["fisica"]["matrizes_pendentes_anos"]
+    assert 2015 in por_curso["relacoes_internacionais"]["matrizes_pendentes_anos"]
 
 
-def test_contrato_do_lote_04_preserva_revisao_humana_e_nao_publica():
+def test_contrato_do_lote_05_preserva_revisao_humana_e_nao_publica():
     auditoria, _ = _carregar()
     obrigatorios = set(auditoria["campos_obrigatorios_por_decisao"])
+    auditadas = _por_matriz(auditoria)
 
     for item in auditoria["matrizes"]:
         assert obrigatorios <= set(item)
@@ -59,12 +61,12 @@ def test_contrato_do_lote_04_preserva_revisao_humana_e_nao_publica():
         assert item["revisao_humana"]["estado"] == "pendente"
         assert item["decisao_publicavel"] is False
 
-    assert _por_matriz(auditoria)[("neurociencia", 2021)]["revisao_humana"]["pronto_para_mudar_status"] is True
-    assert _por_matriz(auditoria)[("neurociencia", 2015)]["revisao_humana"]["pronto_para_mudar_status"] is False
-    assert _por_matriz(auditoria)[("lcne", 2019)]["revisao_humana"]["pronto_para_mudar_status"] is False
+    assert auditadas[("quimica", 2015)]["revisao_humana"]["pronto_para_mudar_status"] is True
+    assert auditadas[("fisica", 2015)]["revisao_humana"]["pronto_para_mudar_status"] is False
+    assert auditadas[("relacoes_internacionais", 2015)]["revisao_humana"]["pronto_para_mudar_status"] is False
 
 
-def test_fontes_do_lote_04_sao_oficiais_e_identificam_secao():
+def test_fontes_do_lote_05_sao_oficiais_e_identificam_secao():
     auditoria, _ = _carregar()
     fontes = auditoria["fontes_oficiais"]
     usadas = {
@@ -83,46 +85,49 @@ def test_fontes_do_lote_04_sao_oficiais_e_identificam_secao():
         assert fonte["interpretacao"].strip()
 
 
-def test_neuro_2021_exige_evidencia_positiva_atual_e_ato_de_transicao():
+def test_quimica_2015_exige_evidencia_operacional_explicita_alem_da_transicao():
     auditoria, _ = _carregar()
-    item = _por_matriz(auditoria)[("neurociencia", 2021)]
+    item = _por_matriz(auditoria)[("quimica", 2015)]
     fontes = auditoria["fontes_oficiais"]
     efeitos = " ".join(regra["efeito_relevante"] for regra in item["regras_transicao"])
 
-    assert item["ppc_substituto"]["ano"] == 2023
-    assert item["tempo_integralizacao"]["valor"] == 12
     assert "Ingressantes até 2022" in efeitos
-    assert "três projetos pedagógicos ativos" in efeitos
-    assert "três projetos pedagógicos ativos" in fontes["neuro_faq_atual"]["interpretacao"]
+    assert "obrigatória no PPC 2015" in efeitos
+    assert "84h" in efeitos
+    assert "obrigatória no PPC 2015" in fontes["bq_justificativa_2025"]["interpretacao"]
+    assert "84h" in fontes["bq_servico_atual"]["interpretacao"]
+    assert item["calculo_termino_validade"]["resultado_teorico"].startswith("2025")
     assert item["status_resultante"] == "candidata_preliminar"
     assert item["decisao_publicavel"] is False
 
 
-def test_neuro_2015_preserva_conflito_entre_prazo_especifico_e_pagina_atual():
+def test_fisica_2015_nao_promove_listagem_e_ttmc_2026_a_prova_de_vigencia():
     auditoria, _ = _carregar()
-    item = _por_matriz(auditoria)[("neurociencia", 2015)]
+    item = _por_matriz(auditoria)[("fisica", 2015)]
     motivo = item["calculo_termino_validade"]["motivo"]
 
-    assert item["calculo_termino_validade"]["resultado_teorico"] == "2025"
-    assert "validade de 4 anos" in item["calculo_termino_validade"]["regra_especifica"]
-    assert "três projetos pedagógicos ativos" in motivo
+    assert item["tempo_integralizacao"]["valor"] == 4
+    assert item["tempo_integralizacao"]["unidade"] == "anos"
+    assert "Ato CG nº 81/2026" in motivo
+    assert "não afirma que o PPC 2015 permaneça ativo" in motivo
     assert item["status_resultante"] == "pendente"
-    assert item["revisao_humana"]["pronto_para_mudar_status"] is False
 
 
-def test_lcne_2019_nao_converte_prazo_de_migracao_em_extincao():
+def test_bri_2015_preserva_efeito_da_retificacao_sem_inventar_revogacao():
     auditoria, _ = _carregar()
-    item = _por_matriz(auditoria)[("lcne", 2019)]
+    item = _por_matriz(auditoria)[("relacoes_internacionais", 2015)]
     efeitos = " ".join(regra["efeito_relevante"] for regra in item["regras_transicao"])
+    motivo = item["calculo_termino_validade"]["motivo"]
 
-    assert item["tempo_integralizacao"]["valor"] == 12
-    assert "Ingressantes até 2022" in efeitos
-    assert "31/12/2024" in efeitos
-    assert "não uma data de extinção" in efeitos
+    assert item["entrada_em_vigor"]["estado"] == "comprovada_com_retificacao_relevante"
+    assert "suprimida a cláusula" in efeitos
+    assert "ingressantes até 2022" in efeitos
+    assert "removeu expressamente" in motivo
+    assert item["calculo_termino_validade"]["resultado_teorico"] is None
     assert item["status_resultante"] == "pendente"
 
 
-def test_lote_04_altera_resumo_global_em_exatamente_uma_matriz_sem_criar_exclusao():
+def test_lote_05_altera_resumo_global_em_exatamente_uma_matriz_sem_criar_exclusao():
     auditoria, vigencia = _carregar()
 
     assert auditoria["resumo"] == {
@@ -141,7 +146,7 @@ def test_lote_04_altera_resumo_global_em_exatamente_uma_matriz_sem_criar_exclusa
     }
 
 
-def test_promocao_preliminar_nao_declara_suporte_academico():
+def test_lote_05_nao_declara_suporte_academico():
     auditoria, vigencia = _carregar()
 
     assert all(
