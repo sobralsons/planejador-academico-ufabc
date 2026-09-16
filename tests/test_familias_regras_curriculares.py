@@ -13,13 +13,13 @@ def _carregar():
     return familias, vigencia
 
 
-def test_familias_cobrem_exatamente_as_46_matrizes_aplicaveis():
+def test_familias_preservam_candidatas_e_incluem_todas_as_pendentes():
     familias, vigencia = _carregar()
 
     esperadas = {
         (item["curso_id"], ano)
         for item in vigencia["classificacao"]
-        for ano in item["matrizes_aplicaveis_anos"]
+        for ano in item["matrizes_candidatas_anos"]
     }
     mapeadas = {
         (curso_id, ano)
@@ -30,6 +30,17 @@ def test_familias_cobrem_exatamente_as_46_matrizes_aplicaveis():
     assert len(esperadas) == 46
     assert len(mapeadas) == 46
     assert mapeadas == esperadas
+    pendentes = {
+        (item["curso_id"], ano)
+        for item in vigencia["classificacao"]
+        for ano in item["matrizes_pendentes_anos"]
+    }
+    fila = [(c, a) for f in familias["familias"] for c, a in f["matrizes_pendentes"]]
+    assert len(fila) == len(set(fila)) == 47
+    assert set(fila) == pendentes
+    assert not (set(fila) & mapeadas)
+    assert len(set(fila) | mapeadas) == 93
+    assert familias["schema_version"] == 2
 
 
 def test_matriz_aplicavel_pertence_a_uma_unica_familia():

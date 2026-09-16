@@ -1,8 +1,8 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "avaliado_em": "2026-09-16",
   "base_vigencia": "dados/vigencia_ppcs_2026-09-16.json",
-  "escopo": "Agrupa as 46 matrizes aplicáveis por famílias de requisitos para orientar a evolução do modelo curricular genérico. Não declara suporte acadêmico nem substitui a leitura integral de cada PPC.",
+  "escopo": "Agrupa 46 matrizes candidatas preliminares e mantém 47 matrizes com aplicabilidade pendente nas mesmas famílias para revisão. Não declara suporte acadêmico nem confirma vigência.",
   "capacidades_modelo": {
     "categorias_creditos": {
       "descricao": "Mínimos de créditos por obrigatórias, opção limitada e livres.",
@@ -66,17 +66,29 @@
         ["bch", 2022]
       ],
       "capacidades_criticas": ["categorias_creditos", "atividades_complementares", "extensao", "grupos_escolha", "equivalencias_transicao"],
-      "observacao": "Servem de base para vários cursos de formação específica; erros aqui se propagam para múltiplas integralizações."
+      "observacao": "Servem de base para vários cursos de formação específica; erros aqui se propagam para múltiplas integralizações.",
+      "matrizes_pendentes": [
+        ["bct", 2015],
+        ["bct", 2009],
+        ["bch", 2015],
+        ["bch", 2010]
+      ]
     },
     {
       "id": "licenciaturas_interdisciplinares_com_transicao",
-      "descricao": "Licenciaturas interdisciplinares com duas matrizes simultaneamente aplicáveis.",
+      "descricao": "Licenciaturas interdisciplinares com duas matrizes candidatas à vigência simultânea.",
       "matrizes": [
-        ["lch", 2025], ["lch", 2022],
-        ["lcne", 2026], ["lcne", 2022]
+        ["lch", 2025],
+        ["lch", 2022],
+        ["lcne", 2026],
+        ["lcne", 2022]
       ],
       "capacidades_criticas": ["categorias_creditos", "formacao_docente", "estagio_horas", "atividades_complementares", "extensao", "equivalencias_transicao", "requisitos_condicionais"],
-      "observacao": "Exige distinguir versão curricular e regras de transição sem misturar requisitos de ingressantes diferentes."
+      "observacao": "Exige distinguir versão curricular e regras de transição sem misturar requisitos de ingressantes diferentes.",
+      "matrizes_pendentes": [
+        ["lch", 2019],
+        ["lcne", 2019]
+      ]
     },
     {
       "id": "novas_licenciaturas_ingresso_e_oferta_especial",
@@ -86,14 +98,16 @@
         ["lec_ciencias_humanas_sociais", 2024]
       ],
       "capacidades_criticas": ["formacao_docente", "estagio_horas", "grupos_escolha", "extensao", "oferta_especial", "requisitos_condicionais", "sobreposicao_cargas"],
-      "observacao": "A LEC-CHS possui 400h de estágios supervisionados e escolhas específicas de práticas/estágios; é caso adversarial importante para o modelo."
+      "observacao": "A LEC-CHS possui 400h de estágios supervisionados e escolhas específicas de práticas/estágios; é caso adversarial importante para o modelo.",
+      "matrizes_pendentes": []
     },
     {
       "id": "bacharelados_cientificos_tecnologicos",
       "descricao": "Bacharelados de formação específica vinculados majoritariamente ao BC&T.",
       "matrizes": [
         ["biotecnologia", 2023],
-        ["ciencia_computacao", 2023], ["ciencia_computacao", 2017],
+        ["ciencia_computacao", 2023],
+        ["ciencia_computacao", 2017],
         ["ciencia_dados", 2023],
         ["ciencias_biologicas", 2023],
         ["fisica", 2023],
@@ -102,23 +116,49 @@
         ["neurociencia", 2023]
       ],
       "capacidades_criticas": ["reuso_curso_base", "categorias_creditos", "grupos_escolha", "tcc_etapas", "extensao", "atividades_complementares", "equivalencias_transicao", "sobreposicao_cargas"],
-      "observacao": "Há variação importante em TCC, estágio não obrigatório, extensão e aproveitamento de requisitos já cumpridos no BC&T."
+      "observacao": "Há variação importante em TCC, estágio não obrigatório, extensão e aproveitamento de requisitos já cumpridos no BC&T.",
+      "matrizes_pendentes": [
+        ["biotecnologia", 2018],
+        ["ciencia_computacao", 2015],
+        ["ciencia_computacao", 2010],
+        ["ciencias_biologicas", 2015],
+        ["ciencias_biologicas", 2010],
+        ["fisica", 2015],
+        ["fisica", 2009],
+        ["matematica", 2017],
+        ["matematica", 2012],
+        ["matematica", 2010],
+        ["quimica", 2015],
+        ["quimica", 2010],
+        ["neurociencia", 2021],
+        ["neurociencia", 2015],
+        ["neurociencia", 2010]
+      ]
     },
     {
       "id": "engenharias",
-      "descricao": "Oito engenharias, cada uma com PPC 2023 e PPC 2017 ainda aplicável.",
+      "descricao": "Oito engenharias, cada uma com PPC 2023 e PPC 2017 com aplicabilidade a revisar.",
       "matrizes": [
-        ["engenharia_ambiental_urbana", 2023], ["engenharia_ambiental_urbana", 2017],
-        ["engenharia_energia", 2023], ["engenharia_energia", 2017],
-        ["engenharia_informacao", 2023], ["engenharia_informacao", 2017],
-        ["engenharia_instrumentacao_automacao_robotica", 2023], ["engenharia_instrumentacao_automacao_robotica", 2017],
-        ["engenharia_materiais", 2023], ["engenharia_materiais", 2017],
-        ["engenharia_aeroespacial", 2023], ["engenharia_aeroespacial", 2017],
-        ["engenharia_biomedica", 2023], ["engenharia_biomedica", 2017],
-        ["engenharia_gestao", 2023], ["engenharia_gestao", 2017]
+        ["engenharia_ambiental_urbana", 2023],
+        ["engenharia_ambiental_urbana", 2017],
+        ["engenharia_energia", 2023],
+        ["engenharia_energia", 2017],
+        ["engenharia_informacao", 2023],
+        ["engenharia_informacao", 2017],
+        ["engenharia_instrumentacao_automacao_robotica", 2023],
+        ["engenharia_instrumentacao_automacao_robotica", 2017],
+        ["engenharia_materiais", 2023],
+        ["engenharia_materiais", 2017],
+        ["engenharia_aeroespacial", 2023],
+        ["engenharia_aeroespacial", 2017],
+        ["engenharia_biomedica", 2023],
+        ["engenharia_biomedica", 2017],
+        ["engenharia_gestao", 2023],
+        ["engenharia_gestao", 2017]
       ],
       "capacidades_criticas": ["reuso_curso_base", "estagio_horas", "tcc_etapas", "extensao", "grupos_escolha", "equivalencias_transicao", "sobreposicao_cargas"],
-      "observacao": "Família de maior volume. O PPC consolidado exige estágio curricular obrigatório de 168h e outros integralizadores além das disciplinas."
+      "observacao": "Família de maior volume. O PPC consolidado exige estágio curricular obrigatório de 168h e outros integralizadores além das disciplinas.",
+      "matrizes_pendentes": []
     },
     {
       "id": "bacharelados_humanidades",
@@ -131,7 +171,19 @@
         ["relacoes_internacionais", 2022]
       ],
       "capacidades_criticas": ["reuso_curso_base", "grupos_escolha", "tcc_etapas", "extensao", "atividades_complementares", "requisitos_condicionais", "sobreposicao_cargas"],
-      "observacao": "Políticas Públicas evidencia TCC, Imersão extensionista, eixos/ênfases e carga de extensão compartilhada com BC&H."
+      "observacao": "Políticas Públicas evidencia TCC, Imersão extensionista, eixos/ênfases e carga de extensão compartilhada com BC&H.",
+      "matrizes_pendentes": [
+        ["ciencias_economicas", 2017],
+        ["ciencias_economicas", 2011],
+        ["filosofia_bacharelado", 2011],
+        ["planejamento_territorial", 2017],
+        ["planejamento_territorial", 2012],
+        ["politicas_publicas", 2015],
+        ["politicas_publicas", 2012],
+        ["politicas_publicas", 2010],
+        ["relacoes_internacionais", 2015],
+        ["relacoes_internacionais", 2012]
+      ]
     },
     {
       "id": "licenciaturas_formacao_especifica",
@@ -147,7 +199,25 @@
         ["pedagogia", 2025]
       ],
       "capacidades_criticas": ["reuso_curso_base", "formacao_docente", "estagio_horas", "grupos_escolha", "atividades_complementares", "extensao", "requisitos_condicionais", "sobreposicao_cargas"],
-      "observacao": "Atividades complementares, práticas, estágios supervisionados e extensão não podem ser reduzidos a uma única categoria de disciplina."
+      "observacao": "Atividades complementares, práticas, estágios supervisionados e extensão não podem ser reduzidos a uma única categoria de disciplina.",
+      "matrizes_pendentes": [
+        ["filosofia_licenciatura", 2022],
+        ["filosofia_licenciatura", 2016],
+        ["filosofia_licenciatura", 2011],
+        ["ciencias_biologicas_licenciatura", 2022],
+        ["ciencias_biologicas_licenciatura", 2016],
+        ["ciencias_biologicas_licenciatura", 2015],
+        ["ciencias_biologicas_licenciatura", 2010],
+        ["fisica_licenciatura", 2022],
+        ["fisica_licenciatura", 2015],
+        ["fisica_licenciatura", 2010],
+        ["matematica_licenciatura", 2022],
+        ["matematica_licenciatura", 2018],
+        ["matematica_licenciatura", 2010],
+        ["quimica_licenciatura", 2022],
+        ["quimica_licenciatura", 2015],
+        ["quimica_licenciatura", 2010]
+      ]
     }
   ],
   "evidencias_representativas": [
@@ -182,14 +252,6 @@
       "evidencia": "BCD 2023: estágio não obrigatório; extensão pode ser cumprida por disciplinas, ações, TCC ou estágio, com limites; atividades complementares são herdadas do BC&T."
     }
   ],
-  "ordem_modelagem_recomendada": [
-    "interdisciplinares_bacharelado",
-    "bacharelados_cientificos_tecnologicos",
-    "engenharias",
-    "licenciaturas_interdisciplinares_com_transicao",
-    "licenciaturas_formacao_especifica",
-    "bacharelados_humanidades",
-    "novas_licenciaturas_ingresso_e_oferta_especial"
-  ],
-  "proximo_passo": "Definir um esquema explícito de requisitos curriculares capaz de representar todas as capacidades críticas antes de migrar matrizes adicionais."
+  "ordem_modelagem_recomendada": ["interdisciplinares_bacharelado", "bacharelados_cientificos_tecnologicos", "engenharias", "licenciaturas_interdisciplinares_com_transicao", "licenciaturas_formacao_especifica", "bacharelados_humanidades", "novas_licenciaturas_ingresso_e_oferta_especial"],
+  "proximo_passo": "Revisar a aplicabilidade de todas as candidatas e pendentes por evidência individual. Usar famílias para desenvolver o modelo sem excluir definitivamente versões históricas."
 }

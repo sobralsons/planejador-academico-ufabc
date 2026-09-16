@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "avaliado_em": "2026-09-16",
   "base_inventario": {
     "arquivo": "dados/inventario_cursos.json",
@@ -8,12 +8,13 @@
     "total_cursos": 35,
     "total_ppcs": 93
   },
-  "escopo": "Avaliação datada de aplicabilidade dos PPCs inventariados: decide quais versões ainda podem reger estudantes ativos. Não modela regras curriculares nem substitui revisão acadêmica humana.",
+  "escopo": "Avaliação preliminar datada de aplicabilidade. As candidatas são hipóteses de trabalho sujeitas à revisão por matriz. Não modela regras curriculares nem substitui revisão acadêmica humana.",
   "criterio": {
     "regra_geral": "Aplicar a Resolução ConsEPE nº 255/2022, art. 12: o PPC substituído tem validade igual ao tempo de integralização do curso, contado do ano anterior à entrada em vigor do novo PPC, e depois é extinto.",
     "transicao_especifica": "Atos de transição podem restringir adesão e identificar quem pode permanecer no PPC anterior; a mera existência de tabela de convalidação ou menção histórica não mantém um PPC vigente.",
     "data_corte": "2026-09-16",
-    "observacao": "A aplicabilidade é temporal. Nova resolução, ato decisório, retificação ou regra de transição pode exigir reavaliação futura."
+    "observacao": "A norma geral e o edital de vagas não bastam para excluir uma matriz. Datas e regras específicas precisam ser demonstradas. As 46 candidatas também não constituem lista definitiva de vigência.",
+    "exclusao": "Exige evidência por matriz: entrada em vigor do PPC substituto, prazo aplicável e sua fonte, cálculo do término, atos de transição relevantes e revisão humana. Ausência de ato localizado não comprova extinção."
   },
   "fontes_oficiais": {
     "res_consepe_255_2022": {
@@ -32,7 +33,7 @@
       "tipo": "duracao_cursos",
       "url": "https://prograd.ufabc.edu.br/pdf/edital_028_2022_cursos_formacao_especifica.pdf",
       "referencia": "Edital ProGrad nº 028/2022",
-      "uso": "Registra 5 anos para Engenharias e 4 anos para os demais bacharelados/licenciaturas de formação específica; também usa 3 anos para BC&T/BC&H."
+      "uso": "Referência contextual para cálculo de vagas remanescentes no edital de 2022; não constitui comprovação individual de extinção de PPC."
     },
     "calendario_2026": {
       "tipo": "calendario_academico",
@@ -98,260 +99,577 @@
   "classificacao": [
     {
       "curso_id": "bct",
-      "matrizes_aplicaveis_anos": [2023],
-      "matrizes_nao_aplicaveis_anos": [2015, 2009],
+      "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "ata_consepe_2023", "edital_cfe_028_2022"],
-      "justificativa": "O PPC 2023 é o atual. A transição do BC&T registrou prazo de três anos para uso do PPC 2015 por ingressantes anteriores; esse prazo e a validade geral do PPC substituído já se encerraram. O PPC 2009 foi substituído anteriormente."
+      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2023],
+        "matrizes_nao_aplicaveis_anos": [2015, 2009],
+        "justificativa": "O PPC 2023 é o atual. A transição do BC&T registrou prazo de três anos para uso do PPC 2015 por ingressantes anteriores; esse prazo e a validade geral do PPC substituído já se encerraram. O PPC 2009 foi substituído anteriormente.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [2015, 2009],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2023]
     },
     {
       "curso_id": "bch",
-      "matrizes_aplicaveis_anos": [2022],
-      "matrizes_nao_aplicaveis_anos": [2015, 2010],
+      "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "edital_cfe_028_2022"],
-      "justificativa": "O PPC 2022 é o atual. Para o bacharelado interdisciplinar, o tempo de integralização usado institucionalmente é de três anos; as versões 2015 e 2010/2014 já ultrapassaram a validade do PPC substituído."
+      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2022],
+        "matrizes_nao_aplicaveis_anos": [2015, 2010],
+        "justificativa": "O PPC 2022 é o atual. Para o bacharelado interdisciplinar, o tempo de integralização usado institucionalmente é de três anos; as versões 2015 e 2010/2014 já ultrapassaram a validade do PPC substituído.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [2015, 2010],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2022]
     },
     {
       "curso_id": "lch",
-      "matrizes_aplicaveis_anos": [2025, 2022],
-      "matrizes_nao_aplicaveis_anos": [2019],
+      "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "lch_prograd"],
-      "justificativa": "A página oficial da ProGrad informa PPC 2025 para ingressantes de 2026 e preserva o PPC 2022 para ingressantes até 2025 conforme transição. O PPC 2019 é anterior ao PPC 2022 e não permanece no período de validade."
+      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2025, 2022],
+        "matrizes_nao_aplicaveis_anos": [2019],
+        "justificativa": "A página oficial da ProGrad informa PPC 2025 para ingressantes de 2026 e preserva o PPC 2022 para ingressantes até 2025 conforme transição. O PPC 2019 é anterior ao PPC 2022 e não permanece no período de validade.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [2019],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2025, 2022]
     },
     {
       "curso_id": "lcne",
-      "matrizes_aplicaveis_anos": [2026, 2022],
-      "matrizes_nao_aplicaveis_anos": [2019],
+      "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "lcne_prograd"],
-      "justificativa": "A página oficial da ProGrad informa PPC 2026 para ingressantes de 2026 e preserva o PPC 2022 para ingressantes até 2025 conforme transição. O PPC 2019 é anterior ao PPC 2022 e não permanece no período de validade."
+      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2026, 2022],
+        "matrizes_nao_aplicaveis_anos": [2019],
+        "justificativa": "A página oficial da ProGrad informa PPC 2026 para ingressantes de 2026 e preserva o PPC 2022 para ingressantes até 2025 conforme transição. O PPC 2019 é anterior ao PPC 2022 e não permanece no período de validade.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [2019],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2026, 2022]
     },
     {
       "curso_id": "leila",
-      "matrizes_aplicaveis_anos": [2025],
       "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022"],
-      "justificativa": "Há apenas um PPC inventariado para este curso/oferta; ele é o PPC vigente localizado. Não existe versão histórica concorrente no inventário a classificar."
+      "justificativa": "Versões mantidas como candidatas preliminares conforme fontes localizadas; revisão humana de aplicabilidade permanece pendente.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2025],
+        "matrizes_nao_aplicaveis_anos": [],
+        "justificativa": "Há apenas um PPC inventariado para este curso/oferta; ele é o PPC vigente localizado. Não existe versão histórica concorrente no inventário a classificar.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2025]
     },
     {
       "curso_id": "lec_ciencias_humanas_sociais",
-      "matrizes_aplicaveis_anos": [2024],
       "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022"],
-      "justificativa": "Há apenas um PPC inventariado para este curso/oferta; ele é o PPC vigente localizado. Não existe versão histórica concorrente no inventário a classificar."
+      "justificativa": "Versões mantidas como candidatas preliminares conforme fontes localizadas; revisão humana de aplicabilidade permanece pendente.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2024],
+        "matrizes_nao_aplicaveis_anos": [],
+        "justificativa": "Há apenas um PPC inventariado para este curso/oferta; ele é o PPC vigente localizado. Não existe versão histórica concorrente no inventário a classificar.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2024]
     },
     {
       "curso_id": "biotecnologia",
-      "matrizes_aplicaveis_anos": [2023],
-      "matrizes_nao_aplicaveis_anos": [2018],
+      "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "biotecnologia_ppc_2023", "calendario_2026"],
-      "justificativa": "O PPC 2023 é o atual. O PPC 2018 foi substituído pelo PPC vigente em 2023; com tempo mínimo de 13 quadrimestres, o período de validade contado a partir de 2022 já se encerrou antes do 3º quadrimestre de 2026."
+      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2023],
+        "matrizes_nao_aplicaveis_anos": [2018],
+        "justificativa": "O PPC 2023 é o atual. O PPC 2018 foi substituído pelo PPC vigente em 2023; com tempo mínimo de 13 quadrimestres, o período de validade contado a partir de 2022 já se encerrou antes do 3º quadrimestre de 2026.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [2018],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2023]
     },
     {
       "curso_id": "ciencia_computacao",
-      "matrizes_aplicaveis_anos": [2023, 2017],
-      "matrizes_nao_aplicaveis_anos": [2015, 2010],
+      "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "bcc_ato_267_2023", "bcc_ppc_2023"],
-      "justificativa": "O PPC 2023 é o atual. O Ato 267/2023 permite aos ingressantes até 2022 seguir o PPC anterior; como o curso tem integralização mínima de 15 quadrimestres (5 anos), o PPC 2017 ainda está dentro da validade em 2026. As versões 2015 e 2010 já foram substituídas há mais tempo."
+      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2023, 2017],
+        "matrizes_nao_aplicaveis_anos": [2015, 2010],
+        "justificativa": "O PPC 2023 é o atual. O Ato 267/2023 permite aos ingressantes até 2022 seguir o PPC anterior; como o curso tem integralização mínima de 15 quadrimestres (5 anos), o PPC 2017 ainda está dentro da validade em 2026. As versões 2015 e 2010 já foram substituídas há mais tempo.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [2015, 2010],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2023, 2017]
     },
     {
       "curso_id": "ciencia_dados",
-      "matrizes_aplicaveis_anos": [2023],
       "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022"],
-      "justificativa": "Há apenas um PPC inventariado para este curso/oferta; ele é o PPC vigente localizado. Não existe versão histórica concorrente no inventário a classificar."
+      "justificativa": "Versões mantidas como candidatas preliminares conforme fontes localizadas; revisão humana de aplicabilidade permanece pendente.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2023],
+        "matrizes_nao_aplicaveis_anos": [],
+        "justificativa": "Há apenas um PPC inventariado para este curso/oferta; ele é o PPC vigente localizado. Não existe versão histórica concorrente no inventário a classificar.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2023]
     },
     {
       "curso_id": "ciencias_biologicas",
-      "matrizes_aplicaveis_anos": [2023],
-      "matrizes_nao_aplicaveis_anos": [2015, 2010],
+      "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "ciencias_biologicas_ppc_2023", "calendario_2026"],
-      "justificativa": "O PPC 2023 é o atual. O PPC 2015 foi substituído em 2023; com tempo mínimo de 14 quadrimestres, o período de validade contado a partir de 2022 já se encerrou antes do 3º quadrimestre de 2026. O PPC 2010 é ainda mais antigo."
+      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2023],
+        "matrizes_nao_aplicaveis_anos": [2015, 2010],
+        "justificativa": "O PPC 2023 é o atual. O PPC 2015 foi substituído em 2023; com tempo mínimo de 14 quadrimestres, o período de validade contado a partir de 2022 já se encerrou antes do 3º quadrimestre de 2026. O PPC 2010 é ainda mais antigo.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [2015, 2010],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2023]
     },
     {
       "curso_id": "fisica",
-      "matrizes_aplicaveis_anos": [2023],
-      "matrizes_nao_aplicaveis_anos": [2015, 2009],
+      "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "edital_cfe_028_2022"],
-      "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência."
+      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2023],
+        "matrizes_nao_aplicaveis_anos": [2015, 2009],
+        "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [2015, 2009],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2023]
     },
     {
       "curso_id": "matematica",
-      "matrizes_aplicaveis_anos": [2023],
-      "matrizes_nao_aplicaveis_anos": [2017, 2012, 2010],
+      "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "edital_cfe_028_2022"],
-      "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência."
+      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2023],
+        "matrizes_nao_aplicaveis_anos": [2017, 2012, 2010],
+        "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [2017, 2012, 2010],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2023]
     },
     {
       "curso_id": "quimica",
-      "matrizes_aplicaveis_anos": [2023],
-      "matrizes_nao_aplicaveis_anos": [2015, 2010],
+      "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "edital_cfe_028_2022"],
-      "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência."
+      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2023],
+        "matrizes_nao_aplicaveis_anos": [2015, 2010],
+        "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [2015, 2010],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2023]
     },
     {
       "curso_id": "neurociencia",
-      "matrizes_aplicaveis_anos": [2023],
-      "matrizes_nao_aplicaveis_anos": [2021, 2015, 2010],
+      "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "edital_cfe_028_2022"],
-      "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência."
+      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2023],
+        "matrizes_nao_aplicaveis_anos": [2021, 2015, 2010],
+        "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [2021, 2015, 2010],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2023]
     },
     {
       "curso_id": "engenharia_ambiental_urbana",
-      "matrizes_aplicaveis_anos": [2023, 2017],
       "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "engenharias_ato_270_2023", "engenharias_ppc_consolidado", "engenharia_informacao_pagina"],
-      "justificativa": "O PPC 2023 é o atual e o PPC 2017 ainda pode reger ingressantes até 2022 conforme o ato de transição. Com tempo de integralização de 15 quadrimestres (5 anos), a validade do PPC substituído alcança 2026."
+      "justificativa": "Versões mantidas como candidatas preliminares conforme fontes localizadas; revisão humana de aplicabilidade permanece pendente.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2023, 2017],
+        "matrizes_nao_aplicaveis_anos": [],
+        "justificativa": "O PPC 2023 é o atual e o PPC 2017 ainda pode reger ingressantes até 2022 conforme o ato de transição. Com tempo de integralização de 15 quadrimestres (5 anos), a validade do PPC substituído alcança 2026.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2023, 2017]
     },
     {
       "curso_id": "engenharia_energia",
-      "matrizes_aplicaveis_anos": [2023, 2017],
       "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "engenharias_ato_270_2023", "engenharias_ppc_consolidado", "engenharia_informacao_pagina"],
-      "justificativa": "O PPC 2023 é o atual e o PPC 2017 ainda pode reger ingressantes até 2022 conforme o ato de transição. Com tempo de integralização de 15 quadrimestres (5 anos), a validade do PPC substituído alcança 2026."
+      "justificativa": "Versões mantidas como candidatas preliminares conforme fontes localizadas; revisão humana de aplicabilidade permanece pendente.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2023, 2017],
+        "matrizes_nao_aplicaveis_anos": [],
+        "justificativa": "O PPC 2023 é o atual e o PPC 2017 ainda pode reger ingressantes até 2022 conforme o ato de transição. Com tempo de integralização de 15 quadrimestres (5 anos), a validade do PPC substituído alcança 2026.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2023, 2017]
     },
     {
       "curso_id": "engenharia_informacao",
-      "matrizes_aplicaveis_anos": [2023, 2017],
       "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "engenharias_ato_270_2023", "engenharias_ppc_consolidado", "engenharia_informacao_pagina"],
-      "justificativa": "O PPC 2023 é o atual e o PPC 2017 ainda pode reger ingressantes até 2022 conforme o ato de transição. Com tempo de integralização de 15 quadrimestres (5 anos), a validade do PPC substituído alcança 2026."
+      "justificativa": "Versões mantidas como candidatas preliminares conforme fontes localizadas; revisão humana de aplicabilidade permanece pendente.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2023, 2017],
+        "matrizes_nao_aplicaveis_anos": [],
+        "justificativa": "O PPC 2023 é o atual e o PPC 2017 ainda pode reger ingressantes até 2022 conforme o ato de transição. Com tempo de integralização de 15 quadrimestres (5 anos), a validade do PPC substituído alcança 2026.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2023, 2017]
     },
     {
       "curso_id": "engenharia_instrumentacao_automacao_robotica",
-      "matrizes_aplicaveis_anos": [2023, 2017],
       "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "engenharias_ato_270_2023", "engenharias_ppc_consolidado", "engenharia_informacao_pagina"],
-      "justificativa": "O PPC 2023 é o atual e o PPC 2017 ainda pode reger ingressantes até 2022 conforme o ato de transição. Com tempo de integralização de 15 quadrimestres (5 anos), a validade do PPC substituído alcança 2026."
+      "justificativa": "Versões mantidas como candidatas preliminares conforme fontes localizadas; revisão humana de aplicabilidade permanece pendente.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2023, 2017],
+        "matrizes_nao_aplicaveis_anos": [],
+        "justificativa": "O PPC 2023 é o atual e o PPC 2017 ainda pode reger ingressantes até 2022 conforme o ato de transição. Com tempo de integralização de 15 quadrimestres (5 anos), a validade do PPC substituído alcança 2026.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2023, 2017]
     },
     {
       "curso_id": "engenharia_materiais",
-      "matrizes_aplicaveis_anos": [2023, 2017],
       "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "engenharias_ato_270_2023", "engenharias_ppc_consolidado", "engenharia_informacao_pagina"],
-      "justificativa": "O PPC 2023 é o atual e o PPC 2017 ainda pode reger ingressantes até 2022 conforme o ato de transição. Com tempo de integralização de 15 quadrimestres (5 anos), a validade do PPC substituído alcança 2026."
+      "justificativa": "Versões mantidas como candidatas preliminares conforme fontes localizadas; revisão humana de aplicabilidade permanece pendente.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2023, 2017],
+        "matrizes_nao_aplicaveis_anos": [],
+        "justificativa": "O PPC 2023 é o atual e o PPC 2017 ainda pode reger ingressantes até 2022 conforme o ato de transição. Com tempo de integralização de 15 quadrimestres (5 anos), a validade do PPC substituído alcança 2026.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2023, 2017]
     },
     {
       "curso_id": "engenharia_aeroespacial",
-      "matrizes_aplicaveis_anos": [2023, 2017],
       "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "engenharias_ato_270_2023", "engenharias_ppc_consolidado", "engenharia_informacao_pagina"],
-      "justificativa": "O PPC 2023 é o atual e o PPC 2017 ainda pode reger ingressantes até 2022 conforme o ato de transição. Com tempo de integralização de 15 quadrimestres (5 anos), a validade do PPC substituído alcança 2026."
+      "justificativa": "Versões mantidas como candidatas preliminares conforme fontes localizadas; revisão humana de aplicabilidade permanece pendente.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2023, 2017],
+        "matrizes_nao_aplicaveis_anos": [],
+        "justificativa": "O PPC 2023 é o atual e o PPC 2017 ainda pode reger ingressantes até 2022 conforme o ato de transição. Com tempo de integralização de 15 quadrimestres (5 anos), a validade do PPC substituído alcança 2026.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2023, 2017]
     },
     {
       "curso_id": "engenharia_biomedica",
-      "matrizes_aplicaveis_anos": [2023, 2017],
       "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "engenharias_ato_270_2023", "engenharias_ppc_consolidado", "engenharia_informacao_pagina"],
-      "justificativa": "O PPC 2023 é o atual e o PPC 2017 ainda pode reger ingressantes até 2022 conforme o ato de transição. Com tempo de integralização de 15 quadrimestres (5 anos), a validade do PPC substituído alcança 2026."
+      "justificativa": "Versões mantidas como candidatas preliminares conforme fontes localizadas; revisão humana de aplicabilidade permanece pendente.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2023, 2017],
+        "matrizes_nao_aplicaveis_anos": [],
+        "justificativa": "O PPC 2023 é o atual e o PPC 2017 ainda pode reger ingressantes até 2022 conforme o ato de transição. Com tempo de integralização de 15 quadrimestres (5 anos), a validade do PPC substituído alcança 2026.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2023, 2017]
     },
     {
       "curso_id": "engenharia_gestao",
-      "matrizes_aplicaveis_anos": [2023, 2017],
       "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "engenharias_ato_270_2023", "engenharias_ppc_consolidado", "engenharia_informacao_pagina"],
-      "justificativa": "O PPC 2023 é o atual e o PPC 2017 ainda pode reger ingressantes até 2022 conforme o ato de transição. Com tempo de integralização de 15 quadrimestres (5 anos), a validade do PPC substituído alcança 2026."
+      "justificativa": "Versões mantidas como candidatas preliminares conforme fontes localizadas; revisão humana de aplicabilidade permanece pendente.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2023, 2017],
+        "matrizes_nao_aplicaveis_anos": [],
+        "justificativa": "O PPC 2023 é o atual e o PPC 2017 ainda pode reger ingressantes até 2022 conforme o ato de transição. Com tempo de integralização de 15 quadrimestres (5 anos), a validade do PPC substituído alcança 2026.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2023, 2017]
     },
     {
       "curso_id": "ciencias_economicas",
-      "matrizes_aplicaveis_anos": [2022],
-      "matrizes_nao_aplicaveis_anos": [2017, 2011],
+      "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "edital_cfe_028_2022"],
-      "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência."
+      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2022],
+        "matrizes_nao_aplicaveis_anos": [2017, 2011],
+        "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [2017, 2011],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2022]
     },
     {
       "curso_id": "filosofia_bacharelado",
-      "matrizes_aplicaveis_anos": [2022],
-      "matrizes_nao_aplicaveis_anos": [2011],
+      "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "edital_cfe_028_2022"],
-      "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência."
+      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2022],
+        "matrizes_nao_aplicaveis_anos": [2011],
+        "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [2011],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2022]
     },
     {
       "curso_id": "planejamento_territorial",
-      "matrizes_aplicaveis_anos": [2022],
-      "matrizes_nao_aplicaveis_anos": [2017, 2012],
+      "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "edital_cfe_028_2022"],
-      "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência."
+      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2022],
+        "matrizes_nao_aplicaveis_anos": [2017, 2012],
+        "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [2017, 2012],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2022]
     },
     {
       "curso_id": "politicas_publicas",
-      "matrizes_aplicaveis_anos": [2023],
-      "matrizes_nao_aplicaveis_anos": [2015, 2012, 2010],
+      "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "edital_cfe_028_2022"],
-      "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência."
+      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2023],
+        "matrizes_nao_aplicaveis_anos": [2015, 2012, 2010],
+        "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [2015, 2012, 2010],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2023]
     },
     {
       "curso_id": "relacoes_internacionais",
-      "matrizes_aplicaveis_anos": [2022],
-      "matrizes_nao_aplicaveis_anos": [2015, 2012],
+      "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "edital_cfe_028_2022"],
-      "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência."
+      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2022],
+        "matrizes_nao_aplicaveis_anos": [2015, 2012],
+        "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [2015, 2012],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2022]
     },
     {
       "curso_id": "filosofia_licenciatura",
-      "matrizes_aplicaveis_anos": [2023],
-      "matrizes_nao_aplicaveis_anos": [2022, 2016, 2011],
+      "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "edital_cfe_028_2022"],
-      "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência."
+      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2023],
+        "matrizes_nao_aplicaveis_anos": [2022, 2016, 2011],
+        "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [2022, 2016, 2011],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2023]
     },
     {
       "curso_id": "geografia_licenciatura",
-      "matrizes_aplicaveis_anos": [2025],
       "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022"],
-      "justificativa": "Há apenas um PPC inventariado para este curso/oferta; ele é o PPC vigente localizado. Não existe versão histórica concorrente no inventário a classificar."
+      "justificativa": "Versões mantidas como candidatas preliminares conforme fontes localizadas; revisão humana de aplicabilidade permanece pendente.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2025],
+        "matrizes_nao_aplicaveis_anos": [],
+        "justificativa": "Há apenas um PPC inventariado para este curso/oferta; ele é o PPC vigente localizado. Não existe versão histórica concorrente no inventário a classificar.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2025]
     },
     {
       "curso_id": "historia_licenciatura",
-      "matrizes_aplicaveis_anos": [2024],
       "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022"],
-      "justificativa": "Há apenas um PPC inventariado para este curso/oferta; ele é o PPC vigente localizado. Não existe versão histórica concorrente no inventário a classificar."
+      "justificativa": "Versões mantidas como candidatas preliminares conforme fontes localizadas; revisão humana de aplicabilidade permanece pendente.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2024],
+        "matrizes_nao_aplicaveis_anos": [],
+        "justificativa": "Há apenas um PPC inventariado para este curso/oferta; ele é o PPC vigente localizado. Não existe versão histórica concorrente no inventário a classificar.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2024]
     },
     {
       "curso_id": "ciencias_biologicas_licenciatura",
-      "matrizes_aplicaveis_anos": [2023],
-      "matrizes_nao_aplicaveis_anos": [2022, 2016, 2015, 2010],
+      "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "edital_cfe_028_2022"],
-      "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência."
+      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2023],
+        "matrizes_nao_aplicaveis_anos": [2022, 2016, 2015, 2010],
+        "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [2022, 2016, 2015, 2010],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2023]
     },
     {
       "curso_id": "fisica_licenciatura",
-      "matrizes_aplicaveis_anos": [2023],
-      "matrizes_nao_aplicaveis_anos": [2022, 2015, 2010],
+      "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "edital_cfe_028_2022"],
-      "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência."
+      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2023],
+        "matrizes_nao_aplicaveis_anos": [2022, 2015, 2010],
+        "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [2022, 2015, 2010],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2023]
     },
     {
       "curso_id": "matematica_licenciatura",
-      "matrizes_aplicaveis_anos": [2023],
-      "matrizes_nao_aplicaveis_anos": [2022, 2018, 2010],
+      "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "edital_cfe_028_2022"],
-      "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência."
+      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2023],
+        "matrizes_nao_aplicaveis_anos": [2022, 2018, 2010],
+        "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [2022, 2018, 2010],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2023]
     },
     {
       "curso_id": "quimica_licenciatura",
-      "matrizes_aplicaveis_anos": [2023],
-      "matrizes_nao_aplicaveis_anos": [2022, 2015, 2010],
+      "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022", "edital_cfe_028_2022"],
-      "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência."
+      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2023],
+        "matrizes_nao_aplicaveis_anos": [2022, 2015, 2010],
+        "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [2022, 2015, 2010],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2023]
     },
     {
       "curso_id": "pedagogia",
-      "matrizes_aplicaveis_anos": [2025],
       "matrizes_nao_aplicaveis_anos": [],
       "evidencias": ["res_consepe_255_2022"],
-      "justificativa": "Há apenas um PPC inventariado para este curso/oferta; ele é o PPC vigente localizado. Não existe versão histórica concorrente no inventário a classificar."
+      "justificativa": "Versões mantidas como candidatas preliminares conforme fontes localizadas; revisão humana de aplicabilidade permanece pendente.",
+      "classificacao_anterior": {
+        "matrizes_aplicaveis_anos": [2025],
+        "matrizes_nao_aplicaveis_anos": [],
+        "justificativa": "Há apenas um PPC inventariado para este curso/oferta; ele é o PPC vigente localizado. Não existe versão histórica concorrente no inventário a classificar.",
+        "estado": "nao_validada"
+      },
+      "matrizes_pendentes_anos": [],
+      "decisoes_exclusao": [],
+      "revisao_humana": "pendente",
+      "matrizes_candidatas_anos": [2025]
     }
   ],
   "resumo": {
     "ppcs_total": 93,
-    "aplicaveis": 46,
-    "nao_aplicaveis": 47,
-    "pendentes": 0,
-    "ppcs_historicos_ainda_aplicaveis": 11
+    "nao_aplicaveis": 0,
+    "pendentes": 47,
+    "candidatas": 46,
+    "ppcs_historicos_candidatos": 11
   },
   "ressalvas": [
     "O Ato Decisório ConsEPE nº 270/2023 referencia a resolução do PPC anterior das Engenharias com numeração divergente da que aparece no próprio PPC 2017 e no PPC consolidado atual. A classificação usa a identidade inequívoca 'PPC 2017' e mantém a divergência documental explícita para revisão humana.",
-    "Para Biotecnologia (13 quadrimestres) e Bacharelado em Ciências Biológicas (14 quadrimestres), a conclusão de expiração considera a contagem a partir de 2022 e o calendário acadêmico de 2026; ambos os períodos mínimos já terminaram antes do 3º quadrimestre de 2026.",
-    "Esta avaliação não declara qualquer matriz academicamente suportada pelo produto. As 46 aplicáveis ainda precisam de modelagem completa, testes de regras e revisão humana antes de publicação."
-  ]
+    "A conclusão anterior de expiração de 47 PPCs foi retirada: a contagem e as condições de transição não estavam demonstradas individualmente. Os argumentos originais foram preservados em classificacao_anterior apenas para auditoria.",
+    "Esta avaliação não declara qualquer matriz academicamente suportada pelo produto. As 46 candidatas e as 47 pendentes continuam no escopo de revisão. O inventário usado pela trava permanece sem aplicabilidade aprovada."
+  ],
+  "estado_avaliacao": "preliminar",
+  "revisao_humana": "pendente"
 }
