@@ -1,5 +1,5 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "consultado_em": "2026-09-16",
   "fonte_oficial": "https://prograd.ufabc.edu.br/cursos",
   "total_cursos": 35,
@@ -35,7 +35,9 @@
           "atos_complementares": [
             "Retificação ConsEPE nº 254"
           ],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         },
         {
           "id": "bct_2015",
@@ -54,7 +56,9 @@
           "atos_complementares": [
             "Ato Decisório ConsEPE nº 137"
           ],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         },
         {
           "id": "bct_2009",
@@ -71,7 +75,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         }
       ],
       "cursos_base_admitidos": []
@@ -102,7 +108,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         },
         {
           "id": "bch_2015",
@@ -119,7 +127,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         },
         {
           "id": "bch_2010_2014",
@@ -136,7 +146,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         }
       ],
       "cursos_base_admitidos": []
@@ -167,7 +179,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         },
         {
           "id": "lch_2022",
@@ -184,7 +198,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         },
         {
           "id": "lch_2019",
@@ -201,7 +217,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         }
       ],
       "cursos_base_admitidos": []
@@ -232,7 +250,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         },
         {
           "id": "lcne_2022",
@@ -249,7 +269,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         },
         {
           "id": "lcne_2019",
@@ -266,7 +288,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         }
       ],
       "cursos_base_admitidos": []
@@ -299,7 +323,9 @@
           "atos_complementares": [
             "Retificação ConsEPE nº 256"
           ],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         }
       ],
       "cursos_base_admitidos": []
@@ -330,7 +356,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         }
       ],
       "cursos_base_admitidos": []
@@ -358,6 +386,27 @@
           "ato_transicao": "Ato Decisório CG nº 71/2025",
           "atos_complementares": [],
           "observacoes": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada",
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
+        },
+        {
+          "id": "biotecnologia_2018",
+          "ano": 2018,
+          "rotulo": "PPC 2018",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisorio_164_-_aprova_o_projeto_pedagogico_pp_do_curso_de_bahcarelado_em_biotecnologia_anexo_com_siglas.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bb",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 164/2018",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bb",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
@@ -396,6 +445,65 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada",
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
+        },
+        {
+          "id": "ciencia_computacao_2017",
+          "ano": 2017,
+          "rotulo": "PPC 2017",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/resolucoes/resolucao-211-revisao-do-pp-do-bacharelado-em-ciencia-da-computacao-esta-versao-contempla-as-retificacoes.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bcc",
+          "ato_aprovacao": "Resolução ConsEPE nº 211",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bcc",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "ciencia_computacao_2015",
+          "ano": 2015,
+          "rotulo": "PPC 2015",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/resolucoes/resolucao-195-revisao-do-pp-do-bacharelado-em-ciencia-da-computacao-esta-versao-contempla-as-retificacoes.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bcc",
+          "ato_aprovacao": "Resolução ConsEPE nº 195",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bcc",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "ciencia_computacao_2010",
+          "ano": 2010,
+          "rotulo": "PPC 2010",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://prograd.ufabc.edu.br/images/pdf/projetobcc2agrade_versao_marco_2010.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bcc",
+          "ato_aprovacao": "Resolução ConsEP nº 36",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bcc",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada"
         }
       ],
@@ -431,7 +539,9 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         }
       ],
       "cursos_base_admitidos": [
@@ -461,6 +571,46 @@
           "ato_transicao": "Ato Decisório CG nº 31/2023",
           "atos_complementares": [],
           "observacoes": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada",
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
+        },
+        {
+          "id": "ciencias_biologicas_2015",
+          "ano": 2015,
+          "rotulo": "PPC 2015",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/resolucoes/anexo3-resolucao-consepe-200.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bcb",
+          "ato_aprovacao": "Resolução ConsEPE nº 200",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bcb",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "ciencias_biologicas_2010",
+          "ano": 2010,
+          "rotulo": "PPC 2010",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://prograd.ufabc.edu.br/images/pdf/sintese_ppc_bach_ciencias_biologicas.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bcb",
+          "ato_aprovacao": "Resolução ConsEP nº 36",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bcb",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
@@ -500,6 +650,46 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada",
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
+        },
+        {
+          "id": "fisica_2015",
+          "ano": 2015,
+          "rotulo": "PPC 2015",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/resolucoes/anexo3-resolucao-consepe-198.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bfis",
+          "ato_aprovacao": "Resolução ConsEPE nº 198",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bfis",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "fisica_2009",
+          "ano": 2009,
+          "rotulo": "PPC 2009",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://prograd.ufabc.edu.br/images/pdf/sintese_ppc_bach_fisica.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bfis",
+          "ato_aprovacao": "Resolução ConsEP nº 36",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bfis",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada"
         }
       ],
@@ -533,6 +723,65 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada",
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
+        },
+        {
+          "id": "matematica_2017",
+          "ano": 2017,
+          "rotulo": "PPC 2017",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/resolucoes/resolucao-210-revisao-do-pp-do-bacharelado-em-matematica-esta-versao-contempla-as-retificacoes.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bm",
+          "ato_aprovacao": "Resolução ConsEPE nº 210",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bm",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "matematica_2012",
+          "ano": 2012,
+          "rotulo": "PPC 2012",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://prograd.ufabc.edu.br/images/pdf/131112_ppc_bach_matematica_2012.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bm",
+          "ato_aprovacao": "Versão atualizada em 08/11/2013, registrada pela Comissão de Graduação",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bm",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "matematica_2010",
+          "ano": 2010,
+          "rotulo": "PPC 2010",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://prograd.ufabc.edu.br/images/pdf/ppc_bach_matematica_1.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bm",
+          "ato_aprovacao": "Resolução ConsEP nº 36",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bm",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada"
         }
       ],
@@ -563,6 +812,46 @@
           "ato_transicao": "Ato Decisório CG nº 32/2023",
           "atos_complementares": [],
           "observacoes": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada",
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
+        },
+        {
+          "id": "quimica_2015",
+          "ano": 2015,
+          "rotulo": "PPC 2015",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/resolucoes/anexo3-resolucao-consepe-204.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bq",
+          "ato_aprovacao": "Resolução ConsEPE nº 204",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bq",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "quimica_2010",
+          "ano": 2010,
+          "rotulo": "PPC 2010",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://prograd.ufabc.edu.br/images/pdf/2010_projeto-pedagogico_quimica.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bq",
+          "ato_aprovacao": "Resolução ConsEP nº 36",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bq",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
@@ -601,6 +890,65 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada",
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
+        },
+        {
+          "id": "neurociencia_2021",
+          "ano": 2021,
+          "rotulo": "PPC 2021",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_resolucao_247_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bn",
+          "ato_aprovacao": "Resolução ConsEPE nº 247",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bn",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "neurociencia_2015",
+          "ano": 2015,
+          "rotulo": "PPC 2015",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/resolucoes/resolucao-192-revisao-do-pp-do-bacharelado-em-neurociencia-esta-versao-contempla-as-retificacoes.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bn",
+          "ato_aprovacao": "Resolução ConsEPE nº 192",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bn",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "neurociencia_2010",
+          "ano": 2010,
+          "rotulo": "PPC 2010",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/resolucoes/resolucao-92-pp-do-bacharelado-em-neurociencia-esta-versao-contempla-as-retificacoes.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bn",
+          "ato_aprovacao": "Resolução ConsEP nº 92",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bn",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada"
         }
       ],
@@ -634,7 +982,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         },
         {
           "id": "engenharia_ambiental_urbana_2017",
@@ -651,7 +1001,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         }
       ],
       "cursos_base_admitidos": [
@@ -684,7 +1036,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         },
         {
           "id": "engenharia_energia_2017",
@@ -701,7 +1055,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         }
       ],
       "cursos_base_admitidos": [
@@ -734,7 +1090,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         },
         {
           "id": "engenharia_informacao_2017",
@@ -751,7 +1109,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         }
       ],
       "cursos_base_admitidos": [
@@ -784,7 +1144,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         },
         {
           "id": "engenharia_instrumentacao_automacao_robotica_2017",
@@ -801,7 +1163,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         }
       ],
       "cursos_base_admitidos": [
@@ -834,7 +1198,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         },
         {
           "id": "engenharia_materiais_2017",
@@ -851,7 +1217,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         }
       ],
       "cursos_base_admitidos": [
@@ -884,7 +1252,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         },
         {
           "id": "engenharia_aeroespacial_2017",
@@ -901,7 +1271,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         }
       ],
       "cursos_base_admitidos": [
@@ -934,7 +1306,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         },
         {
           "id": "engenharia_biomedica_2017",
@@ -951,7 +1325,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         }
       ],
       "cursos_base_admitidos": [
@@ -984,7 +1360,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         },
         {
           "id": "engenharia_gestao_2017",
@@ -1001,7 +1379,9 @@
           "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada",
           "atos_complementares": [],
-          "observacoes": []
+          "observacoes": [],
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         }
       ],
       "cursos_base_admitidos": [
@@ -1033,6 +1413,46 @@
             "Retificação CG nº 136/2025"
           ],
           "observacoes": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada",
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
+        },
+        {
+          "id": "ciencias_economicas_2017",
+          "ano": 2017,
+          "rotulo": "PPC 2017",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_resolucao_218_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bce",
+          "ato_aprovacao": "Resolução ConsEPE nº 218",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bce",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "ciencias_economicas_2011",
+          "ano": 2011,
+          "rotulo": "PPC 2011 — atualizado em 2014",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/resolucoes/resoluo_109_-_projeto_pedaggico_bce__anexo_atualizado_em_fevereiro_de_2014.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bce",
+          "ato_aprovacao": "Resolução ConsEPE nº 109",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bce",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
@@ -1068,6 +1488,29 @@
           "observacoes": [
             "Possui múltipla trajetória para ingressantes de BC&T e de LCH, aprovada pelos Atos ConsEPE nº 292 e nº 291."
           ],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada",
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
+        },
+        {
+          "id": "filosofia_bacharelado_2011",
+          "ano": 2011,
+          "rotulo": "PPC 2011",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://prograd.ufabc.edu.br/cursos/bfil",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bfil",
+          "ato_aprovacao": "Resolução ConsEPE nº 118",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bfil",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [
+            "O índice oficial lista o PPC 2011, mas o PDF histórico não respondeu durante o levantamento automatizado."
+          ],
+          "evidencias_aplicabilidade": [],
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
@@ -1108,6 +1551,48 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada",
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
+        },
+        {
+          "id": "planejamento_territorial_2017",
+          "ano": 2017,
+          "rotulo": "PPC 2017",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/resolucoes/resolucao-214-anexo-iii-projeto-pedagogico-pp-do-bacharelado-em-planejamento-territorial-este-arquivo-contempla-as-retificacoes.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bpt",
+          "ato_aprovacao": "Resolução ConsEPE nº 214",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bpt",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "planejamento_territorial_2012",
+          "ano": 2012,
+          "rotulo": "PPC 2012/2013",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://prograd.ufabc.edu.br/cursos/bpt",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bpt",
+          "ato_aprovacao": "Resolução ConsEPE nº 143",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bpt",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [
+            "O índice oficial lista a versão 2012/2013, mas o PDF histórico não respondeu durante o levantamento automatizado."
+          ],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada"
         }
       ],
@@ -1139,6 +1624,65 @@
           "ato_transicao": "Ato Decisório CG nº 30/2023",
           "atos_complementares": [],
           "observacoes": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada",
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
+        },
+        {
+          "id": "politicas_publicas_2015",
+          "ano": 2015,
+          "rotulo": "PPC 2015",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/resolucoes/anexo-3-resolucao-191-Revisao-do-PP-do-Bacharelado-em-Politicas-Publicas-retificado.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bpp",
+          "ato_aprovacao": "Resolução ConsEPE nº 191",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bpp",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "politicas_publicas_2012",
+          "ano": 2012,
+          "rotulo": "PPC 2012",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/administracao/conselhos/consepe/resolucoes/resolucao-consepe-no-141-dispoe-sobre-a-alteracao-do-projeto-pedagogico-do-bacharelado-em-politicas-publicas",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bpp",
+          "ato_aprovacao": "Resolução ConsEPE nº 141",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bpp",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "politicas_publicas_2010",
+          "ano": 2010,
+          "rotulo": "PPC 2010",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/administracao/conselhos/consepe/resolucoes/resolucao-consep-no-91-091210-aprova-o-projeto-pedagogico-do-bacharelado-em-politicas-publicas",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bpp",
+          "ato_aprovacao": "Resolução ConsEP nº 91",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bpp",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
@@ -1175,6 +1719,50 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada",
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
+        },
+        {
+          "id": "relacoes_internacionais_2015",
+          "ano": 2015,
+          "rotulo": "PPC 2015",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://prograd.ufabc.edu.br/cursos/bri",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bri",
+          "ato_aprovacao": "Resolução ConsEPE nº 190",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bri",
+          "ato_transicao": null,
+          "atos_complementares": [
+            "Ato Decisório ConsEPE nº 136"
+          ],
+          "observacoes": [
+            "O índice oficial lista o PPC 2015, mas o PDF histórico não respondeu durante o levantamento automatizado."
+          ],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "relacoes_internacionais_2012",
+          "ano": 2012,
+          "rotulo": "PPC 2012/2013",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://prograd.ufabc.edu.br/images/pdf/pp_bach_relacoes_internacionais_atualizado_em_2013.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bri",
+          "ato_aprovacao": "Versão atualizada em 04/10/2013, registrada pela Comissão de Graduação",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bri",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada"
         }
       ],
@@ -1205,6 +1793,69 @@
           "ato_transicao": "Ato Decisório CG nº 36/2023",
           "atos_complementares": [],
           "observacoes": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada",
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
+        },
+        {
+          "id": "filosofia_licenciatura_2022",
+          "ano": 2022,
+          "rotulo": "PPC 2022",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_222_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lfil",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 222/2022",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/lfil",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [
+            "O endereço oficial retornou erro temporário durante o levantamento automatizado."
+          ],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "filosofia_licenciatura_2016",
+          "ano": 2016,
+          "rotulo": "PPC 2016",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_resolucao_215_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lfil",
+          "ato_aprovacao": "Resolução ConsEPE nº 215",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/lfil",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "filosofia_licenciatura_2011",
+          "ano": 2011,
+          "rotulo": "PPC 2011",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://prograd.ufabc.edu.br/cursos/lfil",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lfil",
+          "ato_aprovacao": "Resolução ConsEPE nº 117",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/lfil",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [
+            "O índice oficial lista o PPC 2011, mas o PDF histórico não respondeu durante o levantamento automatizado."
+          ],
+          "evidencias_aplicabilidade": [],
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
@@ -1243,7 +1894,9 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         }
       ],
       "cursos_base_admitidos": [
@@ -1278,7 +1931,9 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         }
       ],
       "cursos_base_admitidos": [
@@ -1308,6 +1963,84 @@
           "ato_transicao": "Ato Decisório CG nº 45/2023",
           "atos_complementares": [],
           "observacoes": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada",
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
+        },
+        {
+          "id": "ciencias_biologicas_licenciatura_2022",
+          "ano": 2022,
+          "rotulo": "PPC 2022",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_226_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lcb",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 226/2022",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/lcb",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "ciencias_biologicas_licenciatura_2016",
+          "ano": 2016,
+          "rotulo": "PPC 2016",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_resolucao_216_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lcb",
+          "ato_aprovacao": "Resolução ConsEPE nº 216",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/lcb",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "ciencias_biologicas_licenciatura_2015",
+          "ano": 2015,
+          "rotulo": "PPC 2015",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/resolucoes/anexo3-resolucao-consepe-193.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lcb",
+          "ato_aprovacao": "Resolução ConsEPE nº 193",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/lcb",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "ciencias_biologicas_licenciatura_2010",
+          "ano": 2010,
+          "rotulo": "PPC 2010",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://prograd.ufabc.edu.br/images/pdf/sintese_ppc_lic_ciencias_biologicas.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lcb",
+          "ato_aprovacao": "Resolução ConsEP nº 36",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/lcb",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
@@ -1344,6 +2077,67 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada",
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
+        },
+        {
+          "id": "fisica_licenciatura_2022",
+          "ano": 2022,
+          "rotulo": "PPC 2022",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ppc_transitorio_licfis_corrigido.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lfis",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 224/2022",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/lfis",
+          "ato_transicao": null,
+          "atos_complementares": [
+            "Retificação ConsEPE nº 72/2022"
+          ],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "fisica_licenciatura_2015",
+          "ano": 2015,
+          "rotulo": "PPC 2015",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/resolucoes/anexo3-resolucao-consepe-199.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lfis",
+          "ato_aprovacao": "Resolução ConsEPE nº 199",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/lfis",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "fisica_licenciatura_2010",
+          "ano": 2010,
+          "rotulo": "PPC 2010",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://prograd.ufabc.edu.br/images/pdf/ppc%20_lic_fisica.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lfis",
+          "ato_aprovacao": "Resolução ConsEP nº 36",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/lfis",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada"
         }
       ],
@@ -1377,6 +2171,65 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada",
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
+        },
+        {
+          "id": "matematica_licenciatura_2022",
+          "ano": 2022,
+          "rotulo": "PPC 2022",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_225_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lm",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 225/2022",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/lm",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "matematica_licenciatura_2018",
+          "ano": 2018,
+          "rotulo": "PPC 2018",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_resolucao_223_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lm",
+          "ato_aprovacao": "Resolução ConsEPE nº 223",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/lm",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "matematica_licenciatura_2010",
+          "ano": 2010,
+          "rotulo": "PPC 2010",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://prograd.ufabc.edu.br/images/pdf/pp_licenciatura_matematica.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lm",
+          "ato_aprovacao": "Resolução ConsEP nº 36",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/lm",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
           "revisao_humana": "nao_iniciada"
         }
       ],
@@ -1407,6 +2260,65 @@
           "ato_transicao": "Ato Decisório CG nº 76/2025",
           "atos_complementares": [],
           "observacoes": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada",
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
+        },
+        {
+          "id": "quimica_licenciatura_2022",
+          "ano": 2022,
+          "rotulo": "PPC 2022",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_223_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lq",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 223/2022",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/lq",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "quimica_licenciatura_2015",
+          "ano": 2015,
+          "rotulo": "PPC 2015",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/resolucoes/anexo3-resolucao-consepe-194.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lq",
+          "ato_aprovacao": "Resolução ConsEPE nº 194",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/lq",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "quimica_licenciatura_2010",
+          "ano": 2010,
+          "rotulo": "PPC 2010",
+          "documento_tipo": "ppc",
+          "ppc_url": "https://prograd.ufabc.edu.br/images/pdf/ppc_licenc_quimica_2010.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lq",
+          "ato_aprovacao": "Resolução ConsEP nº 36",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/lq",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "evidencias_aplicabilidade": [],
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
@@ -1445,7 +2357,9 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "documento_tipo": "ppc",
+          "evidencias_aplicabilidade": []
         }
       ],
       "cursos_base_admitidos": [
@@ -1454,7 +2368,9 @@
     }
   ],
   "criterio_publicacao": "O produto público exige cobertura validada de todos os cursos e de todas as matrizes aplicáveis a estudantes ativos.",
-  "total_documentos_curriculares_localizados": 51,
+  "total_documentos_curriculares_localizados": 93,
   "total_cursos_com_fontes_localizadas": 35,
-  "aviso_modelagem": "curso_base identifica a vinculação principal; cursos_base_admitidos registra trajetórias adicionais localizadas em atos oficiais e ainda sujeitas à modelagem e validação."
+  "aviso_modelagem": "curso_base identifica a vinculação principal; cursos_base_admitidos registra trajetórias adicionais localizadas em atos oficiais e ainda sujeitas à modelagem e validação.",
+  "estado_levantamento": "parcial",
+  "proxima_decisao": "Confirmar com evidência institucional quais versões ainda se aplicam a estudantes ativos."
 }
