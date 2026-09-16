@@ -27,8 +27,8 @@ def test_familias_preservam_candidatas_e_incluem_todas_as_pendentes():
         for curso_id, ano in familia["matrizes"]
     }
 
-    assert len(esperadas) == 51
-    assert len(mapeadas) == 51
+    assert len(esperadas) == 54
+    assert len(mapeadas) == 54
     assert mapeadas == esperadas
     pendentes = {
         (item["curso_id"], ano)
@@ -36,7 +36,7 @@ def test_familias_preservam_candidatas_e_incluem_todas_as_pendentes():
         for ano in item["matrizes_pendentes_anos"]
     }
     fila = [(c, a) for f in familias["familias"] for c, a in f["matrizes_pendentes"]]
-    assert len(fila) == len(set(fila)) == 42
+    assert len(fila) == len(set(fila)) == 39
     assert set(fila) == pendentes
     assert not (set(fila) & mapeadas)
     assert len(set(fila) | mapeadas) == 93
@@ -128,6 +128,24 @@ def test_lote_07_migra_bct_e_bch_para_familia_candidata_sem_ocultar_bch_2010():
         assert matriz not in familia["matrizes_pendentes"]
 
     assert ["bch", 2010] in familia["matrizes_pendentes"]
+
+
+def test_lotes_08_e_09_atualizam_familia_cientifica_sem_inferir_outras_matrizes():
+    familias, _ = _carregar()
+    por_id = {familia["id"]: familia for familia in familias["familias"]}
+    familia = por_id["bacharelados_cientificos_tecnologicos"]
+
+    promovidas = [
+        ["ciencias_biologicas", 2015],
+        ["fisica", 2015],
+        ["biotecnologia", 2018],
+    ]
+    for matriz in promovidas:
+        assert matriz in familia["matrizes"]
+        assert matriz not in familia["matrizes_pendentes"]
+
+    assert ["ciencias_biologicas", 2010] in familia["matrizes_pendentes"]
+    assert ["fisica", 2009] in familia["matrizes_pendentes"]
 
 
 def test_evidencias_representativas_sao_oficiais_da_ufabc():

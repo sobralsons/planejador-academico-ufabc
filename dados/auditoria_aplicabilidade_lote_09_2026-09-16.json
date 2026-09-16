@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "avaliado_em": "2026-09-16",
+  "base_vigencia": "dados/vigencia_ppcs_2026-09-16.json",
+  "escopo": "Lote 9 da auditoria individual de aplicabilidade. Resolve a lacuna documental prioritária do lote 8 para o PPC 2018 de Biotecnologia, sem declarar suporte acadêmico, revisão humana concluída ou decisão publicável.",
+  "politica_decisao": {
+    "regra_transicao_especifica_pode_sustentar_candidatura_preliminar": true,
+    "pagina_oficial_atual_pode_identificar_documento_vigente": true,
+    "norma_geral_basta_para_excluir": false,
+    "ausencia_de_prorrogacao_basta_para_excluir": false,
+    "revisao_humana_concluida": false
+  },
+  "auditoria": [
+    {
+      "curso_id": "biotecnologia",
+      "matriz_ano": 2018,
+      "status_antes": "pendente",
+      "resultado": "candidata_preliminar",
+      "aplicado_no_estado_global": true,
+      "ppc_substituido": "PPC do Bacharelado em Biotecnologia 2018, aprovado pelo Ato Decisório ConsEPE nº 164/2018",
+      "ppc_substituto": "PPC do Bacharelado em Biotecnologia 2023, aprovado pelo Ato Decisório ConsEPE nº 257/2023",
+      "entrada_em_vigor": "O Anexo II do Ato Decisório CG nº 71/2025 registra que o PPC 2023 entrou em vigor a partir do 2º quadrimestre de 2023.",
+      "tempo_integralizacao": "Não usado para promover este PPC. A candidatura decorre de regra específica e posterior de transição que preserva expressamente a opção pelo PPC 2018 para ingressantes até 2022.",
+      "calculo_termino_validade": "Não conclusivo e não necessário para esta candidatura preliminar. O documento atualizado de 2025 substitui a lacuna do lote 8 ao declarar diretamente a possibilidade de conclusão pelo PPC 2018 para ingressantes até 2022.",
+      "regras_transicao": "O Anexo II do Ato Decisório CG nº 71/2025 afirma expressamente que discentes ingressantes até 2022 poderão optar por concluir o curso sob as regras do PPC 2018 ou migrar para o PPC 2023. O mesmo documento determina que ingressantes a partir de 2023 seguem obrigatoriamente o PPC 2023.",
+      "possiveis_excecoes": "A revisão humana deve confirmar se existe ato posterior ao Ato Decisório CG nº 71/2025 que restrinja essa opção. A promoção é apenas para candidatura preliminar e não certifica integralização individual.",
+      "fontes": [
+        "biotecnologia_transicao_2025",
+        "biotecnologia_pagina_atual",
+        "biotecnologia_ato_71_2025"
+      ],
+      "lacunas": [
+        "Revisão acadêmica humana permanece pendente.",
+        "A candidatura preliminar não substitui modelagem curricular, testes adversariais nem revisão humana."
+      ],
+      "revisao_humana": {
+        "estado": "pendente",
+        "pronto_para_mudar_status": true,
+        "decisao_publicavel": false
+      }
+    }
+  ],
+  "fontes": {
+    "biotecnologia_transicao_2025": {
+      "tipo": "documento_complementar_transicao",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/comissao_ato_decisorio_71_anexo2.pdf",
+      "referencia": "Anexo II do Ato Decisório CG nº 71/2025 — Regras de Transição entre Matrizes Curriculares do Curso de Biotecnologia",
+      "data_publicacao": "2025-11-18",
+      "uso": "Registra que o PPC 2023 entrou em vigor no 2º quadrimestre de 2023; ingressantes a partir de 2023 seguem obrigatoriamente o PPC 2023; ingressantes até 2022 podem optar por concluir pelo PPC 2018 ou migrar para o PPC 2023."
+    },
+    "biotecnologia_pagina_atual": {
+      "tipo": "pagina_oficial_curso",
+      "url": "https://prograd.ufabc.edu.br/cursos/bb",
+      "referencia": "ProGrad — Bacharelado em Biotecnologia",
+      "uso": "A página atual lista o PPC 2018 e aponta as regras e a tabela de transição aprovadas pelo Ato Decisório CG nº 71/2025."
+    },
+    "biotecnologia_ato_71_2025": {
+      "tipo": "ato_decisorio",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicare/boletimdeservico/boletim_servico_ufabc_1497.pdf",
+      "referencia": "Ato Decisório nº 71/2025 - CG, publicado no Boletim de Serviço nº 1497 de 18/11/2025",
+      "uso": "Art. 2º aprova a atualização do documento complementar à parte II do PPC de Biotecnologia contendo as regras e a tabela de transição entre matrizes curriculares."
+    }
+  },
+  "resumo": {
+    "ppcs_auditados_lote": 1,
+    "evidencias_suficientes_para_candidatura_preliminar": 1,
+    "estado_global_alterado_neste_commit": true,
+    "exclusoes_definitivas": 0,
+    "revisao_humana": "pendente",
+    "decisoes_publicaveis": 0
+  }
+}

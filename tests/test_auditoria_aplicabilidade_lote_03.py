@@ -141,9 +141,9 @@ def test_lote_03_preserva_suas_decisoes_sem_congelar_resumo_global_antigo():
     assert vigencia["resumo"] == {
         "ppcs_total": 93,
         "nao_aplicaveis": 0,
-        "pendentes": 40,
-        "candidatas": 53,
-        "ppcs_historicos_candidatos": 18,
+        "pendentes": 39,
+        "candidatas": 54,
+        "ppcs_historicos_candidatos": 19,
     }
     assert all(
         "suportada" not in item.get("status_resultante", "")
