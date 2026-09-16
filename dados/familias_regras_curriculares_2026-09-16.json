@@ -2,7 +2,7 @@
   "schema_version": 2,
   "avaliado_em": "2026-09-16",
   "base_vigencia": "dados/vigencia_ppcs_2026-09-16.json",
-  "escopo": "Agrupa 48 matrizes candidatas preliminares e mantém 45 matrizes com aplicabilidade pendente nas mesmas famílias para revisão. Não declara suporte acadêmico nem confirma vigência.",
+  "escopo": "Agrupa 51 matrizes candidatas preliminares e mantém 42 matrizes com aplicabilidade pendente nas mesmas famílias para revisão. Não declara suporte acadêmico nem confirma vigência.",
   "capacidades_modelo": {
     "categorias_creditos": {
       "descricao": "Mínimos de créditos por obrigatórias, opção limitada e livres.",
@@ -63,14 +63,14 @@
       "descricao": "Bacharelados interdisciplinares de ingresso.",
       "matrizes": [
         ["bct", 2023],
-        ["bch", 2022]
+        ["bct", 2015],
+        ["bct", 2009],
+        ["bch", 2022],
+        ["bch", 2015]
       ],
       "capacidades_criticas": ["categorias_creditos", "atividades_complementares", "extensao", "grupos_escolha", "equivalencias_transicao"],
       "observacao": "Servem de base para vários cursos de formação específica; erros aqui se propagam para múltiplas integralizações.",
       "matrizes_pendentes": [
-        ["bct", 2015],
-        ["bct", 2009],
-        ["bch", 2015],
         ["bch", 2010]
       ]
     },
