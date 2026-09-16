@@ -13,7 +13,7 @@
     "regra_geral": "Aplicar a Resolução ConsEPE nº 255/2022, art. 12: o PPC substituído tem validade igual ao tempo de integralização do curso, contado do ano anterior à entrada em vigor do novo PPC, e depois é extinto.",
     "transicao_especifica": "Atos de transição podem restringir adesão e identificar quem pode permanecer no PPC anterior; a mera existência de tabela de convalidação ou menção histórica não mantém um PPC vigente.",
     "data_corte": "2026-09-16",
-    "observacao": "A norma geral e o edital de vagas não bastam para excluir uma matriz. Datas e regras específicas precisam ser demonstradas. As 46 candidatas também não constituem lista definitiva de vigência.",
+    "observacao": "A norma geral e o edital de vagas não bastam para excluir uma matriz. Datas e regras específicas precisam ser demonstradas. As candidatas também não constituem lista definitiva de vigência.",
     "exclusao": "Exige evidência por matriz: entrada em vigor do PPC substituto, prazo aplicável e sua fonte, cálculo do término, atos de transição relevantes e revisão humana. Ausência de ato localizado não comprova extinção."
   },
   "fontes_oficiais": {
@@ -94,6 +94,18 @@
       "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_251_anexo.pdf",
       "referencia": "PPC 2023 do Bacharelado em Ciências Biológicas",
       "uso": "Indica tempo mínimo de integralização de 14 quadrimestres."
+    },
+    "neuro_ato_265_2023": {
+      "tipo": "ato_curso",
+      "url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisrio_265_-_aprovar_a_atualizao_do_projeto_pedaggico_do_curso_de_bacharelado_em_neurocincia_-_ato_assinado.pdf",
+      "referencia": "Ato Decisório ConsEPE nº 265/2023",
+      "uso": "PPC 2023 vale para ingressantes a partir de 2023; ingressantes até 2022 podem seguir o PPC aprovado pela Resolução ConsEPE nº 247/2021."
+    },
+    "neuro_faq_atual": {
+      "tipo": "pagina_oficial_curso",
+      "url": "https://cursos.ufabc.edu.br/bacharelado-em-neurociencia/faq",
+      "referencia": "Bacharelado em Neurociência — FAQ",
+      "uso": "A página atual afirma que há três projetos pedagógicos ativos e que estudantes já vinculados antes de 2023 podem escolher qual deles seguir."
     }
   },
   "classificacao": [
@@ -308,18 +320,18 @@
     {
       "curso_id": "neurociencia",
       "matrizes_nao_aplicaveis_anos": [],
-      "evidencias": ["res_consepe_255_2022", "edital_cfe_028_2022"],
-      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "evidencias": ["res_consepe_255_2022", "neuro_ato_265_2023", "neuro_faq_atual"],
+      "justificativa": "O PPC 2021 passa a candidata preliminar porque o Ato ConsEPE nº 265/2023 o preserva para ingressantes até 2022 e a página oficial atual do curso declara três projetos pedagógicos ativos. Os PPCs 2015 e 2010 permanecem pendentes; a classificação não certifica suporte acadêmico.",
       "classificacao_anterior": {
         "matrizes_aplicaveis_anos": [2023],
         "matrizes_nao_aplicaveis_anos": [2021, 2015, 2010],
         "justificativa": "O PPC mais recente inventariado permanece aplicável. As versões históricas foram substituídas e já ultrapassaram o período de validade correspondente ao tempo institucional de integralização; não foi localizado ato posterior que prorrogue sua vigência.",
         "estado": "nao_validada"
       },
-      "matrizes_pendentes_anos": [2021, 2015, 2010],
+      "matrizes_pendentes_anos": [2015, 2010],
       "decisoes_exclusao": [],
       "revisao_humana": "pendente",
-      "matrizes_candidatas_anos": [2023]
+      "matrizes_candidatas_anos": [2023, 2021]
     },
     {
       "curso_id": "engenharia_ambiental_urbana",
@@ -661,14 +673,15 @@
   "resumo": {
     "ppcs_total": 93,
     "nao_aplicaveis": 0,
-    "pendentes": 47,
-    "candidatas": 46,
-    "ppcs_historicos_candidatos": 11
+    "pendentes": 46,
+    "candidatas": 47,
+    "ppcs_historicos_candidatos": 12
   },
   "ressalvas": [
     "O Ato Decisório ConsEPE nº 270/2023 referencia a resolução do PPC anterior das Engenharias com numeração divergente da que aparece no próprio PPC 2017 e no PPC consolidado atual. A classificação usa a identidade inequívoca 'PPC 2017' e mantém a divergência documental explícita para revisão humana.",
     "A conclusão anterior de expiração de 47 PPCs foi retirada: a contagem e as condições de transição não estavam demonstradas individualmente. Os argumentos originais foram preservados em classificacao_anterior apenas para auditoria.",
-    "Esta avaliação não declara qualquer matriz academicamente suportada pelo produto. As 46 candidatas e as 47 pendentes continuam no escopo de revisão. O inventário usado pela trava permanece sem aplicabilidade aprovada."
+    "O PPC 2021 de Neurociência foi promovido de pendente para candidata preliminar no lote 4 porque o Ato ConsEPE nº 265/2023 preserva essa versão e a página oficial atual do curso declara três PPCs ativos. O PPC 2015 permanece pendente por tensão documental com a validade de quatro anos prevista no PPC 2021.",
+    "Esta avaliação não declara qualquer matriz academicamente suportada pelo produto. As 47 candidatas e as 46 pendentes continuam no escopo de revisão. O inventário usado pela trava permanece sem aplicabilidade aprovada."
   ],
   "estado_avaliacao": "preliminar",
   "revisao_humana": "pendente"
