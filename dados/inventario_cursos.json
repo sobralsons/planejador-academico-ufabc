@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "consultado_em": "2026-09-16",
   "fonte_oficial": "https://prograd.ufabc.edu.br/cursos",
   "total_cursos": 35,
@@ -27,11 +27,15 @@
           "ato_aprovacao": "Ato Decisório ConsEPE nº 249",
           "vigencia_ingresso": null,
           "transicao_url": "https://prograd.ufabc.edu.br/bct/pps",
-          "ato_transicao": "Retificação ConsEPE nº 254",
+          "ato_transicao": null,
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [
+            "Retificação ConsEPE nº 254"
+          ],
+          "observacoes": []
         },
         {
           "id": "bct_2015",
@@ -42,11 +46,15 @@
           "ato_aprovacao": "Resolução ConsEPE nº 188",
           "vigencia_ingresso": null,
           "transicao_url": "https://prograd.ufabc.edu.br/bct/pps",
-          "ato_transicao": "Ato Decisório ConsEPE nº 137",
+          "ato_transicao": null,
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [
+            "Ato Decisório ConsEPE nº 137"
+          ],
+          "observacoes": []
         },
         {
           "id": "bct_2009",
@@ -61,9 +69,12 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         }
-      ]
+      ],
+      "cursos_base_admitidos": []
     },
     {
       "id": "bch",
@@ -89,7 +100,9 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         },
         {
           "id": "bch_2015",
@@ -104,7 +117,9 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         },
         {
           "id": "bch_2010_2014",
@@ -119,9 +134,12 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         }
-      ]
+      ],
+      "cursos_base_admitidos": []
     },
     {
       "id": "lch",
@@ -147,7 +165,9 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         },
         {
           "id": "lch_2022",
@@ -162,7 +182,9 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         },
         {
           "id": "lch_2019",
@@ -177,9 +199,12 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         }
-      ]
+      ],
+      "cursos_base_admitidos": []
     },
     {
       "id": "lcne",
@@ -205,7 +230,9 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         },
         {
           "id": "lcne_2022",
@@ -220,7 +247,9 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         },
         {
           "id": "lcne_2019",
@@ -235,9 +264,12 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         }
-      ]
+      ],
+      "cursos_base_admitidos": []
     },
     {
       "id": "leila",
@@ -259,13 +291,18 @@
           "ato_aprovacao": "Ato Decisório ConsEPE nº 306/2025",
           "vigencia_ingresso": null,
           "transicao_url": null,
-          "ato_transicao": "Retificação ConsEPE nº 256",
+          "ato_transicao": null,
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [
+            "Retificação ConsEPE nº 256"
+          ],
+          "observacoes": []
         }
-      ]
+      ],
+      "cursos_base_admitidos": []
     },
     {
       "id": "lec_ciencias_humanas_sociais",
@@ -291,9 +328,12 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         }
-      ]
+      ],
+      "cursos_base_admitidos": []
     },
     {
       "id": "biotecnologia",
@@ -303,9 +343,30 @@
         "Santo André"
       ],
       "curso_base": "bct",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "biotecnologia_2023",
+          "ano": 2023,
+          "rotulo": "PPC 2023",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_257_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bb",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 257/2023",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bb",
+          "ato_transicao": "Ato Decisório CG nº 71/2025",
+          "atos_complementares": [],
+          "observacoes": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ],
+      "cursos_base_admitidos": [
+        "bct"
+      ]
     },
     {
       "id": "ciencia_computacao",
@@ -315,9 +376,32 @@
         "Santo André"
       ],
       "curso_base": "bct",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "ciencia_computacao_2023",
+          "ano": 2023,
+          "rotulo": "PPC 2023",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_267_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bcc",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 267/2023",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bcc",
+          "ato_transicao": "Ato Decisório CG nº 44/2023",
+          "atos_complementares": [
+            "Retificação ConsEPE nº 195"
+          ],
+          "observacoes": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ],
+      "cursos_base_admitidos": [
+        "bct"
+      ]
     },
     {
       "id": "ciencia_dados",
@@ -327,9 +411,32 @@
         "Santo André"
       ],
       "curso_base": "bct",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "ciencia_dados_2023",
+          "ano": 2023,
+          "rotulo": "PPC 2023",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_269_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bcd",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 269/2023",
+          "vigencia_ingresso": null,
+          "transicao_url": null,
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [
+            "Primeiro PPC localizado; o curso iniciou oferta em 2025."
+          ],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ],
+      "cursos_base_admitidos": [
+        "bct"
+      ]
     },
     {
       "id": "ciencias_biologicas",
@@ -339,9 +446,30 @@
         "Santo André"
       ],
       "curso_base": "bct",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "ciencias_biologicas_2023",
+          "ano": 2023,
+          "rotulo": "PPC 2023",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_251_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bcb",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 251/2023",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bcb",
+          "ato_transicao": "Ato Decisório CG nº 31/2023",
+          "atos_complementares": [],
+          "observacoes": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ],
+      "cursos_base_admitidos": [
+        "bct"
+      ]
     },
     {
       "id": "fisica",
@@ -351,9 +479,33 @@
         "Santo André"
       ],
       "curso_base": "bct",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "fisica_2023",
+          "ano": 2023,
+          "rotulo": "PPC 2023",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_268_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bfis",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 268/2023",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bfis",
+          "ato_transicao": "Ato Decisório CG nº 81/2026",
+          "atos_complementares": [
+            "Retificação ConsEPE nº 255/2023",
+            "Retificação ConsEPE nº 133/2025"
+          ],
+          "observacoes": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ],
+      "cursos_base_admitidos": [
+        "bct"
+      ]
     },
     {
       "id": "matematica",
@@ -363,9 +515,30 @@
         "Santo André"
       ],
       "curso_base": "bct",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "matematica_2023",
+          "ano": 2023,
+          "rotulo": "PPC 2023",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_262_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bm",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 262/2023",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bm",
+          "ato_transicao": "Ato Decisório CG nº 40/2023",
+          "atos_complementares": [],
+          "observacoes": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ],
+      "cursos_base_admitidos": [
+        "bct"
+      ]
     },
     {
       "id": "quimica",
@@ -375,9 +548,30 @@
         "Santo André"
       ],
       "curso_base": "bct",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "quimica_2023",
+          "ano": 2023,
+          "rotulo": "PPC 2023",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_253_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bq",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 253/2023",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bq",
+          "ato_transicao": "Ato Decisório CG nº 32/2023",
+          "atos_complementares": [],
+          "observacoes": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ],
+      "cursos_base_admitidos": [
+        "bct"
+      ]
     },
     {
       "id": "neurociencia",
@@ -387,9 +581,32 @@
         "São Bernardo do Campo"
       ],
       "curso_base": "bct",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "neurociencia_2023",
+          "ano": 2023,
+          "rotulo": "PPC 2023",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_265_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bn",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 265/2023",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bn",
+          "ato_transicao": null,
+          "atos_complementares": [
+            "Retificação CG nº 235/2023"
+          ],
+          "observacoes": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ],
+      "cursos_base_admitidos": [
+        "bct"
+      ]
     },
     {
       "id": "engenharia_ambiental_urbana",
@@ -415,7 +632,9 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         },
         {
           "id": "engenharia_ambiental_urbana_2017",
@@ -430,8 +649,13 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         }
+      ],
+      "cursos_base_admitidos": [
+        "bct"
       ]
     },
     {
@@ -458,7 +682,9 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         },
         {
           "id": "engenharia_energia_2017",
@@ -473,8 +699,13 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         }
+      ],
+      "cursos_base_admitidos": [
+        "bct"
       ]
     },
     {
@@ -501,7 +732,9 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         },
         {
           "id": "engenharia_informacao_2017",
@@ -516,8 +749,13 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         }
+      ],
+      "cursos_base_admitidos": [
+        "bct"
       ]
     },
     {
@@ -544,7 +782,9 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         },
         {
           "id": "engenharia_instrumentacao_automacao_robotica_2017",
@@ -559,8 +799,13 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         }
+      ],
+      "cursos_base_admitidos": [
+        "bct"
       ]
     },
     {
@@ -587,7 +832,9 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         },
         {
           "id": "engenharia_materiais_2017",
@@ -602,8 +849,13 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         }
+      ],
+      "cursos_base_admitidos": [
+        "bct"
       ]
     },
     {
@@ -630,7 +882,9 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         },
         {
           "id": "engenharia_aeroespacial_2017",
@@ -645,8 +899,13 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         }
+      ],
+      "cursos_base_admitidos": [
+        "bct"
       ]
     },
     {
@@ -673,7 +932,9 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         },
         {
           "id": "engenharia_biomedica_2017",
@@ -688,8 +949,13 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         }
+      ],
+      "cursos_base_admitidos": [
+        "bct"
       ]
     },
     {
@@ -716,7 +982,9 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         },
         {
           "id": "engenharia_gestao_2017",
@@ -731,8 +999,13 @@
           "aplicabilidade": "a_confirmar",
           "modelagem": "nao_iniciada",
           "testes": "nao_iniciados",
-          "revisao_humana": "nao_iniciada"
+          "revisao_humana": "nao_iniciada",
+          "atos_complementares": [],
+          "observacoes": []
         }
+      ],
+      "cursos_base_admitidos": [
+        "bct"
       ]
     },
     {
@@ -743,9 +1016,32 @@
         "São Bernardo do Campo"
       ],
       "curso_base": "bch",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "ciencias_economicas_2022",
+          "ano": 2022,
+          "rotulo": "PPC 2022",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicare/boletimdeservico/boletim_servico_ufabc_1192.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bce",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 239/2022",
+          "vigencia_ingresso": "Válido para ingressantes a partir de 2021; anteriores conforme transição",
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bce",
+          "ato_transicao": "Ato Decisório CG nº 67/2025",
+          "atos_complementares": [
+            "Retificação CG nº 136/2025"
+          ],
+          "observacoes": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ],
+      "cursos_base_admitidos": [
+        "bch"
+      ]
     },
     {
       "id": "filosofia_bacharelado",
@@ -755,9 +1051,34 @@
         "São Bernardo do Campo"
       ],
       "curso_base": "bch",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "filosofia_bacharelado_2022",
+          "ano": 2022,
+          "rotulo": "PPC 2022",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_240_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bfil",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 240/2022",
+          "vigencia_ingresso": "Válido para ingressantes a partir de 2021; anteriores conforme transição",
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bfil",
+          "ato_transicao": "Ato Decisório CG nº 24/2022",
+          "atos_complementares": [],
+          "observacoes": [
+            "Possui múltipla trajetória para ingressantes de BC&T e de LCH, aprovada pelos Atos ConsEPE nº 292 e nº 291."
+          ],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ],
+      "cursos_base_admitidos": [
+        "bch",
+        "bct",
+        "lch"
+      ]
     },
     {
       "id": "planejamento_territorial",
@@ -767,9 +1088,33 @@
         "São Bernardo do Campo"
       ],
       "curso_base": "bch",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "planejamento_territorial_2022",
+          "ano": 2022,
+          "rotulo": "PPC 2022",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_237_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bpt",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 237/2022",
+          "vigencia_ingresso": "Válido para ingressantes a partir de 2023; anteriores conforme transição",
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bpt",
+          "ato_transicao": "Ato Decisório CG nº 25/2022",
+          "atos_complementares": [],
+          "observacoes": [
+            "Possui múltipla trajetória para ingressantes de BC&T, aprovada pelo Ato ConsEPE nº 321/2026."
+          ],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ],
+      "cursos_base_admitidos": [
+        "bch",
+        "bct"
+      ]
     },
     {
       "id": "politicas_publicas",
@@ -779,9 +1124,30 @@
         "São Bernardo do Campo"
       ],
       "curso_base": "bch",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "politicas_publicas_2023",
+          "ano": 2023,
+          "rotulo": "PPC 2023",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisrio_250_-_aprovar_a_atualizao_do_projeto_pedaggico_do_curso_de_bacharelado_em_polticas_pblicas_conforme_anexo_-_anexo_retificado.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bpp",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 250/2023",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bpp",
+          "ato_transicao": "Ato Decisório CG nº 30/2023",
+          "atos_complementares": [],
+          "observacoes": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ],
+      "cursos_base_admitidos": [
+        "bch"
+      ]
     },
     {
       "id": "relacoes_internacionais",
@@ -791,9 +1157,30 @@
         "São Bernardo do Campo"
       ],
       "curso_base": "bch",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "relacoes_internacionais_2022",
+          "ano": 2022,
+          "rotulo": "PPC 2022",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_238_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/bri",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 238/2022",
+          "vigencia_ingresso": "Válido para ingressantes a partir de 2023; anteriores conforme transição",
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/bri",
+          "ato_transicao": "Ato Decisório CG nº 58/2024",
+          "atos_complementares": [],
+          "observacoes": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ],
+      "cursos_base_admitidos": [
+        "bch"
+      ]
     },
     {
       "id": "filosofia_licenciatura",
@@ -803,9 +1190,30 @@
         "São Bernardo do Campo"
       ],
       "curso_base": "lch",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "filosofia_licenciatura_2023",
+          "ano": 2023,
+          "rotulo": "PPC 2023",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ppc_licfil_final2023_retificado",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lfil",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 254/2023",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/lfil",
+          "ato_transicao": "Ato Decisório CG nº 36/2023",
+          "atos_complementares": [],
+          "observacoes": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ],
+      "cursos_base_admitidos": [
+        "lch"
+      ]
     },
     {
       "id": "geografia_licenciatura",
@@ -815,9 +1223,32 @@
         "São Bernardo do Campo"
       ],
       "curso_base": "lch",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "geografia_licenciatura_2025",
+          "ano": 2025,
+          "rotulo": "PPC 2025",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato-decisorio_312_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lg",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 312/2025",
+          "vigencia_ingresso": null,
+          "transicao_url": null,
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [
+            "Primeiro PPC localizado para o curso."
+          ],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ],
+      "cursos_base_admitidos": [
+        "lch"
+      ]
     },
     {
       "id": "historia_licenciatura",
@@ -827,9 +1258,32 @@
         "São Bernardo do Campo"
       ],
       "curso_base": "lch",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "historia_licenciatura_2024",
+          "ano": 2024,
+          "rotulo": "PPC 2024",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_279_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lh",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 279/2024",
+          "vigencia_ingresso": null,
+          "transicao_url": null,
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [
+            "Primeiro PPC localizado para o curso."
+          ],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ],
+      "cursos_base_admitidos": [
+        "lch"
+      ]
     },
     {
       "id": "ciencias_biologicas_licenciatura",
@@ -839,9 +1293,30 @@
         "Santo André"
       ],
       "curso_base": "lcne",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "ciencias_biologicas_licenciatura_2023",
+          "ano": 2023,
+          "rotulo": "PPC 2023",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_266_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lcb",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 266/2023",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/lcb",
+          "ato_transicao": "Ato Decisório CG nº 45/2023",
+          "atos_complementares": [],
+          "observacoes": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ],
+      "cursos_base_admitidos": [
+        "lcne"
+      ]
     },
     {
       "id": "fisica_licenciatura",
@@ -851,9 +1326,30 @@
         "Santo André"
       ],
       "curso_base": "lcne",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "fisica_licenciatura_2023",
+          "ano": 2023,
+          "rotulo": "PPC 2023",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_263_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lfis",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 263/2023",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/lfis",
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ],
+      "cursos_base_admitidos": [
+        "lcne"
+      ]
     },
     {
       "id": "matematica_licenciatura",
@@ -863,9 +1359,30 @@
         "Santo André"
       ],
       "curso_base": "lcne",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "matematica_licenciatura_2023",
+          "ano": 2023,
+          "rotulo": "PPC 2023",
+          "ppc_url": "https://prograd.ufabc.edu.br/pdf/pp_lic_matconsepe_ato_decisorio_256_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lm",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 256/2023",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/lm",
+          "ato_transicao": "Ato Decisório CG nº 35/2023",
+          "atos_complementares": [],
+          "observacoes": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ],
+      "cursos_base_admitidos": [
+        "lcne"
+      ]
     },
     {
       "id": "quimica_licenciatura",
@@ -875,9 +1392,30 @@
         "Santo André"
       ],
       "curso_base": "lcne",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "quimica_licenciatura_2023",
+          "ano": 2023,
+          "rotulo": "PPC 2023",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_252_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lq",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 252/2023",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/cursos/lq",
+          "ato_transicao": "Ato Decisório CG nº 76/2025",
+          "atos_complementares": [],
+          "observacoes": [],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ],
+      "cursos_base_admitidos": [
+        "lcne"
+      ]
     },
     {
       "id": "pedagogia",
@@ -887,12 +1425,36 @@
         "Santo André"
       ],
       "curso_base": "leila",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "pedagogia_2025",
+          "ano": 2025,
+          "rotulo": "PPC 2025",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato-decisorio_311_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lp",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 311/2025",
+          "vigencia_ingresso": null,
+          "transicao_url": null,
+          "ato_transicao": null,
+          "atos_complementares": [],
+          "observacoes": [
+            "Primeiro PPC localizado para o curso."
+          ],
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ],
+      "cursos_base_admitidos": [
+        "leila"
+      ]
     }
   ],
   "criterio_publicacao": "O produto público exige cobertura validada de todos os cursos e de todas as matrizes aplicáveis a estudantes ativos.",
-  "total_documentos_curriculares_localizados": 30,
-  "total_cursos_com_fontes_localizadas": 14
+  "total_documentos_curriculares_localizados": 51,
+  "total_cursos_com_fontes_localizadas": 35,
+  "aviso_modelagem": "curso_base identifica a vinculação principal; cursos_base_admitidos registra trajetórias adicionais localizadas em atos oficiais e ainda sujeitas à modelagem e validação."
 }
