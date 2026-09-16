@@ -56,7 +56,7 @@
 - curso-base na previsão;
 - certificado de ranking exato e Pareto parcial/completo;
 - configurações avançadas da busca;
-- manifesto estrutural e 44 testes automatizados.
+- manifesto estrutural e 51 testes automatizados.
 
 # Laboratório de Trajetórias
 
@@ -73,3 +73,39 @@
 - roteiro acadêmico aproximado por quadrimestre;
 - indicador transparente de confiança;
 - relatório completo visualizado dentro da própria interface.
+
+## Atualização — combinação de avaliações e catálogo 2025–2026
+
+- avaliação docente combinada: 60% avaliação geral + 40% avaliação da disciplina, quando ambas existem;
+- visão geral e visão específica exibidas lado a lado no relatório;
+- opção de usar somente a avaliação geral ao desligar a combinação na interface;
+- recomendações atualizadas pelo Catálogo de Disciplinas UFABC 2025–2026;
+- fallback textual para recomendações oficiais ainda não convertidas em códigos;
+- 51 testes automatizados aprovados após as correções.
+
+
+## Ajuste de matrícula — PDF oficial
+
+- leitura direta do PDF de ajuste publicado pela UFABC;
+- uso de vagas remanescentes para novas inclusões;
+- identificação de turmas de alta demanda;
+- separação entre a oferta inicial (Excel) e a oferta de ajuste (PDF);
+- seleção da matrícula já deferida a partir do Excel inicial, inclusive para turmas ausentes no PDF de ajuste;
+- uso do PDF apenas para disponibilidade de novas inclusões e diagnóstico;
+- seleção manual das turmas já deferidas como base do ajuste;
+- remoção e substituição de disciplinas com recálculo de conflitos e métricas;
+- diagnóstico explícito de falta de vagas remanescentes;
+- exibição da linha/curso de origem da oferta para conferência no SIGAA;
+- alias oficial de Programação Estruturada entre códigos 2015 e 2023 preservando matrizes antigas;
+- cache da leitura do PDF durante a sessão para evitar reprocessamento em cada rerun do Streamlit;
+- 52 testes automatizados aprovados.
+
+
+## Ajuste de matrícula — reconstrução da matrícula já deferida
+
+- a lista de "Minha matrícula atual" agora lê todas as turmas do Excel inicial do campus/turno, sem filtrar pela matriz principal selecionada;
+- componentes de outra engenharia, matriz, opção livre ou compartilhados continuam disponíveis para seleção;
+- turmas já deferidas fora da matriz principal são mantidas temporariamente como componentes livres apenas para reconstrução da grade e verificação de conflitos;
+- o código completo da turma aparece no início do seletor para facilitar a busca;
+- validação real com NA1ESTM004-17SA, NC1ESMA002-23SA, NA1ESTO008-17SA, NA1ESTA019-17SA e NA1ESTM002-17SA;
+- 54 testes automatizados aprovados.

@@ -26,7 +26,7 @@ from planejador.multicurso import (
     aplicar_estagio, carregar_registro_curriculos, comparar_curriculos,
     gerar_relatorio_multicurso_html, resolver_curriculo, selecionar_melhor_sobreposicao,
 )
-from planejador.ofertas import ler_ofertas
+from planejador.ofertas import ler_ofertas, ler_ofertas_matricula_inicial_completa
 from planejador.planejador import ConfiguracaoBusca, gerar_planejamento
 from planejador.relatorio import gerar_relatorio_html, gerar_relatorio_texto
 from planejador.trajetorias import (
@@ -129,8 +129,12 @@ def _gerar_cenarios(
         if assinatura in assinaturas_cenarios:
             continue
         assinaturas_cenarios.add(assinatura)
+        ofertas_cenario = tuple(
+            o for o in ofertas_resultado.ofertas
+            if o.vagas_remanescentes is None or o.vagas_remanescentes > 0
+        )
         planejamento = gerar_planejamento(
-            ofertas_resultado.ofertas,
+            ofertas_cenario,
             curriculo,
             cumpridas,
             situacao.concluidas,
@@ -225,6 +229,7 @@ def _salvar_resumo_json(
                 "interesses_formacao": list(config.preferencias.interesses_formacao),
             },
         },
+        "avisos": list(dict.fromkeys(resultado.avisos)),
         "validacao_busca": resultado.validacao_busca,
         "auditoria": auditoria,
         "analise_desempenho": analise_desempenho,
@@ -250,9 +255,9 @@ def _salvar_resumo_json(
     caminho.write_text(json.dumps(bruto, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def executar(config_path: Path, retornar_contexto: bool = False):
+def executar(config_path: Path, retornar_contexto: bool = False, *, base_dados: Path | None = None, diretorio_saidas: Path | None = None):
     config = carregar_configuracao(config_path)
-    base = config_path.parent.parent if config_path.parent.name == "config" else config_path.parent
+    base = Path(base_dados) if base_dados is not None else (config_path.parent.parent if config_path.parent.name == "config" else config_path.parent)
 
     registro_curriculos = carregar_registro_curriculos(base, config.arquivo_registro_curriculos)
     if config.curriculo_principal_id not in registro_curriculos:
@@ -298,8 +303,9 @@ def executar(config_path: Path, retornar_contexto: bool = False):
     estagio_status_principal = _status_estagio_principal(config)
     cumpridas = _aplicar_status_estagio(cumpridas, registro_principal, estagio_status_principal)
 
+    caminho_ofertas_resolvido = resolver(base, config.arquivo_ofertas)
     resultado_ofertas = ler_ofertas(
-        resolver(base, config.arquivo_ofertas),
+        caminho_ofertas_resolvido,
         codigos_curriculo=set(curriculo),
         nomes_curriculo={c: d.nome for c, d in curriculo.items()},
         aliases_oferta=aliases,
@@ -307,10 +313,44 @@ def executar(config_path: Path, retornar_contexto: bool = False):
         turno=config.turno,
         professores_bloqueados=set(config.professores_bloqueados),
     )
+    modo_ajuste = caminho_ofertas_resolvido.suffix.lower() == ".pdf"
+
+    # No modo de ajuste existem duas fontes com papéis diferentes:
+    # 1) a planilha da matrícula inicial, usada para reconstruir exatamente as
+    #    turmas em que o estudante já conseguiu matrícula;
+    # 2) o PDF do ajuste, usado para descobrir quais novas turmas ainda possuem
+    #    vagas remanescentes.
+    #
+    # Antes desta separação, quando o PDF era enviado ele substituía a planilha
+    # inicial. Assim, uma turma já matriculada que não aparecesse mais no PDF de
+    # ajuste desaparecia também do seletor de "Minha matrícula atual".
+    ofertas_matricula_inicial = resultado_ofertas.ofertas if not modo_ajuste else ()
+    avisos_oferta_inicial: tuple[str, ...] = ()
+    if modo_ajuste and config.arquivo_ofertas_inicial:
+        caminho_ofertas_inicial = resolver(base, config.arquivo_ofertas_inicial)
+        if caminho_ofertas_inicial.exists():
+            resultado_ofertas_inicial = ler_ofertas_matricula_inicial_completa(
+                caminho_ofertas_inicial,
+                aliases_oferta=aliases,
+                campus=config.campus,
+                turno=config.turno,
+            )
+            ofertas_matricula_inicial = resultado_ofertas_inicial.ofertas
+            avisos_oferta_inicial = resultado_ofertas_inicial.avisos
+
+    ofertas_para_planejamento = resultado_ofertas.ofertas
+    if modo_ajuste:
+        # No ajuste, uma nova matrícula só é viável quando há vaga remanescente.
+        # Turmas lotadas continuam no resultado bruto para diagnóstico/fallback,
+        # mas não entram como novas candidatas na busca automática.
+        ofertas_para_planejamento = tuple(
+            oferta for oferta in resultado_ofertas.ofertas
+            if oferta.vagas_remanescentes is not None and oferta.vagas_remanescentes > 0
+        )
 
     busca = _config_busca(config, quadrimestre_planejado, avaliacoes_docentes)
     resultado = gerar_planejamento(
-        resultado_ofertas.ofertas,
+        ofertas_para_planejamento,
         curriculo,
         cumpridas,
         situacao.concluidas,
@@ -324,7 +364,7 @@ def executar(config_path: Path, retornar_contexto: bool = False):
         and config.min_creditos_flexivel < config.min_creditos
     ):
         flexivel = gerar_planejamento(
-            resultado_ofertas.ofertas,
+            ofertas_para_planejamento,
             curriculo,
             cumpridas,
             situacao.concluidas,
@@ -346,6 +386,8 @@ def executar(config_path: Path, retornar_contexto: bool = False):
 
     historicos_paths = [resolver(base, p) for p in config.arquivos_ofertas_historicas]
     frequencias, avisos_frequencia = analisar_frequencia_ofertas(historicos_paths, aliases)
+    resultado.avisos.extend(resultado_ofertas.avisos)
+    resultado.avisos.extend(avisos_oferta_inicial)
     resultado.avisos.extend(avisos_frequencia)
     resultado.avisos.extend(avaliacoes_docentes.avisos)
 
@@ -470,7 +512,7 @@ def executar(config_path: Path, retornar_contexto: bool = False):
         ofertas_historicas=len(config.arquivos_ofertas_historicas),
     )
 
-    saidas = base / "saidas"
+    saidas = Path(diretorio_saidas) if diretorio_saidas is not None else base / "saidas"
     saidas.mkdir(parents=True, exist_ok=True)
     txt = saidas / "relatorio_planejamento.txt"
     html = saidas / "relatorio_planejamento.html"
@@ -527,7 +569,11 @@ def executar(config_path: Path, retornar_contexto: bool = False):
     if retornar_contexto:
         contexto_editor = {
             "resultado": resultado,
-            "ofertas_disponiveis": resultado_ofertas.ofertas,
+            "ofertas_disponiveis": ofertas_para_planejamento,
+            "ofertas_todas": resultado_ofertas.ofertas,
+            "ofertas_matricula_inicial": ofertas_matricula_inicial,
+            "avisos_oferta_inicial": avisos_oferta_inicial,
+            "modo_ajuste": modo_ajuste,
             "curriculo": curriculo,
             "cumpridas_projetadas": set(cumpridas),
             "concluidas_reais": set(situacao.concluidas),

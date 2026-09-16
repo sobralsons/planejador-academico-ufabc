@@ -191,7 +191,12 @@ def _texto_grade(
         if oferta.docentes:
             linhas.append(f"  Docente(s): {', '.join(oferta.docentes)}")
         for avaliacao in grade.avaliacoes_docentes_por_disciplina.get(disciplina.codigo, ()):
-            fonte = "na disciplina" if avaliacao.get("fonte") == "disciplina" else "geral"
+            fonte_map = {
+                "disciplina": "na disciplina",
+                "geral": "geral",
+                "combinada": "geral + disciplina",
+            }
+            fonte = fonte_map.get(str(avaliacao.get("fonte")), str(avaliacao.get("fonte") or "geral"))
             linhas.append(
                 f"  UFABC Next ({fonte}): {avaliacao.get('classificacao', 'sem classificação')} | "
                 f"qualidade {avaliacao.get('qualidade_pedagogica', 'sem dados')} | "
@@ -203,11 +208,25 @@ def _texto_grade(
                 f"{avaliacao.get('comentarios', 0)} comentários | "
                 f"efeito flexível no ranking: {avaliacao.get('efeito_ranking_aplicado', 0):+g}"
             )
+            for detalhe in avaliacao.get("detalhes_fontes") or ():
+                score = detalhe.get("score_0_100")
+                score_txt = f"{float(score):.1f}/100" if score is not None else "sem nota"
+                linhas.append(
+                    f"      {detalhe.get('rotulo', 'Fonte')}: {detalhe.get('classificacao', 'sem classificação')} | "
+                    f"{score_txt} | risco {detalhe.get('risco_academico', 'sem dados')} | "
+                    f"{int(detalhe.get('conceitos') or 0)} conceitos, {int(detalhe.get('comentarios') or 0)} comentários"
+                )
         linhas.append(
             f"  T-P-E-I: {oferta.t}-{oferta.p}-{oferta.e}-{oferta.i} | "
             f"carga total de referência: {oferta.carga_total_referencia}"
         )
-        if oferta.vagas_veteranos is not None:
+        if oferta.vagas_remanescentes is not None:
+            demanda = " · alta demanda" if oferta.alta_demanda else ""
+            linhas.append(
+                f"  Ajuste: {oferta.vagas_remanescentes} vaga(s) remanescente(s){demanda}; "
+                f"total original {oferta.vagas_totais if oferta.vagas_totais is not None else '?'}"
+            )
+        elif oferta.vagas_veteranos is not None:
             linhas.append(
                 f"  Vagas previstas: total {oferta.vagas_totais if oferta.vagas_totais is not None else '?'}; "
                 f"veteranos {oferta.vagas_veteranos}"
@@ -416,7 +435,7 @@ def _secao_validacao_texto(validacao: dict) -> list[str]:
         linhas.append("✓ Fronteira de Pareto: completa para todas as grades válidas analisadas.")
     else:
         linhas.append(
-            "⚠ Fronteira de Pareto: parcial, calculada sobre o conjunto retido; isso não altera as grades padrão."
+            "⚠ Pareto parcial: retenção ou apresentação limitada; consulte as quantidades no certificado. Os rankings são independentes."
         )
     if not global_completa:
         linhas.append(
@@ -470,7 +489,7 @@ def _validacao_html(validacao: dict) -> str:
         status = "Rankings exatos · Pareto parcial"
         descricao = (
             "Todas as candidatas foram enumeradas e as grades padrão são exatas. "
-            "Somente a fronteira de Pareto foi limitada ao conjunto retido."
+            "A retenção ou a apresentação de Pareto foi limitada; os rankings são independentes."
         )
         selo = "✓"
     else:
@@ -842,27 +861,49 @@ def _avaliacoes_docentes_html(avaliacoes: tuple[dict, ...]) -> str:
     itens: list[str] = []
     for avaliacao in avaliacoes:
         efeito = float(avaliacao.get("efeito_ranking_aplicado") or 0)
-        classe = "review-positive" if efeito > 0 else ("review-alert" if efeito < 0 else "review-neutral")
-        fonte = "disciplina específica" if avaliacao.get("fonte") == "disciplina" else "avaliação geral"
+        classe = "review-positive" if efeito > 0.75 else ("review-alert" if efeito < -0.75 else "review-neutral")
+        fonte_map = {
+            "disciplina": "disciplina específica",
+            "geral": "avaliação geral",
+            "combinada": "avaliação combinada · 60% geral + 40% disciplina",
+        }
+        fonte = fonte_map.get(str(avaliacao.get("fonte")), str(avaliacao.get("fonte") or "avaliação geral"))
         score = avaliacao.get("score_0_100")
         score_txt = f"{float(score):.1f}/100" if score is not None else "sem nota"
+
+        detalhes_html = ""
+        detalhes = avaliacao.get("detalhes_fontes") or ()
+        if detalhes:
+            fontes_itens = []
+            for detalhe in detalhes:
+                dscore = detalhe.get("score_0_100")
+                dscore_txt = f"{float(dscore):.1f}/100" if dscore is not None else "sem nota"
+                fontes_itens.append(
+                    "<div class='teacher-source-row'>"
+                    f"<strong>{_esc(detalhe.get('rotulo', 'Fonte'))}</strong>"
+                    f"<span>{_esc(detalhe.get('classificacao', 'sem classificação'))}</span>"
+                    f"<small>{dscore_txt} · risco {_esc(detalhe.get('risco_academico', 'sem dados'))} · "
+                    f"{int(detalhe.get('conceitos') or 0)} conceitos · {int(detalhe.get('comentarios') or 0)} comentários</small>"
+                    "</div>"
+                )
+            detalhes_html = "<div class='teacher-source-breakdown'>" + "".join(fontes_itens) + "</div>"
+
         itens.append(
             f"<article class='teacher-review-item {classe}'>"
             f"<div class='teacher-review-head'><strong>{_esc(avaliacao.get('professor', 'Docente'))}</strong>"
             f"<span>{efeito:+g}</span></div>"
             f"<div class='teacher-review-badges'>"
             f"{_pill(str(avaliacao.get('classificacao', 'sem classificação')))}"
-            f"{_pill('qualidade: ' + str(avaliacao.get('qualidade_pedagogica', 'sem dados')), 'green' if efeito > 0 else '')}"
-            f"{_pill('risco: ' + str(avaliacao.get('risco_academico', 'sem dados')), 'gold' if efeito < 0 else '')}"
+            f"{_pill('qualidade: ' + str(avaliacao.get('qualidade_pedagogica', 'sem dados')), 'green' if efeito > 0.75 else '')}"
+            f"{_pill('risco: ' + str(avaliacao.get('risco_academico', 'sem dados')), 'gold' if efeito < -0.75 else '')}"
             f"</div>"
-            f"<small>{_esc(fonte)} · {score_txt} · confiança {_esc(avaliacao.get('confianca', 'sem dados'))} · "
-            f"{int(avaliacao.get('conceitos') or 0)} conceitos · {int(avaliacao.get('comentarios') or 0)} comentários</small>"
-            f"</article>"
+            f"<small>{_esc(fonte)} · {score_txt} · confiança {_esc(avaliacao.get('confianca', 'sem dados'))}</small>"
+            f"{detalhes_html}</article>"
         )
     return (
         "<div class='teacher-review'><div class='teacher-review-title'>"
         "<strong>Avaliação docente — UFABC Next</strong>"
-        "<span>preferência flexível, não bloqueio</span></div>"
+        "<span>geral como base; disciplina como contexto</span></div>"
         + "".join(itens) + "</div>"
     )
 
@@ -883,7 +924,12 @@ def _disciplina_cards_html(
         )
         docentes = ", ".join(oferta.docentes) or "Não informado"
         vagas = "Não informadas"
-        if oferta.vagas_totais is not None or oferta.vagas_veteranos is not None:
+        if oferta.vagas_remanescentes is not None:
+            vagas = (
+                f"{oferta.vagas_remanescentes} remanescente(s) · total {oferta.vagas_totais if oferta.vagas_totais is not None else '?'}"
+                + (" · alta demanda" if oferta.alta_demanda else "")
+            )
+        elif oferta.vagas_totais is not None or oferta.vagas_veteranos is not None:
             vagas = f"total {oferta.vagas_totais if oferta.vagas_totais is not None else '?'} · veteranos {oferta.vagas_veteranos if oferta.vagas_veteranos is not None else '?'}"
 
         recomendacoes = _recomendacoes_status(d, curriculo, concluidas_reais, cumpridas_projetadas)
@@ -901,7 +947,15 @@ def _disciplina_cards_html(
                 "<ul>" + "".join(itens_rec) + "</ul></div>"
             )
         else:
-            recomendacoes_html = "<div class='recommendations empty-rec'>Sem recomendações anteriores cadastradas.</div>"
+            texto_rec = str(d.recomendacao_texto or "").strip()
+            texto_norm = texto_rec.casefold()
+            if texto_rec and texto_norm not in {"não há", "nao ha", "nan", "não se aplica", "nao se aplica"} and not texto_norm.startswith("requisito"):
+                recomendacoes_html = (
+                    "<div class='recommendations'><strong>Recomendações anteriores do catálogo</strong>"
+                    f"<p>{_esc(texto_rec)}</p><small>Texto oficial localizado no catálogo; sem vínculo automático de código para esta recomendação.</small></div>"
+                )
+            else:
+                recomendacoes_html = "<div class='recommendations empty-rec'>Sem recomendações anteriores no catálogo utilizado.</div>"
 
         alertas: list[str] = []
         if d.requisito_manual:
@@ -1225,7 +1279,7 @@ a{{color:inherit}}header{{background:linear-gradient(135deg,var(--green-900),var
 .analytics-grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin:16px 0}}.chart-card{{background:white;border:1px solid var(--line);border-radius:15px;padding:18px;box-shadow:0 8px 25px #173f2e08}}.chart-card h3{{margin:0 0 14px}}.chart-card.wide{{margin-top:14px}}.donut{{--pct:0;width:170px;height:170px;border-radius:50%;margin:14px auto;background:conic-gradient(var(--green-700) calc(var(--pct)*1%),#e7ede9 0);position:relative;display:grid;place-items:center}}.donut:after{{content:"";position:absolute;inset:23px;background:white;border-radius:50%}}.donut span{{position:relative;z-index:1;font-size:1.55rem;font-weight:800}}.concept-row{{display:grid;grid-template-columns:24px 1fr 30px;gap:9px;align-items:center;margin:9px 0}}.concept-track,.period-track{{height:12px;background:#edf1ef;border-radius:999px;overflow:hidden;display:flex}}.concept-track span{{display:block;height:100%;background:linear-gradient(90deg,var(--green-700),#76a98e)}}.concept-row em{{font-style:normal;text-align:right}}.period-chart{{display:grid;gap:10px}}.period-row{{display:grid;grid-template-columns:64px 1fr 120px;gap:10px;align-items:center}}.period-track i{{height:100%;display:block}}.period-track .approved{{background:#3b8f64}}.period-track .failed{{background:#c96b63}}.period-row small{{color:var(--muted)}}.legend{{display:flex;gap:16px;font-size:.82rem;color:var(--muted);margin-bottom:12px}}.legend span:before{{content:"";display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px}}.leg-approved:before{{background:#3b8f64}}.leg-failed:before{{background:#c96b63}}.recovery-list span{{color:var(--muted);font-size:.82rem}}
 footer{{color:var(--muted);font-size:.82rem;padding-top:28px;border-top:1px solid var(--line)}}
 @media(max-width:700px){{header{{padding:28px 20px}}main{{padding:20px 14px 50px}}.grade-card summary{{align-items:flex-start}}.open-label{{display:none}}.grade-content{{padding:14px}}dl div{{grid-template-columns:1fr}}.graduation-box{{grid-template-columns:1fr}}.period-row{{grid-template-columns:54px 1fr}}.period-row small{{grid-column:2}}}}
-.teacher-review{{margin:14px 0;padding:12px;border:1px solid #dbe5e0;border-radius:12px;background:#f8fbf9}}.teacher-review-title{{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:8px}}.teacher-review-title span{{font-size:12px;color:#607068}}.teacher-review-item{{border-left:4px solid #94a3b8;padding:9px 11px;margin-top:8px;background:white;border-radius:8px}}.teacher-review-item.review-positive{{border-left-color:#2f855a}}.teacher-review-item.review-alert{{border-left-color:#c2410c}}.teacher-review-item.review-neutral{{border-left-color:#64748b}}.teacher-review-head{{display:flex;justify-content:space-between;gap:12px}}.teacher-review-head span{{font-weight:800}}.teacher-review-badges{{display:flex;flex-wrap:wrap;gap:5px;margin:6px 0}}.teacher-review small{{color:#607068}}.empty-rec.teacher-review{{color:#607068;font-size:13px}}</style>
+.teacher-review{{margin:14px 0;padding:12px;border:1px solid #dbe5e0;border-radius:12px;background:#f8fbf9}}.teacher-review-title{{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:8px}}.teacher-review-title span{{font-size:12px;color:#607068}}.teacher-review-item{{border-left:4px solid #94a3b8;padding:9px 11px;margin-top:8px;background:white;border-radius:8px}}.teacher-review-item.review-positive{{border-left-color:#2f855a}}.teacher-review-item.review-alert{{border-left-color:#c2410c}}.teacher-review-item.review-neutral{{border-left-color:#64748b}}.teacher-review-head{{display:flex;justify-content:space-between;gap:12px}}.teacher-review-head span{{font-weight:800}}.teacher-review-badges{{display:flex;flex-wrap:wrap;gap:5px;margin:6px 0}}.teacher-review small{{color:#607068}}.teacher-source-breakdown{{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:7px;margin-top:9px}}.teacher-source-row{{padding:8px 9px;border:1px solid #e2e8e5;border-radius:8px;background:#f8faf9}}.teacher-source-row strong,.teacher-source-row span,.teacher-source-row small{{display:block}}.teacher-source-row span{{font-size:12px;margin-top:2px}}.teacher-source-row small{{font-size:11px;margin-top:3px}}.empty-rec.teacher-review{{color:#607068;font-size:13px}}</style>
 </head>
 <body>
 <header><h1>Planejador de Matrícula — UFABC</h1>
@@ -1242,7 +1296,7 @@ footer{{color:var(--muted);font-size:.82rem;padding-top:28px;border-top:1px soli
 <details class='simple'><summary>Ver componentes usados como potenciais créditos livres</summary><div class='table-wrap'><table class='data-table'><thead><tr><th>Código</th><th>Componente</th><th>Créditos</th></tr></thead><tbody>{livres_html}</tbody></table></div><p class='muted'>A confirmação final depende do SIGAA e da coordenação. O sistema encontrou {auditoria['livres_potenciais_fora_da_matriz']} créditos fora das listas explícitas e alocou provisoriamente até o limite de {livre['exigido']} créditos livres.</p></details>
 <h3>Atividades especiais</h3><div class='metrics-grid'>{especiais_cards}{_metric_card('Atividades complementares', f"{_fmt_numero(auditoria.get('atividades_complementares_horas') or 0)} h", 'valor lido do histórico')}</div>
 </section>
-<section id='docentes'><div class='section-heading'><div><h2>Avaliações docentes utilizadas</h2><p>A avaliação da disciplina específica tem prioridade sobre a avaliação geral. Qualidade pedagógica e risco acadêmico são exibidos separadamente; o efeito é flexível e nunca elimina automaticamente uma turma.</p></div></div><div class='table-wrap'><table class='data-table'><thead><tr><th>Docente</th><th>Disciplina</th><th>Recomendação</th><th>Qualidade</th><th>Risco</th><th>Conceitos</th><th>Comentários</th><th>Efeito</th></tr></thead><tbody>{avaliacoes_rows}</tbody></table></div><div class='compare-note'><strong>Interpretação:</strong> uma avaliação pedagógica favorável pode coexistir com risco acadêmico alto quando a disciplina é historicamente exigente. O ranking prioriza progressão curricular e usa o docente para desempatar ou reordenar alternativas academicamente semelhantes.</div></section>
+<section id='docentes'><div class='section-heading'><div><h2>Avaliações docentes utilizadas</h2><p>A avaliação geral do docente é usada como base e, quando há dados da disciplina específica, as duas fontes são combinadas (60% geral + 40% disciplina). Qualidade pedagógica e risco acadêmico continuam separados; o efeito é flexível e nunca elimina automaticamente uma turma.</p></div></div><div class='table-wrap'><table class='data-table'><thead><tr><th>Docente</th><th>Disciplina</th><th>Recomendação</th><th>Qualidade</th><th>Risco</th><th>Conceitos</th><th>Comentários</th><th>Efeito</th></tr></thead><tbody>{avaliacoes_rows}</tbody></table></div><div class='compare-note'><strong>Interpretação:</strong> uma avaliação pedagógica favorável pode coexistir com risco acadêmico alto quando a disciplina é historicamente exigente. O ranking prioriza progressão curricular e usa o docente para desempatar ou reordenar alternativas academicamente semelhantes.</div></section>
 <section><div class='section-heading'><div><h2>Situação atual</h2><p>Projeção selecionada: <strong>{_esc(modo_projecao)}</strong>. {'Disciplinas em andamento presumidas aprovadas são tratadas como recomendações cumpridas no ranking.' if projecoes_valem_como_cumpridas else 'Aprovações projetadas recebem penalidade de risco no ranking.'} Há {len(pendentes_obrigatorias)} obrigatórias pendentes no cenário utilizado.</p></div></div><div class='metrics-grid'>{_metric_card('Em andamento', str(len(situacao.em_andamento)), 'componentes matriculados ou em recuperação')}{_metric_card('Pendências obrigatórias', str(len(pendentes_obrigatorias)), 'inclui atividades especiais')}{_metric_card('Opções padrão', str(len(resultado.grades_padrao)), 'mínimo desejado: 3')}{_metric_card('Carga-alvo', f'{creditos_alvo} cr', 'usada no ranking')}</div><details class='simple'><summary>Ver disciplinas em andamento</summary><ul>{andamento_items}</ul></details></section>
 <section id='grades'><div class='section-heading'><div><h2>Grades padrão</h2><p>O modelo original foi preservado: o sistema tenta apresentar cinco opções e nunca menos de três quando existirem combinações viáveis.</p></div></div>{grades_html}</section>
 <section id='alternativas'><div class='section-heading'><div><h2>Alternativas por objetivo</h2><p>Opções especializadas para progressão, compactação, equilíbrio, menor carga, maior avanço e menor risco.</p></div></div>{perfis_html}</section>

@@ -482,13 +482,14 @@
       "e": 0,
       "i": 6,
       "quadrimestre_recomendado": 6,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-22",
+        "MCCC014-23"
+      ],
+      "recomendacao_texto": "Programação Estruturada; Processamento da Informação",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCCC001-23",
+      "observacoes": []
     },
     {
       "codigo": "MCZB002-13",
@@ -540,13 +541,18 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 9,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-22",
+        "BCN0407-15",
+        "BIN0406-15",
+        "MCBM006-23",
+        "MCCC014-23",
+        "MCTB001-17"
+      ],
+      "recomendacao_texto": "Funções de Várias Variáveis; Introdução à Probabilidade e à Estatística; Álgebra Linear; Algoritmos; Estruturas de Dados I; Programação Estruturada; Processamento da Informação; Matemática Discreta",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA002-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTC011-15",
@@ -558,13 +564,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 9,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIR0004-15"
+      ],
+      "recomendacao_texto": "Bases Epistemológicas da Ciência Moderna",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTC011-15",
+      "observacoes": []
     },
     {
       "codigo": "MCTA009-13",
@@ -577,12 +583,10 @@
       "i": 4,
       "quadrimestre_recomendado": 7,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTA009-13",
+      "observacoes": []
     },
     {
       "codigo": "MCTB008-17",
@@ -594,13 +598,15 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 5,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCN0407-15",
+        "BIN0406-15",
+        "MCBM006-23"
+      ],
+      "recomendacao_texto": "Funções de Várias Variáveis; Introdução à Probabilidade e à Estatística; Matemática Discreta",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTB008-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTB009-17",
@@ -670,13 +676,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 7,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIN0406-15"
+      ],
+      "recomendacao_texto": "Introdução à Probabilidade e à Estatística",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTC014-13",
+      "observacoes": []
     },
     {
       "codigo": "MCBM022-23",
@@ -688,13 +694,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 11,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTB001-17",
+        "MCTB008-17"
+      ],
+      "recomendacao_texto": "Álgebra Linear; Cálculo de Probabilidade",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCBM022-23",
+      "observacoes": []
     },
     {
       "codigo": "MCBM006-23",
@@ -744,12 +751,10 @@
       "i": 4,
       "quadrimestre_recomendado": 10,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Inteligência Artificial; Banco de Dados",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA015-13",
+      "observacoes": []
     },
     {
       "codigo": "MCCC012-23",
@@ -761,13 +766,15 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 8,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-22",
+        "MCCC014-23",
+        "MCTA018-13"
+      ],
+      "recomendacao_texto": "Programação Orientada a Objetos; Programação Estruturada; Processamento da Informação",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCCC012-23",
+      "observacoes": []
     },
     {
       "codigo": "MCCC014-23",
@@ -797,13 +804,16 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 11,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-22",
+        "BCN0407-15",
+        "MCBM006-23",
+        "MCTB001-17"
+      ],
+      "recomendacao_texto": "Álgebra Linear; Funções de Várias Variáveis; Processamento da Informação; Matemática Discreta",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCCC013-23",
+      "observacoes": []
     },
     {
       "codigo": "MCBD004-23",
@@ -836,12 +846,10 @@
       "i": 24,
       "quadrimestre_recomendado": 12,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "não se aplica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCBD008-23",
+      "observacoes": []
     },
     {
       "codigo": "MCZA035-17",
@@ -853,13 +861,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIN0406-15"
+      ],
+      "recomendacao_texto": "Algoritmos e Estruturas de Dados II; Introdução à Probabilidade e à Estatística",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA035-17",
+      "observacoes": []
     },
     {
       "codigo": "MCCC004-23",
@@ -871,13 +879,15 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-22",
+        "BCN0402-15",
+        "MCCC014-23"
+      ],
+      "recomendacao_texto": "Matemática Discreta II; Matemática Discreta I; Algoritmos em Grafos; Algoritmos e Estruturas de Dados I; Algoritmos e Estruturas de Dados II; Programação Estruturada; Processamento da Informação; Funções de Uma Variável",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCCC004-23",
+      "observacoes": []
     },
     {
       "codigo": "ESHT011-21",
@@ -890,12 +900,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Cartografia e Geoprocessamento para o planejamento territorial; Introdução a Probabilidade e Estatistica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESHT011-21",
+      "observacoes": []
     },
     {
       "codigo": "ESTU024-17",
@@ -908,12 +916,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Recomendada para o final do curso",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTU024-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZC018-17",
@@ -925,13 +931,17 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCN0402-15",
+        "BCN0407-15",
+        "BIS0003-15",
+        "ESTO013-17",
+        "MCTC014-13"
+      ],
+      "recomendacao_texto": "Bases Matemáticas; Introdução à Probabilidade e Estatística; Contabilidade Básica; Introdução à Inferência Estatística; Engenharia Econômica; Funções de uma Variável; Funções de Várias Variáveis; Finanças Corporativas; Microeconomia I; Macroeconomia I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZC018-17",
+      "observacoes": []
     },
     {
       "codigo": "MCBM002-23",
@@ -943,13 +953,13 @@
       "e": 0,
       "i": 6,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCN0405-15"
+      ],
+      "recomendacao_texto": "Introdução às Equações Diferenciais Ordinárias; Números Reais e Sequências",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCBM002-23",
+      "observacoes": []
     },
     {
       "codigo": "MCTB006-13",
@@ -962,12 +972,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Análise Real I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTB006-13",
+      "observacoes": []
     },
     {
       "codigo": "MCZA005-17",
@@ -980,12 +988,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Banco de Dados; Inteligência Artificial",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA005-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTU004-17",
@@ -1016,12 +1022,10 @@
       "i": 3,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESHT002-17",
+      "observacoes": []
     },
     {
       "codigo": "NHZ2114-18",
@@ -1033,13 +1037,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "NHI2049-13"
+      ],
+      "recomendacao_texto": "Lógica básica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ2114-18",
+      "observacoes": []
     },
     {
       "codigo": "MCZA006-17",
@@ -1052,12 +1056,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Inteligência Artificial",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA006-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZR001-13",
@@ -1070,12 +1072,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZR001-13",
+      "observacoes": []
     },
     {
       "codigo": "ESHC002-17",
@@ -1087,13 +1087,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Bases Matemáticas",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESHC002-17",
+      "observacoes": []
     },
     {
       "codigo": "ESHP012-22",
@@ -1106,12 +1106,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESHP012-22",
+      "observacoes": []
     },
     {
       "codigo": "ESHC035-21",
@@ -1123,13 +1121,17 @@
       "e": 0,
       "i": 6,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCN0402-15",
+        "BCN0407-15",
+        "BIN0406-15",
+        "BIS0003-15",
+        "MCTC014-13"
+      ],
+      "recomendacao_texto": "Bases Matemáticas; Funções de uma Variável; Funções de Várias Variáveis; Economia Matemática; Introdução à Probabilidade e à Estatística; Introdução à Inferência Estatística",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESHC035-21",
+      "observacoes": []
     },
     {
       "codigo": "ESHC036-21",
@@ -1141,13 +1143,17 @@
       "e": 0,
       "i": 6,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCN0402-15",
+        "BCN0407-15",
+        "BIN0406-15",
+        "BIS0003-15",
+        "MCTC014-13"
+      ],
+      "recomendacao_texto": "Bases Matemáticas; Funções de uma Variável; Funções de Várias Variáveis; Economia Matemática; Introdução à Probabilidade e à Estatística; Introdução à Inferência Estatística; Econometria I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESHC036-21",
+      "observacoes": []
     },
     {
       "codigo": "ESHC037-21",
@@ -1159,13 +1165,17 @@
       "e": 0,
       "i": 6,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCN0402-15",
+        "BCN0407-15",
+        "BIN0406-15",
+        "BIS0003-15",
+        "MCTC014-13"
+      ],
+      "recomendacao_texto": "Bases Matemáticas; Funções de uma Variável; Funções de Várias Variáveis; Economia Matemática; Introdução à Probabilidade e à Estatística; Introdução à Inferência Estatística; Econometria I; Econometria II",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESHC037-21",
+      "observacoes": []
     },
     {
       "codigo": "MCZA007-13",
@@ -1178,12 +1188,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA007-13",
+      "observacoes": []
     },
     {
       "codigo": "MCTA033-15",
@@ -1195,13 +1203,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-22"
+      ],
+      "recomendacao_texto": "Processamento da Informação.",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTA033-15",
+      "observacoes": []
     },
     {
       "codigo": "ESTO013-17",
@@ -1232,12 +1240,10 @@
       "i": 5,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Economia de Empresas",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZG025-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI044-17",
@@ -1249,13 +1255,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESZI003-17"
+      ],
+      "recomendacao_texto": "Processamento de Informação em Línguas Naturais",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI044-17",
+      "observacoes": []
     },
     {
       "codigo": "NHZ6010-18",
@@ -1268,12 +1274,10 @@
       "i": 6,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Biologia Celular; Biologia Molecular e Biotecnologia",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ6010-18",
+      "observacoes": []
     },
     {
       "codigo": "MCZB012-13",
@@ -1285,13 +1289,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTB008-17",
+        "MCTC014-13"
+      ],
+      "recomendacao_texto": "Cálculo de Probabilidade; Introdução à Inferência Estatística",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZB012-13",
+      "observacoes": []
     },
     {
       "codigo": "ESZI027-17",
@@ -1304,12 +1309,10 @@
       "i": 3,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI027-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZG037-17",
@@ -1322,12 +1325,10 @@
       "i": 3,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Inovação Tecnológica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZG037-17",
+      "observacoes": []
     },
     {
       "codigo": "MCCC008-23",
@@ -1339,13 +1340,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-22",
+        "MCCC014-23"
+      ],
+      "recomendacao_texto": "Algoritmos e Estruturas de Dados I; Programação Estruturada; Processamento da Informação",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCCC008-23",
+      "observacoes": []
     },
     {
       "codigo": "MCZB013-13",
@@ -1357,13 +1359,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-22"
+      ],
+      "recomendacao_texto": "Introdução aos Processos Estocásticos; Processamento da Informação",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZB013-13",
+      "observacoes": []
     },
     {
       "codigo": "ESZB022-17",
@@ -1376,12 +1378,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Biologia Celular; Bioquímica:estrutura, propriedade e funções de biomoléculas",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZB022-17",
+      "observacoes": []
     },
     {
       "codigo": "BHO1102-19",
@@ -1394,12 +1394,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Introdução ao Pensamento Econômico",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "BHO1102-19",
+      "observacoes": []
     },
     {
       "codigo": "ESZI045-17",
@@ -1411,13 +1409,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIS0005-15"
+      ],
+      "recomendacao_texto": "Bases Computacionais da Ciência",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI045-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTC002-15",
@@ -1430,12 +1428,10 @@
       "i": 5,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTC002-15",
+      "observacoes": []
     },
     {
       "codigo": "ESZI035-17",
@@ -1447,13 +1443,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCCC014-23"
+      ],
+      "recomendacao_texto": "Processamento Digital de Sinais; Programação Estruturada",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI035-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZB015-17",
@@ -1465,13 +1461,13 @@
       "e": 0,
       "i": 5,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESZB022-17"
+      ],
+      "recomendacao_texto": "Introdução à Bioinformática",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZB015-17",
+      "observacoes": []
     },
     {
       "codigo": "NHI2049-13",
@@ -1483,13 +1479,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIR0004-15",
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Bases Matemáticas; Bases Epistemológicas da Ciência Moderna",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHI2049-13",
+      "observacoes": []
     },
     {
       "codigo": "MCZA013-13",
@@ -1501,13 +1498,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "NHI2049-13"
+      ],
+      "recomendacao_texto": "Lógica Básica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA013-13",
+      "observacoes": []
     },
     {
       "codigo": "ESHC022-17",
@@ -1520,12 +1517,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Introdução à Economia",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESHC022-17",
+      "observacoes": []
     },
     {
       "codigo": "ESHC032-17",
@@ -1538,12 +1533,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Introdução à Economia; Macroeconomia I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESHC032-17",
+      "observacoes": []
     },
     {
       "codigo": "ESHC024-19",
@@ -1555,13 +1548,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCN0402-15",
+        "BCN0407-15"
+      ],
+      "recomendacao_texto": "Introdução à Economia; Funções de Uma Variável; Funções de Várias Variáveis; Economia Matemática; Macroeconomia I; Macroeconomia II",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESHC024-19",
+      "observacoes": []
     },
     {
       "codigo": "MCZA014-17",
@@ -1574,12 +1568,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Programação Matemática",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA014-17",
+      "observacoes": []
     },
     {
       "codigo": "ESHC025-17",
@@ -1591,13 +1583,15 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCN0402-15",
+        "BCN0407-15",
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Introdução à Economia; Bases Matemáticas; Economia Matemática; Funções de Uma Variável; Funções de Várias Variáveis",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESHC025-17",
+      "observacoes": []
     },
     {
       "codigo": "ESHC026-21",
@@ -1609,13 +1603,15 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCN0402-15",
+        "BCN0407-15",
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Introdução à Economia; Bases Matemáticas; Economia Matemática; Funções de Uma Variável; Funções de Várias Variáveis; Microeconomia I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESHC026-21",
+      "observacoes": []
     },
     {
       "codigo": "ESHC029-21",
@@ -1627,13 +1623,15 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCN0402-15",
+        "BCN0407-15",
+        "BIS0003-15"
+      ],
+      "recomendacao_texto": "Introdução à Economia; Bases Matemáticas; Economia Matemática; Funções de Uma Variável; Funções de Várias Variáveis; Microeconomia I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESHC029-21",
+      "observacoes": []
     },
     {
       "codigo": "ESZP004-13",
@@ -1646,12 +1644,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZP004-13",
+      "observacoes": []
     },
     {
       "codigo": "ESTG013-17",
@@ -1682,12 +1678,10 @@
       "i": 9,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Tempos, Métodos e Arranjos Físicos",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTG014-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZG010-17",
@@ -1700,12 +1694,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Elaboração, análise e avaliação de projetos",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZG010-17",
+      "observacoes": []
     },
     {
       "codigo": "NHZ2057-11",
@@ -1718,12 +1710,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ2057-11",
+      "observacoes": []
     },
     {
       "codigo": "ESHP028-22",
@@ -1736,12 +1726,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESHP028-22",
+      "observacoes": []
     },
     {
       "codigo": "ESTO012-17",
@@ -1769,13 +1757,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0504-15",
+        "ESZI045-17"
+      ],
+      "recomendacao_texto": "Natureza da Informação; Introdução à Linguística Computacional",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI003-17",
+      "observacoes": []
     },
     {
       "codigo": "MCZA017-13",
@@ -1788,12 +1777,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Inteligência Artificial",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA017-13",
+      "observacoes": []
     },
     {
       "codigo": "MCZA018-17",
@@ -1805,13 +1792,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-22"
+      ],
+      "recomendacao_texto": "Processamento da Informação",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA018-17",
+      "observacoes": []
     },
     {
       "codigo": "MCCC015-23",
@@ -1823,13 +1810,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-22",
+        "MCCC014-23"
+      ],
+      "recomendacao_texto": "Algoritmos e Estrutura de Dados I; Programação Estruturada; Processamento da Informação",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCCC015-23",
+      "observacoes": []
     },
     {
       "codigo": "MCTA018-13",
@@ -1841,13 +1829,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-22",
+        "MCCC014-23"
+      ],
+      "recomendacao_texto": "Programação Estruturada; Processamento da Informação",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTA018-13",
+      "observacoes": []
     },
     {
       "codigo": "MCZA020-13",
@@ -1860,12 +1849,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Paradigmas de Programação",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA020-13",
+      "observacoes": []
     },
     {
       "codigo": "NHZ2113-18",
@@ -1877,13 +1864,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "NHI2049-13"
+      ],
+      "recomendacao_texto": "Lógica básica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "NHZ2113-18",
+      "observacoes": []
     },
     {
       "codigo": "MCTA022-17",
@@ -1895,13 +1882,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-22",
+        "MCCC014-23"
+      ],
+      "recomendacao_texto": "Programação Estruturada; Processamento da Informação",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTA022-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTA023-17",
@@ -1913,13 +1901,15 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-22",
+        "MCCC014-23",
+        "MCTA022-17"
+      ],
+      "recomendacao_texto": "Redes de Computadores; Programação Estruturada; Processamento da Informação",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTA023-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZU017-17",
@@ -1932,12 +1922,10 @@
       "i": 2,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZU017-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTA025-13",
@@ -1949,13 +1937,16 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-22",
+        "MCCC014-23",
+        "MCTA018-13",
+        "MCTA022-17"
+      ],
+      "recomendacao_texto": "Redes de Computadores; Algoritmos e Estruturas de Dados I; Algoritmos e Estruturas de Dados II; Programação Estruturada; Processamento da Informação; Programação Orientada a Objetos; Sistemas Operacionais; Arquitetura de Computadores; Sistemas Digitais;",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTA025-13",
+      "observacoes": []
     },
     {
       "codigo": "ESTI008-17",
@@ -1968,12 +1959,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Comunicação Digital",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI008-17",
+      "observacoes": []
     },
     {
       "codigo": "MCZB032-13",
@@ -1985,13 +1974,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTB008-17"
+      ],
+      "recomendacao_texto": "Cálculo de Probabilidade",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZB032-13",
+      "observacoes": []
     },
     {
       "codigo": "MCZB031-17",
@@ -2004,12 +1993,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "[Álgebra Linear; Funções de Várias Variáveis] ou Economia Matemática",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZB031-17",
+      "observacoes": []
     },
     {
       "codigo": "MCZA049-17",
@@ -2022,12 +2009,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Banco de Dados",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA049-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZU020-17",
@@ -2039,13 +2024,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTU004-17"
+      ],
+      "recomendacao_texto": "Cartografia e Geoprocessamento; Métodos Quantitativos para Planejamento Estratégico; Métodos de Tomada de Decisão Aplicados ao Planejamento Urbano-Ambiental",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZU020-17",
+      "observacoes": []
     },
     {
       "codigo": "MCZA030-17",
@@ -2058,12 +2043,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA030-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZA019-17",
@@ -2076,12 +2059,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Fundamentos de Robótica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZA019-17",
+      "observacoes": []
     },
     {
       "codigo": "MCZA052-22",
@@ -2093,13 +2074,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTA018-13"
+      ],
+      "recomendacao_texto": "Algoritmos e Estruturas de Dados I; Banco de Dados; Programação Orientada a Objetos",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA052-22",
+      "observacoes": []
     }
   ]
 }

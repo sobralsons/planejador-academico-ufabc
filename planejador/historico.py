@@ -98,7 +98,7 @@ def ler_historico_sigaa(
     textos_paginas: list[str] = []
 
     with pdfplumber.open(path) as pdf:
-        for pagina in pdf.pages:
+        for numero_pagina, pagina in enumerate(pdf.pages, 1):
             texto = pagina.extract_text() or ""
             textos_paginas.append(texto)
 
@@ -117,9 +117,14 @@ def ler_historico_sigaa(
                 if "Ano/Período" not in cabecalho or "Situação" not in cabecalho:
                     continue
 
-                for linha in tabela[1:]:
-                    if len(linha) < 11:
+                for numero_linha, linha in enumerate(tabela[1:], 2):
+                    if not any(_limpar_campo(c) for c in linha):
                         continue
+                    if len(linha) < 11:
+                        raise ValueError(
+                            f"Histórico incompleto: página {numero_pagina}, linha {numero_linha} "
+                            "não possui as 11 colunas esperadas. Revise o documento antes de planejar."
+                        )
                     (
                         periodo,
                         categoria,
@@ -189,24 +194,28 @@ def consolidar_historico(
         elif status & STATUS_NAO_CONCLUIDOS:
             situacao.nao_concluidas.add(codigo)
 
-    # Convalidações oficiais do PPC: se o código antigo foi concluído, o novo é cumprido.
-    for origem, destino in equivalencias_academicas.items():
-        if origem in situacao.concluidas:
-            situacao.concluidas.add(destino)
-        if origem in situacao.em_andamento:
-            situacao.em_andamento.add(destino)
-
-    for origens, destino in equivalencias_compostas or []:
-        if origens.issubset(situacao.concluidas):
-            situacao.concluidas.add(destino)
-        elif origens.issubset(situacao.concluidas | situacao.em_andamento):
-            situacao.em_andamento.add(destino)
-
-    # Convalidações impressas no próprio histórico.
-    for destino_antigo, componente_realizado in situacao.convalidacoes_historico.items():
-        if componente_realizado in situacao.concluidas:
-            situacao.concluidas.add(destino_antigo)
-        elif componente_realizado in situacao.em_andamento:
-            situacao.em_andamento.add(destino_antigo)
+    situacao.origens_conclusao = {c: {c} for c in situacao.concluidas}
+    # O chamador fornece somente regras aplicáveis ao currículo/vínculo analisado.
+    # O fechamento mantém a direção e as conjunções; nunca infere por nome.
+    regras = [(frozenset({a}), b) for a, b in equivalencias_academicas.items()]
+    regras += [(frozenset(a), b) for a, b in equivalencias_compostas or [] if a]
+    regras += [(frozenset({real}), alvo) for alvo, real in situacao.convalidacoes_historico.items()]
+    alterado = True
+    while alterado:
+        alterado = False
+        for origens, destino in regras:
+            if origens <= situacao.concluidas:
+                evidencias = situacao.origens_utilizadas(origens)
+                anteriores = situacao.origens_conclusao.get(destino, set())
+                if destino not in situacao.concluidas or not evidencias <= anteriores:
+                    situacao.concluidas.add(destino)
+                    situacao.origens_conclusao[destino] = anteriores | evidencias
+                    alterado = True
+            elif origens <= situacao.concluidas | situacao.em_andamento:
+                if destino not in situacao.em_andamento and destino not in situacao.concluidas:
+                    situacao.em_andamento.add(destino)
+                    alterado = True
+    situacao.em_andamento -= situacao.concluidas
+    situacao.nao_concluidas -= situacao.concluidas | situacao.em_andamento
 
     return situacao

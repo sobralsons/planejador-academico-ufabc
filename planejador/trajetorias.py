@@ -17,14 +17,13 @@ ESTRATEGIAS_VALIDAS = {"simultanea", "hibrida", "sequencial"}
 
 
 def _chave_disciplina(disciplina: DisciplinaCurricular) -> str:
-    """Identidade curricular estável para comparar versões e cursos.
+    """Compartilha tarefas futuras somente pelo código do componente.
 
-    O nome normalizado é preferido porque códigos mudam entre matrizes. As
-    equivalências oficiais continuam sendo aplicadas antes, durante a leitura do
-    histórico; esta chave serve somente para identificar sobreposição entre os
-    pacotes curriculares já estruturados.
+    Reconhecimentos oficiais do histórico já foram aplicados por currículo.
+    Códigos distintos não são fundidos: equivalência dirigida não autoriza
+    substituir os dois componentes por qualquer um deles na trajetória futura.
     """
-    return normalizar_texto(disciplina.nome)
+    return disciplina.codigo
 
 
 def _dados_curso(
@@ -265,12 +264,17 @@ def _simular_roadmap(
     obrigatorias_restantes: dict[str, set[str]] = {}
     flex_restante: dict[str, dict[str, int]] = {}
     minimos_especiais: dict[str, int] = {}
+    pendencias_externas: set[str] = set()
     for curso_id, dados in cursos.items():
         obrigatorias_restantes[curso_id] = {
             t["chave"] for t in tarefas
             if curso_id in t.get("obrigatoria_em", {})
         }
         est = dados["analise"]["estimativa_formatura"]
+        if any(est.get(k, 0) is None or est.get(k, 0) > 0 for k in (
+            "extensao_pendente_maxima_horas", "atividades_complementares_pendentes_horas",
+        )):
+            pendencias_externas.add(curso_id)
         flex_restante[curso_id] = {
             "opcao_limitada": max(0, int(est.get("opcao_limitada_pendente", 0))),
             "livre": max(0, int(est.get("livres_pendentes", 0))),
@@ -320,7 +324,7 @@ def _simular_roadmap(
             if curso_id in concluidos_em:
                 continue
             regular_concluido = not obrigatorias_restantes[curso_id] and all(v <= 0 for v in flex_restante[curso_id].values())
-            if regular_concluido and quadrimestre >= minimos_especiais[curso_id]:
+            if regular_concluido and curso_id not in pendencias_externas and quadrimestre >= minimos_especiais[curso_id]:
                 concluidos_em[curso_id] = quadrimestre
                 marcos.append(cursos[curso_id]["registro"].rotulo)
 
@@ -337,8 +341,10 @@ def _simular_roadmap(
 
     # Componentes finais podem impor uma data mesmo depois das tarefas regulares.
     for curso_id in ordem_ids:
-        if curso_id not in concluidos_em:
-            concluidos_em[curso_id] = max(len(roadmap), minimos_especiais[curso_id], 1)
+        completo = not obrigatorias_restantes[curso_id] and all(v <= 0 for v in flex_restante[curso_id].values())
+        prazo = max(len(roadmap), minimos_especiais[curso_id], 1)
+        if curso_id not in concluidos_em and completo and curso_id not in pendencias_externas and prazo <= 60:
+            concluidos_em[curso_id] = prazo
     total_q = max(concluidos_em.values(), default=1)
     while len(roadmap) < total_q:
         q = len(roadmap) + 1
@@ -348,7 +354,7 @@ def _simular_roadmap(
                 "numero": q,
                 "periodo": proximo_periodo(periodo_planejamento, q - 1),
                 "creditos_estimados": 0,
-                "focos": ["Conclusão de trabalho final, estágio, extensão ou validações pendentes"],
+                "focos": ["Duração mínima de trabalho final ou estágio"],
                 "cursos_impactados": marcos,
                 "diplomas_estimados": marcos,
             }
@@ -434,8 +440,8 @@ def construir_plano_trajetoria(
     roadmap, concluidos_em = _simular_roadmap(
         tarefas, cursos, ordem, estrategia, ritmo, periodo_planejamento
     )
-    q_todos = max(concluidos_em.values(), default=1)
-    q_prudente = q_todos + max(0, int(margem))
+    q_todos = max(concluidos_em.values(), default=1) if len(concluidos_em) == len(ordem) else None
+    q_prudente = q_todos + max(0, int(margem)) if q_todos is not None else None
 
     soma_individual = sum(
         int(por_id[id_]["estimativa_formatura"].get("creditos_regulares_pendentes", 0))
@@ -448,7 +454,7 @@ def construir_plano_trajetoria(
     cursos_resultado = []
     for id_ in ordem:
         item = por_id[id_]
-        q = concluidos_em[id_]
+        q = concluidos_em.get(id_)
         est = item["estimativa_formatura"]
         cursos_resultado.append(
             {
@@ -459,10 +465,14 @@ def construir_plano_trajetoria(
                 "percentual_conclusao": est.get("percentual_conclusao", 0),
                 "creditos_regulares_pendentes": est.get("creditos_regulares_pendentes", 0),
                 "periodo_se_cursado_isoladamente": est.get("periodo_estimado_minimo"),
-                "periodo_no_plano_conjunto": proximo_periodo(periodo_planejamento, max(0, q - 1)),
-                "periodo_prudente_no_plano": proximo_periodo(periodo_planejamento, max(0, q + margem - 1)),
+                "periodo_no_plano_conjunto": proximo_periodo(periodo_planejamento, max(0, q - 1)) if q is not None else "Indeterminada",
+                "periodo_prudente_no_plano": proximo_periodo(periodo_planejamento, max(0, q + max(0, margem) - 1)) if q is not None else "Indeterminada",
                 "quadrimestres_no_plano": q,
-                "gargalos": est.get("gargalos", []),
+                "conclusao_modelada": q is not None,
+                "pendencias_da_projecao": [] if q is not None else [
+                    "Há exigências sem prazo modelado ou tarefas além do horizonte de 60 quadrimestres."
+                ],
+                "gargalos": list(est.get("gargalos", [])) + ([] if q is not None else ["Conclusão indeterminada: há exigências sem prazo modelado ou tarefas fora do horizonte."]),
             }
         )
 
@@ -490,15 +500,15 @@ def construir_plano_trajetoria(
         "disciplinas_obrigatorias_unicas": len(obrigatorias),
         "disciplinas_flexiveis_estrategicas": len(flexiveis),
         "creditos_flexiveis_nao_mapeados": creditos_nao_mapeados,
-        "periodo_conclusao_todos_minimo": proximo_periodo(periodo_planejamento, max(0, q_todos - 1)),
-        "periodo_conclusao_todos_prudente": proximo_periodo(periodo_planejamento, max(0, q_prudente - 1)),
+        "periodo_conclusao_todos_minimo": proximo_periodo(periodo_planejamento, max(0, q_todos - 1)) if q_todos is not None else "Indeterminada",
+        "periodo_conclusao_todos_prudente": proximo_periodo(periodo_planejamento, max(0, q_prudente - 1)) if q_prudente is not None else "Indeterminada",
         "quadrimestres_para_todos_minimo": q_todos,
         "quadrimestres_para_todos_prudente": q_prudente,
         "disciplinas_compartilhadas": compartilhadas[:30],
         "roadmap": roadmap,
         "confianca": confianca,
         "premissas": [
-            "Os créditos compartilhados são identificados por equivalências já aplicadas e pelo nome normalizado das disciplinas nos PPCs estruturados.",
+            "Tarefas futuras só são compartilhadas pelo mesmo código. Equivalências oficiais do histórico são aplicadas separadamente em cada currículo.",
             "O roteiro futuro é acadêmico: não garante que cada disciplina será ofertada no quadrimestre sugerido.",
             "Opções limitadas e livres são escolhidas por uma heurística de cobertura que prioriza disciplinas válidas em mais de um currículo.",
             "Trabalho final e estágio são tratados em paralelo às disciplinas quando o PPC permite.",
@@ -630,7 +640,7 @@ def gerar_relatorio_trajetoria_html(caminho: Path, plano: dict[str, Any], cenari
 :root{{--navy:#123f5a;--teal:#176b62;--green:#2b8a67;--ink:#17312d;--muted:#63746f;--line:#dbe6e1;--bg:#f3f7f6;--gold:#c18b16}}
 *{{box-sizing:border-box}}body{{margin:0;background:var(--bg);font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink)}}header{{background:linear-gradient(135deg,var(--navy),var(--teal));color:white;padding:46px max(5vw,28px)}}header h1{{font-size:2.4rem;margin:0 0 10px}}header p{{max-width:900px;margin:0;color:#e4f1ef;line-height:1.55}}.wrap{{max-width:1350px;margin:28px auto;padding:0 22px}}.hero-grid{{display:grid;grid-template-columns:2fr repeat(3,1fr);gap:14px;margin-bottom:22px}}.hero-card,.panel,.course-card{{background:white;border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 28px #123f5a10}}.hero-card{{padding:22px}}.hero-card span{{display:block;color:var(--muted);font-size:.8rem;text-transform:uppercase;font-weight:700;letter-spacing:.05em}}.hero-card b{{font-size:1.65rem;display:block;margin-top:7px}}.hero-card.primary{{background:linear-gradient(135deg,#ecf6f2,#fff)}}.panel{{padding:22px;margin:20px 0}}.panel h2{{margin-top:0}}.courses{{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:17px}}.course-card{{padding:20px}}.course-head{{display:flex;justify-content:space-between;gap:15px}}.course-head span{{font-size:.75rem;color:var(--muted);text-transform:uppercase}}.course-head h3{{margin:4px 0 12px}}.course-head>b{{background:#e8f4ef;padding:10px;border-radius:10px;height:max-content}}.bar{{height:9px;background:#e6eeeb;border-radius:99px;overflow:hidden}}.bar i{{height:100%;display:block;background:linear-gradient(90deg,var(--teal),#76bc9c)}}.course-card p{{color:var(--muted)}}.dates{{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}}.dates span{{background:#f4f7f6;padding:9px;border-radius:9px;font-size:.78rem}}.dates strong{{display:block;font-size:.95rem;margin-top:2px}}.table-wrap{{overflow:auto}}table{{width:100%;border-collapse:collapse;min-width:780px}}th,td{{padding:11px 12px;border-bottom:1px solid #edf2ef;text-align:left;vertical-align:top}}th{{font-size:.76rem;text-transform:uppercase;color:#536b63}}small{{color:var(--muted)}}details{{margin-top:12px;border-top:1px solid #edf2ef;padding-top:10px}}summary{{cursor:pointer;font-weight:700}}li{{line-height:1.5}}.confidence{{display:grid;grid-template-columns:170px 1fr;gap:20px;align-items:center}}.score{{width:130px;height:130px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--green) {plano['confianca']['score_0_100']}%,#e6ece9 0);position:relative}}.score:after{{content:'';position:absolute;inset:13px;background:white;border-radius:50%}}.score b{{position:relative;z-index:1;font-size:1.65rem}}footer{{max-width:1350px;margin:28px auto 45px;padding:0 22px;color:var(--muted);font-size:.86rem}}@media(max-width:900px){{.hero-grid{{grid-template-columns:1fr 1fr}}.hero-card.primary{{grid-column:1/-1}}.confidence{{grid-template-columns:1fr}}}}@media(max-width:580px){{.hero-grid{{grid-template-columns:1fr}}.dates{{grid-template-columns:1fr}}}}
 </style></head><body><header><h1>Plano de trajetória acadêmica — UFABC</h1><p>Simulação de {escape(plano['objetivo'])}, iniciando em {escape(plano['periodo_inicio'])}, com estratégia {escape(plano['estrategia'])} e ritmo de {plano['ritmo_creditos_por_quadrimestre']} créditos por quadrimestre.</p></header><div class='wrap'>
-<section class='hero-grid'><div class='hero-card primary'><span>Conclusão de todas as formações</span><b>{escape(plano['periodo_conclusao_todos_minimo'])}–{escape(plano['periodo_conclusao_todos_prudente'])}</b><p>{plano['quadrimestres_para_todos_minimo']}–{plano['quadrimestres_para_todos_prudente']} quadrimestres incluindo o período inicial.</p></div><div class='hero-card'><span>Créditos únicos estimados</span><b>{plano['creditos_regulares_unicos_estimados']}</b></div><div class='hero-card'><span>Economia por sobreposição</span><b>{plano['creditos_economizados_por_sobreposicao']} cr</b></div><div class='hero-card'><span>Eficiência curricular</span><b>{plano['eficiencia_sobreposicao_percentual']}%</b></div></section>
+<section class='hero-grid'><div class='hero-card primary'><span>Conclusão de todas as formações</span><b>{escape(plano['periodo_conclusao_todos_minimo'])}–{escape(plano['periodo_conclusao_todos_prudente'])}</b><p>{plano['quadrimestres_para_todos_minimo'] or '—'}–{plano['quadrimestres_para_todos_prudente'] or '—'} quadrimestres incluindo o período inicial.</p></div><div class='hero-card'><span>Créditos únicos estimados</span><b>{plano['creditos_regulares_unicos_estimados']}</b></div><div class='hero-card'><span>Economia por sobreposição</span><b>{plano['creditos_economizados_por_sobreposicao']} cr</b></div><div class='hero-card'><span>Eficiência curricular</span><b>{plano['eficiencia_sobreposicao_percentual']}%</b></div></section>
 <section class='panel'><h2>Quando cada diploma tende a ser concluído?</h2><div class='courses'>{''.join(cursos_html)}</div></section>
 {cenarios_html}
 <section class='panel'><h2>Disciplinas com maior aproveitamento conjunto</h2><div class='table-wrap'><table><thead><tr><th>Disciplina</th><th>Créditos</th><th>Cursos</th><th>Onde contribui</th></tr></thead><tbody>{compartilhadas}</tbody></table></div></section>

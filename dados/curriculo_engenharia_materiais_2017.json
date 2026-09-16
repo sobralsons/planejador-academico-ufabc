@@ -11,18 +11,6 @@
       "opcao_limitada": "PPC Engenharias 2017, tabela MAT3, páginas 232–234",
       "perfil_formacao": "PPC Engenharias 2017, tabela MAT4, páginas 234–236",
       "recomendacoes": "Catálogo de disciplinas 2024–2025"
-    },
-    "id": "materiais_2017",
-    "creditos_totais_oficiais": 300,
-    "creditos_disciplinas_e_integralizadores": 300,
-    "creditos_obrigatorios_regulares": 212,
-    "atividades_complementares_horas": 120,
-    "estagio_obrigatorio_creditos": 14,
-    "trabalho_final_creditos": 6,
-    "prazo_ideal_quadrimestres": 15,
-    "duracoes_especiais": {
-      "trabalho_final_quadrimestres": 3,
-      "estagio_quadrimestres": 1
     }
   },
   "disciplinas": [
@@ -730,12 +718,10 @@
       "i": 5,
       "quadrimestre_recomendado": 10,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não se aplica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Disciplina não localizada no catálogo 2024–2025 por código ou nome exato."
-      ]
+      "catalogo_codigo_consulta": "ESTO902-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTO903-17",
@@ -748,12 +734,10 @@
       "i": 5,
       "quadrimestre_recomendado": 11,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não se aplica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Disciplina não localizada no catálogo 2024–2025 por código ou nome exato."
-      ]
+      "catalogo_codigo_consulta": "ESTO903-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTM016-17",
@@ -784,12 +768,10 @@
       "i": 6,
       "quadrimestre_recomendado": 7,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não se aplica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Disciplina não localizada no catálogo 2024–2025 por código ou nome exato."
-      ]
+      "catalogo_codigo_consulta": "NHT4017-15",
+      "observacoes": []
     },
     {
       "codigo": "ESTM001-17",
@@ -1088,10 +1070,12 @@
       "i": 0,
       "quadrimestre_recomendado": 13,
       "recomendacoes": [],
-      "recomendacao_texto": "Requisito: CPK ≥ 0,633 no curso de engenharia e demais requisitos de acordo com a Resolução vigente",
-      "requisito_manual": "Requisito: CPK ≥ 0,633 no curso de engenharia e demais requisitos de acordo com a Resolução vigente",
+      "recomendacao_texto": "Não se aplica",
+      "requisito_manual": "",
       "catalogo_codigo_consulta": "ESTM905-17",
-      "observacoes": []
+      "observacoes": [
+        "Recomendação não convertida automaticamente em código: Não se aplica"
+      ]
     },
     {
       "codigo": "ESTM902-17",

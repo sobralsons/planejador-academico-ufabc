@@ -74,18 +74,18 @@ def test_plano_conjunto_desconta_disciplinas_compartilhadas(tmp_path: Path):
         tmp_path,
         "Curso A",
         [
-            _disc("SH-A", "Disciplina Compartilhada", "obrigatoria"),
+            _disc("SH", "Disciplina Compartilhada", "obrigatoria"),
             _disc("A-1", "Obrigatória A", "obrigatoria"),
-            _disc("OPT-A", "Optativa Compartilhada", "opcao_limitada"),
+            _disc("OPT", "Optativa Compartilhada", "opcao_limitada"),
         ],
     )
     b, beq = _salvar_curriculo(
         tmp_path,
         "Curso B",
         [
-            _disc("SH-B", "Disciplina Compartilhada", "obrigatoria"),
+            _disc("SH", "Disciplina Compartilhada", "obrigatoria"),
             _disc("B-1", "Obrigatória B", "obrigatoria"),
-            _disc("OPT-B", "Optativa Compartilhada", "opcao_limitada"),
+            _disc("OPT", "Optativa Compartilhada", "opcao_limitada"),
         ],
     )
     registros = {
@@ -147,4 +147,4 @@ def test_relatorio_trajetoria_e_interface_expoem_planejamento_completo(tmp_path:
     app = (Path(__file__).parents[1] / "app.py").read_text(encoding="utf-8")
     assert "Analisar minha trajetória agora" in app
     assert "Fazer três formações" in app
-    assert "Visualizar relatório completo nesta página" in app
+    assert "sem abrir outra página dentro do aplicativo" in app

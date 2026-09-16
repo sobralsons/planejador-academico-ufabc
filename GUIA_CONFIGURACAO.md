@@ -106,7 +106,7 @@ As abas seguintes mantêm:
 - período e carga;
 - rotina e horários;
 - disciplinas obrigatórias/proibidas;
-- professores e UFABC Next;
+- professores e avaliações agregadas importadas de fonte autorizada;
 - opções limitadas e interesses;
 - cinco grades padrão;
 - editor de substituições.

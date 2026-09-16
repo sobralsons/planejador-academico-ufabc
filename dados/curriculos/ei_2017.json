@@ -678,12 +678,10 @@
       "i": 5,
       "quadrimestre_recomendado": 11,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não se aplica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTO902-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTO903-17",
@@ -696,12 +694,10 @@
       "i": 5,
       "quadrimestre_recomendado": 12,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não se aplica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTO903-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTA028-15",
@@ -713,13 +709,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 5,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-15"
+      ],
+      "recomendacao_texto": "Processamento da Informação",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTA028-15",
+      "observacoes": []
     },
     {
       "codigo": "ESTI016-17",
@@ -731,13 +727,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 7,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0203-15",
+        "ESTA002-17"
+      ],
+      "recomendacao_texto": "Fenômenos Eletromagnéticos; Circuitos Elétricos I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI016-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTA002-17",
@@ -749,13 +746,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 8,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0203-15"
+      ],
+      "recomendacao_texto": "Fenômenos Eletromagnéticos",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTA002-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTI017-17",
@@ -767,13 +764,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 11,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0203-15",
+        "ESTA002-17"
+      ],
+      "recomendacao_texto": "Fenômenos Eletromagnéticos; Circuitos Elétricos I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI017-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTA004-17",
@@ -785,13 +783,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 9,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTA002-17"
+      ],
+      "recomendacao_texto": "Circuitos Elétricos I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTA004-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTA001-17",
@@ -803,13 +801,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 9,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTA002-17"
+      ],
+      "recomendacao_texto": "Circuitos Elétricos I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTA001-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTA007-17",
@@ -821,13 +819,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 10,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTA001-17"
+      ],
+      "recomendacao_texto": "Dispositivos Eletrônicos",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTA007-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTI002-17",
@@ -839,13 +837,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 10,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTA002-17",
+        "ESTO001-17"
+      ],
+      "recomendacao_texto": "Circuitos Elétricos e Fotônica; Circuitos Elétricos I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI002-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTI003-17",
@@ -857,13 +856,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 8,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCN0407-15"
+      ],
+      "recomendacao_texto": "Funções de Várias Variáveis",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI003-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTI004-17",
@@ -875,13 +874,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 9,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI003-17"
+      ],
+      "recomendacao_texto": "Transformadas em Sinais e Sistemas Lineares",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI004-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTA003-17",
@@ -893,13 +892,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 10,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI003-17"
+      ],
+      "recomendacao_texto": "Transformadas em Sinais e Sistemas Lineares",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTA003-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTA022-13",
@@ -929,13 +928,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 8,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIN0406-15",
+        "ESTI003-17"
+      ],
+      "recomendacao_texto": "Introdução à Probabilidade e à Estatística; Transformadas em Sinais e Sistemas Lineares",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI005-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTI006-17",
@@ -947,13 +947,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 10,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI003-17"
+      ],
+      "recomendacao_texto": "Transformadas em Sinais e Sistemas Lineares",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI006-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTI007-17",
@@ -965,13 +965,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 11,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI004-17",
+        "ESTI005-17"
+      ],
+      "recomendacao_texto": "Princípios de Comunicação; Sinais Aleatórios",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI007-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTI008-17",
@@ -983,13 +984,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 12,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI007-17"
+      ],
+      "recomendacao_texto": "Comunicação Digital",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI008-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTI018-17",
@@ -1001,13 +1002,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 12,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0203-15"
+      ],
+      "recomendacao_texto": "Fenômenos Eletromagnéticos",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI018-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTI010-17",
@@ -1019,13 +1020,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 12,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI016-17"
+      ],
+      "recomendacao_texto": "Fundamentos de Fotônica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI010-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTI019-17",
@@ -1055,13 +1056,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 11,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTA001-17",
+        "ESTI002-17"
+      ],
+      "recomendacao_texto": "Eletrônica Digital; Dispositivos Eletrônicos",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI013-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTI015-17",
@@ -1073,13 +1075,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 13,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI007-17",
+        "ESTI018-17"
+      ],
+      "recomendacao_texto": "Comunicação Digital; Ondas Eletromagnéticas Aplicadas",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI015-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTI020-17",
@@ -1091,13 +1094,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": 13,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI005-17",
+        "MCTA022-13"
+      ],
+      "recomendacao_texto": "Sinais Aleatórios; Redes de Computadores",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI020-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTI905-17",
@@ -1110,12 +1114,10 @@
       "i": 0,
       "quadrimestre_recomendado": 15,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não se aplica",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTI905-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTI902-17",
@@ -1128,12 +1130,10 @@
       "i": 4,
       "quadrimestre_recomendado": 13,
       "recomendacoes": [],
-      "recomendacao_texto": "",
-      "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "recomendacao_texto": "Requisito: Ver resolução de TG específica para o curso",
+      "requisito_manual": "Requisito: Ver resolução de TG específica para o curso",
+      "catalogo_codigo_consulta": "ESTI902-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTI903-17",
@@ -1146,12 +1146,10 @@
       "i": 4,
       "quadrimestre_recomendado": 14,
       "recomendacoes": [],
-      "recomendacao_texto": "",
-      "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "recomendacao_texto": "Requisito: Trabalho de Graduação I em Engenharia de Informação",
+      "requisito_manual": "Requisito: Trabalho de Graduação I em Engenharia de Informação",
+      "catalogo_codigo_consulta": "ESTI903-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTI904-17",
@@ -1164,12 +1162,10 @@
       "i": 4,
       "quadrimestre_recomendado": 15,
       "recomendacoes": [],
-      "recomendacao_texto": "",
-      "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "recomendacao_texto": "Requisito: Trabalho de Graduação II em Engenharia de Informação",
+      "requisito_manual": "Requisito: Trabalho de Graduação II em Engenharia de Informação",
+      "catalogo_codigo_consulta": "ESTI904-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI027-17",
@@ -1182,12 +1178,10 @@
       "i": 3,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Não há",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI027-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI002-17",
@@ -1199,13 +1193,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI005-17",
+        "ESTI006-17"
+      ],
+      "recomendacao_texto": "Sinais Aleatórios; Processamento Digital de Sinais",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI002-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI003-17",
@@ -1217,13 +1212,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0504-15",
+        "ESZI045-17"
+      ],
+      "recomendacao_texto": "Natureza da Informação; Introdução à Linguística Computacional",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI003-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI028-17",
@@ -1235,13 +1231,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI007-17"
+      ],
+      "recomendacao_texto": "Comunicação Digital",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI028-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI029-17",
@@ -1253,13 +1249,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTA022-13"
+      ],
+      "recomendacao_texto": "Redes de Computadores",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI029-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI030-17",
@@ -1271,13 +1267,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTA022-13"
+      ],
+      "recomendacao_texto": "Redes de Computadores",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI030-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI031-17",
@@ -1289,13 +1285,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTA022-13"
+      ],
+      "recomendacao_texto": "Redes de Computadores",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI031-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI032-17",
@@ -1307,13 +1303,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI019-17"
+      ],
+      "recomendacao_texto": "Codificação de Sinais Multimídia",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI032-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI010-17",
@@ -1325,13 +1321,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI006-17",
+        "ESTI007-17"
+      ],
+      "recomendacao_texto": "Processamento Digital de Sinais; Comunicação Digital",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI010-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI033-17",
@@ -1343,13 +1340,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTA028-15"
+      ],
+      "recomendacao_texto": "Programação Estruturada",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI033-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI034-17",
@@ -1362,12 +1359,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Programação Baseada em Componentes para Jogos ou Programação Orientada a Objetos",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI034-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI013-17",
@@ -1379,13 +1374,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI002-17"
+      ],
+      "recomendacao_texto": "Eletrônica Digital",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI013-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI014-17",
@@ -1397,13 +1392,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTA028-15",
+        "MCTB001-17"
+      ],
+      "recomendacao_texto": "Programação Estruturada; Álgebra Linear",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI014-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI035-17",
@@ -1415,13 +1411,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI006-17",
+        "MCTA028-15"
+      ],
+      "recomendacao_texto": "Processamento Digital de Sinais; Programação Estruturada",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI035-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI016-17",
@@ -1433,13 +1430,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI006-17"
+      ],
+      "recomendacao_texto": "Processamento Digital de Sinais",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI016-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI017-17",
@@ -1469,13 +1466,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI010-17"
+      ],
+      "recomendacao_texto": "Comunicações Ópticas",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI018-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI019-17",
@@ -1487,13 +1484,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTA007-17",
+        "ESTI018-17"
+      ],
+      "recomendacao_texto": "Ondas Eletromagnéticas Aplicadas; Eletrônica Analógica Aplicada",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI019-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI036-17",
@@ -1505,13 +1503,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESZI019-17"
+      ],
+      "recomendacao_texto": "Sistemas de Micro-ondas",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI036-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI037-17",
@@ -1523,13 +1521,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI006-17",
+        "ESTI019-17"
+      ],
+      "recomendacao_texto": "Codificação de Sinais Multimídia; Processamento Digital de Sinais",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI037-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI022-17",
@@ -1541,13 +1540,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0506-15"
+      ],
+      "recomendacao_texto": "Comunicação e Redes",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI022-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI023-17",
@@ -1559,13 +1558,14 @@
       "e": 0,
       "i": 3,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI004-17",
+        "ESTI007-17"
+      ],
+      "recomendacao_texto": "Princípios de Comunicação; Comunicação Digital",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI023-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI038-17",
@@ -1595,13 +1595,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTA002-17",
+        "ESTI013-17"
+      ],
+      "recomendacao_texto": "Sistemas Microprocessados; Circuitos Elétricos I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI025-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI039-17",
@@ -1613,13 +1614,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI018-17"
+      ],
+      "recomendacao_texto": "Ondas Eletromagnéticas Aplicadas",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI039-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI040-17",
@@ -1631,13 +1632,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI004-17",
+        "MCTA022-13"
+      ],
+      "recomendacao_texto": "Redes de Computadores; Princípios de Comunicação",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI040-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI041-18",
@@ -1649,13 +1651,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI013-17",
+        "MCTA028-15"
+      ],
+      "recomendacao_texto": "Programação Estruturada; Sistemas Microprocessados",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI041-18",
+      "observacoes": []
     },
     {
       "codigo": "ESZI026-17",
@@ -1667,13 +1670,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTA028-15"
+      ],
+      "recomendacao_texto": "Programação Estruturada",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI026-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI042-17",
@@ -1685,13 +1688,15 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTI003-17",
+        "ESTO017-17",
+        "ESZI019-17"
+      ],
+      "recomendacao_texto": "Métodos Experimentais em Engenharia; Transformadas em sinais e sistemas lineares; Sistemas de micro-ondas",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI042-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI043-17",
@@ -1703,13 +1708,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTA028-15"
+      ],
+      "recomendacao_texto": "Programação Estruturada",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI043-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI044-17",
@@ -1721,13 +1726,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESZI003-17"
+      ],
+      "recomendacao_texto": "Processamento de Informação em Línguas Naturais",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI044-17",
+      "observacoes": []
     },
     {
       "codigo": "ESZI045-17",
@@ -1739,13 +1744,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIS0005-15"
+      ],
+      "recomendacao_texto": "Bases Computacionais da Ciência",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESZI045-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTA018-13",
@@ -1757,13 +1762,14 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-15",
+        "MCTA028-15"
+      ],
+      "recomendacao_texto": "Programação Estruturada; Processamento da Informação",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTA018-13",
+      "observacoes": []
     },
     {
       "codigo": "MCTA033-15",
@@ -1775,13 +1781,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-15"
+      ],
+      "recomendacao_texto": "Processamento da Informação.",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTA033-15",
+      "observacoes": []
     },
     {
       "codigo": "MCTA001-17",
@@ -1847,13 +1853,17 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0203-15",
+        "BCM0504-15",
+        "BCM0505-15",
+        "MCTA001-17",
+        "MCTA028-15"
+      ],
+      "recomendacao_texto": "Sistemas Digitais; Circuitos Digitais; Natureza da Informação; Fenômenos Eletromagnéticos; Algoritmos e Estruturas de Dados I; Programação Estruturada; Processamento da Informação",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTA004-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTA026-13",
@@ -1865,13 +1875,19 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCJ0203-15",
+        "BCM0504-15",
+        "BCM0505-15",
+        "MCTA001-17",
+        "MCTA002-17",
+        "MCTA004-17",
+        "MCTA028-15"
+      ],
+      "recomendacao_texto": "Arquitetura de Computadores; Sistemas Digitais; Circuitos Digitais; Natureza da Informação; Fenômenos Eletromagnéticos; Algoritmos e Estruturas de Dados II; Algoritmos e Estruturas de Dados I; Programação Estruturada; Processamento da Informação",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTA026-13",
+      "observacoes": []
     },
     {
       "codigo": "MCTA025-13",
@@ -1883,13 +1899,20 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-15",
+        "MCTA001-17",
+        "MCTA002-17",
+        "MCTA004-17",
+        "MCTA018-13",
+        "MCTA022-13",
+        "MCTA026-13",
+        "MCTA028-15"
+      ],
+      "recomendacao_texto": "Redes de Computadores; Algoritmos e Estruturas de Dados I; Algoritmos e Estruturas de Dados II; Programação Estruturada; Processamento da Informação; Programação Orientada a Objetos; Sistemas Operacionais; Arquitetura de Computadores; Sistemas Digitais;",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCTA025-13",
+      "observacoes": []
     },
     {
       "codigo": "MCZA032-14",
@@ -1919,13 +1942,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BIN0406-15"
+      ],
+      "recomendacao_texto": "Introdução à Probabilidade e à Estatística",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZB018-13",
+      "observacoes": []
     },
     {
       "codigo": "MCZA011-17",
@@ -1937,13 +1960,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTA022-13"
+      ],
+      "recomendacao_texto": "Redes de Computadores",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA011-17",
+      "observacoes": []
     },
     {
       "codigo": "MCZA023-17",
@@ -1955,13 +1978,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTA022-13"
+      ],
+      "recomendacao_texto": "Redes de Computadores",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA023-17",
+      "observacoes": []
     },
     {
       "codigo": "MCZA021-17",
@@ -1973,13 +1996,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTA022-13"
+      ],
+      "recomendacao_texto": "Redes de Computadores",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA021-17",
+      "observacoes": []
     },
     {
       "codigo": "MCZA025-13",
@@ -1991,13 +2014,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTA022-13"
+      ],
+      "recomendacao_texto": "Redes de Computadores",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA025-13",
+      "observacoes": []
     },
     {
       "codigo": "ESZA017-17",
@@ -2118,13 +2141,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "MCTA022-13"
+      ],
+      "recomendacao_texto": "Redes de computadores",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA024-17",
+      "observacoes": []
     },
     {
       "codigo": "MCZA018-17",
@@ -2136,13 +2159,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "BCM0505-15"
+      ],
+      "recomendacao_texto": "Processamento da Informação",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "MCZA018-17",
+      "observacoes": []
     },
     {
       "codigo": "MCTA014-15",
@@ -2172,13 +2195,13 @@
       "e": 0,
       "i": 4,
       "quadrimestre_recomendado": null,
-      "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacoes": [
+        "ESTA003-17"
+      ],
+      "recomendacao_texto": "Sistemas de Controle I",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTA008-17",
+      "observacoes": []
     },
     {
       "codigo": "ESTA006-17",
@@ -2191,12 +2214,10 @@
       "i": 4,
       "quadrimestre_recomendado": null,
       "recomendacoes": [],
-      "recomendacao_texto": "",
+      "recomendacao_texto": "Eletromagnetismo Aplicado",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": null,
-      "observacoes": [
-        "Componente estruturado a partir do PPC; não localizado no catálogo fornecido."
-      ]
+      "catalogo_codigo_consulta": "ESTA006-17",
+      "observacoes": []
     }
   ]
 }

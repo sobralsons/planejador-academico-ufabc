@@ -9,6 +9,7 @@ import pandas as pd
 
 BASE = Path(__file__).resolve().parents[1]
 CATALOGO = BASE / "dados_fontes" / "catalogo_disciplinas_graduacao_2024_2025.xlsx"
+CATALOGO_RECOMENDACOES_ATUAL = BASE / "dados_fontes" / "catalogo_recomendacoes_2025_2026.json"
 SAIDA = BASE / "dados" / "curriculos"
 
 
@@ -361,6 +362,47 @@ def aplicar_recomendacoes(disciplinas: list[dict]) -> None:
         d["recomendacoes"] = sorted(set(encontrados))
 
 
+
+
+def aplicar_recomendacoes_catalogo_atual(disciplinas: list[dict]) -> None:
+    """Atualiza recomendações com o Catálogo UFABC 2025–2026 extraído do PDF oficial.
+
+    O catálogo XLSX legado continua sendo usado para TPEI e demais metadados. Este
+    overlay corrige especificamente recomendações ausentes ou desatualizadas.
+    """
+    if not CATALOGO_RECOMENDACOES_ATUAL.exists():
+        return
+    bruto = json.loads(CATALOGO_RECOMENDACOES_ATUAL.read_text(encoding="utf-8"))
+    mapa = bruto.get("disciplinas", {})
+    codigo_por_nome = {norm(d["nome"]): d["codigo"] for d in disciplinas}
+    for d in disciplinas:
+        info = mapa.get(d["codigo"])
+        if not info:
+            continue
+        texto = str(info.get("recomendacao") or "").strip()
+        if not texto:
+            continue
+        d["recomendacao_texto"] = texto
+        d["catalogo_codigo_consulta"] = d["codigo"]
+        d["observacoes"] = [
+            o for o in d.get("observacoes", [])
+            if "não localizado no catálogo" not in o.lower()
+            and "nao localizado no catalogo" not in norm(o).lower()
+        ]
+        if norm(texto) in {"NAO HA", "NAO SE APLICA", "NAN"}:
+            d["recomendacoes"] = []
+            continue
+        if norm(texto).startswith("REQUISITO"):
+            d["requisito_manual"] = texto
+            continue
+        encontrados: list[str] = []
+        for trecho in re.split(r"[;\n]", texto):
+            codigo = codigo_por_nome.get(norm(trecho.strip(" .")))
+            if codigo and codigo != d["codigo"]:
+                encontrados.append(codigo)
+        d["recomendacoes"] = sorted(set(encontrados))
+
+
 def criar(
     id_: str,
     curso: str,
@@ -392,6 +434,7 @@ def criar(
         vistos.add(codigo)
         disciplinas.append(item_disciplina(codigo, "opcao_limitada", None, por_codigo, por_nome, extras.get(codigo)))
     aplicar_recomendacoes(disciplinas)
+    aplicar_recomendacoes_catalogo_atual(disciplinas)
     bruto = {
         "metadados": {
             "id": id_, "curso": curso, "versao": versao,

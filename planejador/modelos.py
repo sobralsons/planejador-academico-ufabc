@@ -118,6 +118,21 @@ class Oferta:
     vagas_totais: int | None = None
     vagas_ingressantes: int | None = None
     vagas_veteranos: int | None = None
+    vagas_remanescentes: int | None = None
+    alta_demanda: bool = False
+    curso_oferta: str = ""
+    origem_oferta: str = "matricula_inicial"
+
+    @property
+    def vagas_disponiveis(self) -> int | None:
+        """Vagas relevantes para a etapa atual da matrícula.
+
+        No ajuste, a informação oficial é ``vagas_remanescentes``. Na oferta
+        inicial, mantém o comportamento legado usando vagas de veteranos.
+        """
+        if self.vagas_remanescentes is not None:
+            return self.vagas_remanescentes
+        return self.vagas_veteranos
 
     @property
     def carga_total_referencia(self) -> int:
@@ -161,6 +176,15 @@ class SituacaoAcademica:
     tentativas: dict[str, list[RegistroHistorico]] = field(default_factory=dict)
     convalidacoes_historico: dict[str, str] = field(default_factory=dict)
     resumo: ResumoHistorico = field(default_factory=ResumoHistorico)
+    # Evidências do histórico que fundamentam cada reconhecimento. Não são
+    # novas aprovações nem créditos adicionais. Escopo: currículo desta análise.
+    origens_conclusao: dict[str, set[str]] = field(default_factory=dict)
+
+    def origens_utilizadas(self, codigos: Iterable[str]) -> set[str]:
+        return set().union(*(
+            self.origens_conclusao.get(codigo, {codigo})
+            for codigo in codigos if codigo in self.concluidas
+        ))
 
     def codigos_projetados(
         self,
