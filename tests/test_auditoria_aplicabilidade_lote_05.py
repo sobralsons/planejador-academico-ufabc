@@ -35,10 +35,14 @@ def test_lote_05_audita_tres_matrizes_e_promove_apenas_quimica_2015():
     assert auditadas[("relacoes_internacionais", 2015)]["status_resultante"] == "pendente"
     assert all(item["decisao_publicavel"] is False for item in auditadas.values())
 
+    # O lote 5 preserva sua decisão histórica. Física 2015 só foi promovida
+    # posteriormente, no lote 8, após documento de transição atualizado em 2026.
     por_curso = {item["curso_id"]: item for item in vigencia["classificacao"]}
     assert 2015 in por_curso["quimica"]["matrizes_candidatas_anos"]
     assert 2010 in por_curso["quimica"]["matrizes_pendentes_anos"]
-    assert 2015 in por_curso["fisica"]["matrizes_pendentes_anos"]
+    assert 2015 in por_curso["fisica"]["matrizes_candidatas_anos"]
+    assert 2015 not in por_curso["fisica"]["matrizes_pendentes_anos"]
+    assert 2009 in por_curso["fisica"]["matrizes_pendentes_anos"]
     assert 2015 in por_curso["relacoes_internacionais"]["matrizes_pendentes_anos"]
 
 
@@ -140,9 +144,9 @@ def test_lote_05_altera_resumo_global_em_exatamente_uma_matriz_sem_criar_exclusa
     assert vigencia["resumo"] == {
         "ppcs_total": 93,
         "nao_aplicaveis": 0,
-        "pendentes": 42,
-        "candidatas": 51,
-        "ppcs_historicos_candidatos": 16,
+        "pendentes": 40,
+        "candidatas": 53,
+        "ppcs_historicos_candidatos": 18,
     }
 
 
