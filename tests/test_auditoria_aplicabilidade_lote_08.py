@@ -78,7 +78,7 @@ def test_fisica_2015_usa_transicao_2026_sem_promover_2009_por_inferencia():
     assert 2009 in por_curso["fisica"]["matrizes_pendentes_anos"]
 
 
-def test_biotecnologia_2018_permanece_pendente_ate_verificar_transicao_2025():
+def test_biotecnologia_2018_preserva_decisao_historica_do_lote_08():
     auditoria, vigencia = _carregar()
     item = _por_chave(auditoria)[("biotecnologia", 2018)]
     por_curso = {curso["curso_id"]: curso for curso in vigencia["classificacao"]}
@@ -86,8 +86,11 @@ def test_biotecnologia_2018_permanece_pendente_ate_verificar_transicao_2025():
     assert "1º quadrimestre de 2026" in item["calculo_termino_validade"]
     assert "71/2025" in item["calculo_termino_validade"]
     assert item["revisao_humana"]["pronto_para_mudar_status"] is False
-    assert 2018 in por_curso["biotecnologia"]["matrizes_pendentes_anos"]
-    assert 2018 not in por_curso["biotecnologia"]["matrizes_candidatas_anos"]
+    assert item["resultado"] == "pendente"
+    # O lote 8 permanece histórico; a promoção só ocorreu no lote 9, após
+    # verificação integral do Anexo II atualizado pelo Ato CG nº 71/2025.
+    assert 2018 not in por_curso["biotecnologia"]["matrizes_pendentes_anos"]
+    assert 2018 in por_curso["biotecnologia"]["matrizes_candidatas_anos"]
 
 
 def test_lote_08_nao_reproduz_dados_pessoais_da_fonte_de_colacao():
@@ -99,7 +102,7 @@ def test_lote_08_nao_reproduz_dados_pessoais_da_fonte_de_colacao():
         assert f'"{chave}"' not in texto
 
 
-def test_vigencia_central_reflete_somente_as_duas_promocoes_do_lote_08():
+def test_vigencia_central_reflete_promocoes_posteriores_sem_reescrever_lote_08():
     _, vigencia = _carregar()
     por_curso = {item["curso_id"]: item for item in vigencia["classificacao"]}
 
@@ -107,13 +110,13 @@ def test_vigencia_central_reflete_somente_as_duas_promocoes_do_lote_08():
     assert 2010 in por_curso["ciencias_biologicas"]["matrizes_pendentes_anos"]
     assert 2015 in por_curso["fisica"]["matrizes_candidatas_anos"]
     assert 2009 in por_curso["fisica"]["matrizes_pendentes_anos"]
-    assert 2018 in por_curso["biotecnologia"]["matrizes_pendentes_anos"]
+    assert 2018 in por_curso["biotecnologia"]["matrizes_candidatas_anos"]
     assert vigencia["resumo"] == {
         "ppcs_total": 93,
-        "candidatas": 53,
+        "candidatas": 54,
         "nao_aplicaveis": 0,
-        "pendentes": 40,
-        "ppcs_historicos_candidatos": 18,
+        "pendentes": 39,
+        "ppcs_historicos_candidatos": 19,
     }
 
 
