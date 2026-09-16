@@ -41,15 +41,15 @@ def test_avaliacao_de_vigencia_cobre_exatamente_os_93_ppcs():
     assert not (aplicaveis & nao_aplicaveis)
     assert aplicaveis | nao_aplicaveis | pendentes == inventariados
     assert len(inventariados) == 93
-    assert len(aplicaveis) == 46
+    assert len(aplicaveis) == 47
     assert len(nao_aplicaveis) == 0
-    assert len(pendentes) == 47
+    assert len(pendentes) == 46
     assert vigencia["resumo"] == {
         "ppcs_total": 93,
-        "candidatas": 46,
+        "candidatas": 47,
         "nao_aplicaveis": 0,
-        "pendentes": 47,
-        "ppcs_historicos_candidatos": 11,
+        "pendentes": 46,
+        "ppcs_historicos_candidatos": 12,
     }
 
 
@@ -76,6 +76,7 @@ def test_ppcs_historicos_que_ainda_podem_reger_estudantes_ativos():
     assert 2022 in por_curso["lch"]["matrizes_candidatas_anos"]
     assert 2022 in por_curso["lcne"]["matrizes_candidatas_anos"]
     assert 2017 in por_curso["ciencia_computacao"]["matrizes_candidatas_anos"]
+    assert 2021 in por_curso["neurociencia"]["matrizes_candidatas_anos"]
 
     engenharias = {
         "engenharia_ambiental_urbana",
@@ -93,7 +94,7 @@ def test_ppcs_historicos_que_ainda_podem_reger_estudantes_ativos():
     )
 
 
-def test_exclusoes_sem_comprovacao_voltam_a_ficar_pendentes():
+def test_exclusoes_sem_comprovacao_voltam_a_ficar_pendentes_salvo_promocao_documentada():
     _, vigencia = _carregar()
     por_curso = {item["curso_id"]: item for item in vigencia["classificacao"]}
 
@@ -101,6 +102,9 @@ def test_exclusoes_sem_comprovacao_voltam_a_ficar_pendentes():
     assert 2018 in por_curso["biotecnologia"]["matrizes_pendentes_anos"]
     assert 2015 in por_curso["ciencias_biologicas"]["matrizes_pendentes_anos"]
     assert 2015 in por_curso["ciencia_computacao"]["matrizes_pendentes_anos"]
+    assert 2015 in por_curso["neurociencia"]["matrizes_pendentes_anos"]
+    assert 2021 not in por_curso["neurociencia"]["matrizes_pendentes_anos"]
+    assert 2021 in por_curso["neurociencia"]["matrizes_candidatas_anos"]
 
 
 def test_avaliacao_e_explicitamente_datada_e_nao_confunde_vigencia_com_suporte():
@@ -115,15 +119,25 @@ def test_avaliacao_e_explicitamente_datada_e_nao_confunde_vigencia_com_suporte()
     )
 
 
-def test_reabertura_preserva_historico_e_nao_declara_validacao():
+def test_reabertura_preserva_historico_e_registra_unica_promocao_do_lote_04():
     _, vigencia = _carregar()
     assert vigencia["schema_version"] == 2
     assert vigencia["estado_avaliacao"] == "preliminar"
     assert vigencia["revisao_humana"] == "pendente"
+
+    promovidas_do_historico = {("neurociencia", 2021)}
+    encontradas = set()
+
     for item in vigencia["classificacao"]:
         anterior = item["classificacao_anterior"]
         assert anterior["estado"] == "nao_validada"
         assert anterior["justificativa"].strip()
-        assert set(anterior["matrizes_nao_aplicaveis_anos"]) == set(item["matrizes_pendentes_anos"])
+        anteriores_excluidas = set(anterior["matrizes_nao_aplicaveis_anos"])
+        pendentes = set(item["matrizes_pendentes_anos"])
+        promovidas = anteriores_excluidas & set(item["matrizes_candidatas_anos"])
+        assert anteriores_excluidas == pendentes | promovidas
+        encontradas |= {(item["curso_id"], ano) for ano in promovidas}
         assert item["revisao_humana"] == "pendente"
         assert not item["decisoes_exclusao"]
+
+    assert encontradas == promovidas_do_historico
