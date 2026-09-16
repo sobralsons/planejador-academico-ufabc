@@ -1,0 +1,303 @@
+{
+  "schema_version": 1,
+  "analisado_em": "2026-09-16",
+  "base_vigencia": "dados/vigencia_ppcs_2026-09-16.json",
+  "escopo": "Auditoria individual de um lote pequeno de matrizes historicamente tratadas como não aplicáveis sem comprovação suficiente. Este arquivo não altera a classificação global sozinho, não declara suporte acadêmico e não substitui revisão humana.",
+  "politica_decisao": {
+    "ausencia_de_prorrogacao_nao_prova_extincao": true,
+    "norma_geral_sozinha_nao_basta_para_excluir": true,
+    "edital_de_vagas_nao_e_prova_de_extincao": true,
+    "exclusao_exige_evidencia_oficial_especifica": true,
+    "exclusao_exige_revisao_humana_aprovada": true,
+    "ambiguidade_mantem_pendente": true
+  },
+  "campos_obrigatorios_por_decisao": [
+    "ppc_substituido",
+    "ppc_substituto",
+    "entrada_em_vigor",
+    "tempo_integralizacao",
+    "calculo_termino_validade",
+    "regras_transicao",
+    "possiveis_excecoes",
+    "fontes",
+    "revisao_humana"
+  ],
+  "matrizes": [
+    {
+      "curso_id": "bct",
+      "matriz_ano": 2015,
+      "status_antes": "pendente",
+      "status_resultante": "pendente",
+      "ppc_substituido": {
+        "ano": 2015,
+        "ato": "Resolução ConsEPE nº 188/2015",
+        "url": "https://www.ufabc.edu.br/images/consepe/resolucoes/3---Reviso-do-PP-do-Bacharelado-em-Cincia-e-Tecnologia-Esta-verso-contempla-as-retificaes.pdf"
+      },
+      "ppc_substituto": {
+        "ano": 2023,
+        "ato": "Ato Decisório ConsEPE nº 249/2023",
+        "url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ad_consepe_249_-_com_errata.pdf"
+      },
+      "entrada_em_vigor": {
+        "estado": "comprovada",
+        "regra": "O Ato Decisório ConsEPE nº 249/2023 determina validade do PPC 2023 para ingressantes a partir de 2023 e permite que ingressantes até 2022 ainda sigam o PPC 2015, respeitadas as regras de transição.",
+        "marco": "ingressantes a partir de 2023",
+        "fonte_id": "bct_ato_249_2023"
+      },
+      "tempo_integralizacao": {
+        "estado": "comprovado_no_ppc_substituido",
+        "valor": 9,
+        "unidade": "quadrimestres",
+        "descricao_original": "Prazo previsto para integralização: 9 quadrimestres; prazo máximo: 18 quadrimestres.",
+        "fonte_id": "bct_ppc_2015"
+      },
+      "calculo_termino_validade": {
+        "regra_geral": "Resolução ConsEPE nº 255/2022, art. 12, §1º: validade igual ao tempo de integralização, a contar do ano anterior à entrada em vigor do novo PPC.",
+        "inicio_teorico": "2022",
+        "conversao_teorica": "9 quadrimestres correspondem a 3 anos acadêmicos em regime de três quadrimestres por ano.",
+        "resultado_teorico": "2024, se a expressão 'tempo de integralização' for interpretada como o prazo previsto de 9 quadrimestres e a contagem anual for inclusiva a partir de 2022.",
+        "estado": "inconclusivo",
+        "motivo": "A Resolução 255 não explicita neste caso o método de conversão da contagem anual para uma data de extinção, e o Ato 249/2023 preserva expressamente a possibilidade de ingressantes até 2022 seguirem o PPC 2015. Além disso, o Documento Complementar II atualizado pelo Ato CG nº 70/2025 continua tratando a transição 2015/2023 sem declarar prazo de extinção. O resultado teórico não é tratado como decisão normativa."
+      },
+      "regras_transicao": [
+        {
+          "ato": "Ato Decisório ConsEPE nº 249/2023",
+          "efeito_relevante": "Ingressantes até 2022 podem ainda seguir o PPC 2015, respeitadas as regras de transição.",
+          "fonte_id": "bct_ato_249_2023"
+        },
+        {
+          "ato": "Ato Decisório CG nº 70/2025 - Anexo II",
+          "efeito_relevante": "Documento complementar vigente localizado em 2025 mantém tabela 2015/2023 e disposições para ingressantes até 2022; não fixa prazo expresso de extinção do PPC 2015.",
+          "fonte_id": "bct_transicao_70_2025"
+        }
+      ],
+      "possiveis_excecoes": [
+        "A Resolução ConsEPE nº 255/2022 prevê regras próprias para transferência interna e adesão a PPC novo.",
+        "Ato específico de transição pode ser mais restritivo ou esclarecer a contagem; nenhum prazo expresso foi identificado no Documento Complementar II de 2025 consultado."
+      ],
+      "lacunas": [
+        "Falta interpretação acadêmico-normativa validada sobre como aplicar o art. 12, §1º, ao prazo de 9 quadrimestres diante da regra específica do Ato 249/2023.",
+        "Não há no documento complementar vigente de 2025 consultado uma data expressa de extinção do PPC 2015."
+      ],
+      "fontes": ["res_255_2022", "bct_ppc_2015", "bct_ato_249_2023", "bct_transicao_70_2025", "bct_pagina_ppcs"],
+      "revisao_humana": {
+        "estado": "pendente",
+        "pronto_para_mudar_status": false,
+        "motivo": "Há conflito interpretativo relevante entre cálculo geral e disposições específicas; manter pendente é conservador."
+      },
+      "decisao_publicavel": false
+    },
+    {
+      "curso_id": "biotecnologia",
+      "matriz_ano": 2018,
+      "status_antes": "pendente",
+      "status_resultante": "pendente",
+      "ppc_substituido": {
+        "ano": 2018,
+        "ato": "Ato Decisório ConsEPE nº 164/2018",
+        "url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisorio_164_-_aprova_o_projeto_pedagogico_pp_do_curso_de_bahcarelado_em_biotecnologia_anexo_com_siglas.pdf"
+      },
+      "ppc_substituto": {
+        "ano": 2023,
+        "ato": "Ato Decisório ConsEPE nº 257/2023",
+        "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_257_anexo.pdf"
+      },
+      "entrada_em_vigor": {
+        "estado": "comprovada_no_documento_de_transicao_2023",
+        "regra": "O documento complementar aprovado pelo Ato CG nº 34/2023 informa que o PPC 2023 entra em vigor a partir do 2º quadrimestre de 2023.",
+        "marco": "2º quadrimestre de 2023",
+        "fonte_id": "biotecnologia_transicao_34_2023"
+      },
+      "tempo_integralizacao": {
+        "estado": "comprovado_no_ppc_substituido",
+        "valor": 13,
+        "unidade": "quadrimestres",
+        "descricao_original": "Prazo mínimo para integralização: 13 quadrimestres; prazo máximo: 26 quadrimestres.",
+        "fonte_id": "biotecnologia_ppc_2018"
+      },
+      "calculo_termino_validade": {
+        "regra_geral": "Resolução ConsEPE nº 255/2022, art. 12, §1º.",
+        "inicio_teorico": "2022",
+        "conversao_teorica": "13 quadrimestres correspondem a 4 anos e 1 quadrimestre.",
+        "resultado_teorico": null,
+        "estado": "inconclusivo",
+        "motivo": "A regra geral conta a partir do ano anterior, enquanto o prazo do curso é expresso em quadrimestres; não foi adotado critério inventado para converter esse marco em quadrimestre terminal. O documento de transição aprovado em 2023 permite aos ingressantes anteriores a 2023 escolher entre os PPCs 2018 e 2023 sem fixar prazo expresso, e existe atualização posterior aprovada pelo Ato CG nº 71/2025 cujo Anexo II atual precisa ser validado integralmente antes de qualquer exclusão."
+      },
+      "regras_transicao": [
+        {
+          "ato": "Ato Decisório CG nº 34/2023 - Anexo II",
+          "efeito_relevante": "Ingressantes anteriores a 2023 podem escolher, para integralização, seguir a matriz 2018 ou 2023; o documento aprovado consultado não fixa prazo expresso para essa escolha.",
+          "fonte_id": "biotecnologia_transicao_34_2023"
+        },
+        {
+          "ato": "Ato Decisório CG nº 71/2025",
+          "efeito_relevante": "Aprova atualização do Documento Complementar II de regras e tabela de transição; a página oficial do curso o apresenta como regra de transição atual.",
+          "fonte_id": "biotecnologia_ato_71_2025"
+        }
+      ],
+      "possiveis_excecoes": [
+        "O documento de transição atualizado em 2025 pode alterar condições relevantes da permanência no PPC 2018.",
+        "Casos omissos no documento de 2023 são atribuídos à Coordenação do Curso."
+      ],
+      "lacunas": [
+        "O conteúdo integral do Anexo II atualizado pelo Ato CG nº 71/2025 ainda precisa ser conferido e registrado no repositório de evidências.",
+        "Não há base suficiente para transformar a contagem geral da Resolução 255 em data terminal sem validar a transição atualizada."
+      ],
+      "fontes": ["res_255_2022", "biotecnologia_ppc_2018", "biotecnologia_ppc_2023", "biotecnologia_transicao_34_2023", "biotecnologia_ato_71_2025", "biotecnologia_pagina_curso"],
+      "revisao_humana": {
+        "estado": "pendente",
+        "pronto_para_mudar_status": false,
+        "motivo": "Existe ato de atualização de transição posterior ao documento de 2023; seu anexo precisa ser integralmente conferido antes da decisão."
+      },
+      "decisao_publicavel": false
+    },
+    {
+      "curso_id": "ciencias_biologicas",
+      "matriz_ano": 2015,
+      "status_antes": "pendente",
+      "status_resultante": "pendente",
+      "ppc_substituido": {
+        "ano": 2015,
+        "ato": "Resolução ConsEPE nº 200/2015",
+        "url": "https://www.ufabc.edu.br/images/consepe/resolucoes/anexo3-resolucao-consepe-200.pdf"
+      },
+      "ppc_substituto": {
+        "ano": 2023,
+        "ato": "Ato Decisório ConsEPE nº 251/2023",
+        "url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisorio_251_-_anexo.pdf"
+      },
+      "entrada_em_vigor": {
+        "estado": "comprovada",
+        "regra": "O Documento Complementar II aprovado pelo Ato CG nº 31/2023 informa vigência do PPC 2023 a partir do 2º quadrimestre de 2023.",
+        "marco": "2º quadrimestre de 2023",
+        "fonte_id": "ciencias_biologicas_transicao_31_2023"
+      },
+      "tempo_integralizacao": {
+        "estado": "comprovado",
+        "valor": 14,
+        "unidade": "quadrimestres",
+        "descricao_original": "O PPC 2015 estabeleceu limite mínimo de 14 quadrimestres; o PPC 2023 mantém prazo mínimo de 14 quadrimestres.",
+        "fonte_id": "ciencias_biologicas_ppc_2015"
+      },
+      "calculo_termino_validade": {
+        "regra_geral": "Resolução ConsEPE nº 255/2022, art. 12, §1º.",
+        "inicio_teorico": "2022",
+        "conversao_teorica": "14 quadrimestres correspondem a 4 anos e 2 quadrimestres.",
+        "resultado_teorico": null,
+        "estado": "inconclusivo",
+        "motivo": "A norma geral usa contagem a partir do ano anterior, enquanto o prazo oficial está em quadrimestres. O documento específico aprovado em 2023 permite expressamente que ingressantes anteriores a 2023 optem pelo PPC 2015 ou pelo PPC 2023 e não fixa prazo terminal nessa regra. Não será inferida data de extinção sem critério oficial ou revisão humana."
+      },
+      "regras_transicao": [
+        {
+          "ato": "Ato Decisório CG nº 31/2023 - Anexo II",
+          "efeito_relevante": "Ingressantes anteriores a 2023 podem optar pelo PPC 2015 ou pelo PPC 2023; cabe ao discente decidir por qual matriz pretende colar grau.",
+          "fonte_id": "ciencias_biologicas_transicao_31_2023"
+        },
+        {
+          "ato": "Retificação nº 117/2024 - CG",
+          "efeito_relevante": "Retifica itens da tabela de transição; não foi identificada nela alteração que fixe prazo de extinção do PPC 2015.",
+          "fonte_id": "ciencias_biologicas_retificacao_117_2024"
+        }
+      ],
+      "possiveis_excecoes": [
+        "A escolha expressamente concedida a ingressantes anteriores a 2023 precisa ser conciliada com a regra geral do art. 12, §1º, da Resolução 255.",
+        "Casos de transferência interna possuem regra geral própria na Resolução 255."
+      ],
+      "lacunas": [
+        "Falta interpretação acadêmico-normativa validada para a data terminal quando a transição específica preserva escolha sem prazo expresso.",
+        "Não há no documento de transição consultado uma data explícita de extinção do PPC 2015."
+      ],
+      "fontes": ["res_255_2022", "ciencias_biologicas_ppc_2015", "ciencias_biologicas_ppc_2023", "ciencias_biologicas_transicao_31_2023", "ciencias_biologicas_retificacao_117_2024", "ciencias_biologicas_pagina_curso"],
+      "revisao_humana": {
+        "estado": "pendente",
+        "pronto_para_mudar_status": false,
+        "motivo": "A regra específica preserva a escolha pelo PPC 2015, mas a relação temporal com o art. 12, §1º, ainda exige validação acadêmica humana."
+      },
+      "decisao_publicavel": false
+    }
+  ],
+  "fontes_oficiais": {
+    "res_255_2022": {
+      "tipo": "resolucao",
+      "url": "https://www.ufabc.edu.br/images/consepe/resolucoes/resoluo_255_-_estabelece_normas_e_procedimentos_para_a_reviso_e_aprovao_dos_projetos_pedaggicos_dos_cursos_de_graduao_da_ufabc_revoga_e_substitui_230_susp_temp_3.pdf",
+      "referencia": "Art. 12, especialmente §1º, §5º e §6º"
+    },
+    "bct_ppc_2015": {
+      "tipo": "ppc",
+      "url": "https://www.ufabc.edu.br/images/consepe/resolucoes/3---Reviso-do-PP-do-Bacharelado-em-Cincia-e-Tecnologia-Esta-verso-contempla-as-retificaes.pdf",
+      "referencia": "Dados do curso: prazo previsto 9 quadrimestres; prazo máximo 18"
+    },
+    "bct_ato_249_2023": {
+      "tipo": "ato_decisorio_consepe",
+      "url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ad_consepe_249_-_com_errata.pdf",
+      "referencia": "Disposição transitória, art. 3º"
+    },
+    "bct_transicao_70_2025": {
+      "tipo": "documento_complementar_transicao",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/comissao_ato_decisorio_70_anexo2.pdf",
+      "referencia": "Anexo II do Ato Decisório CG nº 70/2025"
+    },
+    "bct_pagina_ppcs": {
+      "tipo": "pagina_oficial_prograd",
+      "url": "https://prograd.ufabc.edu.br/bct/pps",
+      "referencia": "Índice oficial dos PPCs e documentos complementares"
+    },
+    "biotecnologia_ppc_2018": {
+      "tipo": "ppc",
+      "url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisorio_164_-_aprova_o_projeto_pedagogico_pp_do_curso_de_bahcarelado_em_biotecnologia_anexo_com_siglas.pdf",
+      "referencia": "Dados do curso: prazo mínimo 13 quadrimestres; máximo 26"
+    },
+    "biotecnologia_ppc_2023": {
+      "tipo": "ppc",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_257_anexo.pdf",
+      "referencia": "PPC 2023 aprovado pelo Ato Decisório ConsEPE nº 257/2023"
+    },
+    "biotecnologia_transicao_34_2023": {
+      "tipo": "documento_complementar_transicao",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/cg_ato_decisorio_034_anexo-02.pdf",
+      "referencia": "Anexo II do Ato Decisório CG nº 34/2023"
+    },
+    "biotecnologia_ato_71_2025": {
+      "tipo": "ato_decisorio_cg",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicare/boletimdeservico/boletim_servico_ufabc_1497.pdf",
+      "referencia": "Ato Decisório CG nº 71/2025, art. 2º"
+    },
+    "biotecnologia_pagina_curso": {
+      "tipo": "pagina_oficial_prograd",
+      "url": "https://prograd.ufabc.edu.br/cursos/bb",
+      "referencia": "Lista a transição atual aprovada pelo Ato CG nº 71/2025"
+    },
+    "ciencias_biologicas_ppc_2015": {
+      "tipo": "ppc",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicare/boletimdeservico/boletim_servico_ufabc_512.pdf",
+      "referencia": "PPC aprovado pela Resolução ConsEPE nº 200/2015; prazo mínimo 14 quadrimestres"
+    },
+    "ciencias_biologicas_ppc_2023": {
+      "tipo": "ppc",
+      "url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisorio_251_-_anexo.pdf",
+      "referencia": "Dados do curso: prazo mínimo 14 quadrimestres; máximo 30"
+    },
+    "ciencias_biologicas_transicao_31_2023": {
+      "tipo": "documento_complementar_transicao",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/comissao_ato_decisorio_31_anexo_2.pdf",
+      "referencia": "Anexo II do Ato Decisório CG nº 31/2023"
+    },
+    "ciencias_biologicas_retificacao_117_2024": {
+      "tipo": "retificacao",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicare/boletimdeservico/boletim_servico_ufabc_1376.pdf",
+      "referencia": "Retificação nº 117/2024 - CG"
+    },
+    "ciencias_biologicas_pagina_curso": {
+      "tipo": "pagina_oficial_prograd",
+      "url": "https://prograd.ufabc.edu.br/cursos/16-bacharelados?limit=2&limitstart=0",
+      "referencia": "Índice oficial do curso, PPCs e transição"
+    }
+  },
+  "resumo": {
+    "matrizes_auditadas": 3,
+    "permanecem_pendentes": 3,
+    "mudaram_para_nao_aplicavel": 0,
+    "mudaram_para_aplicavel": 0,
+    "decisoes_publicaveis": 0
+  }
+}
