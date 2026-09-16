@@ -122,7 +122,7 @@ def test_lfil_2022_preserva_opcao_explicita_sem_inventar_data_terminal():
     assert item["status_resultante"] == "pendente"
 
 
-def test_lote_02_nao_altera_suas_decisoes_nem_declara_suporte():
+def test_lote_02_preserva_suas_decisoes_sem_congelar_resumo_global_antigo():
     auditoria, vigencia = _carregar()
 
     assert auditoria["resumo"] == {
@@ -135,9 +135,9 @@ def test_lote_02_nao_altera_suas_decisoes_nem_declara_suporte():
     assert vigencia["resumo"] == {
         "ppcs_total": 93,
         "nao_aplicaveis": 0,
-        "pendentes": 45,
-        "candidatas": 48,
-        "ppcs_historicos_candidatos": 13,
+        "pendentes": 42,
+        "candidatas": 51,
+        "ppcs_historicos_candidatos": 16,
     }
     assert all(
         "suportada" not in item.get("status_resultante", "")

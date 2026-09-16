@@ -20,7 +20,7 @@ def _por_matriz(auditoria):
     }
 
 
-def test_lote_06_audita_tres_matrizes_sem_mudar_status():
+def test_lote_06_preserva_decisoes_historicas_e_promocao_posterior_do_bch():
     auditoria, vigencia = _carregar()
     auditadas = _por_matriz(auditoria)
 
@@ -35,7 +35,8 @@ def test_lote_06_audita_tres_matrizes_sem_mudar_status():
 
     por_curso = {item["curso_id"]: item for item in vigencia["classificacao"]}
     assert 2010 in por_curso["quimica"]["matrizes_pendentes_anos"]
-    assert 2015 in por_curso["bch"]["matrizes_pendentes_anos"]
+    assert 2015 in por_curso["bch"]["matrizes_candidatas_anos"]
+    assert 2015 not in por_curso["bch"]["matrizes_pendentes_anos"]
     assert 2022 in por_curso["quimica_licenciatura"]["matrizes_pendentes_anos"]
 
 
@@ -93,7 +94,7 @@ def test_quimica_2010_preserva_evidencia_operacional_sem_promocao_automatica():
     assert item["status_resultante"] == "pendente"
 
 
-def test_bch_2015_preserva_substituicao_e_coorte_sem_inferir_data_terminal():
+def test_bch_2015_registra_estado_historico_antes_da_evidencia_do_lote_07():
     auditoria, _ = _carregar()
     item = _por_matriz(auditoria)[("bch", 2015)]
     efeitos = " ".join(regra["efeito_relevante"] for regra in item["regras_transicao"])
@@ -120,7 +121,7 @@ def test_lic_quimica_2022_preserva_12_quadrimestres_sem_inventar_extincao():
     assert item["status_resultante"] == "pendente"
 
 
-def test_lote_06_mantem_resumo_global_sem_criar_exclusao_ou_promocao():
+def test_lote_06_preserva_resumo_historico_e_estado_global_atual():
     auditoria, vigencia = _carregar()
 
     assert auditoria["resumo"] == {
@@ -133,9 +134,9 @@ def test_lote_06_mantem_resumo_global_sem_criar_exclusao_ou_promocao():
     assert vigencia["resumo"] == {
         "ppcs_total": 93,
         "nao_aplicaveis": 0,
-        "pendentes": 45,
-        "candidatas": 48,
-        "ppcs_historicos_candidatos": 13,
+        "pendentes": 42,
+        "candidatas": 51,
+        "ppcs_historicos_candidatos": 16,
     }
 
 

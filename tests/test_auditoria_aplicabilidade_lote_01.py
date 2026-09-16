@@ -13,7 +13,7 @@ def _carregar():
     return auditoria, vigencia
 
 
-def test_lote_audita_exatamente_tres_matrizes_sem_mudar_status():
+def test_lote_audita_exatamente_tres_matrizes_e_preserva_decisao_historica():
     auditoria, vigencia = _carregar()
 
     auditadas = {
@@ -29,8 +29,11 @@ def test_lote_audita_exatamente_tres_matrizes_sem_mudar_status():
     assert all(item["status_resultante"] == "pendente" for item in auditadas.values())
     assert all(item["decisao_publicavel"] is False for item in auditadas.values())
 
+    # O lote 1 permanece como registro histórico. BCT 2015 foi promovido depois,
+    # no lote 7, por nova evidência oficial de uso operacional em 2026.
     por_curso = {item["curso_id"]: item for item in vigencia["classificacao"]}
-    assert 2015 in por_curso["bct"]["matrizes_pendentes_anos"]
+    assert 2015 in por_curso["bct"]["matrizes_candidatas_anos"]
+    assert 2015 not in por_curso["bct"]["matrizes_pendentes_anos"]
     assert 2018 in por_curso["biotecnologia"]["matrizes_pendentes_anos"]
     assert 2015 in por_curso["ciencias_biologicas"]["matrizes_pendentes_anos"]
 
@@ -122,7 +125,7 @@ def test_ciencias_biologicas_2015_preserva_escolha_explicita_sem_inventar_prazo(
     assert item["status_resultante"] == "pendente"
 
 
-def test_resumo_do_lote_nao_cria_exclusao_ou_suporte():
+def test_resumo_do_lote_permanece_historico_sem_congelar_estado_global_antigo():
     auditoria, vigencia = _carregar()
     assert auditoria["resumo"] == {
         "matrizes_auditadas": 3,
@@ -131,6 +134,10 @@ def test_resumo_do_lote_nao_cria_exclusao_ou_suporte():
         "mudaram_para_aplicavel": 0,
         "decisoes_publicaveis": 0,
     }
-    assert vigencia["resumo"]["candidatas"] == 48
-    assert vigencia["resumo"]["nao_aplicaveis"] == 0
-    assert vigencia["resumo"]["pendentes"] == 45
+    assert vigencia["resumo"] == {
+        "ppcs_total": 93,
+        "nao_aplicaveis": 0,
+        "pendentes": 42,
+        "candidatas": 51,
+        "ppcs_historicos_candidatos": 16,
+    }

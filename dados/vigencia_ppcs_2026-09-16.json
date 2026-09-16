@@ -130,40 +130,46 @@
       "url": "https://www.ufabc.edu.br/servicos",
       "referencia": "Carta de Serviços da UFABC — Atividades Complementares CCNH e CECS",
       "uso": "Serviço institucional atual diferencia o PPC 2015 do BQ e atribui a ele 84h de atividades complementares."
+    },
+    "colacao_30jun2026": {
+      "tipo": "evidencia_operacional_atual",
+      "url": "https://prograd.ufabc.edu.br/pdf/colacao_grau_30jun26_solicitantes_v2.pdf",
+      "referencia": "Colação de Grau de 30/06/2026 — relação geral de solicitantes, atualização de 16/06/2026",
+      "uso": "A ProGrad registra como Projetos Pedagógicos Considerados BCT 2009, variantes institucionais vinculadas ao PPC BCT 2015 e BCH 2015. A fonte contém dados pessoais de estudantes, que não são reproduzidos neste repositório."
     }
   },
   "classificacao": [
     {
       "curso_id": "bct",
       "matrizes_nao_aplicaveis_anos": [],
-      "evidencias": ["res_consepe_255_2022", "ata_consepe_2023", "edital_cfe_028_2022"],
-      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "evidencias": ["res_consepe_255_2022", "ata_consepe_2023", "edital_cfe_028_2022", "colacao_30jun2026"],
+      "justificativa": "Os PPCs 2009 e 2015 passam a candidatas preliminares porque a ProGrad registra explicitamente BCT 2009 e variantes institucionais vinculadas ao PPC 2015 como Projetos Pedagógicos Considerados no processamento das solicitações de colação de grau de 30/06/2026. A evidência é operacional e atual, mas não certifica colação efetivada, vigência normativa definitiva nem suporte acadêmico pelo produto.",
       "classificacao_anterior": {
         "matrizes_aplicaveis_anos": [2023],
         "matrizes_nao_aplicaveis_anos": [2015, 2009],
         "justificativa": "O PPC 2023 é o atual. A transição do BC&T registrou prazo de três anos para uso do PPC 2015 por ingressantes anteriores; esse prazo e a validade geral do PPC substituído já se encerraram. O PPC 2009 foi substituído anteriormente.",
         "estado": "nao_validada"
       },
-      "matrizes_pendentes_anos": [2015, 2009],
+      "matrizes_pendentes_anos": [],
       "decisoes_exclusao": [],
       "revisao_humana": "pendente",
-      "matrizes_candidatas_anos": [2023]
+      "matrizes_candidatas_anos": [2023, 2015, 2009]
     },
     {
       "curso_id": "bch",
       "matrizes_nao_aplicaveis_anos": [],
-      "evidencias": ["res_consepe_255_2022", "edital_cfe_028_2022"],
-      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "evidencias": ["res_consepe_255_2022", "edital_cfe_028_2022", "colacao_30jun2026"],
+      "justificativa": "O PPC 2015 passa a candidata preliminar porque, além da preservação específica de coorte já documentada, a ProGrad registra BCH 2015 como Projeto Pedagógico Considerado no processamento das solicitações de colação de grau de 30/06/2026. O PPC 2010 permanece pendente. A evidência não certifica vigência definitiva nem suporte acadêmico.",
       "classificacao_anterior": {
         "matrizes_aplicaveis_anos": [2022],
         "matrizes_nao_aplicaveis_anos": [2015, 2010],
         "justificativa": "O PPC 2022 é o atual. Para o bacharelado interdisciplinar, o tempo de integralização usado institucionalmente é de três anos; as versões 2015 e 2010/2014 já ultrapassaram a validade do PPC substituído.",
         "estado": "nao_validada"
       },
-      "matrizes_pendentes_anos": [2015, 2010],
+      "matrizes_pendentes_anos": [2010],
       "decisoes_exclusao": [],
       "revisao_humana": "pendente",
-      "matrizes_candidatas_anos": [2022]
+      "matrizes_candidatas_anos": [2022, 2015]
     },
     {
       "curso_id": "lch",
@@ -697,16 +703,17 @@
   "resumo": {
     "ppcs_total": 93,
     "nao_aplicaveis": 0,
-    "pendentes": 45,
-    "candidatas": 48,
-    "ppcs_historicos_candidatos": 13
+    "pendentes": 42,
+    "candidatas": 51,
+    "ppcs_historicos_candidatos": 16
   },
   "ressalvas": [
     "O Ato Decisório ConsEPE nº 270/2023 referencia a resolução do PPC anterior das Engenharias com numeração divergente da que aparece no próprio PPC 2017 e no PPC consolidado atual. A classificação usa a identidade inequívoca 'PPC 2017' e mantém a divergência documental explícita para revisão humana.",
     "A conclusão anterior de expiração de 47 PPCs foi retirada: a contagem e as condições de transição não estavam demonstradas individualmente. Os argumentos originais foram preservados em classificacao_anterior apenas para auditoria.",
     "O PPC 2021 de Neurociência foi promovido de pendente para candidata preliminar no lote 4 porque o Ato ConsEPE nº 265/2023 preserva essa versão e a página oficial atual do curso declara três PPCs ativos. O PPC 2015 permanece pendente por tensão documental com a validade de quatro anos prevista no PPC 2021.",
     "O PPC 2015 de Química foi promovido de pendente para candidata preliminar no lote 5 porque o Ato ConsEPE nº 253/2023 preserva essa versão, documento oficial aprovado em 2025 ainda classifica componente como obrigatório no PPC 2015 e a Carta de Serviços atual mantém exigência própria de 84h para essa versão. A conciliação temporal com a Resolução 255/2022 permanece sujeita à revisão humana.",
-    "Esta avaliação não declara qualquer matriz academicamente suportada pelo produto. As 48 candidatas e as 45 pendentes continuam no escopo de revisão. O inventário usado pela trava permanece sem aplicabilidade aprovada."
+    "Os PPCs BCT 2009, BCT 2015 e BCH 2015 foram promovidos de pendentes para candidatas preliminares no lote 7 porque a ProGrad os registra, em nomenclatura institucional própria, como Projetos Pedagógicos Considerados no processamento de solicitações da colação de grau de 30/06/2026. A lista é de solicitantes, não comprova colação efetivada e não resolve sozinha a data terminal normativa. Nenhum dado pessoal da fonte é reproduzido no repositório.",
+    "Esta avaliação não declara qualquer matriz academicamente suportada pelo produto. As 51 candidatas e as 42 pendentes continuam no escopo de revisão. O inventário usado pela trava permanece sem aplicabilidade aprovada."
   ],
   "estado_avaliacao": "preliminar",
   "revisao_humana": "pendente"
