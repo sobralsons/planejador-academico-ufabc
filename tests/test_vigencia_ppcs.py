@@ -23,7 +23,7 @@ def test_avaliacao_de_vigencia_cobre_exatamente_os_93_ppcs():
     aplicaveis = {
         (item["curso_id"], ano)
         for item in vigencia["classificacao"]
-        for ano in item["matrizes_aplicaveis_anos"]
+        for ano in item["matrizes_candidatas_anos"]
     }
     nao_aplicaveis = {
         (item["curso_id"], ano)
@@ -31,17 +31,25 @@ def test_avaliacao_de_vigencia_cobre_exatamente_os_93_ppcs():
         for ano in item["matrizes_nao_aplicaveis_anos"]
     }
 
+    pendentes = {
+        (item["curso_id"], ano)
+        for item in vigencia["classificacao"]
+        for ano in item["matrizes_pendentes_anos"]
+    }
+    assert not (pendentes & aplicaveis)
+    assert not (pendentes & nao_aplicaveis)
     assert not (aplicaveis & nao_aplicaveis)
-    assert aplicaveis | nao_aplicaveis == inventariados
+    assert aplicaveis | nao_aplicaveis | pendentes == inventariados
     assert len(inventariados) == 93
     assert len(aplicaveis) == 46
-    assert len(nao_aplicaveis) == 47
+    assert len(nao_aplicaveis) == 0
+    assert len(pendentes) == 47
     assert vigencia["resumo"] == {
         "ppcs_total": 93,
-        "aplicaveis": 46,
-        "nao_aplicaveis": 47,
-        "pendentes": 0,
-        "ppcs_historicos_ainda_aplicaveis": 11,
+        "candidatas": 46,
+        "nao_aplicaveis": 0,
+        "pendentes": 47,
+        "ppcs_historicos_candidatos": 11,
     }
 
 
@@ -65,9 +73,9 @@ def test_ppcs_historicos_que_ainda_podem_reger_estudantes_ativos():
     _, vigencia = _carregar()
     por_curso = {item["curso_id"]: item for item in vigencia["classificacao"]}
 
-    assert 2022 in por_curso["lch"]["matrizes_aplicaveis_anos"]
-    assert 2022 in por_curso["lcne"]["matrizes_aplicaveis_anos"]
-    assert 2017 in por_curso["ciencia_computacao"]["matrizes_aplicaveis_anos"]
+    assert 2022 in por_curso["lch"]["matrizes_candidatas_anos"]
+    assert 2022 in por_curso["lcne"]["matrizes_candidatas_anos"]
+    assert 2017 in por_curso["ciencia_computacao"]["matrizes_candidatas_anos"]
 
     engenharias = {
         "engenharia_ambiental_urbana",
@@ -80,19 +88,19 @@ def test_ppcs_historicos_que_ainda_podem_reger_estudantes_ativos():
         "engenharia_gestao",
     }
     assert all(
-        2017 in por_curso[curso_id]["matrizes_aplicaveis_anos"]
+        2017 in por_curso[curso_id]["matrizes_candidatas_anos"]
         for curso_id in engenharias
     )
 
 
-def test_ppcs_antigos_expirados_nao_entram_na_modelagem_completa():
+def test_exclusoes_sem_comprovacao_voltam_a_ficar_pendentes():
     _, vigencia = _carregar()
     por_curso = {item["curso_id"]: item for item in vigencia["classificacao"]}
 
-    assert 2015 in por_curso["bct"]["matrizes_nao_aplicaveis_anos"]
-    assert 2018 in por_curso["biotecnologia"]["matrizes_nao_aplicaveis_anos"]
-    assert 2015 in por_curso["ciencias_biologicas"]["matrizes_nao_aplicaveis_anos"]
-    assert 2015 in por_curso["ciencia_computacao"]["matrizes_nao_aplicaveis_anos"]
+    assert 2015 in por_curso["bct"]["matrizes_pendentes_anos"]
+    assert 2018 in por_curso["biotecnologia"]["matrizes_pendentes_anos"]
+    assert 2015 in por_curso["ciencias_biologicas"]["matrizes_pendentes_anos"]
+    assert 2015 in por_curso["ciencia_computacao"]["matrizes_pendentes_anos"]
 
 
 def test_avaliacao_e_explicitamente_datada_e_nao_confunde_vigencia_com_suporte():
@@ -105,3 +113,17 @@ def test_avaliacao_e_explicitamente_datada_e_nao_confunde_vigencia_com_suporte()
         "não declara qualquer matriz academicamente suportada" in ressalva
         for ressalva in vigencia["ressalvas"]
     )
+
+
+def test_reabertura_preserva_historico_e_nao_declara_validacao():
+    _, vigencia = _carregar()
+    assert vigencia["schema_version"] == 2
+    assert vigencia["estado_avaliacao"] == "preliminar"
+    assert vigencia["revisao_humana"] == "pendente"
+    for item in vigencia["classificacao"]:
+        anterior = item["classificacao_anterior"]
+        assert anterior["estado"] == "nao_validada"
+        assert anterior["justificativa"].strip()
+        assert set(anterior["matrizes_nao_aplicaveis_anos"]) == set(item["matrizes_pendentes_anos"])
+        assert item["revisao_humana"] == "pendente"
+        assert not item["decisoes_exclusao"]

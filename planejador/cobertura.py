@@ -78,6 +78,7 @@ def avaliar_cobertura_publica(
             inconsistencias.append(f"curso {course_id} sem matrizes inventariadas")
             continue
 
+        aplicaveis_curso = 0
         for matriz in matrizes:
             matrizes_total += 1
             matrix_id = str(matriz.get("id", f"{course_id}:matriz_sem_id"))
@@ -87,17 +88,26 @@ def avaliar_cobertura_publica(
                 pendentes.append(matrix_id)
                 continue
             if aplicabilidade == "nao_aplicavel":
+                if (
+                    not _tem_evidencias(matriz.get("evidencias_aplicabilidade"))
+                    or matriz.get("revisao_humana") != "aprovada"
+                ):
+                    pendentes.append(matrix_id)
                 continue
 
             matrizes_aplicaveis += 1
+            aplicaveis_curso += 1
             validada = (
                 matriz.get("modelagem") == "concluida"
                 and matriz.get("testes") == "aprovados"
                 and matriz.get("revisao_humana") == "aprovada"
-                and bool(matriz.get("evidencias_aplicabilidade"))
+                and _tem_evidencias(matriz.get("evidencias_aplicabilidade"))
             )
             if not validada:
                 aplicaveis_nao_validadas.append(matrix_id)
+
+        if not aplicaveis_curso:
+            inconsistencias.append(f"curso {course_id} sem matriz aplicável")
 
     liberacao_permitida = not (
         cursos_incompletos
@@ -115,4 +125,13 @@ def avaliar_cobertura_publica(
         matrizes_aplicaveis=matrizes_aplicaveis,
         matrizes_aplicaveis_nao_validadas=tuple(aplicaveis_nao_validadas),
         inconsistencias=tuple(inconsistencias),
+    )
+
+
+def _tem_evidencias(valor: Any) -> bool:
+    """O inventário usa uma lista de referências textuais não vazias."""
+    return (
+        isinstance(valor, list)
+        and bool(valor)
+        and all(isinstance(item, str) and bool(item.strip()) for item in valor)
     )

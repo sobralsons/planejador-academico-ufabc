@@ -2,6 +2,8 @@ import copy
 import json
 from pathlib import Path
 
+import pytest
+
 from planejador.cobertura import avaliar_cobertura_publica
 
 
@@ -69,19 +71,51 @@ def test_matriz_aplicavel_sem_validacao_bloqueia_liberacao():
 
 def test_matriz_nao_aplicavel_nao_exige_modelagem():
     inventario = _inventario_minimo_completo()
-    matriz = inventario["cursos"][0]["matrizes"][0]
+    matriz = copy.deepcopy(inventario["cursos"][0]["matrizes"][0])
     matriz.update(
+        id="curso_teste_2010",
         aplicabilidade="nao_aplicavel",
         evidencias_aplicabilidade=["ato oficial exclui estudantes ativos"],
         modelagem="nao_iniciada",
         testes="nao_iniciados",
-        revisao_humana="nao_iniciada",
+        revisao_humana="aprovada",
     )
+    inventario["cursos"][0]["matrizes"].append(matriz)
 
     relatorio = avaliar_cobertura_publica(inventario)
 
     assert relatorio.liberacao_permitida
-    assert relatorio.matrizes_aplicaveis == 0
+    assert relatorio.matrizes_aplicaveis == 1
+
+
+@pytest.mark.parametrize("evidencias", [None, [], [""], ["  "], "ato", [None]])
+@pytest.mark.parametrize("aplicabilidade", ["aplicavel", "nao_aplicavel"])
+def test_decisao_sem_evidencia_valida_bloqueia(evidencias, aplicabilidade):
+    inventario = _inventario_minimo_completo()
+    matriz = copy.deepcopy(inventario["cursos"][0]["matrizes"][0])
+    matriz.update(id="outra", aplicabilidade=aplicabilidade,
+                  evidencias_aplicabilidade=evidencias)
+    inventario["cursos"][0]["matrizes"].append(matriz)
+    assert not avaliar_cobertura_publica(inventario).liberacao_permitida
+
+
+def test_exclusao_exige_revisao_humana_mesmo_com_evidencia():
+    inventario = _inventario_minimo_completo()
+    matriz = copy.deepcopy(inventario["cursos"][0]["matrizes"][0])
+    matriz.update(id="antiga", aplicabilidade="nao_aplicavel",
+                  revisao_humana="nao_iniciada")
+    inventario["cursos"][0]["matrizes"].append(matriz)
+    relatorio = avaliar_cobertura_publica(inventario)
+    assert not relatorio.liberacao_permitida
+    assert "antiga" in relatorio.matrizes_com_aplicabilidade_pendente
+
+
+def test_nao_pode_excluir_todas_as_matrizes_de_um_curso():
+    inventario = _inventario_minimo_completo()
+    inventario["cursos"][0]["matrizes"][0]["aplicabilidade"] = "nao_aplicavel"
+    relatorio = avaliar_cobertura_publica(inventario)
+    assert not relatorio.liberacao_permitida
+    assert "curso curso_teste sem matriz aplicável" in relatorio.inconsistencias
 
 
 def test_inventario_vazio_nunca_e_considerado_publicavel():
