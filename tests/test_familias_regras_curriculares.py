@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
 
+# Estes testes protegem o contrato de cobertura antes de alterar o modelo curricular.
 BASE = Path(__file__).resolve().parents[1]
 FAMILIAS = BASE / "dados" / "familias_regras_curriculares_2026-09-16.json"
 VIGENCIA = BASE / "dados" / "vigencia_ppcs_2026-09-16.json"
