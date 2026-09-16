@@ -1,10 +1,10 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "consultado_em": "2026-09-16",
   "fonte_oficial": "https://prograd.ufabc.edu.br/cursos",
   "total_cursos": 35,
   "escopo": "Cursos de graduação exibidos pela Pró-Reitoria de Graduação da UFABC.",
-  "aviso": "Este inventário identifica cursos, não matrizes curriculares. PPCs, versões, vigências e regras de transição ainda precisam ser levantados e validados.",
+  "aviso": "Este inventário distingue cursos de documentos curriculares. Um PPC localizado não torna uma matriz suportada: ainda é necessário confirmar sua aplicabilidade, modelar todas as regras, testar casos adversariais e obter revisão humana.",
   "cursos": [
     {
       "id": "bct",
@@ -15,9 +15,55 @@
         "São Bernardo do Campo"
       ],
       "curso_base": null,
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "bct_2023",
+          "ano": 2023,
+          "rotulo": "PPC 2023",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/anexo_do_ad_consepe_249_-_ppc_bct_2023_-aprovado_consepe_-_final_pos_errata_12_23.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/bct/pps",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 249",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/bct/pps",
+          "ato_transicao": "Retificação ConsEPE nº 254",
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "bct_2015",
+          "ano": 2015,
+          "rotulo": "PPC 2015",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/resolucoes/3---Reviso-do-PP-do-Bacharelado-em-Cincia-e-Tecnologia-Esta-verso-contempla-as-retificaes.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/bct/pps",
+          "ato_aprovacao": "Resolução ConsEPE nº 188",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/bct/pps",
+          "ato_transicao": "Ato Decisório ConsEPE nº 137",
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "bct_2009",
+          "ano": 2009,
+          "rotulo": "PPC 2009",
+          "ppc_url": "https://prograd.ufabc.edu.br/images/pdf/27-01-10_projeto-pedagogico_bct.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/bct/pps",
+          "ato_aprovacao": "A confirmar no documento oficial",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/bct/pps",
+          "ato_transicao": null,
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ]
     },
     {
       "id": "bch",
@@ -27,9 +73,55 @@
         "São Bernardo do Campo"
       ],
       "curso_base": null,
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "bch_2022",
+          "ano": 2022,
+          "rotulo": "PPC 2022",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_236_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/bch/projeto-pedagogico",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 236/2022",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/bch/projeto-pedagogico",
+          "ato_transicao": "Ato Decisório ConsEPE nº 244/2023",
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "bch_2015",
+          "ano": 2015,
+          "rotulo": "PPC 2015",
+          "ppc_url": "https://prograd.ufabc.edu.br/doc/ppc_bch_2015.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/bch/projeto-pedagogico",
+          "ato_aprovacao": "A confirmar no documento oficial",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/doc/anexo_IV_plano_de_transicao_entre_matrizes.pdf",
+          "ato_transicao": null,
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "bch_2010_2014",
+          "ano": 2010,
+          "rotulo": "PPC 2010/2014",
+          "ppc_url": "https://prograd.ufabc.edu.br/images/pdf/pp_bch.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/bch/projeto-pedagogico",
+          "ato_aprovacao": "Resolução ConsEPE nº 122",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/bch/projeto-pedagogico",
+          "ato_transicao": "Resolução ConsEPE nº 136",
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ]
     },
     {
       "id": "lch",
@@ -39,9 +131,55 @@
         "São Bernardo do Campo"
       ],
       "curso_base": null,
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "lch_2025",
+          "ano": 2025,
+          "rotulo": "PPC 2025",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato-decisorio_307_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/lch/projeto-pedagogico",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 307/2025",
+          "vigencia_ingresso": "Ingressantes a partir de 2026",
+          "transicao_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/comissao_ato_decisorio_72_anexo2.pdf",
+          "ato_transicao": null,
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "lch_2022",
+          "ano": 2022,
+          "rotulo": "PPC 2022",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_242_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/lch/projeto-pedagogico",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 242/2022",
+          "vigencia_ingresso": "Ingressantes a partir de 2023; estudantes anteriores conforme regras de transição",
+          "transicao_url": "https://prograd.ufabc.edu.br/lch/projeto-pedagogico",
+          "ato_transicao": null,
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "lch_2019",
+          "ano": 2019,
+          "rotulo": "PPC 2019",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_178_anexoi_projeto_pedagogico.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/lch/projeto-pedagogico",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 178",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/lch/projeto-pedagogico",
+          "ato_transicao": null,
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ]
     },
     {
       "id": "lcne",
@@ -51,9 +189,55 @@
         "Santo André"
       ],
       "curso_base": null,
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "lcne_2026",
+          "ano": 2026,
+          "rotulo": "PPC 2026",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/consepe_ato-decisorio_320_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/lcne/projeto-pedagogico",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 320/2026",
+          "vigencia_ingresso": "Ingressantes a partir de 2026",
+          "transicao_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/comissao_ato_decisorio_78_anexo-2.pdf",
+          "ato_transicao": null,
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "lcne_2022",
+          "ano": 2022,
+          "rotulo": "PPC 2022",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_243_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/lcne/projeto-pedagogico",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 243/2022",
+          "vigencia_ingresso": "Ingressantes a partir de 2023; estudantes anteriores conforme regras de transição",
+          "transicao_url": "https://prograd.ufabc.edu.br/lcne/projeto-pedagogico",
+          "ato_transicao": null,
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "lcne_2019",
+          "ano": 2019,
+          "rotulo": "PPC 2019",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_177_anexoi_projeto_pedagogico.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/lcne/projeto-pedagogico",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 177",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://prograd.ufabc.edu.br/lcne/projeto-pedagogico",
+          "ato_transicao": null,
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ]
     },
     {
       "id": "leila",
@@ -63,19 +247,53 @@
         "Santo André"
       ],
       "curso_base": null,
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "leila_2025",
+          "ano": 2025,
+          "rotulo": "PPC 2025",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisorio_306_-_aprova_o_ppc_da_leila_-_anexo_consolidado_-_retificacao_256.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/leila",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 306/2025",
+          "vigencia_ingresso": null,
+          "transicao_url": null,
+          "ato_transicao": "Retificação ConsEPE nº 256",
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ]
     },
     {
       "id": "lec_ciencias_humanas_sociais",
       "nome": "Licenciatura em Educação do Campo – Ciências Humanas e Sociais",
-      "tipo": "ingresso",
-      "campi": [],
+      "tipo": "oferta_especial",
+      "campi": [
+        "São Bernardo do Campo"
+      ],
       "curso_base": null,
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "lec_ciencias_humanas_sociais_2024",
+          "ano": 2024,
+          "rotulo": "PPC 2024 — oferta única",
+          "ppc_url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_281_anexo.pdf",
+          "indice_oficial_url": "https://prograd.ufabc.edu.br/cursos/lec-chs",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 281/2024",
+          "vigencia_ingresso": "Turma de ingresso de 2024 da oferta especial",
+          "transicao_url": null,
+          "ato_transicao": null,
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ]
     },
     {
       "id": "biotecnologia",
@@ -181,9 +399,40 @@
         "Santo André"
       ],
       "curso_base": "bct",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "engenharia_ambiental_urbana_2023",
+          "ano": 2023,
+          "rotulo": "PPC 2023 consolidado das Engenharias",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisrio_270_-_ppc_consolidado_-_4_dez_2025_-_retificao_240.pdf",
+          "indice_oficial_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 270",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos/224-ensino/9780-regras-de-transicao",
+          "ato_transicao": "Ato Decisório da Comissão de Graduação nº 53/2024",
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "engenharia_ambiental_urbana_2017",
+          "ano": 2017,
+          "rotulo": "PPC 2017 consolidado das Engenharias",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/resolucoes/resoluo_212_-_aprova_a_reviso_do_projeto_pedaggico_das_engenharias_anexo_1.pdf",
+          "indice_oficial_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos",
+          "ato_aprovacao": "Resolução ConsEPE nº 212",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos/224-ensino/9780-regras-de-transicao",
+          "ato_transicao": "Ato Decisório da Comissão de Graduação nº 53/2024",
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ]
     },
     {
       "id": "engenharia_energia",
@@ -193,9 +442,40 @@
         "Santo André"
       ],
       "curso_base": "bct",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "engenharia_energia_2023",
+          "ano": 2023,
+          "rotulo": "PPC 2023 consolidado das Engenharias",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisrio_270_-_ppc_consolidado_-_4_dez_2025_-_retificao_240.pdf",
+          "indice_oficial_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 270",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos/224-ensino/9780-regras-de-transicao",
+          "ato_transicao": "Ato Decisório da Comissão de Graduação nº 49/2023",
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "engenharia_energia_2017",
+          "ano": 2017,
+          "rotulo": "PPC 2017 consolidado das Engenharias",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/resolucoes/resoluo_212_-_aprova_a_reviso_do_projeto_pedaggico_das_engenharias_anexo_1.pdf",
+          "indice_oficial_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos",
+          "ato_aprovacao": "Resolução ConsEPE nº 212",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos/224-ensino/9780-regras-de-transicao",
+          "ato_transicao": "Ato Decisório da Comissão de Graduação nº 49/2023",
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ]
     },
     {
       "id": "engenharia_informacao",
@@ -205,9 +485,40 @@
         "Santo André"
       ],
       "curso_base": "bct",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "engenharia_informacao_2023",
+          "ano": 2023,
+          "rotulo": "PPC 2023 consolidado das Engenharias",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisrio_270_-_ppc_consolidado_-_4_dez_2025_-_retificao_240.pdf",
+          "indice_oficial_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 270",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos/224-ensino/9780-regras-de-transicao",
+          "ato_transicao": "Ato Decisório da Comissão de Graduação nº 48/2023",
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "engenharia_informacao_2017",
+          "ano": 2017,
+          "rotulo": "PPC 2017 consolidado das Engenharias",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/resolucoes/resoluo_212_-_aprova_a_reviso_do_projeto_pedaggico_das_engenharias_anexo_1.pdf",
+          "indice_oficial_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos",
+          "ato_aprovacao": "Resolução ConsEPE nº 212",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos/224-ensino/9780-regras-de-transicao",
+          "ato_transicao": "Ato Decisório da Comissão de Graduação nº 48/2023",
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ]
     },
     {
       "id": "engenharia_instrumentacao_automacao_robotica",
@@ -217,9 +528,40 @@
         "Santo André"
       ],
       "curso_base": "bct",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "engenharia_instrumentacao_automacao_robotica_2023",
+          "ano": 2023,
+          "rotulo": "PPC 2023 consolidado das Engenharias",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisrio_270_-_ppc_consolidado_-_4_dez_2025_-_retificao_240.pdf",
+          "indice_oficial_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 270",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos/224-ensino/9780-regras-de-transicao",
+          "ato_transicao": "Ato Decisório da Comissão de Graduação nº 51/2024",
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "engenharia_instrumentacao_automacao_robotica_2017",
+          "ano": 2017,
+          "rotulo": "PPC 2017 consolidado das Engenharias",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/resolucoes/resoluo_212_-_aprova_a_reviso_do_projeto_pedaggico_das_engenharias_anexo_1.pdf",
+          "indice_oficial_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos",
+          "ato_aprovacao": "Resolução ConsEPE nº 212",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos/224-ensino/9780-regras-de-transicao",
+          "ato_transicao": "Ato Decisório da Comissão de Graduação nº 51/2024",
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ]
     },
     {
       "id": "engenharia_materiais",
@@ -229,9 +571,40 @@
         "Santo André"
       ],
       "curso_base": "bct",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "engenharia_materiais_2023",
+          "ano": 2023,
+          "rotulo": "PPC 2023 consolidado das Engenharias",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisrio_270_-_ppc_consolidado_-_4_dez_2025_-_retificao_240.pdf",
+          "indice_oficial_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 270",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos/224-ensino/9780-regras-de-transicao",
+          "ato_transicao": "Ato Decisório da Comissão de Graduação nº 52/2024",
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "engenharia_materiais_2017",
+          "ano": 2017,
+          "rotulo": "PPC 2017 consolidado das Engenharias",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/resolucoes/resoluo_212_-_aprova_a_reviso_do_projeto_pedaggico_das_engenharias_anexo_1.pdf",
+          "indice_oficial_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos",
+          "ato_aprovacao": "Resolução ConsEPE nº 212",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos/224-ensino/9780-regras-de-transicao",
+          "ato_transicao": "Ato Decisório da Comissão de Graduação nº 52/2024",
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ]
     },
     {
       "id": "engenharia_aeroespacial",
@@ -241,9 +614,40 @@
         "São Bernardo do Campo"
       ],
       "curso_base": "bct",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "engenharia_aeroespacial_2023",
+          "ano": 2023,
+          "rotulo": "PPC 2023 consolidado das Engenharias",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisrio_270_-_ppc_consolidado_-_4_dez_2025_-_retificao_240.pdf",
+          "indice_oficial_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 270",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos/224-ensino/9780-regras-de-transicao",
+          "ato_transicao": "Ato Decisório da Comissão de Graduação nº 47/2023",
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "engenharia_aeroespacial_2017",
+          "ano": 2017,
+          "rotulo": "PPC 2017 consolidado das Engenharias",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/resolucoes/resoluo_212_-_aprova_a_reviso_do_projeto_pedaggico_das_engenharias_anexo_1.pdf",
+          "indice_oficial_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos",
+          "ato_aprovacao": "Resolução ConsEPE nº 212",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos/224-ensino/9780-regras-de-transicao",
+          "ato_transicao": "Ato Decisório da Comissão de Graduação nº 47/2023",
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ]
     },
     {
       "id": "engenharia_biomedica",
@@ -253,9 +657,40 @@
         "São Bernardo do Campo"
       ],
       "curso_base": "bct",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "engenharia_biomedica_2023",
+          "ano": 2023,
+          "rotulo": "PPC 2023 consolidado das Engenharias",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisrio_270_-_ppc_consolidado_-_4_dez_2025_-_retificao_240.pdf",
+          "indice_oficial_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 270",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos/224-ensino/9780-regras-de-transicao",
+          "ato_transicao": "Ato Decisório da Comissão de Graduação nº 50/2024",
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "engenharia_biomedica_2017",
+          "ano": 2017,
+          "rotulo": "PPC 2017 consolidado das Engenharias",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/resolucoes/resoluo_212_-_aprova_a_reviso_do_projeto_pedaggico_das_engenharias_anexo_1.pdf",
+          "indice_oficial_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos",
+          "ato_aprovacao": "Resolução ConsEPE nº 212",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos/224-ensino/9780-regras-de-transicao",
+          "ato_transicao": "Ato Decisório da Comissão de Graduação nº 50/2024",
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ]
     },
     {
       "id": "engenharia_gestao",
@@ -265,9 +700,40 @@
         "São Bernardo do Campo"
       ],
       "curso_base": "bct",
-      "levantamento_matrizes": "pendente",
+      "levantamento_matrizes": "fontes_localizadas_parcialmente",
       "validacao_academica": "nao_iniciada",
-      "matrizes": []
+      "matrizes": [
+        {
+          "id": "engenharia_gestao_2023",
+          "ano": 2023,
+          "rotulo": "PPC 2023 consolidado das Engenharias",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisrio_270_-_ppc_consolidado_-_4_dez_2025_-_retificao_240.pdf",
+          "indice_oficial_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos",
+          "ato_aprovacao": "Ato Decisório ConsEPE nº 270",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos/224-ensino/9780-regras-de-transicao",
+          "ato_transicao": "Ato Decisório da Comissão de Graduação nº 54/2024",
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        },
+        {
+          "id": "engenharia_gestao_2017",
+          "ano": 2017,
+          "rotulo": "PPC 2017 consolidado das Engenharias",
+          "ppc_url": "https://www.ufabc.edu.br/images/consepe/resolucoes/resoluo_212_-_aprova_a_reviso_do_projeto_pedaggico_das_engenharias_anexo_1.pdf",
+          "indice_oficial_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos",
+          "ato_aprovacao": "Resolução ConsEPE nº 212",
+          "vigencia_ingresso": null,
+          "transicao_url": "https://cecs.ufabc.edu.br/ensino/projetos-pedagogicos/224-ensino/9780-regras-de-transicao",
+          "ato_transicao": "Ato Decisório da Comissão de Graduação nº 54/2024",
+          "aplicabilidade": "a_confirmar",
+          "modelagem": "nao_iniciada",
+          "testes": "nao_iniciados",
+          "revisao_humana": "nao_iniciada"
+        }
+      ]
     },
     {
       "id": "ciencias_economicas",
@@ -425,5 +891,8 @@
       "validacao_academica": "nao_iniciada",
       "matrizes": []
     }
-  ]
+  ],
+  "criterio_publicacao": "O produto público exige cobertura validada de todos os cursos e de todas as matrizes aplicáveis a estudantes ativos.",
+  "total_documentos_curriculares_localizados": 30,
+  "total_cursos_com_fontes_localizadas": 14
 }
