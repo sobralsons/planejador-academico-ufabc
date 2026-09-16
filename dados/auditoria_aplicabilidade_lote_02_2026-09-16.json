@@ -1,0 +1,343 @@
+{
+  "schema_version": 1,
+  "analisado_em": "2026-09-16",
+  "base_vigencia": "dados/vigencia_ppcs_2026-09-16.json",
+  "escopo": "Auditoria individual do segundo lote de matrizes pendentes. O lote compara atos, PPCs e documentos de transição oficiais, distingue minutas de documentos finais aprovados e não declara suporte acadêmico. Nenhuma classificação global é alterada sem revisão humana.",
+  "politica_decisao": {
+    "documento_final_aprovado_prevalece_sobre_minuta": true,
+    "ausencia_de_prazo_expresso_mantem_pendente": true,
+    "norma_geral_sozinha_nao_basta_para_excluir": true,
+    "edital_de_vagas_nao_e_prova_de_extincao": true,
+    "ausencia_de_prorrogacao_nao_prova_extincao": true,
+    "exclusao_exige_evidencia_oficial_especifica": true,
+    "exclusao_exige_revisao_humana_aprovada": true,
+    "ambiguidade_mantem_pendente": true
+  },
+  "campos_obrigatorios_por_decisao": [
+    "ppc_substituido",
+    "ppc_substituto",
+    "entrada_em_vigor",
+    "tempo_integralizacao",
+    "calculo_termino_validade",
+    "regras_transicao",
+    "possiveis_excecoes",
+    "fontes",
+    "revisao_humana"
+  ],
+  "matrizes": [
+    {
+      "curso_id": "politicas_publicas",
+      "matriz_id": "politicas_publicas_2015",
+      "matriz_ano": 2015,
+      "status_antes": "pendente",
+      "status_resultante": "pendente",
+      "ppc_substituido": {
+        "ano": 2015,
+        "ato": "Resolução ConsEPE nº 191/2015",
+        "url": "https://www.ufabc.edu.br/images/consepe/resolucoes/anexo-3-resolucao-191-Revisao-do-PP-do-Bacharelado-em-Politicas-Publicas-retificado.pdf"
+      },
+      "ppc_substituto": {
+        "ano": 2023,
+        "ato": "Ato Decisório ConsEPE nº 250/2023",
+        "url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisrio_250_-_aprovar_a_atualizao_do_projeto_pedaggico_do_curso_de_bacharelado_em_polticas_pblicas_conforme_anexo_-_ato_assinado_com_consolidao_e_retificado.pdf"
+      },
+      "entrada_em_vigor": {
+        "estado": "comprovada",
+        "regra": "O Ato ConsEPE nº 250/2023 atribui o PPC 2023 aos ingressantes a partir de 2023 e preserva aos ingressantes até 2022 a possibilidade de seguir o PPC 2015 conforme as regras de transição.",
+        "marco": "ingressantes a partir de 2023",
+        "fonte_id": "bpp_ato_250_2023"
+      },
+      "tempo_integralizacao": {
+        "estado": "comprovado_no_ppc_substituido",
+        "valor": 12,
+        "unidade": "quadrimestres",
+        "equivalencia_documental": "4 anos",
+        "fonte_id": "bpp_ppc_2015"
+      },
+      "calculo_termino_validade": {
+        "regra_geral": "Resolução ConsEPE nº 255/2022, art. 12, §1º.",
+        "inicio_teorico": "2022",
+        "resultado_teorico": null,
+        "estado": "inconclusivo",
+        "motivo": "A minuta pré-deliberação trazia prazo até 2030, porém o registro da deliberação documenta a retirada do item 5 e o Documento Complementar II final aprovado pelo Ato CG nº 30/2023 não contém esse prazo. Como o documento final continua permitindo integralização pela matriz 2015 a ingressantes anteriores a 2023, não se inventa data terminal a partir da norma geral."
+      },
+      "regras_transicao": [
+        {
+          "ato": "Ato Decisório ConsEPE nº 250/2023",
+          "efeito_relevante": "Ingressantes até 2022 podem seguir o PPC 2015, respeitadas as regras de transição.",
+          "fonte_id": "bpp_ato_250_2023"
+        },
+        {
+          "ato": "Ato Decisório CG nº 30/2023 - Documento Complementar II final",
+          "efeito_relevante": "Ingressantes anteriores a 2015 podem integralizar 2010, 2015 ou 2023; ingressantes de 2015 a 2022 podem integralizar 2015 ou 2023. O documento final não fixa data de extinção.",
+          "fonte_id": "bpp_transicao_final_30_2023"
+        }
+      ],
+      "possiveis_excecoes": [
+        "Casos omissos são resolvidos pela coordenação do curso no documento final.",
+        "A Resolução ConsEPE nº 255/2022 contém a regra geral de validade e precisa ser conciliada com a transição específica."
+      ],
+      "lacunas": [
+        "Falta revisão acadêmico-normativa humana para conciliar a regra geral com a transição específica sem prazo terminal.",
+        "O prazo até 2030 aparece apenas em minuta anterior à deliberação e foi retirado antes da aprovação; não pode fundamentar decisão."
+      ],
+      "fontes": [
+        "res_255_2022",
+        "bpp_ppc_2015",
+        "bpp_ato_250_2023",
+        "bpp_transicao_final_30_2023",
+        "bpp_minuta_transicao_2023",
+        "bpp_deliberacao_cg_2023"
+      ],
+      "revisao_humana": {
+        "estado": "pendente",
+        "pronto_para_mudar_status": false,
+        "motivo": "A fonte final exclui o prazo que constava da minuta; a data terminal permanece sem base oficial específica suficiente."
+      },
+      "decisao_publicavel": false
+    },
+    {
+      "curso_id": "ciencia_computacao",
+      "matriz_id": "ciencia_computacao_2015",
+      "matriz_ano": 2015,
+      "status_antes": "pendente",
+      "status_resultante": "pendente",
+      "ppc_substituido": {
+        "ano": 2015,
+        "ato": "Resolução ConsEPE nº 195/2015",
+        "url": "https://www.ufabc.edu.br/images/consepe/resolucoes/resolucao-195-revisao-do-pp-do-bacharelado-em-ciencia-da-computacao-esta-versao-contempla-as-retificacoes.pdf"
+      },
+      "ppc_substituto": {
+        "ano": 2017,
+        "ato": "Resolução ConsEPE nº 211/2016 (PPC identificado oficialmente como 2017)",
+        "url": "https://prograd.ufabc.edu.br/cursos/bcc"
+      },
+      "entrada_em_vigor": {
+        "estado": "comprovada_parcialmente",
+        "regra": "A página oficial registra que a Resolução ConsEPE nº 211 revogou e substituiu a nº 195; a Resolução nº 211 foi aprovada em 2016 e o projeto é identificado pela UFABC como PPC 2017.",
+        "marco": "substituição normativa em 2016 / PPC 2017",
+        "fonte_id": "bcc_pagina_oficial"
+      },
+      "tempo_integralizacao": {
+        "estado": "comprovado_no_ppc_substituido",
+        "valor": 4,
+        "unidade": "anos",
+        "fonte_id": "bcc_ppc_2015"
+      },
+      "calculo_termino_validade": {
+        "regra_geral": "Resolução ConsEPE nº 255/2022, art. 12, §1º.",
+        "inicio_teorico": null,
+        "resultado_teorico": null,
+        "estado": "inconclusivo",
+        "motivo": "O PPC 2015 foi substituído pelo PPC 2017 antes da Resolução 255/2022, e o documento de transição de 2023 permite a ingressantes anteriores a 2023 integralizar pelo PPC vigente no ano de ingresso, incluindo 2015 na TTMC. Sem regra oficial específica que fixe a data terminal do PPC 2015 neste encadeamento, não se infere extinção."
+      },
+      "regras_transicao": [
+        {
+          "ato": "Ato Decisório CG nº 44/2023 - Documento Complementar II",
+          "efeito_relevante": "Ingressantes anteriores a 2023 podem integralizar pela matriz 2023 ou pelo PPC vigente em seu ano de ingresso; a TTMC contempla 2010, 2015, 2017 e 2023.",
+          "fonte_id": "bcc_transicao_44_2023"
+        },
+        {
+          "ato": "Ato Decisório ConsEPE nº 267/2023",
+          "efeito_relevante": "A disposição transitória menciona o PPC 2017 para ingressantes até 2022, criando uma tensão documental com a regra mais ampla do Documento Complementar II sobre o PPC do ano de ingresso.",
+          "fonte_id": "bcc_ato_267_2023"
+        }
+      ],
+      "possiveis_excecoes": [
+        "A TTMC atual contempla matrizes 2010, 2015, 2017 e 2023.",
+        "Casos omissos são resolvidos pela coordenação do curso com apoio da Pró-Reitoria de Graduação."
+      ],
+      "lacunas": [
+        "Falta regra oficial específica e inequívoca para a data terminal do PPC 2015 diante do encadeamento 2015→2017→2023.",
+        "A disposição transitória do Ato 267 e o Documento Complementar II precisam de interpretação acadêmico-normativa conjunta."
+      ],
+      "fontes": [
+        "res_255_2022",
+        "bcc_pagina_oficial",
+        "bcc_ppc_2015",
+        "bcc_ato_267_2023",
+        "bcc_transicao_44_2023"
+      ],
+      "revisao_humana": {
+        "estado": "pendente",
+        "pronto_para_mudar_status": false,
+        "motivo": "Documentos oficiais atuais preservam referência operacional à matriz de ingresso sem data terminal inequívoca para 2015."
+      },
+      "decisao_publicavel": false
+    },
+    {
+      "curso_id": "filosofia_licenciatura",
+      "matriz_id": "filosofia_licenciatura_2022",
+      "matriz_ano": 2022,
+      "status_antes": "pendente",
+      "status_resultante": "pendente",
+      "ppc_substituido": {
+        "ano": 2022,
+        "ato": "Ato Decisório ConsEPE nº 222/2022",
+        "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_222_anexo.pdf"
+      },
+      "ppc_substituto": {
+        "ano": 2023,
+        "ato": "Ato Decisório ConsEPE nº 254/2023",
+        "url": "https://www.ufabc.edu.br/images/stories/comunicare/boletimdeservico/boletim_servico_ufabc_1239.pdf"
+      },
+      "entrada_em_vigor": {
+        "estado": "comprovada",
+        "regra": "O Ato ConsEPE nº 254/2023 atribui o PPC 2023 aos ingressantes a partir de 2023 e preserva aos ingressantes até 2022 a possibilidade de seguir o PPC 2022 conforme transição.",
+        "marco": "ingressantes a partir de 2023",
+        "fonte_id": "lfil_ato_254_2023"
+      },
+      "tempo_integralizacao": {
+        "estado": "comprovado_no_ppc_substituido",
+        "valor": 12,
+        "unidade": "quadrimestres",
+        "equivalencia_documental": "4 anos letivos",
+        "fonte_id": "lfil_ppc_2022"
+      },
+      "calculo_termino_validade": {
+        "regra_geral": "Resolução ConsEPE nº 255/2022, art. 12, §1º.",
+        "inicio_teorico": "2022",
+        "resultado_teorico": null,
+        "estado": "inconclusivo",
+        "motivo": "O Ato 254/2023 e o Documento Complementar II aprovado pelo Ato CG nº 36/2023 preservam explicitamente a opção pela matriz 2022 para ingressantes até 2022, sem estabelecer data terminal. Não será criada uma data de extinção por conversão autônoma da regra geral."
+      },
+      "regras_transicao": [
+        {
+          "ato": "Ato Decisório ConsEPE nº 254/2023",
+          "efeito_relevante": "Ingressantes até 2022 podem seguir o PPC 2022, respeitadas as regras de transição.",
+          "fonte_id": "lfil_ato_254_2023"
+        },
+        {
+          "ato": "Ato Decisório CG nº 36/2023 - Documento Complementar II",
+          "efeito_relevante": "Ingressantes da LCH até 2022 podem optar pelas matrizes 2022 ou 2023; o documento também diferencia os módulos de estágio das versões, mas não fixa prazo terminal.",
+          "fonte_id": "lfil_transicao_36_2023"
+        }
+      ],
+      "possiveis_excecoes": [
+        "As regras distinguem ingressantes via BCH e via LCH e tratam de estágios de versões anteriores.",
+        "Casos omissos são encaminhados à coordenação do curso e à Pró-Reitoria de Graduação."
+      ],
+      "lacunas": [
+        "Não há data explícita de extinção do PPC 2022 no ato ou no documento complementar consultados.",
+        "A aplicação temporal do art. 12, §1º, precisa de revisão humana diante da opção expressamente preservada."
+      ],
+      "fontes": [
+        "res_255_2022",
+        "lfil_ppc_2022",
+        "lfil_ato_254_2023",
+        "lfil_transicao_36_2023"
+      ],
+      "revisao_humana": {
+        "estado": "pendente",
+        "pronto_para_mudar_status": false,
+        "motivo": "A transição específica preserva a escolha pela matriz 2022 sem informar data terminal."
+      },
+      "decisao_publicavel": false
+    }
+  ],
+  "fontes_oficiais": {
+    "res_255_2022": {
+      "tipo": "resolucao",
+      "referencia": "Resolução ConsEPE nº 255/2022, art. 12, especialmente §1º",
+      "url": "https://www.ufabc.edu.br/images/consepe/resolucoes/resoluo_255_-_estabelece_normas_e_procedimentos_para_a_reviso_e_aprovao_dos_projetos_pedaggicos_dos_cursos_de_graduao_da_ufabc_revoga_e_substitui_230_susp_temp_3.pdf",
+      "secao": "Art. 12 e §1º",
+      "interpretacao": "Regra geral de validade de PPC substituído; não é usada isoladamente para excluir matrizes."
+    },
+    "bpp_ppc_2015": {
+      "tipo": "ppc",
+      "referencia": "PPC 2015 do Bacharelado em Políticas Públicas, Resolução ConsEPE nº 191/2015",
+      "url": "https://www.ufabc.edu.br/images/consepe/resolucoes/anexo-3-resolucao-191-Revisao-do-PP-do-Bacharelado-em-Politicas-Publicas-retificado.pdf",
+      "secao": "7.3 Estratégias pedagógicas, p. 16",
+      "interpretacao": "Registra duração de 4 anos ou 12 quadrimestres."
+    },
+    "bpp_ato_250_2023": {
+      "tipo": "ato_decisorio_consepe",
+      "referencia": "Ato Decisório ConsEPE nº 250/2023",
+      "url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisrio_250_-_aprovar_a_atualizao_do_projeto_pedaggico_do_curso_de_bacharelado_em_polticas_pblicas_conforme_anexo_-_ato_assinado_com_consolidao_e_retificado.pdf",
+      "secao": "Art. 3º - disposição transitória",
+      "interpretacao": "PPC 2023 vale para ingressantes a partir de 2023; ingressantes até 2022 podem seguir o PPC 2015 conforme transição."
+    },
+    "bpp_transicao_final_30_2023": {
+      "tipo": "documento_complementar_transicao",
+      "referencia": "Documento Complementar II aprovado pelo Ato Decisório CG nº 30/2023",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/comissao_ato_decisorio_30_anexo_2.pdf",
+      "secao": "Diretrizes gerais, itens 1 a 6",
+      "interpretacao": "Documento final permite integralização pela matriz 2015 a ingressantes anteriores a 2023, mas não contém data terminal de validade."
+    },
+    "bpp_minuta_transicao_2023": {
+      "tipo": "minuta_oficial_pre_deliberacao",
+      "referencia": "Minuta do Documento Complementar II apresentada à Comissão de Graduação em 2023",
+      "url": "https://www.ufabc.edu.br/images/consepe/prox_sessao/ii_sessao_ordinaria_-_25_de_abril_de_2023/ordem_do_dia_-_anexo_2d_-ppc_bpp_doc_compl_2.pdf",
+      "secao": "Diretrizes gerais, item 5 da minuta",
+      "interpretacao": "A minuta trazia validade até 2030 para o PPC 2015, mas esse item não consta do documento final aprovado e não pode ser tratado como regra vigente."
+    },
+    "bpp_deliberacao_cg_2023": {
+      "tipo": "registro_deliberacao_cg",
+      "referencia": "Registro da V sessão ordinária da Comissão de Graduação de 2023",
+      "url": "https://www.ufabc.edu.br/images/consepe/prox_sessao/v_sessao_ordinaria_-_31_de_outubro_de_2023/ordem_do_dia_-_anexo_4f.pdf",
+      "secao": "Discussão do Documento Complementar II do BPP, linhas 139-153 do registro",
+      "interpretacao": "Registra a sugestão e aceitação da retirada do item 5 antes da aprovação; o documento final confirma a ausência do prazo."
+    },
+    "bcc_pagina_oficial": {
+      "tipo": "pagina_oficial_prograd",
+      "referencia": "ProGrad - Bacharelado em Ciência da Computação",
+      "url": "https://prograd.ufabc.edu.br/cursos/bcc",
+      "secao": "Projetos Pedagógicos",
+      "interpretacao": "Identifica o PPC 2015 e informa que a Resolução ConsEPE nº 195 foi revogada e substituída pela nº 211 (PPC 2017)."
+    },
+    "bcc_ppc_2015": {
+      "tipo": "ppc",
+      "referencia": "PPC 2015 do Bacharelado em Ciência da Computação, Resolução ConsEPE nº 195/2015",
+      "url": "https://www.ufabc.edu.br/images/consepe/resolucoes/resolucao-195-revisao-do-pp-do-bacharelado-em-ciencia-da-computacao-esta-versao-contempla-as-retificacoes.pdf",
+      "secao": "Dados do curso",
+      "interpretacao": "Registra tempo de integralização de 4 anos."
+    },
+    "bcc_ato_267_2023": {
+      "tipo": "ato_decisorio_consepe",
+      "referencia": "Ato Decisório ConsEPE nº 267/2023",
+      "url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisrio_267_-_retificado_aprovar_a_atualizao_do_projeto_pedaggico_do_curso_de_bacharelado_em_cincia_da_computao_-_ato_assinado.pdf",
+      "secao": "Art. 3º - disposição transitória",
+      "interpretacao": "PPC 2023 vale para ingressantes a partir de 2023; o ato menciona expressamente o PPC 2017 para ingressantes até 2022."
+    },
+    "bcc_transicao_44_2023": {
+      "tipo": "documento_complementar_transicao",
+      "referencia": "Regras de transição aprovadas pelo Ato Decisório CG nº 44/2023",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/cg_ato-decisorio_044_anexo-02.pdf",
+      "secao": "1. Regras de Transição, p. 2",
+      "interpretacao": "Ingressantes anteriores a 2023 podem integralizar pela matriz 2023 ou pelo PPC vigente em seu ano de ingresso; o documento inclui 2015 na TTMC, mas não fixa data terminal."
+    },
+    "lfil_ppc_2022": {
+      "tipo": "ppc",
+      "referencia": "PPC 2022 da Licenciatura em Filosofia, Ato Decisório ConsEPE nº 222/2022",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consepe_ato_decisorio_222_anexo.pdf",
+      "secao": "8.2 Regime de ensino, p. 25",
+      "interpretacao": "Registra prazo sugerido de 12 quadrimestres (4 anos letivos)."
+    },
+    "lfil_ato_254_2023": {
+      "tipo": "ato_decisorio_consepe",
+      "referencia": "Ato Decisório ConsEPE nº 254/2023",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicare/boletimdeservico/boletim_servico_ufabc_1239.pdf",
+      "secao": "p. 10, Art. 3º - disposição transitória",
+      "interpretacao": "PPC 2023 vale para ingressantes a partir de 2023; ingressantes até 2022 podem seguir o PPC 2022 conforme transição."
+    },
+    "lfil_transicao_36_2023": {
+      "tipo": "documento_complementar_transicao",
+      "referencia": "Documento Complementar II aprovado pelo Ato Decisório CG nº 36/2023",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/cg_ato-decisorio_036_anexo-02.pdf",
+      "secao": "1. Regras de Transição, pp. 1-2",
+      "interpretacao": "Ingressantes da LCH até 2022 podem optar pelas matrizes 2022 ou 2023; o documento não fixa data terminal de validade para a matriz 2022."
+    }
+  },
+  "resumo": {
+    "matrizes_auditadas": 3,
+    "permanecem_pendentes": 3,
+    "mudaram_para_nao_aplicavel": 0,
+    "mudaram_para_candidata_preliminar": 0,
+    "decisoes_publicaveis": 0
+  },
+  "limitacoes": [
+    "O lote registra evidência documental e conflitos de interpretação; não substitui revisão acadêmica humana.",
+    "A classificação global permanece com 46 candidatas preliminares, 47 pendentes e nenhuma exclusão definitiva.",
+    "Nenhuma das três matrizes deste lote é declarada modelada, testada, revisada ou suportada."
+  ]
+}
