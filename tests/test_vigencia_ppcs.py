@@ -41,15 +41,15 @@ def test_avaliacao_de_vigencia_cobre_exatamente_os_93_ppcs():
     assert not (aplicaveis & nao_aplicaveis)
     assert aplicaveis | nao_aplicaveis | pendentes == inventariados
     assert len(inventariados) == 93
-    assert len(aplicaveis) == 47
+    assert len(aplicaveis) == 48
     assert len(nao_aplicaveis) == 0
-    assert len(pendentes) == 46
+    assert len(pendentes) == 45
     assert vigencia["resumo"] == {
         "ppcs_total": 93,
-        "candidatas": 47,
+        "candidatas": 48,
         "nao_aplicaveis": 0,
-        "pendentes": 46,
-        "ppcs_historicos_candidatos": 12,
+        "pendentes": 45,
+        "ppcs_historicos_candidatos": 13,
     }
 
 
@@ -77,6 +77,8 @@ def test_ppcs_historicos_que_ainda_podem_reger_estudantes_ativos():
     assert 2022 in por_curso["lcne"]["matrizes_candidatas_anos"]
     assert 2017 in por_curso["ciencia_computacao"]["matrizes_candidatas_anos"]
     assert 2021 in por_curso["neurociencia"]["matrizes_candidatas_anos"]
+    assert 2015 in por_curso["quimica"]["matrizes_candidatas_anos"]
+    assert 2010 in por_curso["quimica"]["matrizes_pendentes_anos"]
 
     engenharias = {
         "engenharia_ambiental_urbana",
@@ -105,6 +107,8 @@ def test_exclusoes_sem_comprovacao_voltam_a_ficar_pendentes_salvo_promocao_docum
     assert 2015 in por_curso["neurociencia"]["matrizes_pendentes_anos"]
     assert 2021 not in por_curso["neurociencia"]["matrizes_pendentes_anos"]
     assert 2021 in por_curso["neurociencia"]["matrizes_candidatas_anos"]
+    assert 2015 not in por_curso["quimica"]["matrizes_pendentes_anos"]
+    assert 2015 in por_curso["quimica"]["matrizes_candidatas_anos"]
 
 
 def test_avaliacao_e_explicitamente_datada_e_nao_confunde_vigencia_com_suporte():
@@ -119,13 +123,16 @@ def test_avaliacao_e_explicitamente_datada_e_nao_confunde_vigencia_com_suporte()
     )
 
 
-def test_reabertura_preserva_historico_e_registra_unica_promocao_do_lote_04():
+def test_reabertura_preserva_historico_e_registra_promocoes_documentadas():
     _, vigencia = _carregar()
     assert vigencia["schema_version"] == 2
     assert vigencia["estado_avaliacao"] == "preliminar"
     assert vigencia["revisao_humana"] == "pendente"
 
-    promovidas_do_historico = {("neurociencia", 2021)}
+    promovidas_do_historico = {
+        ("neurociencia", 2021),
+        ("quimica", 2015),
+    }
     encontradas = set()
 
     for item in vigencia["classificacao"]:
