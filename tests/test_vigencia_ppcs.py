@@ -1,0 +1,107 @@
+import json
+from pathlib import Path
+
+BASE = Path(__file__).resolve().parents[1]
+INVENTARIO = BASE / "dados" / "inventario_cursos.json"
+VIGENCIA = BASE / "dados" / "vigencia_ppcs_2026-09-16.json"
+
+
+def _carregar():
+    inventario = json.loads(INVENTARIO.read_text(encoding="utf-8"))
+    vigencia = json.loads(VIGENCIA.read_text(encoding="utf-8"))
+    return inventario, vigencia
+
+
+def test_avaliacao_de_vigencia_cobre_exatamente_os_93_ppcs():
+    inventario, vigencia = _carregar()
+
+    inventariados = {
+        (curso["id"], matriz["ano"])
+        for curso in inventario["cursos"]
+        for matriz in curso["matrizes"]
+    }
+    aplicaveis = {
+        (item["curso_id"], ano)
+        for item in vigencia["classificacao"]
+        for ano in item["matrizes_aplicaveis_anos"]
+    }
+    nao_aplicaveis = {
+        (item["curso_id"], ano)
+        for item in vigencia["classificacao"]
+        for ano in item["matrizes_nao_aplicaveis_anos"]
+    }
+
+    assert not (aplicaveis & nao_aplicaveis)
+    assert aplicaveis | nao_aplicaveis == inventariados
+    assert len(inventariados) == 93
+    assert len(aplicaveis) == 46
+    assert len(nao_aplicaveis) == 47
+    assert vigencia["resumo"] == {
+        "ppcs_total": 93,
+        "aplicaveis": 46,
+        "nao_aplicaveis": 47,
+        "pendentes": 0,
+        "ppcs_historicos_ainda_aplicaveis": 11,
+    }
+
+
+def test_todos_os_cursos_tem_justificativa_e_evidencia_oficial():
+    inventario, vigencia = _carregar()
+    cursos = {curso["id"] for curso in inventario["cursos"]}
+    classificados = {item["curso_id"] for item in vigencia["classificacao"]}
+    fontes = vigencia["fontes_oficiais"]
+
+    assert classificados == cursos
+    assert all(fonte["url"].startswith("https://") for fonte in fontes.values())
+    assert all("ufabc.edu.br/" in fonte["url"] for fonte in fontes.values())
+
+    for item in vigencia["classificacao"]:
+        assert item["justificativa"].strip()
+        assert item["evidencias"]
+        assert all(chave in fontes for chave in item["evidencias"])
+
+
+def test_ppcs_historicos_que_ainda_podem_reger_estudantes_ativos():
+    _, vigencia = _carregar()
+    por_curso = {item["curso_id"]: item for item in vigencia["classificacao"]}
+
+    assert 2022 in por_curso["lch"]["matrizes_aplicaveis_anos"]
+    assert 2022 in por_curso["lcne"]["matrizes_aplicaveis_anos"]
+    assert 2017 in por_curso["ciencia_computacao"]["matrizes_aplicaveis_anos"]
+
+    engenharias = {
+        "engenharia_ambiental_urbana",
+        "engenharia_energia",
+        "engenharia_informacao",
+        "engenharia_instrumentacao_automacao_robotica",
+        "engenharia_materiais",
+        "engenharia_aeroespacial",
+        "engenharia_biomedica",
+        "engenharia_gestao",
+    }
+    assert all(
+        2017 in por_curso[curso_id]["matrizes_aplicaveis_anos"]
+        for curso_id in engenharias
+    )
+
+
+def test_ppcs_antigos_expirados_nao_entram_na_modelagem_completa():
+    _, vigencia = _carregar()
+    por_curso = {item["curso_id"]: item for item in vigencia["classificacao"]}
+
+    assert 2015 in por_curso["bct"]["matrizes_nao_aplicaveis_anos"]
+    assert 2018 in por_curso["biotecnologia"]["matrizes_nao_aplicaveis_anos"]
+    assert 2015 in por_curso["ciencias_biologicas"]["matrizes_nao_aplicaveis_anos"]
+    assert 2015 in por_curso["ciencia_computacao"]["matrizes_nao_aplicaveis_anos"]
+
+
+def test_avaliacao_e_explicitamente_datada_e_nao_confunde_vigencia_com_suporte():
+    _, vigencia = _carregar()
+
+    assert vigencia["avaliado_em"] == "2026-09-16"
+    assert vigencia["criterio"]["data_corte"] == "2026-09-16"
+    assert "Não modela regras curriculares" in vigencia["escopo"]
+    assert any(
+        "não declara qualquer matriz academicamente suportada" in ressalva
+        for ressalva in vigencia["ressalvas"]
+    )
