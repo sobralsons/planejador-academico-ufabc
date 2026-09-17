@@ -2,7 +2,7 @@
   "schema_version": 2,
   "avaliado_em": "2026-09-16",
   "base_vigencia": "dados/vigencia_ppcs_2026-09-16.json",
-  "escopo": "Lote 11 da auditoria individual de aplicabilidade. Revisa as matrizes 2017, 2012 e 2010 do Bacharelado em Matemática, distinguindo preservação normativa expressa de referência em tabela de transição. Nenhuma classificação global é alterada neste commit.",
+  "escopo": "Lote 11 da auditoria individual de aplicabilidade. Revisa as matrizes 2017, 2012 e 2010 do Bacharelado em Matemática, distinguindo preservação normativa expressa de referência em tabela de transição. A candidatura preliminar de Matemática 2017 foi sincronizada no estado global; 2012 e 2010 permanecem pendentes.",
   "politica_decisao": {
     "regra_transicao_especifica_pode_sustentar_candidatura_preliminar": true,
     "ttmc_sozinha_nao_prova_vigencia": true,
@@ -18,7 +18,7 @@
       "matriz_ano": 2017,
       "status_antes": "pendente",
       "resultado": "candidata_preliminar",
-      "aplicado_no_estado_global": false,
+      "aplicado_no_estado_global": true,
       "ppc_substituido": "PPC 2017 do Bacharelado em Matemática, aprovado pela Resolução ConsEPE nº 210/2016.",
       "ppc_substituto": "PPC 2023 do Bacharelado em Matemática, aprovado pelo Ato Decisório ConsEPE nº 262/2023.",
       "entrada_em_vigor": "O Ato Decisório ConsEPE nº 262/2023 entra em vigor na publicação e estabelece o PPC 2023 para ingressantes a partir de 2023.",
@@ -122,7 +122,7 @@
     "ppcs_auditados_lote": 3,
     "evidencias_suficientes_para_candidatura_preliminar": 1,
     "permanecem_pendentes": 2,
-    "estado_global_alterado_neste_commit": false,
+    "estado_global_alterado_neste_commit": true,
     "exclusoes_definitivas": 0,
     "revisao_humana": "pendente",
     "decisoes_publicaveis": 0

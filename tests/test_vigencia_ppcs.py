@@ -41,15 +41,15 @@ def test_avaliacao_de_vigencia_cobre_exatamente_os_93_ppcs():
     assert not (aplicaveis & nao_aplicaveis)
     assert aplicaveis | nao_aplicaveis | pendentes == inventariados
     assert len(inventariados) == 93
-    assert len(aplicaveis) == 56
+    assert len(aplicaveis) == 57
     assert len(nao_aplicaveis) == 0
-    assert len(pendentes) == 37
+    assert len(pendentes) == 36
     assert vigencia["resumo"] == {
         "ppcs_total": 93,
-        "candidatas": 56,
+        "candidatas": 57,
         "nao_aplicaveis": 0,
-        "pendentes": 37,
-        "ppcs_historicos_candidatos": 21,
+        "pendentes": 36,
+        "ppcs_historicos_candidatos": 22,
     }
 
 
@@ -92,6 +92,12 @@ def test_ppcs_historicos_que_ainda_podem_reger_estudantes_ativos():
     assert 2010 in por_curso["ciencias_biologicas"]["matrizes_pendentes_anos"]
     assert 2015 in por_curso["fisica"]["matrizes_candidatas_anos"]
     assert 2009 in por_curso["fisica"]["matrizes_pendentes_anos"]
+    assert 2017 in por_curso["matematica"]["matrizes_candidatas_anos"]
+    assert 2017 not in por_curso["matematica"]["matrizes_pendentes_anos"]
+    assert 2012 in por_curso["matematica"]["matrizes_pendentes_anos"]
+    assert 2010 in por_curso["matematica"]["matrizes_pendentes_anos"]
+    assert "bm_ato_262_2023" in por_curso["matematica"]["evidencias"]
+    assert "bm_transicao_40_2023" in por_curso["matematica"]["evidencias"]
 
     engenharias = {
         "engenharia_ambiental_urbana",
@@ -126,6 +132,10 @@ def test_exclusoes_sem_comprovacao_voltam_a_ficar_pendentes_salvo_promocao_docum
     assert 2010 not in por_curso["ciencia_computacao"]["matrizes_pendentes_anos"]
     assert 2015 in por_curso["ciencia_computacao"]["matrizes_candidatas_anos"]
     assert 2010 in por_curso["ciencia_computacao"]["matrizes_candidatas_anos"]
+    assert 2017 not in por_curso["matematica"]["matrizes_pendentes_anos"]
+    assert 2017 in por_curso["matematica"]["matrizes_candidatas_anos"]
+    assert 2012 in por_curso["matematica"]["matrizes_pendentes_anos"]
+    assert 2010 in por_curso["matematica"]["matrizes_pendentes_anos"]
     assert 2015 in por_curso["neurociencia"]["matrizes_pendentes_anos"]
     assert 2021 not in por_curso["neurociencia"]["matrizes_pendentes_anos"]
     assert 2021 in por_curso["neurociencia"]["matrizes_candidatas_anos"]
@@ -162,6 +172,7 @@ def test_reabertura_preserva_historico_e_registra_promocoes_documentadas():
         ("fisica", 2015),
         ("ciencia_computacao", 2015),
         ("ciencia_computacao", 2010),
+        ("matematica", 2017),
     }
     encontradas = set()
 
