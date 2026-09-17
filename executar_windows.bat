@@ -7,6 +7,6 @@ if errorlevel 1 (
   pause
   exit /b 1
 )
-echo Abrindo a interface no navegador...
-python -m streamlit run app.py
+echo Abrindo a interface interna de desenvolvimento no navegador...
+python -m streamlit run app_interno.py
 pause

@@ -144,7 +144,7 @@ def test_relatorio_trajetoria_e_interface_expoem_planejamento_completo(tmp_path:
     texto = saida.read_text(encoding="utf-8")
     assert "Plano de trajetória acadêmica" in texto
     assert "Quando cada diploma" in texto
-    app = (Path(__file__).parents[1] / "app.py").read_text(encoding="utf-8")
+    app = (Path(__file__).parents[1] / "app_interno.py").read_text(encoding="utf-8")
     assert "Analisar minha trajetória agora" in app
     assert "Fazer três formações" in app
     assert "sem abrir outra página dentro do aplicativo" in app
