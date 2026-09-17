@@ -41,15 +41,15 @@ def test_avaliacao_de_vigencia_cobre_exatamente_os_93_ppcs():
     assert not (aplicaveis & nao_aplicaveis)
     assert aplicaveis | nao_aplicaveis | pendentes == inventariados
     assert len(inventariados) == 93
-    assert len(aplicaveis) == 54
+    assert len(aplicaveis) == 56
     assert len(nao_aplicaveis) == 0
-    assert len(pendentes) == 39
+    assert len(pendentes) == 37
     assert vigencia["resumo"] == {
         "ppcs_total": 93,
-        "candidatas": 54,
+        "candidatas": 56,
         "nao_aplicaveis": 0,
-        "pendentes": 39,
-        "ppcs_historicos_candidatos": 19,
+        "pendentes": 37,
+        "ppcs_historicos_candidatos": 21,
     }
 
 
@@ -76,6 +76,10 @@ def test_ppcs_historicos_que_ainda_podem_reger_estudantes_ativos():
     assert 2022 in por_curso["lch"]["matrizes_candidatas_anos"]
     assert 2022 in por_curso["lcne"]["matrizes_candidatas_anos"]
     assert 2017 in por_curso["ciencia_computacao"]["matrizes_candidatas_anos"]
+    assert 2015 in por_curso["ciencia_computacao"]["matrizes_candidatas_anos"]
+    assert 2010 in por_curso["ciencia_computacao"]["matrizes_candidatas_anos"]
+    assert 2015 not in por_curso["ciencia_computacao"]["matrizes_pendentes_anos"]
+    assert 2010 not in por_curso["ciencia_computacao"]["matrizes_pendentes_anos"]
     assert 2021 in por_curso["neurociencia"]["matrizes_candidatas_anos"]
     assert 2015 in por_curso["quimica"]["matrizes_candidatas_anos"]
     assert 2010 in por_curso["quimica"]["matrizes_pendentes_anos"]
@@ -118,7 +122,10 @@ def test_exclusoes_sem_comprovacao_voltam_a_ficar_pendentes_salvo_promocao_docum
     assert 2010 in por_curso["ciencias_biologicas"]["matrizes_pendentes_anos"]
     assert 2015 in por_curso["fisica"]["matrizes_candidatas_anos"]
     assert 2009 in por_curso["fisica"]["matrizes_pendentes_anos"]
-    assert 2015 in por_curso["ciencia_computacao"]["matrizes_pendentes_anos"]
+    assert 2015 not in por_curso["ciencia_computacao"]["matrizes_pendentes_anos"]
+    assert 2010 not in por_curso["ciencia_computacao"]["matrizes_pendentes_anos"]
+    assert 2015 in por_curso["ciencia_computacao"]["matrizes_candidatas_anos"]
+    assert 2010 in por_curso["ciencia_computacao"]["matrizes_candidatas_anos"]
     assert 2015 in por_curso["neurociencia"]["matrizes_pendentes_anos"]
     assert 2021 not in por_curso["neurociencia"]["matrizes_pendentes_anos"]
     assert 2021 in por_curso["neurociencia"]["matrizes_candidatas_anos"]
@@ -153,6 +160,8 @@ def test_reabertura_preserva_historico_e_registra_promocoes_documentadas():
         ("biotecnologia", 2018),
         ("ciencias_biologicas", 2015),
         ("fisica", 2015),
+        ("ciencia_computacao", 2015),
+        ("ciencia_computacao", 2010),
     }
     encontradas = set()
 

@@ -27,8 +27,9 @@ def test_familias_preservam_candidatas_e_incluem_todas_as_pendentes():
         for curso_id, ano in familia["matrizes"]
     }
 
-    assert len(esperadas) == 54
-    assert len(mapeadas) == 54
+    # Lote 10: BCC 2010 e 2015 foram promovidas na base do PR #4.
+    assert len(esperadas) == 56
+    assert len(mapeadas) == 56
     assert mapeadas == esperadas
     pendentes = {
         (item["curso_id"], ano)
@@ -36,7 +37,7 @@ def test_familias_preservam_candidatas_e_incluem_todas_as_pendentes():
         for ano in item["matrizes_pendentes_anos"]
     }
     fila = [(c, a) for f in familias["familias"] for c, a in f["matrizes_pendentes"]]
-    assert len(fila) == len(set(fila)) == 39
+    assert len(fila) == len(set(fila)) == 37
     assert set(fila) == pendentes
     assert not (set(fila) & mapeadas)
     assert len(set(fila) | mapeadas) == 93
@@ -146,6 +147,21 @@ def test_lotes_08_e_09_atualizam_familia_cientifica_sem_inferir_outras_matrizes(
 
     assert ["ciencias_biologicas", 2010] in familia["matrizes_pendentes"]
     assert ["fisica", 2009] in familia["matrizes_pendentes"]
+
+
+def test_lote_10_sincroniza_bcc_sem_promover_matematica_do_lote_11():
+    familias, vigencia = _carregar()
+    familia = next(f for f in familias["familias"]
+                   if f["id"] == "bacharelados_cientificos_tecnologicos")
+    for ano in (2010, 2015):
+        assert ["ciencia_computacao", ano] in familia["matrizes"]
+        assert ["ciencia_computacao", ano] not in familia["matrizes_pendentes"]
+    # A sincronização de Matemática 2017 é uma etapa separada, não implícita.
+    for ano in (2010, 2012, 2017):
+        assert ["matematica", ano] in familia["matrizes_pendentes"]
+    assert vigencia["revisao_humana"] == "pendente"
+    assert all(not item["matrizes_nao_aplicaveis_anos"]
+               for item in vigencia["classificacao"])
 
 
 def test_evidencias_representativas_sao_oficiais_da_ufabc():
