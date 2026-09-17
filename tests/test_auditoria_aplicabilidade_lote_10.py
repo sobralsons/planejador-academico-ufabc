@@ -26,7 +26,7 @@ def test_lote_10_audita_somente_bcc_2015_e_2010():
     for item in itens.values():
         assert item["status_antes"] == "pendente"
         assert item["resultado"] == "candidata_preliminar"
-        assert item["aplicado_no_estado_global"] is False
+        assert item["aplicado_no_estado_global"] is True
 
 
 def test_transicao_2023_preserva_matriz_vigente_no_ano_de_ingresso():
@@ -71,18 +71,18 @@ def test_lote_10_nao_exclui_nem_declara_suporte_publico():
     assert auditoria["resumo"]["revisao_humana"] == "pendente"
 
 
-def test_lote_10_preserva_estado_global_antes_do_ci():
+def test_lote_10_sincroniza_estado_global_sem_declarar_suporte():
     auditoria, vigencia = _carregar()
     por_curso = {curso["curso_id"]: curso for curso in vigencia["classificacao"]}
     bcc = por_curso["ciencia_computacao"]
 
-    assert auditoria["resumo"]["estado_global_alterado_neste_commit"] is False
-    assert {2015, 2010} <= set(bcc["matrizes_pendentes_anos"])
-    assert not ({2015, 2010} & set(bcc["matrizes_candidatas_anos"]))
+    assert auditoria["resumo"]["estado_global_alterado_neste_commit"] is True
+    assert not ({2015, 2010} & set(bcc["matrizes_pendentes_anos"]))
+    assert {2015, 2010} <= set(bcc["matrizes_candidatas_anos"])
     assert vigencia["resumo"] == {
         "ppcs_total": 93,
         "nao_aplicaveis": 0,
-        "pendentes": 39,
-        "candidatas": 54,
-        "ppcs_historicos_candidatos": 19,
+        "pendentes": 37,
+        "candidatas": 56,
+        "ppcs_historicos_candidatos": 21,
     }

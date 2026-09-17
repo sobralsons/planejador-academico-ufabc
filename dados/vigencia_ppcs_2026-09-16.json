@@ -53,6 +53,18 @@
       "referencia": "PPC 2023 do Bacharelado em Ciência da Computação",
       "uso": "Indica tempo mínimo de integralização de 15 quadrimestres (5 anos)."
     },
+    "bcc_transicao_2023": {
+      "tipo": "documento_complementar_transicao",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/cg_ato-decisorio_044_anexo-02.pdf",
+      "referencia": "Anexo II do Ato Decisório CG nº 44/2023 — Regras de Transição para o Projeto Pedagógico 2023 do Bacharelado em Ciência da Computação",
+      "uso": "Determina que ingressantes anteriores a 2023 podem integralizar pela matriz 2023 ou pela matriz do PPC vigente no ano de ingresso e apresenta tabela de convalidações com colunas 2010, 2015, 2017 e 2023."
+    },
+    "bcc_pagina_atual": {
+      "tipo": "pagina_oficial_curso",
+      "url": "https://prograd.ufabc.edu.br/cursos/bcc",
+      "referencia": "ProGrad — Bacharelado em Ciência da Computação",
+      "uso": "Página atual referencia o Ato Decisório CG nº 44/2023, a transição 2010-2015-2017 e lista os PPCs 2017, 2015 e 2010."
+    },
     "engenharias_ato_270_2023": {
       "tipo": "ato_curso",
       "url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisrio_270_-_aprova_a_reviso_do_ppc_das_engenharias_-_ato_assndo_retifido.pdf",
@@ -296,18 +308,18 @@
     {
       "curso_id": "ciencia_computacao",
       "matrizes_nao_aplicaveis_anos": [],
-      "evidencias": ["res_consepe_255_2022", "bcc_ato_267_2023", "bcc_ppc_2023"],
-      "justificativa": "Versões aplicáveis mantidas como candidatas preliminares, sem certificação de vigência. Exclusões anteriores reabertas até comprovação individual de prazo e transição.",
+      "evidencias": ["res_consepe_255_2022", "bcc_ato_267_2023", "bcc_ppc_2023", "bcc_transicao_2023", "bcc_pagina_atual"],
+      "justificativa": "Os PPCs 2015 e 2010 passam a candidatas preliminares porque o Anexo II do Ato Decisório CG nº 44/2023 permite a estudantes que ingressaram antes de 2023 integralizar o BCC pela matriz 2023 ou pela matriz do PPC vigente no ano de ingresso. A página atual da ProGrad mantém os PPCs 2017, 2015 e 2010 e referencia a transição 2010-2015-2017. A classificação não certifica revisão humana concluída, integralização individual nem suporte acadêmico pelo produto.",
       "classificacao_anterior": {
         "matrizes_aplicaveis_anos": [2023, 2017],
         "matrizes_nao_aplicaveis_anos": [2015, 2010],
         "justificativa": "O PPC 2023 é o atual. O Ato 267/2023 permite aos ingressantes até 2022 seguir o PPC anterior; como o curso tem integralização mínima de 15 quadrimestres (5 anos), o PPC 2017 ainda está dentro da validade em 2026. As versões 2015 e 2010 já foram substituídas há mais tempo.",
         "estado": "nao_validada"
       },
-      "matrizes_pendentes_anos": [2015, 2010],
+      "matrizes_pendentes_anos": [],
       "decisoes_exclusao": [],
       "revisao_humana": "pendente",
-      "matrizes_candidatas_anos": [2023, 2017]
+      "matrizes_candidatas_anos": [2023, 2017, 2015, 2010]
     },
     {
       "curso_id": "ciencia_dados",
@@ -745,9 +757,9 @@
   "resumo": {
     "ppcs_total": 93,
     "nao_aplicaveis": 0,
-    "pendentes": 39,
-    "candidatas": 54,
-    "ppcs_historicos_candidatos": 19
+    "pendentes": 37,
+    "candidatas": 56,
+    "ppcs_historicos_candidatos": 21
   },
   "ressalvas": [
     "O Ato Decisório ConsEPE nº 270/2023 referencia a resolução do PPC anterior das Engenharias com numeração divergente da que aparece no próprio PPC 2017 e no PPC consolidado atual. A classificação usa a identidade inequívoca 'PPC 2017' e mantém a divergência documental explícita para revisão humana.",
@@ -757,7 +769,8 @@
     "Os PPCs BCT 2009, BCT 2015 e BCH 2015 foram promovidos de pendentes para candidatas preliminares no lote 7 porque a ProGrad os registra, em nomenclatura institucional própria, como Projetos Pedagógicos Considerados no processamento de solicitações da colação de grau de 30/06/2026. A lista é de solicitantes, não comprova colação efetivada e não resolve sozinha a data terminal normativa. Nenhum dado pessoal da fonte é reproduzido no repositório.",
     "No lote 8, Ciências Biológicas 2015 foi promovido porque a regra específica de transição permite a ingressantes anteriores a 2023 optar pelo PPC-BCB/2015, e Física 2015 foi promovido pela combinação do documento de transição atualizado em 2026 com evidência operacional recente. Biotecnologia 2018 permaneceu pendente naquele lote até a verificação integral da atualização aprovada pelo Ato Decisório CG nº 71/2025.",
     "No lote 9, o Anexo II do Ato Decisório CG nº 71/2025 foi verificado e registra expressamente que ingressantes até 2022 podem concluir Biotecnologia pelo PPC 2018 ou migrar para o PPC 2023. Isso sustenta somente candidatura preliminar do PPC 2018; revisão acadêmica humana e validação curricular continuam pendentes.",
-    "Esta avaliação não declara qualquer matriz academicamente suportada pelo produto. As 54 candidatas e as 39 pendentes continuam no escopo de revisão. O inventário usado pela trava permanece sem aplicabilidade aprovada."
+    "No lote 10, o Anexo II do Ato Decisório CG nº 44/2023 foi verificado e permite a ingressantes anteriores a 2023 integralizar o BCC pela matriz 2023 ou pela matriz do PPC vigente no ano de ingresso. Com a página atual da ProGrad mantendo os PPCs e a transição histórica, BCC 2015 e BCC 2010 passam somente a candidatas preliminares; revisão humana e validação curricular continuam pendentes.",
+    "Esta avaliação não declara qualquer matriz academicamente suportada pelo produto. As 56 candidatas e as 37 pendentes continuam no escopo de revisão. O inventário usado pela trava permanece sem aplicabilidade aprovada."
   ],
   "estado_avaliacao": "preliminar",
   "revisao_humana": "pendente"

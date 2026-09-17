@@ -113,10 +113,10 @@ def test_vigencia_central_reflete_promocoes_posteriores_sem_reescrever_lote_08()
     assert 2018 in por_curso["biotecnologia"]["matrizes_candidatas_anos"]
     assert vigencia["resumo"] == {
         "ppcs_total": 93,
-        "candidatas": 54,
+        "candidatas": 56,
         "nao_aplicaveis": 0,
-        "pendentes": 39,
-        "ppcs_historicos_candidatos": 19,
+        "pendentes": 37,
+        "ppcs_historicos_candidatos": 21,
     }
 
 

@@ -17,7 +17,7 @@
       "matriz_ano": 2015,
       "status_antes": "pendente",
       "resultado": "candidata_preliminar",
-      "aplicado_no_estado_global": false,
+      "aplicado_no_estado_global": true,
       "ppc_substituido": "PPC 2015 do Bacharelado em Ciência da Computação, aprovado pela Resolução ConsEPE nº 195 e posteriormente substituído pela Resolução ConsEPE nº 211.",
       "ppc_substituto": "PPC 2023 do Bacharelado em Ciência da Computação, aprovado pelo Ato Decisório ConsEPE nº 267/2023.",
       "entrada_em_vigor": "O documento de transição do PPC 2023 estabelece oferta plena da matriz 2023 para ingressantes a partir de 2023.",
@@ -44,7 +44,7 @@
       "matriz_ano": 2010,
       "status_antes": "pendente",
       "resultado": "candidata_preliminar",
-      "aplicado_no_estado_global": false,
+      "aplicado_no_estado_global": true,
       "ppc_substituido": "PPC 2010 do Bacharelado em Ciência da Computação, aprovado pela Resolução ConsEP nº 36; o trecho específico do BCC foi posteriormente substituído pela Resolução ConsEPE nº 195.",
       "ppc_substituto": "PPC 2023 do Bacharelado em Ciência da Computação, aprovado pelo Ato Decisório ConsEPE nº 267/2023.",
       "entrada_em_vigor": "O documento de transição do PPC 2023 estabelece oferta plena da matriz 2023 para ingressantes a partir de 2023.",
@@ -85,7 +85,7 @@
   "resumo": {
     "ppcs_auditados_lote": 2,
     "evidencias_suficientes_para_candidatura_preliminar": 2,
-    "estado_global_alterado_neste_commit": false,
+    "estado_global_alterado_neste_commit": true,
     "exclusoes_definitivas": 0,
     "revisao_humana": "pendente",
     "decisoes_publicaveis": 0
