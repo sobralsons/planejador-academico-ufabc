@@ -29,9 +29,12 @@ def test_lote_02_audita_tres_familias_sem_promover_status():
     assert all(item["status_resultante"] == "pendente" for item in auditadas.values())
     assert all(item["decisao_publicavel"] is False for item in auditadas.values())
 
+    # O lote 2 permanece como registro histórico. BCC 2015 foi promovido
+    # posteriormente no lote 10 após verificação das regras de transição de 2023.
     por_curso = {item["curso_id"]: item for item in vigencia["classificacao"]}
     assert 2015 in por_curso["politicas_publicas"]["matrizes_pendentes_anos"]
-    assert 2015 in por_curso["ciencia_computacao"]["matrizes_pendentes_anos"]
+    assert 2015 in por_curso["ciencia_computacao"]["matrizes_candidatas_anos"]
+    assert 2015 not in por_curso["ciencia_computacao"]["matrizes_pendentes_anos"]
     assert 2022 in por_curso["filosofia_licenciatura"]["matrizes_pendentes_anos"]
 
 
@@ -135,9 +138,9 @@ def test_lote_02_preserva_suas_decisoes_sem_congelar_resumo_global_antigo():
     assert vigencia["resumo"] == {
         "ppcs_total": 93,
         "nao_aplicaveis": 0,
-        "pendentes": 39,
-        "candidatas": 54,
-        "ppcs_historicos_candidatos": 19,
+        "pendentes": 37,
+        "candidatas": 56,
+        "ppcs_historicos_candidatos": 21,
     }
     assert all(
         "suportada" not in item.get("status_resultante", "")
