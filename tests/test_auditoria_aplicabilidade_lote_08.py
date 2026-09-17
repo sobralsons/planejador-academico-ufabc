@@ -83,7 +83,8 @@ def test_biotecnologia_2018_preserva_decisao_historica_do_lote_08():
     item = _por_chave(auditoria)[("biotecnologia", 2018)]
     por_curso = {curso["curso_id"]: curso for curso in vigencia["classificacao"]}
 
-    assert "1º quadrimestre de 2026" in item["calculo_termino_validade"]
+    # O prazo foi encontrado em minuta, não no documento final de 2023.
+    assert "minuta" in item["calculo_termino_validade"]
     assert "71/2025" in item["calculo_termino_validade"]
     assert item["revisao_humana"]["pronto_para_mudar_status"] is False
     assert item["resultado"] == "pendente"
@@ -91,6 +92,29 @@ def test_biotecnologia_2018_preserva_decisao_historica_do_lote_08():
     # verificação integral do Anexo II atualizado pelo Ato CG nº 71/2025.
     assert 2018 not in por_curso["biotecnologia"]["matrizes_pendentes_anos"]
     assert 2018 in por_curso["biotecnologia"]["matrizes_candidatas_anos"]
+
+
+def test_biotecnologia_distingue_minuta_de_documento_final_sem_apagar_retificacao():
+    auditoria, _ = _carregar()
+    fontes = auditoria["fontes"]
+    minuta = fontes["biotecnologia_minuta_transicao_2023"]
+    final = fontes["biotecnologia_transicao_2023"]
+    item = _por_chave(auditoria)[("biotecnologia", 2018)]
+
+    assert minuta["tipo"] == "minuta_oficial_pre_deliberacao"
+    assert minuta["uso_normativo"] is False
+    assert "/prox_sessao/" in minuta["url"]
+    assert final["tipo"] == "documento_complementar_transicao"
+    assert final["url"].endswith("/Boletim/cg_ato_decisorio_034_anexo-02.pdf")
+    assert final["secao"] == "Regras de transição, item 2"
+    assert final["prazo_terminal_explicito"] is False
+    retificacao = item["retificacao_documental"]
+    assert "1º quadrimestre de 2026" in retificacao["afirmacao_anterior_incorreta"]
+    assert retificacao["fontes"] == [
+        "biotecnologia_minuta_transicao_2023", "biotecnologia_transicao_2023"
+    ]
+    assert "não comprova" in retificacao["correcao"]
+    assert "não fixa" in item["regras_transicao"]
 
 
 def test_lote_08_nao_reproduz_dados_pessoais_da_fonte_de_colacao():

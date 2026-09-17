@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "avaliado_em": "2026-09-16",
   "base_vigencia": "dados/vigencia_ppcs_2026-09-16.json",
   "escopo": "Lote 10 da auditoria individual de aplicabilidade. Revisa os PPCs 2015 e 2010 do Bacharelado em Ciência da Computação a partir das regras oficiais de transição do PPC 2023, sem declarar suporte acadêmico, revisão humana concluída ou decisão publicável.",

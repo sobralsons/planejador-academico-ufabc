@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "avaliado_em": "2026-09-16",
   "base_vigencia": "dados/vigencia_ppcs_2026-09-16.json",
   "escopo": "Lote 11 da auditoria individual de aplicabilidade. Revisa as matrizes 2017, 2012 e 2010 do Bacharelado em Matemática, distinguindo preservação normativa expressa de referência em tabela de transição. Nenhuma classificação global é alterada neste commit.",
