@@ -81,6 +81,8 @@ class DecisaoAlocacao:
     def __post_init__(self) -> None:
         if not self.evidencia_id.strip():
             raise ValueError("Decisão de alocação precisa indicar evidencia_id.")
+        if not isinstance(self.unidade, UnidadeRequisito):
+            raise ValueError("Decisão de alocação usa unidade inválida.")
         if len(self.requisito_ids) not in {1, 2}:
             raise ValueError("Alocação deve apontar para um ou dois requisitos.")
         if len(set(self.requisito_ids)) != len(self.requisito_ids):
@@ -200,6 +202,15 @@ def alocar_evidencias(
             raise ValueError(
                 f"Decisão referencia evidência inexistente: {decisao.evidencia_id}."
             )
+        evidencia = evidencias[decisao.evidencia_id]
+        if (
+            decisao.unidade not in evidencia.quantidades
+            or evidencia.quantidade(decisao.unidade) <= 0
+        ):
+            raise ValueError(
+                f"Decisão usa {decisao.unidade.value}, mas a evidência "
+                f"{evidencia.id} não possui quantidade positiva nessa unidade."
+            )
         decisoes_por_chave.setdefault(
             (decisao.evidencia_id, decisao.unidade), []
         ).append(decisao)
@@ -283,15 +294,6 @@ def alocar_evidencias(
                 )
             else:
                 sem_destino.append((evidencia.id, unidade, restante))
-
-    # Decisões em unidades ausentes da evidência também devem falhar fechado.
-    for chave, itens in decisoes_por_chave.items():
-        evidencia = evidencias[chave[0]]
-        if chave[1] not in evidencia.quantidades:
-            raise ValueError(
-                f"Decisão usa {chave[1].value}, mas a evidência {evidencia.id} "
-                "não possui quantidade nessa unidade."
-            )
 
     somas: dict[str, int] = {item.id: 0 for item in modelo.requisitos}
     somas.update({item.id: 0 for item in modelo.contribuicoes})
