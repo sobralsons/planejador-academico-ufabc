@@ -1,0 +1,130 @@
+{
+  "schema_version": 2,
+  "avaliado_em": "2026-09-16",
+  "base_vigencia": "dados/vigencia_ppcs_2026-09-16.json",
+  "escopo": "Lote 11 da auditoria individual de aplicabilidade. Revisa as matrizes 2017, 2012 e 2010 do Bacharelado em Matemática, distinguindo preservação normativa expressa de referência em tabela de transição. A candidatura preliminar de Matemática 2017 foi sincronizada no estado global; 2012 e 2010 permanecem pendentes.",
+  "politica_decisao": {
+    "regra_transicao_especifica_pode_sustentar_candidatura_preliminar": true,
+    "ttmc_sozinha_nao_prova_vigencia": true,
+    "pagina_oficial_atual_pode_identificar_documentos_e_matrizes": true,
+    "norma_geral_basta_para_excluir": false,
+    "ausencia_de_data_terminal_basta_para_excluir": false,
+    "ambiguidade_mantem_pendente": true,
+    "revisao_humana_concluida": false
+  },
+  "auditoria": [
+    {
+      "curso_id": "matematica",
+      "matriz_ano": 2017,
+      "status_antes": "pendente",
+      "resultado": "candidata_preliminar",
+      "aplicado_no_estado_global": true,
+      "ppc_substituido": "PPC 2017 do Bacharelado em Matemática, aprovado pela Resolução ConsEPE nº 210/2016.",
+      "ppc_substituto": "PPC 2023 do Bacharelado em Matemática, aprovado pelo Ato Decisório ConsEPE nº 262/2023.",
+      "entrada_em_vigor": "O Ato Decisório ConsEPE nº 262/2023 entra em vigor na publicação e estabelece o PPC 2023 para ingressantes a partir de 2023.",
+      "tempo_integralizacao": "Não usado para promover esta matriz. A candidatura decorre da disposição transitória específica do Ato 262/2023.",
+      "calculo_termino_validade": "Não conclusivo e não necessário para esta candidatura preliminar. O Ato 262/2023 preserva expressamente o PPC aprovado pela Resolução ConsEPE nº 210/2016 para ingressantes até 2022, condicionado às regras de transição.",
+      "regras_transicao": "O art. 3º do Ato 262/2023 afirma que ingressantes até 2022 poderão ainda seguir o PPC aprovado pela Resolução ConsEPE nº 210/2016. O Anexo II do Ato Decisório CG nº 40/2023 disciplina discentes com ingresso anterior a 2023 que não optarem pela matriz 2023 e usa a expressão 'matriz curricular de escolha'.",
+      "possiveis_excecoes": "A revisão humana deve confirmar eventual ato posterior que restrinja a permanência na matriz 2017. A candidatura preliminar não certifica integralização individual nem suporte público.",
+      "fontes": ["bm_ato_262_2023", "bm_transicao_40_2023", "bm_pagina_atual"],
+      "lacunas": [
+        "Revisão acadêmica humana permanece pendente.",
+        "A candidatura preliminar não substitui modelagem curricular nem testes adversariais."
+      ],
+      "revisao_humana": {
+        "estado": "pendente",
+        "pronto_para_mudar_status": true,
+        "decisao_publicavel": false
+      }
+    },
+    {
+      "curso_id": "matematica",
+      "matriz_ano": 2012,
+      "status_antes": "pendente",
+      "resultado": "pendente",
+      "aplicado_no_estado_global": false,
+      "ppc_substituido": "PPC 2012 do Bacharelado em Matemática, versão atualizada em 08/11/2013 conforme registro oficial da ProGrad.",
+      "ppc_substituto": "A cadeia normativa exata de substituição até o PPC 2017 precisa ser confirmada em revisão documental específica.",
+      "entrada_em_vigor": "Não usada para decisão neste lote.",
+      "tempo_integralizacao": "O PPC 2012 informa duração recomendada de quatro anos, mas esse dado não é usado isoladamente para excluir ou promover a matriz.",
+      "calculo_termino_validade": "Indeterminado. A presença da matriz 2012 na TTMC de 2023 e na página atual não estabelece por si só vigência normativa, e o Ato 262/2023 preserva nominalmente apenas o PPC aprovado pela Resolução ConsEPE nº 210/2016.",
+      "regras_transicao": "O Anexo II do Ato CG nº 40/2023 trata de discentes anteriores a 2023 que não optarem pela matriz 2023 e sua TTMC possui coluna própria para a matriz 2012. Isso demonstra necessidade de convalidação, mas não resolve de forma inequívoca se a matriz 2012 ainda pode ser escolhida para integralização em 2026.",
+      "possiveis_excecoes": "Pode haver estudante ainda vinculado a essa matriz por situação individual ou ato anterior; nenhuma dessas hipóteses foi usada como fato sem fonte específica.",
+      "fontes": ["bm_transicao_40_2023", "bm_pagina_atual", "bm_ppc_2012"],
+      "lacunas": [
+        "Falta ato específico ou interpretação normativa humana que confirme se a expressão 'matriz curricular de escolha' abrange a matriz 2012 em 2026.",
+        "A TTMC não é usada isoladamente como prova de vigência."
+      ],
+      "revisao_humana": {
+        "estado": "pendente",
+        "pronto_para_mudar_status": false,
+        "decisao_publicavel": false
+      }
+    },
+    {
+      "curso_id": "matematica",
+      "matriz_ano": 2010,
+      "status_antes": "pendente",
+      "resultado": "pendente",
+      "aplicado_no_estado_global": false,
+      "ppc_substituido": "PPC 2010 do Bacharelado em Matemática, originalmente abrangido pela Resolução ConsEP nº 36.",
+      "ppc_substituto": "A cadeia de substituição posterior precisa ser considerada em conjunto com o PPC 2012 e a revisão aprovada pela Resolução ConsEPE nº 210/2016.",
+      "entrada_em_vigor": "Não usada para decisão neste lote.",
+      "tempo_integralizacao": "Não usado isoladamente para excluir ou promover esta matriz.",
+      "calculo_termino_validade": "Indeterminado. A matriz 2010 consta da TTMC de 2023 e da página atual, mas o Ato 262/2023 preserva nominalmente o PPC aprovado pela Resolução ConsEPE nº 210/2016, sem declarar de forma inequívoca a continuidade do PPC 2010.",
+      "regras_transicao": "O Anexo II do Ato CG nº 40/2023 possui coluna própria para a matriz 2010 e disciplina genericamente discentes anteriores a 2023 que não optarem pela matriz 2023. A referência é insuficiente, sem interpretação normativa adicional, para promover a matriz 2010.",
+      "possiveis_excecoes": "Pode haver situação individual preservada por atos anteriores; ausência de evidência específica não é convertida em exclusão.",
+      "fontes": ["bm_transicao_40_2023", "bm_pagina_atual", "bm_res_36_2009"],
+      "lacunas": [
+        "Falta ato específico ou interpretação normativa humana que confirme se a matriz 2010 ainda pode reger integralização em 2026.",
+        "A TTMC não é usada isoladamente como prova de vigência."
+      ],
+      "revisao_humana": {
+        "estado": "pendente",
+        "pronto_para_mudar_status": false,
+        "decisao_publicavel": false
+      }
+    }
+  ],
+  "fontes": {
+    "bm_ato_262_2023": {
+      "tipo": "ato_curso",
+      "url": "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ad_consepe_262_-_atualiza_pp_bacharelado_em_matemtica.pdf",
+      "referencia": "Ato Decisório ConsEPE nº 262/2023",
+      "uso": "Art. 3º preserva expressamente, para ingressantes até 2022, a possibilidade de seguir o PPC aprovado pela Resolução ConsEPE nº 210/2016, respeitadas as regras de transição."
+    },
+    "bm_transicao_40_2023": {
+      "tipo": "documento_complementar_transicao",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/cg_ato-decisorio_040_anexo-2.pdf",
+      "referencia": "Anexo II do Ato Decisório CG nº 40/2023 — Regras de transição de matrizes e TTMC do Bacharelado em Matemática",
+      "uso": "Distingue estudantes anteriores a 2023 que optam ou não pela matriz 2023, utiliza a expressão 'matriz curricular de escolha' e apresenta TTMC com colunas 2023, 2017, 2012 e 2010."
+    },
+    "bm_pagina_atual": {
+      "tipo": "pagina_oficial_curso",
+      "url": "https://prograd.ufabc.edu.br/cursos/bm",
+      "referencia": "ProGrad — Bacharelado em Matemática",
+      "uso": "Página atual lista PPCs 2023, 2017, 2012 e 2010 e referencia as regras/tabelas de transição aprovadas pelo Ato CG nº 40/2023."
+    },
+    "bm_ppc_2012": {
+      "tipo": "ppc",
+      "url": "https://prograd.ufabc.edu.br/images/pdf/131112_ppc_bach_matematica_2012.pdf",
+      "referencia": "Projeto Pedagógico do Bacharelado em Matemática 2012, atualizado em 08/11/2013",
+      "uso": "Identifica formalmente a versão 2012 e informa duração recomendada de quatro anos; não é usado isoladamente para decisão de vigência."
+    },
+    "bm_res_36_2009": {
+      "tipo": "ato_historico",
+      "url": "https://www.ufabc.edu.br/administracao/conselhos/consepe/resolucoes/resolucao-consep-no-362009-28082009-aprova-os-projetos-pedagogicos-para-os-cursos-pos-bcat",
+      "referencia": "Resolução ConsEP nº 36/2009",
+      "uso": "Aprova projetos pedagógicos de cursos vinculados ao BC&T; o trecho do Bacharelado em Matemática foi posteriormente revogado e substituído pela Resolução ConsEPE nº 210."
+    }
+  },
+  "resumo": {
+    "ppcs_auditados_lote": 3,
+    "evidencias_suficientes_para_candidatura_preliminar": 1,
+    "permanecem_pendentes": 2,
+    "estado_global_alterado_neste_commit": true,
+    "exclusoes_definitivas": 0,
+    "revisao_humana": "pendente",
+    "decisoes_publicaveis": 0
+  }
+}

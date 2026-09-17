@@ -1,0 +1,182 @@
+{
+  "schema_version": 2,
+  "avaliado_em": "2026-09-16",
+  "base_vigencia": "dados/vigencia_ppcs_2026-09-16.json",
+  "escopo": "Lote 8 da auditoria individual de aplicabilidade. Reavalia três PPCs históricos com fontes oficiais de transição e evidência operacional recente, sem declarar vigência normativa definitiva, suporte acadêmico ou exclusão.",
+  "politica_decisao": {
+    "regra_transicao_especifica_pode_sustentar_candidatura_preliminar": true,
+    "documento_operacional_atual_pode_corrobora_candidatura_preliminar": true,
+    "lista_colacao_comprova_colacao_efetivada": false,
+    "lista_colacao_sozinha_comprova_estudante_ativo_na_data_corte": false,
+    "tabela_convalidacao_sozinha_comprova_opcao_por_ppc_anterior": false,
+    "fonte_operacional_substitui_contrato_temporal": false,
+    "norma_geral_basta_para_excluir": false,
+    "ausencia_de_prorrogacao_basta_para_excluir": false,
+    "exclusao_exige_evidencia_individual_e_revisao_humana": true,
+    "dados_pessoais_da_fonte_operacional_sao_reproduzidos": false
+  },
+  "campos_obrigatorios_decisao": [
+    "ppc_substituido",
+    "ppc_substituto",
+    "entrada_em_vigor",
+    "tempo_integralizacao",
+    "calculo_termino_validade",
+    "regras_transicao",
+    "possiveis_excecoes",
+    "fontes",
+    "revisao_humana"
+  ],
+  "auditoria": [
+    {
+      "curso_id": "ciencias_biologicas",
+      "matriz_ano": 2015,
+      "status_antes": "pendente",
+      "resultado": "candidata_preliminar",
+      "ppc_substituido": "PPC-BCB/2015",
+      "ppc_substituto": "PPC-BCB/2023",
+      "entrada_em_vigor": "O Documento Complementar II do PPC-BCB/2023 informa implementação a partir do 2º quadrimestre de 2023.",
+      "tempo_integralizacao": "Não usado para promover este PPC. A candidatura decorre de regra específica de transição que permite a ingressantes anteriores a 2023 optar pelo PPC-BCB/2015 ou PPC-BCB/2023.",
+      "calculo_termino_validade": "Não conclusivo e não necessário para a promoção preliminar; nenhuma exclusão é declarada neste lote.",
+      "regras_transicao": "O Documento Complementar II de 2023 afirma expressamente que alunos ingressantes antes de 2023 podem optar pela matriz do PPC-BCB/2015 ou do PPC-BCB/2023 para colação de grau.",
+      "possiveis_excecoes": "A revisão humana deve confirmar se houve ato posterior que limite ou revogue a opção pelo PPC-BCB/2015. O PPC 2010/2011 não é promovido por esta regra.",
+      "fontes": [
+        "ciencias_biologicas_transicao_2023",
+        "ciencias_biologicas_pagina_atual",
+        "colacao_30jun2026"
+      ],
+      "lacunas": [
+        "Confirmar em revisão humana a inexistência de ato posterior que restrinja a opção pelo PPC-BCB/2015.",
+        "A regra localizada não autoriza concluir aplicabilidade do PPC 2010/2011."
+      ],
+      "revisao_humana": {
+        "estado": "pendente",
+        "pronto_para_mudar_status": true,
+        "decisao_publicavel": false
+      }
+    },
+    {
+      "curso_id": "fisica",
+      "matriz_ano": 2015,
+      "status_antes": "pendente",
+      "resultado": "candidata_preliminar",
+      "ppc_substituido": "PPC do Bacharelado em Física aprovado pela Resolução ConsEPE nº 198/2015",
+      "ppc_substituto": "PPC do Bacharelado em Física 2023, aprovado pelo Ato Decisório ConsEPE nº 268/2023",
+      "entrada_em_vigor": "O PPC atual foi aprovado em 2023. Para este lote, a promoção não depende de inferir a data final de validade do PPC 2015.",
+      "tempo_integralizacao": "Não usado para promover este PPC; permanece pendente como elemento necessário a qualquer futura exclusão individual.",
+      "calculo_termino_validade": "Não conclusivo. Não se aplica cálculo genérico para excluir a matriz neste lote.",
+      "regras_transicao": "O documento complementar aprovado pelo Ato Decisório CG nº 81/2026, publicado em 02/06/2026, trata explicitamente da transição entre os PPCs 2009, 2015 e 2023 e de integralização de ingressantes anteriores a 2023. A relação de colação de 30/06/2026 também registra BFIS 2015 como PPC considerado em processamento institucional.",
+      "possiveis_excecoes": "A combinação de fontes sustenta somente candidatura preliminar do PPC 2015. O PPC 2009 permanece pendente porque a tabela de transição e menções de convalidação não demonstram, isoladamente, que ainda seja opção de integralização na data de corte.",
+      "fontes": [
+        "fisica_transicao_2026",
+        "fisica_pagina_atual",
+        "colacao_30jun2026"
+      ],
+      "lacunas": [
+        "Confirmar em revisão humana a regra temporal completa aplicável ao PPC 2015.",
+        "Não inferir do documento de convalidação que o PPC 2009 ainda possa reger estudante ativo."
+      ],
+      "revisao_humana": {
+        "estado": "pendente",
+        "pronto_para_mudar_status": true,
+        "decisao_publicavel": false
+      }
+    },
+    {
+      "curso_id": "biotecnologia",
+      "matriz_ano": 2018,
+      "status_antes": "pendente",
+      "resultado": "pendente",
+      "ppc_substituido": "PPC do Bacharelado em Biotecnologia 2018, aprovado pelo Ato Decisório ConsEPE nº 164/2018",
+      "ppc_substituto": "PPC do Bacharelado em Biotecnologia 2023, aprovado pelo Ato Decisório ConsEPE nº 257/2023",
+      "entrada_em_vigor": "O Ato Decisório ConsEPE nº 257/2023 estabelece o PPC 2023 para ingressantes a partir de 2023 e preserva o PPC 2018 para ingressantes até 2022, sujeito às regras de transição.",
+      "tempo_integralizacao": "Não usado para decidir neste lote.",
+      "calculo_termino_validade": "Indeterminado neste registro histórico. O prazo até o 1º quadrimestre de 2026 foi localizado em minuta de pauta, não no documento final aprovado em 2023. Não é tratado como prazo normativo comprovado. A verificação do anexo atualizado pelo Ato Decisório CG nº 71/2025 foi registrada posteriormente no lote 9.",
+      "regras_transicao": "O documento final aprovado pelo Ato Decisório CG nº 34/2023, item 2, permite a ingressantes anteriores a 2023 escolher o PPC 2018 ou 2023 e não fixa o prazo terminal presente na minuta. O lote 9 registra a verificação da atualização de 2025; a ausência daquele prazo no documento final não certifica vigência irrestrita.",
+      "possiveis_excecoes": "A relação de colação de 30/06/2026 registra BIOTEC 2018 como PPC considerado, mas isso não prova, sozinho, estudante ainda ativo sob essa matriz em 16/09/2026. A regra temporal completa continua sujeita a revisão humana.",
+      "retificacao_documental": {
+        "data": "2026-09-17",
+        "afirmacao_anterior_incorreta": "A regra de transição aprovada em 2023 fixava prazo até o 1º quadrimestre de 2026.",
+        "correcao": "A minuta contém esse prazo, mas não comprova sua aprovação. O documento final de 2023 não contém a cláusula. Esta retificação preserva a decisão histórica do lote 8 e a candidatura preliminar posterior do lote 9, sem aprovar revisão humana ou suporte acadêmico.",
+        "fontes": ["biotecnologia_minuta_transicao_2023", "biotecnologia_transicao_2023"]
+      },
+      "fontes": [
+        "biotecnologia_transicao_2023",
+        "biotecnologia_minuta_transicao_2023",
+        "biotecnologia_pagina_atual",
+        "colacao_30jun2026"
+      ],
+      "lacunas": [
+        "A leitura do anexo aprovado pelo Ato Decisório CG nº 71/2025, pendente à época, foi registrada no lote 9.",
+        "Revisão humana ainda necessária; não inferir prazo de extinção a partir de minuta nem vigência irrestrita pela ausência dessa cláusula no documento final.",
+        "Não usar a relação de colação como prova suficiente de estudante ativo na data de corte."
+      ],
+      "revisao_humana": {
+        "estado": "pendente",
+        "pronto_para_mudar_status": false,
+        "decisao_publicavel": false
+      }
+    }
+  ],
+  "fontes": {
+    "ciencias_biologicas_transicao_2023": {
+      "tipo": "documento_complementar_transicao",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/comissao_ato_decisorio_31_anexo_2.pdf",
+      "referencia": "Documento Complementar II — Regras de Transição de Matrizes do Bacharelado em Ciências Biológicas, 2023",
+      "uso": "Implementa o PPC-BCB/2023 a partir do 2º quadrimestre de 2023 e permite a ingressantes anteriores a 2023 optar pelo PPC-BCB/2015 ou PPC-BCB/2023."
+    },
+    "ciencias_biologicas_pagina_atual": {
+      "tipo": "pagina_oficial_curso",
+      "url": "https://ccnh.ufabc.edu.br/ensino/graduacao/bacharelado-em-ciencias-biologicas",
+      "referencia": "CCNH — Bacharelado em Ciências Biológicas",
+      "uso": "Página atual lista PPCs 2023, 2015 e 2011 e aponta o documento complementar de transição do PPC 2023."
+    },
+    "fisica_transicao_2026": {
+      "tipo": "documento_complementar_transicao",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/comissao_ato_decisorio_81_anexo-2.pdf",
+      "referencia": "Anexo II do Ato Decisório CG nº 81/2026 — Regras de Transição de Matrizes do Bacharelado em Física",
+      "uso": "Documento publicado em 02/06/2026 trata explicitamente de integralização de ingressantes anteriores a 2023 e da transição entre PPCs 2009, 2015 e 2023."
+    },
+    "fisica_pagina_atual": {
+      "tipo": "pagina_oficial_curso",
+      "url": "https://ccnh.ufabc.edu.br/ensino/graduacao/bacharelado-em-fisica",
+      "referencia": "CCNH — Bacharelado em Física",
+      "uso": "Página atual identifica o PPC 2023 como atual, lista o PPC 2015 e o PPC anterior até 2014 e aponta as regras de transição aprovadas em 2026."
+    },
+    "biotecnologia_transicao_2023": {
+      "tipo": "documento_complementar_transicao",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/cg_ato_decisorio_034_anexo-02.pdf",
+      "referencia": "Anexo II do Ato Decisório CG nº 34/2023 — documento final de transição de Biotecnologia",
+      "secao": "Regras de transição, item 2",
+      "prazo_terminal_explicito": false,
+      "uso": "Permite a ingressantes anteriores a 2023 optar pelo PPC 2018 ou 2023. Não contém a cláusula de prazo até o primeiro quadrimestre de 2026 encontrada na minuta; isso não certifica vigência irrestrita."
+    },
+    "biotecnologia_minuta_transicao_2023": {
+      "tipo": "minuta_oficial_pre_deliberacao",
+      "url": "https://www.ufabc.edu.br/images/consepe/prox_sessao/ii_sesso_extraordinria_-_09_de_maio_de_2023-rrd1f/ordem_do_dia_-_anexo_1f.pdf",
+      "referencia": "Minuta de transição de Biotecnologia apresentada na pauta de 09/05/2023",
+      "secao": "Item 3 da minuta",
+      "uso_normativo": false,
+      "uso": "Rastreia a origem do prazo até o 1º quadrimestre de 2026 indevidamente atribuído ao documento aprovado. A minuta não é usada como norma vigente."
+    },
+    "biotecnologia_pagina_atual": {
+      "tipo": "pagina_oficial_curso",
+      "url": "https://prograd.ufabc.edu.br/cursos/bb",
+      "referencia": "ProGrad — Bacharelado em Biotecnologia",
+      "uso": "Página atual lista PPCs 2023 e 2018 e informa que as regras e a tabela de transição foram atualizadas pelo Ato Decisório CG nº 71/2025."
+    },
+    "colacao_30jun2026": {
+      "tipo": "evidencia_operacional_atual",
+      "url": "https://prograd.ufabc.edu.br/pdf/colacao_grau_30jun26_solicitantes_v2.pdf",
+      "referencia": "Colação de Grau de 30/06/2026 — relação geral de solicitantes, atualização de 16/06/2026",
+      "uso": "Usada apenas para identificar os rótulos de PPC considerados institucionalmente. Nenhum nome, RA, identificador ou outro dado pessoal é reproduzido neste arquivo."
+    }
+  },
+  "resumo": {
+    "ppcs_auditados_lote": 3,
+    "promovidos_a_candidata_preliminar": 2,
+    "mantidos_pendentes": 1,
+    "exclusoes_definitivas": 0,
+    "revisao_humana": "pendente",
+    "decisoes_publicaveis": 0
+  }
+}
