@@ -13,7 +13,7 @@ def _carregar():
     return auditoria, vigencia
 
 
-def test_lote_03_audita_tres_familias_sem_promover_status():
+def test_lote_03_audita_tres_familias_e_preserva_decisao_historica():
     auditoria, vigencia = _carregar()
     auditadas = {
         (item["curso_id"], item["matriz_ano"]): item
@@ -29,9 +29,12 @@ def test_lote_03_audita_tres_familias_sem_promover_status():
     assert all(item["status_resultante"] == "pendente" for item in auditadas.values())
     assert all(item["decisao_publicavel"] is False for item in auditadas.values())
 
+    # O lote 3 permanece histórico. Matemática 2017 só foi promovida no lote 11,
+    # após a preservação expressa do Ato ConsEPE nº 262/2023 ser sincronizada.
     por_curso = {item["curso_id"]: item for item in vigencia["classificacao"]}
     assert 2017 in por_curso["ciencias_economicas"]["matrizes_pendentes_anos"]
-    assert 2017 in por_curso["matematica"]["matrizes_pendentes_anos"]
+    assert 2017 in por_curso["matematica"]["matrizes_candidatas_anos"]
+    assert 2017 not in por_curso["matematica"]["matrizes_pendentes_anos"]
     assert 2019 in por_curso["lch"]["matrizes_pendentes_anos"]
 
 
@@ -92,7 +95,7 @@ def test_bce_2017_registra_cadeia_intermediaria_sem_usar_ttmc_como_prova_de_vige
     assert item["status_resultante"] == "pendente"
 
 
-def test_bm_2017_preserva_opcao_explicita_sem_exclusao_por_prazo_generico():
+def test_bm_2017_preserva_registro_historico_da_opcao_explicita():
     auditoria, _ = _carregar()
     item = next(
         item
@@ -138,13 +141,10 @@ def test_lote_03_preserva_suas_decisoes_sem_congelar_resumo_global_antigo():
         "mudaram_para_candidata_preliminar": 0,
         "decisoes_publicaveis": 0,
     }
-    assert vigencia["resumo"] == {
-        "ppcs_total": 93,
-        "nao_aplicaveis": 0,
-        "pendentes": 37,
-        "candidatas": 56,
-        "ppcs_historicos_candidatos": 21,
-    }
+    resumo_global = vigencia["resumo"]
+    assert resumo_global["ppcs_total"] == 93
+    assert resumo_global["nao_aplicaveis"] == 0
+    assert resumo_global["candidatas"] + resumo_global["pendentes"] == 93
     assert all(
         "suportada" not in item.get("status_resultante", "")
         for item in auditoria["matrizes"]
