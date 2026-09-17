@@ -38,6 +38,7 @@ def _req(
         seletor=SeletorComponentes(
             codigos=frozenset(codigos),
             tags=frozenset(tags),
+            qualquer_componente=not codigos and not tags,
         ),
         limite=LimiteQuantitativo(unidade, minimo, maximo),
     )
