@@ -6,6 +6,8 @@ Este repositório contém o Planejador Acadêmico UFABC. O objetivo é construir
 
 BC&T 2015 e Bacharelado em Ciência de Dados 2023 são matrizes-piloto de desenvolvimento. Não declarar suporte público universal enquanto o inventário, a modelagem, a revisão e os testes de todas as matrizes aplicáveis não estiverem concluídos.
 
+`app.py` é a entrada pública e deve falhar fechado enquanto a cobertura acadêmica não estiver integralmente aprovada. `app_interno.py` preserva a interface de protótipo para desenvolvimento e validação e não deve ser tratada como entrada pública.
+
 ## Prioridades
 
 Ao tomar decisões, respeite esta ordem:
@@ -98,7 +100,7 @@ python -m pip install -r requirements-test.txt
 Verificação principal:
 
 ```bash
-python -m compileall -q app.py main.py planejador ferramentas
+python -m compileall -q app.py app_interno.py main.py planejador ferramentas
 python -m pytest -q
 ```
 

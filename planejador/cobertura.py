@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import json
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Any, Mapping
 
 
@@ -38,6 +40,15 @@ class RelatorioCoberturaPublica:
             )
         itens.extend(self.inconsistencias)
         return tuple(itens)
+
+
+class PublicacaoBloqueadaError(RuntimeError):
+    """Indica que a entrada pública deve permanecer indisponível."""
+
+    def __init__(self, relatorio: RelatorioCoberturaPublica) -> None:
+        self.relatorio = relatorio
+        mensagem = "; ".join(relatorio.impedimentos) or "cobertura pública não aprovada"
+        super().__init__(mensagem)
 
 
 def avaliar_cobertura_publica(
@@ -126,6 +137,52 @@ def avaliar_cobertura_publica(
         matrizes_aplicaveis_nao_validadas=tuple(aplicaveis_nao_validadas),
         inconsistencias=tuple(inconsistencias),
     )
+
+
+def carregar_relatorio_cobertura_publica(
+    base: Path,
+    caminho: str | Path = "dados/inventario_cursos.json",
+) -> RelatorioCoberturaPublica:
+    """Carrega o inventário e falha fechado quando ele está ausente ou inválido."""
+    path = Path(caminho)
+    if not path.is_absolute():
+        path = base / path
+    try:
+        inventario = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        return RelatorioCoberturaPublica(
+            liberacao_permitida=False,
+            cursos_total=0,
+            cursos_com_levantamento_incompleto=(),
+            matrizes_total=0,
+            matrizes_com_aplicabilidade_pendente=(),
+            matrizes_aplicaveis=0,
+            matrizes_aplicaveis_nao_validadas=(),
+            inconsistencias=(f"inventário público indisponível ou inválido ({type(exc).__name__})",),
+        )
+    if not isinstance(inventario, Mapping):
+        return RelatorioCoberturaPublica(
+            liberacao_permitida=False,
+            cursos_total=0,
+            cursos_com_levantamento_incompleto=(),
+            matrizes_total=0,
+            matrizes_com_aplicabilidade_pendente=(),
+            matrizes_aplicaveis=0,
+            matrizes_aplicaveis_nao_validadas=(),
+            inconsistencias=("inventário público não é um objeto JSON",),
+        )
+    return avaliar_cobertura_publica(inventario)
+
+
+def exigir_liberacao_publica(
+    base: Path,
+    caminho: str | Path = "dados/inventario_cursos.json",
+) -> RelatorioCoberturaPublica:
+    """Autoriza a entrada pública somente quando toda a cobertura foi aprovada."""
+    relatorio = carregar_relatorio_cobertura_publica(base, caminho)
+    if not relatorio.liberacao_permitida:
+        raise PublicacaoBloqueadaError(relatorio)
+    return relatorio
 
 
 def _tem_evidencias(valor: Any) -> bool:

@@ -4,7 +4,12 @@ from pathlib import Path
 
 import pytest
 
-from planejador.cobertura import avaliar_cobertura_publica
+from planejador.cobertura import (
+    PublicacaoBloqueadaError,
+    avaliar_cobertura_publica,
+    carregar_relatorio_cobertura_publica,
+    exigir_liberacao_publica,
+)
 
 
 BASE = Path(__file__).resolve().parents[1]
@@ -123,3 +128,45 @@ def test_inventario_vazio_nunca_e_considerado_publicavel():
 
     assert not relatorio.liberacao_permitida
     assert relatorio.inconsistencias == ("inventário sem cursos",)
+
+
+def test_carregamento_real_recalcula_bloqueio_sem_confiar_em_flag():
+    relatorio = carregar_relatorio_cobertura_publica(BASE)
+
+    assert not relatorio.liberacao_permitida
+    assert relatorio.cursos_total == 35
+    assert relatorio.matrizes_total == 93
+
+
+def test_arquivo_de_inventario_ausente_falha_fechado(tmp_path):
+    relatorio = carregar_relatorio_cobertura_publica(
+        tmp_path, "dados/inexistente.json"
+    )
+
+    assert not relatorio.liberacao_permitida
+    assert relatorio.inconsistencias
+    assert "indisponível ou inválido" in relatorio.inconsistencias[0]
+
+
+def test_entrada_publica_exige_liberacao_e_expoe_relatorio_no_erro():
+    with pytest.raises(PublicacaoBloqueadaError) as erro:
+        exigir_liberacao_publica(BASE)
+
+    assert not erro.value.relatorio.liberacao_permitida
+    assert erro.value.relatorio.impedimentos
+
+
+def test_gate_publico_para_antes_de_importar_interface_interna():
+    fonte = (BASE / "app.py").read_text(encoding="utf-8")
+    pos_exigir = fonte.index("exigir_liberacao_publica(BASE)")
+    pos_stop = fonte.index("st.stop()")
+    pos_interno = fonte.index("from app_interno import *")
+
+    assert pos_exigir < pos_stop < pos_interno
+
+
+def test_script_local_executa_interface_interna_explicitamente():
+    script = (BASE / "executar_windows.bat").read_text(encoding="utf-8")
+
+    assert "streamlit run app_interno.py" in script
+    assert "streamlit run app.py" not in script
