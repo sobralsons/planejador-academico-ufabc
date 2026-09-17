@@ -71,7 +71,7 @@ def test_lote_10_nao_exclui_nem_declara_suporte_publico():
     assert auditoria["resumo"]["revisao_humana"] == "pendente"
 
 
-def test_lote_10_sincroniza_estado_global_sem_declarar_suporte():
+def test_lote_10_sincroniza_bcc_sem_congelar_resumo_global_posterior():
     auditoria, vigencia = _carregar()
     por_curso = {curso["curso_id"]: curso for curso in vigencia["classificacao"]}
     bcc = por_curso["ciencia_computacao"]
@@ -79,10 +79,7 @@ def test_lote_10_sincroniza_estado_global_sem_declarar_suporte():
     assert auditoria["resumo"]["estado_global_alterado_neste_commit"] is True
     assert not ({2015, 2010} & set(bcc["matrizes_pendentes_anos"]))
     assert {2015, 2010} <= set(bcc["matrizes_candidatas_anos"])
-    assert vigencia["resumo"] == {
-        "ppcs_total": 93,
-        "nao_aplicaveis": 0,
-        "pendentes": 37,
-        "candidatas": 56,
-        "ppcs_historicos_candidatos": 21,
-    }
+    resumo_global = vigencia["resumo"]
+    assert resumo_global["ppcs_total"] == 93
+    assert resumo_global["nao_aplicaveis"] == 0
+    assert resumo_global["candidatas"] + resumo_global["pendentes"] == 93
