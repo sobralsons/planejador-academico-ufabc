@@ -121,7 +121,7 @@ def test_lic_quimica_2022_preserva_12_quadrimestres_sem_inventar_extincao():
     assert item["status_resultante"] == "pendente"
 
 
-def test_lote_06_preserva_resumo_historico_e_estado_global_atual():
+def test_lote_06_preserva_resumo_historico_sem_congelar_estado_global_atual():
     auditoria, vigencia = _carregar()
 
     assert auditoria["resumo"] == {
@@ -131,13 +131,10 @@ def test_lote_06_preserva_resumo_historico_e_estado_global_atual():
         "mudaram_para_candidata_preliminar": 0,
         "decisoes_publicaveis": 0,
     }
-    assert vigencia["resumo"] == {
-        "ppcs_total": 93,
-        "nao_aplicaveis": 0,
-        "pendentes": 37,
-        "candidatas": 56,
-        "ppcs_historicos_candidatos": 21,
-    }
+    resumo_global = vigencia["resumo"]
+    assert resumo_global["ppcs_total"] == 93
+    assert resumo_global["nao_aplicaveis"] == 0
+    assert resumo_global["candidatas"] + resumo_global["pendentes"] == 93
 
 
 def test_lote_06_nao_declara_suporte_academico():
