@@ -1,0 +1,93 @@
+{
+  "schema_version": 2,
+  "avaliado_em": "2026-09-16",
+  "base_vigencia": "dados/vigencia_ppcs_2026-09-16.json",
+  "escopo": "Lote 10 da auditoria individual de aplicabilidade. Revisa os PPCs 2015 e 2010 do Bacharelado em Ciência da Computação a partir das regras oficiais de transição do PPC 2023, sem declarar suporte acadêmico, revisão humana concluída ou decisão publicável.",
+  "politica_decisao": {
+    "regra_transicao_especifica_pode_sustentar_candidatura_preliminar": true,
+    "pagina_oficial_atual_pode_identificar_documentos_e_matrizes": true,
+    "norma_geral_basta_para_excluir": false,
+    "revogacao_formal_do_ppc_basta_para_excluir_estudantes_em_transicao": false,
+    "ausencia_de_prorrogacao_basta_para_excluir": false,
+    "revisao_humana_concluida": false
+  },
+  "auditoria": [
+    {
+      "curso_id": "ciencia_computacao",
+      "matriz_ano": 2015,
+      "status_antes": "pendente",
+      "resultado": "candidata_preliminar",
+      "aplicado_no_estado_global": true,
+      "ppc_substituido": "PPC 2015 do Bacharelado em Ciência da Computação, aprovado pela Resolução ConsEPE nº 195 e posteriormente substituído pela Resolução ConsEPE nº 211.",
+      "ppc_substituto": "PPC 2023 do Bacharelado em Ciência da Computação, aprovado pelo Ato Decisório ConsEPE nº 267/2023.",
+      "entrada_em_vigor": "O documento de transição do PPC 2023 estabelece oferta plena da matriz 2023 para ingressantes a partir de 2023.",
+      "tempo_integralizacao": "Não usado para promover este PPC. A candidatura decorre de regra específica de transição que preserva a possibilidade de integralização pela matriz vigente no ano de ingresso para estudantes anteriores a 2023.",
+      "calculo_termino_validade": "Não conclusivo e não necessário para esta candidatura preliminar. A regra específica de transição de 2023 é mais diretamente relevante para identificar matrizes que ainda podem reger estudantes anteriores a 2023.",
+      "regras_transicao": "O Anexo II do Ato Decisório CG nº 44/2023 afirma que estudantes que ingressaram na UFABC anteriormente a 2023 poderão integralizar o BCC pela matriz 2023 ou pela matriz curricular do projeto pedagógico vigente no seu ano de ingresso. A página atual da ProGrad mantém o PPC 2015 e a transição 2010-2015-2017 explicitamente referenciados.",
+      "possiveis_excecoes": "A revisão humana deve confirmar se há ato posterior ao Ato Decisório CG nº 44/2023 que restrinja a aplicação da matriz 2015 a algum grupo de estudantes. A promoção é apenas para candidatura preliminar e não certifica integralização individual.",
+      "fontes": [
+        "bcc_transicao_2023",
+        "bcc_pagina_atual"
+      ],
+      "lacunas": [
+        "Revisão acadêmica humana permanece pendente.",
+        "A candidatura preliminar não substitui modelagem curricular, testes adversariais nem revisão humana."
+      ],
+      "revisao_humana": {
+        "estado": "pendente",
+        "pronto_para_mudar_status": true,
+        "decisao_publicavel": false
+      }
+    },
+    {
+      "curso_id": "ciencia_computacao",
+      "matriz_ano": 2010,
+      "status_antes": "pendente",
+      "resultado": "candidata_preliminar",
+      "aplicado_no_estado_global": true,
+      "ppc_substituido": "PPC 2010 do Bacharelado em Ciência da Computação, aprovado pela Resolução ConsEP nº 36; o trecho específico do BCC foi posteriormente substituído pela Resolução ConsEPE nº 195.",
+      "ppc_substituto": "PPC 2023 do Bacharelado em Ciência da Computação, aprovado pelo Ato Decisório ConsEPE nº 267/2023.",
+      "entrada_em_vigor": "O documento de transição do PPC 2023 estabelece oferta plena da matriz 2023 para ingressantes a partir de 2023.",
+      "tempo_integralizacao": "Não usado para promover este PPC. A candidatura decorre de regra específica de transição que preserva a possibilidade de integralização pela matriz vigente no ano de ingresso para estudantes anteriores a 2023.",
+      "calculo_termino_validade": "Não conclusivo e não necessário para esta candidatura preliminar. A regra específica de transição de 2023 é mais diretamente relevante para identificar matrizes que ainda podem reger estudantes anteriores a 2023.",
+      "regras_transicao": "O Anexo II do Ato Decisório CG nº 44/2023 afirma que estudantes que ingressaram na UFABC anteriormente a 2023 poderão integralizar o BCC pela matriz 2023 ou pela matriz curricular do projeto pedagógico vigente no seu ano de ingresso. A tabela oficial de convalidações do mesmo documento possui colunas próprias para 2010, 2015, 2017 e 2023, e a página atual da ProGrad mantém o PPC 2010 e a transição 2010-2015-2017 explicitamente referenciados.",
+      "possiveis_excecoes": "A revisão humana deve confirmar se há ato posterior ao Ato Decisório CG nº 44/2023 que restrinja a aplicação da matriz 2010 a algum grupo de estudantes. A promoção é apenas para candidatura preliminar e não certifica integralização individual.",
+      "fontes": [
+        "bcc_transicao_2023",
+        "bcc_pagina_atual"
+      ],
+      "lacunas": [
+        "Revisão acadêmica humana permanece pendente.",
+        "A candidatura preliminar não substitui modelagem curricular, testes adversariais nem revisão humana."
+      ],
+      "revisao_humana": {
+        "estado": "pendente",
+        "pronto_para_mudar_status": true,
+        "decisao_publicavel": false
+      }
+    }
+  ],
+  "fontes": {
+    "bcc_transicao_2023": {
+      "tipo": "documento_complementar_transicao",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/cg_ato-decisorio_044_anexo-02.pdf",
+      "referencia": "Anexo II do Ato Decisório CG nº 44/2023 — Regras de Transição para o Projeto Pedagógico 2023 do Bacharelado em Ciência da Computação",
+      "data_publicacao": "2023-12-05",
+      "uso": "Determina que ingressantes anteriores a 2023 podem integralizar pela matriz 2023 ou pela matriz do PPC vigente no ano de ingresso e apresenta tabela de convalidações com colunas 2010, 2015, 2017 e 2023."
+    },
+    "bcc_pagina_atual": {
+      "tipo": "pagina_oficial_curso",
+      "url": "https://prograd.ufabc.edu.br/cursos/bcc",
+      "referencia": "ProGrad — Bacharelado em Ciência da Computação",
+      "uso": "Página atual referencia o Ato Decisório CG nº 44/2023, a transição 2010-2015-2017 e lista os PPCs 2017, 2015 e 2010."
+    }
+  },
+  "resumo": {
+    "ppcs_auditados_lote": 2,
+    "evidencias_suficientes_para_candidatura_preliminar": 2,
+    "estado_global_alterado_neste_commit": true,
+    "exclusoes_definitivas": 0,
+    "revisao_humana": "pendente",
+    "decisoes_publicaveis": 0
+  }
+}

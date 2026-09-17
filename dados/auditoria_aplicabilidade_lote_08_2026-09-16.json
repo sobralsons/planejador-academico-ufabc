@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "avaliado_em": "2026-09-16",
   "base_vigencia": "dados/vigencia_ppcs_2026-09-16.json",
   "escopo": "Lote 8 da auditoria individual de aplicabilidade. Reavalia três PPCs históricos com fontes oficiais de transição e evidência operacional recente, sem declarar vigência normativa definitiva, suporte acadêmico ou exclusão.",
@@ -90,17 +90,24 @@
       "ppc_substituto": "PPC do Bacharelado em Biotecnologia 2023, aprovado pelo Ato Decisório ConsEPE nº 257/2023",
       "entrada_em_vigor": "O Ato Decisório ConsEPE nº 257/2023 estabelece o PPC 2023 para ingressantes a partir de 2023 e preserva o PPC 2018 para ingressantes até 2022, sujeito às regras de transição.",
       "tempo_integralizacao": "Não usado para decidir neste lote.",
-      "calculo_termino_validade": "Indeterminado neste lote. A regra de transição de 2023 fixava prazo de três anos para a opção pelo PPC 2018, até o 1º quadrimestre de 2026, mas a página oficial atual informa que as regras de transição foram atualizadas pelo Ato Decisório CG nº 71/2025.",
-      "regras_transicao": "A versão de 2023 permitia a ingressantes anteriores a 2023 escolher o PPC 2018 ou 2023, porém fixava prazo até o 1º quadrimestre de 2026. A página atual registra documento de transição atualizado em 2025; o conteúdo integral desse anexo deve ser verificado antes de alterar o status.",
-      "possiveis_excecoes": "A relação de colação de 30/06/2026 registra BIOTEC 2018 como PPC considerado, mas isso pode refletir conclusão acadêmica anterior ao prazo e não prova, sozinho, estudante ainda ativo sob essa matriz em 16/09/2026.",
+      "calculo_termino_validade": "Indeterminado neste registro histórico. O prazo até o 1º quadrimestre de 2026 foi localizado em minuta de pauta, não no documento final aprovado em 2023. Não é tratado como prazo normativo comprovado. A verificação do anexo atualizado pelo Ato Decisório CG nº 71/2025 foi registrada posteriormente no lote 9.",
+      "regras_transicao": "O documento final aprovado pelo Ato Decisório CG nº 34/2023, item 2, permite a ingressantes anteriores a 2023 escolher o PPC 2018 ou 2023 e não fixa o prazo terminal presente na minuta. O lote 9 registra a verificação da atualização de 2025; a ausência daquele prazo no documento final não certifica vigência irrestrita.",
+      "possiveis_excecoes": "A relação de colação de 30/06/2026 registra BIOTEC 2018 como PPC considerado, mas isso não prova, sozinho, estudante ainda ativo sob essa matriz em 16/09/2026. A regra temporal completa continua sujeita a revisão humana.",
+      "retificacao_documental": {
+        "data": "2026-09-17",
+        "afirmacao_anterior_incorreta": "A regra de transição aprovada em 2023 fixava prazo até o 1º quadrimestre de 2026.",
+        "correcao": "A minuta contém esse prazo, mas não comprova sua aprovação. O documento final de 2023 não contém a cláusula. Esta retificação preserva a decisão histórica do lote 8 e a candidatura preliminar posterior do lote 9, sem aprovar revisão humana ou suporte acadêmico.",
+        "fontes": ["biotecnologia_minuta_transicao_2023", "biotecnologia_transicao_2023"]
+      },
       "fontes": [
         "biotecnologia_transicao_2023",
+        "biotecnologia_minuta_transicao_2023",
         "biotecnologia_pagina_atual",
         "colacao_30jun2026"
       ],
       "lacunas": [
-        "Ler e registrar o conteúdo do anexo de transição aprovado pelo Ato Decisório CG nº 71/2025.",
-        "Determinar se a atualização de 2025 manteve, alterou ou excepcionou o prazo que terminava no 1º quadrimestre de 2026.",
+        "A leitura do anexo aprovado pelo Ato Decisório CG nº 71/2025, pendente à época, foi registrada no lote 9.",
+        "Revisão humana ainda necessária; não inferir prazo de extinção a partir de minuta nem vigência irrestrita pela ausência dessa cláusula no documento final.",
         "Não usar a relação de colação como prova suficiente de estudante ativo na data de corte."
       ],
       "revisao_humana": {
@@ -137,9 +144,19 @@
     },
     "biotecnologia_transicao_2023": {
       "tipo": "documento_complementar_transicao",
+      "url": "https://www.ufabc.edu.br/images/stories/comunicacao/Boletim/cg_ato_decisorio_034_anexo-02.pdf",
+      "referencia": "Anexo II do Ato Decisório CG nº 34/2023 — documento final de transição de Biotecnologia",
+      "secao": "Regras de transição, item 2",
+      "prazo_terminal_explicito": false,
+      "uso": "Permite a ingressantes anteriores a 2023 optar pelo PPC 2018 ou 2023. Não contém a cláusula de prazo até o primeiro quadrimestre de 2026 encontrada na minuta; isso não certifica vigência irrestrita."
+    },
+    "biotecnologia_minuta_transicao_2023": {
+      "tipo": "minuta_oficial_pre_deliberacao",
       "url": "https://www.ufabc.edu.br/images/consepe/prox_sessao/ii_sesso_extraordinria_-_09_de_maio_de_2023-rrd1f/ordem_do_dia_-_anexo_1f.pdf",
-      "referencia": "Regras de Transição de Matrizes do Bacharelado em Biotecnologia, 2023",
-      "uso": "Permitia a ingressantes anteriores a 2023 optar pelo PPC 2018 ou 2023, com prazo de três anos até o 1º quadrimestre de 2026."
+      "referencia": "Minuta de transição de Biotecnologia apresentada na pauta de 09/05/2023",
+      "secao": "Item 3 da minuta",
+      "uso_normativo": false,
+      "uso": "Rastreia a origem do prazo até o 1º quadrimestre de 2026 indevidamente atribuído ao documento aprovado. A minuta não é usada como norma vigente."
     },
     "biotecnologia_pagina_atual": {
       "tipo": "pagina_oficial_curso",
