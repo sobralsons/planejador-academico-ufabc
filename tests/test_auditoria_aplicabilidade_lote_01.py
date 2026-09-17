@@ -51,7 +51,7 @@ def test_cada_decisao_preenche_contrato_minimo_e_preserva_revisao_humana():
         assert item["ppc_substituido"]["ano"] == item["matriz_ano"]
         assert item["ppc_substituto"]["ano"] > item["matriz_ano"]
         assert item["entrada_em_vigor"]["estado"]
-        assert item["tempo_integrizacao"]["estado"]
+        assert item["tempo_integralizacao"]["estado"]
         assert item["calculo_termino_validade"]["estado"] == "inconclusivo"
         assert item["calculo_termino_validade"]["motivo"].strip()
         assert item["regras_transicao"]
