@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "avaliado_em": "2026-09-16",
+  "escopo": "Validação estrutural do modelo genérico de requisitos curriculares com regras oficiais representativas. Não constitui modelagem completa nem declaração de suporte das matrizes.",
+  "pilotos": [
+    {
+      "curso_id": "ciencia_computacao",
+      "matriz_id": "2023",
+      "familia": "bacharelados_cientificos_tecnologicos",
+      "fontes": [
+        "https://www.ufabc.edu.br/images/consepe/atos_decisorios/ato_decisrio_267_-_aprovar_a_atualizao_do_projeto_pedaggico_do_curso_de_bacharelado_em_cincia_da_computao_-_anexo_consolidado.pdf"
+      ],
+      "regras_validadas": {
+        "creditos_disciplinas": 242,
+        "creditos_obrigatorios_bct": 84,
+        "creditos_obrigatorios_bcc": 118,
+        "creditos_opcao_limitada": 24,
+        "creditos_livres": 16,
+        "atividades_complementares_bct_horas": 48,
+        "extensao_total_horas": 328,
+        "extensao_bct_horas": 240,
+        "extensao_bcc_horas": 88,
+        "estagio_obrigatorio": false,
+        "tcc_creditos": 12
+      }
+    },
+    {
+      "curso_id": "engenharia_materiais",
+      "matriz_id": "2023",
+      "familia": "engenharias",
+      "fontes": [
+        "https://www.ufabc.edu.br/images/consepe/prox_sessao/iv_sesso_extraordinria_-_14_de_novembro_de_2023-u2d9f/ordem_do_dia_-_anexo_1b.pdf"
+      ],
+      "regras_validadas": {
+        "estagio_obrigatorio_horas": 168,
+        "atividades_complementares_bct_horas": 48,
+        "trabalho_graduacao_multietapas": true
+      }
+    },
+    {
+      "curso_id": "lec_ciencias_humanas_sociais",
+      "matriz_id": "2024",
+      "familia": "novas_licenciaturas_ingresso_e_oferta_especial",
+      "fontes": [
+        "https://servidor-conteudo.ufabc.edu.br/arquivos/2024063000be21297994828a5ef4e5970/PPC_LEC.pdf"
+      ],
+      "regras_validadas": {
+        "estagio_total_horas": 400,
+        "estagios_lch_modulos_i_ii_iii_horas": 240,
+        "estagio_modulo_iv_ou_viii_horas": 80,
+        "estagio_modulo_ix_horas": 80,
+        "estagio_extensionista_horas": 160,
+        "escolha_modulo_iv_ou_viii": true
+      }
+    },
+    {
+      "curso_id": "matematica_licenciatura",
+      "matriz_id": "2023",
+      "familia": "licenciaturas_formacao_especifica",
+      "fontes": [
+        "https://prograd.ufabc.edu.br/cursos/26",
+        "https://licmat.ufabc.edu.br/discentes/extensao/",
+        "https://www.ufabc.edu.br/images/consepe/atas/02_ata_-_ii_sesso_ordinria_consepe_-_25_abr_e_02_mai_2023.pdf"
+      ],
+      "regras_validadas": {
+        "extensao_total_horas": 323,
+        "extensao_curso_ingresso_horas": 48,
+        "extensao_estagios_horas": 180,
+        "extensao_outras_fontes_horas": 95,
+        "atividades_complementares_ppc_2023": false
+      }
+    },
+    {
+      "curso_id": "politicas_publicas",
+      "matriz_id": "2023",
+      "familia": "bacharelados_humanidades",
+      "fontes": [
+        "https://bpp.ufabc.edu.br/curso/estrutura-curricular/",
+        "https://www.ufabc.edu.br/images/consepe/atos_decisorios/projeto_pedaggico_bpp_2023_corrigido.pdf"
+      ],
+      "regras_validadas": {
+        "creditos_totais": 246,
+        "atividades_complementares_bch_horas": 48,
+        "extensao_atividades_creditos": 22,
+        "extensao_atividades_horas": 264,
+        "imersao_creditos": 4,
+        "imersao_extensionista_horas": 48,
+        "extensao_total_horas": 312,
+        "tcc_creditos": 4
+      }
+    }
+  ],
+  "lacunas_encontradas_no_modelo_anterior": [
+    {
+      "id": "composicao_quantitativa",
+      "descricao": "Era possível declarar totais e limites isolados, mas não vincular parcelas internas a um requisito total sem tratá-las como integralizadores independentes.",
+      "casos": ["BCC 2023", "LEC-CHS 2024", "Licenciatura em Matemática 2023", "BPP 2023"]
+    },
+    {
+      "id": "sobreposicao_minima",
+      "descricao": "A regra de compartilhamento aceitava apenas teto; não representava carga que obrigatoriamente satisfaz dois requisitos na mesma unidade.",
+      "casos": ["LEC-CHS 2024"]
+    }
+  ],
+  "resultado": "O contrato foi ampliado somente para cobrir as duas lacunas demonstradas pelos pilotos. O solver e a auditoria de integralização continuam inalterados."
+}

@@ -130,6 +130,32 @@ class RequisitoQuantitativo:
 
 
 @dataclass(frozen=True)
+class RestricaoContribuicao:
+    """Limita uma parcela interna de um requisito quantitativo total.
+
+    Esta estrutura não cria um segundo integralizador. Ela descreve quanto de
+    uma fonte, grupo de componentes ou origem deve/pode contribuir para um
+    requisito total. Isso evita representar a decomposição de uma carga como
+    dupla contagem independente.
+    """
+
+    id: str
+    descricao: str
+    requisito_total: str
+    seletor: SeletorComponentes
+    limite: LimiteQuantitativo
+    fontes: tuple[FonteRegra, ...] = ()
+    observacoes: tuple[str, ...] = ()
+
+    def __post_init__(self) -> None:
+        _validar_id(self.id)
+        if not self.descricao.strip():
+            raise ValueError(f"Contribuição {self.id} precisa de descrição.")
+        if not self.requisito_total.strip():
+            raise ValueError(f"Contribuição {self.id} precisa indicar requisito_total.")
+
+
+@dataclass(frozen=True)
 class GrupoRequisitos:
     """Combina requisitos sem misturar a regra de escolha ao cadastro de disciplinas."""
 
@@ -231,12 +257,19 @@ class SequenciaRequisitos:
 
 @dataclass(frozen=True)
 class RegraCompartilhamento:
-    """Exceção explícita ao padrão de não contar a mesma evidência duas vezes."""
+    """Exceção explícita para compartilhar quantidade na mesma unidade.
+
+    É usada quando uma mesma carga em horas/créditos/componentes deve satisfazer
+    dois requisitos quantitativos distintos. Reuso entre dimensões diferentes
+    (por exemplo, créditos de uma disciplina e suas horas extensionistas) não é
+    tratado como dupla contagem da mesma quantidade.
+    """
 
     requisito_a: str
     requisito_b: str
     unidade: UnidadeRequisito
     maximo_compartilhavel: int
+    minimo_compartilhavel: int = 0
     fontes: tuple[FonteRegra, ...] = ()
     observacao: str = ""
 
@@ -246,6 +279,13 @@ class RegraCompartilhamento:
         _validar_inteiro(self.maximo_compartilhavel, "Máximo compartilhável")
         if self.maximo_compartilhavel <= 0:
             raise ValueError("Máximo compartilhável precisa ser positivo.")
+        _validar_inteiro(self.minimo_compartilhavel, "Mínimo compartilhável")
+        if self.minimo_compartilhavel < 0:
+            raise ValueError("Mínimo compartilhável não pode ser negativo.")
+        if self.minimo_compartilhavel > self.maximo_compartilhavel:
+            raise ValueError(
+                "Mínimo compartilhável não pode ser maior que o máximo."
+            )
 
     @property
     def par(self) -> frozenset[str]:
@@ -298,6 +338,7 @@ class ModeloRequisitosCurriculares:
     curso_id: str
     matriz_id: str
     requisitos: tuple[RequisitoQuantitativo, ...]
+    contribuicoes: tuple[RestricaoContribuicao, ...] = ()
     grupos: tuple[GrupoRequisitos, ...] = ()
     condicionais: tuple[RegraCondicional, ...] = ()
     sequencias: tuple[SequenciaRequisitos, ...] = ()
@@ -314,6 +355,7 @@ class ModeloRequisitosCurriculares:
 
         ids = [
             *(item.id for item in self.requisitos),
+            *(item.id for item in self.contribuicoes),
             *(item.id for item in self.grupos),
             *(item.id for item in self.condicionais),
             *(item.id for item in self.sequencias),
@@ -325,6 +367,23 @@ class ModeloRequisitosCurriculares:
         ids_requisitos = {item.id for item in self.requisitos}
         ids_grupos = {item.id for item in self.grupos}
         ids_sequencias = {item.id for item in self.sequencias}
+        requisitos_por_id = {item.id: item for item in self.requisitos}
+
+        for contribuicao in self.contribuicoes:
+            _validar_referencias(
+                contribuicao.id, (contribuicao.requisito_total,), ids_requisitos
+            )
+            total = requisitos_por_id[contribuicao.requisito_total]
+            if (total.limite.maximo is not None
+                    and contribuicao.limite.minimo > total.limite.maximo):
+                raise ValueError(
+                    f"Contribuição {contribuicao.id} exige mais que o teto do total."
+                )
+            if contribuicao.limite.unidade != total.limite.unidade:
+                raise ValueError(
+                    f"Contribuição {contribuicao.id} deve usar a mesma unidade "
+                    f"do requisito {total.id}."
+                )
 
         for grupo in self.grupos:
             _validar_referencias(
@@ -354,6 +413,19 @@ class ModeloRequisitosCurriculares:
                 (regra.requisito_a, regra.requisito_b),
                 ids_requisitos,
             )
+            requisito_a = requisitos_por_id[regra.requisito_a]
+            requisito_b = requisitos_por_id[regra.requisito_b]
+            for requisito in (requisito_a, requisito_b):
+                if (requisito.limite.maximo is not None
+                        and regra.minimo_compartilhavel > requisito.limite.maximo):
+                    raise ValueError("Compartilhamento mínimo excede teto do requisito.")
+            if (
+                requisito_a.limite.unidade != regra.unidade
+                or requisito_b.limite.unidade != regra.unidade
+            ):
+                raise ValueError(
+                    "Compartilhamento deve usar a mesma unidade dos dois requisitos."
+                )
             if regra.par in pares_compartilhamento:
                 raise ValueError(
                     "Não pode haver duas regras de compartilhamento para o mesmo par."
@@ -368,6 +440,7 @@ class ModeloRequisitosCurriculares:
         return frozenset(
             [
                 *(item.id for item in self.requisitos),
+                *(item.id for item in self.contribuicoes),
                 *(item.id for item in self.grupos),
                 *(item.id for item in self.condicionais),
                 *(item.id for item in self.sequencias),
