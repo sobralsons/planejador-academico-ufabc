@@ -125,7 +125,6 @@ def test_bcc_2023_tcc_considera_inicio_no_q13_e_nao_soma_espera_duas_vezes():
         grade=None, curriculo_origem=None, periodo_planejamento="2026.3", ritmo=16, margem=1,
         quadrimestre_planejado=10,
     )
-    # Do Q10: espera Q11/Q12 e desenvolve o TCC em Q13/Q14/Q15.
     assert analise["estimativa_formatura"]["quadrimestres_tg"] == 5
 
 
@@ -199,7 +198,7 @@ def test_melhor_sobreposicao_prioriza_creditos_e_depois_progresso():
 
 
 def test_interface_expoe_comparacao_de_formatura_e_sem_widget_duplicado():
-    texto = (BASE / "app.py").read_text(encoding="utf-8")
+    texto = (BASE / "app_interno.py").read_text(encoding="utf-8")
     assert "Em quanto tempo posso me formar?" in texto
     assert "Grade com maior aproveitamento conjunto" in texto
     assert "Total oficial informado no PPC" in texto
