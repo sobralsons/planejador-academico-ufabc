@@ -19,7 +19,9 @@ def test_lote_11_audita_somente_matematica_2017_2012_2010():
     assert set(itens) == {2017, 2012, 2010}
     assert all(item["curso_id"] == "matematica" for item in itens.values())
     assert all(item["status_antes"] == "pendente" for item in itens.values())
-    assert all(item["aplicado_no_estado_global"] is False for item in itens.values())
+    assert itens[2017]["aplicado_no_estado_global"] is True
+    assert itens[2012]["aplicado_no_estado_global"] is False
+    assert itens[2010]["aplicado_no_estado_global"] is False
 
 
 def test_matematica_2017_tem_preservacao_normativa_expressa():
@@ -27,6 +29,7 @@ def test_matematica_2017_tem_preservacao_normativa_expressa():
     item = next(item for item in auditoria["auditoria"] if item["matriz_ano"] == 2017)
 
     assert item["resultado"] == "candidata_preliminar"
+    assert item["aplicado_no_estado_global"] is True
     assert "Resolução ConsEPE nº 210/2016" in item["ppc_substituido"]
     assert "ingressantes até 2022" in item["regras_transicao"]
     assert item["revisao_humana"]["pronto_para_mudar_status"] is True
@@ -40,6 +43,7 @@ def test_matematica_2012_e_2010_nao_sao_promovidas_pela_ttmc_sozinha():
     for ano in (2012, 2010):
         item = itens[ano]
         assert item["resultado"] == "pendente"
+        assert item["aplicado_no_estado_global"] is False
         assert item["revisao_humana"]["pronto_para_mudar_status"] is False
         assert "TTMC" in item["calculo_termino_validade"] or "TTMC" in item["regras_transicao"]
 
@@ -62,7 +66,7 @@ def test_lote_11_registra_fontes_oficiais_sem_confundir_lista_com_vigencia():
     assert "não é usado isoladamente" in fontes["bm_ppc_2012"]["uso"]
 
 
-def test_lote_11_preserva_estado_global_antes_da_sincronizacao():
+def test_lote_11_sincroniza_somente_matematica_2017_no_estado_global():
     auditoria, vigencia = _carregar()
     por_curso = {curso["curso_id"]: curso for curso in vigencia["classificacao"]}
     matematica = por_curso["matematica"]
@@ -71,20 +75,22 @@ def test_lote_11_preserva_estado_global_antes_da_sincronizacao():
         "ppcs_auditados_lote": 3,
         "evidencias_suficientes_para_candidatura_preliminar": 1,
         "permanecem_pendentes": 2,
-        "estado_global_alterado_neste_commit": False,
+        "estado_global_alterado_neste_commit": True,
         "exclusoes_definitivas": 0,
         "revisao_humana": "pendente",
         "decisoes_publicaveis": 0,
     }
-    assert matematica["matrizes_pendentes_anos"] == [2017, 2012, 2010]
-    assert matematica["matrizes_candidatas_anos"] == [2023]
+    assert matematica["matrizes_pendentes_anos"] == [2012, 2010]
+    assert matematica["matrizes_candidatas_anos"] == [2023, 2017]
     assert matematica["matrizes_nao_aplicaveis_anos"] == []
+    assert "bm_ato_262_2023" in matematica["evidencias"]
+    assert "bm_transicao_40_2023" in matematica["evidencias"]
     assert vigencia["resumo"] == {
         "ppcs_total": 93,
         "nao_aplicaveis": 0,
-        "pendentes": 37,
-        "candidatas": 56,
-        "ppcs_historicos_candidatos": 21,
+        "pendentes": 36,
+        "candidatas": 57,
+        "ppcs_historicos_candidatos": 22,
     }
 
 
