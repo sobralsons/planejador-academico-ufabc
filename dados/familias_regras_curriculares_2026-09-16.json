@@ -2,7 +2,7 @@
   "schema_version": 2,
   "avaliado_em": "2026-09-16",
   "base_vigencia": "dados/vigencia_ppcs_2026-09-16.json",
-  "escopo": "Agrupa 56 matrizes candidatas preliminares e mantém 37 matrizes com aplicabilidade pendente nas mesmas famílias para revisão. Sincronizado até o lote 10; Matemática 2017 do lote 11 ainda aguarda sincronização específica. Não declara suporte acadêmico nem confirma vigência.",
+  "escopo": "Agrupa 57 matrizes candidatas preliminares e mantém 36 matrizes com aplicabilidade pendente nas mesmas famílias para revisão. Sincronizado até o lote 11, incluindo Matemática 2017 como candidata preliminar; Matemática 2012 e 2010 permanecem pendentes. Não declara suporte acadêmico nem confirma vigência.",
   "capacidades_modelo": {
     "categorias_creditos": {
       "descricao": "Mínimos de créditos por obrigatórias, opção limitada e livres.",
@@ -117,6 +117,7 @@
         ["fisica", 2023],
         ["fisica", 2015],
         ["matematica", 2023],
+        ["matematica", 2017],
         ["quimica", 2023],
         ["quimica", 2015],
         ["neurociencia", 2023],
@@ -127,7 +128,6 @@
       "matrizes_pendentes": [
         ["ciencias_biologicas", 2010],
         ["fisica", 2009],
-        ["matematica", 2017],
         ["matematica", 2012],
         ["matematica", 2010],
         ["quimica", 2010],
