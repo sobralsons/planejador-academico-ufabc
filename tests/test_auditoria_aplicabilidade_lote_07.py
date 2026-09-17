@@ -138,7 +138,7 @@ def test_bch_2015_combina_preservacao_de_coorte_com_uso_operacional_atual():
     assert item["calculo_termino_validade"]["resultado_teorico"] is None
 
 
-def test_lote_07_atualiza_resumo_global_sem_criar_exclusao():
+def test_lote_07_preserva_promocoes_sem_congelar_resumo_global_posterior():
     auditoria, vigencia = _carregar()
 
     assert auditoria["resumo"] == {
@@ -148,13 +148,10 @@ def test_lote_07_atualiza_resumo_global_sem_criar_exclusao():
         "mudaram_para_candidata_preliminar": 3,
         "decisoes_publicaveis": 0,
     }
-    assert vigencia["resumo"] == {
-        "ppcs_total": 93,
-        "nao_aplicaveis": 0,
-        "pendentes": 37,
-        "candidatas": 56,
-        "ppcs_historicos_candidatos": 21,
-    }
+    resumo_global = vigencia["resumo"]
+    assert resumo_global["ppcs_total"] == 93
+    assert resumo_global["nao_aplicaveis"] == 0
+    assert resumo_global["candidatas"] + resumo_global["pendentes"] == 93
 
 
 def test_lote_07_nao_declara_suporte_academico():
