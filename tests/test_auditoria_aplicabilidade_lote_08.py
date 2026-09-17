@@ -126,7 +126,7 @@ def test_lote_08_nao_reproduz_dados_pessoais_da_fonte_de_colacao():
         assert f'"{chave}"' not in texto
 
 
-def test_vigencia_central_reflete_promocoes_posteriores_sem_reescrever_lote_08():
+def test_vigencia_central_reflete_promocoes_posteriores_sem_congelar_totais():
     _, vigencia = _carregar()
     por_curso = {item["curso_id"]: item for item in vigencia["classificacao"]}
 
@@ -135,13 +135,10 @@ def test_vigencia_central_reflete_promocoes_posteriores_sem_reescrever_lote_08()
     assert 2015 in por_curso["fisica"]["matrizes_candidatas_anos"]
     assert 2009 in por_curso["fisica"]["matrizes_pendentes_anos"]
     assert 2018 in por_curso["biotecnologia"]["matrizes_candidatas_anos"]
-    assert vigencia["resumo"] == {
-        "ppcs_total": 93,
-        "candidatas": 56,
-        "nao_aplicaveis": 0,
-        "pendentes": 37,
-        "ppcs_historicos_candidatos": 21,
-    }
+    resumo_global = vigencia["resumo"]
+    assert resumo_global["ppcs_total"] == 93
+    assert resumo_global["nao_aplicaveis"] == 0
+    assert resumo_global["candidatas"] + resumo_global["pendentes"] == 93
 
 
 def test_lote_08_nao_declara_suporte_academico():

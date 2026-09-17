@@ -135,13 +135,10 @@ def test_lote_02_preserva_suas_decisoes_sem_congelar_resumo_global_antigo():
         "mudaram_para_candidata_preliminar": 0,
         "decisoes_publicaveis": 0,
     }
-    assert vigencia["resumo"] == {
-        "ppcs_total": 93,
-        "nao_aplicaveis": 0,
-        "pendentes": 37,
-        "candidatas": 56,
-        "ppcs_historicos_candidatos": 21,
-    }
+    resumo_global = vigencia["resumo"]
+    assert resumo_global["ppcs_total"] == 93
+    assert resumo_global["nao_aplicaveis"] == 0
+    assert resumo_global["candidatas"] + resumo_global["pendentes"] == 93
     assert all(
         "suportada" not in item.get("status_resultante", "")
         for item in auditoria["matrizes"]

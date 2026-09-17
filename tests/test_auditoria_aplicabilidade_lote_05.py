@@ -131,7 +131,7 @@ def test_bri_2015_preserva_efeito_da_retificacao_sem_inventar_revogacao():
     assert item["status_resultante"] == "pendente"
 
 
-def test_lote_05_altera_resumo_global_em_exatamente_uma_matriz_sem_criar_exclusao():
+def test_lote_05_preserva_promocao_sem_congelar_resumo_global_posterior():
     auditoria, vigencia = _carregar()
 
     assert auditoria["resumo"] == {
@@ -141,13 +141,10 @@ def test_lote_05_altera_resumo_global_em_exatamente_uma_matriz_sem_criar_exclusa
         "mudaram_para_candidata_preliminar": 1,
         "decisoes_publicaveis": 0,
     }
-    assert vigencia["resumo"] == {
-        "ppcs_total": 93,
-        "nao_aplicaveis": 0,
-        "pendentes": 37,
-        "candidatas": 56,
-        "ppcs_historicos_candidatos": 21,
-    }
+    resumo_global = vigencia["resumo"]
+    assert resumo_global["ppcs_total"] == 93
+    assert resumo_global["nao_aplicaveis"] == 0
+    assert resumo_global["candidatas"] + resumo_global["pendentes"] == 93
 
 
 def test_lote_05_nao_declara_suporte_academico():

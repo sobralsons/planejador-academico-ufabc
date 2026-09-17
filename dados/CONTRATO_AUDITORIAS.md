@@ -31,8 +31,16 @@ uma evolução explícita. Não é necessário reescrever lotes antigos.
 
 O resultado de um lote é histórico, não necessariamente o estado global atual.
 Promoções posteriores devem indicar a matriz, fontes e sincronização no arquivo
-de vigência e no mapa de famílias. Matemática 2017 permanece pendente no estado
-global até uma sincronização específica; esta correção não a promove.
+de vigência e no mapa de famílias. Os testes de cada lote devem proteger sua
+decisão histórica e os efeitos específicos que ainda precisam existir no estado
+atual, sem congelar contagens globais que pertencem à avaliação consolidada.
+
+No lote 11, Matemática 2017 foi promovida a candidata preliminar e sincronizada
+no estado global com fundamento no art. 3º do Ato Decisório ConsEPE nº 262/2023
+e nas regras de transição do Ato CG nº 40/2023. Matemática 2012 e 2010 continuam
+pendentes; a TTMC ou a expressão "matriz curricular de escolha" não são usadas
+isoladamente como prova de vigência. A sincronização não constitui revisão humana,
+certificação de integralização nem suporte público.
 
 Erros factuais exigem retificação identificável, mesmo em registros históricos.
 No lote 8, `retificacao_documental` registra data, afirmação anterior incorreta,
