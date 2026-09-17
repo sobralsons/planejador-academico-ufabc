@@ -138,10 +138,7 @@ def test_resumo_do_lote_permanece_historico_sem_congelar_estado_global_antigo():
         "mudaram_para_aplicavel": 0,
         "decisoes_publicaveis": 0,
     }
-    assert vigencia["resumo"] == {
-        "ppcs_total": 93,
-        "nao_aplicaveis": 0,
-        "pendentes": 37,
-        "candidatas": 56,
-        "ppcs_historicos_candidatos": 21,
-    }
+    resumo_global = vigencia["resumo"]
+    assert resumo_global["ppcs_total"] == 93
+    assert resumo_global["nao_aplicaveis"] == 0
+    assert resumo_global["candidatas"] + resumo_global["pendentes"] == 93
