@@ -34,6 +34,7 @@ class EvidenciaAcademica:
     tipos: frozenset[str] = frozenset()
     tags: frozenset[str] = frozenset()
     origens: frozenset[str] = frozenset()
+    recursos_componentes: frozenset[str] = frozenset()
     quantidades: Mapping[UnidadeRequisito, int] = field(default_factory=dict)
     observacoes: tuple[str, ...] = ()
 
@@ -45,6 +46,15 @@ class EvidenciaAcademica:
                 raise ValueError("Quantidade da evidência usa unidade inválida.")
             if type(valor) is not int or valor < 0:
                 raise ValueError("Quantidade da evidência deve ser inteiro não negativo.")
+        if any(not recurso.strip() for recurso in self.recursos_componentes):
+            raise ValueError("Recurso de componente não pode ser vazio.")
+        if self.recursos_componentes:
+            componentes = int(self.quantidades.get(UnidadeRequisito.COMPONENTES, 0))
+            if componentes != 1:
+                raise ValueError(
+                    "Evidência com recursos de componente deve representar "
+                    "exatamente um componente."
+                )
 
     def quantidade(self, unidade: UnidadeRequisito) -> int:
         return int(self.quantidades.get(unidade, 0))
@@ -116,12 +126,22 @@ class PendenciaAlocacao:
 
 
 @dataclass(frozen=True)
+class EvidenciaBloqueadaPorRecurso:
+    evidencia_id: str
+    unidade: UnidadeRequisito
+    quantidade: int
+    recursos: tuple[str, ...]
+    evidencias_priorizadas: tuple[str, ...]
+
+
+@dataclass(frozen=True)
 class ResultadoAlocacao:
     alocacoes: tuple[AlocacaoRealizada, ...]
     pendencias: tuple[PendenciaAlocacao, ...]
     evidencias_sem_destino: tuple[tuple[str, UnidadeRequisito, int], ...]
     medicoes: Mapping[str, MedicaoRequisito]
     compartilhamentos_usados: Mapping[frozenset[str], int]
+    evidencias_bloqueadas_por_recursos: tuple[EvidenciaBloqueadaPorRecurso, ...] = ()
     bloqueios: tuple[str, ...] = ()
 
     @property
@@ -215,6 +235,37 @@ def alocar_evidencias(
             (decisao.evidencia_id, decisao.unidade), []
         ).append(decisao)
 
+    candidatos_componentes_por_evidencia = {
+        evidencia.id: requisitos_candidatos(
+            modelo, evidencia, UnidadeRequisito.COMPONENTES
+        )
+        for evidencia in conjunto.evidencias
+        if evidencia.quantidade(UnidadeRequisito.COMPONENTES) > 0
+    }
+    concorrentes_por_recurso: dict[str, set[str]] = {}
+    for evidencia in conjunto.evidencias:
+        if not evidencia.recursos_componentes:
+            continue
+        if not candidatos_componentes_por_evidencia.get(evidencia.id):
+            continue
+        for recurso in evidencia.recursos_componentes:
+            concorrentes_por_recurso.setdefault(recurso, set()).add(evidencia.id)
+
+    recurso_priorizado_por: dict[str, str] = {}
+    for decisao in decisoes:
+        if decisao.unidade != UnidadeRequisito.COMPONENTES:
+            continue
+        evidencia = evidencias[decisao.evidencia_id]
+        for recurso in evidencia.recursos_componentes:
+            anterior = recurso_priorizado_por.get(recurso)
+            if anterior is not None and anterior != evidencia.id:
+                raise ValueError(
+                    "Decisões explícitas tentam consumir a mesma conclusão "
+                    f"acadêmica por evidências concorrentes: {anterior} e "
+                    f"{evidencia.id}."
+                )
+            recurso_priorizado_por[recurso] = evidencia.id
+
     regras_compartilhamento = {
         regra.par: regra for regra in modelo.compartilhamentos
     }
@@ -222,6 +273,7 @@ def alocar_evidencias(
     realizadas: list[AlocacaoRealizada] = []
     pendencias: list[PendenciaAlocacao] = []
     sem_destino: list[tuple[str, UnidadeRequisito, int]] = []
+    bloqueadas_por_recursos: list[EvidenciaBloqueadaPorRecurso] = []
 
     for evidencia in conjunto.evidencias:
         for unidade, disponivel in evidencia.quantidades.items():
@@ -271,6 +323,46 @@ def alocar_evidencias(
             restante = disponivel - consumido
             if restante <= 0:
                 continue
+
+            if unidade == UnidadeRequisito.COMPONENTES and evidencia.recursos_componentes:
+                priorizadas = sorted({
+                    recurso_priorizado_por[recurso]
+                    for recurso in evidencia.recursos_componentes
+                    if recurso in recurso_priorizado_por
+                    and recurso_priorizado_por[recurso] != evidencia.id
+                })
+                if priorizadas:
+                    bloqueadas_por_recursos.append(
+                        EvidenciaBloqueadaPorRecurso(
+                            evidencia_id=evidencia.id,
+                            unidade=unidade,
+                            quantidade=restante,
+                            recursos=tuple(sorted(evidencia.recursos_componentes)),
+                            evidencias_priorizadas=tuple(priorizadas),
+                        )
+                    )
+                    continue
+
+                concorrentes = sorted(
+                    set().union(*(
+                        concorrentes_por_recurso.get(recurso, set())
+                        for recurso in evidencia.recursos_componentes
+                    )) - {evidencia.id}
+                )
+                if candidatos and concorrentes:
+                    pendencias.append(
+                        PendenciaAlocacao(
+                            evidencia.id,
+                            unidade,
+                            restante,
+                            candidatos,
+                            "A evidência depende das mesmas conclusões acadêmicas "
+                            "que outra representação possível "
+                            f"({', '.join(concorrentes)}); a escolha não é automática.",
+                        )
+                    )
+                    continue
+
             if len(candidatos) == 1:
                 realizadas.append(
                     AlocacaoRealizada(
@@ -363,6 +455,7 @@ def alocar_evidencias(
         evidencias_sem_destino=tuple(sem_destino),
         medicoes=medicoes,
         compartilhamentos_usados=compartilhamentos_usados,
+        evidencias_bloqueadas_por_recursos=tuple(bloqueadas_por_recursos),
         bloqueios=tuple(bloqueios),
     )
 
