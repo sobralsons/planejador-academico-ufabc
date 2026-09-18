@@ -11,7 +11,19 @@ from .requisitos_curriculares import UnidadeRequisito
 
 _ORIGEM_CONSOLIDADA = "historico_consolidado"
 _UNIDADES_SUPORTADAS = frozenset(
-    {UnidadeRequisito.CREDITOS, UnidadeRequisito.COMPONENTES}
+    {
+        UnidadeRequisito.CREDITOS,
+        UnidadeRequisito.COMPONENTES,
+        UnidadeRequisito.HORAS_CARGA_HORARIA,
+        UnidadeRequisito.HORAS_EXTENSAO,
+    }
+)
+_UNIDADES_QUANTITATIVAS_NAO_TRANSFERIVEIS = frozenset(
+    {
+        UnidadeRequisito.CREDITOS,
+        UnidadeRequisito.HORAS_CARGA_HORARIA,
+        UnidadeRequisito.HORAS_EXTENSAO,
+    }
 )
 
 
@@ -75,15 +87,14 @@ def converter_historico_consolidado_em_evidencias(
 ) -> ResultadoConversaoHistorico:
     """Converte conclusões consolidadas em evidências sem duplicar reconhecimentos.
 
-    Nesta etapa, apenas créditos e contagem de componentes são materializados.
-    Horas do histórico exigem distinguir carga horária total de carga
-    extensionista; expor ambas como a mesma unidade HORAS produziria ambiguidade
-    quantitativa. Por isso, horas permanecem fail-closed.
+    A coluna carga_horaria do histórico e a coluna carga_extensao são
+    representadas em unidades diferentes. HORAS continua sendo uma unidade
+    genérica do modelo e não é preenchida automaticamente a partir do histórico.
 
-    Reconhecimentos com uma única origem são seguros para identificação de
-    componente: o código reconhecido é anexado à mesma evidência de componente,
-    sem criar uma segunda conclusão. A quantidade de créditos do código de
-    destino não é inferida da origem. Reconhecimentos compostos também não são
+    Reconhecimentos com uma única origem podem representar o componente de
+    destino sem criar uma segunda conclusão. Quantidades da origem -- créditos,
+    carga horária e horas extensionistas -- não são transferidas automaticamente
+    para o código equivalente. Reconhecimentos compostos também não são
     materializados automaticamente.
     """
 
@@ -92,8 +103,8 @@ def converter_historico_consolidado_em_evidencias(
     if desconhecidas:
         nomes = ", ".join(sorted(item.value for item in desconhecidas))
         raise ValueError(
-            "A conversão do histórico ainda não certifica estas unidades: "
-            f"{nomes}. Horas precisam de contrato quantitativo específico."
+            "A conversão do histórico não certifica estas unidades: "
+            f"{nomes}. Use as unidades específicas do histórico."
         )
 
     concluidas = set(situacao.concluidas)
@@ -121,11 +132,10 @@ def converter_historico_consolidado_em_evidencias(
                     PendenciaReconhecimentoHistorico(
                         codigo_destino=destino,
                         codigos_origem=(origem,),
-                        unidades_afetadas=frozenset({UnidadeRequisito.CREDITOS}),
+                        unidades_afetadas=_UNIDADES_QUANTITATIVAS_NAO_TRANSFERIVEIS,
                         motivo=(
                             "O código reconhecido pode representar o componente, "
-                            "mas a quantidade de créditos do destino não é inferida "
-                            "da disciplina de origem."
+                            "mas quantidades do destino não são inferidas da origem."
                         ),
                     )
                 )
@@ -192,39 +202,48 @@ def converter_historico_consolidado_em_evidencias(
             )
         )
 
-        valores_creditos = tuple(sorted({item.creditos for item in tentativas}))
-        if len(valores_creditos) > 1:
-            conflitos.append(
-                ConflitoQuantidadeHistorico(
-                    codigo_origem=origem,
-                    unidade=UnidadeRequisito.CREDITOS,
-                    valores_encontrados=valores_creditos,
-                    motivo=(
-                        "Tentativas concluídas do mesmo código têm quantidades de "
-                        "créditos divergentes; nenhum valor foi escolhido."
-                    ),
-                )
-            )
-            continue
-
-        creditos = valores_creditos[0]
-        if creditos <= 0:
-            continue
-        meta_creditos = metadados.get(origem, MetadadosCodigoEvidencia())
-        evidencias.append(
-            EvidenciaAcademica(
-                id=f"historico:{origem}:creditos",
-                codigos=frozenset({origem}),
-                categorias=meta_creditos.categorias,
-                tipos=meta_creditos.tipos,
-                tags=meta_creditos.tags,
-                origens=frozenset({_ORIGEM_CONSOLIDADA, *meta_creditos.origens}),
-                quantidades={UnidadeRequisito.CREDITOS: creditos},
-                observacoes=(
-                    "Créditos preservados do componente de origem concluído; "
-                    "não transferidos automaticamente para códigos equivalentes.",
-                ),
-            )
+        meta_quantidade = metadados.get(origem, MetadadosCodigoEvidencia())
+        _adicionar_quantidade(
+            evidencias,
+            conflitos,
+            origem=origem,
+            tentativas=tentativas,
+            unidade=UnidadeRequisito.CREDITOS,
+            sufixo_id="creditos",
+            extrair=lambda item: item.creditos,
+            metadados=meta_quantidade,
+            observacao=(
+                "Créditos preservados do componente de origem concluído; "
+                "não transferidos automaticamente para códigos equivalentes."
+            ),
+        )
+        _adicionar_quantidade(
+            evidencias,
+            conflitos,
+            origem=origem,
+            tentativas=tentativas,
+            unidade=UnidadeRequisito.HORAS_CARGA_HORARIA,
+            sufixo_id="horas_carga_horaria",
+            extrair=lambda item: item.carga_horaria,
+            metadados=meta_quantidade,
+            observacao=(
+                "Carga horária preservada da coluna própria do histórico; "
+                "não inclui inferência a partir de créditos ou extensão."
+            ),
+        )
+        _adicionar_quantidade(
+            evidencias,
+            conflitos,
+            origem=origem,
+            tentativas=tentativas,
+            unidade=UnidadeRequisito.HORAS_EXTENSAO,
+            sufixo_id="horas_extensao",
+            extrair=lambda item: item.carga_extensao,
+            metadados=meta_quantidade,
+            observacao=(
+                "Horas extensionistas preservadas da coluna própria do histórico; "
+                "não são somadas à carga horária como nova conclusão."
+            ),
         )
 
     bloqueadas: set[UnidadeRequisito] = set()
@@ -244,6 +263,51 @@ def converter_historico_consolidado_em_evidencias(
         pendencias=tuple(pendencias),
         conflitos=tuple(conflitos),
         unidades_solicitadas_completas=unidades_completas,
+    )
+
+
+def _adicionar_quantidade(
+    evidencias: list[EvidenciaAcademica],
+    conflitos: list[ConflitoQuantidadeHistorico],
+    *,
+    origem: str,
+    tentativas: list[RegistroHistorico],
+    unidade: UnidadeRequisito,
+    sufixo_id: str,
+    extrair,
+    metadados: MetadadosCodigoEvidencia,
+    observacao: str,
+) -> None:
+    valores = tuple(sorted({extrair(item) for item in tentativas}))
+    if len(valores) > 1:
+        conflitos.append(
+            ConflitoQuantidadeHistorico(
+                codigo_origem=origem,
+                unidade=unidade,
+                valores_encontrados=valores,
+                motivo=(
+                    "Tentativas concluídas do mesmo código têm quantidades "
+                    f"divergentes em {unidade.value}; nenhum valor foi escolhido."
+                ),
+            )
+        )
+        return
+
+    quantidade = valores[0]
+    if quantidade <= 0:
+        return
+
+    evidencias.append(
+        EvidenciaAcademica(
+            id=f"historico:{origem}:{sufixo_id}",
+            codigos=frozenset({origem}),
+            categorias=metadados.categorias,
+            tipos=metadados.tipos,
+            tags=metadados.tags,
+            origens=frozenset({_ORIGEM_CONSOLIDADA, *metadados.origens}),
+            quantidades={unidade: quantidade},
+            observacoes=(observacao,),
+        )
     )
 
 

@@ -10,6 +10,8 @@ ValorCondicao = str | int | float | bool | tuple[str, ...]
 class UnidadeRequisito(str, Enum):
     CREDITOS = "creditos"
     HORAS = "horas"
+    HORAS_CARGA_HORARIA = "horas_carga_horaria"
+    HORAS_EXTENSAO = "horas_extensao"
     COMPONENTES = "componentes"
 
 

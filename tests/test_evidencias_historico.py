@@ -69,9 +69,19 @@ def test_conclusao_direta_vira_creditos_e_componente_sem_contar_reprovacao():
     )
     por_id = resultado.conjunto.por_id
 
-    assert set(por_id) == {"historico:A:creditos", "historico:A:componente"}
+    assert set(por_id) == {
+        "historico:A:creditos",
+        "historico:A:componente",
+        "historico:A:horas_carga_horaria",
+    }
     assert por_id["historico:A:creditos"].quantidade(UnidadeRequisito.CREDITOS) == 4
     assert por_id["historico:A:componente"].quantidade(UnidadeRequisito.COMPONENTES) == 1
+    assert (
+        por_id["historico:A:horas_carga_horaria"].quantidade(
+            UnidadeRequisito.HORAS_CARGA_HORARIA
+        )
+        == 48
+    )
     assert all("B" not in evidencia.codigos for evidencia in por_id.values())
     assert resultado.conjunto.unidades_completas == frozenset(
         {UnidadeRequisito.CREDITOS, UnidadeRequisito.COMPONENTES}
@@ -244,17 +254,130 @@ def test_origem_consolidada_sem_registro_concluido_bloqueia_completude():
     assert not resultado.conjunto.unidades_completas
 
 
-def test_horas_ficam_fail_closed_ate_existir_contrato_para_total_e_extensao():
+def test_horas_genericas_nao_recebem_dados_do_historico_por_atalho():
     situacao = consolidar_historico(
         [_registro("A", carga_horaria=48, carga_extensao=12)],
         {},
     )
 
-    with pytest.raises(ValueError, match="Horas precisam de contrato"):
+    with pytest.raises(ValueError, match="unidades específicas"):
         converter_historico_consolidado_em_evidencias(
             situacao,
             unidades_completas=frozenset({UnidadeRequisito.HORAS}),
         )
+
+
+def test_carga_horaria_e_extensao_sao_evidencias_distintas_e_nao_se_somam():
+    situacao = consolidar_historico(
+        [_registro("A", carga_horaria=48, carga_extensao=12)],
+        {},
+    )
+    conversao = converter_historico_consolidado_em_evidencias(
+        situacao,
+        unidades_completas=frozenset(
+            {
+                UnidadeRequisito.HORAS_CARGA_HORARIA,
+                UnidadeRequisito.HORAS_EXTENSAO,
+            }
+        ),
+    )
+    por_id = conversao.conjunto.por_id
+
+    assert por_id["historico:A:horas_carga_horaria"].quantidade(
+        UnidadeRequisito.HORAS_CARGA_HORARIA
+    ) == 48
+    assert por_id["historico:A:horas_extensao"].quantidade(
+        UnidadeRequisito.HORAS_EXTENSAO
+    ) == 12
+
+    total = avaliar_modelo_com_evidencias(
+        _modelo("A", UnidadeRequisito.HORAS_CARGA_HORARIA, 48),
+        conversao.conjunto,
+    )
+    extensao = avaliar_modelo_com_evidencias(
+        _modelo("A", UnidadeRequisito.HORAS_EXTENSAO, 12),
+        conversao.conjunto,
+    )
+    generico = avaliar_modelo_com_evidencias(
+        _modelo("A", UnidadeRequisito.HORAS, 1),
+        conversao.conjunto,
+    )
+
+    assert total.avaliacao is not None
+    assert total.avaliacao.por_id["r"].valor_considerado == 48
+    assert total.avaliacao.estado == EstadoAvaliacao.CUMPRIDO
+    assert extensao.avaliacao is not None
+    assert extensao.avaliacao.por_id["r"].valor_considerado == 12
+    assert extensao.avaliacao.estado == EstadoAvaliacao.CUMPRIDO
+    assert generico.avaliacao is not None
+    assert generico.avaliacao.por_id["r"].valor_considerado == 0
+    assert generico.avaliacao.estado == EstadoAvaliacao.INDETERMINADO
+
+
+def test_divergencia_na_carga_horaria_nao_invalida_extensao_consistente():
+    situacao = consolidar_historico(
+        [
+            _registro("A", carga_horaria=48, carga_extensao=12),
+            _registro("A", situacao="DISP", carga_horaria=60, carga_extensao=12),
+        ],
+        {},
+    )
+    conversao = converter_historico_consolidado_em_evidencias(
+        situacao,
+        unidades_completas=frozenset(
+            {
+                UnidadeRequisito.HORAS_CARGA_HORARIA,
+                UnidadeRequisito.HORAS_EXTENSAO,
+            }
+        ),
+    )
+
+    assert "historico:A:horas_carga_horaria" not in conversao.conjunto.por_id
+    assert conversao.conjunto.por_id["historico:A:horas_extensao"].quantidade(
+        UnidadeRequisito.HORAS_EXTENSAO
+    ) == 12
+    assert UnidadeRequisito.HORAS_CARGA_HORARIA not in (
+        conversao.conjunto.unidades_completas
+    )
+    assert UnidadeRequisito.HORAS_EXTENSAO in conversao.conjunto.unidades_completas
+    assert any(
+        conflito.unidade == UnidadeRequisito.HORAS_CARGA_HORARIA
+        for conflito in conversao.conflitos
+    )
+
+
+def test_equivalencia_simples_nao_transfere_quantidades_de_horas_ao_destino():
+    situacao = consolidar_historico(
+        [_registro("A", carga_horaria=48, carga_extensao=12)],
+        {"A": "B"},
+    )
+    conversao = converter_historico_consolidado_em_evidencias(
+        situacao,
+        unidades_completas=frozenset(
+            {
+                UnidadeRequisito.HORAS_CARGA_HORARIA,
+                UnidadeRequisito.HORAS_EXTENSAO,
+            }
+        ),
+    )
+
+    assert conversao.conjunto.por_id["historico:A:horas_carga_horaria"].codigos == frozenset(
+        {"A"}
+    )
+    assert conversao.conjunto.por_id["historico:A:horas_extensao"].codigos == frozenset(
+        {"A"}
+    )
+    assert UnidadeRequisito.HORAS_CARGA_HORARIA not in (
+        conversao.conjunto.unidades_completas
+    )
+    assert UnidadeRequisito.HORAS_EXTENSAO not in conversao.conjunto.unidades_completas
+
+    resultado = avaliar_modelo_com_evidencias(
+        _modelo("B", UnidadeRequisito.HORAS_CARGA_HORARIA, 48),
+        conversao.conjunto,
+    )
+    assert resultado.avaliacao is not None
+    assert resultado.avaliacao.estado == EstadoAvaliacao.INDETERMINADO
 
 def test_equivalencia_simples_nao_duplica_componente_em_dois_requisitos_independentes():
     situacao = consolidar_historico([_registro("A")], {"A": "B"})
