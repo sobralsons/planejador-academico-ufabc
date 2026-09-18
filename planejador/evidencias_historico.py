@@ -67,30 +67,7 @@ class ResultadoConversaoHistorico:
 
     @property
     def unidades_bloqueadas(self) -> frozenset[UnidadeRequisito]:
-        for destino, origens in sorted(reconhecimentos_compostos.items()):
-        if any(origem not in registros_concluidos for origem in origens):
-            continue
-        meta = metadados.get(destino, MetadadosCodigoEvidencia())
-        evidencias.append(
-            EvidenciaAcademica(
-                id=f"historico:equivalencia_composta:{destino}:componente",
-                codigos=frozenset({destino}),
-                categorias=meta.categorias,
-                tipos=meta.tipos,
-                tags=meta.tags,
-                origens=frozenset({_ORIGEM_CONSOLIDADA, *meta.origens}),
-                recursos_componentes=frozenset(
-                    f"historico:{origem}" for origem in origens
-                ),
-                quantidades={UnidadeRequisito.COMPONENTES: 1},
-                observacoes=(
-                    "Componente reconhecido por equivalência composta; todas as "
-                    "origens são recursos concorrentes com seus usos diretos.",
-                ),
-            )
-        )
-
-    bloqueadas: set[UnidadeRequisito] = set()
+        bloqueadas: set[UnidadeRequisito] = set()
         for item in self.pendencias:
             bloqueadas.update(item.unidades_afetadas)
         for item in self.conflitos:
@@ -292,6 +269,29 @@ def converter_historico_consolidado_em_evidencias(
                 "Horas extensionistas preservadas da coluna própria do histórico; "
                 "não são somadas à carga horária como nova conclusão."
             ),
+        )
+
+    for destino, origens in sorted(reconhecimentos_compostos.items()):
+        if any(origem not in registros_concluidos for origem in origens):
+            continue
+        meta = metadados.get(destino, MetadadosCodigoEvidencia())
+        evidencias.append(
+            EvidenciaAcademica(
+                id=f"historico:equivalencia_composta:{destino}:componente",
+                codigos=frozenset({destino}),
+                categorias=meta.categorias,
+                tipos=meta.tipos,
+                tags=meta.tags,
+                origens=frozenset({_ORIGEM_CONSOLIDADA, *meta.origens}),
+                recursos_componentes=frozenset(
+                    f"historico:{origem}" for origem in origens
+                ),
+                quantidades={UnidadeRequisito.COMPONENTES: 1},
+                observacoes=(
+                    "Componente reconhecido por equivalência composta; todas as "
+                    "origens são recursos concorrentes com seus usos diretos.",
+                ),
+            )
         )
 
     bloqueadas: set[UnidadeRequisito] = set()
