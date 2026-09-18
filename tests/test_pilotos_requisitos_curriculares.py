@@ -21,7 +21,7 @@ from planejador.requisitos_curriculares import (
 
 
 BASE = Path(__file__).resolve().parents[1]
-PILOTOS = BASE / "dados" / "pilotos_requisitos_curriculares_2026-09-16.json"
+PILOTOS = BASE / "dados" / "pilotos_requisitos_curriculares_2026-09-16.json"\nCLASSIFICACAO_HORAS = BASE / "dados" / "classificacao_unidades_horas_pilotos_2026-09-18.json"
 
 
 def _dados():
@@ -109,6 +109,22 @@ def test_artefato_pilotos_usa_fontes_oficiais_e_nao_declara_suporte():
             assert url.startswith("https://")
             assert "ufabc.edu.br" in url
 
+
+
+def test_classificacao_de_horas_dos_pilotos_preserva_casos_genericos_e_dimensoes():
+    dados = json.loads(CLASSIFICACAO_HORAS.read_text(encoding="utf-8"))
+    assert dados["avaliado_em"] == "2026-09-18"
+    assert dados["base"].endswith("pilotos_requisitos_curriculares_2026-09-16.json")
+    por_curso = {item["curso_id"]: item["classificacoes"] for item in dados["pilotos"]}
+
+    assert por_curso["ciencia_computacao"]["atividades_complementares_bct_horas"] == "horas"
+    assert por_curso["ciencia_computacao"]["extensao_total_horas"] == "horas_extensao"
+    assert por_curso["engenharia_materiais"]["estagio_obrigatorio_horas"] == "horas_carga_horaria"
+    assert por_curso["lec_ciencias_humanas_sociais"]["estagio_total_horas"] == "horas_carga_horaria"
+    assert por_curso["lec_ciencias_humanas_sociais"]["estagio_extensionista_horas"] == "horas_extensao"
+    assert set(por_curso["matematica_licenciatura"].values()) == {"horas_extensao"}
+    assert por_curso["politicas_publicas"]["atividades_complementares_bch_horas"] == "horas"
+    assert por_curso["politicas_publicas"]["imersao_extensionista_horas"] == "horas_extensao"
 
 def test_bcc_2023_representa_extensao_composta_curso_base_e_tcc_sem_estagio_obrigatorio():
     item = _piloto("ciencia_computacao")
