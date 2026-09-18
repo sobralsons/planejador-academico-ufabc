@@ -21,7 +21,8 @@ from planejador.requisitos_curriculares import (
 
 
 BASE = Path(__file__).resolve().parents[1]
-PILOTOS = BASE / "dados" / "pilotos_requisitos_curriculares_2026-09-16.json"\nCLASSIFICACAO_HORAS = BASE / "dados" / "classificacao_unidades_horas_pilotos_2026-09-18.json"
+PILOTOS = BASE / "dados" / "pilotos_requisitos_curriculares_2026-09-16.json"
+CLASSIFICACAO_HORAS = BASE / "dados" / "classificacao_unidades_horas_pilotos_2026-09-18.json"
 
 
 def _dados():
