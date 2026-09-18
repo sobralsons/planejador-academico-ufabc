@@ -1,9 +1,29 @@
-from fastapi.testclient import TestClient
+import asyncio
+
+import httpx2
 
 from api.app import app
 
 
-client = TestClient(app)
+async def _request_async(method: str, path: str, **kwargs):
+    transport = httpx2.ASGITransport(app=app)
+    async with httpx2.AsyncClient(
+        transport=transport,
+        base_url="http://testserver",
+    ) as client:
+        return await client.request(method, path, **kwargs)
+
+
+def _request(method: str, path: str, **kwargs):
+    return asyncio.run(_request_async(method, path, **kwargs))
+
+
+def _get(path: str, **kwargs):
+    return _request("GET", path, **kwargs)
+
+
+def _post(path: str, **kwargs):
+    return _request("POST", path, **kwargs)
 
 
 def _cenario_composto():
@@ -24,7 +44,7 @@ def _cenario_composto():
 
 
 def test_health_nao_declara_publicacao_academica():
-    resposta = client.get("/health")
+    resposta = _get("/health")
 
     assert resposta.status_code == 200
     assert resposta.json() == {
@@ -36,7 +56,7 @@ def test_health_nao_declara_publicacao_academica():
 
 
 def test_capacidades_deixam_limites_de_privacidade_explicitos():
-    resposta = client.get("/v1/capabilities")
+    resposta = _get("/v1/capabilities")
 
     assert resposta.status_code == 200
     assert resposta.json() == {
@@ -50,13 +70,13 @@ def test_capacidades_deixam_limites_de_privacidade_explicitos():
 
 
 def test_documentacao_interativa_e_openapi_nao_ficam_expostos_por_padrao():
-    assert client.get("/docs").status_code == 404
-    assert client.get("/redoc").status_code == 404
-    assert client.get("/openapi.json").status_code == 404
+    assert _get("/docs").status_code == 404
+    assert _get("/redoc").status_code == 404
+    assert _get("/openapi.json").status_code == 404
 
 
 def test_endpoint_sintetico_expoe_ab_ou_c_sem_escolher_automaticamente():
-    resposta = client.post(
+    resposta = _post(
         "/v1/synthetic/component-allocation/options",
         json=_cenario_composto(),
     )
@@ -88,7 +108,7 @@ def test_campos_extras_sao_rejeitados_sem_ecoar_valor_enviado():
     payload = _cenario_composto()
     payload["segredo_que_nao_deve_voltar"] = "VALOR-SENSIVEL-DE-TESTE"
 
-    resposta = client.post(
+    resposta = _post(
         "/v1/synthetic/component-allocation/options",
         json=payload,
     )
@@ -104,7 +124,7 @@ def test_codigo_invalido_e_rejeitado_sem_ecoar_payload():
     payload = _cenario_composto()
     payload["componentes"][0]["codigo"] = "A COM ESPACO E DADO SENSIVEL"
 
-    resposta = client.post(
+    resposta = _post(
         "/v1/synthetic/component-allocation/options",
         json=payload,
     )
@@ -121,7 +141,7 @@ def test_limite_de_componentes_impede_payload_estruturalmente_excessivo():
         "requisitos": [{"id": "r", "codigo": "C0"}],
     }
 
-    resposta = client.post(
+    resposta = _post(
         "/v1/synthetic/component-allocation/options",
         json=payload,
     )
@@ -139,7 +159,7 @@ def test_equivalencia_com_origem_ausente_falha_sem_expor_detalhe_interno():
         "requisitos": [{"id": "r", "codigo": "C"}],
     }
 
-    resposta = client.post(
+    resposta = _post(
         "/v1/synthetic/component-allocation/options",
         json=payload,
     )
@@ -156,7 +176,7 @@ def test_equivalencia_com_origem_ausente_falha_sem_expor_detalhe_interno():
 
 
 def test_api_nao_habilita_cors_globalmente():
-    resposta = client.get(
+    resposta = _get(
         "/health",
         headers={"Origin": "https://origem-nao-autorizada.example"},
     )
