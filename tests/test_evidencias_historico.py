@@ -255,3 +255,34 @@ def test_horas_ficam_fail_closed_ate_existir_contrato_para_total_e_extensao():
             situacao,
             unidades_completas=frozenset({UnidadeRequisito.HORAS}),
         )
+
+def test_equivalencia_simples_nao_duplica_componente_em_dois_requisitos_independentes():
+    situacao = consolidar_historico([_registro("A")], {"A": "B"})
+    conversao = converter_historico_consolidado_em_evidencias(
+        situacao,
+        unidades_completas=frozenset({UnidadeRequisito.COMPONENTES}),
+    )
+
+    req_a = RequisitoQuantitativo(
+        id="a",
+        descricao="A",
+        integralizador=TipoIntegralizador.COMPONENTES_CURRICULARES,
+        seletor=SeletorComponentes(codigos=frozenset({"A"})),
+        limite=LimiteQuantitativo(UnidadeRequisito.COMPONENTES, 1),
+    )
+    req_b = RequisitoQuantitativo(
+        id="b",
+        descricao="B",
+        integralizador=TipoIntegralizador.COMPONENTES_CURRICULARES,
+        seletor=SeletorComponentes(codigos=frozenset({"B"})),
+        limite=LimiteQuantitativo(UnidadeRequisito.COMPONENTES, 1),
+    )
+    modelo = ModeloRequisitosCurriculares("curso", "2026", (req_a, req_b))
+
+    resultado = avaliar_modelo_com_evidencias(modelo, conversao.conjunto)
+
+    assert resultado.alocacao.pendencias
+    assert not resultado.alocacao.alocacoes
+    assert resultado.avaliacao is not None
+    assert resultado.avaliacao.estado == EstadoAvaliacao.INDETERMINADO
+
