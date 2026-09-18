@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from enum import Enum
+from itertools import product
 from typing import Iterable
 
 
@@ -178,13 +179,32 @@ class SituacaoAcademica:
     resumo: ResumoHistorico = field(default_factory=ResumoHistorico)
     # Evidências do histórico que fundamentam cada reconhecimento. Não são
     # novas aprovações nem créditos adicionais. Escopo: currículo desta análise.
+    # origens_conclusao mantém a visão achatada por compatibilidade.
     origens_conclusao: dict[str, set[str]] = field(default_factory=dict)
+    # Cada item representa uma prova alternativa suficiente para concluir o
+    # código. Isso preserva a diferença entre A+B -> C e A -> C / B -> C.
+    derivacoes_conclusao: dict[str, set[frozenset[str]]] = field(default_factory=dict)
 
     def origens_utilizadas(self, codigos: Iterable[str]) -> set[str]:
         return set().union(*(
             self.origens_conclusao.get(codigo, {codigo})
             for codigo in codigos if codigo in self.concluidas
         ))
+
+    def derivacoes_utilizadas(self, codigos: Iterable[str]) -> set[frozenset[str]]:
+        """Combina uma derivação suficiente para cada código de uma conjunção."""
+
+        codigos_concluidos = [codigo for codigo in codigos if codigo in self.concluidas]
+        if not codigos_concluidos:
+            return set()
+        alternativas = [
+            self.derivacoes_conclusao.get(codigo, {frozenset({codigo})})
+            for codigo in codigos_concluidos
+        ]
+        return {
+            frozenset().union(*combinacao)
+            for combinacao in product(*alternativas)
+        }
 
     def codigos_projetados(
         self,
