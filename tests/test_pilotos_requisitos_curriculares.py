@@ -127,7 +127,7 @@ def test_bcc_2023_representa_extensao_composta_curso_base_e_tcc_sem_estagio_obri
         _req(
             "extensao_total",
             TipoIntegralizador.EXTENSAO,
-            UnidadeRequisito.HORAS,
+            UnidadeRequisito.HORAS_EXTENSAO,
             regras["extensao_total_horas"],
             tags=("extensao",),
             fonte=fonte,
@@ -153,7 +153,7 @@ def test_bcc_2023_representa_extensao_composta_curso_base_e_tcc_sem_estagio_obri
         _contrib(
             "extensao_bct",
             "extensao_total",
-            UnidadeRequisito.HORAS,
+            UnidadeRequisito.HORAS_EXTENSAO,
             regras["extensao_bct_horas"],
             maximo=regras["extensao_bct_horas"],
             origens=("bct_2023",),
@@ -162,7 +162,7 @@ def test_bcc_2023_representa_extensao_composta_curso_base_e_tcc_sem_estagio_obri
         _contrib(
             "extensao_bcc",
             "extensao_total",
-            UnidadeRequisito.HORAS,
+            UnidadeRequisito.HORAS_EXTENSAO,
             regras["extensao_bcc_horas"],
             maximo=regras["extensao_bcc_horas"],
             origens=("bcc_2023",),
@@ -193,6 +193,15 @@ def test_bcc_2023_representa_extensao_composta_curso_base_e_tcc_sem_estagio_obri
     assert regras["estagio_obrigatorio"] is False
     assert not any(r.integralizador == TipoIntegralizador.ESTAGIO for r in modelo.requisitos)
     assert sum(c.limite.minimo for c in modelo.contribuicoes) == regras["extensao_total_horas"]
+    assert (
+        next(r for r in modelo.requisitos if r.id == "atividades_complementares")
+        .limite.unidade
+        == UnidadeRequisito.HORAS
+    )
+    assert (
+        next(r for r in modelo.requisitos if r.id == "extensao_total").limite.unidade
+        == UnidadeRequisito.HORAS_EXTENSAO
+    )
 
 
 def test_engenharia_materiais_2023_representa_estagio_168h_e_tg_multietapas():
@@ -203,7 +212,7 @@ def test_engenharia_materiais_2023_representa_estagio_168h_e_tg_multietapas():
     estagio = _req(
         "estagio",
         TipoIntegralizador.ESTAGIO,
-        UnidadeRequisito.HORAS,
+        UnidadeRequisito.HORAS_CARGA_HORARIA,
         regras["estagio_obrigatorio_horas"],
         tags=("estagio_curricular",),
         fonte=fonte,
@@ -247,7 +256,7 @@ def test_engenharia_materiais_2023_representa_estagio_168h_e_tg_multietapas():
     assert modelo.sequencias[0].etapas == ("tg_1", "tg_2", "tg_3")
 
 
-def test_lec_2024_representa_composicao_dos_400h_e_160h_de_sobreposicao_obrigatoria():
+def test_lec_2024_separa_400h_de_estagio_e_160h_extensionistas():
     item = _piloto("lec_ciencias_humanas_sociais")
     regras = item["regras_validadas"]
     fonte = _fonte(item)
@@ -255,7 +264,7 @@ def test_lec_2024_representa_composicao_dos_400h_e_160h_de_sobreposicao_obrigato
     estagio_total = _req(
         "estagio_total",
         TipoIntegralizador.ESTAGIO,
-        UnidadeRequisito.HORAS,
+        UnidadeRequisito.HORAS_CARGA_HORARIA,
         regras["estagio_total_horas"],
         tags=("estagio_supervisionado",),
         fonte=fonte,
@@ -263,7 +272,7 @@ def test_lec_2024_representa_composicao_dos_400h_e_160h_de_sobreposicao_obrigato
     extensao_estagio = _req(
         "extensao_estagio",
         TipoIntegralizador.EXTENSAO,
-        UnidadeRequisito.HORAS,
+        UnidadeRequisito.HORAS_EXTENSAO,
         regras["estagio_extensionista_horas"],
         maximo=regras["estagio_extensionista_horas"],
         tags=("estagio_extensionista",),
@@ -298,7 +307,7 @@ def test_lec_2024_representa_composicao_dos_400h_e_160h_de_sobreposicao_obrigato
         _contrib(
             "estagios_lch",
             "estagio_total",
-            UnidadeRequisito.HORAS,
+            UnidadeRequisito.HORAS_CARGA_HORARIA,
             regras["estagios_lch_modulos_i_ii_iii_horas"],
             maximo=regras["estagios_lch_modulos_i_ii_iii_horas"],
             origens=("lch",),
@@ -307,7 +316,7 @@ def test_lec_2024_representa_composicao_dos_400h_e_160h_de_sobreposicao_obrigato
         _contrib(
             "estagio_historia",
             "estagio_total",
-            UnidadeRequisito.HORAS,
+            UnidadeRequisito.HORAS_CARGA_HORARIA,
             regras["estagio_modulo_iv_ou_viii_horas"],
             maximo=regras["estagio_modulo_iv_ou_viii_horas"],
             codigos=("ESTAGIO_CH_IV", "ESTAGIO_CH_VIII"),
@@ -316,7 +325,7 @@ def test_lec_2024_representa_composicao_dos_400h_e_160h_de_sobreposicao_obrigato
         _contrib(
             "estagio_campo",
             "estagio_total",
-            UnidadeRequisito.HORAS,
+            UnidadeRequisito.HORAS_CARGA_HORARIA,
             regras["estagio_modulo_ix_horas"],
             maximo=regras["estagio_modulo_ix_horas"],
             codigos=("ESTAGIO_LEC_IX",),
@@ -338,16 +347,6 @@ def test_lec_2024_representa_composicao_dos_400h_e_160h_de_sobreposicao_obrigato
                 fontes=(fonte,),
             ),
         ),
-        compartilhamentos=(
-            RegraCompartilhamento(
-                requisito_a="estagio_total",
-                requisito_b="extensao_estagio",
-                unidade=UnidadeRequisito.HORAS,
-                minimo_compartilhavel=regras["estagio_extensionista_horas"],
-                maximo_compartilhavel=regras["estagio_extensionista_horas"],
-                fontes=(fonte,),
-            ),
-        ),
         cursos_base=(
             ReferenciaCursoBase(
                 curso_id="lch",
@@ -359,8 +358,9 @@ def test_lec_2024_representa_composicao_dos_400h_e_160h_de_sobreposicao_obrigato
     )
 
     assert sum(c.limite.minimo for c in modelo.contribuicoes) == 400
-    assert modelo.compartilhamentos[0].minimo_compartilhavel == 160
-    assert modelo.compartilhamentos[0].maximo_compartilhavel == 160
+    assert extensao_estagio.limite.unidade == UnidadeRequisito.HORAS_EXTENSAO
+    assert estagio_total.limite.unidade == UnidadeRequisito.HORAS_CARGA_HORARIA
+    assert modelo.compartilhamentos == ()
     assert modelo.grupos[0].operador == OperadorGrupo.QUALQUER
 
 
@@ -372,7 +372,7 @@ def test_licenciatura_matematica_2023_representa_as_tres_fontes_das_323h_de_exte
     extensao = _req(
         "extensao_total",
         TipoIntegralizador.EXTENSAO,
-        UnidadeRequisito.HORAS,
+        UnidadeRequisito.HORAS_EXTENSAO,
         regras["extensao_total_horas"],
         tags=("extensao",),
         fonte=fonte,
@@ -381,7 +381,7 @@ def test_licenciatura_matematica_2023_representa_as_tres_fontes_das_323h_de_exte
         _contrib(
             "extensao_ingresso",
             "extensao_total",
-            UnidadeRequisito.HORAS,
+            UnidadeRequisito.HORAS_EXTENSAO,
             regras["extensao_curso_ingresso_horas"],
             maximo=regras["extensao_curso_ingresso_horas"],
             origens=("curso_ingresso",),
@@ -390,7 +390,7 @@ def test_licenciatura_matematica_2023_representa_as_tres_fontes_das_323h_de_exte
         _contrib(
             "extensao_estagios",
             "extensao_total",
-            UnidadeRequisito.HORAS,
+            UnidadeRequisito.HORAS_EXTENSAO,
             regras["extensao_estagios_horas"],
             maximo=regras["extensao_estagios_horas"],
             tags=("estagio_extensionista",),
@@ -399,7 +399,7 @@ def test_licenciatura_matematica_2023_representa_as_tres_fontes_das_323h_de_exte
         _contrib(
             "extensao_outras_fontes",
             "extensao_total",
-            UnidadeRequisito.HORAS,
+            UnidadeRequisito.HORAS_EXTENSAO,
             regras["extensao_outras_fontes_horas"],
             maximo=regras["extensao_outras_fontes_horas"],
             tags=("ol_evento_projeto_curso_acao",),
@@ -431,7 +431,7 @@ def test_bpp_2023_representa_imersao_extensionista_sem_confundir_creditos_com_ho
     extensao = _req(
         "extensao_total",
         TipoIntegralizador.EXTENSAO,
-        UnidadeRequisito.HORAS,
+        UnidadeRequisito.HORAS_EXTENSAO,
         regras["extensao_total_horas"],
         tags=("extensao",),
         fonte=fonte,
@@ -456,7 +456,7 @@ def test_bpp_2023_representa_imersao_extensionista_sem_confundir_creditos_com_ho
         _contrib(
             "atividades_extensao",
             "extensao_total",
-            UnidadeRequisito.HORAS,
+            UnidadeRequisito.HORAS_EXTENSAO,
             regras["extensao_atividades_horas"],
             maximo=regras["extensao_atividades_horas"],
             tags=("atividades_extensao",),
@@ -465,7 +465,7 @@ def test_bpp_2023_representa_imersao_extensionista_sem_confundir_creditos_com_ho
         _contrib(
             "imersao_extensionista",
             "extensao_total",
-            UnidadeRequisito.HORAS,
+            UnidadeRequisito.HORAS_EXTENSAO,
             regras["imersao_extensionista_horas"],
             maximo=regras["imersao_extensionista_horas"],
             codigos=("IMERSAO_BPP",),
@@ -490,7 +490,7 @@ def test_bpp_2023_representa_imersao_extensionista_sem_confundir_creditos_com_ho
 
     assert sum(c.limite.minimo for c in modelo.contribuicoes) == 312
     assert imersao.limite.unidade == UnidadeRequisito.CREDITOS
-    assert modelo.contribuicoes[1].limite.unidade == UnidadeRequisito.HORAS
+    assert modelo.contribuicoes[1].limite.unidade == UnidadeRequisito.HORAS_EXTENSAO
     assert modelo.compartilhamentos == ()
 
 
