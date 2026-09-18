@@ -1,0 +1,5 @@
+# Backend HTTP mínimo. Mantido separado da interface Streamlit.
+# Versões estáveis verificadas em 2026-09-18 para Python 3.12.
+fastapi==0.141.1
+pydantic==2.13.5
+uvicorn==0.53.0
