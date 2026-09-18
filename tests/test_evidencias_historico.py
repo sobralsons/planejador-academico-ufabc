@@ -69,9 +69,19 @@ def test_conclusao_direta_vira_creditos_e_componente_sem_contar_reprovacao():
     )
     por_id = resultado.conjunto.por_id
 
-    assert set(por_id) == {\n        "historico:A:creditos",\n        "historico:A:componente",\n        "historico:A:horas_carga_horaria",\n    }
+    assert set(por_id) == {
+        "historico:A:creditos",
+        "historico:A:componente",
+        "historico:A:horas_carga_horaria",
+    }
     assert por_id["historico:A:creditos"].quantidade(UnidadeRequisito.CREDITOS) == 4
-    assert por_id["historico:A:componente"].quantidade(UnidadeRequisito.COMPONENTES) == 1\n    assert (\n        por_id["historico:A:horas_carga_horaria"].quantidade(\n            UnidadeRequisito.HORAS_CARGA_HORARIA\n        )\n        == 48\n    )
+    assert por_id["historico:A:componente"].quantidade(UnidadeRequisito.COMPONENTES) == 1
+    assert (
+        por_id["historico:A:horas_carga_horaria"].quantidade(
+            UnidadeRequisito.HORAS_CARGA_HORARIA
+        )
+        == 48
+    )
     assert all("B" not in evidencia.codigos for evidencia in por_id.values())
     assert resultado.conjunto.unidades_completas == frozenset(
         {UnidadeRequisito.CREDITOS, UnidadeRequisito.COMPONENTES}
