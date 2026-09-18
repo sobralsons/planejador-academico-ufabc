@@ -195,6 +195,9 @@ def consolidar_historico(
             situacao.nao_concluidas.add(codigo)
 
     situacao.origens_conclusao = {c: {c} for c in situacao.concluidas}
+    situacao.derivacoes_conclusao = {
+        c: {frozenset({c})} for c in situacao.concluidas
+    }
     # O chamador fornece somente regras aplicáveis ao currículo/vínculo analisado.
     # O fechamento mantém a direção e as conjunções; nunca infere por nome.
     regras = [(frozenset({a}), b) for a, b in equivalencias_academicas.items()]
@@ -205,11 +208,14 @@ def consolidar_historico(
         alterado = False
         for origens, destino in regras:
             if origens <= situacao.concluidas:
-                evidencias = situacao.origens_utilizadas(origens)
-                anteriores = situacao.origens_conclusao.get(destino, set())
-                if destino not in situacao.concluidas or not evidencias <= anteriores:
+                derivacoes = situacao.derivacoes_utilizadas(origens)
+                anteriores = situacao.derivacoes_conclusao.get(destino, set())
+                novas = derivacoes - anteriores
+                if destino not in situacao.concluidas or novas:
                     situacao.concluidas.add(destino)
-                    situacao.origens_conclusao[destino] = anteriores | evidencias
+                    atualizadas = anteriores | derivacoes
+                    situacao.derivacoes_conclusao[destino] = atualizadas
+                    situacao.origens_conclusao[destino] = set().union(*atualizadas)
                     alterado = True
             elif origens <= situacao.concluidas | situacao.em_andamento:
                 if destino not in situacao.em_andamento and destino not in situacao.concluidas:

@@ -92,10 +92,11 @@ def converter_historico_consolidado_em_evidencias(
     genérica do modelo e não é preenchida automaticamente a partir do histórico.
 
     Reconhecimentos com uma única origem podem representar o componente de
-    destino sem criar uma segunda conclusão. Quantidades da origem -- créditos,
+    destino sem criar uma segunda conclusão. Uma equivalência composta só vira
+    evidência de componente quando existe uma única derivação suficiente e todas
+    as origens possuem conclusão rastreável. Quantidades da origem -- créditos,
     carga horária e horas extensionistas -- não são transferidas automaticamente
-    para o código equivalente. Reconhecimentos compostos também não são
-    materializados automaticamente.
+    para o código equivalente.
     """
 
     metadados = dict(metadados_por_codigo or {})
@@ -109,11 +110,12 @@ def converter_historico_consolidado_em_evidencias(
 
     concluidas = set(situacao.concluidas)
     reconhecimentos_simples: dict[str, set[str]] = {}
+    reconhecimentos_compostos: dict[str, frozenset[str]] = {}
     pendencias: list[PendenciaReconhecimentoHistorico] = []
 
     for destino in sorted(concluidas):
-        origens = frozenset(situacao.origens_conclusao.get(destino, {destino}))
-        if not origens:
+        derivacoes = _derivacoes_do_codigo(situacao, destino)
+        if not derivacoes:
             pendencias.append(
                 PendenciaReconhecimentoHistorico(
                     codigo_destino=destino,
@@ -124,31 +126,53 @@ def converter_historico_consolidado_em_evidencias(
             )
             continue
 
-        if len(origens) == 1:
-            origem = next(iter(origens))
-            if destino != origem:
-                reconhecimentos_simples.setdefault(origem, set()).add(destino)
-                pendencias.append(
-                    PendenciaReconhecimentoHistorico(
-                        codigo_destino=destino,
-                        codigos_origem=(origem,),
-                        unidades_afetadas=_UNIDADES_QUANTITATIVAS_NAO_TRANSFERIVEIS,
-                        motivo=(
-                            "O código reconhecido pode representar o componente, "
-                            "mas quantidades do destino não são inferidas da origem."
-                        ),
-                    )
-                )
+        # Uma conclusão direta é suficiente por si só. Equivalências adicionais
+        # não devem transformar essa evidência direta em um pacote composto.
+        if frozenset({destino}) in derivacoes:
             continue
 
+        if len(derivacoes) > 1:
+            origens_alternativas = frozenset().union(*derivacoes)
+            pendencias.append(
+                PendenciaReconhecimentoHistorico(
+                    codigo_destino=destino,
+                    codigos_origem=tuple(sorted(origens_alternativas)),
+                    unidades_afetadas=_UNIDADES_SUPORTADAS,
+                    motivo=(
+                        "O código possui mais de uma derivação suficiente. A camada "
+                        "de evidências não escolhe automaticamente qual conjunto de "
+                        "conclusões deve ser consumido."
+                    ),
+                )
+            )
+            continue
+
+        origens = next(iter(derivacoes))
+        if len(origens) == 1:
+            origem = next(iter(origens))
+            reconhecimentos_simples.setdefault(origem, set()).add(destino)
+            pendencias.append(
+                PendenciaReconhecimentoHistorico(
+                    codigo_destino=destino,
+                    codigos_origem=(origem,),
+                    unidades_afetadas=_UNIDADES_QUANTITATIVAS_NAO_TRANSFERIVEIS,
+                    motivo=(
+                        "O código reconhecido pode representar o componente, "
+                        "mas quantidades do destino não são inferidas da origem."
+                    ),
+                )
+            )
+            continue
+
+        reconhecimentos_compostos[destino] = origens
         pendencias.append(
             PendenciaReconhecimentoHistorico(
                 codigo_destino=destino,
                 codigos_origem=tuple(sorted(origens)),
-                unidades_afetadas=_UNIDADES_SUPORTADAS,
+                unidades_afetadas=_UNIDADES_QUANTITATIVAS_NAO_TRANSFERIVEIS,
                 motivo=(
-                    "Reconhecimento composto exige todas as origens em conjunto e "
-                    "não pode ser reduzido a um alias de uma única evidência."
+                    "A equivalência composta representa um componente reconhecido, "
+                    "mas créditos e cargas do destino não são inferidos das origens."
                 ),
             )
         )
@@ -194,6 +218,7 @@ def converter_historico_consolidado_em_evidencias(
                 tipos=meta_componente.tipos,
                 tags=meta_componente.tags,
                 origens=frozenset({_ORIGEM_CONSOLIDADA, *meta_componente.origens}),
+                recursos_componentes=frozenset({f"historico:{origem}"}),
                 quantidades={UnidadeRequisito.COMPONENTES: 1},
                 observacoes=(
                     "Conclusão consolidada; reconhecimentos simples compartilham "
@@ -246,6 +271,29 @@ def converter_historico_consolidado_em_evidencias(
             ),
         )
 
+    for destino, origens in sorted(reconhecimentos_compostos.items()):
+        if any(origem not in registros_concluidos for origem in origens):
+            continue
+        meta = metadados.get(destino, MetadadosCodigoEvidencia())
+        evidencias.append(
+            EvidenciaAcademica(
+                id=f"historico:equivalencia_composta:{destino}:componente",
+                codigos=frozenset({destino}),
+                categorias=meta.categorias,
+                tipos=meta.tipos,
+                tags=meta.tags,
+                origens=frozenset({_ORIGEM_CONSOLIDADA, *meta.origens}),
+                recursos_componentes=frozenset(
+                    f"historico:{origem}" for origem in origens
+                ),
+                quantidades={UnidadeRequisito.COMPONENTES: 1},
+                observacoes=(
+                    "Componente reconhecido por equivalência composta; todas as "
+                    "origens são recursos concorrentes com seus usos diretos.",
+                ),
+            )
+        )
+
     bloqueadas: set[UnidadeRequisito] = set()
     for item in pendencias:
         bloqueadas.update(item.unidades_afetadas)
@@ -264,6 +312,17 @@ def converter_historico_consolidado_em_evidencias(
         conflitos=tuple(conflitos),
         unidades_solicitadas_completas=unidades_completas,
     )
+
+
+def _derivacoes_do_codigo(
+    situacao: SituacaoAcademica,
+    codigo: str,
+) -> set[frozenset[str]]:
+    derivacoes = situacao.derivacoes_conclusao.get(codigo)
+    if derivacoes:
+        return set(derivacoes)
+    origens = frozenset(situacao.origens_conclusao.get(codigo, {codigo}))
+    return {origens} if origens else set()
 
 
 def _adicionar_quantidade(

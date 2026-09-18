@@ -1,6 +1,6 @@
 import pytest
 
-from planejador.alocacao_evidencias import avaliar_modelo_com_evidencias
+from planejador.alocacao_evidencias import DecisaoAlocacao, avaliar_modelo_com_evidencias
 from planejador.avaliador_requisitos import EstadoAvaliacao
 from planejador.evidencias_historico import (
     MetadadosCodigoEvidencia,
@@ -171,7 +171,7 @@ def test_equivalencia_simples_reconhece_componente_sem_inventar_creditos_do_dest
     assert avalia_creditos.avaliacao.estado == EstadoAvaliacao.INDETERMINADO
 
 
-def test_equivalencia_composta_permanece_indeterminada_e_nao_vira_alias_parcial():
+def test_equivalencia_composta_so_reconhece_com_todas_as_origens_e_preserva_recursos():
     situacao = consolidar_historico(
         [_registro("A"), _registro("B")],
         {},
@@ -182,20 +182,214 @@ def test_equivalencia_composta_permanece_indeterminada_e_nao_vira_alias_parcial(
         situacao,
         unidades_completas=frozenset({UnidadeRequisito.COMPONENTES}),
     )
+    composta = conversao.conjunto.por_id[
+        "historico:equivalencia_composta:C:componente"
+    ]
 
-    assert any(item.codigo_destino == "C" for item in conversao.pendencias)
-    assert all(
-        "C" not in evidencia.codigos
-        for evidencia in conversao.conjunto.evidencias
+    assert composta.codigos == frozenset({"C"})
+    assert composta.recursos_componentes == frozenset(
+        {"historico:A", "historico:B"}
     )
-    assert UnidadeRequisito.COMPONENTES not in conversao.conjunto.unidades_completas
+    assert UnidadeRequisito.COMPONENTES in conversao.conjunto.unidades_completas
 
     avaliacao = avaliar_modelo_com_evidencias(
         _modelo("C", UnidadeRequisito.COMPONENTES, 1),
         conversao.conjunto,
     )
     assert avaliacao.avaliacao is not None
-    assert avaliacao.avaliacao.estado == EstadoAvaliacao.INDETERMINADO
+    assert avaliacao.avaliacao.estado == EstadoAvaliacao.CUMPRIDO
+
+
+def test_equivalencia_composta_com_origem_faltante_nao_reconhece_destino():
+    situacao = consolidar_historico(
+        [_registro("A")],
+        {},
+        [({"A", "B"}, "C")],
+    )
+    conversao = converter_historico_consolidado_em_evidencias(
+        situacao,
+        unidades_completas=frozenset({UnidadeRequisito.COMPONENTES}),
+    )
+
+    assert "C" not in situacao.concluidas
+    assert all("C" not in evidencia.codigos for evidencia in conversao.conjunto.evidencias)
+
+    avaliacao = avaliar_modelo_com_evidencias(
+        _modelo("C", UnidadeRequisito.COMPONENTES, 1),
+        conversao.conjunto,
+    )
+    assert avaliacao.avaliacao is not None
+    assert avaliacao.avaliacao.estado == EstadoAvaliacao.PENDENTE
+
+
+def test_equivalencia_composta_concorre_com_uso_direto_das_origens():
+    situacao = consolidar_historico(
+        [_registro("A"), _registro("B")],
+        {},
+        [({"A", "B"}, "C")],
+    )
+    conversao = converter_historico_consolidado_em_evidencias(
+        situacao,
+        unidades_completas=frozenset({UnidadeRequisito.COMPONENTES}),
+    )
+    req_a = RequisitoQuantitativo(
+        id="a",
+        descricao="A direto",
+        integralizador=TipoIntegralizador.COMPONENTES_CURRICULARES,
+        seletor=SeletorComponentes(codigos=frozenset({"A"})),
+        limite=LimiteQuantitativo(UnidadeRequisito.COMPONENTES, 1),
+    )
+    req_c = RequisitoQuantitativo(
+        id="c",
+        descricao="C reconhecido",
+        integralizador=TipoIntegralizador.COMPONENTES_CURRICULARES,
+        seletor=SeletorComponentes(codigos=frozenset({"C"})),
+        limite=LimiteQuantitativo(UnidadeRequisito.COMPONENTES, 1),
+    )
+    modelo = ModeloRequisitosCurriculares("curso", "2026", (req_a, req_c))
+
+    resultado = avaliar_modelo_com_evidencias(modelo, conversao.conjunto)
+
+    assert len(resultado.alocacao.pendencias) == 2
+    assert not resultado.alocacao.alocacoes
+    assert resultado.avaliacao is not None
+    assert resultado.avaliacao.estado == EstadoAvaliacao.INDETERMINADO
+
+
+def test_decisao_explicita_por_equivalencia_composta_bloqueia_uso_direto_concorrente():
+    situacao = consolidar_historico(
+        [_registro("A"), _registro("B")],
+        {},
+        [({"A", "B"}, "C")],
+    )
+    conversao = converter_historico_consolidado_em_evidencias(
+        situacao,
+        unidades_completas=frozenset({UnidadeRequisito.COMPONENTES}),
+    )
+    req_a = RequisitoQuantitativo(
+        id="a",
+        descricao="A direto",
+        integralizador=TipoIntegralizador.COMPONENTES_CURRICULARES,
+        seletor=SeletorComponentes(codigos=frozenset({"A"})),
+        limite=LimiteQuantitativo(UnidadeRequisito.COMPONENTES, 1),
+    )
+    req_c = RequisitoQuantitativo(
+        id="c",
+        descricao="C reconhecido",
+        integralizador=TipoIntegralizador.COMPONENTES_CURRICULARES,
+        seletor=SeletorComponentes(codigos=frozenset({"C"})),
+        limite=LimiteQuantitativo(UnidadeRequisito.COMPONENTES, 1),
+    )
+    modelo = ModeloRequisitosCurriculares("curso", "2026", (req_a, req_c))
+    decisao = DecisaoAlocacao(
+        evidencia_id="historico:equivalencia_composta:C:componente",
+        unidade=UnidadeRequisito.COMPONENTES,
+        requisito_ids=("c",),
+        quantidade=1,
+    )
+
+    resultado = avaliar_modelo_com_evidencias(
+        modelo, conversao.conjunto, decisoes=(decisao,)
+    )
+
+    assert resultado.avaliacao is not None
+    assert resultado.avaliacao.por_id["c"].estado == EstadoAvaliacao.CUMPRIDO
+    assert resultado.avaliacao.por_id["a"].estado == EstadoAvaliacao.PENDENTE
+    assert resultado.alocacao.evidencias_bloqueadas_por_recursos
+    bloqueada = resultado.alocacao.evidencias_bloqueadas_por_recursos[0]
+    assert bloqueada.evidencia_id == "historico:A:componente"
+    assert bloqueada.evidencias_priorizadas == (
+        "historico:equivalencia_composta:C:componente",
+    )
+
+
+def test_decisoes_explicitas_nao_podem_consumir_mesma_origem_direta_e_composta():
+    situacao = consolidar_historico(
+        [_registro("A"), _registro("B")],
+        {},
+        [({"A", "B"}, "C")],
+    )
+    conversao = converter_historico_consolidado_em_evidencias(
+        situacao,
+        unidades_completas=frozenset({UnidadeRequisito.COMPONENTES}),
+    )
+    req_a = RequisitoQuantitativo(
+        id="a",
+        descricao="A direto",
+        integralizador=TipoIntegralizador.COMPONENTES_CURRICULARES,
+        seletor=SeletorComponentes(codigos=frozenset({"A"})),
+        limite=LimiteQuantitativo(UnidadeRequisito.COMPONENTES, 1),
+    )
+    req_c = RequisitoQuantitativo(
+        id="c",
+        descricao="C reconhecido",
+        integralizador=TipoIntegralizador.COMPONENTES_CURRICULARES,
+        seletor=SeletorComponentes(codigos=frozenset({"C"})),
+        limite=LimiteQuantitativo(UnidadeRequisito.COMPONENTES, 1),
+    )
+    modelo = ModeloRequisitosCurriculares("curso", "2026", (req_a, req_c))
+    decisoes = (
+        DecisaoAlocacao(
+            "historico:A:componente",
+            UnidadeRequisito.COMPONENTES,
+            ("a",),
+            1,
+        ),
+        DecisaoAlocacao(
+            "historico:equivalencia_composta:C:componente",
+            UnidadeRequisito.COMPONENTES,
+            ("c",),
+            1,
+        ),
+    )
+
+    with pytest.raises(ValueError, match="mesma conclusão acadêmica"):
+        avaliar_modelo_com_evidencias(
+            modelo, conversao.conjunto, decisoes=decisoes
+        )
+
+
+def test_multiplas_derivacoes_para_mesmo_destino_permanecem_indeterminadas():
+    situacao = consolidar_historico(
+        [_registro("A"), _registro("B"), _registro("D"), _registro("E")],
+        {},
+        [({"A", "B"}, "C"), ({"D", "E"}, "C")],
+    )
+    conversao = converter_historico_consolidado_em_evidencias(
+        situacao,
+        unidades_completas=frozenset({UnidadeRequisito.COMPONENTES}),
+    )
+
+    assert situacao.derivacoes_conclusao["C"] == {
+        frozenset({"A", "B"}),
+        frozenset({"D", "E"}),
+    }
+    assert all(
+        "C" not in evidencia.codigos for evidencia in conversao.conjunto.evidencias
+    )
+    assert UnidadeRequisito.COMPONENTES not in conversao.conjunto.unidades_completas
+    assert any(
+        item.codigo_destino == "C" and "mais de uma derivação" in item.motivo
+        for item in conversao.pendencias
+    )
+
+
+def test_conclusao_direta_do_destino_prevalece_sem_consumir_origens_da_equivalencia():
+    situacao = consolidar_historico(
+        [_registro("A"), _registro("B"), _registro("C")],
+        {},
+        [({"A", "B"}, "C")],
+    )
+    conversao = converter_historico_consolidado_em_evidencias(
+        situacao,
+        unidades_completas=frozenset({UnidadeRequisito.COMPONENTES}),
+    )
+
+    assert frozenset({"C"}) in situacao.derivacoes_conclusao["C"]
+    assert frozenset({"A", "B"}) in situacao.derivacoes_conclusao["C"]
+    assert "historico:C:componente" in conversao.conjunto.por_id
+    assert "historico:equivalencia_composta:C:componente" not in conversao.conjunto.por_id
+    assert UnidadeRequisito.COMPONENTES in conversao.conjunto.unidades_completas
 
 
 def test_categoria_nome_e_docente_do_historico_nao_viram_regra_por_heuristica():
