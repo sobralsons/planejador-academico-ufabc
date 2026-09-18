@@ -409,3 +409,45 @@ def test_equivalencia_simples_nao_duplica_componente_em_dois_requisitos_independ
     assert resultado.avaliacao is not None
     assert resultado.avaliacao.estado == EstadoAvaliacao.INDETERMINADO
 
+def test_mesmo_componente_pode_satisfazer_carga_total_e_extensao_em_dimensoes_distintas():
+    situacao = consolidar_historico(
+        [_registro("ESTAGIO_X", carga_horaria=80, carga_extensao=80)],
+        {},
+    )
+    conversao = converter_historico_consolidado_em_evidencias(
+        situacao,
+        unidades_completas=frozenset(
+            {
+                UnidadeRequisito.HORAS_CARGA_HORARIA,
+                UnidadeRequisito.HORAS_EXTENSAO,
+            }
+        ),
+    )
+    estagio = RequisitoQuantitativo(
+        id="estagio_total",
+        descricao="Estágio supervisionado",
+        integralizador=TipoIntegralizador.ESTAGIO,
+        seletor=SeletorComponentes(codigos=frozenset({"ESTAGIO_X"})),
+        limite=LimiteQuantitativo(UnidadeRequisito.HORAS_CARGA_HORARIA, 80),
+    )
+    extensao = RequisitoQuantitativo(
+        id="extensao_estagio",
+        descricao="Parcela extensionista do estágio",
+        integralizador=TipoIntegralizador.EXTENSAO,
+        seletor=SeletorComponentes(codigos=frozenset({"ESTAGIO_X"})),
+        limite=LimiteQuantitativo(UnidadeRequisito.HORAS_EXTENSAO, 80),
+    )
+    modelo = ModeloRequisitosCurriculares(
+        "curso",
+        "2026",
+        (estagio, extensao),
+    )
+
+    resultado = avaliar_modelo_com_evidencias(modelo, conversao.conjunto)
+
+    assert modelo.compartilhamentos == ()
+    assert resultado.avaliacao is not None
+    assert resultado.avaliacao.estado == EstadoAvaliacao.CUMPRIDO
+    assert resultado.avaliacao.por_id["estagio_total"].valor_considerado == 80
+    assert resultado.avaliacao.por_id["extensao_estagio"].valor_considerado == 80
+

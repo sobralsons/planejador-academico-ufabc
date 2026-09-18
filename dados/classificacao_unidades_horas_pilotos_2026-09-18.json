@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "avaliado_em": "2026-09-18",
+  "base": "dados/pilotos_requisitos_curriculares_2026-09-16.json",
+  "escopo": "Classificação semântica das regras em horas já validadas nos pilotos. Não cria novas regras acadêmicas e não declara suporte das matrizes.",
+  "unidades": {
+    "horas_carga_horaria": "Carga horária do componente ou atividade curricular quando a regra se refere à duração total registrada.",
+    "horas_extensao": "Carga de extensão registrada separadamente da carga horária total.",
+    "horas": "Unidade genérica preservada quando a regra em horas não corresponde com segurança a uma coluna quantitativa de componente do histórico."
+  },
+  "pilotos": [
+    {
+      "curso_id": "ciencia_computacao",
+      "matriz_id": "2023",
+      "classificacoes": {
+        "atividades_complementares_bct_horas": "horas",
+        "extensao_total_horas": "horas_extensao",
+        "extensao_bct_horas": "horas_extensao",
+        "extensao_bcc_horas": "horas_extensao"
+      },
+      "observacao": "As 48 h de atividades complementares permanecem genéricas; não são convertidas automaticamente em carga horária de componente."
+    },
+    {
+      "curso_id": "engenharia_materiais",
+      "matriz_id": "2023",
+      "classificacoes": {
+        "estagio_obrigatorio_horas": "horas_carga_horaria",
+        "atividades_complementares_bct_horas": "horas"
+      },
+      "observacao": "Estágio obrigatório usa a duração total; atividades complementares permanecem genéricas."
+    },
+    {
+      "curso_id": "lec_ciencias_humanas_sociais",
+      "matriz_id": "2024",
+      "classificacoes": {
+        "estagio_total_horas": "horas_carga_horaria",
+        "estagios_lch_modulos_i_ii_iii_horas": "horas_carga_horaria",
+        "estagio_modulo_iv_ou_viii_horas": "horas_carga_horaria",
+        "estagio_modulo_ix_horas": "horas_carga_horaria",
+        "estagio_extensionista_horas": "horas_extensao"
+      },
+      "observacao": "A parcela extensionista do estágio é uma dimensão distinta da carga horária total; não usa compartilhamento da mesma unidade."
+    },
+    {
+      "curso_id": "matematica_licenciatura",
+      "matriz_id": "2023",
+      "classificacoes": {
+        "extensao_total_horas": "horas_extensao",
+        "extensao_curso_ingresso_horas": "horas_extensao",
+        "extensao_estagios_horas": "horas_extensao",
+        "extensao_outras_fontes_horas": "horas_extensao"
+      }
+    },
+    {
+      "curso_id": "politicas_publicas",
+      "matriz_id": "2023",
+      "classificacoes": {
+        "atividades_complementares_bch_horas": "horas",
+        "extensao_atividades_horas": "horas_extensao",
+        "imersao_extensionista_horas": "horas_extensao",
+        "extensao_total_horas": "horas_extensao"
+      },
+      "observacao": "Atividades complementares permanecem genéricas; extensão e imersão extensionista usam a dimensão específica de extensão."
+    }
+  ],
+  "limites": [
+    "A classificação é estrutural e não substitui revisão acadêmica humana.",
+    "Nenhuma regra em horas foi inferida por nome de disciplina ou categoria textual do SIGAA.",
+    "Regras genéricas em horas só devem migrar quando houver correspondência quantitativa comprovada com a fonte do histórico."
+  ]
+}
