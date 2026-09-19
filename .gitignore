@@ -17,6 +17,7 @@ Thumbs.db
 # Environment variables and local secrets
 .env
 .env.*
+!.env.example
 secrets.toml
 .streamlit/secrets.toml
 
@@ -44,3 +45,10 @@ saidas/*
 # Preferências locais e configuração gerada
 config/config_interface.json
 config/config.local.json
+
+# Official source documents kept locally
+documentos-fonte/*
+!documentos-fonte/README.md
+
+# Local Supabase/runtime state (when introduced)
+supabase/.temp/
