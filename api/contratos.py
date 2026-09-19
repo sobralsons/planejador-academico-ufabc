@@ -31,9 +31,9 @@ class ContratoEstrito(BaseModel):
 
 class ComponenteSinteticoEntrada(ContratoEstrito):
     codigo: CodigoComponente
-    creditos: int = Field(default=4, ge=0, le=60)
-    carga_horaria: int = Field(default=48, ge=0, le=2000)
-    carga_extensao: int = Field(default=0, ge=0, le=2000)
+    creditos: int = Field(default=4, strict=True, ge=0, le=60)
+    carga_horaria: int = Field(default=48, strict=True, ge=0, le=2000)
+    carga_extensao: int = Field(default=0, strict=True, ge=0, le=2000)
 
 
 class EquivalenciaCompostaEntrada(ContratoEstrito):

@@ -131,6 +131,21 @@ def converter_historico_consolidado_em_evidencias(
         if frozenset({destino}) in derivacoes:
             continue
 
+        if destino in situacao.derivacoes_incompletas:
+            origens_parciais = frozenset().union(*derivacoes)
+            pendencias.append(
+                PendenciaReconhecimentoHistorico(
+                    codigo_destino=destino,
+                    codigos_origem=tuple(sorted(origens_parciais)),
+                    unidades_afetadas=_UNIDADES_SUPORTADAS,
+                    motivo=(
+                        "As derivações possíveis excederam o limite seguro de "
+                        "consolidação; o reconhecimento permanece indeterminado."
+                    ),
+                )
+            )
+            continue
+
         if len(derivacoes) > 1:
             origens_alternativas = frozenset().union(*derivacoes)
             pendencias.append(
@@ -208,24 +223,38 @@ def converter_historico_consolidado_em_evidencias(
             continue
 
         aliases = reconhecimentos_simples.get(origem, set())
-        codigos_componente = frozenset({origem, *aliases})
-        meta_componente = _combinar_metadados(codigos_componente, metadados)
+        meta_componente = metadados.get(origem, MetadadosCodigoEvidencia())
         evidencias.append(
             EvidenciaAcademica(
                 id=f"historico:{origem}:componente",
-                codigos=codigos_componente,
+                codigos=frozenset({origem}),
                 categorias=meta_componente.categorias,
                 tipos=meta_componente.tipos,
                 tags=meta_componente.tags,
                 origens=frozenset({_ORIGEM_CONSOLIDADA, *meta_componente.origens}),
                 recursos_componentes=frozenset({f"historico:{origem}"}),
                 quantidades={UnidadeRequisito.COMPONENTES: 1},
-                observacoes=(
-                    "Conclusão consolidada; reconhecimentos simples compartilham "
-                    "esta mesma evidência de componente.",
-                ),
+                observacoes=("Conclusão direta consolidada.",),
             )
         )
+        for alias in sorted(aliases):
+            meta_alias = metadados.get(alias, MetadadosCodigoEvidencia())
+            evidencias.append(
+                EvidenciaAcademica(
+                    id=f"historico:equivalencia_simples:{origem}->{alias}:componente",
+                    codigos=frozenset({alias}),
+                    categorias=meta_alias.categorias,
+                    tipos=meta_alias.tipos,
+                    tags=meta_alias.tags,
+                    origens=frozenset({_ORIGEM_CONSOLIDADA, *meta_alias.origens}),
+                    recursos_componentes=frozenset({f"historico:{origem}"}),
+                    quantidades={UnidadeRequisito.COMPONENTES: 1},
+                    observacoes=(
+                        "Representação por equivalência simples; compete pelo "
+                        "mesmo recurso acadêmico da conclusão de origem.",
+                    ),
+                )
+            )
 
         meta_quantidade = metadados.get(origem, MetadadosCodigoEvidencia())
         _adicionar_quantidade(
@@ -367,28 +396,4 @@ def _adicionar_quantidade(
             quantidades={unidade: quantidade},
             observacoes=(observacao,),
         )
-    )
-
-
-def _combinar_metadados(
-    codigos: frozenset[str],
-    metadados: Mapping[str, MetadadosCodigoEvidencia],
-) -> MetadadosCodigoEvidencia:
-    categorias: set[str] = set()
-    tipos: set[str] = set()
-    tags: set[str] = set()
-    origens: set[str] = set()
-    for codigo in codigos:
-        item = metadados.get(codigo)
-        if item is None:
-            continue
-        categorias.update(item.categorias)
-        tipos.update(item.tipos)
-        tags.update(item.tags)
-        origens.update(item.origens)
-    return MetadadosCodigoEvidencia(
-        categorias=frozenset(categorias),
-        tipos=frozenset(tipos),
-        tags=frozenset(tags),
-        origens=frozenset(origens),
     )

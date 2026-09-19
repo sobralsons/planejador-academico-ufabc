@@ -136,18 +136,23 @@ def gerar_opcoes_alocacao_componentes(
             continue
 
         conjuntos = _conjuntos_maximos_compativeis(grupo, evidencias)
-        especificacoes: list[tuple[tuple[str, str], ...]] = []
+        especificacoes: list[tuple[tuple[str, tuple[str, ...]], ...]] = []
         excedeu = False
 
         for conjunto_ids in conjuntos:
-            candidatos = [
-                tuple(sorted(pendencias_componentes[eid].candidatos))
+            destinos_por_evidencia = [
+                _destinos_permitidos(
+                    pendencias_componentes[eid].candidatos,
+                    modelo,
+                )
                 for eid in conjunto_ids
             ]
-            if any(not itens for itens in candidatos):
+            if any(not itens for itens in destinos_por_evidencia):
                 continue
-            for escolha in product(*candidatos):
-                especificacao = tuple(sorted(zip(conjunto_ids, escolha)))
+            for escolha in product(*destinos_por_evidencia):
+                especificacao = tuple(
+                    sorted(zip(conjunto_ids, escolha), key=lambda item: item[0])
+                )
                 especificacoes.append(especificacao)
                 if len(especificacoes) > max_opcoes_por_questao:
                     excedeu = True
@@ -284,22 +289,44 @@ def _compativeis(ids: Iterable[str], evidencias: dict) -> bool:
     return True
 
 
+def _destinos_permitidos(
+    candidatos: tuple[str, ...],
+    modelo: ModeloRequisitosCurriculares,
+) -> tuple[tuple[str, ...], ...]:
+    destinos: set[tuple[str, ...]] = {
+        (requisito_id,) for requisito_id in candidatos
+    }
+    candidatos_ordenados = sorted(candidatos)
+    regras = {
+        regra.par: regra
+        for regra in modelo.compartilhamentos
+        if regra.unidade == UnidadeRequisito.COMPONENTES
+        and regra.maximo_compartilhavel >= 1
+    }
+    for indice, requisito_a in enumerate(candidatos_ordenados):
+        for requisito_b in candidatos_ordenados[indice + 1 :]:
+            par = frozenset({requisito_a, requisito_b})
+            if par in regras:
+                destinos.add(tuple(sorted((requisito_a, requisito_b))))
+    return tuple(sorted(destinos))
+
+
 def _construir_opcao(
     modelo: ModeloRequisitosCurriculares,
     conjunto: ConjuntoEvidencias,
     baseline: AvaliacaoComEvidencias,
     decisoes_base: tuple[DecisaoAlocacao, ...],
-    especificacao: tuple[tuple[str, str], ...],
+    especificacao: tuple[tuple[str, tuple[str, ...]], ...],
     evidencias: dict,
 ) -> OpcaoAlocacaoComponentes:
     decisoes = tuple(
         DecisaoAlocacao(
             evidencia_id=evidencia_id,
             unidade=UnidadeRequisito.COMPONENTES,
-            requisito_ids=(requisito_id,),
+            requisito_ids=requisito_ids,
             quantidade=1,
         )
-        for evidencia_id, requisito_id in especificacao
+        for evidencia_id, requisito_ids in especificacao
     )
     resultado = avaliar_modelo_com_evidencias(
         modelo,
@@ -307,7 +334,9 @@ def _construir_opcao(
         decisoes=(*decisoes_base, *decisoes),
     )
 
-    requisitos_afetados = tuple(sorted({req for _, req in especificacao}))
+    requisitos_afetados = tuple(
+        sorted({req for _, requisitos in especificacao for req in requisitos})
+    )
     impactos = tuple(
         _impacto_requisito(baseline, resultado, requisito_id)
         for requisito_id in requisitos_afetados
@@ -316,10 +345,15 @@ def _construir_opcao(
         evidencias[eid].recursos_componentes for eid, _ in especificacao
     ))))
     evidencias_usadas = tuple(eid for eid, _ in especificacao)
-    requisitos_destino = tuple(req for _, req in especificacao)
+    requisitos_destino = tuple(
+        sorted({req for _, requisitos in especificacao for req in requisitos})
+    )
     opcao_id = _id_estavel(
         "opcao",
-        tuple(f"{eid}->{req}" for eid, req in especificacao),
+        tuple(
+            f"{eid}->{'+'.join(requisitos)}"
+            for eid, requisitos in especificacao
+        ),
     )
 
     return OpcaoAlocacaoComponentes(

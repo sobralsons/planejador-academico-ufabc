@@ -415,6 +415,14 @@ def alocar_evidencias(
                 ):
                     regras_incompletas.add(contribuicao.id)
 
+    totais_com_teto_ambiguidade = _aplicar_tetos_de_contribuicao(
+        modelo,
+        evidencias,
+        realizadas,
+        somas,
+    )
+    regras_incompletas.update(totais_com_teto_ambiguidade)
+
     medicoes: dict[str, MedicaoRequisito] = {}
     for requisito in modelo.requisitos:
         medicoes[requisito.id] = MedicaoRequisito(
@@ -458,6 +466,70 @@ def alocar_evidencias(
         evidencias_bloqueadas_por_recursos=tuple(bloqueadas_por_recursos),
         bloqueios=tuple(bloqueios),
     )
+
+
+def _aplicar_tetos_de_contribuicao(
+    modelo: ModeloRequisitosCurriculares,
+    evidencias: Mapping[str, EvidenciaAcademica],
+    alocacoes: list[AlocacaoRealizada],
+    somas: dict[str, int],
+) -> set[str]:
+    """Aplica tetos internos ao total sem permitir falso cumprimento.
+
+    Para seletores disjuntos (ou idênticos), o valor resultante é exato. Se
+    diferentes tetos se sobrepõem parcialmente nas mesmas evidências, usa-se um
+    limite inferior conservador e o total é marcado como incompleto para que o
+    avaliador não transforme a ambiguidade em cumprimento indevido.
+    """
+
+    ambiguos: set[str] = set()
+    por_total: dict[str, list] = {}
+    for contribuicao in modelo.contribuicoes:
+        if contribuicao.limite.maximo is None:
+            continue
+        por_total.setdefault(contribuicao.requisito_total, []).append(contribuicao)
+
+    for total_id, contribuicoes in por_total.items():
+        bruto = somas.get(total_id, 0)
+        if bruto <= 0:
+            continue
+
+        grupos: dict[frozenset[int], int] = {}
+        for contribuicao in contribuicoes:
+            observado = somas.get(contribuicao.id, 0)
+            excesso = max(0, observado - contribuicao.limite.maximo)
+            if excesso <= 0:
+                continue
+
+            indices = frozenset(
+                indice
+                for indice, alocacao in enumerate(alocacoes)
+                if total_id in alocacao.requisito_ids
+                and alocacao.unidade == contribuicao.limite.unidade
+                and evidencia_atende_seletor(
+                    evidencias[alocacao.evidencia_id],
+                    contribuicao.seletor,
+                )
+            )
+            if not indices:
+                continue
+            grupos[indices] = max(grupos.get(indices, 0), excesso)
+
+        if not grupos:
+            continue
+
+        conjuntos = list(grupos)
+        sobreposicao_parcial = any(
+            a != b and a & b
+            for i, a in enumerate(conjuntos)
+            for b in conjuntos[i + 1 :]
+        )
+        reducao = sum(grupos.values())
+        somas[total_id] = max(0, bruto - reducao)
+        if sobreposicao_parcial:
+            ambiguos.add(total_id)
+
+    return ambiguos
 
 
 def avaliar_modelo_com_evidencias(
