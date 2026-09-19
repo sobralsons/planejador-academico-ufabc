@@ -68,6 +68,9 @@ Não multiplique regras simplificadas para muitos cursos. Primeiro prove que o m
 - Não registre dados pessoais desnecessários em logs ou mensagens de erro.
 - Arquivos do SIGAA devem ser tratados com minimização de dados e, no produto público, processados de forma temporária por padrão.
 - Acesso autenticado, persistência e uploads exigem isolamento entre usuários e testes de autorização.
+- Histórico bruto, registros detalhados e evidências acadêmicas derivadas são temporários por padrão; persistência desses dados exige decisão explícita posterior, minimização e novos testes.
+- Tabelas de domínio da aplicação devem usar identificador opaco do provedor de autenticação e não duplicar RA, nome ou e-mail sem necessidade comprovada.
+- Um banco multiusuário só pode ser conectado após políticas de isolamento/RLS, exclusão por usuário e testes adversariais de acesso cruzado.
 - Não disponibilize coleta autenticada do UFABC Next sem fonte autorizada e revisão específica.
 - Não crie workflows que extraiam pacotes ocultos e escrevam automaticamente na branch principal.
 - Segredos ficam fora do repositório.
@@ -100,7 +103,7 @@ python -m pip install -r requirements-test.txt
 Verificação principal:
 
 ```bash
-python -m compileall -q app.py app_interno.py main.py planejador ferramentas
+python -m compileall -q app.py app_interno.py main.py planejador ferramentas api persistencia
 python -m pytest -q
 ```
 
