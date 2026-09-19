@@ -149,9 +149,14 @@ def test_equivalencia_simples_reconhece_componente_sem_inventar_creditos_do_dest
         ),
     )
     componente = conversao.conjunto.por_id["historico:A:componente"]
+    reconhecida = conversao.conjunto.por_id[
+        "historico:equivalencia_simples:A->B:componente"
+    ]
     creditos = conversao.conjunto.por_id["historico:A:creditos"]
 
-    assert componente.codigos == frozenset({"A", "B"})
+    assert componente.codigos == frozenset({"A"})
+    assert reconhecida.codigos == frozenset({"B"})
+    assert componente.recursos_componentes == reconhecida.recursos_componentes
     assert creditos.codigos == frozenset({"A"})
     assert UnidadeRequisito.COMPONENTES in conversao.conjunto.unidades_completas
     assert UnidadeRequisito.CREDITOS not in conversao.conjunto.unidades_completas
@@ -385,8 +390,7 @@ def test_conclusao_direta_do_destino_prevalece_sem_consumir_origens_da_equivalen
         unidades_completas=frozenset({UnidadeRequisito.COMPONENTES}),
     )
 
-    assert frozenset({"C"}) in situacao.derivacoes_conclusao["C"]
-    assert frozenset({"A", "B"}) in situacao.derivacoes_conclusao["C"]
+    assert situacao.derivacoes_conclusao["C"] == {frozenset({"C"})}
     assert "historico:C:componente" in conversao.conjunto.por_id
     assert "historico:equivalencia_composta:C:componente" not in conversao.conjunto.por_id
     assert UnidadeRequisito.COMPONENTES in conversao.conjunto.unidades_completas
