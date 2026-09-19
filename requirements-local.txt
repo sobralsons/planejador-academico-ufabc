@@ -1,0 +1,4 @@
+# Ambiente completo para desenvolvimento local:
+# prototipo Streamlit + API + testes.
+-r requirements-test.txt
+-r requirements.txt
