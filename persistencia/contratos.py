@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from enum import Enum
 import re
+from typing import Protocol
 
 
 _ID_RE = re.compile(r"^[A-Za-z0-9_.:-]{1,128}$")
@@ -136,3 +137,33 @@ class RascunhoPlanejamentoPersistivel:
 def _validar_id(valor: str, campo: str) -> None:
     if not isinstance(valor, str) or not _ID_RE.fullmatch(valor):
         raise ValueError(f"{campo} deve ser um identificador opaco válido.")
+
+
+class RepositorioPlanejamentos(Protocol):
+    def salvar(
+        self,
+        ator_id: str,
+        planejamento: RascunhoPlanejamentoPersistivel,
+    ) -> RascunhoPlanejamentoPersistivel: ...
+
+    def obter(
+        self,
+        ator_id: str,
+        planejamento_id: str,
+    ) -> RascunhoPlanejamentoPersistivel | None: ...
+
+    def listar(
+        self,
+        ator_id: str,
+    ) -> tuple[RascunhoPlanejamentoPersistivel, ...]: ...
+
+    def renomear(
+        self,
+        ator_id: str,
+        planejamento_id: str,
+        titulo: str,
+    ) -> RascunhoPlanejamentoPersistivel | None: ...
+
+    def excluir(self, ator_id: str, planejamento_id: str) -> bool: ...
+
+    def excluir_todos(self, ator_id: str) -> int: ...
