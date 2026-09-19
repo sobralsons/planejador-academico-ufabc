@@ -29,6 +29,10 @@ class RepositorioPlanejamentosMemoria:
         ator_id: str,
         planejamento: RascunhoPlanejamentoPersistivel,
     ) -> RascunhoPlanejamentoPersistivel:
+        if not isinstance(planejamento, RascunhoPlanejamentoPersistivel):
+            raise TypeError(
+                "A fronteira aceita somente RascunhoPlanejamentoPersistivel."
+            )
         _exigir_mesmo_proprietario(ator_id, planejamento.proprietario_id)
         existente = self._itens.get(planejamento.planejamento_id)
         if existente is not None and existente.proprietario_id != ator_id:
