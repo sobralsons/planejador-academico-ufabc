@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from enum import Enum
-from itertools import product
 from typing import Iterable
 
 
@@ -184,6 +183,7 @@ class SituacaoAcademica:
     # Cada item representa uma prova alternativa suficiente para concluir o
     # código. Isso preserva a diferença entre A+B -> C e A -> C / B -> C.
     derivacoes_conclusao: dict[str, set[frozenset[str]]] = field(default_factory=dict)
+    derivacoes_incompletas: set[str] = field(default_factory=set)
 
     def origens_utilizadas(self, codigos: Iterable[str]) -> set[str]:
         return set().union(*(
@@ -191,20 +191,54 @@ class SituacaoAcademica:
             for codigo in codigos if codigo in self.concluidas
         ))
 
-    def derivacoes_utilizadas(self, codigos: Iterable[str]) -> set[frozenset[str]]:
-        """Combina uma derivação suficiente para cada código de uma conjunção."""
+    def derivacoes_utilizadas(
+        self,
+        codigos: Iterable[str],
+        *,
+        limite: int = 256,
+    ) -> tuple[set[frozenset[str]], bool]:
+        """Combina provas suficientes com poda e limite explícito.
 
-        codigos_concluidos = [codigo for codigo in codigos if codigo in self.concluidas]
+        Supersets de uma prova suficiente são redundantes. Se o limite for
+        atingido, retorna incompleto=True para o chamador falhar fechado.
+        """
+
+        if limite < 1:
+            raise ValueError("Limite de derivações deve ser positivo.")
+        codigos_concluidos = sorted(
+            codigo for codigo in codigos if codigo in self.concluidas
+        )
         if not codigos_concluidos:
-            return set()
-        alternativas = [
-            self.derivacoes_conclusao.get(codigo, {frozenset({codigo})})
-            for codigo in codigos_concluidos
-        ]
-        return {
-            frozenset().union(*combinacao)
-            for combinacao in product(*alternativas)
-        }
+            return set(), False
+
+        incompleto = any(
+            codigo in self.derivacoes_incompletas for codigo in codigos_concluidos
+        )
+        combinadas: set[frozenset[str]] = {frozenset()}
+        for codigo in codigos_concluidos:
+            alternativas = self.derivacoes_conclusao.get(
+                codigo,
+                {frozenset({codigo})},
+            )
+            novas: set[frozenset[str]] = set()
+            for base in sorted(combinadas, key=_chave_derivacao):
+                for alternativa in sorted(alternativas, key=_chave_derivacao):
+                    candidata = base | alternativa
+                    if any(existente <= candidata for existente in novas):
+                        continue
+                    novas = {
+                        existente
+                        for existente in novas
+                        if not candidata < existente
+                    }
+                    novas.add(candidata)
+                    if len(novas) > limite:
+                        incompleto = True
+                        novas = set(
+                            sorted(novas, key=_chave_derivacao)[:limite]
+                        )
+            combinadas = novas
+        return combinadas, incompleto
 
     def codigos_projetados(
         self,
@@ -224,6 +258,9 @@ class SituacaoAcademica:
             )
         return codigos
 
+
+def _chave_derivacao(derivacao: frozenset[str]) -> tuple[int, tuple[str, ...]]:
+    return len(derivacao), tuple(sorted(derivacao))
 
 @dataclass(frozen=True)
 class MetricasGrade:
