@@ -1,12 +1,14 @@
 @echo off
+setlocal
 cd /d "%~dp0"
-echo Instalando/atualizando dependencias...
-python -m pip install -r requirements.txt
-if errorlevel 1 (
-  echo Nao foi possivel instalar as dependencias.
+
+if not exist ".venv\Scripts\python.exe" (
+  echo Ambiente .venv nao encontrado.
+  echo Execute primeiro preparar_ambiente_windows.bat.
   pause
   exit /b 1
 )
+
 echo Abrindo a interface interna de desenvolvimento no navegador...
-python -m streamlit run app_interno.py
+".venv\Scripts\python.exe" -m streamlit run app_interno.py
 pause
