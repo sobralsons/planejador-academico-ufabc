@@ -14,7 +14,7 @@ STATUS_EM_ANDAMENTO = {"MATR", "REC"}
 STATUS_NAO_CONCLUIDOS = {
     "REP", "REPF", "REPMF", "REPN", "REPNF", "TRANC", "CANC"
 }
-_MAX_DERIVACOES_POR_CODIGO = 256
+_MAX_DERIVACOES_POR_CODIGO = 64
 
 
 def _inteiro(valor: object) -> int:
@@ -220,6 +220,7 @@ def consolidar_historico(
         elif status & STATUS_NAO_CONCLUIDOS:
             situacao.nao_concluidas.add(codigo)
 
+    conclusoes_diretas = set(situacao.concluidas)
     situacao.origens_conclusao = {c: {c} for c in situacao.concluidas}
     situacao.derivacoes_conclusao = {
         c: {frozenset({c})} for c in situacao.concluidas
@@ -234,6 +235,10 @@ def consolidar_historico(
         alterado = False
         for origens, destino in regras:
             if origens <= situacao.concluidas:
+                if destino in conclusoes_diretas:
+                    continue
+                if destino in situacao.derivacoes_incompletas:
+                    continue
                 derivacoes, combinacao_incompleta = situacao.derivacoes_utilizadas(
                     origens,
                     limite=_MAX_DERIVACOES_POR_CODIGO,
