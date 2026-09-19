@@ -7,6 +7,7 @@ from .contratos import (
     ClassePersistencia,
     PoliticaDado,
     RascunhoPlanejamentoPersistivel,
+    RepositorioPlanejamentos,
     politica_dados,
 )
 from .repositorio_memoria import (
@@ -19,6 +20,7 @@ __all__ = [
     "ClassePersistencia",
     "PoliticaDado",
     "RascunhoPlanejamentoPersistivel",
+    "RepositorioPlanejamentos",
     "politica_dados",
     "ErroAutorizacaoPersistencia",
     "ErroConflitoPersistencia",
