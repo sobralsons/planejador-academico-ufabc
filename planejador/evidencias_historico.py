@@ -131,6 +131,21 @@ def converter_historico_consolidado_em_evidencias(
         if frozenset({destino}) in derivacoes:
             continue
 
+        if destino in situacao.derivacoes_incompletas:
+            origens_parciais = frozenset().union(*derivacoes)
+            pendencias.append(
+                PendenciaReconhecimentoHistorico(
+                    codigo_destino=destino,
+                    codigos_origem=tuple(sorted(origens_parciais)),
+                    unidades_afetadas=_UNIDADES_SUPORTADAS,
+                    motivo=(
+                        "As derivações possíveis excederam o limite seguro de "
+                        "consolidação; o reconhecimento permanece indeterminado."
+                    ),
+                )
+            )
+            continue
+
         if len(derivacoes) > 1:
             origens_alternativas = frozenset().union(*derivacoes)
             pendencias.append(
