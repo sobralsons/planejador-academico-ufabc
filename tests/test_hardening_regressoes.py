@@ -190,8 +190,43 @@ def test_consolidacao_com_ciclos_e_derivacoes_compostas_tem_limite_de_custo():
     assert duracao < 1.0
     assert len(situacao.concluidas) == 29
     assert all(
-        len(derivacoes) <= 256
+        len(derivacoes) <= 64
         for derivacoes in situacao.derivacoes_conclusao.values()
+    )
+
+
+def test_excesso_de_derivacoes_falha_fechado_sem_materializar_destino():
+    registros = [
+        _registro(codigo)
+        for indice in range(7)
+        for codigo in (f"A{indice}", f"B{indice}")
+    ]
+    equivalencias = {
+        **{f"A{indice}": f"X{indice}" for indice in range(7)},
+        **{f"B{indice}": f"X{indice}" for indice in range(7)},
+    }
+    situacao = consolidar_historico(
+        registros,
+        equivalencias,
+        [({*(f"X{indice}" for indice in range(7))}, "Z")],
+    )
+
+    assert "Z" in situacao.concluidas
+    assert "Z" in situacao.derivacoes_incompletas
+    assert len(situacao.derivacoes_conclusao["Z"]) <= 64
+
+    conversao = converter_historico_consolidado_em_evidencias(
+        situacao,
+        unidades_completas=frozenset({UnidadeRequisito.COMPONENTES}),
+    )
+    assert all(
+        "Z" not in evidencia.codigos
+        for evidencia in conversao.conjunto.evidencias
+    )
+    assert UnidadeRequisito.COMPONENTES not in conversao.conjunto.unidades_completas
+    assert any(
+        item.codigo_destino == "Z" and "limite seguro" in item.motivo
+        for item in conversao.pendencias
     )
 
 
