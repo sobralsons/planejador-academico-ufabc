@@ -14,6 +14,7 @@ STATUS_EM_ANDAMENTO = {"MATR", "REC"}
 STATUS_NAO_CONCLUIDOS = {
     "REP", "REPF", "REPMF", "REPN", "REPNF", "TRANC", "CANC"
 }
+_MAX_DERIVACOES_POR_CODIGO = 256
 
 
 def _inteiro(valor: object) -> int:
@@ -168,6 +169,31 @@ def ler_historico_sigaa(
     return registros, convalidacoes, resumo
 
 
+
+def _minimizar_derivacoes(
+    derivacoes: set[frozenset[str]],
+    limite: int,
+) -> tuple[set[frozenset[str]], bool]:
+    ordenadas = sorted(
+        derivacoes,
+        key=lambda item: (len(item), tuple(sorted(item))),
+    )
+    retidas: list[frozenset[str]] = []
+    incompleto = False
+    for candidata in ordenadas:
+        if any(existente <= candidata for existente in retidas):
+            continue
+        retidas = [
+            existente for existente in retidas if not candidata < existente
+        ]
+        retidas.append(candidata)
+        if len(retidas) > limite:
+            retidas = retidas[:limite]
+            incompleto = True
+            break
+    return set(retidas), incompleto
+
+
 def consolidar_historico(
     registros: list[RegistroHistorico],
     equivalencias_academicas: dict[str, str],
@@ -208,14 +234,23 @@ def consolidar_historico(
         alterado = False
         for origens, destino in regras:
             if origens <= situacao.concluidas:
-                derivacoes = situacao.derivacoes_utilizadas(origens)
+                derivacoes, combinacao_incompleta = situacao.derivacoes_utilizadas(
+                    origens,
+                    limite=_MAX_DERIVACOES_POR_CODIGO,
+                )
                 anteriores = situacao.derivacoes_conclusao.get(destino, set())
-                novas = derivacoes - anteriores
-                if destino not in situacao.concluidas or novas:
+                atualizadas, corte_incompleto = _minimizar_derivacoes(
+                    anteriores | derivacoes,
+                    _MAX_DERIVACOES_POR_CODIGO,
+                )
+                if combinacao_incompleta or corte_incompleto:
+                    situacao.derivacoes_incompletas.add(destino)
+                if destino not in situacao.concluidas or atualizadas != anteriores:
                     situacao.concluidas.add(destino)
-                    atualizadas = anteriores | derivacoes
                     situacao.derivacoes_conclusao[destino] = atualizadas
-                    situacao.origens_conclusao[destino] = set().union(*atualizadas)
+                    situacao.origens_conclusao[destino] = (
+                        set().union(*atualizadas) if atualizadas else set()
+                    )
                     alterado = True
             elif origens <= situacao.concluidas | situacao.em_andamento:
                 if destino not in situacao.em_andamento and destino not in situacao.concluidas:
