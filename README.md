@@ -149,7 +149,7 @@ O fluxo recomendado deixou de ser “extrair ZIP”. Clone o repositório no PC,
 No Windows:
 
 1. clone o repositório;
-2. faça checkout da branch de desenvolvimento indicada em [docs/AMBIENTE_LOCAL.md](docs/AMBIENTE_LOCAL.md);
+2. faça checkout da branch `develop`, conforme [docs/AMBIENTE_LOCAL.md](docs/AMBIENTE_LOCAL.md);
 3. execute `preparar_ambiente_windows.bat`;
 4. abra a pasta no VS Code;
 5. use `executar_windows.bat` para o protótipo interno ou `executar_api_windows.bat` para a API local.
