@@ -75,6 +75,15 @@ Não multiplique regras simplificadas para muitos cursos. Primeiro prove que o m
 - Não crie workflows que extraiam pacotes ocultos e escrevam automaticamente na branch principal.
 - Segredos ficam fora do repositório.
 
+## Branches de desenvolvimento
+
+- `main` é a linha de integração/release e não deve receber desenvolvimento direto.
+- `develop` é a base estável de desenvolvimento enquanto o produto ainda estiver em construção.
+- Novas tarefas devem sair de `develop` em branches curtas e voltar por PR.
+- Não fazer push direto em `main` ou `develop`; usar PR e CI.
+- A pilha histórica de PRs #4–#22 permanece como trilha auditável das etapas que originaram o checkpoint de `develop`.
+- A existência de código em `develop` não significa suporte público nem validação acadêmica da matriz.
+
 ## Fluxo de trabalho
 
 Para uma alteração relevante, siga:
@@ -103,7 +112,7 @@ python -m pip install -r requirements-test.txt
 Verificação principal:
 
 ```bash
-python -m compileall -q app.py app_interno.py main.py planejador ferramentas api persistencia
+python -m compileall -q app.py app_interno.py main.py planejador ferramentas api persistencia scripts
 python -m pytest -q
 ```
 

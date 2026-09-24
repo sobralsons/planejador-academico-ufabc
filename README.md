@@ -1,4 +1,4 @@
-> **Etapa 1 revisada:** correções do núcleo e 73 testes aprovados. Consulte [alterações, limites e próxima etapa](docs/etapa-1.md). Ainda é um aplicativo local; a etapa 2 valida as regras curriculares.
+> **Desenvolvimento atual:** o produto público continua bloqueado até a validação acadêmica completa. Para trabalhar no PC, use o fluxo local documentado em [docs/AMBIENTE_LOCAL.md](docs/AMBIENTE_LOCAL.md).
 
 # Planejador Acadêmico e de Trajetórias — UFABC
 
@@ -142,15 +142,19 @@ Fluxo recomendado:
 
 As vagas do PDF são uma fotografia do momento de publicação. O deferimento final e a disponibilidade real devem ser confirmados no SIGAA.
 
-## Uso
+## Desenvolvimento local
 
-1. Extraia o ZIP.
-2. Execute `executar_windows.bat`.
-3. Envie o histórico do SIGAA pela barra lateral.
-4. Configure o plano no início da página.
-5. Clique em **Analisar minha trajetória agora**.
-6. Envie também a planilha de ofertas para montar a próxima grade.
-7. Gere o planejamento e volte à primeira aba para ver a trajetória refinada.
+O fluxo recomendado deixou de ser “extrair ZIP”. Clone o repositório no PC, trabalhe em uma pasta Git local e use um ambiente virtual Python.
+
+No Windows:
+
+1. clone o repositório;
+2. faça checkout da branch `develop`, conforme [docs/AMBIENTE_LOCAL.md](docs/AMBIENTE_LOCAL.md);
+3. execute `preparar_ambiente_windows.bat`;
+4. abra a pasta no VS Code;
+5. use `executar_windows.bat` para o protótipo interno ou `executar_api_windows.bat` para a API local.
+
+O conteúdo real de `documentos-fonte/`, `.env.local` e entradas acadêmicas pessoais é local e não deve ser enviado ao GitHub.
 
 ## Validação
 

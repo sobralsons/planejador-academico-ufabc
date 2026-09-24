@@ -29,7 +29,7 @@ jobs:
           pip install -r requirements-test.txt
 
       - name: Check Python syntax
-        run: python -m compileall -q app.py app_interno.py main.py planejador ferramentas api persistencia
+        run: python -m compileall -q app.py app_interno.py main.py planejador ferramentas api persistencia scripts
 
       - name: Run test suite
         run: python -m pytest -q
