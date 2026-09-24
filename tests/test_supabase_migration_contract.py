@@ -31,7 +31,8 @@ def test_migration_existe_e_nao_modela_dados_pessoais_do_historico():
         "token",
         "senha",
     )
-    corpo_tabelas = sql.split("alter table public.planejamentos_salvos")[0]
+    sem_comentarios = re.sub(r"--.*$", "", sql, flags=re.MULTILINE)
+    corpo_tabelas = sem_comentarios.split("alter table public.planejamentos_salvos")[0]
     for termo in proibidos:
         assert termo not in corpo_tabelas
 
