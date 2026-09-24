@@ -40,7 +40,9 @@ def test_ambiente_local_instala_interface_api_e_testes():
 
 def test_guia_local_nao_orienta_trabalho_direto_na_main():
     guia = (ROOT / "docs" / "AMBIENTE_LOCAL.md").read_text(encoding="utf-8")
-    assert "Não trabalhar diretamente na `main`" in guia
+    assert "Não trabalhar diretamente na `main` nem na `develop`" in guia
+    assert "git checkout develop" in guia
+    assert "PR para develop" in guia
     assert "preparar_ambiente_windows.bat" in guia
     assert "validar_windows.bat" in guia
     assert ".env.local" in guia
