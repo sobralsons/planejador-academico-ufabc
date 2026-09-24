@@ -119,7 +119,7 @@ def test_perfis_conferem_com_enumeracao_independente_de_turmas():
 def test_orquestracao_usa_dados_publicos_e_saida_privada(tmp_path, monkeypatch):
     import main
     # Integra o motor e os exportadores; somente a extração do PDF é simulada.
-    raw = json.loads((BASE/'dados/curriculos/bct_2015.json').read_text())
+    raw = json.loads((BASE/'dados/curriculos/bct_2015.json').read_text(encoding='utf-8'))
     d = next(d for d in raw['disciplinas'] if d['categoria']=='obrigatoria' and d['creditos']==4 and d.get('p',0)==0)
     row = {name:'' for name in COLUNAS_DOCENTES}
     row.update({'CÓDIGO DE TURMA':'NA1'+d['codigo']+'SA','TURMA':d['nome'],'turma':d['codigo'],
@@ -129,7 +129,7 @@ def test_orquestracao_usa_dados_publicos_e_saida_privada(tmp_path, monkeypatch):
     pd.DataFrame([row,invalid]).to_excel(excel,index=False)
     pdf=tmp_path/'historico.pdf';pdf.write_bytes(b'%PDF-test')
     monkeypatch.setattr(main,'ler_historico_sigaa',lambda p: ([],{},ResumoHistorico()))
-    config=json.loads((BASE/'config/config.json').read_text())
+    config=json.loads((BASE/'config/config.json').read_text(encoding='utf-8'))
     config.update(arquivo_historico=str(pdf),arquivo_ofertas=str(excel),arquivo_ofertas_inicial=str(excel),
                   min_creditos=4,max_creditos=4,creditos_alvo=4,min_creditos_flexivel=4,
                   gerar_cenarios_comparativos=False,gerar_planejamento_multiquadrimestral=False)
@@ -139,4 +139,4 @@ def test_orquestracao_usa_dados_publicos_e_saida_privada(tmp_path, monkeypatch):
     paths=main.executar(cfg,base_dados=BASE,diretorio_saidas=output)
     assert len(paths)==3
     assert all(p.parent==output and p.is_file() for p in paths)
-    assert json.loads(paths[2].read_text())['avisos']
+    assert json.loads(paths[2].read_text(encoding='utf-8'))['avisos']
