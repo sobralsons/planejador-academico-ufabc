@@ -20,10 +20,10 @@ Abra o PowerShell ou o terminal do VS Code e escolha uma pasta de projetos. Clon
 ```powershell
 git clone https://github.com/sobralsons/planejador-academico-ufabc.git
 cd planejador-academico-ufabc
-git checkout product/local-development-checkpoint
+git checkout develop
 ```
 
-Enquanto a pilha atual de PRs ainda estiver em revisão, essa branch representa o checkpoint de desenvolvimento mais recente. Ela não é uma versão pública.
+`develop` é a base estável de desenvolvimento. Ela contém o checkpoint integrado e validado da pilha atual, mas não é uma versão pública nem substitui a trava de cobertura acadêmica da `main`.
 
 Depois, execute:
 
@@ -117,28 +117,28 @@ Os campos de Supabase/PostgreSQL ficam vazios até a etapa do banco. Nunca copie
 
 ```text
 1. git status
-2. git pull
-3. criar/usar branch da tarefa
-4. alterar poucos arquivos
-5. validar_windows.bat
-6. revisar git diff
-7. commit
-8. push
-9. PR
+2. git checkout develop
+3. git pull
+4. git checkout -b tipo/nome-da-tarefa
+5. alterar poucos arquivos
+6. validar_windows.bat
+7. revisar git diff
+8. commit
+9. push
+10. PR para develop
 ```
 
-Não trabalhar diretamente na `main`. Durante o desenvolvimento atual, também não usar a `main` como referência funcional mais recente sem verificar a pilha de PRs.
+Não trabalhar diretamente na `main` nem na `develop`. Para uma tarefa nova, atualize `develop`, crie uma branch curta a partir dela e abra PR de volta para `develop`. A `main` permanece reservada para integração/release autorizada.
 
 ## Próximas etapas de infraestrutura
 
 A ordem planejada depois deste checkpoint é:
 
-1. consolidar a base de desenvolvimento local;
-2. definir migration PostgreSQL/Supabase para rascunhos persistíveis;
-3. implementar e testar RLS com usuários sintéticos;
-4. conectar autenticação de desenvolvimento;
-5. somente depois expor endpoints autenticados de persistência;
-6. iniciar o frontend Next.js/PWA sobre contratos já testados;
-7. manter histórico SIGAA temporário por padrão.
+1. definir migration PostgreSQL/Supabase para rascunhos persistíveis;
+2. implementar e testar RLS com usuários sintéticos;
+3. conectar autenticação de desenvolvimento;
+4. somente depois expor endpoints autenticados de persistência;
+5. iniciar o frontend Next.js/PWA sobre contratos já testados;
+6. manter histórico SIGAA temporário por padrão.
 
 Banco, autenticação e frontend não devem ser introduzidos todos na mesma alteração.
