@@ -185,6 +185,15 @@ class SituacaoAcademica:
     derivacoes_conclusao: dict[str, set[frozenset[str]]] = field(default_factory=dict)
     derivacoes_incompletas: set[str] = field(default_factory=set)
 
+    def conclusoes_confiaveis(self) -> set[str]:
+        """Conclusões que podem ser usadas por consumidores acadêmicos.
+
+        Códigos com enumeração de derivações truncada permanecem registrados em
+        `concluidas` para diagnóstico e rastreabilidade, mas não podem sustentar
+        planejamento ou integralização até que a prova esteja completa.
+        """
+        return set(self.concluidas) - set(self.derivacoes_incompletas)
+
     def origens_utilizadas(self, codigos: Iterable[str]) -> set[str]:
         return set().union(*(
             self.origens_conclusao.get(codigo, {codigo})
@@ -245,7 +254,7 @@ class SituacaoAcademica:
         modo: str = "todas",
         codigos_personalizados: Iterable[str] = (),
     ) -> set[str]:
-        codigos = set(self.concluidas)
+        codigos = self.conclusoes_confiaveis()
         modo_norm = modo.strip().lower()
         if modo_norm in {"todas", "otimista", "true"}:
             codigos.update(self.em_andamento)
