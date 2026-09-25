@@ -24,6 +24,26 @@ Ao tomar decisões, respeite esta ordem:
 
 Nunca melhore uma prioridade inferior sacrificando uma superior.
 
+## Modelo de desenvolvimento orientado a produto
+
+O desenvolvimento deve seguir este ciclo:
+
+`VISÃO → META DA RELEASE → MAIOR RISCO → MENOR INCREMENTO SEGURO → TESTE → FEEDBACK → REPRIORIZAÇÃO`.
+
+Antes de iniciar uma tarefa relevante:
+
+1. identifique a release ativa em `docs/ROADMAP_PRODUTO.md`;
+2. confirme qual meta da release a tarefa atende;
+3. explicite a necessidade do usuário ou risco que ela reduz;
+4. escolha o menor incremento verificável;
+5. defina antes da implementação como o incremento será validado.
+
+Não implemente funcionalidades isoladas apenas porque são tecnicamente interessantes. Correção acadêmica, confiabilidade e segurança podem interromper a ordem planejada quando surgir risco de prioridade superior.
+
+A quantidade de PRs, linhas de código ou testes não encerra uma release. A release só termina quando os critérios de saída do arquivo correspondente em `docs/releases/` forem satisfeitos e as limitações restantes estiverem explícitas.
+
+`docs/ROADMAP_PRODUTO.md` é a fonte de verdade do planejamento macro. O arquivo da release ativa é a fonte de verdade do escopo e da ordem de execução corrente. Nenhum documento de planejamento substitui PPC, ato, resolução, SIGAA ou outra fonte oficial para decidir regra acadêmica.
+
 ## Arquitetura
 
 - Preserve o núcleo acadêmico em Python.
