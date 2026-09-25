@@ -1,4 +1,4 @@
-param([Parameter(Mandatory=$true)][ValidateSet('start','status','test','test-db','reset-db','stop')][string]$Command)
+param([Parameter(Mandatory=$true)][ValidateSet('start','status','test','test-db','test-e2e','reset-db','stop')][string]$Command)
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 $python = Join-Path $PSScriptRoot '.venv\Scripts\python.exe'
@@ -72,6 +72,8 @@ try {
         $pytestCache = Join-Path $stateDir 'pytest-cache'
         Invoke-Python -Arguments @('-m','compileall','-q','app.py','app_interno.py','main.py','planejador','ferramentas','api','persistencia','scripts')
         Invoke-Python -Arguments @('-m','pytest','-q','--basetemp',$pytestTemp,'-o',"cache_dir=$pytestCache")
+    } elseif ($Command -eq 'test-e2e') {
+        Invoke-Python -Arguments @('-m','scripts.testar_persistencia_e2e_local')
     } elseif ($Command -eq 'stop') {
         $owned = Get-OwnedApi
         if ($null -ne $owned) { Stop-OwnedApi -Owner $owned }
