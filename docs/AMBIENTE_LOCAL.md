@@ -11,7 +11,8 @@ Instale:
 - Visual Studio Code;
 - extensão Python da Microsoft no VS Code.
 
-Não é necessário instalar PostgreSQL, Supabase CLI, Node.js ou Docker nesta etapa.
+Para API + banco locais, instale também Docker Desktop (containers Linux) e Node.js/npm.
+O fluxo abaixo usa a CLI Supabase fixada em `2.117.0` via npx; não exige PostgreSQL instalado no Windows.
 
 ## Primeira configuração
 
@@ -63,6 +64,56 @@ git status
 Nunca use `git add .` sem revisar o que será adicionado.
 
 ## Validar o projeto
+
+### Comandos no VS Code/Windows
+
+Depois da primeira configuração, use **Terminal → Run Task → Local: ...** ou:
+
+```powershell
+.\dev.ps1 start
+.\dev.ps1 status
+.\dev.ps1 test
+.\dev.ps1 test-db
+.\dev.ps1 reset-db
+.\dev.ps1 stop
+```
+
+- `start`: valida destinos locais, cria/valida `app-ufabc-local` com binding padrão
+  `127.0.0.1`, verifica containers inclusive parados, inicia Supabase e API oculta.
+  Repetir o comando reutiliza a API registrada. Porta ocupada por outro processo é erro.
+- `status`: confere Supabase, portas e saúde da API; retorna erro se algum estiver parado/inseguro.
+- `test`: exige Python 3.12 da `.venv`, executa compileall e pytest; não depende de Docker.
+- `test-db`: executa pgTAP no banco explicitamente local, já iniciado.
+- `reset-db`: **apaga os dados do banco local** e reaplica migrations; exige digitar
+  `RESET` no terminal. Nunca é chamado por start/test/test-db.
+- `stop`: encerra somente a API registrada por este fluxo (PID, executável e instante
+  de criação conferidos) e o Supabase deste projeto, preservando volumes e rede.
+
+Na primeira utilização do banco, execute uma vez `npx --yes supabase@2.117.0 init`
+se `supabase/config.toml` ainda não existir. Esse arquivo fica local/ignorado; configurações
+existentes são preservadas. Preencha `.env.local` com `APP_ENV=development`,
+`API_HOST=127.0.0.1`, `API_PORT=8000` e `SUPABASE_URL=http://127.0.0.1:54321`.
+As portas precisam coincidir com `config.toml`. Se usar `DATABASE_URL`, aceite apenas o
+PostgreSQL local, sem parâmetros que possam redirecionar a conexão.
+Após iniciar, obtenha sua chave pública local com `npx --yes supabase@2.117.0 status`,
+preencha `SUPABASE_PUBLISHABLE_KEY` e reinicie a API com stop/start para carregar a chave.
+Não compartilhe a saída desse comando: ela também pode conter segredos.
+
+O Docker precisa usar contexto com socket/pipe local. Overrides `DOCKER_HOST` e
+`DOCKER_CONTEXT`, destinos TCP/SSH, redes inseguras e portas publicadas em
+`0.0.0.0`, `::` ou IP de LAN são recusados. Uma rede insegura não é recriada automaticamente.
+Se a checagem após subir Supabase falhar, o fluxo tenta parar somente esse projeto,
+preservando os volumes. Falha da API encerra apenas o novo processo da API.
+
+Uma cópia diferente do repositório não pode controlar containers com o mesmo
+`project_id`: use a pasta original ou configure outro ID e portas livres.
+APIs abertas anteriormente pelo `.bat` devem ser encerradas naquele terminal antes do start.
+Estado e logs ficam em `.dev-local/`, ignorado pelo Git, assim como `.env.local`.
+Nenhum comando executa push, merge, link remoto ou exclusão de volumes.
+As Tasks não iniciam serviços ao abrir o VS Code. O `ExecutionPolicy Bypass` das Tasks
+vale apenas para aquele processo e não altera a política do Windows.
+
+### Validação legada
 
 Execute:
 

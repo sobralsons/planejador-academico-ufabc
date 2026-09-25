@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Local: iniciar", "type": "process", "command": "powershell.exe",
+      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/dev.ps1", "start"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Local: status", "type": "process", "command": "powershell.exe",
+      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/dev.ps1", "status"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Local: testes Python", "type": "process", "command": "powershell.exe",
+      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/dev.ps1", "test"],
+      "group": "test", "problemMatcher": []
+    },
+    {
+      "label": "Local: testes pgTAP", "type": "process", "command": "powershell.exe",
+      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/dev.ps1", "test-db"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Local: APAGAR e recriar banco local", "type": "process", "command": "powershell.exe",
+      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/dev.ps1", "reset-db"],
+      "presentation": {"reveal": "always", "focus": true}, "problemMatcher": []
+    },
+    {
+      "label": "Local: parar", "type": "process", "command": "powershell.exe",
+      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/dev.ps1", "stop"],
+      "problemMatcher": []
+    }
+  ]
+}

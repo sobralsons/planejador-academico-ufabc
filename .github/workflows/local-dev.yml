@@ -1,0 +1,53 @@
+name: Local development
+
+on:
+  pull_request:
+    branches: [develop]
+    paths:
+      - 'dev.ps1'
+      - 'scripts/**'
+      - 'tests/test_dev_local.py'
+      - 'supabase/**'
+      - '.github/workflows/local-dev.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Prepare Python
+        run: |
+          python -m venv .venv
+          .\.venv\Scripts\python.exe -m pip install -r requirements-test.txt
+      - name: Exercise Windows entry point
+        shell: powershell
+        run: .\dev.ps1 test
+
+  pgtap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Prepare isolated local stack
+        run: |
+          pip install -r requirements-api.txt
+          npx --yes supabase@2.117.0 init
+          printf '%s\n' 'APP_ENV=development' 'SUPABASE_URL=http://127.0.0.1:54321' > .env.local
+      - name: Start with local guards
+        run: python -m scripts.dev_local start
+      - name: Run pgTAP
+        run: python -m scripts.dev_local test-db
+      - name: Stop project, preserving volumes
+        if: always()
+        run: python -m scripts.dev_local stop
