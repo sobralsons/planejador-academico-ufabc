@@ -1,5 +1,6 @@
 import asyncio
 import json
+import os
 from urllib.error import HTTPError
 
 import httpx2
@@ -186,3 +187,48 @@ def test_endpoint_falha_fechado_quando_auth_local_indisponivel(monkeypatch):
         "detail": {"code": "auth_local_indisponivel"}
     }
     assert "token-opaco" not in resposta.text
+
+
+def test_launcher_carrega_env_local_sem_sobrescrever_variaveis_existentes(
+    tmp_path,
+    monkeypatch,
+):
+    from scripts.executar_api_local import carregar_env_local
+
+    caminho = tmp_path / ".env.local"
+    caminho.write_text(
+        "# teste\n"
+        "APP_ENV=development\n"
+        "SUPABASE_URL=http://127.0.0.1:54321\n"
+        "SUPABASE_PUBLISHABLE_KEY=chave-local\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setenv("APP_ENV", "development-ja-definido")
+    monkeypatch.delenv("SUPABASE_URL", raising=False)
+    monkeypatch.delenv("SUPABASE_PUBLISHABLE_KEY", raising=False)
+
+    carregar_env_local(caminho)
+
+    assert os.environ["APP_ENV"] == "development-ja-definido"
+    assert os.environ["SUPABASE_URL"] == "http://127.0.0.1:54321"
+    assert os.environ["SUPABASE_PUBLISHABLE_KEY"] == "chave-local"
+
+
+def test_launcher_rejeita_linha_env_invalida(tmp_path):
+    from scripts.executar_api_local import carregar_env_local
+
+    caminho = tmp_path / ".env.local"
+    caminho.write_text("linha-sem-igual\n", encoding="utf-8")
+
+    with pytest.raises(RuntimeError, match="Linha 1 inválida"):
+        carregar_env_local(caminho)
+
+
+def test_launcher_rejeita_host_nao_local(monkeypatch):
+    from scripts import executar_api_local as launcher
+
+    monkeypatch.setattr(launcher, "carregar_env_local", lambda _caminho: None)
+    monkeypatch.setenv("API_HOST", "0.0.0.0")
+
+    with pytest.raises(RuntimeError, match="só pode escutar"):
+        launcher.executar()
