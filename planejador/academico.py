@@ -118,11 +118,27 @@ def auditoria_integralizacao(
     aprovadas e o estágio informado manualmente. Essa separação evita que uma
     projeção otimista apareça como conclusão oficial.
     """
-    confirmadas = set(cumpridas_confirmadas if cumpridas_confirmadas is not None else situacao.concluidas)
+    confirmadas = set(
+        cumpridas_confirmadas
+        if cumpridas_confirmadas is not None
+        else situacao.conclusoes_confiaveis()
+    )
     projetadas = set(cumpridas_projetadas)
     concluidas_curriculo_confirmadas = set(curriculo) & confirmadas
     concluidas_curriculo_projetadas = set(curriculo) & projetadas
-    por_categoria: dict[str, dict[str, int]] = {}
+    indeterminadas_curriculo = set(curriculo) & situacao.derivacoes_incompletas
+    por_categoria: dict[str, dict[str, object]] = {}
+
+    def estado_pendencia(
+        exigido: int,
+        integralizado: int,
+        indeterminados: set[str],
+    ) -> tuple[str, int | None]:
+        if integralizado >= exigido:
+            return "cumprido", 0
+        if indeterminados:
+            return "indeterminado", None
+        return "pendente", max(0, exigido - integralizado)
 
     for categoria in Categoria:
         exigido_chave = {
@@ -141,18 +157,39 @@ def auditoria_integralizacao(
             for codigo in concluidas_curriculo_projetadas
             if curriculo[codigo].categoria == categoria
         )
+        indeterminados_categoria = {
+            codigo
+            for codigo in indeterminadas_curriculo
+            if curriculo[codigo].categoria == categoria
+        }
+        integralizado_confirmado = min(confirmado, exigido) if exigido else confirmado
+        integralizado_estimado = min(projetado, exigido) if exigido else projetado
+        estado_confirmado, pendente_confirmado = estado_pendencia(
+            exigido,
+            integralizado_confirmado,
+            indeterminados_categoria - confirmadas,
+        )
+        estado_estimado, pendente_estimado = estado_pendencia(
+            exigido,
+            integralizado_estimado,
+            indeterminados_categoria - projetadas,
+        )
         por_categoria[categoria.value] = {
             "exigido": exigido,
-            "integralizado_confirmado": min(confirmado, exigido) if exigido else confirmado,
-            "integralizado_estimado": min(projetado, exigido) if exigido else projetado,
+            "integralizado_confirmado": integralizado_confirmado,
+            "integralizado_estimado": integralizado_estimado,
             "excedente_confirmado": max(0, confirmado - exigido),
             "excedente_estimado": max(0, projetado - exigido),
-            "pendente_confirmado": max(0, exigido - confirmado),
-            "pendente_estimado": max(0, exigido - projetado),
+            "estado_confirmado": estado_confirmado,
+            "estado_estimado": estado_estimado,
+            "pendente_confirmado": pendente_confirmado,
+            "pendente_estimado": pendente_estimado,
+            "componentes_indeterminados": sorted(indeterminados_categoria),
             # Compatibilidade com relatórios/integrações anteriores: o campo
             # legado reflete o cenário projetado selecionado pelo usuário.
-            "integralizado": min(projetado, exigido) if exigido else projetado,
-            "pendente": max(0, exigido - projetado),
+            "integralizado": integralizado_estimado,
+            "pendente": pendente_estimado,
+            "estado": estado_estimado,
         }
 
     # Componentes concluídos fora das listas explícitas da matriz podem preencher
@@ -181,11 +218,16 @@ def auditoria_integralizacao(
         dados_livres["exigido"],
         dados_livres["integralizado_estimado"] + livres_estimados_adicionais,
     )
-    dados_livres["pendente_estimado"] = max(
-        0, dados_livres["exigido"] - dados_livres["integralizado_estimado"]
+    estado_livre_estimado, pendente_livre_estimado = estado_pendencia(
+        dados_livres["exigido"],
+        dados_livres["integralizado_estimado"],
+        set(dados_livres["componentes_indeterminados"]) - projetadas,
     )
+    dados_livres["estado_estimado"] = estado_livre_estimado
+    dados_livres["pendente_estimado"] = pendente_livre_estimado
     dados_livres["integralizado"] = dados_livres["integralizado_estimado"]
     dados_livres["pendente"] = dados_livres["pendente_estimado"]
+    dados_livres["estado"] = dados_livres["estado_estimado"]
 
     # Quadro oficial do SIGAA para o vínculo atual, mantido separado porque as
     # categorias do BC&T não coincidem com as categorias da Engenharia.
@@ -221,14 +263,36 @@ def auditoria_integralizacao(
         componentes = [d for d in curriculo.values() if d.tipo_componente == tipo]
         integralizado_confirmado = sum(d.creditos for d in componentes if d.codigo in confirmadas)
         integralizado_projetado = sum(d.creditos for d in componentes if d.codigo in projetadas)
+        indeterminados_confirmados = [
+            d.codigo
+            for d in componentes
+            if d.codigo in situacao.derivacoes_incompletas and d.codigo not in confirmadas
+        ]
+        indeterminados_projetados = [
+            d.codigo
+            for d in componentes
+            if d.codigo in situacao.derivacoes_incompletas and d.codigo not in projetadas
+        ]
+        pendentes_confirmados = [
+            d.codigo
+            for d in componentes
+            if d.codigo not in confirmadas and d.codigo not in indeterminados_confirmados
+        ]
+        pendentes_projetados = [
+            d.codigo
+            for d in componentes
+            if d.codigo not in projetadas and d.codigo not in indeterminados_projetados
+        ]
         especiais[tipo.value] = {
             "exigido": sum(d.creditos for d in componentes),
             "integralizado_confirmado": integralizado_confirmado,
             "integralizado_projetado": integralizado_projetado,
             "integralizado": integralizado_projetado,
-            "pendentes_confirmados": [d.codigo for d in componentes if d.codigo not in confirmadas],
-            "pendentes_projetados": [d.codigo for d in componentes if d.codigo not in projetadas],
-            "pendentes": [d.codigo for d in componentes if d.codigo not in projetadas],
+            "pendentes_confirmados": pendentes_confirmados,
+            "pendentes_projetados": pendentes_projetados,
+            "pendentes": pendentes_projetados,
+            "indeterminados_confirmados": indeterminados_confirmados,
+            "indeterminados_projetados": indeterminados_projetados,
         }
     especiais[TipoComponente.ESTAGIO.value]["status_informado"] = estagio_status
 
@@ -238,7 +302,7 @@ def auditoria_integralizacao(
         "componentes_curriculo_concluidos_projetados": len(concluidas_curriculo_projetadas),
         # Compatibilidade: reflete o cenário projetado.
         "componentes_curriculo_concluidos": len(concluidas_curriculo_projetadas),
-        "componentes_historico_concluidos": len(situacao.concluidas),
+        "componentes_historico_concluidos": len(situacao.conclusoes_confiaveis()),
         "livres_potenciais_fora_da_matriz": livres_potenciais,
         "origens_reconhecimentos": {
             c: sorted(situacao.origens_conclusao.get(c, {c}))
