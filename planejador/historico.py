@@ -18,10 +18,37 @@ _MAX_DERIVACOES_POR_CODIGO = 64
 
 
 def _inteiro(valor: object) -> int:
+    if valor is None:
+        raise ValueError("valor quantitativo ausente")
+
+    texto = str(valor).strip().replace(",", ".")
+    if not texto:
+        raise ValueError("valor quantitativo ausente")
+
     try:
-        return int(float(str(valor).replace(",", ".")))
-    except (TypeError, ValueError):
-        return 0
+        numero = float(texto)
+    except (TypeError, ValueError) as exc:
+        raise ValueError("valor quantitativo inválido") from exc
+
+    if not numero.is_integer():
+        raise ValueError("valor quantitativo não inteiro")
+    return int(numero)
+
+
+def _inteiro_historico(
+    valor: object,
+    *,
+    campo: str,
+    pagina: int,
+    linha: int,
+) -> int:
+    try:
+        return _inteiro(valor)
+    except ValueError as exc:
+        raise ValueError(
+            f"Histórico inválido: página {pagina}, linha {linha}, campo {campo}: {exc}. "
+            "Revise o documento antes de planejar."
+        ) from exc
 
 
 def _limpar_campo(valor: object) -> str:
@@ -150,9 +177,24 @@ def ler_historico_sigaa(
                             categoria_original=_limpar_campo(categoria),
                             codigo=codigo_limpo,
                             nome=_limpar_campo(nome),
-                            creditos=_inteiro(creditos),
-                            carga_horaria=_inteiro(carga_horaria),
-                            carga_extensao=_inteiro(carga_extensao),
+                            creditos=_inteiro_historico(
+                                creditos,
+                                campo="Créditos",
+                                pagina=numero_pagina,
+                                linha=numero_linha,
+                            ),
+                            carga_horaria=_inteiro_historico(
+                                carga_horaria,
+                                campo="Carga horária",
+                                pagina=numero_pagina,
+                                linha=numero_linha,
+                            ),
+                            carga_extensao=_inteiro_historico(
+                                carga_extensao,
+                                campo="Carga de extensão",
+                                pagina=numero_pagina,
+                                linha=numero_linha,
+                            ),
                             turma=limpar_codigo(turma),
                             conceito=normalizar_texto(conceito),
                             situacao=normalizar_texto(situacao),
