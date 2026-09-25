@@ -298,7 +298,11 @@ def renomear_planejamento_local(
     return _resposta_plano(plano)
 
 
-@app.delete("/v1/dev/plans/{planejamento_id}", status_code=204)
+@app.delete(
+    "/v1/dev/plans/{planejamento_id}",
+    status_code=204,
+    response_model=None,
+)
 def excluir_planejamento_local(
     planejamento_id: IdentificadorPersistencia,
     request: Request,
