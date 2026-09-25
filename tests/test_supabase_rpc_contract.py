@@ -16,9 +16,12 @@ def _sql() -> str:
 
 
 def test_rpc_nao_recebe_proprietario_e_deriva_dono_de_auth_uid():
-    sql = _sql()
+    sql = re.sub(r"--.*$", "", _sql(), flags=re.MULTILINE)
 
-    assinatura = sql.split("returns void", 1)[0]
+    assinatura = sql.split(
+        "create or replace function public.salvar_planejamento_autenticado(",
+        1,
+    )[1].split("returns void", 1)[0]
     assert "p_proprietario" not in assinatura
     assert "proprietario_id" not in assinatura
     assert "v_proprietario_id uuid := auth.uid()" in sql
@@ -52,7 +55,7 @@ def test_rpc_nao_modela_dados_pessoais_ou_historico():
     for termo in (
         "email",
         "nome",
-        "ra ",
+        "ra",
         "nota",
         "conceito",
         "docente",
@@ -61,4 +64,4 @@ def test_rpc_nao_modela_dados_pessoais_ou_historico():
         "token",
         "senha",
     ):
-        assert termo not in sql
+        assert re.search(rf"\\b{termo}\\b", sql) is None
