@@ -99,12 +99,16 @@ def test_proprietario_referencia_auth_users_e_filhos_nao_podem_trocar_dono():
         in sql
     )
     assert (
-        "foreign key (planejamento_id, proprietario_id)"
+        "primary key (proprietario_id, planejamento_id)"
+        in sql
+    )
+    assert (
+        "foreign key (proprietario_id, planejamento_id)"
         in sql
     )
     assert (
         "references public.planejamentos_salvos "
-        "(planejamento_id, proprietario_id)"
+        "(proprietario_id, planejamento_id)"
         in sql
     )
 
@@ -114,11 +118,20 @@ def test_limites_estruturais_do_contrato_persistivel_estao_no_banco():
     assert "char_length(btrim(titulo)) between 1 and 120" in sql
     assert "check (schema_version = 1)" in sql
     assert "check (posicao between 1 and 200)" in sql
-    assert "primary key (planejamento_id, codigo_componente)" in sql
-    assert "unique (planejamento_id, posicao)" in sql
+    assert (
+        "primary key (proprietario_id, planejamento_id, codigo_componente)"
+        in sql
+    )
+    assert (
+        "unique (proprietario_id, planejamento_id, posicao)"
+        in sql
+    )
 
 
-def test_colunas_de_rls_possuem_indice_dedicado():
+def test_chaves_primarias_comecam_pelo_proprietario_para_rls_e_isolamento():
     sql = _sql()
-    assert "planejamentos_salvos_proprietario_idx" in sql
-    assert "planejamento_componentes_proprietario_idx" in sql
+    assert "primary key (proprietario_id, planejamento_id)" in sql
+    assert (
+        "primary key (proprietario_id, planejamento_id, codigo_componente)"
+        in sql
+    )
