@@ -21,7 +21,14 @@ LOCAL = {"127.0.0.1", "::1", "localhost"}
 
 
 def run(args: list[str], *, visible: bool = False) -> str:
-    result = subprocess.run(args, cwd=ROOT, text=True, capture_output=True)
+    result = subprocess.run(
+        args,
+        cwd=ROOT,
+        text=True,
+        encoding="utf-8",
+        errors="strict",
+        capture_output=True,
+    )
     if visible:
         print(result.stdout, end="")
     if result.returncode:
