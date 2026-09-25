@@ -22,7 +22,7 @@ class RepositorioPlanejamentosMemoria:
     """
 
     def __init__(self) -> None:
-        self._itens: dict[str, RascunhoPlanejamentoPersistivel] = {}
+        self._itens: dict[tuple[str, str], RascunhoPlanejamentoPersistivel] = {}
 
     def salvar(
         self,
@@ -34,10 +34,7 @@ class RepositorioPlanejamentosMemoria:
                 "A fronteira aceita somente RascunhoPlanejamentoPersistivel."
             )
         _exigir_mesmo_proprietario(ator_id, planejamento.proprietario_id)
-        existente = self._itens.get(planejamento.planejamento_id)
-        if existente is not None and existente.proprietario_id != ator_id:
-            raise ErroConflitoPersistencia("Identificador de planejamento indisponível.")
-        self._itens[planejamento.planejamento_id] = planejamento
+        self._itens[(ator_id, planejamento.planejamento_id)] = planejamento
         return planejamento
 
     def obter(
@@ -45,18 +42,15 @@ class RepositorioPlanejamentosMemoria:
         ator_id: str,
         planejamento_id: str,
     ) -> RascunhoPlanejamentoPersistivel | None:
-        item = self._itens.get(planejamento_id)
-        if item is None or item.proprietario_id != ator_id:
-            return None
-        return item
+        return self._itens.get((ator_id, planejamento_id))
 
     def listar(self, ator_id: str) -> tuple[RascunhoPlanejamentoPersistivel, ...]:
         return tuple(
             sorted(
                 (
                     item
-                    for item in self._itens.values()
-                    if item.proprietario_id == ator_id
+                    for (proprietario_id, _), item in self._itens.items()
+                    if proprietario_id == ator_id
                 ),
                 key=lambda item: item.planejamento_id,
             )
@@ -72,25 +66,25 @@ class RepositorioPlanejamentosMemoria:
         if atual is None:
             return None
         atualizado = replace(atual, titulo=titulo)
-        self._itens[planejamento_id] = atualizado
+        self._itens[(ator_id, planejamento_id)] = atualizado
         return atualizado
 
     def excluir(self, ator_id: str, planejamento_id: str) -> bool:
-        item = self._itens.get(planejamento_id)
-        if item is None or item.proprietario_id != ator_id:
+        chave = (ator_id, planejamento_id)
+        if chave not in self._itens:
             return False
-        del self._itens[planejamento_id]
+        del self._itens[chave]
         return True
 
     def excluir_todos(self, ator_id: str) -> int:
-        ids = [
-            planejamento_id
-            for planejamento_id, item in self._itens.items()
-            if item.proprietario_id == ator_id
+        chaves = [
+            chave
+            for chave in self._itens
+            if chave[0] == ator_id
         ]
-        for planejamento_id in ids:
-            del self._itens[planejamento_id]
-        return len(ids)
+        for chave in chaves:
+            del self._itens[chave]
+        return len(chaves)
 
     def quantidade_total_para_testes(self) -> int:
         return len(self._itens)
