@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "definido_em": "2026-09-25",
+  "escopo": "Seleção mínima de pilotos para integração end-to-end do motor curricular genérico. Não declara suporte, vigência definitiva nem validação acadêmica das matrizes.",
+  "distincao": "Os cinco pilotos estruturais de dados/pilotos_requisitos_curriculares_2026-09-16.json exercitam capacidades do modelo. Este arquivo define apenas a ordem dos pilotos de integração no fluxo real.",
+  "criterio": "Menor conjunto que cubra um curso de ingresso e uma formação específica dependente desse curso-base, usando pacotes legados já existentes e sem introduzir regra acadêmica nova.",
+  "pilotos": [
+    {
+      "ordem": 1,
+      "curriculo_id": "bct_2015",
+      "familia": "curso_ingresso_interdisciplinar",
+      "papel": "primeira_familia_a_integrar",
+      "depende_de": null,
+      "capacidades_alvo": [
+        "integralizacao_por_categorias_de_creditos",
+        "atividades_complementares_em_horas",
+        "equivalencias_do_pacote_legado"
+      ],
+      "riscos_alvo": [
+        "curso_base_reutilizado_por_formacoes_especificas",
+        "nao_confundir_pacote_legado_com_matriz_academicamente_validada"
+      ]
+    },
+    {
+      "ordem": 2,
+      "curriculo_id": "bcd_2023",
+      "familia": "formacao_especifica_pos_bct",
+      "papel": "segunda_familia_a_integrar",
+      "depende_de": "bct_2015",
+      "capacidades_alvo": [
+        "referencia_a_curso_base",
+        "extensao_em_dimensao_propria",
+        "trabalho_final",
+        "integralizacao_por_categorias_de_creditos"
+      ],
+      "riscos_alvo": [
+        "nao_duplicar_creditos_entre_curso_base_e_formacao_especifica",
+        "nao_confundir_horas_de_extensao_com_carga_horaria",
+        "nao_transformar_estimativa_em_conclusao"
+      ]
+    }
+  ],
+  "proxima_etapa": "Integrar somente bct_2015 em modo sombra/fluxo controlado após merge dos bloqueadores anteriores da R0; bcd_2023 vem depois porque depende do curso-base."
+}
