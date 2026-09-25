@@ -73,7 +73,8 @@ def test_endpoint_auth_rejeita_authorization_malformado(authorization):
 
     assert resposta.status_code == 401
     assert resposta.json() == {"detail": {"code": "nao_autenticado"}}
-    assert authorization not in resposta.text
+    if authorization:
+        assert authorization not in resposta.text
 
 
 def test_configuracao_auth_recusa_supabase_remoto(monkeypatch):
