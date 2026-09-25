@@ -1,6 +1,8 @@
 # R0 — Fundação confiável
 
 **Estado:** ativa  
+**Tracker:** #27  
+**Primeira história:** #28 — campos quantitativos inválidos do histórico  
 **Objetivo:** eliminar bloqueadores conhecidos para que o núcleo atual seja uma base confiável para a modelagem curricular universal.
 
 Esta release não busca ampliar funcionalidades. Ela reduz risco antes da migração do motor acadêmico para o modelo curricular genérico.
@@ -25,7 +27,7 @@ Antes de ampliar cobertura ou construir a interface pública final, esses riscos
 | Ordem | Incremento | Necessidade/risco | Evidência esperada |
 | ---: | --- | --- | --- |
 | 1 | Concluir revisão da fundação de persistência autenticada | Evitar que uma fundação técnica pendente fique implícita | PR separado revisado, CI e E2E documentados antes de integração |
-| 2 | Endurecer campos quantitativos do histórico | Impedir que desconhecido/inválido seja interpretado como zero conhecido | parser rejeita ou representa ausência explicitamente; regressões específicas |
+| 2 | Endurecer campos quantitativos do histórico (#28) | Impedir que desconhecido/inválido seja interpretado como zero conhecido | parser rejeita ou representa ausência explicitamente; regressões específicas |
 | 3 | Auditar consumidores de derivações incompletas | Impedir conclusão acadêmica baseada em prova truncada | casos adversariais falham fechado até a fronteira de uso |
 | 4 | Harmonizar documentação de estado atual | Evitar que relatórios históricos sejam lidos como certificação vigente | documentos antigos identificados como históricos e fonte atual explícita |
 | 5 | Definir contrato de integração do modelo curricular genérico | Evitar duas fontes de verdade acadêmica sem fronteira definida | ADR/contrato pequeno com entradas, saídas, estados indeterminados e proveniência |
