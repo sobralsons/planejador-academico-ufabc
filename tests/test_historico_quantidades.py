@@ -1,5 +1,3 @@
-import re
-
 import pytest
 
 import planejador.historico as historico
