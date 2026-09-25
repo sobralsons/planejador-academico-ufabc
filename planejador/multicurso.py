@@ -295,7 +295,7 @@ def analisar_curriculo(
     situacao = consolidar_historico(
         registros_historico, equivalencias, compostas, convalidacoes_historico, resumo_historico
     )
-    confirmadas = aplicar_estagio(set(situacao.concluidas), registro, "concluido" if estagio_status == "concluido" else "nao_iniciado")
+    confirmadas = aplicar_estagio(situacao.conclusoes_confiaveis(), registro, "concluido" if estagio_status == "concluido" else "nao_iniciado")
     projetadas = situacao.codigos_projetados(modo_projecao, codigos_personalizados)
     projetadas = aplicar_estagio(projetadas, registro, estagio_status)
     auditoria = auditoria_integralizacao(

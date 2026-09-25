@@ -1,8 +1,18 @@
-> **Desenvolvimento atual:** o produto público continua bloqueado até a validação acadêmica completa. Para trabalhar no PC, use o fluxo local documentado em [docs/AMBIENTE_LOCAL.md](docs/AMBIENTE_LOCAL.md).
+> **Estado acadêmico atual:** a publicação pública continua bloqueada. O inventário contém 35 cursos e 93 PPCs, mas nenhuma matriz está declarada academicamente suportada para uso público. Veja [docs/ESTADO_ACADEMICO_ATUAL.md](docs/ESTADO_ACADEMICO_ATUAL.md). Para trabalhar no PC, use [docs/AMBIENTE_LOCAL.md](docs/AMBIENTE_LOCAL.md).
 
 # Planejador Acadêmico e de Trajetórias — UFABC
 
-Aplicação local para planejar **a trajetória completa** e a matrícula de cada quadrimestre. O sistema lê o histórico, compara matrizes curriculares, estima datas de conclusão, identifica disciplinas compartilhadas e monta grades sem conflito.
+Protótipo local para **simular trajetórias** e planejar a matrícula de cada quadrimestre. O sistema lê o histórico, compara os pacotes curriculares atualmente estruturados, produz estimativas de conclusão, identifica compartilhamentos e monta grades sem conflito. Estimativas e testes estruturais não substituem integralização oficial nem revisão acadêmica da matriz.
+
+## Desenvolvimento orientado a produto
+
+O desenvolvimento é guiado por visão, releases e critérios de saída, e não por uma sequência solta de funcionalidades.
+
+- **Roadmap macro e release ativa:** [docs/ROADMAP_PRODUTO.md](docs/ROADMAP_PRODUTO.md)
+- **Plano operacional da R0 — Fundação confiável:** [docs/releases/R0-fundacao-confiavel.md](docs/releases/R0-fundacao-confiavel.md)
+- **Regras obrigatórias de desenvolvimento:** [AGENTS.md](AGENTS.md)
+
+A entrada pública continua bloqueada até que os gates acadêmicos, de revisão e de segurança definidos pelo projeto sejam satisfeitos.
 
 ## O que mudou nesta versão
 
@@ -36,7 +46,9 @@ A camada visual foi modernizada sem alterar os algoritmos acadêmicos. A nova in
 
 A lógica de trajetória, geração de grades, avaliações docentes e ajuste de matrícula permanece independente dessa camada visual.
 
-## Currículos incluídos
+## Currículos legados estruturados no protótipo
+
+> Esta lista descreve os 7 pacotes atualmente carregáveis pelo motor legado. Ela **não é uma lista de matrizes validadas ou suportadas publicamente**.
 
 - BC&T 2015;
 - Engenharia de Materiais 2017;
@@ -70,7 +82,7 @@ Para duas ou três formações, o programa calcula ainda:
 
 ## Como o cálculo conjunto funciona
 
-1. O histórico é reclassificado em cada matriz com suas equivalências oficiais.
+1. O histórico é reclassificado em cada pacote curricular usando as equivalências cadastradas para aquela análise; a validade acadêmica depende da matriz e da revisão das fontes.
 2. As obrigatórias ainda pendentes são unificadas por disciplina equivalente/nome curricular.
 3. Uma disciplina obrigatória em um curso pode preencher opção limitada ou livre em outro.
 4. Para as cotas flexíveis restantes, uma heurística de cobertura escolhe disciplinas válidas no maior número de cursos possível.
