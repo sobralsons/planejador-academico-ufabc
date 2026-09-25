@@ -99,6 +99,36 @@ def test_derivacao_incompleta_nao_impede_cumprimento_ja_comprovado():
     assert obrigatorias["componentes_indeterminados"] == ["Z"]
 
 
+def test_derivacao_truncada_em_componente_especial_nao_vira_pendente():
+    situacao = _situacao_com_derivacao_truncada()
+    trabalho = DisciplinaCurricular(
+        codigo="Z",
+        nome="Trabalho de Graduação",
+        categoria=Categoria.OBRIGATORIA,
+        creditos=4,
+        t=4,
+        p=0,
+        e=0,
+        i=0,
+    )
+
+    auditoria = auditoria_integralizacao(
+        {"creditos_obrigatorios": 4},
+        {"Z": trabalho},
+        situacao,
+        situacao.codigos_projetados("nenhuma"),
+    )
+    especial = auditoria["especiais"]["trabalho_graduacao"]
+
+    assert especial["pendentes_confirmados"] == []
+    assert especial["pendentes_projetados"] == []
+    assert especial["indeterminados_confirmados"] == ["Z"]
+    assert especial["indeterminados_projetados"] == ["Z"]
+
+    texto = "\n".join(_secao_auditoria(auditoria, situacao))
+    assert "indeterminados por derivação incompleta: Z" in texto
+
+
 def test_derivacao_completa_continua_confiavel():
     situacao = consolidar_historico([_registro("A")], {"A": "B"})
 
