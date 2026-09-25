@@ -65,6 +65,7 @@ def test_capacidades_deixam_limites_de_privacidade_explicitos():
         "aceita_uploads": False,
         "persistencia_habilitada": False,
         "autenticacao_habilitada": False,
+        "autenticacao_local_disponivel": True,
         "contratos_academicos_via_nucleo_python": True,
     }
 
