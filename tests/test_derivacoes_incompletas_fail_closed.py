@@ -78,7 +78,7 @@ def test_derivacao_truncada_fica_indeterminada_sem_virar_pendencia_confirmada():
     assert auditoria["componentes_curriculo_concluidos_confirmados"] == 0
 
     texto = "\n".join(_secao_auditoria(auditoria, situacao))
-    assert "indeterminado" in texto.lower()
+    assert "situação confirmada indeterminada" in texto.lower()
     assert "(pendentes: 4)" not in texto
 
 
