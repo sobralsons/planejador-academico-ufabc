@@ -4,7 +4,7 @@
 -- credenciais e tokens nao pertencem a estas tabelas.
 
 create table public.planejamentos_salvos (
-    planejamento_id text primary key,
+    planejamento_id text not null,
     proprietario_id uuid not null references auth.users(id) on delete cascade,
     curso_id text not null,
     matriz_id text not null,
@@ -26,12 +26,9 @@ create table public.planejamentos_salvos (
         check (char_length(btrim(titulo)) between 1 and 120),
     constraint planejamentos_salvos_schema_v1
         check (schema_version = 1),
-    constraint planejamentos_salvos_id_proprietario_unico
-        unique (planejamento_id, proprietario_id)
+    constraint planejamentos_salvos_pk
+        primary key (proprietario_id, planejamento_id)
 );
-
-create index planejamentos_salvos_proprietario_idx
-    on public.planejamentos_salvos using btree (proprietario_id);
 
 create table public.planejamento_componentes (
     planejamento_id text not null,
@@ -44,17 +41,14 @@ create table public.planejamento_componentes (
     constraint planejamento_componentes_posicao_valida
         check (posicao between 1 and 200),
     constraint planejamento_componentes_pk
-        primary key (planejamento_id, codigo_componente),
+        primary key (proprietario_id, planejamento_id, codigo_componente),
     constraint planejamento_componentes_posicao_unica
-        unique (planejamento_id, posicao),
+        unique (proprietario_id, planejamento_id, posicao),
     constraint planejamento_componentes_plano_fk
-        foreign key (planejamento_id, proprietario_id)
-        references public.planejamentos_salvos (planejamento_id, proprietario_id)
+        foreign key (proprietario_id, planejamento_id)
+        references public.planejamentos_salvos (proprietario_id, planejamento_id)
         on delete cascade
 );
-
-create index planejamento_componentes_proprietario_idx
-    on public.planejamento_componentes using btree (proprietario_id);
 
 alter table public.planejamentos_salvos enable row level security;
 alter table public.planejamento_componentes enable row level security;
