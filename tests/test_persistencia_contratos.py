@@ -5,7 +5,6 @@ import pytest
 from persistencia import (
     ClassePersistencia,
     ErroAutorizacaoPersistencia,
-    ErroConflitoPersistencia,
     RascunhoPlanejamentoPersistivel,
     RepositorioPlanejamentosMemoria,
     politica_dados,
@@ -97,17 +96,17 @@ def test_salvar_com_proprietario_diferente_do_ator_e_rejeitado():
     assert repo.quantidade_total_para_testes() == 0
 
 
-def test_colisao_de_id_entre_usuarios_nao_transfere_propriedade():
+def test_mesmo_id_pode_existir_para_usuarios_diferentes_sem_vazamento():
     repo = RepositorioPlanejamentosMemoria()
-    repo.salvar("user-a", _plano())
+    plano_a = _plano()
+    plano_b = _plano("plano-1", "user-b", titulo="Plano B com mesmo id")
 
-    with pytest.raises(ErroConflitoPersistencia, match="indisponível"):
-        repo.salvar(
-            "user-b",
-            _plano("plano-1", "user-b", titulo="Tentativa de colisão"),
-        )
+    repo.salvar("user-a", plano_a)
+    repo.salvar("user-b", plano_b)
 
-    assert repo.obter("user-a", "plano-1").proprietario_id == "user-a"
+    assert repo.obter("user-a", "plano-1") == plano_a
+    assert repo.obter("user-b", "plano-1") == plano_b
+    assert repo.quantidade_total_para_testes() == 2
 
 
 def test_excluir_todos_remove_somente_dados_do_proprio_usuario():
