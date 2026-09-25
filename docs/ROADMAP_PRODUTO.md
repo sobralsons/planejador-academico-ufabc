@@ -36,7 +36,8 @@ Trabalho técnico sem relação clara com a meta da release não entra automatic
 
 **R0 — Fundação confiável**
 
-Plano operacional: [releases/R0-fundacao-confiavel.md](releases/R0-fundacao-confiavel.md)
+Plano operacional: [releases/R0-fundacao-confiavel.md](releases/R0-fundacao-confiavel.md)  
+Tracker no GitHub: **#27 — R0 — Fundação confiável**
 
 ## Estratégia de releases
 
