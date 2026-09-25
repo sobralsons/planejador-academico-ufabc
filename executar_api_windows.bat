@@ -11,5 +11,5 @@ if not exist ".venv\Scripts\python.exe" (
 
 echo Iniciando API local.
 echo A API ainda e de desenvolvimento e nao deve ser exposta publicamente.
-".venv\Scripts\python.exe" scripts\executar_api_local.py
+".venv\Scripts\python.exe" -m scripts.executar_api_local
 pause
