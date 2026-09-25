@@ -131,6 +131,12 @@ class ResultadoOpcoesSinteticas(ContratoEstrito):
     questoes: tuple[QuestaoAlocacaoSaida, ...]
 
 
+class IdentidadeAutenticadaSaida(ContratoEstrito):
+    user_id: str
+    provedor: Literal["supabase_local"] = "supabase_local"
+    dados_identidade_persistidos: Literal[False] = False
+
+
 class SaudeAPI(ContratoEstrito):
     status: Literal["ok"] = "ok"
     servico: Literal["planejador-academico-ufabc-api"] = (
@@ -146,4 +152,5 @@ class CapacidadesAPI(ContratoEstrito):
     aceita_uploads: Literal[False] = False
     persistencia_habilitada: Literal[False] = False
     autenticacao_habilitada: Literal[False] = False
+    autenticacao_local_disponivel: Literal[True] = True
     contratos_academicos_via_nucleo_python: Literal[True] = True
