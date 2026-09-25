@@ -118,7 +118,11 @@ def auditoria_integralizacao(
     aprovadas e o estágio informado manualmente. Essa separação evita que uma
     projeção otimista apareça como conclusão oficial.
     """
-    confirmadas = set(cumpridas_confirmadas if cumpridas_confirmadas is not None else situacao.concluidas)
+    confirmadas = set(
+        cumpridas_confirmadas
+        if cumpridas_confirmadas is not None
+        else situacao.conclusoes_confiaveis()
+    )
     projetadas = set(cumpridas_projetadas)
     concluidas_curriculo_confirmadas = set(curriculo) & confirmadas
     concluidas_curriculo_projetadas = set(curriculo) & projetadas
@@ -238,7 +242,7 @@ def auditoria_integralizacao(
         "componentes_curriculo_concluidos_projetados": len(concluidas_curriculo_projetadas),
         # Compatibilidade: reflete o cenário projetado.
         "componentes_curriculo_concluidos": len(concluidas_curriculo_projetadas),
-        "componentes_historico_concluidos": len(situacao.concluidas),
+        "componentes_historico_concluidos": len(situacao.conclusoes_confiaveis()),
         "livres_potenciais_fora_da_matriz": livres_potenciais,
         "origens_reconhecimentos": {
             c: sorted(situacao.origens_conclusao.get(c, {c}))
