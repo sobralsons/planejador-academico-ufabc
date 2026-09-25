@@ -9,7 +9,9 @@ venv/
 env/
 
 # IDE / OS
-.vscode/
+.vscode/*
+!.vscode/tasks.json
+.dev-local/
 .idea/
 .DS_Store
 Thumbs.db
@@ -52,3 +54,6 @@ documentos-fonte/*
 
 # Local Supabase/runtime state (when introduced)
 supabase/.temp/
+supabase/.branches/
+supabase/config.toml
+supabase/.gitignore
