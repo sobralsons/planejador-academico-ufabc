@@ -68,8 +68,10 @@ try {
     $null = New-Item -ItemType Directory -Force -Path $stateDir
     $lock = [IO.File]::Open((Join-Path $stateDir 'command.lock'), 'OpenOrCreate', 'ReadWrite', 'None')
     if ($Command -eq 'test') {
+        $pytestTemp = Join-Path $stateDir 'pytest-temp'
+        $pytestCache = Join-Path $stateDir 'pytest-cache'
         Invoke-Python -Arguments @('-m','compileall','-q','app.py','app_interno.py','main.py','planejador','ferramentas','api','persistencia','scripts')
-        Invoke-Python -Arguments @('-m','pytest','-q')
+        Invoke-Python -Arguments @('-m','pytest','-q','--basetemp',$pytestTemp,'-o',"cache_dir=$pytestCache")
     } elseif ($Command -eq 'stop') {
         $owned = Get-OwnedApi
         if ($null -ne $owned) { Stop-OwnedApi -Owner $owned }
