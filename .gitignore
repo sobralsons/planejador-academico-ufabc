@@ -54,4 +54,5 @@ documentos-fonte/*
 
 # Local Supabase/runtime state (when introduced)
 supabase/.temp/
+supabase/.branches/
 supabase/config.toml
