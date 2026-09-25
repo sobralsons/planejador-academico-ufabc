@@ -4,9 +4,17 @@ from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 
+from .autenticacao import (
+    ConfiguracaoAutenticacaoInvalida,
+    ServicoAutenticacaoIndisponivel,
+    TokenAusenteOuInvalido,
+    extrair_bearer,
+    validar_token_supabase_local,
+)
 from .contratos import (
     CapacidadesAPI,
     CenarioSinteticoEntrada,
+    IdentidadeAutenticadaSaida,
     ResultadoOpcoesSinteticas,
     SaudeAPI,
 )
@@ -57,6 +65,32 @@ def health() -> SaudeAPI:
 @app.get("/v1/capabilities", response_model=CapacidadesAPI)
 def capabilities() -> CapacidadesAPI:
     return CapacidadesAPI()
+
+
+@app.get(
+    "/v1/dev/auth/me",
+    response_model=IdentidadeAutenticadaSaida,
+)
+def auth_me_local(request: Request) -> IdentidadeAutenticadaSaida | JSONResponse:
+    try:
+        token = extrair_bearer(request.headers.get("authorization"))
+        identidade = validar_token_supabase_local(token)
+    except TokenAusenteOuInvalido:
+        return JSONResponse(
+            status_code=401,
+            headers={"WWW-Authenticate": "Bearer"},
+            content={"detail": {"code": "nao_autenticado"}},
+        )
+    except (
+        ConfiguracaoAutenticacaoInvalida,
+        ServicoAutenticacaoIndisponivel,
+    ):
+        return JSONResponse(
+            status_code=503,
+            content={"detail": {"code": "auth_local_indisponivel"}},
+        )
+
+    return IdentidadeAutenticadaSaida(user_id=identidade.user_id)
 
 
 @app.post(
