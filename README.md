@@ -4,6 +4,16 @@
 
 Aplicação local para planejar **a trajetória completa** e a matrícula de cada quadrimestre. O sistema lê o histórico, compara matrizes curriculares, estima datas de conclusão, identifica disciplinas compartilhadas e monta grades sem conflito.
 
+## Desenvolvimento orientado a produto
+
+O desenvolvimento é guiado por visão, releases e critérios de saída, e não por uma sequência solta de funcionalidades.
+
+- **Roadmap macro e release ativa:** [docs/ROADMAP_PRODUTO.md](docs/ROADMAP_PRODUTO.md)
+- **Plano operacional da R0 — Fundação confiável:** [docs/releases/R0-fundacao-confiavel.md](docs/releases/R0-fundacao-confiavel.md)
+- **Regras obrigatórias de desenvolvimento:** [AGENTS.md](AGENTS.md)
+
+A entrada pública continua bloqueada até que os gates acadêmicos, de revisão e de segurança definidos pelo projeto sejam satisfeitos.
+
 ## O que mudou nesta versão
 
 A página inicial agora funciona como um **Laboratório de Trajetórias**. Antes de pensar nos horários, você pode responder:
