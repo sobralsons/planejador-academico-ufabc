@@ -9,7 +9,7 @@ if not exist ".venv\Scripts\python.exe" (
   exit /b 1
 )
 
-echo Iniciando API local em http://127.0.0.1:8000
+echo Iniciando API local.
 echo A API ainda e de desenvolvimento e nao deve ser exposta publicamente.
-".venv\Scripts\python.exe" -m uvicorn api.app:app --host 127.0.0.1 --port 8000
+".venv\Scripts\python.exe" scripts\executar_api_local.py
 pause
