@@ -210,6 +210,18 @@ def test_stop_preserves_volumes_even_with_invalid_api_env(commands, monkeypatch)
     assert "network" not in commands
 
 
+def test_run_decodifica_saida_utf8_sem_depender_do_locale_do_windows(tmp_path, monkeypatch):
+    monkeypatch.setattr(dev, "ROOT", tmp_path)
+
+    saida = dev.run([
+        sys.executable,
+        "-c",
+        "import sys; sys.stdout.buffer.write('А'.encode('utf-8'))",
+    ])
+
+    assert saida == "А"
+
+
 def test_command_failure_does_not_print_secrets(monkeypatch, capsys):
     monkeypatch.setattr(dev.subprocess, "run", lambda *a, **kw: subprocess.CompletedProcess(a, 1, "SECRET", "SECRET"))
     with pytest.raises(RuntimeError) as error:
