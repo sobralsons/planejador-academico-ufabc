@@ -146,10 +146,11 @@ def test_token_rejeitado_pelo_auth_server_vira_nao_autenticado(monkeypatch):
 
 def test_endpoint_retorna_somente_id_opaco_sem_email_ou_token(monkeypatch):
     token = "TOKEN-SENSIVEL-DE-TESTE"
+    _configurar_local(monkeypatch)
     monkeypatch.setattr(
         api_app,
         "validar_token_supabase_local",
-        lambda recebido: auth.IdentidadeAutenticada(user_id=USER_ID)
+        lambda recebido, _configuracao=None: auth.IdentidadeAutenticada(user_id=USER_ID)
         if recebido == token
         else (_ for _ in ()).throw(auth.TokenAusenteOuInvalido()),
     )
@@ -170,10 +171,11 @@ def test_endpoint_retorna_somente_id_opaco_sem_email_ou_token(monkeypatch):
 
 
 def test_endpoint_falha_fechado_quando_auth_local_indisponivel(monkeypatch):
+    _configurar_local(monkeypatch)
     monkeypatch.setattr(
         api_app,
         "validar_token_supabase_local",
-        lambda _token: (_ for _ in ()).throw(
+        lambda _token, _configuracao=None: (_ for _ in ()).throw(
             auth.ServicoAutenticacaoIndisponivel()
         ),
     )
