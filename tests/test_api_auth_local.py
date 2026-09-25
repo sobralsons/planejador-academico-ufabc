@@ -233,3 +233,13 @@ def test_launcher_rejeita_host_nao_local(monkeypatch):
 
     with pytest.raises(RuntimeError, match="só pode escutar"):
         launcher.executar()
+
+
+def test_bat_executa_launcher_como_modulo_para_preservar_raiz_de_importacao():
+    from pathlib import Path
+
+    raiz = Path(__file__).resolve().parents[1]
+    conteudo = (raiz / "executar_api_windows.bat").read_text(encoding="utf-8")
+
+    assert '-m scripts.executar_api_local' in conteudo
+    assert 'scripts\\executar_api_local.py' not in conteudo
