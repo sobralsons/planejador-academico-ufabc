@@ -260,17 +260,42 @@ def _comparar_com_legado(
         "creditos_livres": "livre",
     }
     legado_por_categoria = resultado_legado.get("por_categoria", {})
-    comparacao = {}
+    comparaveis: dict[str, tuple[str | None, int | None]] = {}
     for requisito_id, categoria in categorias.items():
-        regra = requisitos.get(requisito_id)
-        generico = regra.estado.value if regra else None
         resultado_categoria = legado_por_categoria.get(categoria, {})
         legado = resultado_categoria.get("estado_confirmado")
-        valor_generico = regra.valor_observado if regra else None
         valor_legado = None
         if legado is not None:
             valor_legado = resultado_categoria.get("integralizado_confirmado", 0)
             valor_legado += resultado_categoria.get("excedente_confirmado", 0)
+        comparaveis[requisito_id] = (legado, valor_legado)
+
+    regra_atividades = requisitos.get("atividades_complementares")
+    horas_legado = resultado_legado.get("atividades_complementares_horas")
+    valor_atividades = (
+        int(horas_legado) if _inteiro_nao_negativo(horas_legado) else None
+    )
+    estado_atividades = None
+    if (
+        regra_atividades is not None
+        and regra_atividades.minimo_exigido is not None
+        and valor_atividades is not None
+    ):
+        estado_atividades = (
+            "cumprido"
+            if valor_atividades >= regra_atividades.minimo_exigido
+            else "pendente"
+        )
+    comparaveis["atividades_complementares"] = (
+        estado_atividades,
+        valor_atividades,
+    )
+
+    comparacao = {}
+    for requisito_id, (legado, valor_legado) in comparaveis.items():
+        regra = requisitos.get(requisito_id)
+        generico = regra.estado.value if regra else None
+        valor_generico = regra.valor_observado if regra else None
         if generico is None or legado is None:
             classificacao = "nao_comparavel"
             motivo = "Um dos motores não produziu estado comparável."

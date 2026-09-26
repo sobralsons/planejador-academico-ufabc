@@ -71,6 +71,9 @@ def test_bct_2015_executa_comparacao_controlada_sem_expor_no_legado():
     assert sombra.conjunto.evidencias
     assert sombra.resultado.alocacao.alocacoes
     assert sombra.divergencias["creditos_obrigatorios"].classificacao == "concordante"
+    atividades = sombra.divergencias["atividades_complementares"]
+    assert atividades.classificacao == "concordante"
+    assert atividades.valor_legado == atividades.valor_generico == 120
     assert all(unidade.value != "horas" for unidade in sombra.conjunto.unidades_completas)
 
 
@@ -88,6 +91,32 @@ def test_aplicabilidade_nao_confirmada_bloqueia_conclusoes_do_piloto():
     assert sombra.aplicabilidade == "indeterminada"
     assert sombra.estado == "indeterminado"
     assert sombra.requisitos == {}
+
+
+def test_comparacao_detecta_divergencia_em_atividades_complementares():
+    metadados, curriculo, situacao = _cenario_bct()
+    legado = auditoria_integralizacao(
+        metadados,
+        curriculo,
+        situacao,
+        set(situacao.concluidas),
+    )
+    legado["atividades_complementares_horas"] = 60
+
+    sombra = avaliar_bct_2015_em_modo_sombra(
+        metadados,
+        curriculo,
+        situacao,
+        resultado_legado=legado,
+        pacote_piloto_confirmado=True,
+        aplicabilidade_confirmada=True,
+        classificacoes_validadas=True,
+    )
+
+    divergencia = sombra.divergencias["atividades_complementares"]
+    assert divergencia.valor_legado == 60
+    assert divergencia.valor_generico == 120
+    assert divergencia.classificacao == "divergente_requer_revisao"
 
 
 def test_classificacoes_nao_validadas_nao_produzem_creditos_por_categoria():
