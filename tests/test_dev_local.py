@@ -296,3 +296,21 @@ if ($listeners.Count) { throw 'Orphan child still listening' }
         str(root), str(port), str(tmp_path),
     ], capture_output=True, text=True, timeout=90, env=dict(os.environ))
     assert result.returncode == 0, result.stdout + result.stderr
+
+
+def test_dev_ps1_isola_temporarios_do_pytest_em_dev_local():
+    raiz = Path(__file__).resolve().parents[1]
+    conteudo = (raiz / "dev.ps1").read_text(encoding="utf-8")
+
+    assert "$pytestTemp = Join-Path $stateDir 'pytest-temp'" in conteudo
+    assert "$pytestCache = Join-Path $stateDir 'pytest-cache'" in conteudo
+    assert "'--basetemp',$pytestTemp" in conteudo
+    assert '"cache_dir=$pytestCache"' in conteudo
+
+
+def test_dev_ps1_expoe_comando_e2e_sem_bloco_powershell_fragil():
+    raiz = Path(__file__).resolve().parents[1]
+    conteudo = (raiz / "dev.ps1").read_text(encoding="utf-8")
+
+    assert "'test-e2e'" in conteudo
+    assert "scripts.testar_persistencia_e2e_local" in conteudo

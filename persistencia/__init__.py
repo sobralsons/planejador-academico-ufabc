@@ -15,6 +15,13 @@ from .repositorio_memoria import (
     ErroConflitoPersistencia,
     RepositorioPlanejamentosMemoria,
 )
+from .repositorio_supabase_local import (
+    AcessoPersistenciaSupabaseNegado,
+    ErroPersistenciaSupabaseLocal,
+    PersistenciaSupabaseIndisponivel,
+    PersistenciaSupabaseRejeitada,
+    RepositorioPlanejamentosSupabaseLocal,
+)
 
 __all__ = [
     "ClassePersistencia",
@@ -25,4 +32,9 @@ __all__ = [
     "ErroAutorizacaoPersistencia",
     "ErroConflitoPersistencia",
     "RepositorioPlanejamentosMemoria",
+    "AcessoPersistenciaSupabaseNegado",
+    "ErroPersistenciaSupabaseLocal",
+    "PersistenciaSupabaseIndisponivel",
+    "PersistenciaSupabaseRejeitada",
+    "RepositorioPlanejamentosSupabaseLocal",
 ]

@@ -1,4 +1,6 @@
-# Validação técnica e acadêmica da expansão multicurso
+> **DOCUMENTO HISTÓRICO — NÃO REPRESENTA O ESTADO ACADÊMICO ATUAL.** Este arquivo registra uma etapa anterior do protótipo. Contagens de testes e expressões como “validado” referem-se ao escopo técnico/estrutural daquele momento e não certificam suporte acadêmico público. Consulte [docs/ESTADO_ACADEMICO_ATUAL.md](docs/ESTADO_ACADEMICO_ATUAL.md).
+
+# Registro histórico de validação da expansão multicurso
 
 ## Arquitetura
 

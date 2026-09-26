@@ -343,7 +343,27 @@ def _secao_auditoria(auditoria: dict, situacao: SituacaoAcademica) -> list[str]:
         ("livre", "Livres"),
     ):
         dados = auditoria["por_categoria"][categoria]
-        if categoria == "livre":
+        if (
+            dados.get("estado_confirmado") == "indeterminado"
+            or dados.get("estado_estimado") == "indeterminado"
+        ):
+            codigos = ", ".join(dados.get("componentes_indeterminados", ())) or "não identificados"
+            estado_confirmado = (
+                "situação confirmada indeterminada"
+                if dados.get("estado_confirmado") == "indeterminado"
+                else f"pendentes confirmados: {dados['pendente_confirmado']}"
+            )
+            estado_estimado = (
+                "situação projetada indeterminada"
+                if dados.get("estado_estimado") == "indeterminado"
+                else f"pendentes projetados: {dados['pendente_estimado']}"
+            )
+            linhas.append(
+                f"{rotulo}: {dados['integralizado_confirmado']} cr comprovados; "
+                f"{estado_confirmado}; {dados['integralizado_estimado']} / {dados['exigido']} cr projetados; "
+                f"{estado_estimado}. Derivações incompletas: {codigos}"
+            )
+        elif categoria == "livre":
             linhas.append(
                 f"{rotulo}: {dados['integralizado_estimado']} / {dados['exigido']} cr estimados "
                 f"({dados['integralizado_confirmado']} diretamente classificados + "
@@ -378,11 +398,17 @@ def _secao_auditoria(auditoria: dict, situacao: SituacaoAcademica) -> list[str]:
         if tipo == "estagio":
             status = dados.get("status_informado", "nao_iniciado")
             status_extra = f"; situação informada: {ESTAGIO_STATUS_ROTULOS.get(status, status)}"
+        indeterminados = dados.get("indeterminados_projetados", ())
+        indeterminacao = (
+            f"; indeterminados por derivação incompleta: {', '.join(indeterminados)}"
+            if indeterminados
+            else ""
+        )
         linhas.append(
             f"{rotulo}: {dados.get('integralizado_confirmado', dados['integralizado'])} cr confirmados; "
             f"{dados.get('integralizado_projetado', dados['integralizado'])} / {dados['exigido']} cr projetados; "
-            f"pendentes na projeção: {', '.join(dados.get('pendentes_projetados', dados['pendentes'])) or 'nenhum'}"
-            f"{status_extra}"
+            f"pendentes comprovados na projeção: {', '.join(dados.get('pendentes_projetados', dados['pendentes'])) or 'nenhum'}"
+            f"{indeterminacao}{status_extra}"
         )
     linhas.append("")
     return linhas

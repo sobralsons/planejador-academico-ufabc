@@ -137,7 +137,7 @@ def _gerar_cenarios(
             ofertas_cenario,
             curriculo,
             cumpridas,
-            situacao.concluidas,
+            situacao.conclusoes_confiaveis(),
             _config_busca(config, quadrimestre_planejado, avaliacoes_docentes, top_n=1, simplificada=True),
             ofertas_resultado.diagnosticos,
         )
@@ -295,7 +295,7 @@ def executar(config_path: Path, retornar_contexto: bool = False, *, base_dados: 
         periodo_planejamento,
         config.quadrimestre_planejado,
     )
-    cumpridas_confirmadas = set(situacao.concluidas)
+    cumpridas_confirmadas = situacao.conclusoes_confiaveis()
     cumpridas = situacao.codigos_projetados(
         config.projecao_em_andamento,
         config.disciplinas_em_andamento_assumidas_aprovadas,
@@ -353,7 +353,7 @@ def executar(config_path: Path, retornar_contexto: bool = False, *, base_dados: 
         ofertas_para_planejamento,
         curriculo,
         cumpridas,
-        situacao.concluidas,
+        cumpridas_confirmadas,
         busca,
         resultado_ofertas.diagnosticos,
     )
@@ -367,7 +367,7 @@ def executar(config_path: Path, retornar_contexto: bool = False, *, base_dados: 
             ofertas_para_planejamento,
             curriculo,
             cumpridas,
-            situacao.concluidas,
+            cumpridas_confirmadas,
             _config_busca(
                 config,
                 quadrimestre_planejado,
@@ -576,7 +576,7 @@ def executar(config_path: Path, retornar_contexto: bool = False, *, base_dados: 
             "modo_ajuste": modo_ajuste,
             "curriculo": curriculo,
             "cumpridas_projetadas": set(cumpridas),
-            "concluidas_reais": set(situacao.concluidas),
+            "concluidas_reais": set(cumpridas_confirmadas),
             "configuracao_busca": busca,
             "periodo_planejamento": periodo_planejamento,
             "quadrimestre_planejado": quadrimestre_planejado,

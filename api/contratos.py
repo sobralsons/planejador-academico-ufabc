@@ -23,6 +23,19 @@ Identificador = Annotated[
         pattern=r"^[A-Za-z0-9_.:-]+$",
     ),
 ]
+IdentificadorPersistencia = Annotated[
+    str,
+    StringConstraints(
+        strip_whitespace=True,
+        min_length=1,
+        max_length=128,
+        pattern=r"^[A-Za-z0-9_.:-]+$",
+    ),
+]
+TituloPlanejamento = Annotated[
+    str,
+    StringConstraints(strip_whitespace=True, min_length=1, max_length=120),
+]
 
 
 class ContratoEstrito(BaseModel):
@@ -131,6 +144,46 @@ class ResultadoOpcoesSinteticas(ContratoEstrito):
     questoes: tuple[QuestaoAlocacaoSaida, ...]
 
 
+class RascunhoPlanejamentoEntrada(ContratoEstrito):
+    planejamento_id: IdentificadorPersistencia
+    curso_id: IdentificadorPersistencia
+    matriz_id: IdentificadorPersistencia
+    versao_regras: IdentificadorPersistencia
+    titulo: TituloPlanejamento
+    componentes_planejados: tuple[CodigoComponente, ...] = Field(
+        default=(),
+        max_length=200,
+    )
+
+    @field_validator("componentes_planejados")
+    @classmethod
+    def componentes_devem_ser_unicos(
+        cls,
+        valor: tuple[str, ...],
+    ) -> tuple[str, ...]:
+        if len(set(valor)) != len(valor):
+            raise ValueError("Planejamento não pode repetir o mesmo componente.")
+        return valor
+
+
+class RenomearPlanejamentoEntrada(ContratoEstrito):
+    titulo: TituloPlanejamento
+
+
+class RascunhoPlanejamentoSaida(ContratoEstrito):
+    planejamento_id: str
+    curso_id: str
+    matriz_id: str
+    versao_regras: str
+    titulo: str
+    componentes_planejados: tuple[str, ...]
+    schema_version: Literal[1] = 1
+
+
+class ListaPlanejamentosSaida(ContratoEstrito):
+    itens: tuple[RascunhoPlanejamentoSaida, ...]
+
+
 class IdentidadeAutenticadaSaida(ContratoEstrito):
     user_id: str
     provedor: Literal["supabase_local"] = "supabase_local"
@@ -151,6 +204,7 @@ class CapacidadesAPI(ContratoEstrito):
     aceita_dados_pessoais: Literal[False] = False
     aceita_uploads: Literal[False] = False
     persistencia_habilitada: Literal[False] = False
+    persistencia_local_disponivel: Literal[True] = True
     autenticacao_habilitada: Literal[False] = False
     autenticacao_local_disponivel: Literal[True] = True
     contratos_academicos_via_nucleo_python: Literal[True] = True

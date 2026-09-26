@@ -1,8 +1,10 @@
-# Validação do módulo de trajetórias
+> **DOCUMENTO HISTÓRICO — NÃO REPRESENTA O ESTADO ACADÊMICO ATUAL.** Este arquivo registra uma etapa anterior do protótipo. Contagens de testes e expressões como “validado” referem-se ao escopo técnico/estrutural daquele momento e não certificam suporte acadêmico público. Consulte [docs/ESTADO_ACADEMICO_ATUAL.md](docs/ESTADO_ACADEMICO_ATUAL.md).
+
+# Registro histórico de validação do módulo de trajetórias
 
 ## Escopo
 
-Foram validados:
+Naquele estágio, foram exercitados tecnicamente:
 
 - curso único;
 - mudança de curso;

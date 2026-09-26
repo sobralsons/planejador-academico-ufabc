@@ -1,3 +1,5 @@
+> **DOCUMENTO HISTÓRICO — NÃO REPRESENTA O ESTADO ACADÊMICO ATUAL.** Este arquivo registra uma etapa anterior do protótipo. Contagens de testes e expressões como “validado” referem-se ao escopo técnico/estrutural daquele momento e não certificam suporte acadêmico público. Consulte [docs/ESTADO_ACADEMICO_ATUAL.md](docs/ESTADO_ACADEMICO_ATUAL.md).
+
 # Relatório de validação — Planejador Multicurso UFABC
 
 ## Resultado da suíte
@@ -12,7 +14,7 @@ validar_windows.bat
 
 O atalho instala as dependências e executa `python -m pytest -q`, cobrindo também os testes funcionais escritos fora de classes `unittest`.
 
-## Matrizes validadas estruturalmente
+## Matrizes verificadas estruturalmente naquele estágio
 
 O arquivo `dados/validacao_curriculos.json` fixa, por currículo:
 
@@ -94,7 +96,7 @@ A abertura do Streamlit no navegador depende da instalação das dependências n
 
 ## Limites acadêmicos
 
-A validação confirma a coerência do software com as matrizes estruturadas. Ela não substitui a conferência oficial de:
+A validação histórica confirmou coerência técnica com os pacotes estruturados naquele estágio. Ela não constitui validação acadêmica vigente nem substitui a conferência oficial de:
 
 - integralização no SIGAA;
 - equivalências excepcionais;

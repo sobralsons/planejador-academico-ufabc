@@ -1,4 +1,6 @@
-# Melhorias implementadas — versão validada
+> **DOCUMENTO HISTÓRICO — NÃO REPRESENTA O ESTADO ACADÊMICO ATUAL.** Este arquivo registra uma etapa anterior do protótipo. Contagens de testes e expressões como “validado” referem-se ao escopo técnico/estrutural daquele momento e não certificam suporte acadêmico público. Consulte [docs/ESTADO_ACADEMICO_ATUAL.md](docs/ESTADO_ACADEMICO_ATUAL.md).
+
+# Registro histórico de melhorias implementadas
 
 - Certificado de busca completa ou limitada.
 - Configuração efetiva salva no resumo JSON.
@@ -23,6 +25,8 @@
 - Detalhamento da previsão: carga regular, créditos de TG, créditos de estágio e gargalo determinante.
 
 ## Integração UFABC Next
+
+> **Correção de estado:** a coleta autenticada automática descrita abaixo pertence ao protótipo histórico e não faz parte do fluxo atual autorizado. O código atual não deve reativar login/coleta automática sem fonte autorizada e revisão específica de segurança e privacidade. A interface interna atual aceita apenas importação manual de JSON quando esse dado é fornecido legitimamente pelo usuário.
 
 - coleta automática por Playwright após login institucional;
 - consulta direta à API usando a sessão local do navegador;
