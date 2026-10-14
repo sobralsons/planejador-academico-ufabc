@@ -188,6 +188,59 @@ def test_bcd_usa_codigo_do_rol_oficial_do_tcc_e_aceita_alias_alternativo():
     assert metadados["trabalho_final_creditos"] == 12
 
 
+def test_bcd_usa_carga_oficial_de_pesquisa_operacional(tmp_path, monkeypatch):
+    from ferramentas import gerar_curriculos_multicurso as gerador
+
+    registro = carregar_registro_curriculos(BASE)
+    metadados, curriculo, equivalencias, compostas = resolver_curriculo(
+        BASE, registro["bcd_2023"]
+    )
+    pesquisa_operacional = curriculo["ESTG013-17"]
+    assert pesquisa_operacional.nome == "Pesquisa Operacional"
+    assert (
+        pesquisa_operacional.creditos,
+        pesquisa_operacional.t,
+        pesquisa_operacional.p,
+        pesquisa_operacional.e,
+        pesquisa_operacional.i,
+    ) == (6, 4, 2, 0, 9)
+
+    situacao = consolidar_historico(
+        [
+            RegistroHistorico(
+                "2026.1", "OL", "ESTG013-17", "Pesquisa Operacional",
+                6, 72, 0, "", "A", "APR", "",
+            )
+        ],
+        equivalencias,
+        compostas,
+    )
+    auditoria = auditoria_integralizacao(
+        metadados, curriculo, situacao, situacao.conclusoes_confiaveis()
+    )
+    assert (
+        auditoria["por_categoria"]["opcao_limitada"]["integralizado_confirmado"]
+        == 6
+    )
+
+    monkeypatch.setattr(gerador, "SAIDA", tmp_path)
+    gerador.main()
+    gerado = json.loads(
+        (tmp_path / "bcd_2023.json").read_text(encoding="utf-8")
+    )
+    disciplina = next(
+        item for item in gerado["disciplinas"] if item["codigo"] == "ESTG013-17"
+    )
+    assert disciplina["nome"] == "Pesquisa Operacional"
+    assert (
+        disciplina["creditos"],
+        disciplina["t"],
+        disciplina["p"],
+        disciplina["e"],
+        disciplina["i"],
+    ) == (6, 4, 2, 0, 9)
+
+
 def test_bcc_2023_usa_programacao_estruturada_do_ppc():
     registro = carregar_registro_curriculos(BASE)
     _, curriculo, _, _ = resolver_curriculo(BASE, registro["bcc_2023"])

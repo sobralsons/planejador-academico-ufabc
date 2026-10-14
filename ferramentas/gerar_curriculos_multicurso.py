@@ -523,6 +523,14 @@ def main() -> None:
          "creditos_obrigatorios":178,"creditos_obrigatorios_regulares":166,"creditos_opcao_limitada":24,"creditos_livres":14,
          "atividades_complementares_horas":48,"extensao_horas":294,"estagio_obrigatorio_creditos":0,"trabalho_final_creditos":12,"prazo_ideal_quadrimestres":12},
         {"matriz":"PPC Bacharelado em Ciência de Dados 2023","opcao_limitada":"Ato Decisório CG 57/2024"},
+        extras={
+            "ESTG013-17": {
+                **_parse_linhas_tabela(
+                    BASE / "dados_fontes" / "bcd_2023_opcao_limitada.txt", "atual"
+                )["ESTG013-17"],
+                "nome": "Pesquisa Operacional",
+            }
+        },
         equivalencias={"BCM0505-15":"BCM0505-22","MCTA001-17":"MCCC001-23","MCZB008-23":"MCBD008-23"},
         duracoes_especiais={"trabalho_final_quadrimestres":1},
     )
