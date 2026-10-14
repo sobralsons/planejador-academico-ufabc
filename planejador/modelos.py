@@ -18,6 +18,15 @@ class Categoria(str, Enum):
     LIVRE = "livre"
 
 
+class EquivalenciasAcademicas(dict[str, str]):
+    """Mapa compatível com dict, com identidades internas explicitamente separadas."""
+
+    def __init__(self, academicas: dict[str, str], aliases_internos: dict[str, str]):
+        super().__init__(academicas)
+        self.aliases_internos = dict(aliases_internos)
+        self.update(aliases_internos)
+
+
 class TipoComponente(str, Enum):
     DISCIPLINA_REGULAR = "disciplina_regular"
     ENGENHARIA_UNIFICADA = "engenharia_unificada"
@@ -184,6 +193,7 @@ class SituacaoAcademica:
     # código. Isso preserva a diferença entre A+B -> C e A -> C / B -> C.
     derivacoes_conclusao: dict[str, set[frozenset[str]]] = field(default_factory=dict)
     derivacoes_incompletas: set[str] = field(default_factory=set)
+    aliases_internos: dict[str, str] = field(default_factory=dict)
 
     def conclusoes_confiaveis(self) -> set[str]:
         """Conclusões que podem ser usadas por consumidores acadêmicos.
@@ -259,7 +269,7 @@ class SituacaoAcademica:
         if modo_norm in {"todas", "otimista", "true"}:
             codigos.update(self.em_andamento)
         elif modo_norm in {"personalizada", "personalizado"}:
-            permitidas = set(codigos_personalizados)
+            permitidas = {self.aliases_internos.get(c, c) for c in codigos_personalizados}
             codigos.update(self.em_andamento & permitidas)
         elif modo_norm not in {"nenhuma", "conservador", "false"}:
             raise ValueError(

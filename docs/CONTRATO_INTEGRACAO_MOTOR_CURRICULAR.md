@@ -46,6 +46,18 @@ O adaptador de integração não pode inventar equivalências, categorias, tags 
 
 O histórico entra inicialmente como `SituacaoAcademica`, produzido pela consolidação do parser.
 
+Aliases internos são identidades do próprio planejador, não convalidações oficiais.
+`carregar_equivalencias` retorna um `EquivalenciasAcademicas` compatível com `dict`,
+preservando separadamente `aliases_internos`; esse objeto deve chegar à consolidação
+sem conversão para um dicionário simples. A consolidação agrupa código canônico e
+alias como um único componente, sem modificar os registros originais do chamador.
+Isso impede créditos extras e evidências duplicadas nos dois motores. Aliases
+apontam diretamente ao código canônico; ciclos, encadeamentos e conflitos são
+rejeitados. Créditos ou cargas divergentes entre tentativas continuam sujeitos às
+validações quantitativas da conversão; normalizar identidade não resolve a divergência.
+Regras acadêmicas simples ou compostas devem referenciar somente códigos canônicos;
+o loader rejeita aliases internos nesses campos para evitar reconhecimentos incompletos.
+
 A fronteira obrigatória para o motor genérico é:
 
 `converter_historico_consolidado_em_evidencias(...)`

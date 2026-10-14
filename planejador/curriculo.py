@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from .modelos import Categoria, DisciplinaCurricular
+from .modelos import Categoria, DisciplinaCurricular, EquivalenciasAcademicas
 from .utils import garantir_arquivo, limpar_codigo
 
 
@@ -44,7 +44,7 @@ def carregar_curriculo(caminho: str | Path) -> tuple[dict, dict[str, DisciplinaC
 
 def carregar_equivalencias(
     caminho: str | Path,
-) -> tuple[dict[str, str], list[tuple[set[str], str]]]:
+) -> tuple[EquivalenciasAcademicas, list[tuple[set[str], str]]]:
     path = garantir_arquivo(caminho, "Arquivo de equivalências")
     with path.open("r", encoding="utf-8") as arquivo:
         bruto = json.load(arquivo)
@@ -53,13 +53,32 @@ def carregar_equivalencias(
     for origem, destino in bruto.get("equivalencias_academicas", {}).items():
         simples[limpar_codigo(origem)] = limpar_codigo(destino)
 
+    # O mapa continua servindo ao mapeamento de ofertas, mas a consolidação
+    # precisa distinguir identidade interna de convalidação acadêmica.
+    aliases: dict[str, str] = {}
+    for origem, destino in bruto.get("aliases_internos", {}).items():
+        origem_limpa = limpar_codigo(origem)
+        destino_limpo = limpar_codigo(destino)
+        if not origem_limpa or not destino_limpo or origem_limpa in simples:
+            raise ValueError(f"Alias interno conflitante: {origem_limpa}")
+        if origem_limpa in aliases and aliases[origem_limpa] != destino_limpo:
+            raise ValueError(f"Alias interno conflitante: {origem_limpa}")
+        aliases[origem_limpa] = destino_limpo
+    # Aliases apontam diretamente ao código canônico, nunca a outro alias.
+    if set(aliases.values()) & set(aliases):
+        raise ValueError("Alias interno com destino não canônico")
+    if set(simples.values()) & set(aliases):
+        raise ValueError("Alias interno não pode ser destino de equivalência acadêmica")
+
     compostas: list[tuple[set[str], str]] = []
     for regra in bruto.get("equivalencias_compostas", []):
         origens = {limpar_codigo(c) for c in regra.get("origens", [])}
         destino = limpar_codigo(regra.get("destino", ""))
+        if (origens | {destino}) & set(aliases):
+            raise ValueError("Alias interno não pode integrar equivalência composta")
         if origens and destino:
             compostas.append((origens, destino))
-    return simples, compostas
+    return EquivalenciasAcademicas(simples, aliases), compostas
 
 
 def carregar_aliases_oferta(caminho: str | Path) -> dict[str, str]:

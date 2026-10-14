@@ -1,6 +1,9 @@
 import json
 from pathlib import Path
 
+import pytest
+
+from planejador.academico import auditoria_integralizacao
 from planejador.historico import consolidar_historico
 from planejador.modelos import (
     Categoria, DisciplinaCurricular, Grade, Horario, Oferta, Recorrencia,
@@ -50,6 +53,82 @@ def test_equivalencia_bcc_2017_para_2023_integraliza_disciplina():
     situacao = consolidar_historico([r], equivalencias, compostas, {}, ResumoHistorico())
     assert "MCCC001-23" in situacao.concluidas
     assert "MCCC001-23" in curriculo
+
+
+def test_tcc_bcc_2023_usa_codigo_oficial_e_reconhece_alias_interno():
+    registro = carregar_registro_curriculos(BASE)
+    metadados, curriculo, equivalencias, compostas = resolver_curriculo(BASE, registro["bcc_2023"])
+    assert "MCCC017-23" in curriculo
+    assert "BCC-TCC-23" not in curriculo
+    assert curriculo["MCCC017-23"].creditos == 12
+    assert equivalencias["BCC-TCC-23"] == "MCCC017-23"
+
+    for codigos in (("MCCC017-23",), ("BCC-TCC-23",), ("MCCC017-23", "BCC-TCC-23")):
+        registros = [
+            RegistroHistorico("2026.2", "OB", codigo, "Trabalho de Conclusão de Curso em Ciência da Computação", 12, 144, 0, "", "A", "APR", "")
+            for codigo in codigos
+        ]
+        situacao = consolidar_historico(registros, equivalencias, compostas, {}, ResumoHistorico())
+        assert "MCCC017-23" in situacao.concluidas
+        auditoria = auditoria_integralizacao(
+            metadados, curriculo, situacao, set(situacao.concluidas)
+        )
+        assert auditoria["por_categoria"]["obrigatoria"]["integralizado_confirmado"] == 12
+        assert auditoria["livres_potenciais_fora_da_matriz"] == 0
+
+
+@pytest.mark.parametrize("codigos,obrigatorios,livres", [
+    ((), 0, 0),
+    (("MCTA031-17",), 12, 0),
+    (("MCTA021-13",), 12, 0),
+    (("MCTA029-17",), 0, 8),
+    (("MCTA030-17",), 0, 8),
+    (("MCTA029-17", "MCTA030-17"), 0, 16),
+    (("MCTA029-17", "MCTA030-17", "MCTA031-17"), 12, 16),
+    (("MCTA019-13", "MCTA020-13", "MCTA021-13"), 12, 16),
+])
+def test_transicao_tcc_bcc_2023_preserva_projetos_i_ii_como_livres(codigos, obrigatorios, livres):
+    # Ato Decisório CG 44/2023, Anexo II, Tabela 1, página 11.
+    registro = carregar_registro_curriculos(BASE)
+    metadados, curriculo, equivalencias, compostas = resolver_curriculo(BASE, registro["bcc_2023"])
+    registros = [
+        RegistroHistorico("2026.1", "OB", codigo, "Projeto Sintético", 8, 96, 0, "", "A", "APR", "")
+        for codigo in codigos
+    ]
+    situacao = consolidar_historico(registros, equivalencias, compostas)
+    auditoria = auditoria_integralizacao(metadados, curriculo, situacao, situacao.conclusoes_confiaveis())
+    assert auditoria["por_categoria"]["obrigatoria"]["integralizado_confirmado"] == obrigatorios
+    assert auditoria["livres_potenciais_fora_da_matriz"] == livres
+    assert auditoria["por_categoria"]["livre"]["integralizado_estimado"] == livres
+
+
+@pytest.mark.parametrize("codigo,status", [
+    ("MCCC017-23", "REP"), ("BCC-TCC-23", "REP"),
+    ("MCTA031-17", "REP"), ("MCTA021-13", "REP"),
+])
+def test_tcc_bcc_2023_reprovado_nao_integraliza(codigo, status):
+    registro = carregar_registro_curriculos(BASE)
+    metadados, curriculo, equivalencias, compostas = resolver_curriculo(BASE, registro["bcc_2023"])
+    registros = [RegistroHistorico("2026.1", "OB", codigo, "TCC Sintético", 12, 144, 0, "", "F", status, "")]
+    situacao = consolidar_historico(registros, equivalencias, compostas)
+    auditoria = auditoria_integralizacao(metadados, curriculo, situacao, situacao.conclusoes_confiaveis())
+    assert auditoria["por_categoria"]["obrigatoria"]["integralizado_confirmado"] == 0
+    assert "MCCC017-23" not in situacao.conclusoes_confiaveis()
+
+
+def test_gerador_preserva_convalidacao_e_alias_do_tcc_bcc_2023(tmp_path, monkeypatch):
+    from ferramentas import gerar_curriculos_multicurso as gerador
+
+    monkeypatch.setattr(gerador, "SAIDA", tmp_path)
+    gerador.main()
+    equivalencias = json.loads((tmp_path / "bcc_2023_equivalencias.json").read_text(encoding="utf-8"))
+    cadastrado = json.loads((BASE / "dados/curriculos/bcc_2023_equivalencias.json").read_text(encoding="utf-8"))
+    assert equivalencias == cadastrado
+    curriculo = json.loads((tmp_path / "bcc_2023.json").read_text(encoding="utf-8"))
+    tcc = [d for d in curriculo["disciplinas"] if d["codigo"] == "MCCC017-23"]
+    assert len(tcc) == 1
+    assert tcc[0]["creditos"] == 12
+    assert all(d["codigo"] != "BCC-TCC-23" for d in curriculo["disciplinas"])
 
 
 def test_estagio_opcional_do_bcc_2017_nao_vira_pendencia_obrigatoria():

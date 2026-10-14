@@ -991,7 +991,7 @@
       "observacoes": []
     },
     {
-      "codigo": "BCC-TCC-23",
+      "codigo": "MCCC017-23",
       "nome": "Trabalho de Conclusão de Curso em Ciência da Computação",
       "categoria": "obrigatoria",
       "creditos": 12,
@@ -1003,9 +1003,9 @@
       "recomendacoes": [],
       "recomendacao_texto": "nan",
       "requisito_manual": "",
-      "catalogo_codigo_consulta": "BCC-TCC-23",
+      "catalogo_codigo_consulta": "MCCC017-23",
       "observacoes": [
-        "Código interno do planejador para representar o componente final do PPC; não deve ser pesquisado diretamente na oferta de turmas."
+        "Código do TCC conforme PPC BCC 2023 consolidado (Ato Decisório ConsEPE nº 267/2023 e Retificação nº 195/2023)."
       ]
     },
     {
