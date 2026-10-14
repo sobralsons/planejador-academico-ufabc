@@ -132,11 +132,11 @@ def carregar_fallback_fontes() -> dict[str, dict]:
         "MCBD008-23": {"nome": "Trabalho de Conclusão de Curso em Ciência de Dados", "t": 0, "p": 12, "e": 0, "i": 24, "creditos": 12},
         "MCTA022-13": {"nome": "Redes de Computadores", "t": 3, "p": 1, "e": 0, "i": 4, "creditos": 4},
         "ESTI019-17": {"nome": "Codificação de Sinais Multimídia", "t": 2, "p": 2, "e": 0, "i": 4, "creditos": 4},
-        "BCC-TCC-23": {"nome": "Trabalho de Conclusão de Curso em Ciência da Computação", "t": 12, "p": 0, "e": 0, "i": 12, "creditos": 12},
+        "MCCC017-23": {"nome": "Trabalho de Conclusão de Curso em Ciência da Computação", "t": 12, "p": 0, "e": 0, "i": 12, "creditos": 12},
     })
     for dados in resultado.values():
         dados.setdefault("forcar", False)
-    for codigo in {"MCBM006-23", "MCCC014-23", "MCZA050-15", "MCBD008-23", "MCTA022-13", "ESTI019-17", "BCC-TCC-23"}:
+    for codigo in {"MCBM006-23", "MCCC014-23", "MCZA050-15", "MCBD008-23", "MCTA022-13", "ESTI019-17", "MCCC017-23"}:
         resultado[codigo]["forcar"] = True
     return resultado
 
@@ -199,7 +199,7 @@ Q_BCC23 = {
     "MCCC012-23":11,"MCCC007-23":11,"MCZA008-17":11,
     "MCCC011-23":12,"MCTA026-13":12,"MCCC009-23":12,
     "MCCC006-23":13,"MCTA025-13":14,"MCTA023-17":15,
-    "BCC-TCC-23":15,
+    "MCCC017-23":15,
 }
 
 BCD23_OBR = [
@@ -417,6 +417,7 @@ def criar(
     equivalencias: dict[str, str] | None = None,
     equivalencias_compostas: list[dict] | None = None,
     duracoes_especiais: dict | None = None,
+    aliases_internos: dict[str, str] | None = None,
 ) -> None:
     por_codigo, por_nome = carregar_catalogo()
     fallback_fontes = carregar_fallback_fontes()
@@ -450,13 +451,15 @@ def criar(
         "equivalencias_academicas": equivalencias or {},
         "equivalencias_compostas": equivalencias_compostas or [],
     }
+    if aliases_internos:
+        eq["aliases_internos"] = aliases_internos
     (SAIDA / f"{id_}_equivalencias.json").write_text(json.dumps(eq, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def main() -> None:
     preencher_listas_fontes()
     extras = {
-        "BCC-TCC-23": {"nome":"Trabalho de Conclusão de Curso em Ciência da Computação","t":12,"p":0,"e":0,"i":12,"creditos":12},
+        "MCCC017-23": {"nome":"Trabalho de Conclusão de Curso em Ciência da Computação","t":12,"p":0,"e":0,"i":12,"creditos":12},
     }
     criar(
         "bct_2015", "Bacharelado em Ciência e Tecnologia — UFABC", "2015",
@@ -484,7 +487,7 @@ def main() -> None:
     )
     criar(
         "bcc_2023", "Bacharelado em Ciência da Computação — UFABC", "2023",
-        BCT22, BCC23_OBR + ["BCC-TCC-23"], BCC23_OL, Q_BCC23,
+        BCT22, BCC23_OBR + ["MCCC017-23"], BCC23_OL, Q_BCC23,
         {"creditos_totais":242,"creditos_totais_oficiais":242,"creditos_disciplinas_e_integralizadores":242,
          "creditos_obrigatorios":202,"creditos_obrigatorios_regulares":190,"creditos_opcao_limitada":24,"creditos_livres":16,
          "atividades_complementares_horas":48,"extensao_horas":328,"estagio_obrigatorio_creditos":0,"trabalho_final_creditos":12,"prazo_ideal_quadrimestres":15},
@@ -496,7 +499,8 @@ def main() -> None:
             "MCTA014-15":"MCCC008-23","MCTA015-13":"MCCC009-23","MCTA037-17":"MCCC012-23",
             "MCTA016-13":"MCCC015-23","BCM0505-15":"BCM0505-22",
         },
-        equivalencias_compostas=[{"origens":["MCTA029-17","MCTA030-17","MCTA031-17"],"destino":"BCC-TCC-23"}],
+        equivalencias_compostas=[{"origens":["MCTA029-17","MCTA030-17","MCTA031-17"],"destino":"MCCC017-23"}],
+        aliases_internos={"BCC-TCC-23":"MCCC017-23"},
         duracoes_especiais={"trabalho_final_quadrimestres":3,"trabalho_final_quadrimestre_inicio":13},
     )
     criar(
