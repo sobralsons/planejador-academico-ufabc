@@ -2,11 +2,12 @@ from __future__ import annotations
 
 import re
 from collections import defaultdict
+from dataclasses import replace
 from pathlib import Path
 
 import pdfplumber
 
-from .modelos import RegistroHistorico, ResumoHistorico, SituacaoAcademica
+from .modelos import EquivalenciasAcademicas, RegistroHistorico, ResumoHistorico, SituacaoAcademica
 from .utils import garantir_arquivo, limpar_codigo, normalizar_texto
 
 STATUS_CONCLUIDOS = {"APR", "APRN", "DISP", "TRANS", "INCORP", "CUMP"}
@@ -243,14 +244,30 @@ def consolidar_historico(
     convalidacoes_historico: dict[str, str] | None = None,
     resumo: ResumoHistorico | None = None,
 ) -> SituacaoAcademica:
+    aliases = (
+        equivalencias_academicas.aliases_internos
+        if isinstance(equivalencias_academicas, EquivalenciasAcademicas) else {}
+    )
     por_codigo: dict[str, list[RegistroHistorico]] = defaultdict(list)
     for registro in registros:
-        por_codigo[registro.codigo].append(registro)
+        codigo = aliases.get(registro.codigo, registro.codigo)
+        # Alias é o mesmo componente: não cria uma segunda evidência nem
+        # créditos livres. As entradas originais do chamador permanecem intactas.
+        por_codigo[codigo].append(replace(registro, codigo=codigo) if codigo != registro.codigo else registro)
+
+    convalidacoes: dict[str, str] = {}
+    for alvo, real in (convalidacoes_historico or {}).items():
+        alvo = aliases.get(alvo, alvo)
+        real = aliases.get(real, real)
+        if alvo in convalidacoes and convalidacoes[alvo] != real:
+            raise ValueError("Convalidações conflitantes para o mesmo código canônico")
+        convalidacoes[alvo] = real
 
     situacao = SituacaoAcademica(
         tentativas=dict(por_codigo),
-        convalidacoes_historico=dict(convalidacoes_historico or {}),
+        convalidacoes_historico=convalidacoes,
         resumo=resumo or ResumoHistorico(),
+        aliases_internos=dict(aliases),
     )
 
     for codigo, tentativas in por_codigo.items():
@@ -269,7 +286,7 @@ def consolidar_historico(
     }
     # O chamador fornece somente regras aplicáveis ao currículo/vínculo analisado.
     # O fechamento mantém a direção e as conjunções; nunca infere por nome.
-    regras = [(frozenset({a}), b) for a, b in equivalencias_academicas.items()]
+    regras = [(frozenset({a}), b) for a, b in equivalencias_academicas.items() if a not in aliases]
     regras += [(frozenset(a), b) for a, b in equivalencias_compostas or [] if a]
     regras += [(frozenset({real}), alvo) for alvo, real in situacao.convalidacoes_historico.items()]
     alterado = True
