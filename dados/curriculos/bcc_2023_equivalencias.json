@@ -19,7 +19,10 @@
         "MCTA030-17",
         "MCTA031-17"
       ],
-      "destino": "BCC-TCC-23"
+      "destino": "MCCC017-23"
     }
-  ]
+  ],
+  "aliases_internos": {
+    "BCC-TCC-23": "MCCC017-23"
+  }
 }
