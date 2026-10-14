@@ -13,12 +13,11 @@ def test_runner_pode_ser_executado_diretamente():
         [sys.executable, "scripts/comparar_bct_sombra.py", "--help"],
         cwd=comparar_bct_sombra.ROOT,
         capture_output=True,
-        text=True,
         check=False,
     )
 
-    assert processo.returncode == 0, processo.stderr
-    assert "--confirmar-pacote-piloto" in processo.stdout
+    assert processo.returncode == 0, processo.stderr.decode(errors="replace")
+    assert b"--confirmar-pacote-piloto" in processo.stdout
 
 
 def test_runner_interno_executa_fluxo_real_sem_persistir_historico(
