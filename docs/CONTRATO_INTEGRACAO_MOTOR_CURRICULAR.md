@@ -1,6 +1,6 @@
 # Contrato de integração do motor curricular genérico
 
-**Estado:** contrato da R0 — ainda não ativa o motor genérico no fluxo público  
+**Estado:** contrato estabelecido na R0; ainda não ativa o motor genérico no fluxo público
 **Escopo:** fronteira entre histórico/regras acadêmicas e consumidores de integralização, planejamento e trajetória
 
 Este documento define como o modelo curricular genérico pode entrar no fluxo real sem criar duas fontes de verdade, transformar ausência em certeza ou perder proveniência. Ele descreve contratos já existentes no núcleo e as condições obrigatórias para uma futura integração.

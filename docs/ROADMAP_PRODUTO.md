@@ -34,17 +34,17 @@ Trabalho técnico sem relação clara com a meta da release não entra automatic
 
 ## Release ativa
 
-**R0 — Fundação confiável**
+**R1 — Motor curricular genérico**
 
-Plano operacional: [releases/R0-fundacao-confiavel.md](releases/R0-fundacao-confiavel.md)  
-Tracker no GitHub: **#27 — R0 — Fundação confiável**
+Plano operacional: [releases/R1-motor-curricular-generico.md](releases/R1-motor-curricular-generico.md)
+Tracker no GitHub: a criar a partir do plano operacional da R1
 
 ## Estratégia de releases
 
 | Release | Meta de produto | Entrega principal | Critério de saída macro | Estado |
 | --- | --- | --- | --- | --- |
-| **R0 — Fundação confiável** | Eliminar bloqueadores conhecidos que podem transformar incerteza em certeza incorreta ou impedir evolução segura | Entradas acadêmicas fail-closed, evidências confiáveis, documentação coerente e contrato de migração para o modelo genérico | Todos os critérios de R0 aprovados | **ativa** |
-| **R1 — Motor curricular genérico** | Fazer as regras declarativas governarem a integralização sem lógica específica por curso | Modelo genérico integrado ao fluxo real e validado em famílias curriculares distintas | Pilotos representativos produzem resultados revisados e testes diferenciais passam | planejada |
+| **R0 — Fundação confiável** | Eliminar bloqueadores conhecidos que podem transformar incerteza em certeza incorreta ou impedir evolução segura | Entradas acadêmicas fail-closed, evidências confiáveis, documentação coerente e contrato de migração para o modelo genérico | Todos os critérios de R0 aprovados | concluída em 2026-10-14 |
+| **R1 — Motor curricular genérico** | Fazer as regras declarativas governarem a integralização sem lógica específica por curso | Modelo genérico integrado ao fluxo real e validado em famílias curriculares distintas | Pilotos representativos produzem resultados revisados e testes diferenciais passam | **ativa** |
 | **R2 — Cobertura acadêmica** | Determinar corretamente qual regra pode reger qualquer estudante ativo | Aplicabilidade resolvida, matrizes aplicáveis modeladas, testadas e revisadas | Cobertura exigida para publicação atinge o gate acadêmico | planejada |
 | **R3 — Validação fechada** | Provar que estudantes reais conseguem usar o fluxo principal sem assistência do desenvolvedor | Progresso, matrícula, ajuste e trajetória em teste controlado | Casos acadêmicos e tarefas de UX atendem critérios definidos | planejada |
 | **R4 — Produto público 1.0** | Disponibilizar o planejador com segurança para qualquer estudante no escopo validado | Web/PWA responsiva, API estável, autenticação e planejamento salvo | Gates acadêmico, segurança, privacidade, UX e operação aprovados | planejada |

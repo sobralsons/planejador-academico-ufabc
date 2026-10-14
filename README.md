@@ -9,7 +9,8 @@ Protótipo local para **simular trajetórias** e planejar a matrícula de cada q
 O desenvolvimento é guiado por visão, releases e critérios de saída, e não por uma sequência solta de funcionalidades.
 
 - **Roadmap macro e release ativa:** [docs/ROADMAP_PRODUTO.md](docs/ROADMAP_PRODUTO.md)
-- **Plano operacional da R0 — Fundação confiável:** [docs/releases/R0-fundacao-confiavel.md](docs/releases/R0-fundacao-confiavel.md)
+- **Release ativa, R1 — Motor curricular genérico:** [docs/releases/R1-motor-curricular-generico.md](docs/releases/R1-motor-curricular-generico.md)
+- **R0 concluída — Fundação confiável:** [docs/releases/R0-fundacao-confiavel.md](docs/releases/R0-fundacao-confiavel.md)
 - **Regras obrigatórias de desenvolvimento:** [AGENTS.md](AGENTS.md)
 
 A entrada pública continua bloqueada até que os gates acadêmicos, de revisão e de segurança definidos pelo projeto sejam satisfeitos.

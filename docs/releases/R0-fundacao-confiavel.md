@@ -1,6 +1,6 @@
 # R0 — Fundação confiável
 
-**Estado:** ativa  
+**Estado:** concluída em 2026-10-14
 **Tracker:** #27  
 **Primeira história:** #28 — campos quantitativos inválidos do histórico  
 **Objetivo:** eliminar bloqueadores conhecidos para que o núcleo atual seja uma base confiável para a modelagem curricular universal.
@@ -41,14 +41,14 @@ A ordem pode mudar apenas quando surgir risco de prioridade superior ou uma depe
 
 A R0 só termina quando:
 
-- [ ] campo quantitativo inválido/ausente do histórico não é convertido silenciosamente em zero conhecido;
-- [ ] derivações incompletas não podem sustentar conclusão em consumidor relevante sem sinalização fail-closed;
-- [ ] documentação vigente não contradiz o estado real de cobertura e validação;
-- [ ] contrato de integração do modelo curricular genérico está documentado;
-- [ ] existe pelo menos um teste diferencial entre caminho legado e genérico;
-- [ ] pilotos de famílias curriculares distintas estão definidos por risco/capacidade, não por conveniência;
-- [ ] testes relacionados e suíte de regressão apropriada estão verdes;
-- [ ] limitações remanescentes estão registradas e não representam risco crítico conhecido.
+- [x] campo quantitativo inválido/ausente do histórico não é convertido silenciosamente em zero conhecido;
+- [x] derivações incompletas não podem sustentar conclusão em consumidor relevante sem sinalização fail-closed;
+- [x] documentação vigente não contradiz o estado real de cobertura e validação;
+- [x] contrato de integração do modelo curricular genérico está documentado;
+- [x] existe pelo menos um teste diferencial entre caminho legado e genérico;
+- [x] pilotos de famílias curriculares distintas estão definidos por risco/capacidade, não por conveniência;
+- [x] testes relacionados e suíte de regressão apropriada estão verdes;
+- [x] limitações remanescentes estão registradas e não representam risco crítico conhecido para iniciar a R1.
 
 ## Fora de escopo
 
@@ -92,8 +92,28 @@ Atualizar esta seção apenas após validações reais.
 
 | Data | Item | Evidência | Estado |
 | --- | --- | --- | --- |
-| 2026-09-25 | Estrutura de planejamento de produto | roadmap, regras de governança e release R0 criados em branch própria | em revisão |
+| 2026-09-25 | Estrutura de planejamento de produto | PR #29: roadmap, regras de governança e release R0 | concluído |
+| 2026-09-25 | Fundação de persistência autenticada | PR #26: integração local, testes de autorização e documentação de E2E | concluído |
+| 2026-09-25 | Quantidades inválidas do histórico | PR #30: parser fail-closed e regressões | concluído |
+| 2026-09-25 | Derivações incompletas | PR #31: consumidores legados bloqueiam conclusão sem prova completa | concluído |
+| 2026-09-25 | Estado acadêmico documentado | PR #32 e `docs/ESTADO_ACADEMICO_ATUAL.md` | concluído |
+| 2026-09-25 | Contrato do motor genérico | PR #33 e `docs/CONTRATO_INTEGRACAO_MOTOR_CURRICULAR.md` | concluído |
+| 2026-09-25 | Teste diferencial | PR #34: casos concordantes e divergências explicadas | concluído |
+| 2026-09-26 | Pilotos por risco e capacidade | PR #35 e `dados/pilotos_integracao_r0.json` | concluído |
+| 2026-10-14 | Primeira família no fluxo real | PR #36: BC&T 2015 em modo sombra, legado como autoridade | concluído |
+| 2026-10-14 | Correções acadêmicas impeditivas | PRs #37 e #38: TCC BCC 2023 e créditos de Pesquisa Operacional no BCD 2023 | concluído |
+| 2026-10-14 | Regressão final | Python 3.12: compileall aprovado; 515 testes locais passaram; CI dos PRs #36, #37 e #38 passou | concluído |
+
+## Limitações transferidas para a R1
+
+- O motor genérico ainda não é autoridade no fluxo público.
+- O BC&T 2015 opera somente em modo sombra e exige confirmações explícitas.
+- As fontes legadas ainda não fornecem proveniência estruturada suficiente para promover o piloto.
+- Nenhuma das 93 matrizes inventariadas possui revisão humana integral ou suporte público aprovado.
+- A entrada pública continua bloqueada pelo gate de cobertura.
+
+Essas limitações não reabrem os riscos tratados pela R0. A R1 deve reduzi-las sem liberar matriz, curso ou resultado antes dos gates acadêmicos.
 
 ## Próxima release
 
-Quando todos os critérios acima forem satisfeitos, a candidata seguinte é **R1 — Motor curricular genérico**. A promoção exige atualizar [../ROADMAP_PRODUTO.md](../ROADMAP_PRODUTO.md); não é automática.
+A release seguinte é **R1 — Motor curricular genérico**. O plano operacional está em [R1-motor-curricular-generico.md](R1-motor-curricular-generico.md).
