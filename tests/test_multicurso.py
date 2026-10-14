@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
 
+from planejador.academico import auditoria_integralizacao
 from planejador.historico import consolidar_historico
 from planejador.modelos import (
     Categoria, DisciplinaCurricular, Grade, Horario, Oferta, Recorrencia,
@@ -50,6 +51,27 @@ def test_equivalencia_bcc_2017_para_2023_integraliza_disciplina():
     situacao = consolidar_historico([r], equivalencias, compostas, {}, ResumoHistorico())
     assert "MCCC001-23" in situacao.concluidas
     assert "MCCC001-23" in curriculo
+
+
+def test_tcc_bcc_2023_usa_codigo_oficial_e_reconhece_alias_interno():
+    registro = carregar_registro_curriculos(BASE)
+    metadados, curriculo, equivalencias, compostas = resolver_curriculo(BASE, registro["bcc_2023"])
+    assert "MCCC017-23" in curriculo
+    assert "BCC-TCC-23" not in curriculo
+    assert curriculo["MCCC017-23"].creditos == 12
+    assert equivalencias["BCC-TCC-23"] == "MCCC017-23"
+
+    for codigos in (("MCCC017-23",), ("BCC-TCC-23",), ("MCCC017-23", "BCC-TCC-23")):
+        registros = [
+            RegistroHistorico("2026.2", "OB", codigo, "Trabalho de Conclusão de Curso em Ciência da Computação", 12, 144, 0, "", "A", "APR", "")
+            for codigo in codigos
+        ]
+        situacao = consolidar_historico(registros, equivalencias, compostas, {}, ResumoHistorico())
+        assert "MCCC017-23" in situacao.concluidas
+        auditoria = auditoria_integralizacao(
+            metadados, curriculo, situacao, set(situacao.concluidas)
+        )
+        assert auditoria["por_categoria"]["obrigatoria"]["integralizado_confirmado"] == 12
 
 
 def test_estagio_opcional_do_bcc_2017_nao_vira_pendencia_obrigatoria():
