@@ -1,6 +1,7 @@
 # R1 — Motor curricular genérico
 
 **Estado:** ativa
+**Tracker:** #40
 **Objetivo:** fazer regras curriculares declarativas governarem a integralização no escopo dos pilotos, sem antecipar cobertura pública.
 
 ## Meta da release

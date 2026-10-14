@@ -37,7 +37,7 @@ Trabalho técnico sem relação clara com a meta da release não entra automatic
 **R1 — Motor curricular genérico**
 
 Plano operacional: [releases/R1-motor-curricular-generico.md](releases/R1-motor-curricular-generico.md)
-Tracker no GitHub: a criar a partir do plano operacional da R1
+Tracker no GitHub: **#40 — R1 — Motor curricular genérico**
 
 ## Estratégia de releases
 
