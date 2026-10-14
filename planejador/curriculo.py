@@ -53,6 +53,14 @@ def carregar_equivalencias(
     for origem, destino in bruto.get("equivalencias_academicas", {}).items():
         simples[limpar_codigo(origem)] = limpar_codigo(destino)
 
+    # Identificadores legados do próprio planejador não são equivalências oficiais.
+    for origem, destino in bruto.get("aliases_internos", {}).items():
+        origem_limpa = limpar_codigo(origem)
+        destino_limpo = limpar_codigo(destino)
+        if origem_limpa in simples and simples[origem_limpa] != destino_limpo:
+            raise ValueError(f"Alias interno conflitante: {origem_limpa}")
+        simples[origem_limpa] = destino_limpo
+
     compostas: list[tuple[set[str], str]] = []
     for regra in bruto.get("equivalencias_compostas", []):
         origens = {limpar_codigo(c) for c in regra.get("origens", [])}
