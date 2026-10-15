@@ -21,7 +21,9 @@
         "requisito": "creditos_obrigatorios",
         "estado_legado": "cumprido",
         "estado_generico": "cumprido",
-        "divergencia": "concordante"
+        "divergencia": "concordante",
+        "causa": "nenhuma",
+        "decisao": "manter_sombra"
       }
     },
     {
@@ -36,7 +38,9 @@
         "requisito": "creditos_obrigatorios",
         "estado_legado": "pendente",
         "estado_generico": "indeterminado",
-        "divergencia": "divergente_requer_revisao"
+        "divergencia": "divergente_requer_revisao",
+        "causa": "completude_nao_certificada",
+        "decisao": "preservar_indeterminacao"
       }
     },
     {
@@ -52,7 +56,9 @@
         "requisito": "creditos_obrigatorios",
         "estado_legado": "cumprido",
         "estado_generico": "indeterminado",
-        "divergencia": "divergente_requer_revisao"
+        "divergencia": "divergente_requer_revisao",
+        "causa": "total_observado_divergente",
+        "decisao": "revisar_sem_promover"
       }
     },
     {
@@ -69,7 +75,9 @@
         "requisito": "creditos_obrigatorios",
         "estado_legado": "cumprido",
         "estado_generico": "indeterminado",
-        "divergencia": "divergente_requer_revisao"
+        "divergencia": "divergente_requer_revisao",
+        "causa": "conversao_creditos_incompleta",
+        "decisao": "revisar_sem_promover"
       }
     },
     {
@@ -84,7 +92,9 @@
         "requisito": "atividades_complementares",
         "estado_legado": "pendente",
         "estado_generico": "cumprido",
-        "divergencia": "divergente_requer_revisao"
+        "divergencia": "divergente_requer_revisao",
+        "causa": "total_observado_divergente",
+        "decisao": "revisar_sem_promover"
       }
     }
   ]

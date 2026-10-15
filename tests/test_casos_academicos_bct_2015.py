@@ -118,6 +118,9 @@ def test_casos_revisaveis_executam_no_fluxo_real_do_modo_sombra(caso):
 
     assert _estado_legado(requisito, legado, metadados) == esperado["estado_legado"]
     assert sombra.requisitos[requisito].estado.value == esperado["estado_generico"]
-    assert sombra.divergencias[requisito].classificacao == esperado["divergencia"]
+    divergencia = sombra.divergencias[requisito]
+    assert divergencia.classificacao == esperado["divergencia"]
+    assert divergencia.causa == esperado["causa"]
+    assert divergencia.decisao == esperado["decisao"]
     assert sombra.autoridade == "legado"
     assert sombra.publicavel is False

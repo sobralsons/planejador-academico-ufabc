@@ -41,6 +41,8 @@ class DivergenciaSombra:
     valor_legado: int | None
     valor_generico: int | None
     classificacao: str
+    causa: str
+    decisao: str
     motivo: str
 
 
@@ -345,20 +347,37 @@ def _comparar_com_legado(
         valor_generico = regra.valor_observado if regra else None
         if generico is None or legado is None:
             classificacao = "nao_comparavel"
+            causa = "estado_ausente"
+            decisao = "nao_promover"
             motivo = "Um dos motores não produziu estado comparável."
         elif generico == legado and valor_generico == valor_legado:
             classificacao = "concordante"
+            causa = "nenhuma"
+            decisao = "manter_sombra"
             motivo = "Estado e total observado coincidem."
         else:
             classificacao = "divergente_requer_revisao"
             causas = []
-            if any(
+            conversao_creditos_incompleta = any(
                 UnidadeRequisito.CREDITOS in item.unidades_afetadas
                 for item in conversao.pendencias
-            ):
+            )
+            if conversao_creditos_incompleta:
                 causas.append("A conversão do histórico possui pendência em créditos")
             if valor_generico != valor_legado:
                 causas.append("os totais observados divergem")
+            if conversao_creditos_incompleta:
+                causa = "conversao_creditos_incompleta"
+                decisao = "revisar_sem_promover"
+            elif valor_generico != valor_legado:
+                causa = "total_observado_divergente"
+                decisao = "revisar_sem_promover"
+            elif legado == "pendente" and generico == "indeterminado":
+                causa = "completude_nao_certificada"
+                decisao = "preservar_indeterminacao"
+            else:
+                causa = "estado_divergente"
+                decisao = "revisar_sem_promover"
             motivo = "; ".join(causas or ["os estados divergem"]) + "."
         comparacao[requisito_id] = DivergenciaSombra(
             legado=legado,
@@ -366,6 +385,8 @@ def _comparar_com_legado(
             valor_legado=valor_legado,
             valor_generico=valor_generico,
             classificacao=classificacao,
+            causa=causa,
+            decisao=decisao,
             motivo=motivo,
         )
     return comparacao
