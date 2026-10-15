@@ -15,7 +15,7 @@ from .evidencias_historico import (
     ResultadoConversaoHistorico,
     converter_historico_consolidado_em_evidencias,
 )
-from .modelos import DisciplinaCurricular, SituacaoAcademica
+from .modelos import DisciplinaCurricular, SituacaoAcademica, TipoComponente
 from .requisitos_curriculares import (
     CondicaoCurricular,
     FonteRegra,
@@ -30,8 +30,10 @@ from .requisitos_curriculares import (
 )
 
 
-_CURRICULO_PILOTO = "bct_2015"
-_CAMPO_APLICABILIDADE = "matriz_bct_2015_confirmada"
+_CAMPOS_APLICABILIDADE = {
+    "bct_2015": "matriz_bct_2015_confirmada",
+    "bcd_2023": "matriz_bcd_2023_confirmada",
+}
 
 
 @dataclass(frozen=True)
@@ -57,7 +59,7 @@ class ResultadoSombraBCT:
     avisos: tuple[str, ...] = ()
     modo: str = "sombra_controlada"
     autoridade: str = "legado"
-    curriculo_id: str = _CURRICULO_PILOTO
+    curriculo_id: str = ""
     publicavel: bool = False
     proveniencia_regras_suficiente: bool = False
 
@@ -95,7 +97,56 @@ def avaliar_bct_2015_em_modo_sombra(
 ) -> ResultadoSombraBCT | None:
     """Executa comparação interna explícita sem tocar o fluxo público."""
 
-    if metadados.get("id") != _CURRICULO_PILOTO:
+    return _avaliar_curriculo_piloto_em_modo_sombra(
+        "bct_2015",
+        metadados,
+        curriculo,
+        situacao,
+        pacote_piloto_confirmado=pacote_piloto_confirmado,
+        aplicabilidade_confirmada=aplicabilidade_confirmada,
+        classificacoes_validadas=classificacoes_validadas,
+        resultado_legado=resultado_legado,
+    )
+
+
+def avaliar_bcd_2023_em_modo_sombra(
+    metadados: dict,
+    curriculo: dict[str, DisciplinaCurricular],
+    situacao: SituacaoAcademica,
+    *,
+    pacote_piloto_confirmado: bool = False,
+    aplicabilidade_confirmada: bool | None = None,
+    classificacoes_validadas: bool = False,
+    resultado_legado: dict | None = None,
+) -> ResultadoSombraBCT | None:
+    """Executa o segundo piloto pelo mesmo contrato controlado."""
+
+    return _avaliar_curriculo_piloto_em_modo_sombra(
+        "bcd_2023",
+        metadados,
+        curriculo,
+        situacao,
+        pacote_piloto_confirmado=pacote_piloto_confirmado,
+        aplicabilidade_confirmada=aplicabilidade_confirmada,
+        classificacoes_validadas=classificacoes_validadas,
+        resultado_legado=resultado_legado,
+    )
+
+
+def _avaliar_curriculo_piloto_em_modo_sombra(
+    curriculo_id: str,
+    metadados: dict,
+    curriculo: dict[str, DisciplinaCurricular],
+    situacao: SituacaoAcademica,
+    *,
+    pacote_piloto_confirmado: bool,
+    aplicabilidade_confirmada: bool | None,
+    classificacoes_validadas: bool,
+    resultado_legado: dict | None,
+) -> ResultadoSombraBCT | None:
+    campo_aplicabilidade = _CAMPOS_APLICABILIDADE[curriculo_id]
+
+    if metadados.get("id") != curriculo_id:
         return None
     if pacote_piloto_confirmado is not True:
         raise ValueError("O modo sombra exige confirmação explícita do pacote piloto.")
@@ -104,11 +155,13 @@ def avaliar_bct_2015_em_modo_sombra(
     if type(classificacoes_validadas) is not bool:
         raise ValueError("A confirmação das classificações deve ser booleana.")
 
-    modelo = _criar_modelo(metadados)
+    modelo = _criar_modelo(metadados, campo_aplicabilidade)
     classificacoes = (
         {
             codigo: MetadadosCodigoEvidencia(
                 categorias=frozenset({disciplina.categoria.value}),
+                tipos=frozenset({disciplina.tipo_componente.value}),
+                tags=(frozenset({"extensao"}) if disciplina.e else frozenset()),
                 origens=frozenset({"classificacao_curricular_confirmada"}),
             )
             for codigo, disciplina in curriculo.items()
@@ -150,7 +203,7 @@ def avaliar_bct_2015_em_modo_sombra(
         modelo,
         conjunto,
         atributos=(
-            {_CAMPO_APLICABILIDADE: aplicabilidade_confirmada}
+            {campo_aplicabilidade: aplicabilidade_confirmada}
             if aplicabilidade_confirmada is not None
             else {}
         ),
@@ -172,13 +225,16 @@ def avaliar_bct_2015_em_modo_sombra(
         ),
         fontes_legadas_nao_estruturadas=tuple(_fontes_legadas(metadados)),
         avisos=tuple(avisos),
+        curriculo_id=curriculo_id,
         proveniencia_regras_suficiente=proveniencia_suficiente,
     )
 
 
-def _criar_modelo(metadados: dict) -> ModeloRequisitosCurriculares:
+def _criar_modelo(
+    metadados: dict, campo_aplicabilidade: str
+) -> ModeloRequisitosCurriculares:
     fontes = _fontes_estruturadas(metadados)
-    requisitos = (
+    requisitos = [
         _requisito_creditos(
             "creditos_obrigatorios",
             "Créditos obrigatórios",
@@ -213,18 +269,48 @@ def _criar_modelo(metadados: dict) -> ModeloRequisitosCurriculares:
             ),
             fontes=fontes,
         ),
-    )
+    ]
+    if metadados.get("extensao_horas", 0):
+        requisitos.append(
+            RequisitoQuantitativo(
+                id="extensao",
+                descricao="Extensão",
+                integralizador=TipoIntegralizador.EXTENSAO,
+                seletor=SeletorComponentes(tags=frozenset({"extensao"})),
+                limite=LimiteQuantitativo(
+                    UnidadeRequisito.HORAS_EXTENSAO,
+                    metadados["extensao_horas"],
+                ),
+                fontes=fontes,
+            )
+        )
+    if metadados.get("trabalho_final_creditos", 0):
+        requisitos.append(
+            RequisitoQuantitativo(
+                id="trabalho_final",
+                descricao="Trabalho final",
+                integralizador=TipoIntegralizador.TCC,
+                seletor=SeletorComponentes(
+                    tipos=frozenset({TipoComponente.TRABALHO_GRADUACAO.value})
+                ),
+                limite=LimiteQuantitativo(
+                    UnidadeRequisito.CREDITOS,
+                    metadados["trabalho_final_creditos"],
+                ),
+                fontes=fontes,
+            )
+        )
     return ModeloRequisitosCurriculares(
         curso_id=str(metadados["id"]),
         matriz_id=str(metadados["versao"]),
-        requisitos=requisitos,
+        requisitos=tuple(requisitos),
         aplicabilidade=(
             RegraAplicabilidade(
-                id="aplicabilidade_bct_2015",
-                descricao="Exige confirmação explícita de vínculo à matriz BC&T 2015.",
+                id=f"aplicabilidade_{metadados['id']}",
+                descricao="Exige confirmação explícita de vínculo à matriz selecionada.",
                 condicoes=(
                     CondicaoCurricular(
-                        campo=_CAMPO_APLICABILIDADE,
+                        campo=campo_aplicabilidade,
                         operador=OperadorCondicao.IGUAL,
                         valor=True,
                     ),
@@ -309,7 +395,9 @@ def _comparar_com_legado(
         "creditos_livres": "livre",
     }
     legado_por_categoria = resultado_legado.get("por_categoria", {})
-    comparaveis: dict[str, tuple[str | None, int | None]] = {}
+    comparaveis: dict[str, tuple[str | None, int | None]] = {
+        requisito_id: (None, None) for requisito_id in requisitos
+    }
     for requisito_id, categoria in categorias.items():
         resultado_categoria = legado_por_categoria.get(categoria, {})
         legado = resultado_categoria.get("estado_confirmado")
