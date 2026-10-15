@@ -20,6 +20,17 @@ from planejador.requisitos_curriculares import (
 )
 
 
+def test_fonte_regra_rejeita_estado_de_revisao_desconhecido():
+    with pytest.raises(ValueError, match="Estado de revisão"):
+        FonteRegra(
+            titulo="PPC sintético",
+            url="https://example.test/ppc.pdf",
+            matriz_id="curso_2026",
+            versao="2026",
+            estado_revisao="talvez",
+        )
+
+
 FONTE = FonteRegra(
     titulo="Documento oficial UFABC",
     url="https://www.ufabc.edu.br/documento-oficial.pdf",
