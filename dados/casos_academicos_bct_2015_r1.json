@@ -1,0 +1,91 @@
+{
+  "curso_id": "bct_2015",
+  "matriz_id": "2015",
+  "dados_sinteticos": true,
+  "fonte_regra": "bct_ppc_2015",
+  "revisao_humana": {
+    "estado": "pendente",
+    "decisao_publicavel": false,
+    "observacao": "Casos preparados para revisao academica; expectativas automatizadas nao equivalem a aprovacao humana."
+  },
+  "casos": [
+    {
+      "id": "cumprimento_creditos_diretos",
+      "tipo": "cumprimento",
+      "descricao": "Um componente obrigatorio fornece exatamente o minimo de creditos exigido.",
+      "minimo_creditos_obrigatorios": 2,
+      "registros": [
+        {"codigo": "BIS0005-15", "creditos": 2}
+      ],
+      "esperado": {
+        "requisito": "creditos_obrigatorios",
+        "estado_legado": "cumprido",
+        "estado_generico": "cumprido",
+        "divergencia": "concordante"
+      }
+    },
+    {
+      "id": "pendencia_creditos_diretos",
+      "tipo": "pendencia",
+      "descricao": "O legado aponta pendencia, mas o generico preserva indeterminacao porque a completude dos creditos nao foi certificada.",
+      "minimo_creditos_obrigatorios": 3,
+      "registros": [
+        {"codigo": "BIS0005-15", "creditos": 2}
+      ],
+      "esperado": {
+        "requisito": "creditos_obrigatorios",
+        "estado_legado": "pendente",
+        "estado_generico": "indeterminado",
+        "divergencia": "divergente_requer_revisao"
+      }
+    },
+    {
+      "id": "classificacao_curricular_ausente",
+      "tipo": "dado_ausente",
+      "descricao": "Sem classificacao curricular validada, o motor generico nao infere a categoria pelo historico.",
+      "minimo_creditos_obrigatorios": 2,
+      "classificacoes_validadas": false,
+      "registros": [
+        {"codigo": "BIS0005-15", "creditos": 2}
+      ],
+      "esperado": {
+        "requisito": "creditos_obrigatorios",
+        "estado_legado": "cumprido",
+        "estado_generico": "indeterminado",
+        "divergencia": "divergente_requer_revisao"
+      }
+    },
+    {
+      "id": "equivalencia_sem_creditos_transferiveis",
+      "tipo": "equivalencia",
+      "descricao": "A equivalencia identifica o destino, mas nao inventa os creditos ausentes da evidencia de origem.",
+      "codigo_destino": "BIS0005-15",
+      "minimo_creditos_obrigatorios": 2,
+      "registros": [
+        {"codigo": "ANTIGO-SINTETICO", "creditos": 2}
+      ],
+      "equivalencias": {"ANTIGO-SINTETICO": "BIS0005-15"},
+      "esperado": {
+        "requisito": "creditos_obrigatorios",
+        "estado_legado": "cumprido",
+        "estado_generico": "indeterminado",
+        "divergencia": "divergente_requer_revisao"
+      }
+    },
+    {
+      "id": "divergencia_atividades_complementares",
+      "tipo": "divergencia",
+      "descricao": "Valores diferentes entre legado e generico exigem revisao, mesmo quando ambos possuem medicao.",
+      "minimo_atividades_complementares_horas": 120,
+      "atividades_complementares_horas": 120,
+      "valor_legado_atividades_complementares": 60,
+      "registros": [],
+      "esperado": {
+        "requisito": "atividades_complementares",
+        "estado_legado": "pendente",
+        "estado_generico": "cumprido",
+        "divergencia": "divergente_requer_revisao"
+      }
+    }
+  ]
+}
