@@ -18,6 +18,17 @@
       "matriz": "PPC BC&T 2015 consolidado",
       "opcao_limitada": "Ato Decisório CG 29/2023, usado como compatibilidade atual"
     },
+    "fontes_regras": {
+      "bct_ppc_2015": {
+        "titulo": "PPC 2015 do BC&T — Resolução ConsEPE nº 188/2015",
+        "url": "https://www.ufabc.edu.br/images/consepe/resolucoes/3---Reviso-do-PP-do-Bacharelado-em-Cincia-e-Tecnologia-Esta-verso-contempla-as-retificaes.pdf",
+        "referencia": "Regime de ensino, pp. 17-18; atividades complementares, p. 26",
+        "trecho": "Registra 90 cr obrigatórios, 57 cr de opção limitada, 43 cr livres e 120 h de atividades complementares.",
+        "matriz_id": "bct_2015",
+        "versao": "2015",
+        "estado_revisao": "pendente"
+      }
+    },
     "duracoes_especiais": {}
   },
   "disciplinas": [

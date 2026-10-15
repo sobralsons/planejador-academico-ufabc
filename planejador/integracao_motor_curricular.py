@@ -18,6 +18,7 @@ from .evidencias_historico import (
 from .modelos import DisciplinaCurricular, SituacaoAcademica
 from .requisitos_curriculares import (
     CondicaoCurricular,
+    FonteRegra,
     LimiteQuantitativo,
     ModeloRequisitosCurriculares,
     OperadorCondicao,
@@ -152,6 +153,12 @@ def avaliar_bct_2015_em_modo_sombra(
             else {}
         ),
     )
+    proveniencia_suficiente = _proveniencia_suficiente(modelo)
+    if not proveniencia_suficiente:
+        avisos.append(
+            "As regras do piloto não possuem proveniência estruturada e revisada "
+            "suficiente para receber autoridade."
+        )
     requisitos = _requisitos(resultado)
     return ResultadoSombraBCT(
         modelo=modelo,
@@ -163,28 +170,33 @@ def avaliar_bct_2015_em_modo_sombra(
         ),
         fontes_legadas_nao_estruturadas=tuple(_fontes_legadas(metadados)),
         avisos=tuple(avisos),
+        proveniencia_regras_suficiente=proveniencia_suficiente,
     )
 
 
 def _criar_modelo(metadados: dict) -> ModeloRequisitosCurriculares:
+    fontes = _fontes_estruturadas(metadados)
     requisitos = (
         _requisito_creditos(
             "creditos_obrigatorios",
             "Créditos obrigatórios",
             "obrigatoria",
             metadados["creditos_obrigatorios"],
+            fontes,
         ),
         _requisito_creditos(
             "creditos_opcao_limitada",
             "Créditos de opção limitada",
             "opcao_limitada",
             metadados["creditos_opcao_limitada"],
+            fontes,
         ),
         _requisito_creditos(
             "creditos_livres",
             "Créditos livres",
             "livre",
             metadados["creditos_livres"],
+            fontes,
         ),
         RequisitoQuantitativo(
             id="atividades_complementares",
@@ -197,6 +209,7 @@ def _criar_modelo(metadados: dict) -> ModeloRequisitosCurriculares:
                 UnidadeRequisito.HORAS,
                 metadados["atividades_complementares_horas"],
             ),
+            fontes=fontes,
         ),
     )
     return ModeloRequisitosCurriculares(
@@ -214,8 +227,10 @@ def _criar_modelo(metadados: dict) -> ModeloRequisitosCurriculares:
                         valor=True,
                     ),
                 ),
+                fontes=fontes,
             ),
         ),
+        fontes_gerais=fontes,
         metadados=(("modo", "sombra_controlada"),),
     )
 
@@ -225,6 +240,7 @@ def _requisito_creditos(
     descricao: str,
     categoria: str,
     minimo: int,
+    fontes: tuple[FonteRegra, ...],
 ) -> RequisitoQuantitativo:
     return RequisitoQuantitativo(
         id=id_,
@@ -232,6 +248,37 @@ def _requisito_creditos(
         integralizador=TipoIntegralizador.COMPONENTES_CURRICULARES,
         seletor=SeletorComponentes(categorias=frozenset({categoria})),
         limite=LimiteQuantitativo(UnidadeRequisito.CREDITOS, minimo),
+        fontes=fontes,
+    )
+
+
+def _fontes_estruturadas(metadados: dict) -> tuple[FonteRegra, ...]:
+    fontes = metadados.get("fontes_regras", {})
+    if not isinstance(fontes, dict):
+        return ()
+
+    estruturadas = []
+    for dados in fontes.values():
+        if not isinstance(dados, dict):
+            continue
+        try:
+            estruturadas.append(FonteRegra(**dados))
+        except (TypeError, ValueError):
+            continue
+    return tuple(estruturadas)
+
+
+def _proveniencia_suficiente(modelo: ModeloRequisitosCurriculares) -> bool:
+    regras = (*modelo.requisitos, *modelo.aplicabilidade)
+    return bool(regras) and all(
+        regra.fontes
+        and all(
+            fonte.matriz_id == modelo.curso_id
+            and fonte.versao == modelo.matriz_id
+            and fonte.estado_revisao == "revisada"
+            for fonte in regra.fontes
+        )
+        for regra in regras
     )
 
 

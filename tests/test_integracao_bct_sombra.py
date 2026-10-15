@@ -77,6 +77,60 @@ def test_bct_2015_executa_comparacao_controlada_sem_expor_no_legado():
     assert all(unidade.value != "horas" for unidade in sombra.conjunto.unidades_completas)
 
 
+def test_bct_2015_liga_cada_regra_a_proveniencia_estruturada_pendente():
+    metadados, curriculo, situacao = _cenario_bct()
+
+    sombra = avaliar_bct_2015_em_modo_sombra(
+        metadados,
+        curriculo,
+        situacao,
+        pacote_piloto_confirmado=True,
+    )
+
+    regras = (*sombra.modelo.requisitos, *sombra.modelo.aplicabilidade)
+    assert sombra.modelo.fontes_gerais
+    assert all(regra.fontes for regra in regras)
+    assert {
+        (fonte.matriz_id, fonte.versao, fonte.estado_revisao)
+        for regra in regras
+        for fonte in regra.fontes
+    } == {("bct_2015", "2015", "pendente")}
+    assert sombra.proveniencia_regras_suficiente is False
+
+
+def test_bct_2015_so_considera_proveniencia_suficiente_apos_revisao():
+    metadados, curriculo, situacao = _cenario_bct()
+    fontes = {
+        chave: {**fonte, "estado_revisao": "revisada"}
+        for chave, fonte in metadados["fontes_regras"].items()
+    }
+
+    sombra = avaliar_bct_2015_em_modo_sombra(
+        {**metadados, "fontes_regras": fontes},
+        curriculo,
+        situacao,
+        pacote_piloto_confirmado=True,
+    )
+
+    assert sombra.proveniencia_regras_suficiente is True
+
+
+def test_bct_2015_sem_fonte_estruturada_permanece_fail_closed():
+    metadados, curriculo, situacao = _cenario_bct()
+    metadados = {**metadados, "fontes_regras": {}}
+
+    sombra = avaliar_bct_2015_em_modo_sombra(
+        metadados,
+        curriculo,
+        situacao,
+        pacote_piloto_confirmado=True,
+    )
+
+    assert sombra.modelo.fontes_gerais == ()
+    assert sombra.proveniencia_regras_suficiente is False
+    assert any("autoridade" in aviso for aviso in sombra.avisos)
+
+
 def test_aplicabilidade_nao_confirmada_bloqueia_conclusoes_do_piloto():
     metadados, curriculo, situacao = _cenario_bct()
 

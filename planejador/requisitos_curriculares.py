@@ -59,12 +59,17 @@ class FonteRegra:
     url: str
     referencia: str = ""
     trecho: str = ""
+    matriz_id: str = ""
+    versao: str = ""
+    estado_revisao: str = "nao_informado"
 
     def __post_init__(self) -> None:
         if not self.titulo.strip():
             raise ValueError("Fonte de regra precisa de título.")
         if not self.url.startswith("https://"):
             raise ValueError("Fonte de regra deve usar URL HTTPS.")
+        if self.estado_revisao not in {"nao_informado", "pendente", "revisada"}:
+            raise ValueError("Estado de revisão da fonte de regra inválido.")
 
 
 @dataclass(frozen=True)
