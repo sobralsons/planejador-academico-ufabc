@@ -204,6 +204,16 @@ Um piloto só pode passar do modo sombra para autoridade real quando:
 8. revisão acadêmica humana necessária ao escopo foi registrada;
 9. o consumidor não possui fallback silencioso para o legado em caso de indeterminação.
 
+O corte é representado em código por `EvidenciasCorteAutoridade` e decidido por
+`decidir_corte_autoridade`. Cada item acima corresponde a uma evidência booleana
+independente. A ausência de qualquer uma delas mantém `legado` como autoridade e
+produz um bloqueio enumerado; somente o conjunto completo produz `generico`.
+
+Essa decisão é limitada ao escopo identificado por `curriculo_id`. Ela não torna
+o piloto publicável e não substitui o gate de cobertura da entrada pública. O
+registro das evidências reais e a migração de um consumidor pertencem a uma etapa
+posterior e devem continuar sob revisão por PR.
+
 ## 11. Fora deste contrato
 
 Este documento não:
