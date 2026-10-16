@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "curso_id": "lec_ciencias_humanas_sociais",
+  "matriz_id": "2024",
+  "metadados": {
+    "estado": "nao_publicavel",
+    "origem": "piloto_estrutural_r1"
+  },
+  "fontes": {
+    "ppc_lec_2024": {
+      "titulo": "PPC da Licenciatura em Ciências Humanas e Sociais",
+      "url": "https://servidor-conteudo.ufabc.edu.br/arquivos/2024063000be21297994828a5ef4e5970/PPC_LEC.pdf",
+      "referencia": "Regras estruturais registradas no piloto",
+      "matriz_id": "lec_ciencias_humanas_sociais",
+      "versao": "2024",
+      "estado_revisao": "pendente"
+    }
+  },
+  "requisitos": [
+    {
+      "id": "estagio_total",
+      "descricao": "Estágio supervisionado total",
+      "integralizador": "estagio",
+      "seletor": {"tags": ["estagio_supervisionado"]},
+      "limite": {"unidade": "horas_carga_horaria", "minimo": 400},
+      "fontes": ["ppc_lec_2024"]
+    },
+    {
+      "id": "extensao_estagio",
+      "descricao": "Parcela extensionista do estágio",
+      "integralizador": "extensao",
+      "seletor": {"tags": ["estagio_extensionista"]},
+      "limite": {"unidade": "horas_extensao", "minimo": 160, "maximo": 160},
+      "fontes": ["ppc_lec_2024"]
+    },
+    {
+      "id": "modulo_iv",
+      "descricao": "Estágio do módulo IV",
+      "integralizador": "formacao_docente",
+      "seletor": {"codigos": ["ESTAGIO_CH_IV"]},
+      "limite": {"unidade": "componentes", "minimo": 1},
+      "fontes": ["ppc_lec_2024"]
+    },
+    {
+      "id": "modulo_viii",
+      "descricao": "Estágio do módulo VIII",
+      "integralizador": "formacao_docente",
+      "seletor": {"codigos": ["ESTAGIO_CH_VIII"]},
+      "limite": {"unidade": "componentes", "minimo": 1},
+      "fontes": ["ppc_lec_2024"]
+    },
+    {
+      "id": "modulo_ix",
+      "descricao": "Estágio do módulo IX",
+      "integralizador": "formacao_docente",
+      "seletor": {"codigos": ["ESTAGIO_LEC_IX"]},
+      "limite": {"unidade": "componentes", "minimo": 1},
+      "fontes": ["ppc_lec_2024"]
+    }
+  ],
+  "contribuicoes": [
+    {
+      "id": "estagios_lch",
+      "descricao": "Estágios dos módulos I, II e III da LCH",
+      "requisito_total": "estagio_total",
+      "seletor": {"origens": ["lch"]},
+      "limite": {"unidade": "horas_carga_horaria", "minimo": 240, "maximo": 240},
+      "fontes": ["ppc_lec_2024"]
+    },
+    {
+      "id": "estagio_historia",
+      "descricao": "Estágio do módulo IV ou VIII",
+      "requisito_total": "estagio_total",
+      "seletor": {"codigos": ["ESTAGIO_CH_IV", "ESTAGIO_CH_VIII"]},
+      "limite": {"unidade": "horas_carga_horaria", "minimo": 80, "maximo": 80},
+      "fontes": ["ppc_lec_2024"]
+    },
+    {
+      "id": "estagio_campo",
+      "descricao": "Estágio do módulo IX",
+      "requisito_total": "estagio_total",
+      "seletor": {"codigos": ["ESTAGIO_LEC_IX"]},
+      "limite": {"unidade": "horas_carga_horaria", "minimo": 80, "maximo": 80},
+      "fontes": ["ppc_lec_2024"]
+    }
+  ],
+  "grupos": [
+    {
+      "id": "escolha_historia",
+      "descricao": "Módulo IV ou VIII",
+      "requisitos": ["modulo_iv", "modulo_viii"],
+      "operador": "qualquer",
+      "fontes": ["ppc_lec_2024"]
+    }
+  ],
+  "cursos_base": [
+    {
+      "curso_id": "lch",
+      "matriz_id": "2022",
+      "requisitos_reutilizados": ["estagios_modulos_i_ii_iii"],
+      "fontes": ["ppc_lec_2024"]
+    }
+  ]
+}
