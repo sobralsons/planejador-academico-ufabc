@@ -66,6 +66,10 @@ def test_bcd_2023_executa_segunda_familia_no_mesmo_contrato_fail_closed():
     assert sombra.autoridade == "legado"
     assert sombra.publicavel is False
     assert sombra.proveniencia_regras_suficiente is False
+    assert sombra.corte_autoridade.curriculo_id == "bcd_2023"
+    assert sombra.corte_autoridade.autoridade.value == sombra.autoridade == "legado"
+    assert "fontes_versionadas" in sombra.corte_autoridade.bloqueios
+    assert "revisao_humana_registrada" in sombra.corte_autoridade.bloqueios
     assert sombra.requisitos["creditos_obrigatorios"].estado.value == "cumprido"
     assert sombra.requisitos["extensao"].estado.value == "indeterminado"
     assert sombra.requisitos["trabalho_final"].estado.value == "indeterminado"

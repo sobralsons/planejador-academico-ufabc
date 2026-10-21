@@ -1,4 +1,7 @@
+import pytest
+
 from planejador.academico import auditoria_integralizacao
+from planejador.autoridade_curricular import BloqueioCorteAutoridade
 from planejador.curriculo import carregar_curriculo
 from planejador.historico import consolidar_historico
 from planejador.integracao_motor_curricular import avaliar_bct_2015_em_modo_sombra
@@ -64,6 +67,11 @@ def test_bct_2015_executa_comparacao_controlada_sem_expor_no_legado():
     assert sombra.curriculo_id == "bct_2015"
     assert sombra.proveniencia_regras_suficiente is False
     assert sombra.publicavel is False
+    assert sombra.corte_autoridade.curriculo_id == "bct_2015"
+    assert sombra.corte_autoridade.promovido is False
+    assert BloqueioCorteAutoridade.FONTES_VERSIONADAS in sombra.corte_autoridade.bloqueios
+    assert BloqueioCorteAutoridade.APLICABILIDADE not in sombra.corte_autoridade.bloqueios
+    assert BloqueioCorteAutoridade.EQUIVALENCIA_DIFERENCIAL in sombra.corte_autoridade.bloqueios
     assert sombra.requisitos["creditos_obrigatorios"].estado.value == "cumprido"
     assert sombra.requisitos["atividades_complementares"].estado.value == "cumprido"
     assert sombra.requisitos["creditos_opcao_limitada"].estado.value == "indeterminado"
@@ -113,6 +121,9 @@ def test_bct_2015_so_considera_proveniencia_suficiente_apos_revisao():
     )
 
     assert sombra.proveniencia_regras_suficiente is True
+    assert BloqueioCorteAutoridade.FONTES_VERSIONADAS not in sombra.corte_autoridade.bloqueios
+    assert BloqueioCorteAutoridade.REVISAO_HUMANA in sombra.corte_autoridade.bloqueios
+    assert sombra.corte_autoridade.promovido is False
 
 
 def test_bct_2015_sem_fonte_estruturada_permanece_fail_closed():
@@ -145,6 +156,21 @@ def test_aplicabilidade_nao_confirmada_bloqueia_conclusoes_do_piloto():
     assert sombra.aplicabilidade == "indeterminada"
     assert sombra.estado == "indeterminado"
     assert sombra.requisitos == {}
+
+
+@pytest.mark.parametrize("aplicabilidade", [None, False])
+def test_corte_bloqueia_caso_sem_aplicabilidade_positiva(aplicabilidade):
+    metadados, curriculo, situacao = _cenario_bct()
+    sombra = avaliar_bct_2015_em_modo_sombra(
+        metadados,
+        curriculo,
+        situacao,
+        pacote_piloto_confirmado=True,
+        aplicabilidade_confirmada=aplicabilidade,
+    )
+
+    assert BloqueioCorteAutoridade.APLICABILIDADE in sombra.corte_autoridade.bloqueios
+    assert sombra.corte_autoridade.autoridade.value == sombra.autoridade == "legado"
 
 
 def test_comparacao_detecta_divergencia_em_atividades_complementares():

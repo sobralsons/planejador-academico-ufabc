@@ -65,6 +65,13 @@ def test_runner_interno_executa_fluxo_real_sem_persistir_historico(
     assert saida["autoridade"] == "legado"
     assert saida["publicavel"] is False
     assert saida["proveniencia_regras_suficiente"] is False
+    corte = saida["corte_autoridade"]
+    assert corte["curriculo_id"] == "bct_2015"
+    assert corte["autoridade"] == saida["autoridade"] == "legado"
+    assert "fontes_versionadas" in corte["bloqueios"]
+    assert "aplicabilidade_resolvida" not in corte["bloqueios"]
+    assert "revisao_humana_registrada" in corte["bloqueios"]
+    assert "equivalencia_diferencial_aprovada" in corte["bloqueios"]
     assert (
         saida["divergencias"]["atividades_complementares"]["classificacao"]
         == "concordante"

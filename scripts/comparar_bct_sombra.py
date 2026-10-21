@@ -67,6 +67,7 @@ def resumir(resultado: ResultadoSombraBCT) -> dict:
         "modo": resultado.modo,
         "autoridade": resultado.autoridade,
         "publicavel": resultado.publicavel,
+        "corte_autoridade": asdict(resultado.corte_autoridade),
         "proveniencia_regras_suficiente": resultado.proveniencia_regras_suficiente,
         "curriculo_id": resultado.curriculo_id,
         "aplicabilidade": resultado.aplicabilidade,
