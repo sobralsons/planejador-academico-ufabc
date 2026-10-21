@@ -10,6 +10,11 @@ from .alocacao_evidencias import (
     avaliar_modelo_com_evidencias,
 )
 from .avaliador_requisitos import ResultadoRegra
+from .autoridade_curricular import (
+    DecisaoCorteAutoridade,
+    EvidenciasCorteAutoridade,
+    decidir_corte_autoridade,
+)
 from .evidencias_historico import (
     MetadadosCodigoEvidencia,
     ResultadoConversaoHistorico,
@@ -62,6 +67,17 @@ class ResultadoSombraBCT:
     curriculo_id: str = ""
     publicavel: bool = False
     proveniencia_regras_suficiente: bool = False
+
+    @property
+    def corte_autoridade(self) -> DecisaoCorteAutoridade:
+        """Diagnostica o corte; evidências de aprovação não registradas ficam pendentes."""
+        return decidir_corte_autoridade(
+            self.curriculo_id,
+            EvidenciasCorteAutoridade(
+                fontes_versionadas=self.proveniencia_regras_suficiente,
+                aplicabilidade_resolvida=self.aplicabilidade == "aplicavel",
+            ),
+        )
 
     @property
     def aplicabilidade(self) -> str | None:

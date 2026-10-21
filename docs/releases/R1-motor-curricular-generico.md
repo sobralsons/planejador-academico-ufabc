@@ -52,6 +52,23 @@ A R1 termina quando:
 
 Estruturar a proveniência das regras do BC&T 2015 usadas pelo modo sombra. O incremento deve reutilizar o contrato existente, manter o legado como autoridade e falhar fechado quando a fonte ou o estado de revisão forem insuficientes.
 
+## Preparação da migração do primeiro consumidor
+
+O corte de autoridade está definido em `planejador/autoridade_curricular.py`.
+O modo sombra dos pilotos BC&T 2015 e BCD 2023 expõe `corte_autoridade`, com
+identificador do piloto, autoridade elegível e bloqueios. O runner interno
+`scripts/comparar_bct_sombra.py` inclui esse diagnóstico no JSON.
+
+O diagnóstico usa a proveniência estruturada revisada e a aplicabilidade do caso.
+Os outros sete critérios permanecem bloqueados por falta de evidência de aprovação
+registrada para o escopo. Marcar uma fonte como revisada não aprova a revisão
+acadêmica integral do piloto. Concordância em um histórico isolado não aprova a
+equivalência diferencial. O diagnóstico não altera a autoridade efetiva do modo
+sombra nem libera publicação.
+
+Antes de executar o item 7, registrar as evidências dos critérios restantes para
+um escopo explícito e identificar o consumidor cuja migração elas autorizam.
+
 ## Próxima release
 
 Após os critérios de saída, a candidata é **R2 — Cobertura acadêmica**. A promoção exige nova auditoria e atualização do roadmap.
